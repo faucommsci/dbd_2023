@@ -10,7 +10,7 @@
 
 ## Links
 
-🔗 to github-page of the course: 🚧
+🔗 to github-page of the course: <https://faucommsci.github.io/dbd_2023/>
 
 🔗 to Binder github-respository of the course: 🚧
 

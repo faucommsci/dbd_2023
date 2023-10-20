@@ -1,0 +1,303 @@
+[
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "First session\nTime\nLocation (Room)\n\n\n\n\n25.10.2023\nWednesdays, 11:30 - 13:00\nFindelgasse, 2.024\n\n\n\n\n\n\n\n\n\nAssignment and course language\n\n\n\n\nDepending on the students’ feedback in the survey before the course starts, the course can be held in (incl. presentations, pitches, discussions, etc.) English or German.\nRegardless of the feedback on the course language, the written assignments can be in German or English, depending on what the student/groups prefer."
+  },
+  {
+    "objectID": "course-syllabus.html#course-information",
+    "href": "course-syllabus.html#course-information",
+    "title": "Syllabus",
+    "section": "",
+    "text": "First session\nTime\nLocation (Room)\n\n\n\n\n25.10.2023\nWednesdays, 11:30 - 13:00\nFindelgasse, 2.024\n\n\n\n\n\n\n\n\n\nAssignment and course language\n\n\n\n\nDepending on the students’ feedback in the survey before the course starts, the course can be held in (incl. presentations, pitches, discussions, etc.) English or German.\nRegardless of the feedback on the course language, the written assignments can be in German or English, depending on what the student/groups prefer."
+  },
+  {
+    "objectID": "course-syllabus.html#course-description",
+    "href": "course-syllabus.html#course-description",
+    "title": "Syllabus",
+    "section": "Course description",
+    "text": "Course description\nIn this seminar, students are introduced to working with digital behavioral data (DBD). DBD refer to digital traces of human behavior that are knowingly or unknowingly left in online environments (e.g. social media, messengers, entertainment media, or digital collaboration tools). These rich data is increasingly available to social scientific research in the public interest, but can also be used to derive strategic insights for business decisions.\nStudents learn how to work with DBD alongside the entire research process, from data collection, preprocessing and analysis, to reporting and provision (e.g. via open science tools). Students first get a comprehensive overview of the ways in which DBD can be collected (e.g., API scraping, usage logging, mock-up virtual environments, or data donations), as well as the requirements for data protection, research ethics, and data quality. Afterwards, students practice and apply their newly acquired knowledge in small projects on use cases from media and communication research. In doing so, they learn important computer-based methods with which large digital behavioral data sets (e.g. texts, images, usage behavior logs) can be processed and analyzed. By completing this module, participants will get an up-to-date overview and practical insights into how the potential of observational data (digital traces) can be used to better understand the behavior of media users in digital environments."
+  },
+  {
+    "objectID": "course-syllabus.html#learning-objectives",
+    "href": "course-syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nStudents will\n\noverview and understand central opportunities of DBD and accompanying challenges for data collection and preprocessing\nevaluate the strengths and weaknesses of different ways of collecting DBD\nget to know and understand central requirements for data protection, research ethics, and data quality\nget to know and overview key computational social science methods to analyze DBD\npractice and apply knowledge on DBD, statistics, and data analysis in small projects of their own"
+  },
+  {
+    "objectID": "course-syllabus.html#recommended-prerequisites",
+    "href": "course-syllabus.html#recommended-prerequisites",
+    "title": "Syllabus",
+    "section": "Recommended prerequisites",
+    "text": "Recommended prerequisites\n\nInterest in social scientific perspectives on media, communication, and digital technologies.\nBasic knowledge of working with statistical software such as Stata, R, Python, or SPSS is required.\nStudents are recommended, but not required, to also visit the lecture Data Science: Foundations, Tools, Applications in Socio-Economics and Marketing."
+  },
+  {
+    "objectID": "course-syllabus.html#organization-of-the-course",
+    "href": "course-syllabus.html#organization-of-the-course",
+    "title": "Syllabus",
+    "section": "Organization of the course",
+    "text": "Organization of the course\nRegistration for the course takes place via  StudOn. There you will receive the first information and instructions. Please make sure that\n\nyou complete the short survey before the seminar begins.\nyou check if you have received the invitation and joined  Zulip.\n\nAll slides, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website. I will regularly send out course announcements by e-mail or Zulip, make sure to check one or the other of these regularly."
+  },
+  {
+    "objectID": "course-syllabus.html#preliminary-schedule",
+    "href": "course-syllabus.html#preliminary-schedule",
+    "title": "Syllabus",
+    "section": "(Preliminary) Schedule",
+    "text": "(Preliminary) Schedule\n\n\n\n\n\n\nImportant information\n\n\n\n\nPlease note that this is a provisional schedule. Part of the Kick-Off session is the presentation, discussion and voting on different project ideas.\nAll sessions marked with a 🔨 are hands-on sessions actively working with R.\nAll sessions marked with a 📚 or 📦 are presentation sessions where a group of students will give a detailed presentation.\n\n\n\n\n\n\nSession\nDatum\nTopic\n\n\n\n\n\n\nIntroduction\n\n\n1\n25.10.2023\nKick-Off\n\n\n-\n01.11.2023\n🎃 Holiday (No Lecture)\n\n\n2\n08.11.2023\nDBD: Overview\n\n\n3\n15.11.2023\n🔨 Working with R\n\n\n\n📂 Project 1\nAnalysis of media content\n\n\n4\n22.11.2023\n📚 Digital disconnection\n\n\n5\n29.11.2023\n📦 Data collection methods\n\n\n6\n06.12.2023\n🔨 Text as data\n\n\n7\n13.12.2023\n📊 Presentation & Discussion\n\n\n8\n20.12.2023\nBuffer Session\n\n\n-\n-\n🎄Christmas Break (No Lecture)\n\n\n\n📂 Project 2\nAnalysis of media usage\n\n\n9\n11.01.2024\n📚 Media habits & routines\n\n\n10\n18.01.2024\n📦 Data donations methods\n\n\n11\n25.01.2024\n🔨 Working data logs\n\n\n12\n02.02.2024\n📊 Presentation & Discussion\n\n\n13\n08.02.2024\n🏁 Recap, Evaluation & Discussion\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nFor an even more detailed overview of the course schedule as well as the linked content of the individual sessions (e.g. slides or literature for the respective presentation), please see Schedule.\n\n\nThe course consists of three main parts:\n\nPart I: Introduction\nThe first three sessions form the (theoretical) basis for the course.\n\nThe kick-off session is mainly for getting to know each other and organizing the course. \nThe second session is to give you an extended introduction DBD, including challenges and important frameworks. \nThe third session is about practical work with R and RStudio.  \n\n\n\nPart II: Analysis of media content (Project 1)\n\nThe focus of the second section is the observation and analysis of (written) social media content (e.g. post and/or hashtags) with the help of different methods (e.g. topic modeling, sentiment analysis etc.).\n\n\n\nPart III: Analysis of media usage (Project 2)\n\nThe third part is about the effects of media use. Here you will learn how to process and analyze logging data and how to link it to survey data with the help of a survey conducted on the participants of the course during the first months of the semester."
+  },
+  {
+    "objectID": "course-syllabus.html#sessions",
+    "href": "course-syllabus.html#sessions",
+    "title": "Syllabus",
+    "section": "Sessions",
+    "text": "Sessions\nThe goal of the sessions is to be as interactive as possible. In general, the sessions consist of two parts. In the first part (± 30 - 45 minutes) at the beginning of the session, there are usually presentations (including discussion), which are more or less detailed depending on the stage of the project. The second part (± 45 - 60 minutes) consists of a group activity (with concluding discussion), which should either be about deepening the presentation content or about independent work on one’s own or the group project.\nMy role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. You are expected to bring a laptop to each class so that you can take part in the in-session exercises. Please make sure your laptop is fully charged before you come to class as the number of outlets in the classroom will not be sufficient to accommodate everyone.\n\nWhere to ask questions\n\nIf you have a question during the lecture, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.\nAny general questions about session content, assignments or about the project should be posted on Zulip, so that everyone can benefit from the answers. There is a chance another student has already asked a similar question, so please check the other posts before adding a new question. If you know the answer to a question, I encourage you to respond!\nE-mails should be reserved for personal matters."
+  },
+  {
+    "objectID": "course-syllabus.html#assessment",
+    "href": "course-syllabus.html#assessment",
+    "title": "Syllabus",
+    "section": "Assessment",
+    "text": "Assessment\nIn order to obtain credits and a grade, participants are required to\n\nattend regularly (at least 80% of the sessions) and participate actively. A maximum of two sessions can be missed without excuse. Absence in further sessions can only be excused in case of illness (i. e. with a medical certificate).\ncomplete various assignments as part of a portfolio. The type and scope of the assignments depends on the number of participants and the project(s). Detailed information can be found in the section Assignments."
+  },
+  {
+    "objectID": "course-syllabus.html#academic-integrity",
+    "href": "course-syllabus.html#academic-integrity",
+    "title": "Syllabus",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\n\n\n\n\n\nTL;DR\n\n\n\nDo not cheat!\n\n\nFor general information on formatting, style, citation, appendices, wording of the affidavit, etc., see our Guide to Academic Writing.\n\nPolicy on sharing and reusing code\nI am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g. StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\n\nPolicy on use of generative artificial intelligence (AI):\nYou should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course1: (1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning. (2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. You may use these guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
+  },
+  {
+    "objectID": "course-syllabus.html#recommended-textbooks",
+    "href": "course-syllabus.html#recommended-textbooks",
+    "title": "Syllabus",
+    "section": "Recommended textbooks",
+    "text": "Recommended textbooks\n\nAtteveldt, W. van, Trilling, D., & Arcíla, C. (2021). Computational analysis of communication: A practical introduction to the analysis of texts, networks, and images with code examples in python and r. John Wiley & Sons.\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Handbook of Computational Social Science, Volume 1: Theory, Case Studies and Ethics (1st ed.). Routledge. https://doi.org/10.4324/9781003024583\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Handbook of computational social science, volume 2. Routledge. https://doi.org/10.4324/9781003025245\nHaim, M. (2023). Computational Communication Science: Eine Einführung. Springer Fachmedien Wiesbaden. https://link.springer.com/10.1007/978-3-658-40171-9\nSalganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press."
+  },
+  {
+    "objectID": "course-syllabus.html#footnotes",
+    "href": "course-syllabus.html#footnotes",
+    "title": "Syllabus",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThese guiding principles are based on Course Policies related to ChatGPT and other AI Tools developed by Joel Gladd, Ph.D↩︎"
+  },
+  {
+    "objectID": "computing/computing-textbooks.html",
+    "href": "computing/computing-textbooks.html",
+    "title": "R textbooks",
+    "section": "",
+    "text": "While there is no official R textbook for the course, there are a few to look at:\n\n🔗 R for Data Science, 2nd Edition\n🔗 Data Visualization: A Practical Introduction\n🔗 Tidy modeling with R\n🔗 Text Mining with R"
+  },
+  {
+    "objectID": "sessions/session-09.html",
+    "href": "sessions/session-09.html",
+    "title": "Session 9",
+    "section": "",
+    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+  },
+  {
+    "objectID": "sessions/session-09.html#literature-for-the-presenting-group",
+    "href": "sessions/session-09.html#literature-for-the-presenting-group",
+    "title": "Session 9",
+    "section": "",
+    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+  },
+  {
+    "objectID": "sessions/session-09.html#section",
+    "href": "sessions/session-09.html#section",
+    "title": "Session 9",
+    "section": "",
+    "text": "Back to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-04.html",
+    "href": "sessions/session-04.html",
+    "title": "Session 4",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
+  },
+  {
+    "objectID": "sessions/session-04.html#mandatory-literature",
+    "href": "sessions/session-04.html#mandatory-literature",
+    "title": "Session 4",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
+  },
+  {
+    "objectID": "sessions/session-04.html#other-readings",
+    "href": "sessions/session-04.html#other-readings",
+    "title": "Session 4",
+    "section": "Other readings",
+    "text": "Other readings\n\nMoe, H., & Madsen, O. J. (2021). Understanding digital disconnection beyond media studies. Convergence: The International Journal of Research into New Media Technologies, 27(6), 1584–1598. https://doi.org/10.1177/13548565211048969\nSchmuck, D. (2020). Does Digital Detox Work? Exploring the Role of Digital Detox Applications for Problematic Smartphone Use and Well-Being of Young Adults Using Multigroup Analysis. Cyberpsychology, Behavior, and Social Networking, 23(8), 526–532. https://doi.org/10.1089/cyber.2019.0578\nSyvertsen, T., & Enli, G. (2019). Digital detox: Media resistance and the promise of authenticity. Convergence: The International Journal of Research into New Media Technologies, 26(5-6), 1269–1283. https://doi.org/10.1177/1354856519847325\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-01.html",
+    "href": "sessions/session-01.html",
+    "title": "Session 1",
+    "section": "",
+    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
+  },
+  {
+    "objectID": "sessions/session-01.html#prepare",
+    "href": "sessions/session-01.html#prepare",
+    "title": "Session 1",
+    "section": "Prepare",
+    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+  },
+  {
+    "objectID": "sessions/session-01.html#participate",
+    "href": "sessions/session-01.html#participate",
+    "title": "Session 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Session 01 - Kick Off (🚧 Still under construction)\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Digital Behavioral Data",
+    "section": "",
+    "text": "Note\n\n\n\nThis page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here."
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Digital Behavioral Data",
+    "section": "Copyright",
+    "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him) is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\n\n\n\n\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+  },
+  {
+    "objectID": "course-team.html#instructor",
+    "href": "course-team.html#instructor",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him) is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\n\n\n\n\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+  },
+  {
+    "objectID": "sessions/session-02.html",
+    "href": "sessions/session-02.html",
+    "title": "Session 1",
+    "section": "",
+    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
+  },
+  {
+    "objectID": "sessions/session-02.html#prepare",
+    "href": "sessions/session-02.html#prepare",
+    "title": "Session 1",
+    "section": "Prepare",
+    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+  },
+  {
+    "objectID": "sessions/session-02.html#participate",
+    "href": "sessions/session-02.html#participate",
+    "title": "Session 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Session 01 - Kick Off (🚧 Still under construction)\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-05.html",
+    "href": "sessions/session-05.html",
+    "title": "Session 5",
+    "section": "",
+    "text": "Karami, A., Lundy, M., Webb, F., & Dwivedi, Y. K. (2020). Twitter and research: A systematic literature review through text mining. IEEE Access, 8, 67698–67717. https://doi.org/10.1109/ACCESS.2020.2983656\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\nPeeters, S. (2022). Zeeschuimer. Zenodo. https://zenodo.org/record/6826877\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html"
+  },
+  {
+    "objectID": "sessions/session-05.html#literature-for-the-presenting-group",
+    "href": "sessions/session-05.html#literature-for-the-presenting-group",
+    "title": "Session 5",
+    "section": "",
+    "text": "Karami, A., Lundy, M., Webb, F., & Dwivedi, Y. K. (2020). Twitter and research: A systematic literature review through text mining. IEEE Access, 8, 67698–67717. https://doi.org/10.1109/ACCESS.2020.2983656\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\nPeeters, S. (2022). Zeeschuimer. Zenodo. https://zenodo.org/record/6826877\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html"
+  },
+  {
+    "objectID": "sessions/session-05.html#other-additional-readings",
+    "href": "sessions/session-05.html#other-additional-readings",
+    "title": "Session 5",
+    "section": "Other additional readings",
+    "text": "Other additional readings\n\nAPI-Access\n\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\n\n\n\nTwitter\n\nBanda, J. M., Tekumalla, R., Wang, G., Yu, J., Liu, T., Ding, Y., Artemova, E., Tutubalina, E., & Chowell, G. (2021). A Large-Scale COVID-19 Twitter Chatter Dataset for Open Scientific ResearchAn International Collaboration. Epidemiologia, 2(3), 315–324. https://doi.org/10.3390/epidemiologia2030024\nJungherr, A. (2016). Twitter use in election campaigns: A systematic literature review. Journal of Information Technology & Politics, 13(1), 72–91. https://doi.org/10.1080/19331681.2015.1132401\nMueller, S. D., & Saeltzer, M. (2022). Twitter made me do it! Twitter’s tonal platform incentive and its effect on online campaigning. Information, Communication & Society, 25(9), 1247–1272. https://doi.org/10.1080/1369118X.2020.1850841\nMünch, F. V., Thies, B., Puschmann, C., & Bruns, A. (2021). Walking Through Twitter: Sampling a Language-Based Follow Network of Influential Twitter Accounts. Social Media + Society, 7(1), 205630512098447. https://doi.org/10.1177/2056305120984475\nVasko, V., & Trilling, D. (2019). A permanent campaign? Tweeting differences among members of Congress between campaign and routine periods. Journal of Information Technology & Politics, 16(4), 342–359. https://doi.org/10.1080/19331681.2019.1657046\nYuan, S., Chen, Y., Vojta, S., & Chen, Y. (2022). More aggressive, more retweets? Exploring the effects of aggressive climate change messages on Twitter. New Media & Society, 146144482211222. https://doi.org/10.1177/14614448221122202\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-10.html",
+    "href": "sessions/session-10.html",
+    "title": "Session 9",
+    "section": "",
+    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-10.html#literature-for-the-presenting-group",
+    "href": "sessions/session-10.html#literature-for-the-presenting-group",
+    "title": "Session 9",
+    "section": "",
+    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "computing/computing-cheatsheets.html",
+    "href": "computing/computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references."
+  },
+  {
+    "objectID": "course-assignments.html",
+    "href": "course-assignments.html",
+    "title": "Assingments",
+    "section": "",
+    "text": "In order to be able to adapt the assignments flexibly to the requirements of the course (e.g. different number of students, projects changing from semester to semester or several projects in one semester), this seminar uses a portfolio assessment. Even though the seminar aims at testing new forms of assignments due to its practical and empirical orientation, traditional assignments such as presentations or written reports will still be an integral part. However, these will be expanded to include the special features of working with digital behavioral data.\nAssignments can be group (👥) or individual (👤) work and are marked as such. The expected group size is 2-3 persons.\nThe following list contains an overview of the assignments to be completed in the course:\n\n\nBreakdown of the final grade\n\n\nTotal\n100 Pts\n\n\n\n\n👥 Presentation\n20 Pts\n\n\n👥 Project topic idea(s)\n10 Pts\n\n\n👥 Project proposal (draft report)\n15 Pts\n\n\n👤 Peer Review\n15 Pts\n\n\n👥 Written short report\n40 Pts\n\n\n\n\n\n\n\n\n\nImportant Disclaimer\n\n\n\n\nThe final structure of the course (e.g. which and how many small projects) will be discussed and determined together with the students in the first session. Accordingly, it is possible that the portfolio or the assignments contained in it will be adjusted subsequently (e.g. the scope, content or deadline of assignments could be changed or even entire assignments could be dropped).\nIf the final structure of the course contains several small projects, the listed assignments only have to be completed for one of the projects."
+  },
+  {
+    "objectID": "course-assignments.html#sec-portfolio",
+    "href": "course-assignments.html#sec-portfolio",
+    "title": "Assingments",
+    "section": "",
+    "text": "In order to be able to adapt the assignments flexibly to the requirements of the course (e.g. different number of students, projects changing from semester to semester or several projects in one semester), this seminar uses a portfolio assessment. Even though the seminar aims at testing new forms of assignments due to its practical and empirical orientation, traditional assignments such as presentations or written reports will still be an integral part. However, these will be expanded to include the special features of working with digital behavioral data.\nAssignments can be group (👥) or individual (👤) work and are marked as such. The expected group size is 2-3 persons.\nThe following list contains an overview of the assignments to be completed in the course:\n\n\nBreakdown of the final grade\n\n\nTotal\n100 Pts\n\n\n\n\n👥 Presentation\n20 Pts\n\n\n👥 Project topic idea(s)\n10 Pts\n\n\n👥 Project proposal (draft report)\n15 Pts\n\n\n👤 Peer Review\n15 Pts\n\n\n👥 Written short report\n40 Pts\n\n\n\n\n\n\n\n\n\nImportant Disclaimer\n\n\n\n\nThe final structure of the course (e.g. which and how many small projects) will be discussed and determined together with the students in the first session. Accordingly, it is possible that the portfolio or the assignments contained in it will be adjusted subsequently (e.g. the scope, content or deadline of assignments could be changed or even entire assignments could be dropped).\nIf the final structure of the course contains several small projects, the listed assignments only have to be completed for one of the projects."
+  },
+  {
+    "objectID": "course-assignments.html#sec-presentation",
+    "href": "course-assignments.html#sec-presentation",
+    "title": "Assingments",
+    "section": "👥 Presentation (20 Pts)",
+    "text": "👥 Presentation (20 Pts)\nThe topics for the presentation will be assigned at the beginning of the course. The focus of the presentation is either on presenting the theoretical basis of the project (📚) or the data source/collection (📦). The presentation should be 20 to 30 minutes long (including time for questions and discussion). You will be graded based on your individual contribution, so please clarify which slides are presented by whom (e.g., by adding the initials of the presenting individual in the footnote of the slide).\nLiterature for the preparation of the presentation will be provided. The texts relevant for the respective presentation can be found in the information on the preparation (📖) of the respective session. All texts listed in the section “Mandatory literature” constitute the presentation literature for your respective presentation. Please include all texts on your topic in your presentation, but feel free to set your own priorities in the presentation. You may also cite other sources, provided they enrich the subject matter.\nThe aim of the presentation is to give the course participants an overview on your topic, e.g., central terms, definitions and features of the respective platform, method and/or tool. The presentation of the state of research (what is the goal of the studies and what do they show?) plays a subordinate role.\nAdditionally, presenters are required to meet with the instructor in the week before their presentation for a mandatory feedback. My office hours are directly after the session, on Wednesdays from 13:15 to 14:15. If you have scheduling conflicts, we can arrange another meeting time. Meetings can take place in person or via Zoom.\nIn advance of the feedback meeting, a first complete draft of the presentation must be submitted as a PowerPoint or PDF file via mail at the latest 24 hours before the meeting, one week before the presentation. During the feedback meeting, students will receive detailed feedback and tips on how to revise their presentation. The revised presentations are then given in presence in the respective sessions. Afterwards, a PDF of the slides is made available to the seminar.\n\n\n\n\n\n\nImportant information, tasks & deadlines\n\n\n\n\nAt the latest 24 hours before the pre-meeting: Send the first complete draft of the presentation slides by e-mail to christoph.adrian@fau.de\nOne week before your presentation: Pre-meeting to discuss the presentation draft during the office hours. Please arrange an alternative date in good time if you are unable to attend the scheduled pre-meeting.\nUntil 09:00 of the day of the presentation: Send the final draft of the presentation by e-mail to christoph.adrian@fau.de"
+  },
+  {
+    "objectID": "course-assignments.html#sec-topic-ideas",
+    "href": "course-assignments.html#sec-topic-ideas",
+    "title": "Assingments",
+    "section": "👥 Project topic idea(s) (10 Pts)",
+    "text": "👥 Project topic idea(s) (10 Pts)\nShort or ad-hoc presentations (“pitches”) of the status or result of your groups project work. The pitches should be about 5 to 10 minutes long, consist of max. 5 slides and be held by one group member only. The number of pitches should be balanced between the group members.\nThe aim of the pitches is to give the course and update about your projects progress as well as a basis for discussion and feedback. Therefore, you should\n\nfirst give a short overview of your topic, research question or motivation and selected data (sub-)sample (2 slides),\ndescribe your method and analysis (1 slide) and\nshow results and/or a challenge you face, that should be discussed by the course (2 slide).\n\nAfter the pitch there will be time for questions, either from the group to the course or vice versa.\n\n\n\n\n\n\nImportant information, tasks & deadlines\n\n\n\n\nPrepare a short presentation before and present you pitch in every “Presentation & Discussion (📊)” session, using the Google Slides templates provided."
+  },
+  {
+    "objectID": "course-assignments.html#sec-proposal",
+    "href": "course-assignments.html#sec-proposal",
+    "title": "Assingments",
+    "section": "👥 Project proposal (15 pts)",
+    "text": "👥 Project proposal (15 pts)\nThe project proposal is basically the frist written draft of your final short report, consisting of the write-up of your project topic idea and/or associated feedback. The idea is for you to think about the specific analysis strategy early on, as well as present initial results or evaluation. The project proposal is the basis for the peer review.\nThe project proposal should be at least 500 words and include the following points:\n\nSection 1 - Introduction\nThe introduction section includes\n\nan introduction to the subject matter you’re investigating\nthe motivation for your research question (citing any relevant literature)\nthe general research question you wish to explore and/or your hypotheses regarding the research question of interest.\n\n\n\nSection 2 - Data description\nIn this section, you will describe the data (sub-)sample you selected. This includes\n\ndescription of the “observations” in the data set,\ndescription of how the data was “originally” collected.\n\n\n\nSection 3 - Analysis approach\nIn this section, you will provide a brief overview of your analysis approach. This includes:\n\nDescription of the central method as well as necessary pre-processing steps of the data.\nDescription, visualization and/or summary statistics of the central variables.\n(Intended) analysis strategy with which you want to answer the research question/hypothesis (with initial results, if available)\n\nThe grading of your proposal will be as followd:\n\nProject proposal grading breakdown\n\n\nTotal\n15 pts\n\n\n\n\nIntroduction\n4 pts\n\n\nData description\n3 pts\n\n\nAnalysis plan\n7 pts\n\n\nOrganization + formatting\n1 pts\n\n\n\n\n\n\n\n\n\nImportant information, tasks & deadlines\n\n\n\n\nSubmit the draft project proposal using the provided Google Docs template no later than two weeks after the associated “Presentation & Discussion” session."
+  },
+  {
+    "objectID": "course-assignments.html#sec-peer-review",
+    "href": "course-assignments.html#sec-peer-review",
+    "title": "Assingments",
+    "section": "👤 Peer Review (15 pts)",
+    "text": "👤 Peer Review (15 pts)\nCritically reviewing others’ work is a crucial part of the scientific process. Therefore, each group will be assigned one other group’s project proposal to review before the final submission. This way, you will be able to get additional feedback before handing in your final report.\nDuring the peer review process, you will be provided read-only access to your partner groups’ report via Google Docs. Provide your review in the form of another Google Doc using the template provided.\n\nProcess and questions\n\nOpen the Google Doc of the team you’re reviewing and read their project draft.\nThen, go to Peer Review Google Doc template, fill out the relevant fields and answer the following questions:\n\nDescribe the goal of the project.\nDescribe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.\nDescribe the approaches, tools, and methods that will be used.\nIs there anything that is unclear from the proposal?\nProvide constructive feedback on how the group might be able to improve their project. Make sure your feedback includes at least one comment on the statistical modeling aspect of the project, but do feel free to comment on aspects beyond the modeling.\nWhat aspect of this project are you most interested in and would like to see highlighted in the presentation.\nProvide constructive feedback on any issues with file and/or code organization.\n(Optional) Any further comments or feedback?\n\nThe peer review will be graded on the extent to which it comprehensively and constructively addresses the components of the partner team’s report: the research context and motivation, exploratory data analysis, modeling, interpretations, and conclusions.\n\n\n\n\n\n\n\nImportant tasks & deadlines\n\n\n\n\nProvide feedback using the provided Google Docs template until two weeks after you received the document for peer-reviewing."
+  },
+  {
+    "objectID": "course-assignments.html#sec-written-report",
+    "href": "course-assignments.html#sec-written-report",
+    "title": "Assingments",
+    "section": "👥 Written short report (40 pts)",
+    "text": "👥 Written short report (40 pts)\nThe goal of the written short report is for each group to use at least one of the method or data presented to explore a topic of your own choosing. Choose both data and topic based on your group’s interests, experience or work you all have done in other courses or research projects. The goal of this project is for you to demonstrate proficiency in the techniques covered in this class (and beyond, if you like!) and apply them to a data set to analyze it in a meaningful way.\nBe selective in what you include in your final write-up. The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis. You are welcome to include an appendix with additional work at the end of the written report document; however, grading will largely be based on the content in the main body of the report. You should assume the reader will not see the material in the appendix unless prompted to view it in the main body of the report. The appendix should be neatly formatted and easy for the reader to navigate. It is not included in the word limit.\nThe written report should be 750 to 1000 words per person. However, when written as a group report, the number or words scale with a factor of 0.8 per person (e.g., a group of two should write 1200 to 1600 words, a group of three 1800 to 2400 words). All analyses as well as the written report must be done in RStudio and all components of the project must be reproducible. The mandatory components of the reports are: Introduction, Data/Methodology, Results, Discussion & Conclusion. You are free to add additional sections as necessary. You will be graded based on your individual contribution, so please clarify which part of the report was written by whom (e.g., by adding the initials of the author in the header of the section).\nThe written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion + conclusion\n6 pts\n\n\nOrganization + formatting\n4 pts\n\n\n\n\n\n\n\n\n\nImportant tasks & deadlines\n\n\n\n\nFinal submission of the revised written report is due 01.03.2024, 23:591."
+  },
+  {
+    "objectID": "course-assignments.html#footnotes",
+    "href": "course-assignments.html#footnotes",
+    "title": "Assingments",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nPlease note that this is a temporary deadline. The final deadline will be adjusted in the course in consultation with the students if necessary.↩︎"
+  }
+]
