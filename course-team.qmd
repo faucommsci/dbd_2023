@@ -1,0 +1,23 @@
+---
+title: "Teaching team"
+---
+
+## Instructor
+
+![](img/team/ca-circle.png){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="200"}
+
+[**Christoph Adrian**](https://github.com/chrdrn) (he/him) is a Research Assistant at the [Chair of Communication Science](https://www.kowi.rw.fau.de/) at [Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg](https://www.fau.de/).
+
+<!-- FIXME Add badges for socials -->
+
+<!-- badges: start -->
+
+<!-- {{< bi twitter-x >}}  {{< bi github >}}  {{< ai osf >}}   {{< ai orcid >}}  {{< ai researchgate >}}  -->
+
+<!-- badges: end -->
+
+His work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.
+
+| Office hours            | Location |
+|-------------------------|----------|
+| Wednesday 13:15 - 14:15 | FG 2.031 |

@@ -1,0 +1,21 @@
+---
+title: "Session 9"
+subtitle: "📂 P2: 📚 Media habits & routines"
+bibliography: references.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+
+## Literature for the presenting group
+
+-   [@schnauber-stockmann2022]
+
+## 
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

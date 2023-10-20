@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Digital behavioral data"
+  description: "Homepage of the course 'Digital behavioral data‘ at Friedrich-Alexander-Universtität (FAU) Erlangen-Nürnberg"
+  favicon: "img/logo_fau_red.svg"
+  page-navigation: true
+  open-graph: true
+  reader-mode: false
+
+  # cookie-consent:
+  #   type: express
+  #   style: headline
+  #   palette: light
+
+  repo-url: https://github.com/faucommsci/dbd_2023
+  repo-actions: [edit, issue]
+    
+  sidebar:
+    logo: "img/dbd_hex.png"
+    align: center
+    tools: 
+    - icon: globe
+      href: https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/
+    - icon: github
+      href: https://github.com/faucommsci/dbd_2023
+      text: Course repository
+    - icon: chat-dots
+      href: https://fau-dbd.zulipchat.com/
+      text: Zulip
+    # - icon: box-arrow-up-right
+    #   href: https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD
+    #   text: Start Binder
+    # - icon: github
+    #   href: https://github.com/chrdrn/digital-behavior-data-binder
+    #   text: Binder repository
+
+    
+    style: "floating"
+    search: true
+    collapse-level: 1
+    contents: 
+      - section: "Course information"
+        contents:
+          - href: course-syllabus.qmd
+            text: Syllabus
+          - href: course-assignments.qmd
+            text: Assignments
+          - href: index.qmd
+            text: Schedule
+          - href: course-team.qmd
+            text: Teaching team
+
+
+      - section: "Sessions"
+        contents:
+          - href: sessions/session-01.qmd
+            text: "Session 01"
+
+      - section: "Computing"
+        contents:
+          - href: computing/computing-textbooks.qmd
+            text: R Textbooks
+          - href: computing/computing-cheatsheets.qmd
+            text: R Cheatsheets
+            
+
+  page-footer: 
+   left: "Copyright 2023, Christoph Adrian"
+   right: "This page is built with ☕ & [Quarto](https://quarto.org/)."
+
+format:
+  html:
+    theme:
+      light: [journal, theme.scss]
+      dark: [journal, theme-dark.scss]
+    css: styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true

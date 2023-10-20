@@ -1,0 +1,59 @@
+---
+title: "Digital Behavioral Data"
+subtitle: "Winter semester 2023/24"
+date: 10/01/2023
+date-modified: last-modified
+date-format: "DD.MM.YYYY"
+author: 
+  - name: Christoph Adrian 
+    url: /course-team.html
+    affiliation: Chair of Communication Science
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+---
+
+::: callout-note
+This page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here.
+:::
+
+| Session | Datum            | Topic                             | Prepare                                                                            | Slides                                                                                                        |
+|-----------|-----------|-----------|-----------|-----------|
+|         |                  | **Introduction**                  |                                                                                    |                                                                                                               |
+| 1       | 25.10.2023       | Kick-Off                          | [{{< bi book >}}](/sessions/session-01.html "Session 01"){aria-label="Session 01"} | [{{< bi file-earmark-slides >}}](/slides/slides-01.html "Slides: Session 01"){aria-label="Slides Session 01"} |
+| \-      | 01.11.2023       | 🎃 *Holiday (No Lecture)*         |                                                                                    |                                                                                                               |
+| 2       | 08.11.2023       | DBD: Overview                     |                                                                                    |                                                                                                               |
+| 3       | 15.11.2023       | 🔨 Working with R                 |                                                                                    |                                                                                                               |
+|         | 📂 **Project 1** | **Analysis of media content**     |                                                                                    |                                                                                                               |
+| 4       | 22.11.2023       | 📚 Digital disconnection          | [{{< bi book >}}](/sessions/session-04.html "Session 04"){aria-label="Session 01"} |                                                                                                               |
+| 5       | 29.11.2023       | 📦 Data collection methods        | [{{< bi book >}}](/sessions/session-05.html "Session 05"){aria-label="Session 01"} |                                                                                                               |
+| 6       | 06.12.2023       | 🔨 Text as data                   |                                                                                    |                                                                                                               |
+| 7       | 13.12.2023       | 📊 Presentation & Discussion      |                                                                                    |                                                                                                               |
+| 8       | 20.12.2023       | *Buffer Session*                  |                                                                                    |                                                                                                               |
+| \-      | \-               | 🎄*Christmas Break (No Lecture)*  |                                                                                    |                                                                                                               |
+|         | 📂 **Project 2** | **Analysis of media usage**       |                                                                                    |                                                                                                               |
+| 9       | 11.01.2024       | 📚 Media habits & routines        | [{{< bi book >}}](/sessions/session-09.html "Session 09"){aria-label="Session 01"} |                                                                                                               |
+| 10      | 18.01.2024       | 📦 Data donations methods         | [{{< bi book >}}](/sessions/session-10.html "Session 10"){aria-label="Session 01"} |                                                                                                               |
+| 11      | 25.01.2024       | 🔨 Working data logs              |                                                                                    |                                                                                                               |
+| 12      | 02.02.2024       | 📊 Presentation & Discussion      |                                                                                    |                                                                                                               |
+| 13      | 08.02.2024       | 🏁 Recap, Evaluation & Discussion |                                                                                    |                                                                                                               |
+
+: {tbl-colwidths="\[2,20,50,5,5,5,5 \]"}
+
+## Copyright
+
+This content is licensed under a [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+```{r backup}
+#| echo: false
+knitr::knit_exit()
+```
+
+|      |      |       | Prepare | Slides | AE  |                                                    Labs                                                    | HW  | Exam | Project |
+|--------|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| Week | Date | Topic |   📖    |   🖥️   | 📋  | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️  |  ✅  |   📂    |
+
+Icons
+
+-   Preparation: {{< bi book >}}
+-   Slides: {{< bi file-earmark-slides >}}
+-   Group Activity: {{< iconify octicon comment-discussion-24 >}}
+-   Application exercises: {{< iconify simple-icons googlecolab >}}

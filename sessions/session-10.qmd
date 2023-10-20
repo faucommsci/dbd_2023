@@ -1,0 +1,32 @@
+---
+title: "Session 9"
+subtitle: "📂 P2: 📦 Data donations"
+bibliography: references.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+
+## Literature for the presenting group
+
+-   [@baumgartner2022]
+
+-   [@breuer2022]
+
+-   [@ohme2021]
+
+-   [@ohme2023]
+
+-   [@skatova2019]
+
+-   [@vandriel2022]
+
+-   [@yee2022]
+
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

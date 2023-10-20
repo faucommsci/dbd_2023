@@ -1,0 +1,53 @@
+---
+title: "Session 5"
+subtitle: "📂 P1: 📦 Data collection methods"
+bibliography: references.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+
+## Literature for the presenting group
+
+-   [@karami2020]
+
+-   [@peeters2022]
+
+-   [@peeters2022a]
+
+-   [@puschmann2017]
+
+## Other additional readings
+
+### API-Access
+
+-   [@janetzko2016]
+
+-   [@jünger2021]
+
+-   [@jünger2022]
+
+-   [@lomborg2014]
+
+-   [@nyhuis2021]
+
+### Twitter
+
+-   [@banda2021]
+
+-   [@jungherr2016]
+
+-   [@mueller2022]
+
+-   [@münch2021]
+
+-   [@vasko2019]
+
+-   [@yuan2022]
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

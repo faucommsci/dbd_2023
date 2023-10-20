@@ -1,0 +1,27 @@
+---
+title: "Session 1"
+subtitle: "Kick-Off"
+editor: visual
+---
+
+::: callout-important
+Please make sure that you answered the survey send to you by (StudOn) mail.
+:::
+ 
+## Prepare
+
+✍️ Fill out the short survey before the first session (see ![](https://www.studon.fau.de/favicon.ico){width="16"} [StudOn](https://www.studon.fau.de/crs5349138.html) for Link)
+
+📨 Join ![](https://raw.githubusercontent.com/zulip/zulip/main/static/images/favicon.svg){width="16"} [Zulip](https://fau-dbd.zulipchat.com) using the invitation (please check your email address used for StudOn).
+
+📖 Read the [syllabus](/course-syllabus.html)
+
+## Participate
+
+🖥️ [Session 01 - Kick Off](/slides/slides-01.html) (🚧 *Still under construction*)
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

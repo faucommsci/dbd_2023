@@ -1,0 +1,35 @@
+---
+title: "Session 4"
+subtitle: "📂 P1: 📚 Digital disconnection"
+bibliography: references.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+
+## Mandatory literature
+
+::: {.callout-important appearance="simple"}
+All articles of this section have to be read & used by the presenting group
+:::
+
+-   [@nassen2023]
+
+-   [@radtke2022]
+
+-   [@vandenabeele2022]
+
+## Other readings
+
+-   [@moe2021]
+
+-   [@schmuck2020]
+
+-   [@syvertsen2019]
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

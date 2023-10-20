@@ -1,0 +1,163 @@
+---
+title: "Assingments"
+---
+
+## Portfolio assessment {#sec-portfolio}
+
+-   In order to be able to adapt the assignments flexibly to the requirements of the course (e.g. different number of students, projects changing from semester to semester or several projects in one semester), this seminar uses a `portfolio` assessment. Even though the seminar aims at testing new forms of assignments due to its practical and empirical orientation, traditional assignments such as presentations or written reports will still be an integral part. However, these will be expanded to include the special features of working with digital behavioral data.
+-   Assignments can be group (👥) or individual (👤) work and are marked as such. The expected group size is 2-3 persons.
+-   The following list contains an overview of the assignments to be completed in the course:
+
+| Total                                               | 100 Pts |
+|-----------------------------------------------------|---------|
+| [👥 Presentation](#sec-presentation)                | 20 Pts  |
+| [👥 Project topic idea(s)](#sec-topic-ideas)        | 10 Pts  |
+| [👥 Project proposal (draft report)](#sec-proposal) | 15 Pts  |
+| [👤 Peer Review](#sec-peer-review)                  | 15 Pts  |
+| [👥 Written short report](#sec-written-report)      | 40 Pts  |
+
+: Breakdown of the final grade
+
+::: callout-caution
+## Important Disclaimer
+
+-   **The final structure of the course (e.g. which and how many small projects) will be discussed and determined together with the students in the first session.** Accordingly, it is possible that the portfolio or the assignments contained in it will be adjusted subsequently (e.g. the scope, content or deadline of assignments could be changed or even entire assignments could be dropped).
+
+-   If the final structure of the course contains several small projects, the listed **assignments only have to be completed for one of the projects**.
+:::
+
+## 👥 Presentation (20 Pts) {#sec-presentation}
+
+The topics for the presentation will be assigned at the beginning of the course. The focus of the presentation is either on presenting the theoretical basis of the project (📚) or the data source/collection (📦). The presentation should be 20 to 30 minutes long (including time for questions and discussion). You will be graded based on your individual contribution, so please clarify which slides are presented by whom (e.g., by adding the initials of the presenting individual in the footnote of the slide).
+
+Literature for the preparation of the presentation will be provided. The texts relevant for the respective presentation can be found in the information on the preparation (📖) of the respective session. All texts listed in the section "*Mandatory literature*" constitute the presentation literature for your respective presentation. Please include all texts on your topic in your presentation, but feel free to set your own priorities in the presentation. You may also cite other sources, provided they enrich the subject matter.
+
+The aim of the presentation is to give the course participants an overview on your topic, e.g., central terms, definitions and features of the respective platform, method and/or tool. The presentation of the state of research (what is the goal of the studies and what do they show?) plays a subordinate role.
+
+Additionally, presenters are required to meet with the instructor in the week before their presentation for a mandatory feedback. My office hours are directly after the session, on *Wednesdays from 13:15 to 14:15*. If you have scheduling conflicts, we can arrange another meeting time. Meetings can take place in person or via Zoom.
+
+In advance of the feedback meeting, a first complete draft of the presentation must be submitted as a PowerPoint or PDF file via mail at the latest 24 hours before the meeting, one week before the presentation. During the feedback meeting, students will receive detailed feedback and tips on how to revise their presentation. The revised presentations are then given in presence in the respective sessions. Afterwards, a PDF of the slides is made available to the seminar.
+
+::: callout-tip
+## Important information, tasks & deadlines
+
+-   *At the latest 24 hours before the pre-meeting:* Send the first complete draft of the presentation slides by e-mail to [christoph.](mailto:christoph.adrian@fau.de?subject=Entwurf%20Präsentation%20DBD)[adrian](mailto:christoph.adrian@fau.de?subject=Draft%20Presentation%20DBD)[\@fau.de](mailto:christoph.adrian@fau.de?subject=Entwurf%20Präsentation%20DBD)
+-   *One week before your presentation:* Pre-meeting to discuss the presentation draft during the office hours. Please arrange an alternative date in good time if you are unable to attend the scheduled pre-meeting.
+-   *Until 09:00 of the day of the presentation:* Send the final draft of the presentation by e-mail to [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de?subject=Presentation%20DBD)
+:::
+
+## 👥 Project topic idea(s) (10 Pts) {#sec-topic-ideas}
+
+Short or ad-hoc presentations ("pitches") of the status or result of your groups project work. The pitches should be about 5 to 10 minutes long, consist of max. 5 slides and be held by one group member only. The number of pitches should be balanced between the group members.
+
+The aim of the pitches is to give the course and update about your projects progress as well as a basis for discussion and feedback. Therefore, you should
+
+-   first give a short overview of your topic, research question or motivation and selected data (sub-)sample (2 slides),
+-   describe your method and analysis (1 slide) and
+-   show results and/or a challenge you face, that should be discussed by the course (2 slide).
+
+After the pitch there will be time for questions, either from the group to the course or vice versa.
+
+::: callout-tip
+## Important information, tasks & deadlines
+
+-   Prepare a short presentation before and present you pitch in **every "Presentation & Discussion (📊)" session**, using the Google Slides templates provided.
+:::
+
+## 👥 Project proposal (15 pts) {#sec-proposal}
+
+The project proposal is basically the frist written draft of your final short report, consisting of the write-up of your project topic idea and/or associated feedback. The idea is for you to think about the specific analysis strategy early on, as well as present initial results or evaluation. The project proposal is the basis for the peer review.
+
+The project proposal should be at least 500 words and include the following points:
+
+#### Section 1 - Introduction
+
+The introduction section includes
+
+-   an introduction to the subject matter you're investigating
+-   the motivation for your research question (citing any relevant literature)
+-   the general research question you wish to explore and/or your hypotheses regarding the research question of interest.
+
+#### Section 2 - Data description
+
+In this section, you will describe the data (sub-)sample you selected. This includes
+
+-   description of the "observations" in the data set,
+-   description of how the data was "originally" collected.
+
+#### Section 3 - Analysis approach
+
+In this section, you will provide a brief overview of your analysis approach. This includes:
+
+-   Description of the central method as well as necessary pre-processing steps of the data.
+-   Description, visualization and/or summary statistics of the central variables.
+-   (Intended) analysis strategy with which you want to answer the research question/hypothesis (with initial results, if available)
+
+The grading of your proposal will be as followd:
+
+| Total                     | 15 pts |
+|---------------------------|--------|
+| Introduction              | 4 pts  |
+| Data description          | 3 pts  |
+| Analysis plan             | 7 pts  |
+| Organization + formatting | 1 pts  |
+
+: Project proposal grading breakdown
+
+::: callout-tip
+## Important information, tasks & deadlines
+
+-   Submit the draft project proposal using the provided Google Docs template **no later than two weeks after the associated "Presentation & Discussion" session**.
+:::
+
+## 👤 Peer Review (15 pts) {#sec-peer-review}
+
+Critically reviewing others' work is a crucial part of the scientific process. Therefore, each group will be assigned one other group's project proposal to review before the final submission. This way, you will be able to get additional feedback before handing in your final report.
+
+During the peer review process, you will be provided read-only access to your partner groups' report via Google Docs. Provide your review in the form of another Google Doc using the template provided.
+
+#### Process and questions
+
+-   Open the Google Doc of the team you're reviewing and read their project draft.
+-   Then, go to Peer Review Google Doc template, fill out the relevant fields and answer the following questions:
+    -   *Describe the goal of the project.*
+    -   *Describe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.*
+    -   *Describe the approaches, tools, and methods that will be used.*
+    -   *Is there anything that is unclear from the proposal?*
+    -   *Provide constructive feedback on how the group might be able to improve their project. Make sure your feedback includes at least one comment on the statistical modeling aspect of the project, but do feel free to comment on aspects beyond the modeling.*
+    -   *What aspect of this project are you most interested in and would like to see highlighted in the presentation.*
+    -   *Provide constructive feedback on any issues with file and/or code organization.*
+    -   *(Optional) Any further comments or feedback?*
+-   The peer review will be graded on the extent to which it comprehensively and constructively addresses the components of the partner team's report: the research context and motivation, exploratory data analysis, modeling, interpretations, and conclusions.
+
+::: callout-tip
+## Important tasks & deadlines
+
+-   Provide feedback using the provided Google Docs template **until two weeks after you received the document for peer-reviewing.**
+:::
+
+## 👥 Written short report (40 pts) {#sec-written-report}
+
+The goal of the written short report is for each group to use at least one of the method or data presented to explore a topic of your own choosing. Choose both data and topic based on your group's interests, experience or work you all have done in other courses or research projects. The goal of this project is for you to demonstrate proficiency in the techniques covered in this class (and beyond, if you like!) and apply them to a data set to analyze it in a meaningful way.
+
+Be selective in what you include in your final write-up. The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis. You are welcome to include an appendix with additional work at the end of the written report document; however, grading will largely be based on the content in the main body of the report. You should assume the reader will not see the material in the appendix unless prompted to view it in the main body of the report. The appendix should be neatly formatted and easy for the reader to navigate. It is not included in the word limit.
+
+The written report should be **750 to 1000 words per person**. However, **when written as a group report, the number or words scale with a factor of 0.8 per person** (e.g., a group of two should write 1200 to 1600 words, a group of three 1800 to 2400 words). All analyses as well as the written report must be done in RStudio and all components of the project must be reproducible. The mandatory components of the reports are: *Introduction, Data/Methodology, Results, Discussion & Conclusion*. You are free to add additional sections as necessary. You will be graded based on your individual contribution, so please clarify which part of the report was written by whom (e.g., by adding the initials of the author in the header of the section).
+
+The written report is worth 40 points, broken down as follows
+
+| Total                       | 40 pts |
+|-----------------------------|--------|
+| *Introduction/data*         | 6 pts  |
+| *Methodology*               | 10 pts |
+| *Results*                   | 14 pts |
+| *Discussion + conclusion*   | 6 pts  |
+| *Organization + formatting* | 4 pts  |
+
+::: callout-tip
+## Important tasks & deadlines
+
+-   Final submission of the revised written report is due *01.03.2024, 23:59*[^1]*.*
+:::
+
+[^1]: Please note that this is a temporary deadline. The final deadline will be adjusted in the course in consultation with the students if necessary.
