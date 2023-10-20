@@ -6,12 +6,20 @@ date-format: "DD.MM.YYYY"
 bibliography: references.bib
 ---
 
+```{r setup-slide-session}
+#| echo: false
+library(jsonlite)
+library(tidyverse)
+```
+
 # 🚧 Under construction
 
 Die Folien werden aktuell überarbeitet, sind aber spätestens zur 1.Sitzung (25.10) online.
 
 ```{r under-construction-stop-render}
 #| echo: false
+#| eval: false
+
 knitr::knit_exit()
 ```
 
@@ -53,9 +61,9 @@ Motivation & Grundidee
 ::: {.column width="50%"}
 Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
 
--   [**https://www.menti.com/alxiy2f2n6o**]{.smallcaps}**j**
+-   <https://www.menti.com/alhdxw6x3a6e>
 
--   Temporary Voting Code: [**49 29 72 5**]{.smallcaps}
+-   Temporary Access Code: **2677 1451**
 :::
 
 ::: {.column width="50%"}
@@ -66,7 +74,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 ## Ergebnis
 
 ::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/algh3e97r18k5a4wrgt77kcxsm5hermr/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
 
 </iframe>
 :::
@@ -87,13 +95,13 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 :::
 :::
 
-## Beispiel: *COVID-19 Mobility Monitor*
+## Beispiel: [COVID-19 Mobility Monitor](https://www.covid-19-mobility.org/de/mobility-monitor/)
 
 ![](img/session-01/mobility_monitor.png){fig-align="center"}
 
-## Beispiel: *Datenvolumen einer Internet-Minute*
+## Beispiel: [Datenvolumen einer Internet-Minute](https://ediscoverytoday.com/2023/04/20/2023-internet-minute-infographic-by-ediscovery-today-and-ltmg-ediscovery-trends/)
 
-[![](img/session-01/one_minute_internet.jpg)](https://www.statista.com/chart/25443/estimated-amount-of-data-created-on-the-internet-in-one-minute/)
+![](https://i0.wp.com/ediscoverytoday.com/wp-content/uploads/2023/04/2023InternetMinuteSized.png?w=565&ssl=1){fig-align="center"}
 
 ## Kernbereiche von DBD
 
@@ -101,40 +109,157 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 
 ::: columns
 ::: {.column width="50%"}
+<!-- FIXME Neue Graphik hinzufügen -->
+
 ![](img/session-01/dbd_graph/dbd_pillars_3.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-<br>
-
--   Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
+<br> <!-- FIXME "Schwerpunkt" korrigieren --> - Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
 
 -   Seminar legt **Schwerpunkt auf Datenerhebung**, mit kurzen Ausblick auf die anderen Bereiche
 :::
 :::
 
-# 📢️ Organisation & Koordination {background-image="img/slide_bg-orga.png"}
+# Organisation & Koordination {background-image="img/slide_bg-orga.png"}
 
-Seminarplan, Themen, Prüfungsleistungen
+📢️ Seminarplan, Themen, Prüfungsleistungen
 
-## Seminarplan {.smaller}
+## (Vorläufiger) Seminarplan {.smaller}
 
-| Sitzung             | Datum                        | Thema                                          | Referent\*Innen                                    |
-|----------------|----------------|--------------------|----------------------|
-| [**1**]{.smallcaps} | [**26.10.2022**]{.smallcaps} | [**Kick-Off Session**]{.smallcaps}             | Christoph Adrian                                   |
-| 2                   | 02.11.2022                   | DBD: Einführung und Überblick                  | Christoph Adrian                                   |
-| 3                   | 09.11.2022                   | DBD: Datenerhebung                             | Christoph Adrian                                   |
-| 4                   | 16.11.2022                   | API-Access (I): *Twitter*                      |                                                    |
-| 5                   | 23.11.2022                   | API-Access (II): *YouTube*                     |                                                    |
-| 6                   | 30.11.2022                   | API-Access (II): *Reddit*                      |                                                    |
-| 7                   | 07.12.2022                   | Webscraping: *TikTok*                          |                                                    |
-| 8                   | 14.12.2022                   | ESM: *m-path*                                  |                                                    |
-|                     |                              | *WEIHNACHTSPAUSE*                              |                                                    |
-| 9                   | 12.01.2023                   | Data Donations                                 |                                                    |
-| 10                  | 19.01.2023                   | Mock-Up-Virtual Environments                   |                                                    |
-| 11                  | 26.01.2023                   | Open Science                                   |                                                    |
-| 12                  | 02.02.2023                   | ***Guest Lecture: Linking DBD & Survey data*** | [Johannes Breuer](https://www.johannesbreuer.com/) |
-| 13                  | 09.02.2023                   | Semesterabschluss & Evaluation                 | Christoph Adrian                                   |
+```{r}
+#| echo: false
+json_text <- '[
+    {
+        "Session": "",
+        "Datum": "",
+        "Topic": "**Introduction**",
+        "Presenter": ""
+    },
+    {
+        "Session": "1",
+        "Datum": "25.10.2023",
+        "Topic": "Kick-Off",
+        "Presenter": "Christoph Adrian"
+    },
+    {
+        "Session": "",
+        "Datum": "01.11.2023",
+        "Topic": "🎃 *Holiday (No Lecture)*",
+        "Presenter": ""
+    },
+    {
+        "Session": "2",
+        "Datum": "08.11.2023",
+        "Topic": "DBD: Overview",
+        "Presenter": "Christoph Adrian"
+    },
+    {
+        "Session": "3",
+        "Datum": "15.11.2023",
+        "Topic": "🔨 Working with R",
+        "Presenter": "Christoph Adrian"
+    },
+    {
+        "Session": "",
+        "Datum": "📂 **Project 1**",
+        "Topic": "**Analysis of media content**",
+        "Presenter": ""
+    },
+    {
+        "Session": "4",
+        "Datum": "22.11.2023",
+        "Topic": "📚 Digital disconnection",
+        "Presenter": ""
+    },
+    {
+        "Session": "5",
+        "Datum": "29.11.2023",
+        "Topic": "📦 Data collection methods",
+        "Presenter": ""
+    },
+    {
+        "Session": "6",
+        "Datum": "06.12.2023",
+        "Topic": "🔨 Text as data",
+        "Presenter": ""
+    },
+    {
+        "Session": "7",
+        "Datum": "13.12.2023",
+        "Topic": "📊 Presentation & Discussion",
+        "Presenter": ""
+    },
+    {
+        "Session": "8",
+        "Datum": "20.12.2023",
+        "Topic": "*Buffer Session*",
+        "Presenter": ""
+    },
+    {
+        "Session": "",
+        "Datum": "",
+        "Topic": "🎄*Christmas Break (No Lecture)*",
+        "Presenter": ""
+    },
+    {
+        "Session": "",
+        "Datum": "📂 **Project 2**",
+        "Topic": "**Analysis of media usage**",
+        "Presenter": ""
+    },
+    {
+        "Session": "9",
+        "Datum": "11.01.2024",
+        "Topic": "📚 Media habits & routines",
+        "Presenter": ""
+    },
+    {
+        "Session": "10",
+        "Datum": "18.01.2024",
+        "Topic": "📦 Data donations methods",
+        "Presenter": ""
+    },
+    {
+        "Session": "11",
+        "Datum": "25.01.2024",
+        "Topic": "🔨 Working data logs",
+        "Presenter": ""
+    },
+    {
+        "Session": "12",
+        "Datum": "02.02.2024",
+        "Topic": "📊 Presentation & Discussion",
+        "Presenter": ""
+    },
+    {
+        "Session": "13",
+        "Datum": "08.02.2024",
+        "Topic": "🏁 Recap, Evaluation & Discussion",
+        "Presenter": "Christoph Adrian"
+    }
+]'
+
+schedule <- fromJSON(json_text) %>% tibble()
+```
+
+```{r table-schedule}
+#| echo: false 
+
+schedule %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px") %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    gtExtras::gt_highlight_rows(
+        rows = 2,
+        fill = "#C50F3C", alpha = 0.2,
+        bold_target_only = TRUE,
+        target_col = Topic       
+   )
+```
 
 ## Typische Session
 
@@ -142,15 +267,15 @@ Seminarplan, Themen, Prüfungsleistungen
 
 ::: columns
 ::: {.column width="50%"}
-**Präsentation (ca. 35-45 Min)**
+**Präsentation (ca. 30-45 Min)**
 
--   Umfasst Ihre **Präsentation** (inkl. Zeit für Fragen und Diskussionen)
+-   Umfasst eine bzw. Ihre **Präsentation** (inkl. Zeit für Fragen und Diskussionen)
 
--   Option auf weitere, offenere **Diskussion** im Plenum
+-   Option auf weitere, offenere **Diskussion** im Kurs
 :::
 
 ::: {.column width="50%"}
-**Group Activity (ca. 45 - 55 Min)**
+**Group Activity (ca. 45 - 60 Min)**
 
 -   kleine Gruppenarbeiten zur Vertiefung
 
@@ -158,23 +283,21 @@ Seminarplan, Themen, Prüfungsleistungen
 
 -   Beispiele:
 
-    -   Anwendung von Tool/Methode mit anschließender kritschen Diskussion
+    -   *Anwendung von Tool/Methode mit anschließender kritschen Diskussion*
 
-    -   Erstellung eines einfachen Forschungs- oder Analysedesign
+    -   *Erstellung eines einfachen Forschungs- oder Analysedesign*
 :::
 :::
 
 ## Different tools for different tasks
 
-#### Organisation der Lehre auf einen Blick
+#### Kursorganisation & -kommunikation
 
--   **MS Teams:** wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs
+-   [Zulip](https://fau-dbd.zulipchat.com): Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs
 
--   **StudOn**: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen
+-   [StudOn](https://www.studon.fau.de/crs5349138.html): Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen
 
--   **Email:** persönliche Fragen an Dozent
-
--   ***Zoom**: ggf. für Sitzung & Sprechstunde*
+-   [E-Mail](): persönliche Anliegen
 
 ## What is expected
 
@@ -182,11 +305,7 @@ Seminarplan, Themen, Prüfungsleistungen
 
 -   **Regelmäßige Teilnahme** an den Sitzungen (max. 2 unentschuldigtes Fehlen)
 
--   Eigenständige Auf- und Vorbereitung von **Pflichtlektüre** ("bestehen")
-
--   **Präsentation** (50%)
-
--   **Seminarbericht** (50%)
+-   
 
 ## Präsentation {.smaller}
 

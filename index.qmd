@@ -16,7 +16,7 @@ This page contains an outline of the topics, contents, and assignments for the s
 :::
 
 | Session | Datum            | Topic                             | Prepare                                                                            | Slides                                                                                                        |
-|-----------|-----------|-----------|-----------|-----------|
+|---------------|---------------|---------------|---------------|---------------|
 |         |                  | **Introduction**                  |                                                                                    |                                                                                                               |
 | 1       | 25.10.2023       | Kick-Off                          | [{{< bi book >}}](/sessions/session-01.html "Session 01"){aria-label="Session 01"} | [{{< bi file-earmark-slides >}}](/slides/slides-01.html "Slides: Session 01"){aria-label="Slides Session 01"} |
 | \-      | 01.11.2023       | 🎃 *Holiday (No Lecture)*         |                                                                                    |                                                                                                               |
