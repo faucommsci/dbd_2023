@@ -299,5 +299,285 @@
     "title": "Assingments",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nPlease note that this is a temporary deadline. The final deadline will be adjusted in the course in consultation with the students if necessary.↩︎"
+  },
+  {
+    "objectID": "slides/slides-01.html#herzlich-willkommen",
+    "href": "slides/slides-01.html#herzlich-willkommen",
+    "title": "Kick-Off",
+    "section": "Herzlich willkommen!",
+    "text": "Herzlich willkommen!\nVorstellungsrunde\nChristoph Adrian\n\nseit 2016: Research Assistant / PhD Candidate FAU\nM. Sc. Sozialökonomik (FAU)\nB.A. Sozialökonomik (FAU)\n\nForschungs- und Lehrschwerpunkte\n\nComputer-assisted and automated (corpus-based) content analysis (with R)\nSocial media research (Twitter)\nPotential influence of media use on attitude changes"
+  },
+  {
+    "objectID": "slides/slides-01.html#und-nun-zu-ihnen",
+    "href": "slides/slides-01.html#und-nun-zu-ihnen",
+    "title": "Kick-Off",
+    "section": "Und nun zu Ihnen!",
+    "text": "Und nun zu Ihnen!\nVorstellungsrunde\n\nWie heißen Sie?\nWas und wo haben Sie im Bachelor studiert?\nWas studieren Sie aktuell?\nWelches soziale Netzwerk/Medium nutzen Sie aktuell am häufigsten?\nWas war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?"
+  },
+  {
+    "objectID": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
+    "href": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
+    "title": "Kick-Off",
+    "section": "Was verstehen Sie unter Digital Behavioral Data?",
+    "text": "Was verstehen Sie unter Digital Behavioral Data?\nInteraktive Session\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link für die Teilnahme an einer kurzen Umfrage:\n\nhttps://www.menti.com/alhdxw6x3a6e\nTemporary Access Code: 2677 1451"
+  },
+  {
+    "objectID": "slides/slides-01.html#ergebnis",
+    "href": "slides/slides-01.html#ergebnis",
+    "title": "Kick-Off",
+    "section": "Ergebnis",
+    "text": "Ergebnis"
+  },
+  {
+    "objectID": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
+    "href": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
+    "title": "Kick-Off",
+    "section": "Ein Definitionsversuch von DBD",
+    "text": "Ein Definitionsversuch von DBD\nnach Weller (2021)\n\n\n… fasst eine Vielzahl von möglichen Datenquellen zusammen, die verschiedene Arten von Aktivitäten aufzeichnen\n… können dabei helfen, Meinungen, Verhalten und Merkmale der menschlichen Nutzung digitaler Technologien zu erkennen"
+  },
+  {
+    "objectID": "slides/slides-01.html#beispiel-covid-19-mobility-monitor",
+    "href": "slides/slides-01.html#beispiel-covid-19-mobility-monitor",
+    "title": "Kick-Off",
+    "section": "Beispiel: COVID-19 Mobility Monitor",
+    "text": "Beispiel: COVID-19 Mobility Monitor"
+  },
+  {
+    "objectID": "slides/slides-01.html#beispiel-datenvolumen-einer-internet-minute",
+    "href": "slides/slides-01.html#beispiel-datenvolumen-einer-internet-minute",
+    "title": "Kick-Off",
+    "section": "Beispiel: Datenvolumen einer Internet-Minute",
+    "text": "Beispiel: Datenvolumen einer Internet-Minute"
+  },
+  {
+    "objectID": "slides/slides-01.html#kernbereiche-von-dbd",
+    "href": "slides/slides-01.html#kernbereiche-von-dbd",
+    "title": "Kick-Off",
+    "section": "Kernbereiche von DBD",
+    "text": "Kernbereiche von DBD\nin Anlehnung an Aufteilung der GESIS\n\n\n\n\n\n\n\n\n\n\n\nUnterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)\nSeminar legt Schwerpunkt auf Datenerhebung, mit kurzen Ausblick auf die anderen Bereiche"
+  },
+  {
+    "objectID": "slides/slides-01.html#vorläufiger-seminarplan",
+    "href": "slides/slides-01.html#vorläufiger-seminarplan",
+    "title": "Kick-Off",
+    "section": "(Vorläufiger) Seminarplan",
+    "text": "(Vorläufiger) Seminarplan\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nDBD: Overview\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    6\n\n06.12.2023\n\n🔨 Text as data\n\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n18.01.2024\n\n📦 Data donations methods\n\n\n    11\n\n25.01.2024\n\n🔨 Working data logs\n\n\n    12\n\n02.02.2024\n\n📊 Presentation & Discussion\n\n\n    13\n\n08.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session",
+    "href": "slides/slides-01.html#typische-session",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
+  },
+  {
+    "objectID": "slides/slides-01.html#different-tools-for-different-tasks",
+    "href": "slides/slides-01.html#different-tools-for-different-tasks",
+    "title": "Kick-Off",
+    "section": "Different tools for different tasks",
+    "text": "Different tools for different tasks\nKursorganisation & -kommunikation\n\nGithub-Kursseite: Informationen zu Kurs (Semesterplan, Syllabus, Prüfungleistungen etc). & Sitzungen (Slides, Literatur und ggf. Übungsmaterial)\nZulip: Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs\nStudOn: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen\nE-Mail: persönliche Anliegen\n\n\n\nKurze Vorführung der Webseite\nZulip Frage/Probleme bei Registrierung?"
+  },
+  {
+    "objectID": "slides/slides-01.html#what-is-expected",
+    "href": "slides/slides-01.html#what-is-expected",
+    "title": "Kick-Off",
+    "section": "What is expected",
+    "text": "What is expected\nLeistungsanforderungen & Prüfungsleistungen\n\n\n\nRegelmäßige Teilnahme\n\nmindestens 80% der Sitzungen\nmax. 2 unentschuldigte Fehltermine\n\n\n\nPortfolio\n\nVerschiedene Teilleistungen (ins. 100 Punkte)\nMehr Arbeit während des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#präsentation",
+    "href": "slides/slides-01.html#präsentation",
+    "title": "Kick-Off",
+    "section": "👥 Präsentation",
+    "text": "👥 Präsentation\n💡Zentrale Idee: Theoretische & methodische Grundlage für das Mini-Projekt\n\nUmfang: maximal 30 Minuten\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt\n\n\nBessonderheit: vorheriges Feedbackgespräch"
+  },
+  {
+    "objectID": "slides/slides-01.html#ein-kurzer-appell",
+    "href": "slides/slides-01.html#ein-kurzer-appell",
+    "title": "Kick-Off",
+    "section": "Ein kurzer Appell",
+    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
+  },
+  {
+    "objectID": "slides/slides-01.html#please-state-your-preference",
+    "href": "slides/slides-01.html#please-state-your-preference",
+    "title": "Kick-Off",
+    "section": "Please state your preference",
+    "text": "Please state your preference\nVergabe der Präsentationsthemen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link und geben Sie Ihre Themenpräferenz an:\n\nhttps://simpleassign.com/poll/-NhRazTXpvnikS0JKWdT"
+  },
+  {
+    "objectID": "slides/slides-01.html#lets-spin-the-wheel",
+    "href": "slides/slides-01.html#lets-spin-the-wheel",
+    "title": "Kick-Off",
+    "section": "Let’s spin the wheel",
+    "text": "Let’s spin the wheel\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n18.01.2024\n\n📦 Data donations methods\n\n\n  \n  \n  \n\n\n\n\n\nIn case of emergency: Wheel of Names"
+  },
+  {
+    "objectID": "slides/slides-01.html#lektüre-zwischen-den-sitzungen",
+    "href": "slides/slides-01.html#lektüre-zwischen-den-sitzungen",
+    "title": "Kick-Off",
+    "section": "Lektüre zwischen den Sitzungen",
+    "text": "Lektüre zwischen den Sitzungen\nPflichtlektüre\n\npro Woche ein wissenschaftlicher Text als Grundlage für das Thema (Sitzungen 4 - 11)\n\nEinreichung von Fragen zum Text in Teams (spätestens Dienstag Abend)\n\ngilt für alle Kursteilnehmer*Innen\nmind. 1 Verständnisfrage zum Text\nmind. 1 Diskussionsfrage zum Text bzw. Thema insgesamt\nWo? -&gt; in wöchentlicher Teams-Unterhaltung zur jeweligen Sitzung\nWhy? -&gt; wird in der Sitzung genutzt; bereiten Sie Ihre Frage so vor, dass Sie sie in der Sitzung stellen & erklären können\n\nLiteratur:\n\nSiehe Syllabus & Teams/StudOn (PDFs werden bereitgestellt)"
+  },
+  {
+    "objectID": "slides/slides-01.html#seminararbeit",
+    "href": "slides/slides-01.html#seminararbeit",
+    "title": "Kick-Off",
+    "section": "Seminararbeit",
+    "text": "Seminararbeit\nUmfang & Inhalt (ausführliche Infos im Syllabus)\n\n3500 - 4000 Wörter\nAnfertigung einer Projektskizze für eine wissenschaftliche Arbeit\nVerwendung von mindestens eine der vorgestellten Methoden/Tools\nSozialwissenschaftlicher Fokus\n\n(vorläufige) Deadline: 03.03.2023; 23:59"
+  },
+  {
+    "objectID": "slides/slides-01.html#before-we-meet-again",
+    "href": "slides/slides-01.html#before-we-meet-again",
+    "title": "Kick-Off",
+    "section": "Before we meet again",
+    "text": "Before we meet again\nHinweise und offene Fragen\n\nGenerell: ausführliche Informationen im Syllabus!\nWhy no English?\nIhre Fragen?"
+  },
+  {
+    "objectID": "slides/slides-01.html#literatur",
+    "href": "slides/slides-01.html#literatur",
+    "title": "Kick-Off",
+    "section": "Literatur",
+    "text": "Literatur\n\n\n\n\n\n\nHome"
+  },
+  {
+    "objectID": "slides/slides-01.html#mehr-praxis-mehr-spass",
+    "href": "slides/slides-01.html#mehr-praxis-mehr-spass",
+    "title": "Kick-Off",
+    "section": "Mehr Praxis, mehr Spass",
+    "text": "Mehr Praxis, mehr Spass\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡Zentrale Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-oder-session",
+    "href": "slides/slides-01.html#typische-oder-session",
+    "title": "Kick-Off",
+    "section": "Typische 📚,📦 oder 🔨 Session",
+    "text": "Typische 📚,📦 oder 🔨 Session\nErst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session-1",
+    "href": "slides/slides-01.html#typische-session-1",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📊: Pitch ➞ Diskussion ➞ Repeat\n\n\nProject topic idea(s) (ca 5-10 Min)\n\nkurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),\nkurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)\nErgebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).\n\n\nFragen & Diskussion (ca 5-10 Min)\n\nZeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.\n\n\n\n\n🔁 für jede Gruppe\n\n\n\nStatus bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)"
+  },
+  {
+    "objectID": "slides/slides-01.html#präsentation-1",
+    "href": "slides/slides-01.html#präsentation-1",
+    "title": "Kick-Off",
+    "section": "Präsentation",
+    "text": "Präsentation\nUmfang & Inhalt: max. 30 Min.\n\n~ 25 Min.: Zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools inklusive kurzem Überblick über Forschung(-sfeld)\n~ 5 Min: Fragen & Diskussion\nZiel: Vorstellung Tool & Beispiel für Forschung(-sdesign)\n\nVorheriges (obligatorisches) Feedbackgespräch:\n\nEinreichung vollständiger Präsentationsentwurf mindestens eine Woche + 24 Stunden vor Ihrer Präsentation per E-Mail an christoph.adrian@fau.de\nAusführliches Feedback und Tipps zur Überarbeitung"
+  },
+  {
+    "objectID": "slides/slides-01.html#theorie-meets-praxis",
+    "href": "slides/slides-01.html#theorie-meets-praxis",
+    "title": "Kick-Off",
+    "section": "Theorie meets Praxis",
+    "text": "Theorie meets Praxis\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡Zentrale Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
+  },
+  {
+    "objectID": "slides/slides-01.html#project-topic-idea",
+    "href": "slides/slides-01.html#project-topic-idea",
+    "title": "Kick-Off",
+    "section": "👥 Project topic idea",
+    "text": "👥 Project topic idea\n💡Zentrale Idee: Projektidee entwickeln, vorstellen & diskutieren\nUmfang & Inhalt: max. 30 Min.\n\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt (Mandatory literature unter Informationen zur Session () im Schedule)\n\nVorheriges (obligatorisches) Feedbackgespräch:\n\nEinreichung vollständiger Präsentationsentwurf mindestens 8 Tage vor Ihrer Präsentation per E-Mail an christoph.adrian@fau.de\nAusführliches Feedback und Tipps zur Überarbeitung im persönlichen Gespräch"
+  },
+  {
+    "objectID": "slides/slides-01.html#ein-kurzer-appell-1",
+    "href": "slides/slides-01.html#ein-kurzer-appell-1",
+    "title": "Kick-Off",
+    "section": "Ein kurzer Appell",
+    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
+  },
+  {
+    "objectID": "slides/slides-01.html#ein-kurzer-appell-2",
+    "href": "slides/slides-01.html#ein-kurzer-appell-2",
+    "title": "Kick-Off",
+    "section": "Ein kurzer Appell",
+    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
+  },
+  {
+    "objectID": "slides/slides-01.html#no-ing-please",
+    "href": "slides/slides-01.html#no-ing-please",
+    "title": "Kick-Off",
+    "section": "No 👻ing, please!",
+    "text": "No 👻ing, please!\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte beachten Sie sich folgender Dinge:\n\nNehmen Sie bitte kein Thema an, wenn Sie nicht teilnehmen wollen/können!\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
+  },
+  {
+    "objectID": "slides/slides-01.html#project-proposal",
+    "href": "slides/slides-01.html#project-proposal",
+    "title": "Kick-Off",
+    "section": "👥 Project proposal",
+    "text": "👥 Project proposal\n💡Zentrale Idee: Erster Entwurf des Written short report\n\nUmfang: mindestens 500 Wörter\nZiel: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie\nFokus auf drei “Abschnitte”: Einleitung, Datengrundlage und methodisches Vorgehen\n\n\nBessonderheit: Grundlage für das Peer Review"
+  },
+  {
+    "objectID": "slides/slides-01.html#peer-review",
+    "href": "slides/slides-01.html#peer-review",
+    "title": "Kick-Off",
+    "section": "👤 Peer Review",
+    "text": "👤 Peer Review\n💡Zentrale Idee: Feedback für Bericht geben & bekommmen\n\nUmfang: Durcharbeiten eines Peer-Review-Formulars\nZiel(e):\n\nLernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben\nZusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann\n\n\n\nBesonderheit: Individuelles Assigment!"
+  },
+  {
+    "objectID": "slides/slides-01.html#short-report",
+    "href": "slides/slides-01.html#short-report",
+    "title": "Kick-Off",
+    "section": "👥 Short Report",
+    "text": "👥 Short Report\n💡Zentrale Idee: Zusammenführung der einzelnen Teileistungen\n\nUmfang:\n\n750 bis 1000 Wörter pro Person umfassen.\nBei einem Gruppenbericht skaliert die Anzahl der Wörter mit einem Faktor von 0,8 pro Person (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).\n\nZiel(e):\n\nmindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.\nKenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren."
+  },
+  {
+    "objectID": "slides/slides-01.html#project-topic-ideas",
+    "href": "slides/slides-01.html#project-topic-ideas",
+    "title": "Kick-Off",
+    "section": "👥 Project topic idea(s)",
+    "text": "👥 Project topic idea(s)\n💡Zentrale Idee: Projektidee vorstellen & weiterentwickeln\n\nUmfang: maximal 10 Minuten & 5 Slides\nZiel: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback\nRaum für Fragen und Austausch zwischen den verschiedenen Projektgruppen"
+  },
+  {
+    "objectID": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "href": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "title": "Kick-Off",
+    "section": "Schritt für Schritt zum Ziel",
+    "text": "Schritt für Schritt zum Ziel\nDas Portfolio im Überblick\n\n\n\n\nAusführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter Assignments."
+  },
+  {
+    "objectID": "slides/slides-01.html#talking-about-disconnecting",
+    "href": "slides/slides-01.html#talking-about-disconnecting",
+    "title": "Kick-Off",
+    "section": "Talking about disconnecting",
+    "text": "Talking about disconnecting\nProjekt 1: #digitaldetox auf sozialen Medien\n\n\n\n\n\n\nQuelle: dup-magazin.de\n\n\n\n\nProjektaufbau\n\nTheoretische Hintergrund: Digital disconnection\nAnalyse von Social Media Post mit #digitaldetox\nArchiv-Daten (Twitter) oder eigene Datenerhebung\nFokus auf Inhalt (Diskurs, andere Hashtags) oder “Akteure”/Accounts"
+  },
+  {
+    "objectID": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "href": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "title": "Kick-Off",
+    "section": "Studying problems, not problematic usage?",
+    "text": "Studying problems, not problematic usage?\nProjekt 2: Mediennutzungsgewohnheiten und Wohlbefinden\n\n\n\n\n\n\n\n\n\n\nProjektaufbau\n\nHabitualisierte / routinemäßige Mediennutzung\nErhebung, Aufbereitung und Analyse von Logging-Daten\nEigene Erhebung, Data Download Packages, API-Zugang\nFokus auf Datenerhebungs & -aufbereitungsprozess"
+  },
+  {
+    "objectID": "slides/slides-01.html#einführung-medieninhalte-mediennutzung",
+    "href": "slides/slides-01.html#einführung-medieninhalte-mediennutzung",
+    "title": "Kick-Off",
+    "section": "Einführung, Medieninhalte, Mediennutzung",
+    "text": "Einführung, Medieninhalte, Mediennutzung\nStruktur und Aufbau des Seminars\n\n\nEinführung\n\nProjekt 1\n\nProjekt 2\n\n\nDas Seminar besteht aus drei inhaltlichen Blöcken: Einleitung, Projekt 1 (Medieninhalte), Projekt 2 (Mediennutzung)\n\nDie Einleitung umfasst die ersten drei Sitzungen bilden die (theoretische) Grundlage für den Kurs.\nThe second session is to give you an extended introduction DBD, including challenges and important frameworks. The third session is about practical work with R and RStudio."
+  },
+  {
+    "objectID": "slides/slides-01.html#drei-blöcke",
+    "href": "slides/slides-01.html#drei-blöcke",
+    "title": "Kick-Off",
+    "section": "Drei Blöcke",
+    "text": "Drei Blöcke\nStruktur und Aufbau des Seminars\n\n\nEinführung\nlegt theoretische Grundlagen des Kurses:\n\nKick-Off\nDBD: Einführung & Überblick\npraktische Arbeit mit R und RStudio.\n\n\nProjekt 1\nBeobachtung und Analyse von (schriftlichen) Social Media Inhalten (z.B. Posts und/oder Hashtags) mit Hilfe verschiedener Methoden (z.B. Topic Modeling, Sentiment Analysis etc.).\n\nProjekt 2\nErhebung, Verarbeitung und Auswertung von Logging-Daten sowie deren Verknüpfung mit Umfragedaten"
+  },
+  {
+    "objectID": "slides/slides-01.html#drei-themenblöcke",
+    "href": "slides/slides-01.html#drei-themenblöcke",
+    "title": "Kick-Off",
+    "section": "Drei Themenblöcke",
+    "text": "Drei Themenblöcke\nStruktur und Aufbau des Seminars\n\n\nEinführung\nTheoretische Grundlagen des Kurses:\n\nKick-Off\nDBD: Einführung & Überblick\npraktische Arbeit mit R und RStudio.\n\n\nProjekt 1\nBeobachtung und Analyse von (schriftlichen) Social Media Inhalten (z.B. Posts und/oder Hashtags) mit Hilfe verschiedener Methoden (z.B. Topic Modeling, Sentiment Analysis etc.).\n\nProjekt 2\nErhebung, Verarbeitung und Auswertung von Logging-Daten sowie deren Verknüpfung mit Umfragedaten"
+  },
+  {
+    "objectID": "slides/slides-01.html#no-ing-please-1",
+    "href": "slides/slides-01.html#no-ing-please-1",
+    "title": "Kick-Off",
+    "section": "No 👻ing, please!",
+    "text": "No 👻ing, please!\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte beachten Sie sich folgender Dinge:\n\nNehmen Sie bitte kein Thema an, wenn Sie nicht teilnehmen wollen/können!\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
   }
 ]

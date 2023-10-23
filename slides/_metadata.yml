@@ -12,7 +12,7 @@ author:
 format:
   revealjs:
     theme: slidetheme.scss
-    logo: img/slide_logo.png
+    logo: ../img/dbd_hex.png
     footer: "[Home](https://faucommsci.github.io/dbd_2023/)"
     slide-number: true
     preview-links: auto

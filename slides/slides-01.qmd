@@ -6,13 +6,7 @@ date-format: "DD.MM.YYYY"
 bibliography: references.bib
 ---
 
-```{r setup-slide-session}
-#| echo: false
-library(jsonlite)
-library(tidyverse)
-```
-
-# 🚧 Under construction
+# 🚧 Under construction {background-image="img/slide_bg-section.png"}
 
 Die Folien werden aktuell überarbeitet, sind aber spätestens zur 1.Sitzung (25.10) online.
 
@@ -23,111 +17,267 @@ Die Folien werden aktuell überarbeitet, sind aber spätestens zur 1.Sitzung (25
 knitr::knit_exit()
 ```
 
-## Herzlich willkommen!
+# Agenda {background-image="img/slide_bg-agenda.png"}
 
-#### Vorstellungsrunde
+1.  Kurze Vorstellungsrunde
+2.  [Organisation & Koordination](#organisation-koordination)
 
-[**Christoph Adrian**]{.smallcaps}
+```{r setup-slide-session}
+#| echo: false
+library(jsonlite)
+library(tidyverse)
+```
 
--   seit 2016: Research Assistant / PhD Candidate FAU
--   M. Sc. Sozialökonomik (FAU)
--   B.A. Sozialökonomik (FAU)
+# `print("Hello course!")` {background-image="img/slide_bg-section.png"}
 
-[**Forschungs- und Lehrschwerpunkte**]{.smallcaps}
+**Christoph Adrian**
 
--   Computer-assisted and automated (corpus-based) content analysis (with R)
--   Social media research (Twitter)
--   Potential influence of media use on attitude changes
+-   B.A. und M.Sc. Sozialökonomik \@ FAU
+-   Text as Data & Social Media Usage (Effects)
+-   Fließend in R, Grundkenntnisse in Python, SPSS & Stata
 
 ## Und nun zu Ihnen!
 
 #### Vorstellungsrunde
 
 -   Wie heißen Sie?
--   Was und wo haben Sie im Bachelor studiert?
--   Was studieren Sie aktuell?
--   Welches soziale Netzwerk/Medium nutzen Sie aktuell am häufigsten?
--   Welche Erwartungen haben Sie an das Seminar?
+-   Was und wo haben Sie im **Bachelor studiert**?
+-   Was **studieren** Sie **aktuell**?
+-   Welches s**oziale Netzwerk/Medium** nutzen Sie aktuell am häufigsten?
+-   Was war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?
 
-# Einführung in das Seminar
+# Organisation & Koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
 
-Motivation & Grundidee
+Kommunikation, Ablauf & Prüfungsleistungen
 
-## Was verstehen Sie unter Digital Behavioral Data?
+## Different tools for different tasks
 
-#### Interaktive Session
+#### Kursorganisation & -kommunikation
+
+-   [Github-Kursseite](https://faucommsci.github.io/dbd_2023/): Informationen zu Kurs (*Semesterplan,* *Syllabus, Prüfungleistungen etc*). & Sitzungen (*Slides, Literatur und ggf. Übungsmaterial*)
+-   [Zulip](https://fau-dbd.zulipchat.com): Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs
+-   [StudOn](https://www.studon.fau.de/crs5349138.html): Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen
+-   [E-Mail](mailto:christoph.adrian@fau.de?subject=DBD): persönliche Anliegen
+
+::: notes
+-   Kurze Vorführung der Webseite
+-   Zulip Frage/Probleme bei Registrierung?
+:::
+
+# No Ghosting, please! {background-image="img/slide_bg-section_ghosting.png"}
+
+Ärgerlicherweise gibt es **Studierende**, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) "**verschwinden**".
+
+-   ⚠️ Nehmen Sie bitte **kein Thema** an, wenn Sie **nicht teilnehmen wollen/können!**
+
+-   ⚠️ Die „**Prüfung**" bzw. die „Prüfungszeit" bei einem Seminar **beginnt** mit der Bearbeitungszeit und damit mit der **Ausgabe des Themas an die Kandidaten (bei 24h Bedenkzeit/Rücktrittsrecht)**
+
+## What is expected
+
+#### Leistungsanforderungen & Prüfungsleistungen
+
+<!-- FIXME Add new graphics -->
 
 ::: columns
 ::: {.column width="50%"}
-Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+**Regelmäßige Teilnahme**
 
--   <https://www.menti.com/alhdxw6x3a6e>
+-   mindestens 80% der Sitzungen
 
--   Temporary Access Code: **2677 1451**
+-   max. 2 unentschuldigte Fehltermine
+
+    ![](https://syasuk.files.wordpress.com/2021/01/participation-image.png){width="300"}
 :::
 
 ::: {.column width="50%"}
-![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
+**Portfolio**
+
+-   Verschiedene Teilleistungen (ins. 100 Punkte)
+-   Mehr Arbeit während des Semesters
+
+![](img/session-01/portfolio_icon.png){width="300"}
 :::
 :::
 
-## Ergebnis
+## Schritt für Schritt zum Ziel
 
-::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+#### Das Portfolio im Überblick
 
-</iframe>
+<!-- FIXME Graphik neu rendern (als .svg) -->
+
+<!-- FIXME Text klein formatieren -->
+
+![](img/session-01/portfolio.png){fig-align="center"}
+
+::: {style="font-size: smaller; text-align: center"}
+Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter [Assignments](https://faucommsci.github.io/dbd_2023/course-assignments.html).
 :::
 
-## Ein Definitionsversuch von DBD
+## [👥](#sec-presentation) Präsentation
 
-#### nach @weller2021
+#### **💡Zentrale Idee:** Theoretische & methodische Grundlage für das Mini-Projekt
+
+-   **Umfang**: maximal 30 Minuten
+-   **Ziel**: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools
+-   Literatur wird zur Verfügung gestellt
+
+<br>
+
+#### Bessonderheit: vorheriges Feedbackgespräch
+
+## [👥](#sec-presentation) Project topic idea(s)
+
+#### **💡Zentrale Idee:** Projektidee vorstellen & weiterentwickeln
+
+-   **Umfang**: maximal 10 Minuten & 5 Slides
+
+-   **Ziel**: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback
+
+-   Raum für Fragen und Austausch zwischen den verschiedenen Projektgruppen
+
+## [👥](#sec-presentation) Project proposal
+
+#### **💡Zentrale Idee:** Erster Entwurf des Written short report
+
+-   **Umfang**: mindestens 500 Wörter
+-   **Ziel**: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie
+-   Fokus auf drei "Abschnitte": Einleitung, Datengrundlage und methodisches Vorgehen
+
+<br>
+
+#### Bessonderheit: Grundlage für das Peer Review
+
+## **👤** Peer Review
+
+#### **💡Zentrale Idee:** Feedback für Bericht geben & bekommmen
+
+-   **Umfang:** Durcharbeiten eines Peer-Review-Formulars
+-   **Ziel(e)**:
+    -   Lernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben
+    -   Zusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann
+
+<br>
+
+#### Besonderheit: Individuelles Assigment!
+
+## [👥](#sec-presentation) Short Report
+
+#### **💡Zentrale Idee:** Zusammenführung der einzelnen Teileistungen
+
+-   **Umfang:**
+    -   **750 bis 1000 Wörter pro Person umfassen**.
+    -   Bei einem **Gruppenbericht** skaliert die Anzahl der Wörter mit einem **Faktor von 0,8 pro Person** (*z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter*).
+-   **Ziel(e)**:
+    -   mindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.
+
+    -   Kenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren.
+
+# Time for questions!? {background-image="img/slide_bg-question.png"}
+
+## Drei Themenblöcke
+
+#### Struktur und Aufbau des Seminars
+
+::: columns
+::: {.column width="33%"}
+##### Einführung
+
+**Theoretische Grundlagen des Kurses**:
+
+-   Kick-Off
+
+-   DBD: Einführung & Überblick
+
+-   praktische Arbeit mit R und RStudio.
+:::
+
+::: {.column width="33%"}
+##### Projekt 1
+
+Beobachtung und Analyse von **(schriftlichen) Social Media Inhalten** (z.B. Posts und/oder Hashtags) mit Hilfe **verschiedener Methoden** (z.B. Topic Modeling, Sentiment Analysis etc.).
+:::
+
+::: {.column width="33%"}
+##### Projekt 2
+
+Erhebung, Verarbeitung und Auswertung von **Logging-Daten** sowie deren **Verknüpfung mit Umfragedaten**
+:::
+:::
+
+## Theorie meets Praxis
+
+#### Projektarbeit in Kleingruppen
+
+**Durchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:**
+
+1.  📚 Theoretische Grundlage aus der Kommunikationswissenschaft
+2.  📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes
+3.  🔨 Vorstellung & Anwendung von Methoden & Analysestrategie
+4.  📊 Vorstellung & Diskussion von Projektideen
+
+**💡Zentrale Idee:**
+
+-   Wissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄
+
+## Typische Session
+
+#### für 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung
 
 ::: columns
 ::: {.column width="50%"}
-... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen
+**Präsentation (ca. 30-45 Min)**
 
-... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
+-   Umfasst eine bzw. Ihre **Präsentation** (inkl. Zeit für Fragen und Diskussionen)
+
+-   Option auf weitere, offenere **Diskussion** im Kurs
 :::
 
 ::: {.column width="50%"}
-![](img/session-01/dbd_pictogram.png){fig-align="center"}
+**Group Activity (ca. 45 - 60 Min)**
+
+-   kleine Gruppenarbeiten zur Vertiefung
+
+-   variiert abhängig vom Thema der jeweiligen Sitzung
+
+-   Beispiele:
+
+    -   *Anwendung von Tool/Methode mit anschließender kritschen Diskussion*
+
+    -   *Erstellung eines einfachen Forschungs- oder Analysedesign*
 :::
 :::
 
-## Beispiel: [COVID-19 Mobility Monitor](https://www.covid-19-mobility.org/de/mobility-monitor/)
+## Typische Session
 
-![](img/session-01/mobility_monitor.png){fig-align="center"}
-
-## Beispiel: [Datenvolumen einer Internet-Minute](https://ediscoverytoday.com/2023/04/20/2023-internet-minute-infographic-by-ediscovery-today-and-ltmg-ediscovery-trends/)
-
-![](https://i0.wp.com/ediscoverytoday.com/wp-content/uploads/2023/04/2023InternetMinuteSized.png?w=565&ssl=1){fig-align="center"}
-
-## Kernbereiche von DBD
-
-#### in Anlehnung an Aufteilung der [GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)
+#### für 📊: Pitch ➞ Diskussion ➞ Repeat
 
 ::: columns
 ::: {.column width="50%"}
-<!-- FIXME Neue Graphik hinzufügen -->
+***Project topic idea(s)*** **(ca 5-10 Min)**
 
-![](img/session-01/dbd_graph/dbd_pillars_3.png){fig-align="center"}
+-   kurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),
+-   kurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)
+-   Ergebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).
 :::
 
 ::: {.column width="50%"}
-<br> <!-- FIXME "Schwerpunkt" korrigieren --> - Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
+**Fragen & Diskussion (ca 5-10 Min)**
 
--   Seminar legt **Schwerpunkt auf Datenerhebung**, mit kurzen Ausblick auf die anderen Bereiche
+-   Zeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.
 :::
 :::
 
-# Organisation & Koordination {background-image="img/slide_bg-orga.png"}
+::: {style="text-align: center;"}
+🔁 **für jede Gruppe**
+:::
 
-📢️ Seminarplan, Themen, Prüfungsleistungen
+::: notes
+-   Status bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)
+:::
 
 ## (Vorläufiger) Seminarplan {.smaller}
 
-```{r}
+```{r create-schedule}
 #| echo: false
 json_text <- '[
     {
@@ -245,7 +395,6 @@ schedule <- fromJSON(json_text) %>% tibble()
 
 ```{r table-schedule}
 #| echo: false 
-
 schedule %>% 
     gt::gt() %>% 
     gt::fmt_markdown() %>% 
@@ -261,82 +410,57 @@ schedule %>%
    )
 ```
 
-## Typische Session
+## Talking about disconnecting
 
-#### Erst Präsentation, dann Vertiefung
+#### Projekt 1: #digitaldetox auf sozialen Medien
 
 ::: columns
 ::: {.column width="50%"}
-**Präsentation (ca. 30-45 Min)**
+<br>
 
--   Umfasst eine bzw. Ihre **Präsentation** (inkl. Zeit für Fragen und Diskussionen)
-
--   Option auf weitere, offenere **Diskussion** im Kurs
+![Quelle: dup-magazin.de](https://dup-magazin.de/wp-content/uploads/2021/10/digital-fasten-digital-detox-1440x1080.jpg){width="667"}
 :::
 
 ::: {.column width="50%"}
-**Group Activity (ca. 45 - 60 Min)**
+<br>
 
--   kleine Gruppenarbeiten zur Vertiefung
+##### Projektaufbau
 
--   variiert abhängig vom Thema der jeweiligen Sitzung
+-   Theoretische Hintergrund: Digital disconnection
 
--   Beispiele:
+-   Analyse von Social Media Post mit #digitaldetox
 
-    -   *Anwendung von Tool/Methode mit anschließender kritschen Diskussion*
+-   Archiv-Daten (Twitter) oder eigene Datenerhebung
 
-    -   *Erstellung eines einfachen Forschungs- oder Analysedesign*
+-   Fokus auf Inhalt (Diskurs, andere Hashtags) oder "Akteure"/Accounts
 :::
 :::
 
-## Different tools for different tasks
+## Studying problems, not problematic usage?
 
-#### Kursorganisation & -kommunikation
+#### Projekt 2: Mediennutzungsgewohnheiten und Wohlbefinden
 
--   [Zulip](https://fau-dbd.zulipchat.com): Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs
+::: columns
+::: {.column width="50%"}
+<br>
 
--   [StudOn](https://www.studon.fau.de/crs5349138.html): Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen
+![](img/session-01/graphic-project_2.png){fig-align="center" width="305"}
+:::
 
--   [E-Mail](): persönliche Anliegen
+::: {.column width="50%"}
+<br>
 
-## What is expected
+##### Projektaufbau
 
-#### Leistungsanforderungen & Prüfungsleistungen
+-   Habitualisierte / routinemäßige Mediennutzung
 
--   **Regelmäßige Teilnahme** an den Sitzungen (max. 2 unentschuldigtes Fehlen)
+-   Erhebung, Aufbereitung und Analyse von Logging-Daten
 
--   
+-   Eigene Erhebung, Data Download Packages, API-Zugang
 
-## Präsentation {.smaller}
-
-**Umfang & Inhalt:** max. 30 Min.
-
--   \~ 25 Min.: Zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools inklusive kurzem Überblick über Forschung(-sfeld)
--   \~ 5 Min: Fragen & Diskussion
--   Ziel: Vorstellung Tool & Beispiel für Forschung(-sdesign)
-
-**Sprechstunde:**
-
--   Einreichung **vollständiger Präsentationsentwurf mindestens eine Woche + 24 Stunden vor Ihrer Präsentation** per E-Mail an christoph.adrian\@fau.de
--   Ausführliches Feedback und Tipps zur Überarbeitung
-
-**Literatur:**
-
--   Siehe Syllabus & Teams/StudOn (PDFs werden bereitgestellt)
-
-## Ein kurzer Appell
-
-#### Hinweis zu "Abbruch" bzw. Nicht-Erscheinen
-
--   Ihre Anmeldung bedeutet üblicherweise eine sehr intensive, **aufwändige** **Betreuung** für uns Lehrende
-
--   Ärgerlicherweise gibt es **Studierende**, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) "**verschwinden**".
-
-⚠️ **Bitte seien Sie sich folgender Dinge bewusst:**
-
--   Die „**Prüfung**" bzw. die „Prüfungszeit" bei einem Seminar **beginnt** mit der Bearbeitungszeit und damit mit der **Ausgabe des Themas an die Kandidaten.**
-
--   **24h Bedenkzeit** / Rücktrittsrecht
+-   Fokus auf Datenerhebungs & -aufbereitungsprozess
+:::
+:::
 
 ## Please state your preference
 
@@ -344,72 +468,38 @@ schedule %>%
 
 ::: columns
 ::: {.column width="50%"}
-Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und wählen Sie Ihr favorisiertes Thema aus
+<br>
 
--   [**https://www.menti.com/alj8fncx1zz4**]{.smallcaps}
+Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und geben Sie Ihre Themenpräferenz an:
 
--   Temporary Voting Code: **7312 2522**
+-   <https://simpleassign.com/poll/-NhRazTXpvnikS0JKWdT>
 :::
 
 ::: {.column width="50%"}
-![](img/session-01/mentimeter-qr-topics.png){fig-align="center" width="300"}
+![](img/session-01/simple_assign-qr-topics.png){width="500"}
 :::
-:::
-
-## 
-
-::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alquyidk5k4ckv6dr67qu2pd5ihbikx5/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
-
-</iframe>
 :::
 
 ## Let's spin the wheel
 
-| Session | Datum      | Thema                        |
-|---------|------------|------------------------------|
-| 4       | 16.11.2022 | API-Access (I): *Twitter*    |
-| 5       | 23.11.2022 | API-Access (II): *YouTube*   |
-| 6       | 30.11.2022 | API-Access (II): *Reddit*    |
-| 7       | 07.12.2022 | Webscraping: *TikTok*        |
-| 8       | 14.12.2022 | ESM: *m-path*                |
-|         |            | *WEIHNACHTSPAUSE*            |
-| 9       | 12.01.2023 | Data Donations               |
-| 10      | 19.01.2023 | Mock-Up-Virtual Environments |
-| 11      | 26.01.2023 | Open Science                 |
+```{r table-schedule-topics}
+#| echo: false 
+student_sessions <- c("4", "5", "9", "10")
+
+schedule %>% 
+    filter(Session %in% student_sessions) %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        #table.font.size = "12px"
+        ) %>% 
+    gtExtras::gt_theme_nytimes()
+```
 
 ::: {style="text-align: center; margin-top: 1em"}
 [In case of emergency: Wheel of Names](https://wheelofnames.com/){preview-link="true" style="text-align: center"}
 :::
-
-## Lektüre zwischen den Sitzungen {.smaller}
-
-**Pflichtlektüre**
-
--   pro Woche ein wissenschaftlicher Text als Grundlage für das Thema (Sitzungen 4 - 11)
-
-**Einreichung von Fragen zum Text in Teams** (spätestens Dienstag Abend)
-
--   gilt für alle Kursteilnehmer\*Innen
--   mind. 1 Verständnisfrage zum Text
--   mind. 1 Diskussionsfrage zum Text bzw. Thema insgesamt
--   Wo? -\> in wöchentlicher Teams-Unterhaltung zur jeweligen Sitzung
--   Why? -\> wird in der Sitzung genutzt; bereiten Sie Ihre Frage so vor, dass Sie sie in der Sitzung stellen & erklären können
-
-**Literatur:**
-
--   Siehe Syllabus & Teams/StudOn (PDFs werden bereitgestellt)
-
-## Seminararbeit
-
-**Umfang & Inhalt (ausführliche Infos im Syllabus)**
-
--   3500 - 4000 Wörter
--   Anfertigung einer Projektskizze für eine wissenschaftliche Arbeit
--   Verwendung von mindestens eine der vorgestellten Methoden/Tools
--   Sozialwissenschaftlicher Fokus
-
-**(vorläufige) Deadline: 03.03.2023; 23:59**
 
 ## Before we meet again
 
@@ -417,15 +507,97 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und wählen
 
 -   Generell: ausführliche Informationen im Syllabus!
 
--   Kursmaterialien: MS Teams vs. StudOn?
-
 -   Why no English?
 
 -   [**Ihre Fragen?**]{.smallcaps}
 
-# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
+# Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
 
 ## Literatur
 
 ::: {#refs}
 :::
+
+```{r backup-stop-render}
+#| echo: false
+
+knitr::knit_exit()
+```
+
+# Einführung in das Seminar {background-image="img/slide_bg-section.svg"}
+
+Motivation & Grundidee
+
+## Was verstehen Sie unter Digital Behavioral Data?
+
+#### Interaktive Session
+
+::: columns
+::: {.column width="50%"}
+Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+
+-   <https://www.menti.com/alhdxw6x3a6e>
+
+-   Temporary Access Code: **2677 1451**
+:::
+
+::: {.column width="50%"}
+![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
+:::
+:::
+
+## Ergebnis
+
+::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+
+</iframe>
+:::
+
+## Ein Definitionsversuch von DBD
+
+#### nach @weller2021
+
+::: columns
+::: {.column width="50%"}
+... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen
+
+... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
+:::
+
+::: {.column width="50%"}
+<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
+
+![](img/session-01/dbd_pictogram.svg){fig-align="center"}
+:::
+:::
+
+## Beispiel: [COVID-19 Mobility Monitor](https://www.covid-19-mobility.org/de/mobility-monitor/)
+
+![](img/session-01/mobility_monitor.png){fig-align="center"}
+
+## Beispiel: [Datenvolumen einer Internet-Minute](https://ediscoverytoday.com/2023/04/20/2023-internet-minute-infographic-by-ediscovery-today-and-ltmg-ediscovery-trends/)
+
+![](https://i0.wp.com/ediscoverytoday.com/wp-content/uploads/2023/04/2023InternetMinuteSized.png?w=565&ssl=1){fig-align="center"}
+
+## Kernbereiche von DBD
+
+#### in Anlehnung an Aufteilung der [GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)
+
+::: columns
+::: {.column width="50%"}
+<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
+
+![](img/session-01/dbd_pillars.svg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+<!-- FIXME "Schwerpunkt" korrigieren -->
+
+-   Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
+
+-   Seminar legt **Schwerpunkt auf Datenerhebung**, mit kurzen Ausblick auf die anderen Bereiche
+:::
+:::
+
+#  {background-image="img/slide_bg-orga.svg"}
