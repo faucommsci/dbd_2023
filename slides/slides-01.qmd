@@ -80,22 +80,21 @@ Kommunikation, Ablauf & Prüfungsleistungen
 
 ::: columns
 ::: {.column width="50%"}
+![](img/session-01/graphic-assesment_participation.png){fig-align="center" width="350"}
+
 **Regelmäßige Teilnahme**
 
 -   mindestens 80% der Sitzungen
 
 -   max. 2 unentschuldigte Fehltermine
-
-    ![](https://syasuk.files.wordpress.com/2021/01/participation-image.png){width="300"}
 :::
 
 ::: {.column width="50%"}
+![](img/session-01/graphic-assesment_portfolio.png){fig-align="center" width="350"}
+
 **Portfolio**
 
 -   Verschiedene Teilleistungen (ins. 100 Punkte)
--   Mehr Arbeit während des Semesters
-
-![](img/session-01/portfolio_icon.png){width="300"}
 :::
 :::
 
@@ -103,11 +102,7 @@ Kommunikation, Ablauf & Prüfungsleistungen
 
 #### Das Portfolio im Überblick
 
-<!-- FIXME Graphik neu rendern (als .svg) -->
-
-<!-- FIXME Text klein formatieren -->
-
-![](img/session-01/portfolio.png){fig-align="center"}
+![](img/session-01/graphic-portfolio_parts.svg){fig-align="center"}
 
 ::: {style="font-size: smaller; text-align: center"}
 Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter [Assignments](https://faucommsci.github.io/dbd_2023/course-assignments.html).
@@ -512,11 +507,6 @@ schedule %>%
 -   [**Ihre Fragen?**]{.smallcaps}
 
 # Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
-
-## Literatur
-
-::: {#refs}
-:::
 
 ```{r backup-stop-render}
 #| echo: false
