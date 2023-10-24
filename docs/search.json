@@ -91,116 +91,25 @@
     "text": "While there is no official R textbook for the course, there are a few to look at:\n\n🔗 R for Data Science, 2nd Edition\n🔗 Data Visualization: A Practical Introduction\n🔗 Tidy modeling with R\n🔗 Text Mining with R"
   },
   {
-    "objectID": "sessions/session-09.html",
-    "href": "sessions/session-09.html",
+    "objectID": "computing/computing-useful_links.html",
+    "href": "computing/computing-useful_links.html",
+    "title": "Useful sources",
+    "section": "",
+    "text": "This is selection of useful R sources:\n\n Quarto tutorials by Andy Field\n Automatisierte Inhaltsanalyse mit R by Kornelius Puschmann"
+  },
+  {
+    "objectID": "sessions/session-10.html",
+    "href": "sessions/session-10.html",
     "title": "Session 9",
     "section": "",
-    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-09.html#literature-for-the-presenting-group",
-    "href": "sessions/session-09.html#literature-for-the-presenting-group",
+    "objectID": "sessions/session-10.html#literature-for-the-presenting-group",
+    "href": "sessions/session-10.html#literature-for-the-presenting-group",
     "title": "Session 9",
     "section": "",
-    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
-  },
-  {
-    "objectID": "sessions/session-09.html#section",
-    "href": "sessions/session-09.html#section",
-    "title": "Session 9",
-    "section": "",
-    "text": "Back to course schedule ⏎"
-  },
-  {
-    "objectID": "sessions/session-04.html",
-    "href": "sessions/session-04.html",
-    "title": "Session 4",
-    "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
-  },
-  {
-    "objectID": "sessions/session-04.html#mandatory-literature",
-    "href": "sessions/session-04.html#mandatory-literature",
-    "title": "Session 4",
-    "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
-  },
-  {
-    "objectID": "sessions/session-04.html#other-readings",
-    "href": "sessions/session-04.html#other-readings",
-    "title": "Session 4",
-    "section": "Other readings",
-    "text": "Other readings\n\nMoe, H., & Madsen, O. J. (2021). Understanding digital disconnection beyond media studies. Convergence: The International Journal of Research into New Media Technologies, 27(6), 1584–1598. https://doi.org/10.1177/13548565211048969\nSchmuck, D. (2020). Does Digital Detox Work? Exploring the Role of Digital Detox Applications for Problematic Smartphone Use and Well-Being of Young Adults Using Multigroup Analysis. Cyberpsychology, Behavior, and Social Networking, 23(8), 526–532. https://doi.org/10.1089/cyber.2019.0578\nSyvertsen, T., & Enli, G. (2019). Digital detox: Media resistance and the promise of authenticity. Convergence: The International Journal of Research into New Media Technologies, 26(5-6), 1269–1283. https://doi.org/10.1177/1354856519847325\n\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "sessions/session-01.html",
-    "href": "sessions/session-01.html",
-    "title": "Session 1",
-    "section": "",
-    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
-  },
-  {
-    "objectID": "sessions/session-01.html#prepare",
-    "href": "sessions/session-01.html#prepare",
-    "title": "Session 1",
-    "section": "Prepare",
-    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
-  },
-  {
-    "objectID": "sessions/session-01.html#participate",
-    "href": "sessions/session-01.html#participate",
-    "title": "Session 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Session 01 - Kick Off (🚧 Still under construction)\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Digital Behavioral Data",
-    "section": "",
-    "text": "Note\n\n\n\nThis page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here."
-  },
-  {
-    "objectID": "index.html#copyright",
-    "href": "index.html#copyright",
-    "title": "Digital Behavioral Data",
-    "section": "Copyright",
-    "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
-  },
-  {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Christoph Adrian (he/him) is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\n\n\n\n\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
-  },
-  {
-    "objectID": "course-team.html#instructor",
-    "href": "course-team.html#instructor",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Christoph Adrian (he/him) is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\n\n\n\n\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
-  },
-  {
-    "objectID": "sessions/session-02.html",
-    "href": "sessions/session-02.html",
-    "title": "Session 1",
-    "section": "",
-    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
-  },
-  {
-    "objectID": "sessions/session-02.html#prepare",
-    "href": "sessions/session-02.html#prepare",
-    "title": "Session 1",
-    "section": "Prepare",
-    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
-  },
-  {
-    "objectID": "sessions/session-02.html#participate",
-    "href": "sessions/session-02.html#participate",
-    "title": "Session 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Session 01 - Kick Off (🚧 Still under construction)\n\n\nBack to course schedule ⏎"
+    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "sessions/session-05.html",
@@ -224,18 +133,263 @@
     "text": "Other additional readings\n\nAPI-Access\n\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\n\n\n\nTwitter\n\nBanda, J. M., Tekumalla, R., Wang, G., Yu, J., Liu, T., Ding, Y., Artemova, E., Tutubalina, E., & Chowell, G. (2021). A Large-Scale COVID-19 Twitter Chatter Dataset for Open Scientific ResearchAn International Collaboration. Epidemiologia, 2(3), 315–324. https://doi.org/10.3390/epidemiologia2030024\nJungherr, A. (2016). Twitter use in election campaigns: A systematic literature review. Journal of Information Technology & Politics, 13(1), 72–91. https://doi.org/10.1080/19331681.2015.1132401\nMueller, S. D., & Saeltzer, M. (2022). Twitter made me do it! Twitter’s tonal platform incentive and its effect on online campaigning. Information, Communication & Society, 25(9), 1247–1272. https://doi.org/10.1080/1369118X.2020.1850841\nMünch, F. V., Thies, B., Puschmann, C., & Bruns, A. (2021). Walking Through Twitter: Sampling a Language-Based Follow Network of Influential Twitter Accounts. Social Media + Society, 7(1), 205630512098447. https://doi.org/10.1177/2056305120984475\nVasko, V., & Trilling, D. (2019). A permanent campaign? Tweeting differences among members of Congress between campaign and routine periods. Journal of Information Technology & Politics, 16(4), 342–359. https://doi.org/10.1080/19331681.2019.1657046\nYuan, S., Chen, Y., Vojta, S., & Chen, Y. (2022). More aggressive, more retweets? Exploring the effects of aggressive climate change messages on Twitter. New Media & Society, 146144482211222. https://doi.org/10.1177/14614448221122202\n\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-10.html",
-    "href": "sessions/session-10.html",
-    "title": "Session 9",
+    "objectID": "sessions/session-02.html",
+    "href": "sessions/session-02.html",
+    "title": "Session 1",
     "section": "",
-    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
+    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
   },
   {
-    "objectID": "sessions/session-10.html#literature-for-the-presenting-group",
-    "href": "sessions/session-10.html#literature-for-the-presenting-group",
+    "objectID": "sessions/session-02.html#prepare",
+    "href": "sessions/session-02.html#prepare",
+    "title": "Session 1",
+    "section": "Prepare",
+    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+  },
+  {
+    "objectID": "sessions/session-02.html#participate",
+    "href": "sessions/session-02.html#participate",
+    "title": "Session 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Session 01 - Kick Off (🚧 Still under construction)\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "slides/slides-01.html#und-nun-zu-ihnen",
+    "href": "slides/slides-01.html#und-nun-zu-ihnen",
+    "title": "Kick-Off",
+    "section": "Und nun zu Ihnen!",
+    "text": "Und nun zu Ihnen!\nVorstellungsrunde\n\nWie heißen Sie?\nWas und wo haben Sie im Bachelor studiert?\nWas studieren Sie aktuell?\nWelches soziale Netzwerk/Medium nutzen Sie aktuell am häufigsten?\nWas war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?\n\n\n\nHintegrund und Vorwissen\nMediennutzung & Serientipps"
+  },
+  {
+    "objectID": "slides/slides-01.html#different-tools-for-different-tasks",
+    "href": "slides/slides-01.html#different-tools-for-different-tasks",
+    "title": "Kick-Off",
+    "section": "Different tools for different tasks",
+    "text": "Different tools for different tasks\nKursorganisation & -kommunikation\n\nGithub-Kursseite: Informationen zu Kurs (Semesterplan, Syllabus, Prüfungleistungen etc). & Sitzungen (Slides, Literatur und ggf. Übungsmaterial)\nZulip: Wichtige Ankündigungen, asynchrone Unterhaltungen, Fragen zum Kurs & zu R\nStudOn: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen\nE-Mail: persönliche Anliegen\n\n\n\nKurze Vorführung der Webseite\nZulip Frage/Probleme bei Registrierung?\nOptional: Github/OSF"
+  },
+  {
+    "objectID": "slides/slides-01.html#what-is-expected",
+    "href": "slides/slides-01.html#what-is-expected",
+    "title": "Kick-Off",
+    "section": "What is expected",
+    "text": "What is expected\nLeistungsanforderungen & Prüfungsleistungen\n\n\n\n\n\n\n\nRegelmäßige Teilnahme\n\nmindestens 80% der Sitzungen\nmax. 2 unentschuldigte Fehltermine\n\n\n\n\n\n\n\nPortfolio\n\nVerschiedene Teilleistungen (ins. 100 Punkte)\n\n\n\n\n\nFrage: Syllabus gelesen?\nFrage: Assignments angeschaut?"
+  },
+  {
+    "objectID": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "href": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "title": "Kick-Off",
+    "section": "Schritt für Schritt zum Ziel",
+    "text": "Schritt für Schritt zum Ziel\nDas Portfolio im Überblick\n\n\nAusführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter Assignments."
+  },
+  {
+    "objectID": "slides/slides-01.html#präsentation",
+    "href": "slides/slides-01.html#präsentation",
+    "title": "Kick-Off",
+    "section": "👥 Präsentation",
+    "text": "👥 Präsentation\n💡 Theoretische & methodische Grundlage für das Mini-Projekt\n\nUmfang: maximal 30 Minuten\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt\n\n\nBessonderheit: vorheriges Feedbackgespräch"
+  },
+  {
+    "objectID": "slides/slides-01.html#project-topic-ideas",
+    "href": "slides/slides-01.html#project-topic-ideas",
+    "title": "Kick-Off",
+    "section": "👥 Project topic idea(s)",
+    "text": "👥 Project topic idea(s)\n💡 Projektidee vorstellen & weiterentwickeln\n\nUmfang: maximal 10 Minuten & 5 Slides\nZiel: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback\nRaum für Fragen und Austausch zwischen den verschiedenen Projektgruppen"
+  },
+  {
+    "objectID": "slides/slides-01.html#project-proposal",
+    "href": "slides/slides-01.html#project-proposal",
+    "title": "Kick-Off",
+    "section": "👥 Project proposal",
+    "text": "👥 Project proposal\n💡 Erster Entwurf des Written short report\n\nUmfang: mindestens 500 Wörter\nZiel: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie\nFokus auf drei “Abschnitte”: Einleitung, Datengrundlage und methodisches Vorgehen\n\n\nBessonderheit: Grundlage für das Peer Review\n\n\n(Teilweise) Während des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#peer-review",
+    "href": "slides/slides-01.html#peer-review",
+    "title": "Kick-Off",
+    "section": "👤 Peer Review",
+    "text": "👤 Peer Review\n💡 Feedback für Bericht geben & bekommmen\n\nUmfang: Durcharbeiten eines Peer-Review-Formulars\nZiel(e):\n\nLernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben\nZusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann\n\n\n\nBesonderheit: Individuelles Assigment!\n\n\n(Teilweise) Während des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#short-report",
+    "href": "slides/slides-01.html#short-report",
+    "title": "Kick-Off",
+    "section": "👥 Short Report",
+    "text": "👥 Short Report\n💡 Zusammenführung der einzelnen Teileistungen\n\n\nUmfang:\n\n750 bis 1000 Wörter pro Person umfassen.\nBei einem Gruppenbericht skaliert die Anzahl der Wörter mit einem Faktor von 0,8 pro Person (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).\n\nZiel(e):\n\nmindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.\nKenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren.\n\n\n\nBesonderheit: Abgabe als Quarto-Dokument (& PDF)\n\n\nFinale Abgabe erst nach Ende des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#drei-themenblöcke",
+    "href": "slides/slides-01.html#drei-themenblöcke",
+    "title": "Kick-Off",
+    "section": "Drei Themenblöcke",
+    "text": "Drei Themenblöcke\nStruktur und Aufbau des Seminars"
+  },
+  {
+    "objectID": "slides/slides-01.html#about-r",
+    "href": "slides/slides-01.html#about-r",
+    "title": "Kick-Off",
+    "section": "About R …",
+    "text": "About R …"
+  },
+  {
+    "objectID": "slides/slides-01.html#trust-the-process",
+    "href": "slides/slides-01.html#trust-the-process",
+    "title": "Kick-Off",
+    "section": "Trust the process",
+    "text": "Trust the process\nDer Einsatz von R bzw. RStudio im Kurs\nWarum?\n\nKostenlose Software mit vielen nützlichen und beginner-friendly Tutorials\nR or Python? Both!\n\nIm Kurs:\n\nBestehende R-Kenntnisse sind förderlich, aber nicht zwigend notwendig, wichtiger sind praktische Erfahrung im syntaxbasierten Arbeiten\nLearn to code by example: Code von Sitzungen & Beispielen wird bereitgestellt (ggf. durch Showcases)\nPflicht: Basiskurs R/RStudio der FAU\nNützliche Quellen auf Kursseite unter Computing"
+  },
+  {
+    "objectID": "slides/slides-01.html#theorie-meets-praxis",
+    "href": "slides/slides-01.html#theorie-meets-praxis",
+    "title": "Kick-Off",
+    "section": "Theorie meets Praxis",
+    "text": "Theorie meets Praxis\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡 Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session",
+    "href": "slides/slides-01.html#typische-session",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session-1",
+    "href": "slides/slides-01.html#typische-session-1",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📊: Pitch ➞ Diskussion ➞ Repeat\n\n\nProject topic idea(s) (ca 5-10 Min)\n\nkurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),\nkurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)\nErgebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).\n\n\nFragen & Diskussion (ca 5-10 Min)\n\nZeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.\n\n\n\n\n🔁 für jede Gruppe\n\n\n\nStatus bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)"
+  },
+  {
+    "objectID": "slides/slides-01.html#vorläufiger-seminarplan",
+    "href": "slides/slides-01.html#vorläufiger-seminarplan",
+    "title": "Kick-Off",
+    "section": "(Vorläufiger) Seminarplan",
+    "text": "(Vorläufiger) Seminarplan\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nDBD: Overview\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    6\n\n06.12.2023\n\n🔨 Text as data\n\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n18.01.2024\n\n📦 Data donation methods\n\n\n    11\n\n25.01.2024\n\n🔨 Working data logs\n\n\n    12\n\n02.02.2024\n\n📊 Presentation & Discussion\n\n\n    13\n\n08.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
+  },
+  {
+    "objectID": "slides/slides-01.html#talking-about-disconnecting",
+    "href": "slides/slides-01.html#talking-about-disconnecting",
+    "title": "Kick-Off",
+    "section": "Talking about disconnecting",
+    "text": "Talking about disconnecting\nProjekt 1: #digitaldetox auf sozialen Medien\n\n\n\n\n\n\nQuelle: dup-magazin.de\n\n\n\n\nProjektaufbau\n\nTheoretische Hintergrund: Digital disconnection\nAnalyse von Social Media Post mit #digitaldetox\nArchiv-Daten (Twitter) oder eigene Datenerhebung\nFokus auf Inhalt (Diskurs, andere Hashtags) oder “Akteure”/Accounts"
+  },
+  {
+    "objectID": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "href": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "title": "Kick-Off",
+    "section": "Studying problems, not problematic usage?",
+    "text": "Studying problems, not problematic usage?\nProjekt 2: Mediennutzungsgewohnheiten und Wohlbefinden\n\n\n\n\n\n\n\n\n\n\nProjektaufbau\n\nHabitualisierte / routinemäßige Mediennutzung\nErhebung, Aufbereitung und Analyse von Logging-Daten\nEigene Erhebung, Data Download Packages, API-Zugang\nFokus auf Datenerhebungs & -aufbereitungsprozess"
+  },
+  {
+    "objectID": "slides/slides-01.html#please-state-your-preference",
+    "href": "slides/slides-01.html#please-state-your-preference",
+    "title": "Kick-Off",
+    "section": "Please state your preference",
+    "text": "Please state your preference\nVergabe der Präsentationsthemen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link und geben Sie Ihre Themenpräferenz an:\n\nhttps://simpleassign.com/poll/-NhW_EY5JXFZ25ZcYZbx"
+  },
+  {
+    "objectID": "slides/slides-01.html#lets-spin-the-wheel",
+    "href": "slides/slides-01.html#lets-spin-the-wheel",
+    "title": "Kick-Off",
+    "section": "Let’s spin the wheel?!",
+    "text": "Let’s spin the wheel?!\nZuteilung der Präsentationsthemen\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n    \n  \n  \n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n    10\n\n18.01.2024\n\n📦 Data donation methods\n\n  \n  \n  \n\n\n\n\n\nIn case of emergency: Wheel of Names"
+  },
+  {
+    "objectID": "slides/slides-01.html#before-we-meet-again",
+    "href": "slides/slides-01.html#before-we-meet-again",
+    "title": "Kick-Off",
+    "section": "Before we meet again",
+    "text": "Before we meet again\nHinweise und offene Fragen\nHinweise:\n\nLernen Sie die Kursseite & Zulip kennen! Und checken Sie die Infos () zur nächten Sitzung.\nBis zum 13.11.: Basiskurs R/RStudio durcharbeiten. Bitte senden Sie das Kurszertifikat an christoph.adrian@fau.de\n\nFragen:\n\nWhy no English? 🤷\nHaben Sie noch Fragen?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Digital Behavioral Data",
+    "section": "",
+    "text": "Note\n\n\n\nThis page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here."
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Digital Behavioral Data",
+    "section": "Copyright",
+    "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+  },
+  {
+    "objectID": "course-team.html#instructor",
+    "href": "course-team.html#instructor",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+  },
+  {
+    "objectID": "sessions/session-01.html",
+    "href": "sessions/session-01.html",
+    "title": "Session 1",
+    "section": "",
+    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
+  },
+  {
+    "objectID": "sessions/session-01.html#prepare",
+    "href": "sessions/session-01.html#prepare",
+    "title": "Session 1",
+    "section": "Prepare",
+    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+  },
+  {
+    "objectID": "sessions/session-01.html#participate",
+    "href": "sessions/session-01.html#participate",
+    "title": "Session 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Session 01 - Kick Off\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-04.html",
+    "href": "sessions/session-04.html",
+    "title": "Session 4",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
+  },
+  {
+    "objectID": "sessions/session-04.html#mandatory-literature",
+    "href": "sessions/session-04.html#mandatory-literature",
+    "title": "Session 4",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
+  },
+  {
+    "objectID": "sessions/session-04.html#other-readings",
+    "href": "sessions/session-04.html#other-readings",
+    "title": "Session 4",
+    "section": "Other readings",
+    "text": "Other readings\n\nMoe, H., & Madsen, O. J. (2021). Understanding digital disconnection beyond media studies. Convergence: The International Journal of Research into New Media Technologies, 27(6), 1584–1598. https://doi.org/10.1177/13548565211048969\nSchmuck, D. (2020). Does Digital Detox Work? Exploring the Role of Digital Detox Applications for Problematic Smartphone Use and Well-Being of Young Adults Using Multigroup Analysis. Cyberpsychology, Behavior, and Social Networking, 23(8), 526–532. https://doi.org/10.1089/cyber.2019.0578\nSyvertsen, T., & Enli, G. (2019). Digital detox: Media resistance and the promise of authenticity. Convergence: The International Journal of Research into New Media Technologies, 26(5-6), 1269–1283. https://doi.org/10.1177/1354856519847325\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-09.html",
+    "href": "sessions/session-09.html",
     "title": "Session 9",
     "section": "",
-    "text": "Baumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\nBack to course schedule ⏎"
+    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+  },
+  {
+    "objectID": "sessions/session-09.html#literature-for-the-presenting-group",
+    "href": "sessions/session-09.html#literature-for-the-presenting-group",
+    "title": "Session 9",
+    "section": "",
+    "text": "Schnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+  },
+  {
+    "objectID": "sessions/session-09.html#section",
+    "href": "sessions/session-09.html#section",
+    "title": "Session 9",
+    "section": "",
+    "text": "Back to course schedule ⏎"
   },
   {
     "objectID": "computing/computing-cheatsheets.html",
@@ -299,285 +453,5 @@
     "title": "Assingments",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nPlease note that this is a temporary deadline. The final deadline will be adjusted in the course in consultation with the students if necessary.↩︎"
-  },
-  {
-    "objectID": "slides/slides-01.html#herzlich-willkommen",
-    "href": "slides/slides-01.html#herzlich-willkommen",
-    "title": "Kick-Off",
-    "section": "Herzlich willkommen!",
-    "text": "Herzlich willkommen!\nVorstellungsrunde\nChristoph Adrian\n\nseit 2016: Research Assistant / PhD Candidate FAU\nM. Sc. Sozialökonomik (FAU)\nB.A. Sozialökonomik (FAU)\n\nForschungs- und Lehrschwerpunkte\n\nComputer-assisted and automated (corpus-based) content analysis (with R)\nSocial media research (Twitter)\nPotential influence of media use on attitude changes"
-  },
-  {
-    "objectID": "slides/slides-01.html#und-nun-zu-ihnen",
-    "href": "slides/slides-01.html#und-nun-zu-ihnen",
-    "title": "Kick-Off",
-    "section": "Und nun zu Ihnen!",
-    "text": "Und nun zu Ihnen!\nVorstellungsrunde\n\nWie heißen Sie?\nWas und wo haben Sie im Bachelor studiert?\nWas studieren Sie aktuell?\nWelches soziale Netzwerk/Medium nutzen Sie aktuell am häufigsten?\nWas war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?"
-  },
-  {
-    "objectID": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
-    "href": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
-    "title": "Kick-Off",
-    "section": "Was verstehen Sie unter Digital Behavioral Data?",
-    "text": "Was verstehen Sie unter Digital Behavioral Data?\nInteraktive Session\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link für die Teilnahme an einer kurzen Umfrage:\n\nhttps://www.menti.com/alhdxw6x3a6e\nTemporary Access Code: 2677 1451"
-  },
-  {
-    "objectID": "slides/slides-01.html#ergebnis",
-    "href": "slides/slides-01.html#ergebnis",
-    "title": "Kick-Off",
-    "section": "Ergebnis",
-    "text": "Ergebnis"
-  },
-  {
-    "objectID": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
-    "href": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
-    "title": "Kick-Off",
-    "section": "Ein Definitionsversuch von DBD",
-    "text": "Ein Definitionsversuch von DBD\nnach Weller (2021)\n\n\n… fasst eine Vielzahl von möglichen Datenquellen zusammen, die verschiedene Arten von Aktivitäten aufzeichnen\n… können dabei helfen, Meinungen, Verhalten und Merkmale der menschlichen Nutzung digitaler Technologien zu erkennen"
-  },
-  {
-    "objectID": "slides/slides-01.html#beispiel-covid-19-mobility-monitor",
-    "href": "slides/slides-01.html#beispiel-covid-19-mobility-monitor",
-    "title": "Kick-Off",
-    "section": "Beispiel: COVID-19 Mobility Monitor",
-    "text": "Beispiel: COVID-19 Mobility Monitor"
-  },
-  {
-    "objectID": "slides/slides-01.html#beispiel-datenvolumen-einer-internet-minute",
-    "href": "slides/slides-01.html#beispiel-datenvolumen-einer-internet-minute",
-    "title": "Kick-Off",
-    "section": "Beispiel: Datenvolumen einer Internet-Minute",
-    "text": "Beispiel: Datenvolumen einer Internet-Minute"
-  },
-  {
-    "objectID": "slides/slides-01.html#kernbereiche-von-dbd",
-    "href": "slides/slides-01.html#kernbereiche-von-dbd",
-    "title": "Kick-Off",
-    "section": "Kernbereiche von DBD",
-    "text": "Kernbereiche von DBD\nin Anlehnung an Aufteilung der GESIS\n\n\n\n\n\n\n\n\n\n\n\nUnterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)\nSeminar legt Schwerpunkt auf Datenerhebung, mit kurzen Ausblick auf die anderen Bereiche"
-  },
-  {
-    "objectID": "slides/slides-01.html#vorläufiger-seminarplan",
-    "href": "slides/slides-01.html#vorläufiger-seminarplan",
-    "title": "Kick-Off",
-    "section": "(Vorläufiger) Seminarplan",
-    "text": "(Vorläufiger) Seminarplan\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nDBD: Overview\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    6\n\n06.12.2023\n\n🔨 Text as data\n\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n18.01.2024\n\n📦 Data donations methods\n\n\n    11\n\n25.01.2024\n\n🔨 Working data logs\n\n\n    12\n\n02.02.2024\n\n📊 Presentation & Discussion\n\n\n    13\n\n08.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
-  },
-  {
-    "objectID": "slides/slides-01.html#typische-session",
-    "href": "slides/slides-01.html#typische-session",
-    "title": "Kick-Off",
-    "section": "Typische Session",
-    "text": "Typische Session\nfür 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
-  },
-  {
-    "objectID": "slides/slides-01.html#different-tools-for-different-tasks",
-    "href": "slides/slides-01.html#different-tools-for-different-tasks",
-    "title": "Kick-Off",
-    "section": "Different tools for different tasks",
-    "text": "Different tools for different tasks\nKursorganisation & -kommunikation\n\nGithub-Kursseite: Informationen zu Kurs (Semesterplan, Syllabus, Prüfungleistungen etc). & Sitzungen (Slides, Literatur und ggf. Übungsmaterial)\nZulip: Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs\nStudOn: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen\nE-Mail: persönliche Anliegen\n\n\n\nKurze Vorführung der Webseite\nZulip Frage/Probleme bei Registrierung?"
-  },
-  {
-    "objectID": "slides/slides-01.html#what-is-expected",
-    "href": "slides/slides-01.html#what-is-expected",
-    "title": "Kick-Off",
-    "section": "What is expected",
-    "text": "What is expected\nLeistungsanforderungen & Prüfungsleistungen\n\n\n\n\n\n\n\n\nRegelmäßige Teilnahme\n\nmindestens 80% der Sitzungen\nmax. 2 unentschuldigte Fehltermine\n\n\n\n\n\n\n\nPortfolio\n\nVerschiedene Teilleistungen (ins. 100 Punkte)"
-  },
-  {
-    "objectID": "slides/slides-01.html#präsentation",
-    "href": "slides/slides-01.html#präsentation",
-    "title": "Kick-Off",
-    "section": "👥 Präsentation",
-    "text": "👥 Präsentation\n💡Zentrale Idee: Theoretische & methodische Grundlage für das Mini-Projekt\n\nUmfang: maximal 30 Minuten\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt\n\n\nBessonderheit: vorheriges Feedbackgespräch"
-  },
-  {
-    "objectID": "slides/slides-01.html#ein-kurzer-appell",
-    "href": "slides/slides-01.html#ein-kurzer-appell",
-    "title": "Kick-Off",
-    "section": "Ein kurzer Appell",
-    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
-  },
-  {
-    "objectID": "slides/slides-01.html#please-state-your-preference",
-    "href": "slides/slides-01.html#please-state-your-preference",
-    "title": "Kick-Off",
-    "section": "Please state your preference",
-    "text": "Please state your preference\nVergabe der Präsentationsthemen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link und geben Sie Ihre Themenpräferenz an:\n\nhttps://simpleassign.com/poll/-NhRazTXpvnikS0JKWdT"
-  },
-  {
-    "objectID": "slides/slides-01.html#lets-spin-the-wheel",
-    "href": "slides/slides-01.html#lets-spin-the-wheel",
-    "title": "Kick-Off",
-    "section": "Let’s spin the wheel",
-    "text": "Let’s spin the wheel\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    9\n\n11.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n18.01.2024\n\n📦 Data donations methods\n\n\n  \n  \n  \n\n\n\n\n\nIn case of emergency: Wheel of Names"
-  },
-  {
-    "objectID": "slides/slides-01.html#lektüre-zwischen-den-sitzungen",
-    "href": "slides/slides-01.html#lektüre-zwischen-den-sitzungen",
-    "title": "Kick-Off",
-    "section": "Lektüre zwischen den Sitzungen",
-    "text": "Lektüre zwischen den Sitzungen\nPflichtlektüre\n\npro Woche ein wissenschaftlicher Text als Grundlage für das Thema (Sitzungen 4 - 11)\n\nEinreichung von Fragen zum Text in Teams (spätestens Dienstag Abend)\n\ngilt für alle Kursteilnehmer*Innen\nmind. 1 Verständnisfrage zum Text\nmind. 1 Diskussionsfrage zum Text bzw. Thema insgesamt\nWo? -&gt; in wöchentlicher Teams-Unterhaltung zur jeweligen Sitzung\nWhy? -&gt; wird in der Sitzung genutzt; bereiten Sie Ihre Frage so vor, dass Sie sie in der Sitzung stellen & erklären können\n\nLiteratur:\n\nSiehe Syllabus & Teams/StudOn (PDFs werden bereitgestellt)"
-  },
-  {
-    "objectID": "slides/slides-01.html#seminararbeit",
-    "href": "slides/slides-01.html#seminararbeit",
-    "title": "Kick-Off",
-    "section": "Seminararbeit",
-    "text": "Seminararbeit\nUmfang & Inhalt (ausführliche Infos im Syllabus)\n\n3500 - 4000 Wörter\nAnfertigung einer Projektskizze für eine wissenschaftliche Arbeit\nVerwendung von mindestens eine der vorgestellten Methoden/Tools\nSozialwissenschaftlicher Fokus\n\n(vorläufige) Deadline: 03.03.2023; 23:59"
-  },
-  {
-    "objectID": "slides/slides-01.html#before-we-meet-again",
-    "href": "slides/slides-01.html#before-we-meet-again",
-    "title": "Kick-Off",
-    "section": "Before we meet again",
-    "text": "Before we meet again\nHinweise und offene Fragen\n\nGenerell: ausführliche Informationen im Syllabus!\nWhy no English?\nIhre Fragen?"
-  },
-  {
-    "objectID": "slides/slides-01.html#literatur",
-    "href": "slides/slides-01.html#literatur",
-    "title": "Kick-Off",
-    "section": "Literatur",
-    "text": "Literatur\n\n\n\n\n\n\nHome"
-  },
-  {
-    "objectID": "slides/slides-01.html#mehr-praxis-mehr-spass",
-    "href": "slides/slides-01.html#mehr-praxis-mehr-spass",
-    "title": "Kick-Off",
-    "section": "Mehr Praxis, mehr Spass",
-    "text": "Mehr Praxis, mehr Spass\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡Zentrale Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
-  },
-  {
-    "objectID": "slides/slides-01.html#typische-oder-session",
-    "href": "slides/slides-01.html#typische-oder-session",
-    "title": "Kick-Off",
-    "section": "Typische 📚,📦 oder 🔨 Session",
-    "text": "Typische 📚,📦 oder 🔨 Session\nErst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
-  },
-  {
-    "objectID": "slides/slides-01.html#typische-session-1",
-    "href": "slides/slides-01.html#typische-session-1",
-    "title": "Kick-Off",
-    "section": "Typische Session",
-    "text": "Typische Session\nfür 📊: Pitch ➞ Diskussion ➞ Repeat\n\n\nProject topic idea(s) (ca 5-10 Min)\n\nkurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),\nkurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)\nErgebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).\n\n\nFragen & Diskussion (ca 5-10 Min)\n\nZeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.\n\n\n\n\n🔁 für jede Gruppe\n\n\n\nStatus bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)"
-  },
-  {
-    "objectID": "slides/slides-01.html#präsentation-1",
-    "href": "slides/slides-01.html#präsentation-1",
-    "title": "Kick-Off",
-    "section": "Präsentation",
-    "text": "Präsentation\nUmfang & Inhalt: max. 30 Min.\n\n~ 25 Min.: Zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools inklusive kurzem Überblick über Forschung(-sfeld)\n~ 5 Min: Fragen & Diskussion\nZiel: Vorstellung Tool & Beispiel für Forschung(-sdesign)\n\nVorheriges (obligatorisches) Feedbackgespräch:\n\nEinreichung vollständiger Präsentationsentwurf mindestens eine Woche + 24 Stunden vor Ihrer Präsentation per E-Mail an christoph.adrian@fau.de\nAusführliches Feedback und Tipps zur Überarbeitung"
-  },
-  {
-    "objectID": "slides/slides-01.html#theorie-meets-praxis",
-    "href": "slides/slides-01.html#theorie-meets-praxis",
-    "title": "Kick-Off",
-    "section": "Theorie meets Praxis",
-    "text": "Theorie meets Praxis\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡Zentrale Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
-  },
-  {
-    "objectID": "slides/slides-01.html#project-topic-idea",
-    "href": "slides/slides-01.html#project-topic-idea",
-    "title": "Kick-Off",
-    "section": "👥 Project topic idea",
-    "text": "👥 Project topic idea\n💡Zentrale Idee: Projektidee entwickeln, vorstellen & diskutieren\nUmfang & Inhalt: max. 30 Min.\n\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt (Mandatory literature unter Informationen zur Session () im Schedule)\n\nVorheriges (obligatorisches) Feedbackgespräch:\n\nEinreichung vollständiger Präsentationsentwurf mindestens 8 Tage vor Ihrer Präsentation per E-Mail an christoph.adrian@fau.de\nAusführliches Feedback und Tipps zur Überarbeitung im persönlichen Gespräch"
-  },
-  {
-    "objectID": "slides/slides-01.html#ein-kurzer-appell-1",
-    "href": "slides/slides-01.html#ein-kurzer-appell-1",
-    "title": "Kick-Off",
-    "section": "Ein kurzer Appell",
-    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
-  },
-  {
-    "objectID": "slides/slides-01.html#ein-kurzer-appell-2",
-    "href": "slides/slides-01.html#ein-kurzer-appell-2",
-    "title": "Kick-Off",
-    "section": "Ein kurzer Appell",
-    "text": "Ein kurzer Appell\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte seien Sie sich folgender Dinge bewusst:\n\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
-  },
-  {
-    "objectID": "slides/slides-01.html#no-ing-please",
-    "href": "slides/slides-01.html#no-ing-please",
-    "title": "Kick-Off",
-    "section": "No 👻ing, please!",
-    "text": "No 👻ing, please!\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte beachten Sie sich folgender Dinge:\n\nNehmen Sie bitte kein Thema an, wenn Sie nicht teilnehmen wollen/können!\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
-  },
-  {
-    "objectID": "slides/slides-01.html#project-proposal",
-    "href": "slides/slides-01.html#project-proposal",
-    "title": "Kick-Off",
-    "section": "👥 Project proposal",
-    "text": "👥 Project proposal\n💡Zentrale Idee: Erster Entwurf des Written short report\n\nUmfang: mindestens 500 Wörter\nZiel: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie\nFokus auf drei “Abschnitte”: Einleitung, Datengrundlage und methodisches Vorgehen\n\n\nBessonderheit: Grundlage für das Peer Review"
-  },
-  {
-    "objectID": "slides/slides-01.html#peer-review",
-    "href": "slides/slides-01.html#peer-review",
-    "title": "Kick-Off",
-    "section": "👤 Peer Review",
-    "text": "👤 Peer Review\n💡Zentrale Idee: Feedback für Bericht geben & bekommmen\n\nUmfang: Durcharbeiten eines Peer-Review-Formulars\nZiel(e):\n\nLernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben\nZusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann\n\n\n\nBesonderheit: Individuelles Assigment!"
-  },
-  {
-    "objectID": "slides/slides-01.html#short-report",
-    "href": "slides/slides-01.html#short-report",
-    "title": "Kick-Off",
-    "section": "👥 Short Report",
-    "text": "👥 Short Report\n💡Zentrale Idee: Zusammenführung der einzelnen Teileistungen\n\nUmfang:\n\n750 bis 1000 Wörter pro Person umfassen.\nBei einem Gruppenbericht skaliert die Anzahl der Wörter mit einem Faktor von 0,8 pro Person (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).\n\nZiel(e):\n\nmindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.\nKenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren."
-  },
-  {
-    "objectID": "slides/slides-01.html#project-topic-ideas",
-    "href": "slides/slides-01.html#project-topic-ideas",
-    "title": "Kick-Off",
-    "section": "👥 Project topic idea(s)",
-    "text": "👥 Project topic idea(s)\n💡Zentrale Idee: Projektidee vorstellen & weiterentwickeln\n\nUmfang: maximal 10 Minuten & 5 Slides\nZiel: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback\nRaum für Fragen und Austausch zwischen den verschiedenen Projektgruppen"
-  },
-  {
-    "objectID": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
-    "href": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
-    "title": "Kick-Off",
-    "section": "Schritt für Schritt zum Ziel",
-    "text": "Schritt für Schritt zum Ziel\nDas Portfolio im Überblick\n\n\nAusführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter Assignments."
-  },
-  {
-    "objectID": "slides/slides-01.html#talking-about-disconnecting",
-    "href": "slides/slides-01.html#talking-about-disconnecting",
-    "title": "Kick-Off",
-    "section": "Talking about disconnecting",
-    "text": "Talking about disconnecting\nProjekt 1: #digitaldetox auf sozialen Medien\n\n\n\n\n\n\nQuelle: dup-magazin.de\n\n\n\n\nProjektaufbau\n\nTheoretische Hintergrund: Digital disconnection\nAnalyse von Social Media Post mit #digitaldetox\nArchiv-Daten (Twitter) oder eigene Datenerhebung\nFokus auf Inhalt (Diskurs, andere Hashtags) oder “Akteure”/Accounts"
-  },
-  {
-    "objectID": "slides/slides-01.html#studying-problems-not-problematic-usage",
-    "href": "slides/slides-01.html#studying-problems-not-problematic-usage",
-    "title": "Kick-Off",
-    "section": "Studying problems, not problematic usage?",
-    "text": "Studying problems, not problematic usage?\nProjekt 2: Mediennutzungsgewohnheiten und Wohlbefinden\n\n\n\n\n\n\n\n\n\n\nProjektaufbau\n\nHabitualisierte / routinemäßige Mediennutzung\nErhebung, Aufbereitung und Analyse von Logging-Daten\nEigene Erhebung, Data Download Packages, API-Zugang\nFokus auf Datenerhebungs & -aufbereitungsprozess"
-  },
-  {
-    "objectID": "slides/slides-01.html#einführung-medieninhalte-mediennutzung",
-    "href": "slides/slides-01.html#einführung-medieninhalte-mediennutzung",
-    "title": "Kick-Off",
-    "section": "Einführung, Medieninhalte, Mediennutzung",
-    "text": "Einführung, Medieninhalte, Mediennutzung\nStruktur und Aufbau des Seminars\n\n\nEinführung\n\nProjekt 1\n\nProjekt 2\n\n\nDas Seminar besteht aus drei inhaltlichen Blöcken: Einleitung, Projekt 1 (Medieninhalte), Projekt 2 (Mediennutzung)\n\nDie Einleitung umfasst die ersten drei Sitzungen bilden die (theoretische) Grundlage für den Kurs.\nThe second session is to give you an extended introduction DBD, including challenges and important frameworks. The third session is about practical work with R and RStudio."
-  },
-  {
-    "objectID": "slides/slides-01.html#drei-blöcke",
-    "href": "slides/slides-01.html#drei-blöcke",
-    "title": "Kick-Off",
-    "section": "Drei Blöcke",
-    "text": "Drei Blöcke\nStruktur und Aufbau des Seminars\n\n\nEinführung\nlegt theoretische Grundlagen des Kurses:\n\nKick-Off\nDBD: Einführung & Überblick\npraktische Arbeit mit R und RStudio.\n\n\nProjekt 1\nBeobachtung und Analyse von (schriftlichen) Social Media Inhalten (z.B. Posts und/oder Hashtags) mit Hilfe verschiedener Methoden (z.B. Topic Modeling, Sentiment Analysis etc.).\n\nProjekt 2\nErhebung, Verarbeitung und Auswertung von Logging-Daten sowie deren Verknüpfung mit Umfragedaten"
-  },
-  {
-    "objectID": "slides/slides-01.html#drei-themenblöcke",
-    "href": "slides/slides-01.html#drei-themenblöcke",
-    "title": "Kick-Off",
-    "section": "Drei Themenblöcke",
-    "text": "Drei Themenblöcke\nStruktur und Aufbau des Seminars\n\n\nEinführung\nTheoretische Grundlagen des Kurses:\n\nKick-Off\nDBD: Einführung & Überblick\npraktische Arbeit mit R und RStudio.\n\n\nProjekt 1\nBeobachtung und Analyse von (schriftlichen) Social Media Inhalten (z.B. Posts und/oder Hashtags) mit Hilfe verschiedener Methoden (z.B. Topic Modeling, Sentiment Analysis etc.).\n\nProjekt 2\nErhebung, Verarbeitung und Auswertung von Logging-Daten sowie deren Verknüpfung mit Umfragedaten"
-  },
-  {
-    "objectID": "slides/slides-01.html#no-ing-please-1",
-    "href": "slides/slides-01.html#no-ing-please-1",
-    "title": "Kick-Off",
-    "section": "No 👻ing, please!",
-    "text": "No 👻ing, please!\nHinweis zu “Abbruch” bzw. Nicht-Erscheinen\n\nIhre Anmeldung bedeutet üblicherweise eine sehr intensive, aufwändige Betreuung für uns Lehrende\nÄrgerlicherweise gibt es Studierende, die sich anmelden und betreuen lassen, aber dann einfach irgendwann (teilweise sehr kurzfristig) “verschwinden”.\n\n⚠️ Bitte beachten Sie sich folgender Dinge:\n\nNehmen Sie bitte kein Thema an, wenn Sie nicht teilnehmen wollen/können!\nDie „Prüfung” bzw. die „Prüfungszeit” bei einem Seminar beginnt mit der Bearbeitungszeit und damit mit der Ausgabe des Themas an die Kandidaten.\n24h Bedenkzeit / Rücktrittsrecht"
   }
 ]

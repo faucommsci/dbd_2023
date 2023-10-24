@@ -1,0 +1,107 @@
+---
+title: "DBD - Einführung"
+subtitle: "Session 02"
+date: 08 11 2023
+date-format: "DD.MM.YYYY"
+bibliography: references.bib
+---
+
+# 🚧 Under construction {background-image="img/slide_bg-section.png"}
+
+Die Folien werden aktuell überarbeitet, sind aber spätestens zur 1.Sitzung (25.10) online.
+
+```{r under-construction-stop-render}
+#| echo: false
+
+knitr::knit_exit()
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  Kurze Vorstellungsrunde
+2.  [Organisation & Koordination](#organisation-koordination)
+
+```{r setup-slide-session}
+#| echo: false
+library(jsonlite)
+library(tidyverse)
+```
+
+
+# Einführung in das Seminar {background-image="img/slide_bg-section.svg"}
+
+Motivation & Grundidee
+
+## Was verstehen Sie unter Digital Behavioral Data?
+
+#### Interaktive Session
+
+::: columns
+::: {.column width="50%"}
+Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+
+-   <https://www.menti.com/alhdxw6x3a6e>
+
+-   Temporary Access Code: **2677 1451**
+:::
+
+::: {.column width="50%"}
+![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
+:::
+:::
+
+## Ergebnis
+
+::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+
+</iframe>
+:::
+
+## Ein Definitionsversuch von DBD
+
+#### nach @weller2021
+
+::: columns
+::: {.column width="50%"}
+... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen
+
+... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
+:::
+
+::: {.column width="50%"}
+<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
+
+![](img/session-01/dbd_pictogram.svg){fig-align="center"}
+:::
+:::
+
+## Beispiel: [COVID-19 Mobility Monitor](https://www.covid-19-mobility.org/de/mobility-monitor/)
+
+![](img/session-01/mobility_monitor.png){fig-align="center"}
+
+## Beispiel: [Datenvolumen einer Internet-Minute](https://ediscoverytoday.com/2023/04/20/2023-internet-minute-infographic-by-ediscovery-today-and-ltmg-ediscovery-trends/)
+
+![](https://i0.wp.com/ediscoverytoday.com/wp-content/uploads/2023/04/2023InternetMinuteSized.png?w=565&ssl=1){fig-align="center"}
+
+## Kernbereiche von DBD
+
+#### in Anlehnung an Aufteilung der [GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)
+
+::: columns
+::: {.column width="50%"}
+<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
+
+![](img/session-01/dbd_pillars.svg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+<!-- FIXME "Schwerpunkt" korrigieren -->
+
+-   Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
+
+-   Seminar legt **Schwerpunkt auf Datenerhebung**, mit kurzen Ausblick auf die anderen Bereiche
+:::
+:::
+
+#  {background-image="img/slide_bg-orga.svg"}

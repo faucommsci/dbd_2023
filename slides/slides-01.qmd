@@ -6,17 +6,6 @@ date-format: "DD.MM.YYYY"
 bibliography: references.bib
 ---
 
-# 🚧 Under construction {background-image="img/slide_bg-section.png"}
-
-Die Folien werden aktuell überarbeitet, sind aber spätestens zur 1.Sitzung (25.10) online.
-
-```{r under-construction-stop-render}
-#| echo: false
-#| eval: false
-
-knitr::knit_exit()
-```
-
 # Agenda {background-image="img/slide_bg-agenda.png"}
 
 1.  Kurze Vorstellungsrunde
@@ -43,25 +32,31 @@ library(tidyverse)
 -   Wie heißen Sie?
 -   Was und wo haben Sie im **Bachelor studiert**?
 -   Was **studieren** Sie **aktuell**?
--   Welches s**oziale Netzwerk/Medium** nutzen Sie aktuell am häufigsten?
+-   Welches **soziale Netzwerk/Medium** nutzen Sie aktuell am häufigsten?
 -   Was war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?
+
+::: notes
+-   Hintegrund und Vorwissen
+-   Mediennutzung & Serientipps
+:::
 
 # Organisation & Koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
 
-Kommunikation, Ablauf & Prüfungsleistungen
+Kommunikation, Prüfungleistungen, Aufbau & Ablauf
 
 ## Different tools for different tasks
 
 #### Kursorganisation & -kommunikation
 
--   [Github-Kursseite](https://faucommsci.github.io/dbd_2023/): Informationen zu Kurs (*Semesterplan,* *Syllabus, Prüfungleistungen etc*). & Sitzungen (*Slides, Literatur und ggf. Übungsmaterial*)
--   [Zulip](https://fau-dbd.zulipchat.com): Wichtige Ankündigungen, asynchrone Unterhaltungen & Fragen zum Kurs
+-   [Github-Kursseite](https://faucommsci.github.io/dbd_2023/): Informationen zu **Kurs** ([*Semesterplan*](https://faucommsci.github.io/dbd_2023/)*,* [*Syllabus*](https://faucommsci.github.io/dbd_2023/course-syllabus.html)*, [Prüfungleistungen](https://faucommsci.github.io/dbd_2023/course-assignments.html) etc*). & **Sitzungen** (*Slides, Literatur und ggf. Übungsmaterial*)
+-   [Zulip](https://fau-dbd.zulipchat.com): Wichtige Ankündigungen, asynchrone Unterhaltungen, Fragen zum Kurs & zu R
 -   [StudOn](https://www.studon.fau.de/crs5349138.html): Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen
 -   [E-Mail](mailto:christoph.adrian@fau.de?subject=DBD): persönliche Anliegen
 
 ::: notes
 -   Kurze Vorführung der Webseite
 -   Zulip Frage/Probleme bei Registrierung?
+-   Optional: Github/OSF
 :::
 
 # No Ghosting, please! {background-image="img/slide_bg-section_ghosting.png"}
@@ -76,13 +71,11 @@ Kommunikation, Ablauf & Prüfungsleistungen
 
 #### Leistungsanforderungen & Prüfungsleistungen
 
-<!-- FIXME Add new graphics -->
-
 ::: columns
 ::: {.column width="50%"}
 ![](img/session-01/graphic-assesment_participation.png){fig-align="center" width="350"}
 
-**Regelmäßige Teilnahme**
+##### **Regelmäßige Teilnahme** {style="text-align: center"}
 
 -   mindestens 80% der Sitzungen
 
@@ -92,17 +85,22 @@ Kommunikation, Ablauf & Prüfungsleistungen
 ::: {.column width="50%"}
 ![](img/session-01/graphic-assesment_portfolio.png){fig-align="center" width="350"}
 
-**Portfolio**
+##### **Portfolio** {style="text-align: center"}
 
 -   Verschiedene Teilleistungen (ins. 100 Punkte)
 :::
+:::
+
+::: notes
+-   Frage: Syllabus gelesen?
+-   Frage: Assignments angeschaut?
 :::
 
 ## Schritt für Schritt zum Ziel
 
 #### Das Portfolio im Überblick
 
-![](img/session-01/graphic-portfolio_parts.svg){fig-align="center"}
+![](img/session-01/graphic-portfolio_parts.png){fig-align="center"}
 
 ::: {style="font-size: smaller; text-align: center"}
 Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter [Assignments](https://faucommsci.github.io/dbd_2023/course-assignments.html).
@@ -110,7 +108,7 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 ## [👥](#sec-presentation) Präsentation
 
-#### **💡Zentrale Idee:** Theoretische & methodische Grundlage für das Mini-Projekt
+#### **💡** Theoretische & methodische Grundlage für das Mini-Projekt
 
 -   **Umfang**: maximal 30 Minuten
 -   **Ziel**: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools
@@ -122,7 +120,7 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 ## [👥](#sec-presentation) Project topic idea(s)
 
-#### **💡Zentrale Idee:** Projektidee vorstellen & weiterentwickeln
+#### **💡** Projektidee vorstellen & weiterentwickeln
 
 -   **Umfang**: maximal 10 Minuten & 5 Slides
 
@@ -132,7 +130,7 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 ## [👥](#sec-presentation) Project proposal
 
-#### **💡Zentrale Idee:** Erster Entwurf des Written short report
+#### **💡** Erster Entwurf des Written short report
 
 -   **Umfang**: mindestens 500 Wörter
 -   **Ziel**: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie
@@ -142,9 +140,13 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 #### Bessonderheit: Grundlage für das Peer Review
 
+::: notes
+-   (Teilweise) Während des Semesters
+:::
+
 ## **👤** Peer Review
 
-#### **💡Zentrale Idee:** Feedback für Bericht geben & bekommmen
+#### **💡** Feedback für Bericht geben & bekommmen
 
 -   **Umfang:** Durcharbeiten eines Peer-Review-Formulars
 -   **Ziel(e)**:
@@ -155,10 +157,15 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 #### Besonderheit: Individuelles Assigment!
 
+::: notes
+-   (Teilweise) Während des Semesters
+:::
+
 ## [👥](#sec-presentation) Short Report
 
-#### **💡Zentrale Idee:** Zusammenführung der einzelnen Teileistungen
+#### **💡** Zusammenführung der einzelnen Teileistungen
 
+::: {style="font-size: smaller"}
 -   **Umfang:**
     -   **750 bis 1000 Wörter pro Person umfassen**.
     -   Bei einem **Gruppenbericht** skaliert die Anzahl der Wörter mit einem **Faktor von 0,8 pro Person** (*z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter*).
@@ -166,6 +173,13 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
     -   mindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.
 
     -   Kenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren.
+:::
+
+##### Besonderheit: Abgabe als Quarto-Dokument (& PDF)
+
+::: notes
+-   Finale Abgabe erst nach Ende des Semesters
+:::
 
 # Time for questions!? {background-image="img/slide_bg-question.png"}
 
@@ -173,31 +187,34 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 
 #### Struktur und Aufbau des Seminars
 
-::: columns
-::: {.column width="33%"}
-##### Einführung
+![](img/session-01/graphic-seminar_blocks.png){fig-align="center"}
 
-**Theoretische Grundlagen des Kurses**:
+## About R ...
 
--   Kick-Off
+#### 
 
--   DBD: Einführung & Überblick
+![](img/session-01/meme-stat_programms_matrix.png){fig-align="center"}
 
--   praktische Arbeit mit R und RStudio.
-:::
+#### 
 
-::: {.column width="33%"}
-##### Projekt 1
+## Trust the process
 
-Beobachtung und Analyse von **(schriftlichen) Social Media Inhalten** (z.B. Posts und/oder Hashtags) mit Hilfe **verschiedener Methoden** (z.B. Topic Modeling, Sentiment Analysis etc.).
-:::
+#### Der Einsatz von R bzw. RStudio im Kurs
 
-::: {.column width="33%"}
-##### Projekt 2
+**Warum?**
 
-Erhebung, Verarbeitung und Auswertung von **Logging-Daten** sowie deren **Verknüpfung mit Umfragedaten**
-:::
-:::
+-   **Kostenlose Software** mit vielen nützlichen und **beginner-friendly Tutorials**
+-   R or Python? **Both!**
+
+**Im Kurs:**
+
+-   Bestehende R-Kenntnisse sind förderlich, aber nicht zwigend notwendig, wichtiger sind **praktische Erfahrung im syntaxbasierten Arbeiten**
+
+-   **Learn to code by example**: Code von Sitzungen & Beispielen wird bereitgestellt (ggf. durch Showcases)
+
+-   **Pflicht: [Basiskurs R/RStudio](https://www.studon.fau.de/studon/goto.php?target=crs_3235361_join) der FAU**
+
+-   Nützliche Quellen auf Kursseite unter [Computing](https://faucommsci.github.io/dbd_2023/)
 
 ## Theorie meets Praxis
 
@@ -210,7 +227,7 @@ Erhebung, Verarbeitung und Auswertung von **Logging-Daten** sowie deren **Verkn�
 3.  🔨 Vorstellung & Anwendung von Methoden & Analysestrategie
 4.  📊 Vorstellung & Diskussion von Projektideen
 
-**💡Zentrale Idee:**
+**💡 Idee:**
 
 -   Wissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄
 
@@ -362,7 +379,7 @@ json_text <- '[
     {
         "Session": "10",
         "Datum": "18.01.2024",
-        "Topic": "📦 Data donations methods",
+        "Topic": "📦 Data donation methods",
         "Presenter": ""
     },
     {
@@ -421,13 +438,13 @@ schedule %>%
 
 ##### Projektaufbau
 
--   Theoretische Hintergrund: Digital disconnection
+-   Theoretische Hintergrund: **Digital disconnection**
 
--   Analyse von Social Media Post mit #digitaldetox
+-   Analyse von Social Media Post mit **#digitaldetox**
 
--   Archiv-Daten (Twitter) oder eigene Datenerhebung
+-   **Archiv-Daten** (Twitter) oder **eigene Datenerhebung**
 
--   Fokus auf Inhalt (Diskurs, andere Hashtags) oder "Akteure"/Accounts
+-   Fokus auf **Inhalt** (Diskurs, andere Hashtags) oder **"Akteure"/Accounts**
 :::
 :::
 
@@ -447,13 +464,13 @@ schedule %>%
 
 ##### Projektaufbau
 
--   Habitualisierte / routinemäßige Mediennutzung
+-   Habitualisierte / routinemäßige **Mediennutzung**
 
--   Erhebung, Aufbereitung und Analyse von Logging-Daten
+-   Erhebung, Aufbereitung und Analyse von **Logging-Daten**
 
 -   Eigene Erhebung, Data Download Packages, API-Zugang
 
--   Fokus auf Datenerhebungs & -aufbereitungsprozess
+-   Fokus auf **Datenerhebungs & -aufbereitungsprozess**
 :::
 :::
 
@@ -467,7 +484,7 @@ schedule %>%
 
 Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und geben Sie Ihre Themenpräferenz an:
 
--   <https://simpleassign.com/poll/-NhRazTXpvnikS0JKWdT>
+-   <https://simpleassign.com/poll/-NhW_EY5JXFZ25ZcYZbx>
 :::
 
 ::: {.column width="50%"}
@@ -475,7 +492,13 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und geben S
 :::
 :::
 
-## Let's spin the wheel
+## Let's spin the wheel?!
+
+#### Zuteilung der Präsentationsthemen
+
+::: columns
+::: {.column width="60%"}
+<br>
 
 ```{r table-schedule-topics}
 #| echo: false 
@@ -483,6 +506,7 @@ student_sessions <- c("4", "5", "9", "10")
 
 schedule %>% 
     filter(Session %in% student_sessions) %>% 
+    select(-Presenter) %>% 
     gt::gt() %>% 
     gt::fmt_markdown() %>% 
     gt::tab_options(
@@ -495,99 +519,27 @@ schedule %>%
 ::: {style="text-align: center; margin-top: 1em"}
 [In case of emergency: Wheel of Names](https://wheelofnames.com/){preview-link="true" style="text-align: center"}
 :::
+:::
+
+::: {.column width="40%"}
+[![](img/session-01/simple_assing-logo.jpeg){width="150"}](https://simpleassign.com/results/-NhW_EY5JXFZ25ZcYZbx)
+
+[![](img/logo-google_slides.png){width="150"}](https://docs.google.com/presentation/d/1kXKEDejpj6yyBCiLnSrsEQmClSZPfoW2hVetCDWJNLM/edit?usp=sharing)
+:::
+:::
 
 ## Before we meet again
 
 #### Hinweise und offene Fragen
 
--   Generell: ausführliche Informationen im Syllabus!
+**Hinweise**:
 
--   Why no English?
+-   Lernen Sie die [Kursseite](https://faucommsci.github.io/dbd_2023/) & [Zulip](https://fau-dbd.zulipchat.com/) kennen! Und checken Sie die Infos ({{< bi book >}}) zur nächten Sitzung.
+-   **Bis zum 13.11.: [Basiskurs R/RStudio](https://www.studon.fau.de/studon/goto.php?target=crs_3235361_join) durcharbeiten.** Bitte senden Sie das Kurszertifikat an [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de?subject=DBD%20R-Kurszertifikat)
 
--   [**Ihre Fragen?**]{.smallcaps}
+**Fragen**:
+
+-   Why no English? 🤷
+-   Haben Sie noch Fragen?
 
 # Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
-
-```{r backup-stop-render}
-#| echo: false
-
-knitr::knit_exit()
-```
-
-# Einführung in das Seminar {background-image="img/slide_bg-section.svg"}
-
-Motivation & Grundidee
-
-## Was verstehen Sie unter Digital Behavioral Data?
-
-#### Interaktive Session
-
-::: columns
-::: {.column width="50%"}
-Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
-
--   <https://www.menti.com/alhdxw6x3a6e>
-
--   Temporary Access Code: **2677 1451**
-:::
-
-::: {.column width="50%"}
-![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
-:::
-:::
-
-## Ergebnis
-
-::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
-
-</iframe>
-:::
-
-## Ein Definitionsversuch von DBD
-
-#### nach @weller2021
-
-::: columns
-::: {.column width="50%"}
-... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen
-
-... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
-:::
-
-::: {.column width="50%"}
-<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
-
-![](img/session-01/dbd_pictogram.svg){fig-align="center"}
-:::
-:::
-
-## Beispiel: [COVID-19 Mobility Monitor](https://www.covid-19-mobility.org/de/mobility-monitor/)
-
-![](img/session-01/mobility_monitor.png){fig-align="center"}
-
-## Beispiel: [Datenvolumen einer Internet-Minute](https://ediscoverytoday.com/2023/04/20/2023-internet-minute-infographic-by-ediscovery-today-and-ltmg-ediscovery-trends/)
-
-![](https://i0.wp.com/ediscoverytoday.com/wp-content/uploads/2023/04/2023InternetMinuteSized.png?w=565&ssl=1){fig-align="center"}
-
-## Kernbereiche von DBD
-
-#### in Anlehnung an Aufteilung der [GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)
-
-::: columns
-::: {.column width="50%"}
-<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
-
-![](img/session-01/dbd_pillars.svg){fig-align="center"}
-:::
-
-::: {.column width="50%"}
-<!-- FIXME "Schwerpunkt" korrigieren -->
-
--   Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
-
--   Seminar legt **Schwerpunkt auf Datenerhebung**, mit kurzen Ausblick auf die anderen Bereiche
-:::
-:::
-
-#  {background-image="img/slide_bg-orga.svg"}
