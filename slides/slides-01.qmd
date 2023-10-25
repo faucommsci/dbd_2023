@@ -9,7 +9,8 @@ bibliography: references.bib
 # Agenda {background-image="img/slide_bg-agenda.png"}
 
 1.  Kurze Vorstellungsrunde
-2.  [Organisation & Koordination](#organisation-koordination)
+2.  [DBD - A very short introduction]
+3.  [Organisation & Koordination](#organisation-koordination)
 
 ```{r setup-slide-session}
 #| echo: false
@@ -32,15 +33,90 @@ library(tidyverse)
 -   Wie heißen Sie?
 -   Was und wo haben Sie im **Bachelor studiert**?
 -   Was **studieren** Sie **aktuell**?
--   Welches **soziale Netzwerk/Medium** nutzen Sie aktuell am häufigsten?
--   Was war für Sie bisher die beste Serie/Show oder der beste Film des Jahres?
+-   Welches **soziale Netzwerk/Medium** haben Sie letzte Woche am meisten genutzt und **warum**?
 
 ::: notes
 -   Hintegrund und Vorwissen
 -   Mediennutzung & Serientipps
 :::
 
-# Organisation & Koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
+# DBD - A very short introduction {background-image="img/slide_bg-section.png"}
+
+Definitionsversuch, Lernziele und FAQ
+
+## Was verstehen Sie unter Digital Behavioral Data?
+
+#### Interaktive Session
+
+::: columns
+::: {.column width="50%"}
+Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+
+-   <https://www.menti.com/alhdxw6x3a6e>
+
+-   Temporary Access Code: **2677 1451**
+:::
+
+::: {.column width="50%"}
+![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
+:::
+:::
+
+## Ergebnis
+
+::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alfakrvvmd4jbxsrcs654xtthafzibyp/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+
+</iframe>
+:::
+
+## Ein Definitionsversuch von DBD
+
+#### nach @weller2021
+
+::: columns
+::: {.column width="50%"}
+... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen
+
+... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
+:::
+
+::: {.column width="50%"}
+<!-- FIXME Graphik mit neuer Farbgebung exportieren -->
+
+![](img/session-01/dbd_pictogram.svg){fig-align="center"}
+:::
+:::
+
+## Lernziele
+
+#### Die Studierenden werden ...
+
+-   einen **Überblick über die zentralen Möglichkeiten von DBD** und die damit verbundenen **Herausforderungen** bei der Datenerhebung und -aufbereitung bekommen
+-   lernen die **Stärken und Schwächen** verschiedener **Methoden zur Erhebung von DBD** bewerten
+-   zentrale Anforderungen an **Datenschutz, Forschungsethik und Datenqualität** kennen und verstehen lernen
+-   zentrale sozialwissenschaftliche **Methoden zur Analyse von DBD kennenlernen**
+-   das Wissen über DBD, Statistik und Datenanalyse in **eigenen kleinen Projekten** zu üben und anzuwenden
+
+## Aber was ist mit .... ?
+
+#### Kurzes FAQ mit häufig gestellten Fragen
+
+-   **Welchen Vorkenntnisse sind für den Kurs vorausgesetzt?** Interesse an *sozialwissenschaftlichen Perspektiven auf Medien, Kommunikation und digitale Technologien & Grundkenntnisse* in der Arbeit mit *Statistikprogrammen* (z.B. R, Python, Stata, SPSS)
+
+-   **Werden wir praktisch mit Statistikprogrammen** a**rbeiten?** Ja. Dazu werden wir *R bzw. RStudio* nutzen.
+
+    ::: {style="color: #C50F3C;"}
+    **Deswegen: Bitte** 💻 **mitbringen!**
+    :::
+
+-   **Werden wir die mathematische Grundlagen der vorgestellten Methoden lernen?** Ja und Nein. Der Kurs *konzentriert sich in erster Linie auf die Anwendung*; einige mathematische Parameter der vorgestellten Methoden werden jedoch für die Anwendung benötigt und deswegen kurz erörtert.
+
+::: notes
+-   Laptop mit RStudio für alle möglich?
+:::
+
+# Kursorganisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
 
 Kommunikation, Prüfungleistungen, Aufbau & Ablauf
 
@@ -106,6 +182,12 @@ Kommunikation, Prüfungleistungen, Aufbau & Ablauf
 Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter [Assignments](https://faucommsci.github.io/dbd_2023/course-assignments.html).
 :::
 
+::: notes
+-   Nur Short Report am Ende des Semesters
+-   Ggf. wird Bewertungsschema angepasst
+-   "Ideal-Konzept" vs. Realität (bedingt durch Diskrepanz zwischen Anmeldungen & Teilnahme)
+:::
+
 ## [👥](#sec-presentation) Präsentation
 
 #### **💡** Theoretische & methodische Grundlage für das Mini-Projekt
@@ -127,6 +209,10 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 -   **Ziel**: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback
 
 -   Raum für Fragen und Austausch zwischen den verschiedenen Projektgruppen
+
+<br>
+
+#### Bessonderheit: Einzige Leistung, die [**für beide Projekte**]{.underline} erbracht werden muss.
 
 ## [👥](#sec-presentation) Project proposal
 
@@ -181,7 +267,7 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 -   Finale Abgabe erst nach Ende des Semesters
 :::
 
-# Time for questions!? {background-image="img/slide_bg-question.png"}
+# Any questions? {background-image="img/slide_bg-question.png"}
 
 ## Drei Themenblöcke
 
@@ -474,6 +560,16 @@ schedule %>%
 :::
 :::
 
+# Was meinen Sie? {background-image="img/slide_bg-participation.png"}
+Let's discuss a little
+
+::: notes
+-   Lieber 1 ausführliches & 1 Kurzprojekt?
+-   P1: Twitter oder eigene Erhebung?
+-   P2: Eigene Erhebung (intensiv oder lang), DDPs anfordern?, Spotify API?
+:::
+
+
 ## Please state your preference
 
 #### Vergabe der Präsentationsthemen
@@ -543,3 +639,8 @@ schedule %>%
 -   Haben Sie noch Fragen?
 
 # Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
+
+## Literatur
+
+::: {#refs}
+:::
