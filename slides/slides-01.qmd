@@ -37,7 +37,7 @@ library(tidyverse)
 
 ::: notes
 -   Hintegrund und Vorwissen
--   Mediennutzung & Serientipps
+-   Mediennutzung
 :::
 
 # DBD - A very short introduction {background-image="img/slide_bg-section.png"}
@@ -46,10 +46,12 @@ Definitionsversuch, Lernziele und FAQ
 
 ## Was verstehen Sie unter Digital Behavioral Data?
 
-#### Interaktive Session
+#### Bitte an Umfrage teilnehmen
 
 ::: columns
 ::: {.column width="50%"}
+<br>
+
 Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
 
 -   <https://www.menti.com/alhdxw6x3a6e>
@@ -58,6 +60,8 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 :::
 
 ::: {.column width="50%"}
+<br>
+
 ![](img/session-01/mentimeter-qr-dbd.png){fig-align="center" width="300"}
 :::
 :::
@@ -104,7 +108,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 
 -   **Welchen Vorkenntnisse sind für den Kurs vorausgesetzt?** Interesse an *sozialwissenschaftlichen Perspektiven auf Medien, Kommunikation und digitale Technologien & Grundkenntnisse* in der Arbeit mit *Statistikprogrammen* (z.B. R, Python, Stata, SPSS)
 
--   **Werden wir praktisch mit Statistikprogrammen** a**rbeiten?** Ja. Dazu werden wir *R bzw. RStudio* nutzen.
+-   **Werden wir praktisch mit Statistikprogrammen arbeiten?** Ja. Dazu werden wir *R bzw. RStudio* nutzen.
 
     ::: {style="color: #C50F3C;"}
     **Deswegen: Bitte** 💻 **mitbringen!**
@@ -561,6 +565,7 @@ schedule %>%
 :::
 
 # Was meinen Sie? {background-image="img/slide_bg-participation.png"}
+
 Let's discuss a little
 
 ::: notes
@@ -568,7 +573,6 @@ Let's discuss a little
 -   P1: Twitter oder eigene Erhebung?
 -   P2: Eigene Erhebung (intensiv oder lang), DDPs anfordern?, Spotify API?
 :::
-
 
 ## Please state your preference
 
