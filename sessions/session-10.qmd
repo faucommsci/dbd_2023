@@ -1,20 +1,20 @@
 ---
 title: "Session 9"
-subtitle: "📂 P2: 📦 Data donations"
-bibliography: references.bib
+subtitle: "📂 P2: 📦 Data collection methods"
+bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
 
-## Literature for the presenting group
+## Mandatory literature
+
+::: {.callout-important appearance="simple"}
+All articles of this section have to be read & used by the presenting group
+:::
 
 -   [@baumgartner2022]
-
--   [@breuer2022]
-
--   [@ohme2021]
 
 -   [@ohme2023]
 
@@ -24,6 +24,23 @@ citations-hover: false
 
 -   [@yee2022]
 
+### Other additional readings 
+
+-   [@breuer2022]
+
+-   [@nyhuis2021]
+
+-   [@jünger2021]
+
+-   [@jünger2022]
+
+-   [@lomborg2014]
+
+-   [@ohme2021]
+
+-   [@puschmann2017]
+
+-   [@janetzko2016]
 
 <br>
 

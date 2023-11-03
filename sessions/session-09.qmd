@@ -1,18 +1,66 @@
 ---
 title: "Session 9"
-subtitle: "📂 P2: 📚 Media habits & routines"
-bibliography: references.bib
+subtitle: "📂 P2: 📚 Media routines & habits"
+bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
 
-## Literature for the presenting group
+## Mandatory literature
+
+::: {.callout-important appearance="simple"}
+All articles of this section have to be read & used by the presenting group
+:::
+
+-   [@gardner2022]
+
+-   [@meier2021a]
+
+-   [@naab2014]
+
+-   [@schnauber-stockmann2020]
 
 -   [@schnauber-stockmann2022]
 
-## 
+## Other readings
+
+-   [@anderson2020]
+
+-   [@anderson2023]
+
+-   [@bayer2022]
+
+-   [@bayer2018]
+
+-   [@carden2018]
+
+-   [@katevas2018]
+
+-   [@kruglanski2020]
+
+-   [@mazar2018]
+
+-   [@meier2021]
+
+-   [@meier2023]
+
+-   [@naab2018]
+
+-   [@oulasvirta2011]
+
+-   [@schnauber2017]
+
+-   [@schnauber-stockmann2018]
+
+-   [@schnauber-stockmann2018a]
+
+-   [@thepsyc2018]
+
+-   [@wood2016]
+
+-   [@wood2021]
 
 <br>
 

@@ -58,6 +58,8 @@ website:
         contents:
           - href: sessions/session-01.qmd
             text: "Session 01"
+          - href: sessions/session-02.qmd
+            text: "Session 02"
 
       - section: "Computing"
         contents:

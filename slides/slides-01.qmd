@@ -14,8 +14,14 @@ bibliography: references.bib
 
 ```{r setup-slide-session}
 #| echo: false
+#| 
+# Load packages
 library(jsonlite)
 library(tidyverse)
+library(here)
+
+# Load schedule
+source(here("slides/schedule.R"))
 ```
 
 # `print("Hello course!")` {background-image="img/slide_bg-section.png"}
@@ -378,122 +384,6 @@ Ausführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf 
 :::
 
 ## (Vorläufiger) Seminarplan {.smaller}
-
-```{r create-schedule}
-#| echo: false
-json_text <- '[
-    {
-        "Session": "",
-        "Datum": "",
-        "Topic": "**Introduction**",
-        "Presenter": ""
-    },
-    {
-        "Session": "1",
-        "Datum": "25.10.2023",
-        "Topic": "Kick-Off",
-        "Presenter": "Christoph Adrian"
-    },
-    {
-        "Session": "",
-        "Datum": "01.11.2023",
-        "Topic": "🎃 *Holiday (No Lecture)*",
-        "Presenter": ""
-    },
-    {
-        "Session": "2",
-        "Datum": "08.11.2023",
-        "Topic": "DBD: Overview",
-        "Presenter": "Christoph Adrian"
-    },
-    {
-        "Session": "3",
-        "Datum": "15.11.2023",
-        "Topic": "🔨 Working with R",
-        "Presenter": "Christoph Adrian"
-    },
-    {
-        "Session": "",
-        "Datum": "📂 **Project 1**",
-        "Topic": "**Analysis of media content**",
-        "Presenter": ""
-    },
-    {
-        "Session": "4",
-        "Datum": "22.11.2023",
-        "Topic": "📚 Digital disconnection",
-        "Presenter": ""
-    },
-    {
-        "Session": "5",
-        "Datum": "29.11.2023",
-        "Topic": "📦 Data collection methods",
-        "Presenter": ""
-    },
-    {
-        "Session": "6",
-        "Datum": "06.12.2023",
-        "Topic": "🔨 Text as data",
-        "Presenter": ""
-    },
-    {
-        "Session": "7",
-        "Datum": "13.12.2023",
-        "Topic": "📊 Presentation & Discussion",
-        "Presenter": ""
-    },
-    {
-        "Session": "8",
-        "Datum": "20.12.2023",
-        "Topic": "*Buffer Session*",
-        "Presenter": ""
-    },
-    {
-        "Session": "",
-        "Datum": "",
-        "Topic": "🎄*Christmas Break (No Lecture)*",
-        "Presenter": ""
-    },
-    {
-        "Session": "",
-        "Datum": "📂 **Project 2**",
-        "Topic": "**Analysis of media usage**",
-        "Presenter": ""
-    },
-    {
-        "Session": "9",
-        "Datum": "11.01.2024",
-        "Topic": "📚 Media habits & routines",
-        "Presenter": ""
-    },
-    {
-        "Session": "10",
-        "Datum": "18.01.2024",
-        "Topic": "📦 Data donation methods",
-        "Presenter": ""
-    },
-    {
-        "Session": "11",
-        "Datum": "25.01.2024",
-        "Topic": "🔨 Working data logs",
-        "Presenter": ""
-    },
-    {
-        "Session": "12",
-        "Datum": "02.02.2024",
-        "Topic": "📊 Presentation & Discussion",
-        "Presenter": ""
-    },
-    {
-        "Session": "13",
-        "Datum": "08.02.2024",
-        "Topic": "🏁 Recap, Evaluation & Discussion",
-        "Presenter": "Christoph Adrian"
-    }
-]'
-
-schedule <- fromJSON(json_text) %>% tibble()
-```
 
 ```{r table-schedule}
 #| echo: false 

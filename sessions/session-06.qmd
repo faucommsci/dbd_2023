@@ -1,0 +1,20 @@
+---
+title: "Session 6"
+subtitle: "📂 P1: 🔨 Text as data in R"
+bibliography: references_sessions.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+<!-- Add link CSS text as data -->
+<!-- Add link CSS topic Modeling -->
+<!-- Add link CCS network analysis -->
+
+## Other additional readings
+
+ -   [@wiedemann2022]
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::

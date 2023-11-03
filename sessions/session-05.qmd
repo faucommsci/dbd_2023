@@ -1,42 +1,50 @@
 ---
 title: "Session 5"
-subtitle: "📂 P1: 📦 Data collection methods"
-bibliography: references.bib
+subtitle: "📂 P1: 📦 Automatic text analysis"
+bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
 
-## Literature for the presenting group
+## Mandatory literature
 
--   [@karami2020]
+::: {.callout-important appearance="simple"}
+All articles of this section have to be read & used by the presenting group
+:::
+
+-   [@chen2023]
+
+-   [@friemel2017]
+
+-   [@hase2023]
+
+-   [@himelboim2017]
+
+-   [@maier2018]
+
+## 🐈🐈 4CAT 🐈🐈-Toolkit
 
 -   [@peeters2022]
 
 -   [@peeters2022a]
 
--   [@puschmann2017]
-
 ## Other additional readings
 
-### API-Access
+### Topic Modeling
 
--   [@janetzko2016]
+-   [@egger2022]
 
--   [@jünger2021]
-
--   [@jünger2022]
-
--   [@lomborg2014]
-
--   [@nyhuis2021]
+-   [@chang2009]
 
 ### Twitter
 
 -   [@banda2021]
 
 -   [@jungherr2016]
+
+-   [@karami2020]
 
 -   [@mueller2022]
 

@@ -1,7 +1,7 @@
 ---
 title: "Session 4"
 subtitle: "📂 P1: 📚 Digital disconnection"
-bibliography: references.bib
+bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
@@ -20,7 +20,7 @@ All articles of this section have to be read & used by the presenting group
 
 -   [@vandenabeele2022]
 
-## Other readings
+## Other additional readings
 
 -   [@moe2021]
 
