@@ -60,6 +60,14 @@ website:
             text: "Session 01"
           - href: sessions/session-02.qmd
             text: "Session 02"
+          - href: sessions/session-04.qmd
+            text: "Session 04"
+          - href: sessions/session-05.qmd
+            text: "Session 05"
+          - href: sessions/session-09.qmd
+            text: "Session 09"
+          - href: sessions/session-10.qmd
+            text: "Session 10"
 
       - section: "Computing"
         contents:
