@@ -19,6 +19,9 @@ $body-bg: #fff !default;
 $body-color: #04316A !default;
 $link-color: #18B4F1 !default;
 $selection-bg: #C50F3C;
+$callout-color-note: #04316A;
+$callout-color-important: #C50F3C;
+$callout-color-tip: #18B4F1;
 
 // headings
 $presentation-heading-font: News Cycle, sans-serif !default;
@@ -61,4 +64,9 @@ $presentation-heading-font: News Cycle, sans-serif !default;
   height: 5% !important;
   width: auto !important;
   color: $body-color !important;
+}
+
+// custom figure caption alignment
+.caption{
+  text-align: center;
 }

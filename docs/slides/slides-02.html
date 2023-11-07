@@ -10,7 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Christoph Adrian">
@@ -32,7 +33,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -324,6 +344,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
 <meta property="og:title" content="Digital behavioral data - Einführung &amp; Überblick">
 <meta property="og:description" content="Session 02">
 <meta property="og:site-name" content="Digital behavioral data">
@@ -351,15 +373,2572 @@
 
   <p class="date">08.11.2023</p>
 </section>
-<section id="under-construction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
-<h1>🚧 Under construction</h1>
-<p>Die Folien werden aktuell überarbeitet, sind aber spätestens zur 2.Sitzung (08.11) online.</p>
+<section id="agenda" class="title-slide slide level1 center" data-background-image="img/slide_bg-agenda.png">
+<h1>Agenda</h1>
+<ol type="1">
+<li><a href="#/organisation-koordination">Organisation &amp; Koordination</a></li>
+<li><a href="#/dbd-introduction">Was sind digital behavioral data?</a></li>
+<li><a href="#/dbd-reasons">Was können wir mit DBD untersuchen?</a></li>
+<li><a href="#/sec3">Herausforderungen in der Arbeit mit DBD</a></li>
+</ol>
+</section>
+
+<section>
+<section id="organisation-koordination" class="title-slide slide level1 center" data-background-image="img/slide_bg-orga.png">
+<h1>Organisation &amp; -koordination</h1>
+<p>Allgemeine Infos, Gruppenaufteilung, Abstimmung des Semesterplans &amp; Fragen</p>
+</section>
+<section id="kurzes-update" class="slide level2">
+<h2>Kurzes Update</h2>
+<h4 id="allgemeine-infos-zum-kurs">Allgemeine Infos zum Kurs</h4>
+<ul>
+<li><p>📖 <strong>Basisliteratur</strong> zu den Präsentationen auf StudOn verfügbar!</p></li>
+<li><p>⏰ Regelmäßige Kontrolle von <strong>Zulip</strong></p></li>
+<li><p>🧮 Denken Sie an die <strong>Deadline</strong> für das Zertifikat vom <strong>R-Basiskurs</strong> (13.11.2023)</p></li>
+<li><p>🗣️ 1. Präsentationsgruppe: Denken Sie an die Zusendung des <strong>Entwurf der Präsentationsfolien</strong> und das <strong>Feedbackgespräch <u>nächste Woche!</u></strong></p></li>
+</ul>
+</section>
+<section id="reshuffeling-of-the-board" class="slide level2">
+<h2>Reshuffeling of the board</h2>
+<h4 id="ungleiche-gruppenaufteilung-durch-kursaustritte">Ungleiche Gruppenaufteilung durch Kursaustritte</h4>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="oookkyskjc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#oookkyskjc table {
+  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#oookkyskjc thead, #oookkyskjc tbody, #oookkyskjc tfoot, #oookkyskjc tr, #oookkyskjc td, #oookkyskjc th {
+  border-style: none;
+}
+
+#oookkyskjc p {
+  margin: 0;
+  padding: 0;
+}
+
+#oookkyskjc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: none;
+  border-top-width: 3px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#oookkyskjc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#oookkyskjc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#oookkyskjc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#oookkyskjc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#oookkyskjc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#oookkyskjc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#oookkyskjc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#oookkyskjc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#oookkyskjc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#oookkyskjc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+#oookkyskjc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#oookkyskjc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#oookkyskjc .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#oookkyskjc .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oookkyskjc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#oookkyskjc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#oookkyskjc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#oookkyskjc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oookkyskjc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#oookkyskjc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oookkyskjc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#oookkyskjc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oookkyskjc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oookkyskjc .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oookkyskjc .gt_left {
+  text-align: left;
+}
+
+#oookkyskjc .gt_center {
+  text-align: center;
+}
+
+#oookkyskjc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#oookkyskjc .gt_font_normal {
+  font-weight: normal;
+}
+
+#oookkyskjc .gt_font_bold {
+  font-weight: bold;
+}
+
+#oookkyskjc .gt_font_italic {
+  font-style: italic;
+}
+
+#oookkyskjc .gt_super {
+  font-size: 65%;
+}
+
+#oookkyskjc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#oookkyskjc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#oookkyskjc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#oookkyskjc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#oookkyskjc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#oookkyskjc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#oookkyskjc .gt_indent_5 {
+  text-indent: 25px;
+}
+
+tbody tr:last-child {
+  border-bottom: 2px solid #ffffff00;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Gruppe">Gruppe</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Thema">Thema</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Studierende">Studierende</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Gruppe" class="gt_row gt_left">A</td>
+<td headers="Thema" class="gt_row gt_left">📚 Digital disconnection</td>
+<td headers="Studierende" class="gt_row gt_left">Rieger</td></tr>
+    <tr><td headers="Gruppe" class="gt_row gt_left">B</td>
+<td headers="Thema" class="gt_row gt_left">📦 Automatic text analysis (Topic Modeling &amp; Netzwerkanalyse)</td>
+<td headers="Studierende" class="gt_row gt_left">Köbler, Mühlmeister, Neudecker</td></tr>
+    <tr><td headers="Gruppe" class="gt_row gt_left">C</td>
+<td headers="Thema" class="gt_row gt_left">📚 Media routines &amp; habits</td>
+<td headers="Studierende" class="gt_row gt_left">Budak, Knapp, Kuck</td></tr>
+    <tr><td headers="Gruppe" class="gt_row gt_left">D</td>
+<td headers="Thema" class="gt_row gt_left">📦 Data collections methods (mit Schwerpunkt Data Donations)</td>
+<td headers="Studierende" class="gt_row gt_left">Jakob, Kofer, Neumeier</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<div style="text-align: center;">
+<p>Any volunteers?</p>
+</div>
+</section>
+<section id="abstimmung-des-semesterplans" class="slide level2">
+<h2>Abstimmung des Semesterplans</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="cmrtokwywb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#cmrtokwywb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cmrtokwywb thead, #cmrtokwywb tbody, #cmrtokwywb tfoot, #cmrtokwywb tr, #cmrtokwywb td, #cmrtokwywb th {
+  border-style: none;
+}
+
+#cmrtokwywb p {
+  margin: 0;
+  padding: 0;
+}
+
+#cmrtokwywb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cmrtokwywb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cmrtokwywb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cmrtokwywb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cmrtokwywb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cmrtokwywb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cmrtokwywb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cmrtokwywb .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cmrtokwywb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cmrtokwywb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cmrtokwywb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cmrtokwywb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cmrtokwywb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cmrtokwywb .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cmrtokwywb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cmrtokwywb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cmrtokwywb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cmrtokwywb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cmrtokwywb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cmrtokwywb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cmrtokwywb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cmrtokwywb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cmrtokwywb .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#cmrtokwywb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cmrtokwywb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cmrtokwywb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cmrtokwywb .gt_left {
+  text-align: left;
+}
+
+#cmrtokwywb .gt_center {
+  text-align: center;
+}
+
+#cmrtokwywb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cmrtokwywb .gt_font_normal {
+  font-weight: normal;
+}
+
+#cmrtokwywb .gt_font_bold {
+  font-weight: bold;
+}
+
+#cmrtokwywb .gt_font_italic {
+  font-style: italic;
+}
+
+#cmrtokwywb .gt_super {
+  font-size: 65%;
+}
+
+#cmrtokwywb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cmrtokwywb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cmrtokwywb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cmrtokwywb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cmrtokwywb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cmrtokwywb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cmrtokwywb .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-family: 'Libre Franklin'; font-weight: 800;"><img src="https://cdn3.emoji.gg/emojis/8360_Bluepill.png" style="height:35px;"> Option A</td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project 1**"><div class="gt_from_md"><p>📂 <strong>Project 1</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="5"><div class="gt_from_md"><p>5</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Automatic text analysis"><div class="gt_from_md"><p>📦 Automatic text analysis</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Text as data in R"><div class="gt_from_md"><p>🔨 Text as data in R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="20.12.2023"><div class="gt_from_md"><p>20.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="*Buffer Session*"><div class="gt_from_md"><p><em>Buffer Session</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project 2**"><div class="gt_from_md"><p>📂 <strong>Project 2</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media usage**"><div class="gt_from_md"><p><strong>Analysis of media usage</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Working data logs"><div class="gt_from_md"><p>🔨 Working data logs</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="dhwmjtgwgn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#dhwmjtgwgn table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dhwmjtgwgn thead, #dhwmjtgwgn tbody, #dhwmjtgwgn tfoot, #dhwmjtgwgn tr, #dhwmjtgwgn td, #dhwmjtgwgn th {
+  border-style: none;
+}
+
+#dhwmjtgwgn p {
+  margin: 0;
+  padding: 0;
+}
+
+#dhwmjtgwgn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dhwmjtgwgn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dhwmjtgwgn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dhwmjtgwgn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dhwmjtgwgn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dhwmjtgwgn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dhwmjtgwgn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dhwmjtgwgn .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dhwmjtgwgn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dhwmjtgwgn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dhwmjtgwgn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dhwmjtgwgn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dhwmjtgwgn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dhwmjtgwgn .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dhwmjtgwgn .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhwmjtgwgn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dhwmjtgwgn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dhwmjtgwgn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dhwmjtgwgn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhwmjtgwgn .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dhwmjtgwgn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhwmjtgwgn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dhwmjtgwgn .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#dhwmjtgwgn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhwmjtgwgn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dhwmjtgwgn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhwmjtgwgn .gt_left {
+  text-align: left;
+}
+
+#dhwmjtgwgn .gt_center {
+  text-align: center;
+}
+
+#dhwmjtgwgn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dhwmjtgwgn .gt_font_normal {
+  font-weight: normal;
+}
+
+#dhwmjtgwgn .gt_font_bold {
+  font-weight: bold;
+}
+
+#dhwmjtgwgn .gt_font_italic {
+  font-style: italic;
+}
+
+#dhwmjtgwgn .gt_super {
+  font-size: 65%;
+}
+
+#dhwmjtgwgn .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dhwmjtgwgn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dhwmjtgwgn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dhwmjtgwgn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dhwmjtgwgn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dhwmjtgwgn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dhwmjtgwgn .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-family: 'Libre Franklin'; font-weight: 800;"><img src="https://cdn3.emoji.gg/emojis/Redpill.png" style="height:35px;"> Option B</td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="5"><div class="gt_from_md"><p>5</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Automatic text analysis"><div class="gt_from_md"><p>📦 Automatic text analysis</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="20.12.2023"><div class="gt_from_md"><p>20.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="*Buffer Session*"><div class="gt_from_md"><p><em>Buffer Session</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Topic Modeling"><div class="gt_from_md"><p>🔨 Topic Modeling</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="tldr" class="slide level2">
+<h2>TL;DR</h2>
+<h4 id="zusammenfassung-der-änderungen">Zusammenfassung der Änderungen</h4>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<ul>
+<li><p><strong>Präsentationen</strong> in <strong>2023</strong> &amp; <strong>Projektarbeit</strong> in <strong>2024</strong></p></li>
+<li><p>nur <strong>ein Präsentationstermin</strong> mit <strong>“Project topic idea(s)”</strong></p></li>
+<li><p>Fokus auf <strong>Analyse von Medieninhalten (Project 1)</strong>, keine Analyse der Logging-Daten (Project 2)</p></li>
+<li><p>Aber <strong><em>(Optional): Project 2 light</em></strong></p>
+<ul>
+<li>Durchführung einer Mini-Studie im Kurs (benötigt Einverständnis)</li>
+<li>Fokus des Projektberichts auf Datenaufbereitung &amp; -exploration</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1" style="text-align: center;">
+<div class="fragment grow" data-fragment-index="1">
+<!-- -->
+<h3 id="fragen-anmerkungen">Fragen? Anmerkungen?</h3>
+</div>
+</div>
+</section>
+<section id="please-vote" class="slide level2">
+<h2>Please vote!</h2>
+<h4 id="welche-option-des-seminarplans-bevorzugen-sie">Welche Option des Seminarplans bevorzugen Sie?</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<p>Bitte scannen Sie den <strong>QR-Code</strong> oder nutzen Sie folgenden <strong>Link</strong> für die Teilnahme an einer kurzen Umfrage:</p>
+<ul>
+<li><p><a href="https://www.menti.com/al3qwznms52z" class="uri">https://www.menti.com/al3qwznms52z</a></p></li>
+<li><p>Temporary Access Code: <strong>5623 9279</strong></p></li>
+</ul>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<p><br></p>
+<div id="qr1" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr1", {"text":"https://www.menti.com/al3qwznms52z","colorLight":"#ffffff","width":"400","colorDark":"#C50F3C","height":"400"});
+</script>
+    
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_8c41d573" data-warn-when="10" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="ergebnis" class="slide level2">
+<h2>Ergebnis</h2>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;">
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/al3r163tjys1xur1v35e4vbf5a9sr5rt/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+</iframe>
+</div>
+</section></section>
+<section id="anything-else" class="title-slide slide level1 center" data-background-image="img/slide_bg-participation.png">
+<h1>Anything else?</h1>
+<p>Weitere Fragen zur Organisation oder Ablauf des Kurses</p>
+</section>
+
+<section>
+<section id="dbd-introduction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
+<h1>Let’s talk about DBD …</h1>
+<p>Was sind <em>digital behavior data?</em></p>
+</section>
+<section id="was-ist-das-eigentlich" class="slide level2">
+<h2>Was ist das eigentlich?</h2>
+<h4 id="rückblick-auf-einen-definitionversuch-von-weller2021">Rückblick auf einen Definitionversuch von <span class="citation" data-cites="weller2021">Weller (<a href="#/literatur" role="doc-biblioref" onclick="">2021</a>)</span></h4>
+<!-- FIXME Add fragments .semi-fade-out -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>… fasst eine Vielzahl von möglichen <strong>Datenquellen</strong> zusammen, die verschiedene <strong>Arten von Aktivitäten</strong> aufzeichnen (<em>häufig sogar “nur” als Nebenprodukt</em>)</p>
+<p>… können dabei helfen, <strong>Meinungen, Verhalten und Merkmale der menschlichen Nutzung</strong> digitaler Technologien zu erkennen</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-01/dbd_pictogram.svg"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="und-im-kontext-des-seminars" class="slide level2">
+<h2>Und im Kontext des Seminars?</h2>
+<h4 id="eine-arbeitsdefinition-kernbereiche-gesis">Eine Arbeitsdefinition &amp; Kernbereiche (<a href="https://www.gesis.org/institut/digitale-verhaltensdaten">GESIS</a>)</h4>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<div class="columns">
+<div class="column" style="font-size: smaller;">
+<ul>
+<li>DBD umfasst digitale <strong>Beobachtungen menschlichen und algorithmischen Verhaltens</strong>,</li>
+<li>wie sie z.B. <strong>von Online-Plattformen</strong> (wie Google, Facebook oder dem World Wide Web) oder</li>
+<li><strong>Sensoren</strong> (wie Smartphones, RFID-Sensoren, Satelliten oder Street View-Kameras) erfasst werden.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/dbd-pillars.png" class="caption" width="700"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<ul>
+<li>Schwerpunkt: <strong>Nutzung und Inhalte</strong> von <strong>soziale Medien</strong></li>
+<li><strong>Computational Social Science</strong> [CSS] <strong>Verfahren</strong>, z.B. zur Erhebung, Verarbeitung, Auswertung und Präsentation</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="css-dbd" class="slide level2">
+<h2>CSS 🖇️ DBD</h2>
+<h4 id="kurzer-exkurs-zur-bedeutung-von-computational-social-science">Kurzer Exkurs zur Bedeutung von Computational Social Science</h4>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><strong>Definition (Computational Social Science).</strong></p>
+<p>We define CSS as the development and application of computational methods to complex, typically large-scale, human (sometimes simulated) behavioral data.” <span class="citation" data-cites="lazer2020">(<a href="#/literatur" role="doc-biblioref" onclick="">Lazer et al., 2020</a>)</span></p>
+</div>
+</div>
+</div>
+<p><strong>hilft dabei …</strong></p>
+<ul>
+<li><p>genuine digitale Phänomene zu untersuchen</p></li>
+<li><p>digitale Verhaltensdaten zu sammeln und vorzuverarbeiten</p></li>
+<li><p>neue Methoden zur Analyse von großen Datensätzen anzuwenden</p></li>
+</ul>
+<aside class="notes">
+<p>CSS = neues Teilgebiet der Sozialwissenschaften oder neuer “Werkzeugkasten” zur Ergänzung der traditionellen sozialwissenschaftlichen Ansätze</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="dbd-reasons" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
+<h1>An Abundance Of Possibilities</h1>
+<p>Und <em>was</em> können wir mit DBD <em>untersuchen</em>?</p>
+</section>
+<section id="von-verhalten-bis-interkation" class="slide level2">
+<h2>Von Verhalten bis Interkation</h2>
+<h4 id="beispiel-für-untersuchbare-phänomene-samt-einschränkungen">Beispiel für untersuchbare Phänomene samt Einschränkungen</h4>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/dbd_matrix.png" width="1024"></p>
+<figcaption>Quelle: <span class="citation" data-cites="keusch2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Keusch &amp; Kreuter, 2021</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:35%;">
+<p><br></p>
+<h4 id="einschränkungen"><strong>Einschränkungen</strong></h4>
+<ul>
+<li><p>Kategorisierung ist <strong>Momentaufnahme</strong> und nicht überschneidungsfrei</p></li>
+<li><p><strong>Selektive Nutzung</strong> von bestimmten digitalen Geräten bzw. Funktionen</p></li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Einige inhärent digitale Verhalten (z.B. Web Searches) bei zunehmender Digitalisierung von analogen Verhalten (z.B. Collaborative Work)</li>
+<li>Fehlen digitaler Spurendaten in all diesen Quadranten für bestimmte Personen und bestimmte Verhaltensweisen durch selektive Nutzung digitaler Geräte.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="verfügbarkeit-als-pluspunkt" class="slide level2">
+<h2>Verfügbarkeit als Pluspunkt</h2>
+<h4 id="dbd-als-wertvolle-quelle-bei-aktuellen-sensiblen-unvorhersehbaren-themen">DBD als wertvolle Quelle bei aktuellen, sensiblen &amp; unvorhersehbaren Themen</h4>
+<p><br></p>
+<p><strong>Einsatz besonders Vorteilhaft bei Themen bzw. Untersuchungen …</strong></p>
+<ul>
+<li>… für die es <strong>schwierig</strong> ist, Studienteilnehmer*innen zu <strong>rekrutieren</strong></li>
+<li>… bei denen <strong>Beobachtungen</strong> <strong>vorteilhafter</strong> sind als Befragungen</li>
+</ul>
+<p><strong><em>Beispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen</em></strong></p>
+<ul>
+<li><strong>Zeitnaher</strong> als die Erstellung einer Umfrage</li>
+<li>Zusätzlicher Nutzen als <strong>Archiv</strong> bei <strong>unvorhersehbaren</strong> <strong>Ereignissen</strong></li>
+</ul>
+<aside class="notes">
+<p>🔔 weitere Beispiele? - Well-being auf Basis von Instagram-Bildern &amp; Texten</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mehr-daten-durch-technologischen-fortschritt" class="slide level2">
+<h2>Mehr Daten durch technologischen Fortschritt</h2>
+<h4 id="beispiel-wachsenden-anzahl-eingebauter-smartphone-sensoren">Beispiel: Wachsenden Anzahl eingebauter Smartphone-Sensoren</h4>
+
+<!--# TODO: Bedeutung/Funktion der einzelnen Sensoren -->
+<img data-src="img/session-02/dbd_smartphone_development.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Graphik aus <span class="citation" data-cites="struminskaya2020">Struminskaya et al. (<a href="#/literatur" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
+<section id="die-power-von-social-sensing" class="slide level2">
+<h2>Die Power von Social Sensing</h2>
+<h4 id="forschungsdesign-zur-erhebung-digitaler-verhaltensdaten-flöck2022">Forschungsdesign zur Erhebung digitaler Verhaltensdaten <span class="citation" data-cites="flöck2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Flöck &amp; Sen, 2022</a>)</span></h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics/graph_dbd_01.svg"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_02.svg" class="fragment" data-fragment-index="1"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_03.svg" class="fragment" data-fragment-index="2"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_04.svg" class="fragment" data-fragment-index="3"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_05.svg" class="fragment" data-fragment-index="4"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_07.svg" class="fragment" data-fragment-index="5"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>Die Zukunft: Linking</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mit-fokus-auf-die-platform" class="slide level2">
+<h2>Mit Fokus auf die Platform</h2>
+<h4 id="forschungsdesign-zur-erhebung-digitaler-verhaltensdaten-flöck2022-1">Forschungsdesign zur Erhebung digitaler Verhaltensdaten <span class="citation" data-cites="flöck2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Flöck &amp; Sen, 2022</a>)</span></h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_08.svg"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graphics//graph_dbd_09.svg" class="fragment" data-fragment-index="2"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="online-plattformen-prägen-die-gesellschaft" class="slide level2">
+<h2>Online-Plattformen prägen die Gesellschaft</h2>
+<h4 id="gründe-für-den-fokus-auf-onlineplattformen-ulloa2021">Gründe für den Fokus auf Onlineplattformen <span class="citation" data-cites="ulloa2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Ulloa, 2021</a>)</span></h4>
+<p><br></p>
+<ul>
+<li><p>vermitteln &amp; formen menschliche Kommunikation (<em>z.B. Tweet mit 280 Zeichen</em>)</p></li>
+<li><p>politische (Miss-)Nutzung</p></li>
+<li><p>Gatekeeper für Informationen (<em>z.B. “Dr.Google”</em>)</p></li>
+<li><p>tägliche algorithmische Empfehlungen und Werbung: <em>Nachrichten, Produkte, Jobangebote, Bewerbungen, Versicherungen, Hotels, …</em></p></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h4 id="aber-berücksichtigung-der-art-und-weise-wie-sie-die-daten-gesammelt-werden">ABER: Berücksichtigung der <strong>Art und Weise</strong>, wie Sie die Daten gesammelt werden!</h4>
+</div>
+</section>
+<section id="der-weg-bestimmt-das-ergebnis" class="slide level2">
+<h2>Der Weg bestimmt das Ergebnis</h2>
+<h4 id="einfluss-der-erhebung-auf-die-daten-form-davidson2023">Einfluss der Erhebung auf die Daten(-form) <span class="citation" data-cites="davidson2023">(<a href="#/literatur" role="doc-biblioref" onclick="">Davidson et al., 2023</a>)</span></h4>
+
+<img data-src="img/session-02/graphic-sm_data_access.png" class="r-stretch quarto-figure-center"></section>
+<section id="eine-kleine-lobeshymne-auf-dbd" class="slide level2">
+<h2>Eine kleine Lobeshymne auf DBD</h2>
+<h4 id="zwischenfazit">Zwischenfazit</h4>
+<ul>
+<li><p>Digitale Geräte oder <strong>Sensoren</strong> können sich an bestimmte Fakten <strong>besser “erinnern”</strong> als das menschliche Gedächtnis.</p></li>
+<li><p>Sensoren sind oft bereits <strong>in alltägliche Technologie eingebaut</strong> und produzieren digitale Verhaltensdaten als ein <em>“Nebenprodukt”</em>.</p></li>
+<li><p>Unaufdringliche Erfassung als potentieller Vorteil bzw. <strong>Entlastung für Teilnehmer*Innen</strong></p></li>
+<li><p><strong>Kombination mit Umfragedaten</strong> möglich (und bereichernd!)</p></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h4 id="aber-berücksichtigung-der-rahmenbedingungen">Aber: Berücksichtigung der Rahmenbedingungen!</h4>
+<p>Zur erfolgreichen Nutzung müssen <strong>Forschungsziele &amp; verfügbare Daten in Einklang</strong> gebracht, mögliche <span class="rn" data-rn-type="highlight"><strong>Biases und methodische Probleme</strong></span> <strong>berücksichttigt</strong> sowie die <span class="rn" data-rn-type="highlight"><strong>Datenqualität</strong></span> <strong>evaluiert</strong> werden.</p>
+</div>
+<aside class="notes">
+<p>Bietet die Plattform <strong>Zugang</strong> zu den benötigten Daten?</p>
+<ul>
+<li>Wenn nicht, gibt es <strong>alternative Weg</strong> um an die Daten zu gelangen?</li>
+<li>Wenn ja, ist dies <strong>legal/ethisch</strong>?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="sec3" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
+<h1>Herausforderungen von DBD</h1>
+<p>Potentielle Biases &amp; ethische und rechtliche Faktoren</p>
+</section>
+<section id="wenn-der-vorteil-zum-nachteil-wird" class="slide level2">
+<h2>Wenn der Vorteil zum Nachteil wird</h2>
+<h4 id="ambivalenz-der-unaufdringlichkeit-keusch2021">Ambivalenz der Unaufdringlichkeit <span class="citation" data-cites="keusch2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Keusch &amp; Kreuter, 2021</a>)</span></h4>
+<ul>
+<li><p>Unterscheidung zwischen <strong>aufdringlichen</strong> <em>(z.B. spezielle Research-App &amp; Befragungen)</em> <strong>&amp; unaufdringlichen</strong> <em>(z.B. Cookies, Browserplugins &amp; APIs)</em> <strong>erhobenen Daten</strong></p></li>
+<li><p><strong>Bewertung</strong> und Erwartung an Datensammlung ist <strong>abhängig vom Kontex</strong>t (<em>z.B. Amazon vs.&nbsp;Researchgate</em>)</p></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h4 id="paradoxes-dilemma"><strong>Paradoxes Dilemma</strong></h4>
+<p>Einerseits bereitwillige (oft unwissende) Abgabe der Daten an Konzerne ohne Wissen um deren Weiterverarbeitung, andererseits häufig Bedenken bezüglich Datenschutz &amp; Privatsphäre bei wissenschaftlichen Studien, die über Verwendung der Daten aufklären.</p>
+</div>
+<aside class="notes">
+<p>Warum? Persönlicher Nutzen?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-end-of-theory" class="slide level2">
+<h2>The End of Theory</h2>
+<div class="fragment" data-fragment-index="1">
+<!-- -->
+<h4 id="zur-wichtigkeit-von-konzipierte-messungen-designs">Zur Wichtigkeit von konzipierte Messungen &amp; Designs</h4>
+</div>
+<blockquote>
+<p><span class="rn" data-rn-type="strike-through" data-rn-color="#E6002E" data-rn-multiline="true">“Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves.”</span> <span class="citation" data-cites="anderson2008">(<a href="#/literatur" role="doc-biblioref" onclick="">Anderson, 2008</a>)</span></p>
+</blockquote>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<!-- -->
+<h3 id="was-denken-sie">Was denken Sie?</h3>
+</div>
+<div class="fragment" data-fragment-index="1">
+<blockquote>
+<p>“Size alone does <span class="rn" data-rn-type="underline" data-rn-color="#E6002E">not</span> necessarily make the data better” <span class="citation" data-cites="boyd2007">(<a href="#/literatur" role="doc-biblioref" onclick="">boyd &amp; Ellison, 2007</a>)</span></p>
+</blockquote>
+<blockquote>
+<p>“There are a lot of small data problems that occur in big data [which] don’t disappear because you’ve got lots of the stuff. <span class="rn" data-rn-type="underline" data-rn-color="#E6002E">They get worse.</span>” <span class="citation" data-cites="harford2014">(<a href="#/literatur" role="doc-biblioref" onclick="">Harford, 2014</a>)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="we-need-to-talk-about-biases" class="slide level2">
+<h2>We need to talk about <span class="smallcaps">biases</span></h2>
+<h4 id="spezifische-und-allgemeine-herausforderungen-für-die-forschung-mit-dbd">Spezifische und allgemeine Herausforderungen für die Forschung mit DBD</h4>
+<p><strong>Hintergrund</strong>: (<em>Big) Data ist zunehmend Grundlage für politische Maßnahmen, die Gestaltung von Produkten und Dienstleistungen und für die automatisierte Entscheidungsfindung</em></p>
+<ul>
+<li><p><strong>Herausforderungen in Bezug auf DBD-Forschung:</strong> fehlender Konsens über ein Vokabular oder eine Taxonomie, häufig nur impliziter Bezug in der Forschung</p></li>
+<li><p><strong>Generelle Herausforderung:</strong> <strong>bias</strong> ist ein weit gefasster &amp; in unterschiedlichen Disziplinen genutzter Begriff</p></li>
+</ul>
+</section>
+<section id="was-verstehen-sie-unter-bias" class="slide level2">
+<h2>Was verstehen Sie unter “bias”?</h2>
+<h4 id="please-participate">Please participate!</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<p>Bitte scannen Sie den <strong>QR-Code</strong> oder nutzen Sie folgenden <strong>Link</strong> für die Teilnahme an einer kurzen Umfrage:</p>
+<ul>
+<li><p><a href="https://www.menti.com/al6nj5peoi88" class="uri">https://www.menti.com/al6nj5peoi88</a></p></li>
+<li><p>Temporary Access Code: <strong>2359 9316</strong></p></li>
+</ul>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<p><br></p>
+<div id="qr2" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr2", {"text":"https://www.menti.com/al6nj5peoi88","colorLight":"#ffffff","width":"400","colorDark":"#C50F3C","height":"400"});
+</script>
+    
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_1e68c388" data-warn-when="30" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="ergebnis-1" class="slide level2">
+<h2>Ergebnis</h2>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;">
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/albrfy7wse6isxg76ny622yqazvv4289/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+</iframe>
+</div>
+</section>
+<section id="eher-konzept-als-begriff" class="slide level2">
+<h2>Eher Konzept als Begriff</h2>
+<h4 id="zur-ambigutität-des-begriffes-bias-und-dessen-bedeutung-im-seminar">Zur Ambigutität des Begriffes <em>bias</em> und dessen Bedeutung im Seminar</h4>
+<div style="font-size: smaller;">
+<ul>
+<li><em>Problem</em>: <strong>keine klare Grenzen</strong> zwischen den eher <strong>normativen</strong> Konnotationen (z.B. confirmation bias) und der <strong>statistischen</strong> <strong>Bedeutung</strong> des Begriffs (z.B. selection bias)</li>
+<li>Deswegen: Bewusstsein für <strong>Ambiguität des Begriffes</strong>
+<ul>
+<li>Verwendung in vielen Disziplinen wie der Sozialwissenschaft, der kognitiven Psychologie oder dem Recht</li>
+<li>Untersuchung von verschiedenen Phänomenen, wie kognitive Voreingenommenheiten <span class="citation" data-cites="Croskerry2002">(<a href="#/literatur" role="doc-biblioref" onclick="">Croskerry, 2002</a>)</span> sowie systemische, diskriminierende Ergebnisse <span class="citation" data-cites="friedman1996">(<a href="#/literatur" role="doc-biblioref" onclick="">Friedman &amp; Nissenbaum, 1996</a>)</span> oder Schäden <span class="citation" data-cites="barocas2017">(<a href="#/literatur" role="doc-biblioref" onclick="">Barocas et al., 2017</a>)</span>, aktuell z.B. bei der Verwendung von Machine Learning oder AI.</li>
+</ul></li>
+</ul>
+</div>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Verwendung des Begriff hauptsächlich in seiner statistischen Bedeutung, um auf Verzerrungen in sozialen Daten und deren Analysen hinzuweisen.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="know-your-bias" class="slide level2">
+<h2>Know your bias!</h2>
+<h4 id="framework-zur-minimierung-von-fehlern-und-problemen-olteanu2019">Framework zur Minimierung von Fehlern und Problemen <span class="citation" data-cites="olteanu2019">(<a href="#/literatur" role="doc-biblioref" onclick="">Olteanu et al., 2019</a>)</span></h4>
+
+<img data-src="img/session-02/bias_framework_without_legend.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Beschreibung:</p>
+<ul>
+<li><p>Die Analyse sozialer Daten beginnt mit bestimmten Zielen (Abschnitt 2.1), wie dem Verständnis oder der Beeinflussung von Phänomenen, die für soziale Plattformen spezifisch sind (Typ I) und/oder von Phänomenen, die über soziale Plattformen hinausgehen (Typ II).</p></li>
+<li><p>Diese Ziele erfordern, dass die Forschung bestimmte Validitätskriterien erfüllt, die weiter oben beschrieben wurden (Abschnitt 2.2).</p></li>
+<li><p>Diese Kriterien können ihrerseits durch eine Reihe von allgemeinen Verzerrungen und Problemen beeinträchtigt werden (Abschnitt 3).</p></li>
+<li><p>Diese Herausforderungen können von den Merkmalen der einzelnen Datenplattformen (Abschnitt 4) abhängen - die oft nicht unter der Kontrolle der Forschenden stehen - und von den Entscheidungen des Forschungsdesigns entlang einer Datenverarbeitungspipeline (Abschnitte 5 bis 8) - die oft unter der Kontrolle des Forschers stehen.</p></li>
+<li><p>Pfeile zeigen an, wie sich Komponenten in unserem Rahmenwerk direkt auf andere auswirken</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-biggest-problem-of-them-all" class="slide level2">
+<h2>The biggest problem of them all</h2>
+<h4 id="potentielle-probleme-mit-der-qualität-der-daten">Potentielle Probleme mit der Qualität der Daten</h4>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><strong>Definition (Data bias) <span class="citation" data-cites="olteanu2019">(<a href="#/literatur" role="doc-biblioref" onclick="">Olteanu et al., 2019</a>)</span></strong></p>
+<p>A systematic distortion in the sampled data that compromises its representativeness<strong>.</strong></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong><em>Sparsity:</em></strong> Häufig <em>Heavy-Tail</em>-Verteilung, was Analyse am “Kopf” (in Bezug auf häufige Elemente oder Phänomene) erleichtert, am “Schwanz” (wie seltene Elemente oder Phänomene) jedoch erschwert <span class="citation" data-cites="baeza-yates2013">(<a href="#/literatur" role="doc-biblioref" onclick="">Baeza-Yates, 2013</a>)</span></p></li>
+<li><p><strong><em>Noise:</em></strong> Unvollständige, beschädigte, unzuverlässige oder unglaubwürdige Inhalte <span class="citation" data-cites="boyd2012 naveed2011">(<a href="#/literatur" role="doc-biblioref" onclick="">boyd &amp; Crawford, 2012</a>; <a href="#/literatur" role="doc-biblioref" onclick="">Naveed et al., 2011</a>)</span></p>
+<ul>
+<li>Aber: Unterscheidung von “Noise” und “Signal” ist oft unklar und hängt von der Forschungsfrage ab <span class="citation" data-cites="salganik2018">(<a href="#/literatur" role="doc-biblioref" onclick="">Salganik, 2018</a>)</span></li>
+</ul></li>
+<li><p><strong><em>Organische vs gemessene Daten:</em></strong> Fragen zur Repräsentativität (vs.&nbsp;Stichprobenbeschreibung), Kausalität (vs.&nbsp;Korrelation) und Vorhersagegüte</p></li>
+</ul>
+</section>
+<section id="bias-at-the-source" class="slide level2">
+<h2>Bias at the source</h2>
+<h4 id="potentielle-probleme-mit-der-datenquelle-oder--herkunft">Potentielle Probleme mit der <span class="rn" data-rn-type="underline" data-rn-color="#E6002E">Datenquelle oder -herkunft</span></h4>
+<ul>
+<li><p>Biases, die auf das <strong>Design und die Möglichkeiten der Plattformen</strong> zurückzuführen sind (<span class="rn" data-rn-type="highlight"><em>functional biases</em></span>).</p></li>
+<li><p><strong>Verhaltensnormen</strong>, die auf den <strong>einzelnen Plattformen</strong> bestehen oder sich herausbilden (<span class="rn" data-rn-type="highlight"><em>normative biases</em></span>).</p></li>
+<li><p>Faktoren, die <strong>außerhalb der sozialen Plattformen</strong> liegen, aber das Nutzerverhalten beeinflussen können (<span class="rn" data-rn-type="highlight"><em>external biases</em></span>)</p></li>
+<li><p>Vorhandensein von <strong>nicht-individuellen Konten</strong> ein (<span class="rn" data-rn-type="highlight"><em>non-individuals</em></span>).</p></li>
+</ul>
+<aside class="notes" style="font-size: smaller">
+<p>functional biases:<br>
+- Platform-specific design and features shape user behavior (z.B. Emojis) - Algorithms used for organizing and ranking content influence user behavior - Content presentation influences user behavior (z.B. UI)</p>
+<p>normative biases:</p>
+<ul>
+<li>Norms are shaped by the attitudes and behaviors of online communities, which may be context-dependent (z.B. Partyfotos auf Instagram, aber nicht LinkedIn)</li>
+<li>The awareness of being observed by others impacts user behavio (Anonymität vs Klarnamen)</li>
+<li>Social conformity and “herding” happen in social platforms, and such behavioral traits shape user behavior (z.B. Ratings beinflussen eigenes Rating)</li>
+</ul>
+<p>external biase:</p>
+<ul>
+<li>Cultural elements and social contexts are reflected in social datasets. (Zeichenlimit Japan vs.&nbsp;Deutschland)</li>
+<li>Misinformation and disinformation.</li>
+<li>Contents on different topics are treated differently.</li>
+<li>High-impact events, whether anticipated or not, are reflected on social media (z.B. Feiertage)</li>
+</ul>
+<p>non-individual-accounts: Organizational accounts, Bots</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="gefangen-im-spannungsverhältnis" class="slide level2">
+<h2>Gefangen im Spannungsverhältnis</h2>
+<h4 id="forschungethik-bei-digitalen-daten">Forschungethik bei digitalen Daten</h4>
+<p><strong>Hintergrund</strong>: <em>Die Herausforderung besteht in der Kombination von zwei extremen Sichtweisen, der Betrachtung der Forschung mit sozialen Daten als “klinische” Forschung oder als Computerforschung</em></p>
+<ul>
+<li><p>Die Sozialdatenforschung <strong>unterscheidet sich von klinischen Versuchen</strong>.</p></li>
+<li><p><strong>Ethische Entscheidungen</strong> in der Sozialdatenforschung müssen <strong>gut überlegt sein</strong>, da oft sind mehrere Werte betroffen, die miteinander in Konflikt stehen können</p></li>
+<li><p>Diskussion des Spannungsverhältnisses am Beispiel von drei <strong>spezifischer ethischer Kriterien: Autonomie, Wohltätigkeit und Gerechtigkeit</strong></p></li>
+</ul>
+<aside class="notes">
+<p>Hintergrund:</p>
+<ol type="1">
+<li><p>Die Sozialdatenforschung ähnelt klinischen Versuchen und anderen Experimenten am Menschen in ihrer Fähigkeit, Menschen zu schaden, und sollte daher auch als solche reguliert werden</p></li>
+<li><p>die Sozialdatenforschung ähnelt der sonstigen Computerforschung, die sich traditionell auf Methoden, Algorithmen und den Aufbau von Systemen konzentriert, mit minimalen direkten Auswirkungen auf Menschen.</p></li>
+</ol>
+<p>Punkt 2: Schäden, die die üblichen Arten der Sozialdatenforschung ( z. B. die Verletzung der Privatsphäre oder der Anblick verstörender Bilder)verursachen können, oft nicht mit Schäden von klinischen Versuchen gleichzusetzen</p>
+<p>Punkt 3: Datenanalyse beispielsweise erforderlich sein, um wichtige Dienste bereitzustellen, und es sollten Lösungen erwogen werden, die ein Gleichgewicht zwischen Datenschutz und Genauigkeit herstellen (Goroff, 2015).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="achtung-der-individuellen-autonomie" class="slide level2">
+<h2>Achtung der individuellen Autonomie</h2>
+<h4 id="diskussion-der-informierte-zustimmung-als-indikator-autonomer-entscheidung">Diskussion der <em>Informierte Zustimmung</em> als Indikator autonomer Entscheidung</h4>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Einwilligung nach Aufklärung setzt voraus, dass</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 18px">
+<ol type="1">
+<li>die Forscher*Innen den potenziellen Teilnehmenden alle <strong>relevanten Informationen offenlegen</strong>;</li>
+<li>die potenziellen Teilnehmenden <strong>in der Lage</strong> sind, diese <strong>Informationen zu bewerten;</strong></li>
+<li>die potenziellen Teilnehmenden <strong>freiwillig entscheiden</strong> können, ob sie <strong>teilnehmen</strong> wollen oder nicht;</li>
+<li>die Teilnehmenden den Forschernden ihre <strong>ausdrückliche Erlaubnis erteilen</strong>, häufig in schriftlicher Form; und</li>
+<li>die Teilnehmende die Möglichkeit haben, ihre <strong>Einwilligung jederzeit zurückzuziehen</strong>.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<h5 id="potentielle-probleme-mit-blick-auf-dbd"><strong>Potentielle Probleme mit Blick auf DBD</strong></h5>
+<ul>
+<li><p>Die <strong>Zustimmung</strong> von <strong>Millionen</strong> von Nutzern einzuholen ist <strong>nicht praktikabel.</strong></p></li>
+<li><p>Die <strong>Nutzungsbedingungen</strong> sozialer Plattformen stellen möglicherweise <strong>keine informierte Zustimmung</strong> zur Forschung dar.</p></li>
+<li><p>Das <strong>öffentliche Teilen</strong> von Inhalten im Internet <strong>bedeutet nicht</strong> unbedingt eine <strong>Zustimmung</strong> zur Forschung.</p></li>
+</ul>
+</section>
+<section id="no-no-yes" class="slide level2">
+<h2>No “No” ≠ “Yes”!</h2>
+<h4 id="ethische-erwägungen-bei-dbd-forschung">Ethische Erwägungen bei DBD-Forschung</h4>
+<div style="font-size: smaller;">
+<p><strong>Aus öffentlicher Zugänglich- bzw. Verfügbarkeit von Daten leitet sich nicht automatisch ethische Verwertbarkeit ab</strong> <span class="citation" data-cites="zimmer2010 boyd2012">(<a href="#/literatur" role="doc-biblioref" onclick="">boyd &amp; Crawford, 2012</a>; <a href="#/literatur" role="doc-biblioref" onclick="">Zimmer, 2010</a>)</span></p>
+<ul>
+<li><p>Verletzung der Privatsphäre der Nutzer <span class="citation" data-cites="goroff2015">(<a href="#/literatur" role="doc-biblioref" onclick="">Goroff, 2015</a>)</span></p></li>
+<li><p>Ermöglichung von rassischem, sozioökonomischem oder geschlechtsspezifischem Profiling <span class="citation" data-cites="barocas2016">(<a href="#/literatur" role="doc-biblioref" onclick="">Barocas &amp; Selbst, 2016</a>)</span></p></li>
+</ul>
+<h5 id="negative-beispiele"><strong>Negative Beispiele</strong></h5>
+<ul>
+<li><p><strong>Facebook contagion experiment (</strong>2012-2014): Feeds von Nutzer*Innen so manipulierten, dass sie je nach den geäußerten Emotionen mehr oder weniger von bestimmten Inhalten enthielten <span class="citation" data-cites="kramer2014">(<a href="#/literatur" role="doc-biblioref" onclick="">Kramer et al., 2014</a>)</span></p></li>
+<li><p><strong>Encore-Forschungsprojekt</strong>: Messung der Internetzensur auf der ganzen Welt, bei der Webbrowser angewiesen wurden, zu versuchen, sensible Webinhalte ohne das Wissen oder die Zustimmung der Nutzer herunterzuladen <span class="citation" data-cites="burnett2014">(<a href="#/literatur" role="doc-biblioref" onclick="">Burnett &amp; Feamster, 2014</a>)</span></p></li>
+</ul>
+</div>
+<aside class="notes">
+<p>Hintergrund:</p>
+<ul>
+<li>Ethische Fragen bisher epistemische Bedenken (Verwendung von nicht schlüssigen oder fehlgeleiteten Beweisen), jetzt normativ Bedenken (Folgen der Forschung)</li>
+<li>Forschung grundsätzlich in vielen Ländern gesetztlich geregelt</li>
+</ul>
+<p>Negativbeispiele:</p>
+<ul>
+<li><p>Facebook contagion experiment: Das Experiment wurde als ein Eingriff kritisiert, der den emotionalen Zustand von ahnungslosen Nutzern beeinflusste, die keine Zustimmung zur Teilnahme an der Studie gegeben hatten (Hutton und Henderson, 2015a).</p></li>
+<li><p>Encore-Forschngsprojekt: Menschen in einigen Ländern durch diese Zugriffsversuche möglicherweise gefährdet wurden</p></li>
+</ul>
+<p>Folgende Abschnitte:</p>
+<ul>
+<li><p>zentrales Spannungsverhältnis in der Forschungsethik digitaler Daten dargestellt.</p></li>
+<li><p>Anschließend wird die Diskussion spezifischer ethischer Probleme in der Sozialdatenforschung im Hinblick auf drei grundlegende Kriterien gegliedert, die im Belmont-Bericht (Ryan et al., 1978), einem grundlegenden Werk zur Forschungsethik, vorgebracht wurden: Autonomie (Abschnitt 9.2), Wohltätigkeit (Abschnitt 9.3) und Gerechtigkeit (Abschnitt 9.4).</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wohltätigkeit-und-unschädlichkeit-als-ziel" class="slide level2">
+<h2>Wohltätigkeit und Unschädlichkeit als Ziel</h2>
+<h4 id="bewertung-von-risken-nutzen">Bewertung von Risken &amp; Nutzen</h4>
+<p><strong>Hintergrund</strong>: <em>Nicht nur Fokus auf den Nutzen der Forschung, sondern auch auf die möglichen Arten von Schäden, die betroffenen Gruppen und die Art und Weise, wie nachteilige Auswirkungen getestet werden können .</em> <span class="citation" data-cites="sweeney2013">(<a href="#/literatur" role="doc-biblioref" onclick="">Sweeney, 2013</a>)</span></p>
+<p><br></p>
+<h6 id="potentielle-probleme">Potentielle Probleme</h6>
+<ul>
+<li><p><strong>Daten</strong> über <strong>Einzelpersonen</strong> können ihnen <strong>schaden, wenn</strong> sie <strong>offengelegt</strong> werden.</p></li>
+<li><p><strong>Forschungsergebnisse</strong> <strong>können</strong> verwendet werden, um <strong>Schaden</strong> anzurichten.</p></li>
+<li><p><strong>“Dual-Use”- und Sekundäranalysen</strong> sind in der Sozialdatenforschung <strong>immer</strong> <strong>häufiger</strong> anzutreffen.</p></li>
+</ul>
+<aside class="notes">
+<p>Die Forschung zu sozialen Daten wird mit bestimmten Arten von Schäden in Verbindung gebracht, von denen die Verletzung der Privatsphäre vielleicht die offensichtlichste ist (Zimmer, 2010; Crawford und Finn, 2014).</p>
+<p>Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison im Jahr 2015, bei der einer Website, die sich als Dating-Netzwerk für betrügerische Ehepartner anpreist, Kontoinformationen (einschließlich der vollständigen Namen der Nutzer) gestohlen und online gestellt wurden (Thomsen, 2015), sowie die jüngsten Datenpannen bei Facebook, bei denen Hunderte Millionen von Datensätzen mit Kommentaren, Likes, Reaktionen, Kontonamen, App-Passwörtern und mehr öffentlich gemacht wurden.</p>
+<p>zu 1: - Stalking, Diskriminierung, Erpressung oder Identitätsdiebstahl (Gross und Acquisti, 2005). - Zu lange Archivierung personenbezogener Daten oder die öffentliche Freigabe schlecht anonymisierter Datensätze kann zu Verletzungen der Privatsphäre führen, da diese Daten mit anderen Quellen kombiniert werden können, um Erkenntnisse über Personen ohne deren Wissen zu gewinnen (Crawford und Finn, 2014; Goroff, 2015; Horvitz und Mulligan, 2015)</p>
+<p>zu 2: Abgesehen von der Tatsache, dass aus sozialen Daten gezogene Rückschlüsse in vielerlei Hinsicht falsch sein können, wie in dieser Studie hervorgehoben wird, können zu präzise Rückschlüsse dazu führen, dass Menschen in immer kleinere Gruppen eingeteilt werden können (Barocas, 2014).</p>
+<p>zu 3: Daten, Instrumente und Schlussfolgerungen, die für einen bestimmten Zweck gewonnen wurden, für einen anderen Zweck verwendet werden (Hovy und Spruit, 2016; Benton et al., 2017)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="faire-verteilung-von-risiken-nutzen" class="slide level2">
+<h2>Faire Verteilung von Risiken &amp; Nutzen</h2>
+<h4 id="recht-gerechtigkeit">Recht &amp; Gerechtigkeit</h4>
+<p><strong>Hintergrund</strong>: <em>Häufig wird unterstellt bzw. angenommen, dass es von Anfang an bekannt, wer durch die Forschung belastet und wer von den Ergebnissen profitieren wird.</em></p>
+<p><br></p>
+<h6 id="potentielle-probleme-1">Potentielle Probleme</h6>
+<ul>
+<li><p>Die <strong>digitale Kluft</strong> kann das Forschungsdesign beeinflussen (z.B. <em>WEIRD Samples</em>)</p></li>
+<li><p><strong>Algorithmen</strong> und Forschungsergebnisse können zu <strong>Diskriminierung</strong> führen.</p></li>
+<li><p><strong>Forschungsergebnisse</strong> sind möglicherweise <strong>nicht</strong> allgemein <strong>zugänglich</strong>.</p></li>
+<li><p>Nicht alle <strong>Interessengruppen</strong> werden über die Verwendung von Forschungsergebnissen konsultiert.</p></li>
+</ul>
+<aside class="notes">
+<p>zu 1: Data divide: mangelnde Verfügbarkeit von hochwertigen Daten über Entwicklungsländer und unterprivilegierte Gemeinschaften (Cinnamon und Schuurman, 2013). WEIRD = White, Educated, Industrialized, Rich, and Democratic</p>
+<p>zu 3: Idealerweise sollten die Menschen Zugang zu den Forschungsergebnissen und Artefakten haben, die aus der Untersuchung ihrer persönlichen Daten entstanden sind (Gross und Acquisti, 2005; Crawford und Finn, 2014).</p>
+<p>zu 4: In die Überlegungen darüber, wie, für wen und wann Forschungsergebnisse umgesetzt werden, sollten diejenigen einbezogen werden, die möglicherweise betroffen sind oder deren Daten verwendet werden (Costanza-Chock, 2018; Design Justice, 2018; Green, 2018)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="zwei-trends-drei-fragen-vier-empfehlungen" class="slide level2">
+<h2>Zwei Trends, Drei Fragen, Vier Empfehlungen</h2>
+<h4 id="zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</h4>
+<p><strong>Trend 1: Skepsis gegenüber einfachen Antworten</strong></p>
+<div style="font-size: 22px;">
+<ol type="1">
+<li><p>Wie einstehen die Daten, was enthalten sie tatsächlich und wie sind die Arbeitsdatensätze zusammengestellt?</p></li>
+<li><p>Wird deutlich, was ausgewertet wird?</p></li>
+<li><p>Wird die Verwendung von vorhandenen Datensätzen und Modellen des maschinellen Lernens hinterfragt?</p></li>
+</ol>
+</div>
+<p><strong>Trend 2: Wechsel von der Thematisierung zur Adressieung von Bedenken</strong></p>
+<div style="font-size: 22px;">
+<ol type="1">
+<li><p><strong>Detaillierte Dokumentation</strong> und kritische <strong>Prüfung</strong> der Datensatz- und Modellerstellung</p></li>
+<li><p>DBD-Studien auf <strong>verschiedene Plattformen, Themen, Zeitpunkte und Teilpopulationen auszuweiten</strong>, um festzustellen, wie sich die Ergebnisse beispielsweise in verschiedenen kulturellen, demografischen und verhaltensbezogenen Kontexten unterscheiden</p></li>
+<li><p><strong>Transparenzmechanismen</strong> zu schaffen, die es ermöglichen, Online-Plattformen zu überprüfen und Verzerrungen in Daten an der Quelle zu evaluieren</p></li>
+<li><p><strong>Forschung</strong> zu diesen Leitlinien, Standards, Methoden und Protokollen <strong>auszuweiten</strong> und ihre Übernahme zu fördern.</p></li>
+</ol>
+</div>
+<aside class="notes">
+<p>Schließlich gibt es angesichts der Komplexität der inhärent kontextabhängigen, anwendungs- und bereichsabhängigen Verzerrungen und Probleme in sozialen Daten und Analysepipelines, die in diesem Papier behandelt werden, keine Einheitslösungen - bei der Bewertung und Bekämpfung von Verzerrungen ist Nuancierung entscheidend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-image="img/slide_bg-question.png">
+<h1>Time for questions</h1>
+
+</section>
+
+<section>
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-image="img/slide_bg-end_session.png">
+<h1>Bis zur nächsten Sitzung!</h1>
+
+</section>
+<section id="literatur" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-anderson2008" class="csl-entry" role="listitem">
+Anderson, C. (2008). The end of theory: The data deluge makes the scientific method obsolete. <em>Wired</em>. <a href="https://www.wired.com/2008/06/pb-theory/">https://www.wired.com/2008/06/pb-theory/</a>
+</div>
+<div id="ref-baeza-yates2013" class="csl-entry" role="listitem">
+Baeza-Yates, R. A. (2013). <em>Big data or right data</em>.
+</div>
+<div id="ref-barocas2017" class="csl-entry" role="listitem">
+Barocas, S., Crawford, K., Shapiro, A., &amp; Wallach, H. (2017). The problem with bias: From allocative to representational harms in machine learning. Special interest group for computing. <em>Information and Society (SIGCIS)</em>, <em>2</em>.
+</div>
+<div id="ref-barocas2016" class="csl-entry" role="listitem">
+Barocas, S., &amp; Selbst, A. D. (2016). Big Data’s Disparate Impact. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2477899">https://doi.org/10.2139/ssrn.2477899</a>
+</div>
+<div id="ref-boyd2012" class="csl-entry" role="listitem">
+boyd, danah m., &amp; Crawford, K. (2012). Critical questions for big data: Provocations for a cultural, technological, and scholarly phenomenon. <em>Information, Communication &amp; Society</em>, <em>15</em>(5), 662–679. <a href="https://doi.org/10.1080/1369118X.2012.678878">https://doi.org/10.1080/1369118X.2012.678878</a>
+</div>
+<div id="ref-boyd2007" class="csl-entry" role="listitem">
+boyd, danah m., &amp; Ellison, N. B. (2007). Social Network Sites: Definition, History, and Scholarship. <em>Journal of Computer-Mediated Communication</em>, <em>13</em>(1), 210–230. <a href="https://doi.org/10.1111/j.1083-6101.2007.00393.x">https://doi.org/10.1111/j.1083-6101.2007.00393.x</a>
+</div>
+<div id="ref-burnett2014" class="csl-entry" role="listitem">
+Burnett, S., &amp; Feamster, N. (2014). <em>Encore: Lightweight measurement of web censorship with cross-origin requests</em>. <a href="https://doi.org/10.48550/ARXIV.1410.1211">https://doi.org/10.48550/ARXIV.1410.1211</a>
+</div>
+<div id="ref-Croskerry2002" class="csl-entry" role="listitem">
+Croskerry, P. (2002). Achieving Quality in Clinical Decision Making: Cognitive Strategies and Detection of Bias. <em>Academic Emergency Medicine</em>, <em>9</em>(11), 1184–1204. <a href="https://doi.org/10.1197/aemj.9.11.1184">https://doi.org/10.1197/aemj.9.11.1184</a>
+</div>
+<div id="ref-davidson2023" class="csl-entry" role="listitem">
+Davidson, B. I., Wischerath, D., Racek, D., Parry, D. A., Godwin, E., Hinds, J., Linden, D. van der, Roscoe, J. F., Ayravainen, L. E. M., &amp; Cork, A. (2023). <em>Platform-controlled social media APIs threaten open science</em>. <a href="http://dx.doi.org/10.31234/osf.io/ps32z">http://dx.doi.org/10.31234/osf.io/ps32z</a>
+</div>
+<div id="ref-flöck2022" class="csl-entry" role="listitem">
+Flöck, F., &amp; Sen, I. (2022). <em>Digital traces of human behaviour in online platforms <span></span> research design and error sources</em>. <a href="https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meet_the_experts_Digitaltraces_humanbehaviour.pdf">https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meet_the_experts_Digitaltraces_humanbehaviour.pdf</a>
+</div>
+<div id="ref-friedman1996" class="csl-entry" role="listitem">
+Friedman, B., &amp; Nissenbaum, H. (1996). Bias in computer systems. <em>ACM Transactions on Information Systems</em>, <em>14</em>(3), 330–347. <a href="https://doi.org/10.1145/230538.230561">https://doi.org/10.1145/230538.230561</a>
+</div>
+<div id="ref-goroff2015" class="csl-entry" role="listitem">
+Goroff, D. L. (2015). Balancing privacy versus accuracy in research protocols. <em>Science</em>, <em>347</em>(6221), 479–480. <a href="https://doi.org/10.1126/science.aaa3483">https://doi.org/10.1126/science.aaa3483</a>
+</div>
+<div id="ref-harford2014" class="csl-entry" role="listitem">
+Harford, T. (2014). Big data: A big mistake? <em>Significance</em>, <em>11</em>(5), 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2014.00778.x">https://doi.org/10.1111/j.1740-9713.2014.00778.x</a>
+</div>
+<div id="ref-keusch2021" class="csl-entry" role="listitem">
+Keusch, F., &amp; Kreuter, F. (2021). Digital trace data. In <em>Handbook of <span>Computational</span> <span>Social</span> <span>Science</span>, <span>Volume</span> 1</em> (1st ed., pp. 100–118). Routledge. <a href="https://doi.org/10.4324/9781003024583-8">https://doi.org/10.4324/9781003024583-8</a>
+</div>
+<div id="ref-kramer2014" class="csl-entry" role="listitem">
+Kramer, A. D. I., Guillory, J. E., &amp; Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. <em>Proceedings of the National Academy of Sciences</em>, <em>111</em>(24), 8788–8790. <a href="https://doi.org/10.1073/pnas.1320040111">https://doi.org/10.1073/pnas.1320040111</a>
+</div>
+<div id="ref-lazer2020" class="csl-entry" role="listitem">
+Lazer, D. M. J., Pentland, A., Watts, D. J., Aral, S., Athey, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Margetts, H., Nelson, A., Salganik, M. J., Strohmaier, M., Vespignani, A., &amp; Wagner, C. (2020). Computational social science: Obstacles and opportunities. <em>Science</em>, <em>369</em>(6507), 1060–1062. <a href="https://doi.org/10.1126/science.aaz8170">https://doi.org/10.1126/science.aaz8170</a>
+</div>
+<div id="ref-naveed2011" class="csl-entry" role="listitem">
+Naveed, N., Gottron, T., Kunegis, J., &amp; Alhadi, A. C. (2011). <em>the 20th ACM international conference</em>. 183. <a href="https://doi.org/10.1145/2063576.2063607">https://doi.org/10.1145/2063576.2063607</a>
+</div>
+<div id="ref-olteanu2019" class="csl-entry" role="listitem">
+Olteanu, A., Castillo, C., Diaz, F., &amp; Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. <em>Frontiers in Big Data</em>, <em>2</em>, 13. <a href="https://doi.org/10.3389/fdata.2019.00013">https://doi.org/10.3389/fdata.2019.00013</a>
+</div>
+<div id="ref-salganik2018" class="csl-entry" role="listitem">
+Salganik, M. J. (2018). <em>Bit by bit: Social research in the digital age</em>. Princeton University Press.
+</div>
+<div id="ref-struminskaya2020" class="csl-entry" role="listitem">
+Struminskaya, B., Lugtig, P., Keusch, F., &amp; Höhne, J. K. (2020). Augmenting Surveys With Data From Sensors and Apps: Opportunities and Challenges. <em>Social Science Computer Review</em>, 089443932097995. <a href="https://doi.org/10.1177/0894439320979951">https://doi.org/10.1177/0894439320979951</a>
+</div>
+<div id="ref-sweeney2013" class="csl-entry" role="listitem">
+Sweeney, L. (2013). Discrimination in Online Ad Delivery: Google ads, black names and white names, racial discrimination, and click advertising. <em>Queue</em>, <em>11</em>(3), 10–29. <a href="https://doi.org/10.1145/2460276.2460278">https://doi.org/10.1145/2460276.2460278</a>
+</div>
+<div id="ref-ulloa2021" class="csl-entry" role="listitem">
+Ulloa, R. (2021). <em>Introduction to online data acquisition</em>. <a href="https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf">https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf</a>
+</div>
+<div id="ref-weller2021" class="csl-entry" role="listitem">
+Weller, K. (2021). <em>A short introduction to computational social science and digital behavioral data</em>. <a href="https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf">https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf</a>
+</div>
+<div id="ref-zimmer2010" class="csl-entry" role="listitem">
+Zimmer, M. (2010). <span>“</span>But the data is already public<span>”</span>: on the ethics of research in Facebook. <em>Ethics and Information Technology</em>, <em>12</em>(4), 313–325. <a href="https://doi.org/10.1007/s10676-010-9227-5">https://doi.org/10.1007/s10676-010-9227-5</a>
+</div>
+</div>
 
 
 <img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

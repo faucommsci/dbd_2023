@@ -1,18 +1,26 @@
 ---
 title: "Session 2"
 subtitle: "Einführung in DBD"
-editor: visual
+bibliography: references_sessions.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
 ---
 
 ## Prepare
 
 ✍️ Start working on [Basiskurs R/RStudio](https://www.studon.fau.de/studon/goto.php?target=crs_3235361_join). **Dealine** for the course certificate (via mail to [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de?subject=DBD%20R-Kurszertifikat)) is **13.11.2023**
 
+#### Suggested readings
+
+-   [@keusch2021]
+
+-   [@olteanu2019]
+
 ## Participate
 
-🖥️ [Session 02](/slides/slides-02.html) (🚧 *Still under construction*)
-
-
+🖥️ [Session 02](/slides/slides-02.html)
 
 <br>
 

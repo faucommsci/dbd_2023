@@ -3,7 +3,7 @@ title: "Kick-Off"
 subtitle: "Session 01"
 date: 25 10 2023
 date-format: "DD.MM.YYYY"
-bibliography: references.bib
+bibliography: references_slides.bib
 ---
 
 # Agenda {background-image="img/slide_bg-agenda.png"}
