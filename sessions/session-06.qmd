@@ -1,19 +1,48 @@
 ---
 title: "Session 6"
-subtitle: "📂 P1: 🔨 Text as data in R"
+subtitle: "📦 Data collection methods"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
-<!-- Add link CSS text as data -->
-<!-- Add link CSS topic Modeling -->
-<!-- Add link CCS network analysis -->
 
-## Other additional readings
+## Mandatory literature
 
- -   [@wiedemann2022]
+::: {.callout-important appearance="simple"}
+All articles of this section have to be read & used by the presenting group
+:::
+
+-   [@baumgartner2022]
+
+-   [@ohme2023]
+
+-   [@skatova2019]
+
+-   [@vandriel2022]
+
+-   [@yee2022]
+
+### Other additional readings 
+
+-   [@breuer2022]
+
+-   [@nyhuis2021]
+
+-   [@jünger2021]
+
+-   [@jünger2022]
+
+-   [@lomborg2014]
+
+-   [@ohme2021]
+
+-   [@puschmann2017]
+
+-   [@janetzko2016]
+
+<br>
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/index.html "Course schedule") ⏎

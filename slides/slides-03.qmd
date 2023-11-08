@@ -1,0 +1,801 @@
+---
+title: "🔨 Working with R"
+subtitle: "Session 03"
+date: 15 11 2023
+date-format: "DD.MM.YYYY"
+bibliography: references_slides.bib
+---
+
+
+# 🚧 Under construction {background-image="img/slide_bg-section.png"}
+
+Die Folien werden aktuell überarbeitet, sind aber spätestens zur 3.Sitzung (15.11) online.
+
+```{r under-construction-stop-render}
+#| echo: false
+
+
+knitr::knit_exit()
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  [Organisation & Koordination](#organisation-koordination)
+2.  [Was sind digital behavioral data?](#dbd-introduction)
+3.  [Was können wir mit DBD untersuchen?](#dbd-reasons)
+4.  [Herausforderungen in der Arbeit mit DBD](#sec3)
+
+# Organisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
+
+Allgemeine Infos, Gruppenaufteilung, Abstimmung des Semesterplans & Fragen
+
+```{r setup-slide-session}
+#| echo: false
+# Load packages
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    here, 
+    tidyverse,
+    gt, gtExtras,
+    countdown
+)
+
+# Load schedule
+source(here("slides/schedule.R"))
+```
+
+## Kurzes Update
+
+#### Allgemeine Infos zum Kurs
+
+-   📖 **Basisliteratur** zu den Präsentationen auf StudOn verfügbar!
+
+-   ⏰ Regelmäßige Kontrolle von **Zulip**
+
+-   🧮 Denken Sie an die **Deadline** für das Zertifikat vom **R-Basiskurs** (13.11.2023)
+
+-   🗣️ 1. Präsentationsgruppe: Denken Sie an die Zusendung des **Entwurf der Präsentationsfolien** und das **Feedbackgespräch [nächste Woche!]{.underline}**
+
+::: notes
+-   Zulip: Haben alle die Zuteilung der Themen/Gruppen gesehen?
+:::
+
+## Die Würfel sind gefallen
+
+#### Kurzer Überblick der Gruppenaufteilung
+
+<br>
+
+```{r create-table}
+#| echo: false
+
+groups <- tibble(
+    Gruppe = c("A", "B", "C", "D"),
+    Thema = c(
+        "📚 Digital disconnection",
+        "📦 Automatic text analysis (Topic Modeling & Netzwerkanalyse)",
+        "📚 Media routines & habits",
+        "📦 Data collections methods (mit Schwerpunkt Data Donations)" 
+    ), 
+    Studierende = c(
+        "Kofer, Rieger",
+        "Köbler, Mühlmeister, Neudecker", 
+        "Budak, Knapp, Kuck", 
+        "Jakob, Neumeier"
+    )
+)
+
+groups %>% 
+    gt() %>% 
+    gt_theme_538() %>% 
+    gt::tab_options(
+        table.width = gt::pct(100), 
+        table.font.size = "22px"
+    ) 
+```
+
+## Abstimmung des Semesterplans
+
+::: columns
+::: {.column width="50%"}
+```{r table-schedule-a}
+#| echo: false 
+new_schedule_a %>% 
+    gt::gt() %>% 
+    gt::tab_header(
+        title = html(
+            web_image(url = "https://cdn3.emoji.gg/emojis/8360_Bluepill.png", height = px(35)), 
+            "Option A"
+            )) %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(100), 
+        table.font.size = "10px") %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 4,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = 2:3)
+    )
+```
+:::
+
+::: {.column width="50%"}
+```{r table-schedule-b}
+#| echo: false 
+new_schedule_b %>% 
+    gt::gt() %>% 
+    gt::tab_header(
+        title = html(
+            web_image(url = "https://cdn3.emoji.gg/emojis/Redpill.png", height = px(35)), 
+            "Option B"
+            )) %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(100), 
+        table.font.size = "10px") %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 4,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = 2:3)
+    )
+```
+:::
+:::
+
+## TL;DR von Option B
+
+#### Zusammenfassung der Änderungen
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+-   **Präsentationen** in **2023** & **Projektarbeit** in **2024**
+
+-   nur **ein Präsentationstermin** mit **"Project topic idea(s)"**
+
+-   Fokus auf **Analyse von Medieninhalten (Project 1)**, keine Analyse der Logging-Daten (Project 2)
+
+-   Aber ***(Optional): Project 2 light***
+
+    -   Durchführung einer Mini-Studie im Kurs (benötigt Einverständnis)
+    -   Fokus des Projektberichts auf Datenaufbereitung & -exploration
+:::
+
+::: {.fragment .fade-in fragment-index="1" style="text-align: center;"}
+::: {.fragment .grow fragment-index="1"}
+### Fragen? Anmerkungen?
+:::
+:::
+
+## Please vote!
+
+#### Welche Option des Seminarplans bevorzugen Sie?
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Bitte scannen Sie den **QR-Code** oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+
+-   <https://www.menti.com/al3qwznms52z>
+
+-   Temporary Access Code: **5623 9279**
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+<br>
+
+{{< qrcode https://www.menti.com/al3qwznms52z qr1 width=400 height=400 colorDark='#C50F3C' >}}
+:::
+:::
+
+```{r countdown-vote}
+#| echo: false
+countdown(
+    minutes = 1,
+    warn_when = 10)
+```
+
+## Ergebnis
+
+::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/al3r163tjys1xur1v35e4vbf5a9sr5rt/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+
+</iframe>
+:::
+
+# Anything else? {background-image="img/slide_bg-participation.png"}
+
+Weitere Fragen zur Organisation oder Ablauf des Kurses
+
+# Let's talk about DBD ... {#dbd-introduction background-image="img/slide_bg-section.png"}
+
+Was sind *digital behavior data?*
+
+## Was ist das eigentlich?
+
+#### Rückblick auf einen Definitionversuch von @weller2021
+
+<!-- FIXME Add fragments .semi-fade-out -->
+
+::: columns
+::: {.column width="50%"}
+... fasst eine Vielzahl von möglichen **Datenquellen** zusammen, die verschiedene **Arten von Aktivitäten** aufzeichnen (*häufig sogar "nur" als Nebenprodukt*)
+
+... können dabei helfen, **Meinungen, Verhalten und Merkmale der menschlichen Nutzung** digitaler Technologien zu erkennen
+:::
+
+::: {.column width="50%"}
+![](img/session-01/dbd_pictogram.svg){fig-align="center"}
+:::
+:::
+
+## Und im Kontext des Seminars?
+
+#### Arbeitsdefinition & Kernbereiche ([GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)) von DBD
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+::: columns
+::: {.column width="50%" style="font-size: smaller;"}
+-   DBD umfasst digitale **Beobachtungen menschlichen und algorithmischen Verhaltens**,
+-   wie sie z.B. **von Online-Plattformen** (wie Google, Facebook oder dem World Wide Web) oder
+-   **Sensoren** (wie Smartphones, RFID-Sensoren, Satelliten oder Street View-Kameras) erfasst werden.
+:::
+
+::: {.column width="50%"}
+![](img/session-02/dbd-pillars.png){.caption fig-align="center" width="700"}
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index="1"}
+::: {.callout-important appearance="minimal"}
+-   Schwerpunkt: **Nutzung und Inhalte** von **soziale Medien**
+-   **Computational Social Science** \[CSS\] **Verfahren**, z.B. zur Erhebung, Verarbeitung, Auswertung und Präsentation
+:::
+:::
+
+::: notes
+-   Unterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)
+:::
+
+## CSS 🖇️ DBD
+
+#### Kurzer Exkurs zur Bedeutung von Computational Social Science
+
+::: {.callout-important appearance="minimal"}
+**Definition (Computational Social Science).**
+
+We define CSS as the development and application of computational methods to complex, typically large-scale, human (sometimes simulated) behavioral data." [@lazer2020]
+:::
+
+**hilft dabei ...**
+
+-   genuine digitale Phänomene zu untersuchen
+
+-   digitale Verhaltensdaten zu sammeln und vorzuverarbeiten
+
+-   neue Methoden zur Analyse von großen Datensätzen anzuwenden
+
+::: notes
+CSS = neues Teilgebiet der Sozialwissenschaften oder neuer "Werkzeugkasten" zur Ergänzung der traditionellen sozialwissenschaftlichen Ansätze
+:::
+
+# An Abundance Of Possibilities {#dbd-reasons background-image="img/slide_bg-section.png"}
+
+Und *was* können wir mit DBD *untersuchen*?
+
+## Von Verhalten bis Interkation
+
+#### Beispiel für untersuchbare Phänomene samt Einschränkungen
+
+::: columns
+::: {.column width="65%"}
+![Quelle: [@keusch2021]](img/session-02/dbd_matrix.png){fig-align="center" width="1024"}
+:::
+
+::: {.column width="35%"}
+<br>
+
+#### **Einschränkungen**
+
+-   **Selektive Nutzung** von bestimmten digitalen Geräten bzw. Funktionen
+-   Kategorisierung ist **Momentaufnahme** und nicht überschneidungsfrei
+:::
+:::
+
+::: notes
+-   Einige inhärent digitale Verhalten (z.B. Web Searches) bei zunehmender Digitalisierung von analogen Verhalten (z.B. Collaborative Work)
+-   Fehlen digitaler Spurendaten in all diesen Quadranten für bestimmte Personen und bestimmte Verhaltensweisen durch selektive Nutzung digitaler Geräte.
+:::
+
+## Mehr Daten durch technologischen Fortschritt
+
+#### Beispiel: Wachsenden Anzahl eingebauter Smartphone-Sensoren
+
+![Graphik aus @struminskaya2020](img/session-02/dbd_smartphone_development.jpeg){fig-align="center"}
+
+<!--# TODO: Bedeutung/Funktion der einzelnen Sensoren -->
+
+## Verfügbarkeit als Pluspunkt
+
+#### DBD als wertvolle Quelle bei aktuellen, sensiblen & unvorhersehbaren Themen
+
+<br>
+
+**Einsatz besonders Vorteilhaft bei Themen bzw. Untersuchungen ...**
+
+-   ... für die es **schwierig** ist, Studienteilnehmer\*innen zu **rekrutieren**
+-   ... bei denen **Beobachtungen** **vorteilhafter** sind als Befragungen
+
+::: fragment
+#### Beispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen
+
+-   **Zeitnaher** als die Erstellung einer Umfrage
+-   Zusätzlicher Nutzen als **Archiv** bei **unvorhersehbaren** **Ereignissen**
+:::
+
+::: notes
+🔔 weitere Beispiele? - Well-being auf Basis von Instagram-Bildern & Texten
+:::
+
+## Die Power von Social Sensing
+
+#### Forschungsdesign zur Erhebung digitaler Verhaltensdaten [@flöck2022]
+
+::: r-stack
+![](img/session-02/graphics/graph_dbd_01.svg){fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_02.svg){.fragment fragment-index="1" fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_03.svg){.fragment fragment-index="2" fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_04.svg){.fragment fragment-index="3" fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_05.svg){.fragment fragment-index="4" fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_07.svg){.fragment fragment-index="5" fig-align="center"}
+:::
+
+::: notes
+Die Zukunft: Linking
+:::
+
+## Mit Fokus auf die Platform
+
+#### Forschungsdesign zur Erhebung digitaler Verhaltensdaten [@flöck2022]
+
+::: r-stack
+![](img/session-02/graphics//graph_dbd_08.svg){fig-align="center"}
+
+![](img/session-02/graphics//graph_dbd_09.svg){.fragment fragment-index="2" fig-align="center"}
+:::
+
+## Online-Plattformen prägen die Gesellschaft
+
+#### Gründe für den Fokus auf Onlineplattformen [@ulloa2021]
+
+<br>
+
+-   vermitteln & formen menschliche Kommunikation (*z.B. Tweet mit 280 Zeichen*)
+
+-   politische (Miss-)Nutzung
+
+-   Gatekeeper für Informationen (*z.B. "Dr.Google"*)
+
+-   tägliche algorithmische Empfehlungen und Werbung: *Nachrichten, Produkte, Jobangebote, Bewerbungen, Versicherungen, Hotels, ...*
+
+::: fragment
+#### ABER: Berücksichtigung der **Art und Weise**, wie Sie die Daten gesammelt werden!
+:::
+
+## Der Weg bestimmt das Ergebnis
+
+#### Einfluss der Erhebung auf die Daten(-form) [@davidson2023]
+
+![](img/session-02/graphic-sm_data_access.png){fig-align="center"}
+
+## Wenn der Vorteil zum Nachteil wird
+
+#### Ambivalenz der Unaufdringlichkeit [@keusch2021]
+
+-   Unterscheidung zwischen **aufdringlichen** *(z.B. spezielle Research-App & Befragungen)* **& unaufdringlichen** *(z.B. Cookies, Browserplugins & APIs)* **erhobenen Daten**
+
+-   **Bewertung** und Erwartung an Datensammlung ist **abhängig vom Kontex**t (*z.B. Amazon vs. Researchgate*)
+
+::: fragment
+#### **Paradoxes Dilemma**
+
+Einerseits **bereitwillige (oft unwissende) Abgabe der Daten an Konzerne** ohne Wissen um deren Weiterverarbeitung, andererseits häufig **Bedenken bezüglich Datenschutz & Privatsphäre bei wissenschaftlichen Studien**, die über Verwendung der Daten aufklären.
+:::
+
+::: notes
+Warum? Persönlicher Nutzen?
+:::
+
+## Eine kleine Lobeshymne auf DBD
+
+#### Zwischenfazit
+
+-   Digitale Geräte oder **Sensoren** können sich an bestimmte Fakten **besser "erinnern"** als das menschliche Gedächtnis.
+
+-   Sensoren sind oft bereits **in alltägliche Technologie eingebaut** und produzieren digitale Verhaltensdaten als ein *"Nebenprodukt"*.
+
+-   Unaufdringliche Erfassung als potentieller Vorteil bzw. **Entlastung für Teilnehmer\*Innen**
+
+-   **Kombination mit Umfragedaten** möglich (und bereichernd!)
+
+::: fragment
+#### Aber: Berücksichtigung der Rahmenbedingungen!
+
+Zur erfolgreichen Nutzung müssen **Forschungsziele & verfügbare Daten in Einklang** gebracht, mögliche **Biases und methodische Probleme** **berücksichtigt** sowie die **Datenqualität evaluiert** werden.
+:::
+
+::: notes
+Bietet die Plattform **Zugang** zu den benötigten Daten?
+
+-   Wenn nicht, gibt es **alternative Weg** um an die Daten zu gelangen?
+-   Wenn ja, ist dies **legal/ethisch**?
+:::
+
+# Herausforderungen von DBD {#sec3 background-image="img/slide_bg-section.png"}
+
+Potentielle Biases & ethische und rechtliche Faktoren
+
+## The End of Theory
+
+::: {.fragment fragment-index="1"}
+#### Zur Wichtigkeit von konzipierte Messungen & Designs
+:::
+
+::: {.fragment .strike fragment-index="1"}
+> "Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves." [@anderson2008]
+:::
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+### Was denken Sie?
+:::
+
+::: {.fragment fragment-index="1"}
+> "Size alone does **not** necessarily make the data better" [@boyd2007]
+
+> "There are a lot of small data problems that occur in big data \[which\] don't disappear because you've got lots of the stuff. **They get worse.**" [@harford2014]
+:::
+
+## We need to talk about [biases]{.smallcaps}
+
+#### Spezifische und allgemeine Herausforderungen für die Forschung mit DBD
+
+**Hintergrund**: (*Big) Data ist zunehmend Grundlage für politische Maßnahmen, die Gestaltung von Produkten und Dienstleistungen und für die automatisierte Entscheidungsfindung*
+
+-   **Herausforderungen in Bezug auf DBD-Forschung:** fehlender Konsens über ein Vokabular oder eine Taxonomie, häufig nur impliziter Bezug in der Forschung
+
+-   **Generelle Herausforderung:** [**bias**]{.smallcaps} ist ein weit gefasster & in unterschiedlichen Disziplinen genutzter Begriff
+
+## Was verstehen Sie unter "bias"?
+
+#### Please participate!
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Bitte scannen Sie den **QR-Code** oder nutzen Sie folgenden **Link** für die Teilnahme an einer kurzen Umfrage:
+
+-   <https://www.menti.com/al6nj5peoi88>
+
+-   Temporary Access Code: **2359 9316**
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+<br>
+
+{{< qrcode https://www.menti.com/al6nj5peoi88 qr2 width=400 height=400 colorDark='#C50F3C' >}}
+:::
+:::
+
+```{r countdown-bias}
+#| echo: false
+countdown(
+    minutes = 3,
+    warn_when = 30)
+```
+
+## Ergebnis
+
+::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
+<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/albrfy7wse6isxg76ny622yqazvv4289/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+
+</iframe>
+:::
+
+## Eher Konzept als Begriff
+
+#### Zur Ambigutität des Begriffes *bias* und dessen Bedeutung im Seminar
+
+::: {style="font-size: smaller;"}
+-   *Problem*: **keine klare Grenzen** zwischen den eher **normativen** Konnotationen (z.B. confirmation bias) und der **statistischen** **Bedeutung** des Begriffs (z.B. selection bias)
+-   Deswegen: Bewusstsein für **Ambiguität des Begriffes**
+    -   Verwendung in vielen Disziplinen wie der Sozialwissenschaft, der kognitiven Psychologie oder dem Recht
+    -   Untersuchung von verschiedenen Phänomenen, wie kognitive Voreingenommenheiten [@Croskerry2002] sowie systemische, diskriminierende Ergebnisse [@friedman1996] oder Schäden [@barocas2017], aktuell z.B. bei der Verwendung von Machine Learning oder AI.
+:::
+
+::: {.callout-important appearance="minimal"}
+Verwendung des Begriff hauptsächlich in seiner statistischen Bedeutung, um auf Verzerrungen in sozialen Daten und deren Analysen hinzuweisen.
+:::
+
+## Know your bias!
+
+#### Framework zur Minimierung von Fehlern und Problemen [@olteanu2019]
+
+![](img/session-02/bias_framework_without_legend.png){fig-align="center"}
+
+::: {.notes style="font-size: smaller;"}
+Beschreibung:
+
+-   Die Analyse sozialer Daten beginnt mit bestimmten Zielen (Abschnitt 2.1), wie dem Verständnis oder der Beeinflussung von Phänomenen, die für soziale Plattformen spezifisch sind (Typ I) und/oder von Phänomenen, die über soziale Plattformen hinausgehen (Typ II).
+
+-   Diese Ziele erfordern, dass die Forschung bestimmte Validitätskriterien erfüllt, die weiter oben beschrieben wurden (Abschnitt 2.2).
+
+-   Diese Kriterien können ihrerseits durch eine Reihe von allgemeinen Verzerrungen und Problemen beeinträchtigt werden (Abschnitt 3).
+
+-   Diese Herausforderungen können von den Merkmalen der einzelnen Datenplattformen (Abschnitt 4) abhängen - die oft nicht unter der Kontrolle der Forschenden stehen - und von den Entscheidungen des Forschungsdesigns entlang einer Datenverarbeitungspipeline (Abschnitte 5 bis 8) - die oft unter der Kontrolle des Forschers stehen.
+
+-   Pfeile zeigen an, wie sich Komponenten in unserem Rahmenwerk direkt auf andere auswirken
+:::
+
+## The biggest problem of them all
+
+#### Potentielle Probleme mit der Qualität der Daten
+
+::: {.callout-important appearance="minimal"}
+**Definition (Data bias) [@olteanu2019]**
+
+A systematic distortion in the sampled data that compromises its representativeness**.**
+:::
+
+-   ***Sparsity:*** Häufig *Heavy-Tail*-Verteilung, was Analyse am "Kopf" (in Bezug auf häufige Elemente oder Phänomene) erleichtert, am "Schwanz" (wie seltene Elemente oder Phänomene) jedoch erschwert [@baeza-yates2013]
+
+-   ***Noise:*** Unvollständige, beschädigte, unzuverlässige oder unglaubwürdige Inhalte [@boyd2012; @naveed2011]
+
+    -   Aber: Unterscheidung von "Noise" und "Signal" ist oft unklar und hängt von der Forschungsfrage ab [@salganik2018]
+
+-   ***Organische vs gemessene Daten:*** Fragen zur Repräsentativität (vs. Stichprobenbeschreibung), Kausalität (vs. Korrelation) und Vorhersagegüte
+
+## Bias at the source
+
+#### Potentielle Probleme mit der [Datenquelle oder -herkunft]{.rn rn-type="underline" rn-color="#E6002E"}
+
+-   Biases, die auf das **Design und die Möglichkeiten der Plattformen** zurückzuführen sind ([*functional biases*]{.rn rn-type="highlight"}).
+
+-   **Verhaltensnormen**, die auf den **einzelnen Plattformen** bestehen oder sich herausbilden ([*normative biases*]{.rn rn-type="highlight"}).
+
+-   Faktoren, die **außerhalb der sozialen Plattformen** liegen, aber das Nutzerverhalten beeinflussen können ([*external biases*]{.rn rn-type="highlight"})
+
+-   Vorhandensein von **nicht-individuellen Konten** ein ([*non-individuals*]{.rn rn-type="highlight"}).
+
+::: {.notes style="font-size: smaller;"}
+functional biases:\
+- Platform-specific design and features shape user behavior (z.B. Emojis) - Algorithms used for organizing and ranking content influence user behavior - Content presentation influences user behavior (z.B. UI)
+
+normative biases:
+
+-   Norms are shaped by the attitudes and behaviors of online communities, which may be context-dependent (z.B. Partyfotos auf Instagram, aber nicht LinkedIn)
+-   The awareness of being observed by others impacts user behavio (Anonymität vs Klarnamen)
+-   Social conformity and “herding” happen in social platforms, and such behavioral traits shape user behavior (z.B. Ratings beinflussen eigenes Rating)
+
+external biase:
+
+-   Cultural elements and social contexts are reflected in social datasets. (Zeichenlimit Japan vs. Deutschland)
+-   Misinformation and disinformation.
+-   Contents on different topics are treated differently.
+-   High-impact events, whether anticipated or not, are reflected on social media (z.B. Feiertage)
+
+non-individual-accounts: Organizational accounts, Bots
+:::
+
+## Gefangen im Spannungsverhältnis
+
+#### Forschungethik bei digitalen Daten
+
+**Hintergrund**: *Die Herausforderung besteht in der Kombination von zwei extremen Sichtweisen, der Betrachtung der Forschung mit sozialen Daten als "klinische" Forschung oder als Computerforschung*
+
+-   Die Sozialdatenforschung **unterscheidet sich von klinischen Versuchen**.
+
+-   **Ethische Entscheidungen** in der Sozialdatenforschung müssen **gut überlegt sein**, da oft sind mehrere Werte betroffen, die miteinander in Konflikt stehen können
+
+-   Diskussion des Spannungsverhältnisses am Beispiel von drei **spezifischer ethischer Kriterien: Autonomie, Wohltätigkeit und Gerechtigkeit**
+
+::: {.notes style="font-size: smaller;"}
+Hintergrund:
+
+1.  Die Sozialdatenforschung ähnelt klinischen Versuchen und anderen Experimenten am Menschen in ihrer Fähigkeit, Menschen zu schaden, und sollte daher auch als solche reguliert werden
+
+2.  die Sozialdatenforschung ähnelt der sonstigen Computerforschung, die sich traditionell auf Methoden, Algorithmen und den Aufbau von Systemen konzentriert, mit minimalen direkten Auswirkungen auf Menschen.
+
+Punkt 2: Schäden, die die üblichen Arten der Sozialdatenforschung ( z. B. die Verletzung der Privatsphäre oder der Anblick verstörender Bilder)verursachen können, oft nicht mit Schäden von klinischen Versuchen gleichzusetzen
+
+Punkt 3: Datenanalyse beispielsweise erforderlich sein, um wichtige Dienste bereitzustellen, und es sollten Lösungen erwogen werden, die ein Gleichgewicht zwischen Datenschutz und Genauigkeit herstellen (Goroff, 2015).
+:::
+
+## Achtung der individuellen Autonomie
+
+#### Diskussion der *Informierte Zustimmung* als Indikator autonomer Entscheidung
+
+::: callout-note
+## Einwilligung nach Aufklärung setzt voraus, dass
+
+::: {style="font-size: 18px"}
+1.  die Forscher\*Innen den potenziellen Teilnehmenden alle **relevanten Informationen offenlegen**;
+2.  die potenziellen Teilnehmenden **in der Lage** sind, diese **Informationen zu bewerten;**
+3.  die potenziellen Teilnehmenden **freiwillig entscheiden** können, ob sie **teilnehmen** wollen oder nicht;
+4.  die Teilnehmenden den Forschernden ihre **ausdrückliche Erlaubnis erteilen**, häufig in schriftlicher Form; und
+5.  die Teilnehmende die Möglichkeit haben, ihre **Einwilligung jederzeit zurückzuziehen**.
+:::
+:::
+
+##### **Potentielle Probleme mit Blick auf DBD**
+
+-   Die **Zustimmung** von **Millionen** von Nutzern einzuholen ist **nicht praktikabel.**
+
+-   Die **Nutzungsbedingungen** sozialer Plattformen stellen möglicherweise **keine informierte Zustimmung** zur Forschung dar.
+
+-   Das **öffentliche Teilen** von Inhalten im Internet **bedeutet nicht** unbedingt eine **Zustimmung** zur Forschung.
+
+## No "No" ≠ "Yes"!
+
+#### Ethische Erwägungen bei DBD-Forschung
+
+::: {style="font-size: smaller;"}
+**Aus öffentlicher Zugänglich- bzw. Verfügbarkeit von Daten leitet sich nicht automatisch ethische Verwertbarkeit ab** [@zimmer2010; @boyd2012]
+
+-   Verletzung der Privatsphäre der Nutzer [@goroff2015]
+
+-   Ermöglichung von rassischem, sozioökonomischem oder geschlechtsspezifischem Profiling [@barocas2016]
+
+##### **Negative Beispiele**
+
+-   **Facebook contagion experiment (**2012-2014): Feeds von Nutzer\*Innen so manipulierten, dass sie je nach den geäußerten Emotionen mehr oder weniger von bestimmten Inhalten enthielten [@kramer2014]
+
+-   **Encore-Forschungsprojekt**: Messung der Internetzensur auf der ganzen Welt, bei der Webbrowser angewiesen wurden, zu versuchen, sensible Webinhalte ohne das Wissen oder die Zustimmung der Nutzer herunterzuladen [@burnett2014]
+:::
+
+::: {.notes style="font-size: smaller;"}
+Hintergrund:
+
+-   Ethische Fragen bisher epistemische Bedenken (Verwendung von nicht schlüssigen oder fehlgeleiteten Beweisen), jetzt normativ Bedenken (Folgen der Forschung)
+-   Forschung grundsätzlich in vielen Ländern gesetztlich geregelt
+
+Negativbeispiele:
+
+-   Facebook contagion experiment: Das Experiment wurde als ein Eingriff kritisiert, der den emotionalen Zustand von ahnungslosen Nutzern beeinflusste, die keine Zustimmung zur Teilnahme an der Studie gegeben hatten (Hutton und Henderson, 2015a).
+
+-   Encore-Forschngsprojekt: Menschen in einigen Ländern durch diese Zugriffsversuche möglicherweise gefährdet wurden
+
+Folgende Abschnitte:
+
+-   zentrales Spannungsverhältnis in der Forschungsethik digitaler Daten dargestellt.
+
+-   Anschließend wird die Diskussion spezifischer ethischer Probleme in der Sozialdatenforschung im Hinblick auf drei grundlegende Kriterien gegliedert, die im Belmont-Bericht (Ryan et al., 1978), einem grundlegenden Werk zur Forschungsethik, vorgebracht wurden: Autonomie (Abschnitt 9.2), Wohltätigkeit (Abschnitt 9.3) und Gerechtigkeit (Abschnitt 9.4).
+:::
+
+## Wohltätigkeit und Unschädlichkeit als Ziel
+
+#### Bewertung von Risken & Nutzen
+
+**Hintergrund**: *Nicht nur Fokus auf den Nutzen der Forschung, sondern auch auf die möglichen Arten von Schäden, die betroffenen Gruppen und die Art und Weise, wie nachteilige Auswirkungen getestet werden können .* [@sweeney2013]
+
+<br>
+
+###### Potentielle Probleme
+
+-   **Daten** über **Einzelpersonen** können ihnen **schaden, wenn** sie **offengelegt** werden.
+
+-   **Forschungsergebnisse** **können** verwendet werden, um **Schaden** anzurichten.
+
+-   **"Dual-Use"- und Sekundäranalysen** sind in der Sozialdatenforschung **immer** **häufiger** anzutreffen.
+
+::: {.notes style="font-size: smaller;"}
+Die Forschung zu sozialen Daten wird mit bestimmten Arten von Schäden in Verbindung gebracht, von denen die Verletzung der Privatsphäre vielleicht die offensichtlichste ist (Zimmer, 2010; Crawford und Finn, 2014).
+
+Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison im Jahr 2015, bei der einer Website, die sich als Dating-Netzwerk für betrügerische Ehepartner anpreist, Kontoinformationen (einschließlich der vollständigen Namen der Nutzer) gestohlen und online gestellt wurden (Thomsen, 2015), sowie die jüngsten Datenpannen bei Facebook, bei denen Hunderte Millionen von Datensätzen mit Kommentaren, Likes, Reaktionen, Kontonamen, App-Passwörtern und mehr öffentlich gemacht wurden.
+
+zu 1: - Stalking, Diskriminierung, Erpressung oder Identitätsdiebstahl (Gross und Acquisti, 2005). - Zu lange Archivierung personenbezogener Daten oder die öffentliche Freigabe schlecht anonymisierter Datensätze kann zu Verletzungen der Privatsphäre führen, da diese Daten mit anderen Quellen kombiniert werden können, um Erkenntnisse über Personen ohne deren Wissen zu gewinnen (Crawford und Finn, 2014; Goroff, 2015; Horvitz und Mulligan, 2015)
+
+zu 2: Abgesehen von der Tatsache, dass aus sozialen Daten gezogene Rückschlüsse in vielerlei Hinsicht falsch sein können, wie in dieser Studie hervorgehoben wird, können zu präzise Rückschlüsse dazu führen, dass Menschen in immer kleinere Gruppen eingeteilt werden können (Barocas, 2014).
+
+zu 3: Daten, Instrumente und Schlussfolgerungen, die für einen bestimmten Zweck gewonnen wurden, für einen anderen Zweck verwendet werden (Hovy und Spruit, 2016; Benton et al., 2017)
+:::
+
+## Faire Verteilung von Risiken & Nutzen
+
+#### Recht & Gerechtigkeit
+
+**Hintergrund**: *Häufig wird unterstellt bzw. angenommen, dass es von Anfang an bekannt, wer durch die Forschung belastet und wer von den Ergebnissen profitieren wird.*
+
+<br>
+
+###### Potentielle Probleme
+
+-   Die **digitale Kluft** kann das Forschungsdesign beeinflussen (z.B. *WEIRD Samples*)
+
+-   **Algorithmen** und Forschungsergebnisse können zu **Diskriminierung** führen.
+
+-   **Forschungsergebnisse** sind möglicherweise **nicht** allgemein **zugänglich**.
+
+-   Nicht alle **Interessengruppen** werden über die Verwendung von Forschungsergebnissen konsultiert.
+
+::: {.notes style="font-size: smaller;"}
+zu 1: Data divide: mangelnde Verfügbarkeit von hochwertigen Daten über Entwicklungsländer und unterprivilegierte Gemeinschaften (Cinnamon und Schuurman, 2013). WEIRD = White, Educated, Industrialized, Rich, and Democratic
+
+zu 3: Idealerweise sollten die Menschen Zugang zu den Forschungsergebnissen und Artefakten haben, die aus der Untersuchung ihrer persönlichen Daten entstanden sind (Gross und Acquisti, 2005; Crawford und Finn, 2014).
+
+zu 4: In die Überlegungen darüber, wie, für wen und wann Forschungsergebnisse umgesetzt werden, sollten diejenigen einbezogen werden, die möglicherweise betroffen sind oder deren Daten verwendet werden (Costanza-Chock, 2018; Design Justice, 2018; Green, 2018)
+:::
+
+## Zwei Trends, Drei Fragen, Vier Empfehlungen
+
+#### Zusammenfassung und Ausblick
+
+**Trend 1: Skepsis gegenüber einfachen Antworten**
+
+::: {style="font-size: 22px;"}
+1.  Wie einstehen die Daten, was enthalten sie tatsächlich und wie sind die Arbeitsdatensätze zusammengestellt?
+
+2.  Wird deutlich, was ausgewertet wird?
+
+3.  Wird die Verwendung von vorhandenen Datensätzen und Modellen des maschinellen Lernens hinterfragt?
+:::
+
+**Trend 2: Wechsel von der Thematisierung zur Adressieung von Bedenken**
+
+::: {style="font-size: 22px;"}
+1.  **Detaillierte Dokumentation** und kritische **Prüfung** der Datensatz- und Modellerstellung
+
+2.  DBD-Studien auf **verschiedene Plattformen, Themen, Zeitpunkte und Teilpopulationen auszuweiten**, um festzustellen, wie sich die Ergebnisse beispielsweise in verschiedenen kulturellen, demografischen und verhaltensbezogenen Kontexten unterscheiden
+
+3.  **Transparenzmechanismen** zu schaffen, die es ermöglichen, Online-Plattformen zu überprüfen und Verzerrungen in Daten an der Quelle zu evaluieren
+
+4.  **Forschung** zu diesen Leitlinien, Standards, Methoden und Protokollen **auszuweiten** und ihre Übernahme zu fördern.
+:::
+
+::: notes
+Schließlich gibt es angesichts der Komplexität der inhärent kontextabhängigen, anwendungs- und bereichsabhängigen Verzerrungen und Probleme in sozialen Daten und Analysepipelines, die in diesem Papier behandelt werden, keine Einheitslösungen - bei der Bewertung und Bekämpfung von Verzerrungen ist Nuancierung entscheidend.
+:::
+
+# Time for questions {background-image="img/slide_bg-question.png"}
+
+# Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
+
+## Literatur
+
+::: {#refs}
+:::

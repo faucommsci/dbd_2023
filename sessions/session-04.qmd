@@ -1,6 +1,6 @@
 ---
 title: "Session 4"
-subtitle: "📂 P1: 📚 Digital disconnection"
+subtitle: "📚 Media routines & habits"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
@@ -14,19 +14,53 @@ citations-hover: false
 All articles of this section have to be read & used by the presenting group
 :::
 
--   [@nassen2023]
+-   [@gardner2022]
 
--   [@radtke2022]
+-   [@meier2021a]
 
--   [@vandenabeele2022]
+-   [@naab2014]
 
-## Other additional readings
+-   [@schnauber-stockmann2020]
 
--   [@moe2021]
+-   [@schnauber-stockmann2022]
 
--   [@schmuck2020]
+## Other readings
 
--   [@syvertsen2019]
+-   [@anderson2020]
+
+-   [@anderson2023]
+
+-   [@bayer2022]
+
+-   [@bayer2018]
+
+-   [@carden2018]
+
+-   [@katevas2018]
+
+-   [@kruglanski2020]
+
+-   [@mazar2018]
+
+-   [@meier2021]
+
+-   [@meier2023]
+
+-   [@naab2018]
+
+-   [@oulasvirta2011]
+
+-   [@schnauber2017]
+
+-   [@schnauber-stockmann2018]
+
+-   [@schnauber-stockmann2018a]
+
+-   [@thepsyc2018]
+
+-   [@wood2016]
+
+-   [@wood2021]
 
 <br>
 

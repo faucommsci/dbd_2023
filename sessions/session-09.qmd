@@ -1,68 +1,19 @@
 ---
 title: "Session 9"
-subtitle: "📂 P2: 📚 Media routines & habits"
+subtitle: "📂 P1: 🔨 Text as data in R"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
+<!-- Add link CSS text as data -->
+<!-- Add link CSS topic Modeling -->
+<!-- Add link CCS network analysis -->
 
-## Mandatory literature
+## Other additional readings
 
-::: {.callout-important appearance="simple"}
-All articles of this section have to be read & used by the presenting group
-:::
-
--   [@gardner2022]
-
--   [@meier2021a]
-
--   [@naab2014]
-
--   [@schnauber-stockmann2020]
-
--   [@schnauber-stockmann2022]
-
-## Other readings
-
--   [@anderson2020]
-
--   [@anderson2023]
-
--   [@bayer2022]
-
--   [@bayer2018]
-
--   [@carden2018]
-
--   [@katevas2018]
-
--   [@kruglanski2020]
-
--   [@mazar2018]
-
--   [@meier2021]
-
--   [@meier2023]
-
--   [@naab2018]
-
--   [@oulasvirta2011]
-
--   [@schnauber2017]
-
--   [@schnauber-stockmann2018]
-
--   [@schnauber-stockmann2018a]
-
--   [@thepsyc2018]
-
--   [@wood2016]
-
--   [@wood2021]
-
-<br>
+ -   [@wiedemann2022]
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/index.html "Course schedule") ⏎

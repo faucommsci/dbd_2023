@@ -1,6 +1,6 @@
 ---
-title: "Session 5"
-subtitle: "📚 Digital disconnection"
+title: "Session 7"
+subtitle: "📦 Automatic text analysis"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
@@ -14,19 +14,45 @@ citations-hover: false
 All articles of this section have to be read & used by the presenting group
 :::
 
--   [@nassen2023]
+-   [@chen2023]
 
--   [@radtke2022]
+-   [@friemel2017]
 
--   [@vandenabeele2022]
+-   [@hase2023]
+
+-   [@himelboim2017]
+
+-   [@maier2018]
+
+## 🐈🐈 4CAT 🐈🐈-Toolkit
+
+-   [@peeters2022]
+
+-   [@peeters2022a]
 
 ## Other additional readings
 
--   [@moe2021]
+### Topic Modeling
 
--   [@schmuck2020]
+-   [@egger2022]
 
--   [@syvertsen2019]
+-   [@chang2009]
+
+### Twitter
+
+-   [@banda2021]
+
+-   [@jungherr2016]
+
+-   [@karami2020]
+
+-   [@mueller2022]
+
+-   [@münch2021]
+
+-   [@vasko2019]
+
+-   [@yuan2022]
 
 <br>
 

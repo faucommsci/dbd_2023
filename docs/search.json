@@ -46,7 +46,7 @@
     "href": "course-syllabus.html#preliminary-schedule",
     "title": "Syllabus",
     "section": "(Preliminary) Schedule",
-    "text": "(Preliminary) Schedule\n\n\n\n\n\n\nImportant information\n\n\n\n\nPlease note that this is a provisional schedule. Part of the Kick-Off session is the presentation, discussion and voting on different project ideas.\nAll sessions marked with a 🔨 are hands-on sessions actively working with R.\nAll sessions marked with a 📚 or 📦 are presentation sessions where a group of students will give a detailed presentation.\n\n\n\n\n\n\nSession\nDatum\nTopic\n\n\n\n\n\n\nIntroduction\n\n\n1\n25.10.2023\nKick-Off\n\n\n-\n01.11.2023\n🎃 Holiday (No Lecture)\n\n\n2\n08.11.2023\nDBD: Overview\n\n\n3\n15.11.2023\n🔨 Working with R\n\n\n\n📂 Project 1\nAnalysis of media content\n\n\n4\n22.11.2023\n📚 Digital disconnection\n\n\n5\n29.11.2023\n📦 Data collection methods\n\n\n6\n06.12.2023\n🔨 Text as data\n\n\n7\n13.12.2023\n📊 Presentation & Discussion\n\n\n8\n20.12.2023\nBuffer Session\n\n\n-\n-\n🎄Christmas Break (No Lecture)\n\n\n\n📂 Project 2\nAnalysis of media usage\n\n\n9\n11.01.2024\n📚 Media habits & routines\n\n\n10\n18.01.2024\n📦 Data donations methods\n\n\n11\n25.01.2024\n🔨 Working data logs\n\n\n12\n02.02.2024\n📊 Presentation & Discussion\n\n\n13\n08.02.2024\n🏁 Recap, Evaluation & Discussion\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nFor an even more detailed overview of the course schedule as well as the linked content of the individual sessions (e.g. slides or literature for the respective presentation), please see Schedule.\n\n\nThe course consists of three main parts:\n\nPart I: Introduction\nThe first three sessions form the (theoretical) basis for the course.\n\nThe kick-off session is mainly for getting to know each other and organizing the course. \nThe second session is to give you an extended introduction DBD, including challenges and important frameworks. \nThe third session is about practical work with R and RStudio.  \n\n\n\nPart II: Analysis of media content (Project 1)\n\nThe focus of the second section is the observation and analysis of (written) social media content (e.g. post and/or hashtags) with the help of different methods (e.g. topic modeling, sentiment analysis etc.).\n\n\n\nPart III: Analysis of media usage (Project 2)\n\nThe third part is about the effects of media use. Here you will learn how to process and analyze logging data and how to link it to survey data with the help of a survey conducted on the participants of the course during the first months of the semester."
+    "text": "(Preliminary) Schedule\n\n\n\n\n\n\nImportant information\n\n\n\n\nPlease note that this is a provisional schedule. Part of the Kick-Off session is the presentation, discussion and voting on different project ideas.\nAll sessions marked with a 🔨 are hands-on sessions actively working with R.\nAll sessions marked with a 📚 or 📦 are presentation sessions where a group of students will give a detailed presentation.\n\n\n\n\n\n\nSession\nDatum\nTopic\n\n\n\n\n\n\nIntroduction\n\n\n1\n25.10.2023\nKick-Off\n\n\n-\n01.11.2023\n🎃 Holiday (No Lecture)\n\n\n2\n08.11.2023\nEinführung in DBD\n\n\n3\n15.11.2023\n🔨 Working with R\n\n\n\n🗣️\nPresentations\n\n\n4\n22.11.2023\n📚 Media routines & habits\n\n\n5\n29.11.2023\n📚 Digital disconnection\n\n\n6\n06.12.2023\n📦 Data collection methods\n\n\n7\n13.12.2023\n📦 Automatic text analysis\n\n\n8\n20.12.2023\nBuffer Session\n\n\n-\n-\n🎄Christmas Break (No Lecture)\n\n\n\n📂 Project\nAnalysis of media content\n\n\n9\n10.01.2024\n🔨 Text as data in R\n\n\n10\n17.01.2024\n🔨 Topic Modeling in R\n\n\n11\n24.01.2024\n🔨 Q&A\n\n\n12\n31.01.2024\n📊 Presentation & Discussion\n\n\n13\n07.02.2024\n🏁 Recap, Evaluation & Discussion\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nFor an even more detailed overview of the course schedule as well as the linked content of the individual sessions (e.g. slides or literature for the respective presentation), please see Schedule.\n\n\nThe course consists of three main parts:\n\nPart I: Introduction\nThe first three sessions form the (theoretical) basis for the course.\n\nThe kick-off session is mainly for getting to know each other and organizing the course. \nThe second session is to give you an extended introduction DBD, including challenges and important frameworks. \nThe third session is about practical work with R and RStudio.  \n\n\n\nPart II: Analysis of media content (Project 1)\n\nThe focus of the second section is the observation and analysis of (written) social media content (e.g. post and/or hashtags) with the help of different methods (e.g. topic modeling, sentiment analysis etc.).\n\n\n\nPart III: Analysis of media usage (Project 2)\n\nThe third part is about the effects of media use. Here you will learn how to process and analyze logging data and how to link it to survey data with the help of a survey conducted on the participants of the course during the first months of the semester."
   },
   {
     "objectID": "course-syllabus.html#sessions",
@@ -98,60 +98,305 @@
     "text": "This is selection of useful R sources:\n\n Quarto tutorials by Andy Field\n Automatisierte Inhaltsanalyse mit R by Kornelius Puschmann"
   },
   {
-    "objectID": "sessions/session-06.html",
-    "href": "sessions/session-06.html",
-    "title": "Session 6",
+    "objectID": "sessions/session-07.html",
+    "href": "sessions/session-07.html",
+    "title": "Session 7",
     "section": "",
-    "text": "Wiedemann, G. (2022). The world of topic modeling in r. Medien & Kommunikationswissenschaft, 70(3), 286–291. https://doi.org/10.5771/1615-634X-2022-3-286\n\n\nBack to course schedule ⏎"
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nChen, Y., Peng, Z., Kim, S.-H., & Choi, C. W. (2023). What We Can Do and Cannot Do with Topic Modeling: A Systematic Review. Communication Methods and Measures, 17(2), 111–130. https://doi.org/10.1080/19312458.2023.2167965\nFriemel, T. N. (2017). Social Network Analysis (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–14). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0235\nHase, V. (2023). Automated Content Analysis (F. Oehmer-Pedrazzi, S. H. Kessler, E. Humprecht, K. Sommer, & L. Castro, Eds.; pp. 23–36). Springer Fachmedien Wiesbaden. https://link.springer.com/10.1007/978-3-658-36179-2_3\nHimelboim, I. (2017). Social Network Analysis (Social Media) (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–15). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0236\nMaier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., & Adam, S. (2018). Applying LDA Topic Modeling in Communication Research: Toward a Valid and Reliable Methodology. Communication Methods and Measures, 12(2-3), 93–118. https://doi.org/10.1080/19312458.2018.1430754"
   },
   {
-    "objectID": "sessions/session-06.html#other-additional-readings",
-    "href": "sessions/session-06.html#other-additional-readings",
-    "title": "Session 6",
+    "objectID": "sessions/session-07.html#mandatory-literature",
+    "href": "sessions/session-07.html#mandatory-literature",
+    "title": "Session 7",
     "section": "",
-    "text": "Wiedemann, G. (2022). The world of topic modeling in r. Medien & Kommunikationswissenschaft, 70(3), 286–291. https://doi.org/10.5771/1615-634X-2022-3-286\n\n\nBack to course schedule ⏎"
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nChen, Y., Peng, Z., Kim, S.-H., & Choi, C. W. (2023). What We Can Do and Cannot Do with Topic Modeling: A Systematic Review. Communication Methods and Measures, 17(2), 111–130. https://doi.org/10.1080/19312458.2023.2167965\nFriemel, T. N. (2017). Social Network Analysis (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–14). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0235\nHase, V. (2023). Automated Content Analysis (F. Oehmer-Pedrazzi, S. H. Kessler, E. Humprecht, K. Sommer, & L. Castro, Eds.; pp. 23–36). Springer Fachmedien Wiesbaden. https://link.springer.com/10.1007/978-3-658-36179-2_3\nHimelboim, I. (2017). Social Network Analysis (Social Media) (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–15). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0236\nMaier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., & Adam, S. (2018). Applying LDA Topic Modeling in Communication Research: Toward a Valid and Reliable Methodology. Communication Methods and Measures, 12(2-3), 93–118. https://doi.org/10.1080/19312458.2018.1430754"
   },
   {
-    "objectID": "sessions/session-04.html",
-    "href": "sessions/session-04.html",
-    "title": "Session 4",
+    "objectID": "sessions/session-07.html#cat--toolkit",
+    "href": "sessions/session-07.html#cat--toolkit",
+    "title": "Session 7",
+    "section": "🐈🐈 4CAT 🐈🐈-Toolkit",
+    "text": "🐈🐈 4CAT 🐈🐈-Toolkit\n\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\nPeeters, S. (2022). Zeeschuimer. Zenodo. https://zenodo.org/record/6826877"
+  },
+  {
+    "objectID": "sessions/session-07.html#other-additional-readings",
+    "href": "sessions/session-07.html#other-additional-readings",
+    "title": "Session 7",
+    "section": "Other additional readings",
+    "text": "Other additional readings\n\nTopic Modeling\n\nEgger, R., & Yu, J. (2022). A topic modeling comparison between LDA, NMF, Top2Vec, and BERTopic to demystify twitter posts. Frontiers in Sociology, 7, 886498. https://doi.org/10.3389/fsoc.2022.886498\nChang, J., Boyd-Graber, J., Gerrish, S., Wang, C., & Blei, D. (2009). Reading tea leaves: How humans interpret topic models. 32, 288–296.\n\n\n\nTwitter\n\nBanda, J. M., Tekumalla, R., Wang, G., Yu, J., Liu, T., Ding, Y., Artemova, E., Tutubalina, E., & Chowell, G. (2021). A Large-Scale COVID-19 Twitter Chatter Dataset for Open Scientific ResearchAn International Collaboration. Epidemiologia, 2(3), 315–324. https://doi.org/10.3390/epidemiologia2030024\nJungherr, A. (2016). Twitter use in election campaigns: A systematic literature review. Journal of Information Technology & Politics, 13(1), 72–91. https://doi.org/10.1080/19331681.2015.1132401\nKarami, A., Lundy, M., Webb, F., & Dwivedi, Y. K. (2020). Twitter and research: A systematic literature review through text mining. IEEE Access, 8, 67698–67717. https://doi.org/10.1109/ACCESS.2020.2983656\nMueller, S. D., & Saeltzer, M. (2022). Twitter made me do it! Twitter’s tonal platform incentive and its effect on online campaigning. Information, Communication & Society, 25(9), 1247–1272. https://doi.org/10.1080/1369118X.2020.1850841\nMünch, F. V., Thies, B., Puschmann, C., & Bruns, A. (2021). Walking Through Twitter: Sampling a Language-Based Follow Network of Influential Twitter Accounts. Social Media + Society, 7(1), 205630512098447. https://doi.org/10.1177/2056305120984475\nVasko, V., & Trilling, D. (2019). A permanent campaign? Tweeting differences among members of Congress between campaign and routine periods. Journal of Information Technology & Politics, 16(4), 342–359. https://doi.org/10.1080/19331681.2019.1657046\nYuan, S., Chen, Y., Vojta, S., & Chen, Y. (2022). More aggressive, more retweets? Exploring the effects of aggressive climate change messages on Twitter. New Media & Society, 146144482211222. https://doi.org/10.1177/14614448221122202\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-10.html",
+    "href": "sessions/session-10.html",
+    "title": "Session 9",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nBaumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\n\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-10.html#mandatory-literature",
+    "href": "sessions/session-10.html#mandatory-literature",
+    "title": "Session 9",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nBaumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\n\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-05.html",
+    "href": "sessions/session-05.html",
+    "title": "Session 5",
     "section": "",
     "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
   },
   {
-    "objectID": "sessions/session-04.html#mandatory-literature",
-    "href": "sessions/session-04.html#mandatory-literature",
-    "title": "Session 4",
+    "objectID": "sessions/session-05.html#mandatory-literature",
+    "href": "sessions/session-05.html#mandatory-literature",
+    "title": "Session 5",
     "section": "",
     "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nNassen, L.-M., Vandebosch, H., Poels, K., & Karsay, K. (2023). Opt-out, abstain, unplug. A systematic review of the voluntary digital disconnection literature. Telematics and Informatics, 81, 101980. https://doi.org/10.1016/j.tele.2023.101980\nRadtke, T., Apel, T., Schenkel, K., Keller, J., & Von Lindern, E. (2022). Digital detox: An effective solution in the smartphone era? A systematic literature review. Mobile Media & Communication, 10(2), 190–215. https://doi.org/10.1177/20501579211028647\nVanden Abeele, M. M. P., Halfmann, A., & Lee, E. W. J. (2022). Drug, demon, or donut? Theorizing the relationship between social media use, digital well-being and digital disconnection. Current Opinion in Psychology, 45, 101295. https://doi.org/10.1016/j.copsyc.2021.12.007"
   },
   {
-    "objectID": "sessions/session-04.html#other-additional-readings",
-    "href": "sessions/session-04.html#other-additional-readings",
-    "title": "Session 4",
+    "objectID": "sessions/session-05.html#other-additional-readings",
+    "href": "sessions/session-05.html#other-additional-readings",
+    "title": "Session 5",
     "section": "Other additional readings",
     "text": "Other additional readings\n\nMoe, H., & Madsen, O. J. (2021). Understanding digital disconnection beyond media studies. Convergence: The International Journal of Research into New Media Technologies, 27(6), 1584–1598. https://doi.org/10.1177/13548565211048969\nSchmuck, D. (2020). Does Digital Detox Work? Exploring the Role of Digital Detox Applications for Problematic Smartphone Use and Well-Being of Young Adults Using Multigroup Analysis. Cyberpsychology, Behavior, and Social Networking, 23(8), 526–532. https://doi.org/10.1089/cyber.2019.0578\nSyvertsen, T., & Enli, G. (2019). Digital detox: Media resistance and the promise of authenticity. Convergence: The International Journal of Research into New Media Technologies, 26(5-6), 1269–1283. https://doi.org/10.1177/1354856519847325\n\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-01.html",
-    "href": "sessions/session-01.html",
-    "title": "Session 1",
+    "objectID": "sessions/session-02.html",
+    "href": "sessions/session-02.html",
+    "title": "Session 2",
     "section": "",
-    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
+    "text": "✍️ Start working on Basiskurs R/RStudio. Dealine for the course certificate (via mail to christoph.adrian@fau.de) is 13.11.2023\n\n\n\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Digital trace data (1st ed., pp. 100–118). Routledge. https://www.taylorfrancis.com/books/9781003024583/chapters/10.4324/9781003024583-8\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013"
   },
   {
-    "objectID": "sessions/session-01.html#prepare",
-    "href": "sessions/session-01.html#prepare",
-    "title": "Session 1",
-    "section": "Prepare",
-    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+    "objectID": "sessions/session-02.html#prepare",
+    "href": "sessions/session-02.html#prepare",
+    "title": "Session 2",
+    "section": "",
+    "text": "✍️ Start working on Basiskurs R/RStudio. Dealine for the course certificate (via mail to christoph.adrian@fau.de) is 13.11.2023\n\n\n\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Digital trace data (1st ed., pp. 100–118). Routledge. https://www.taylorfrancis.com/books/9781003024583/chapters/10.4324/9781003024583-8\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013"
   },
   {
-    "objectID": "sessions/session-01.html#participate",
-    "href": "sessions/session-01.html#participate",
-    "title": "Session 1",
+    "objectID": "sessions/session-02.html#participate",
+    "href": "sessions/session-02.html#participate",
+    "title": "Session 2",
     "section": "Participate",
-    "text": "Participate\n🖥️ Session 01 - Kick Off\n\n\nBack to course schedule ⏎"
+    "text": "Participate\n🖥️ Session 02\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "slides/slides-01.html#und-nun-zu-ihnen",
+    "href": "slides/slides-01.html#und-nun-zu-ihnen",
+    "title": "Kick-Off",
+    "section": "Und nun zu Ihnen!",
+    "text": "Und nun zu Ihnen!\nVorstellungsrunde\n\nWie heißen Sie?\nWas und wo haben Sie im Bachelor studiert?\nWas studieren Sie aktuell?\nWelches soziale Netzwerk/Medium haben Sie letzte Woche am meisten genutzt und warum?\n\n\n\nHintegrund und Vorwissen\nMediennutzung"
+  },
+  {
+    "objectID": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
+    "href": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
+    "title": "Kick-Off",
+    "section": "Was verstehen Sie unter Digital Behavioral Data?",
+    "text": "Was verstehen Sie unter Digital Behavioral Data?\nBitte an Umfrage teilnehmen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link für die Teilnahme an einer kurzen Umfrage:\n\nhttps://www.menti.com/alhdxw6x3a6e\nTemporary Access Code: 2677 1451"
+  },
+  {
+    "objectID": "slides/slides-01.html#ergebnis",
+    "href": "slides/slides-01.html#ergebnis",
+    "title": "Kick-Off",
+    "section": "Ergebnis",
+    "text": "Ergebnis"
+  },
+  {
+    "objectID": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
+    "href": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
+    "title": "Kick-Off",
+    "section": "Ein Definitionsversuch von DBD",
+    "text": "Ein Definitionsversuch von DBD\nnach Weller (2021)\n\n\n… fasst eine Vielzahl von möglichen Datenquellen zusammen, die verschiedene Arten von Aktivitäten aufzeichnen\n… können dabei helfen, Meinungen, Verhalten und Merkmale der menschlichen Nutzung digitaler Technologien zu erkennen"
+  },
+  {
+    "objectID": "slides/slides-01.html#lernziele",
+    "href": "slides/slides-01.html#lernziele",
+    "title": "Kick-Off",
+    "section": "Lernziele",
+    "text": "Lernziele\nDie Studierenden werden …\n\neinen Überblick über die zentralen Möglichkeiten von DBD und die damit verbundenen Herausforderungen bei der Datenerhebung und -aufbereitung bekommen\nlernen die Stärken und Schwächen verschiedener Methoden zur Erhebung von DBD bewerten\nzentrale Anforderungen an Datenschutz, Forschungsethik und Datenqualität kennen und verstehen lernen\nzentrale sozialwissenschaftliche Methoden zur Analyse von DBD kennenlernen\ndas Wissen über DBD, Statistik und Datenanalyse in eigenen kleinen Projekten zu üben und anzuwenden"
+  },
+  {
+    "objectID": "slides/slides-01.html#aber-was-ist-mit-.",
+    "href": "slides/slides-01.html#aber-was-ist-mit-.",
+    "title": "Kick-Off",
+    "section": "Aber was ist mit …. ?",
+    "text": "Aber was ist mit …. ?\nKurzes FAQ mit häufig gestellten Fragen\n\nWelchen Vorkenntnisse sind für den Kurs vorausgesetzt? Interesse an sozialwissenschaftlichen Perspektiven auf Medien, Kommunikation und digitale Technologien & Grundkenntnisse in der Arbeit mit Statistikprogrammen (z.B. R, Python, Stata, SPSS)\nWerden wir praktisch mit Statistikprogrammen arbeiten? Ja. Dazu werden wir R bzw. RStudio nutzen.\n\nDeswegen: Bitte 💻 mitbringen!\n\nWerden wir die mathematische Grundlagen der vorgestellten Methoden lernen? Ja und Nein. Der Kurs konzentriert sich in erster Linie auf die Anwendung; einige mathematische Parameter der vorgestellten Methoden werden jedoch für die Anwendung benötigt und deswegen kurz erörtert.\n\n\n\nLaptop mit RStudio für alle möglich?"
+  },
+  {
+    "objectID": "slides/slides-01.html#different-tools-for-different-tasks",
+    "href": "slides/slides-01.html#different-tools-for-different-tasks",
+    "title": "Kick-Off",
+    "section": "Different tools for different tasks",
+    "text": "Different tools for different tasks\nKursorganisation & -kommunikation\n\nGithub-Kursseite: Informationen zu Kurs (Semesterplan, Syllabus, Prüfungleistungen etc). & Sitzungen (Slides, Literatur und ggf. Übungsmaterial)\nZulip: Wichtige Ankündigungen, asynchrone Unterhaltungen, Fragen zum Kurs & zu R\nStudOn: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen\nE-Mail: persönliche Anliegen\n\n\n\nKurze Vorführung der Webseite\nZulip Frage/Probleme bei Registrierung?\nOptional: Github/OSF"
+  },
+  {
+    "objectID": "slides/slides-01.html#what-is-expected",
+    "href": "slides/slides-01.html#what-is-expected",
+    "title": "Kick-Off",
+    "section": "What is expected",
+    "text": "What is expected\nLeistungsanforderungen & Prüfungsleistungen\n\n\n\n\n\n\n\nRegelmäßige Teilnahme\n\nmindestens 80% der Sitzungen\nmax. 2 unentschuldigte Fehltermine\n\n\n\n\n\n\n\nPortfolio\n\nVerschiedene Teilleistungen (ins. 100 Punkte)\n\n\n\n\n\nFrage: Syllabus gelesen?\nFrage: Assignments angeschaut?"
+  },
+  {
+    "objectID": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "href": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
+    "title": "Kick-Off",
+    "section": "Schritt für Schritt zum Ziel",
+    "text": "Schritt für Schritt zum Ziel\nDas Portfolio im Überblick\n\n\nAusführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter Assignments.\n\n\n\nNur Short Report am Ende des Semesters\nGgf. wird Bewertungsschema angepasst\n“Ideal-Konzept” vs. Realität (bedingt durch Diskrepanz zwischen Anmeldungen & Teilnahme)"
+  },
+  {
+    "objectID": "slides/slides-01.html#präsentation",
+    "href": "slides/slides-01.html#präsentation",
+    "title": "Kick-Off",
+    "section": "👥 Präsentation",
+    "text": "👥 Präsentation\n💡 Theoretische & methodische Grundlage für das Mini-Projekt\n\nUmfang: maximal 30 Minuten\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt\n\n\nBessonderheit: vorheriges Feedbackgespräch"
+  },
+  {
+    "objectID": "slides/slides-01.html#project-topic-ideas",
+    "href": "slides/slides-01.html#project-topic-ideas",
+    "title": "Kick-Off",
+    "section": "👥 Project topic idea(s)",
+    "text": "👥 Project topic idea(s)\n💡 Projektidee vorstellen & weiterentwickeln\n\nUmfang: maximal 10 Minuten & 5 Slides\nZiel: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback\nRaum für Fragen und Austausch zwischen den verschiedenen Projektgruppen\n\n\nBessonderheit: Einzige Leistung, die für beide Projekte erbracht werden muss."
+  },
+  {
+    "objectID": "slides/slides-01.html#project-proposal",
+    "href": "slides/slides-01.html#project-proposal",
+    "title": "Kick-Off",
+    "section": "👥 Project proposal",
+    "text": "👥 Project proposal\n💡 Erster Entwurf des Written short report\n\nUmfang: mindestens 500 Wörter\nZiel: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie\nFokus auf drei “Abschnitte”: Einleitung, Datengrundlage und methodisches Vorgehen\n\n\nBessonderheit: Grundlage für das Peer Review\n\n\n(Teilweise) Während des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#peer-review",
+    "href": "slides/slides-01.html#peer-review",
+    "title": "Kick-Off",
+    "section": "👤 Peer Review",
+    "text": "👤 Peer Review\n💡 Feedback für Bericht geben & bekommmen\n\nUmfang: Durcharbeiten eines Peer-Review-Formulars\nZiel(e):\n\nLernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben\nZusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann\n\n\n\nBesonderheit: Individuelles Assigment!\n\n\n(Teilweise) Während des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#short-report",
+    "href": "slides/slides-01.html#short-report",
+    "title": "Kick-Off",
+    "section": "👥 Short Report",
+    "text": "👥 Short Report\n💡 Zusammenführung der einzelnen Teileistungen\n\n\nUmfang:\n\n750 bis 1000 Wörter pro Person umfassen.\nBei einem Gruppenbericht skaliert die Anzahl der Wörter mit einem Faktor von 0,8 pro Person (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).\n\nZiel(e):\n\nmindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.\nKenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren.\n\n\n\nBesonderheit: Abgabe als Quarto-Dokument (& PDF)\n\n\nFinale Abgabe erst nach Ende des Semesters"
+  },
+  {
+    "objectID": "slides/slides-01.html#drei-themenblöcke",
+    "href": "slides/slides-01.html#drei-themenblöcke",
+    "title": "Kick-Off",
+    "section": "Drei Themenblöcke",
+    "text": "Drei Themenblöcke\nStruktur und Aufbau des Seminars"
+  },
+  {
+    "objectID": "slides/slides-01.html#about-r",
+    "href": "slides/slides-01.html#about-r",
+    "title": "Kick-Off",
+    "section": "About R …",
+    "text": "About R …"
+  },
+  {
+    "objectID": "slides/slides-01.html#trust-the-process",
+    "href": "slides/slides-01.html#trust-the-process",
+    "title": "Kick-Off",
+    "section": "Trust the process",
+    "text": "Trust the process\nDer Einsatz von R bzw. RStudio im Kurs\nWarum?\n\nKostenlose Software mit vielen nützlichen und beginner-friendly Tutorials\nR or Python? Both!\n\nIm Kurs:\n\nBestehende R-Kenntnisse sind förderlich, aber nicht zwigend notwendig, wichtiger sind praktische Erfahrung im syntaxbasierten Arbeiten\nLearn to code by example: Code von Sitzungen & Beispielen wird bereitgestellt (ggf. durch Showcases)\nPflicht: Basiskurs R/RStudio der FAU\nNützliche Quellen auf Kursseite unter Computing"
+  },
+  {
+    "objectID": "slides/slides-01.html#theorie-meets-praxis",
+    "href": "slides/slides-01.html#theorie-meets-praxis",
+    "title": "Kick-Off",
+    "section": "Theorie meets Praxis",
+    "text": "Theorie meets Praxis\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡 Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session",
+    "href": "slides/slides-01.html#typische-session",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
+  },
+  {
+    "objectID": "slides/slides-01.html#typische-session-1",
+    "href": "slides/slides-01.html#typische-session-1",
+    "title": "Kick-Off",
+    "section": "Typische Session",
+    "text": "Typische Session\nfür 📊: Pitch ➞ Diskussion ➞ Repeat\n\n\nProject topic idea(s) (ca 5-10 Min)\n\nkurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),\nkurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)\nErgebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).\n\n\nFragen & Diskussion (ca 5-10 Min)\n\nZeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.\n\n\n\n\n🔁 für jede Gruppe\n\n\n\nStatus bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)"
+  },
+  {
+    "objectID": "slides/slides-01.html#vorläufiger-seminarplan",
+    "href": "slides/slides-01.html#vorläufiger-seminarplan",
+    "title": "Kick-Off",
+    "section": "(Vorläufiger) Seminarplan",
+    "text": "(Vorläufiger) Seminarplan\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nDBD: Overview\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    6\n\n06.12.2023\n\n🔨 Text as data\n\nChristoph Adrian\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n10.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n17.01.2024\n\n📦 Data donation methods\n\n\n    11\n\n24.01.2024\n\n🔨 Working data logs\n\nChristoph Adrian\n\n    12\n\n31.01.2024\n\n📊 Presentation & Discussion\n\n\n    13\n\n07.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
+  },
+  {
+    "objectID": "slides/slides-01.html#talking-about-disconnecting",
+    "href": "slides/slides-01.html#talking-about-disconnecting",
+    "title": "Kick-Off",
+    "section": "Talking about disconnecting",
+    "text": "Talking about disconnecting\nProjekt 1: #digitaldetox auf sozialen Medien\n\n\n\n\n\n\nQuelle: dup-magazin.de\n\n\n\n\nProjektaufbau\n\nTheoretische Hintergrund: Digital disconnection\nAnalyse von Social Media Post mit #digitaldetox\nArchiv-Daten (Twitter) oder eigene Datenerhebung\nFokus auf Inhalt (Diskurs, andere Hashtags) oder “Akteure”/Accounts"
+  },
+  {
+    "objectID": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "href": "slides/slides-01.html#studying-problems-not-problematic-usage",
+    "title": "Kick-Off",
+    "section": "Studying problems, not problematic usage?",
+    "text": "Studying problems, not problematic usage?\nProjekt 2: Mediennutzungsgewohnheiten und Wohlbefinden\n\n\n\n\n\n\n\n\n\n\nProjektaufbau\n\nHabitualisierte / routinemäßige Mediennutzung\nErhebung, Aufbereitung und Analyse von Logging-Daten\nEigene Erhebung, Data Download Packages, API-Zugang\nFokus auf Datenerhebungs & -aufbereitungsprozess"
+  },
+  {
+    "objectID": "slides/slides-01.html#please-state-your-preference",
+    "href": "slides/slides-01.html#please-state-your-preference",
+    "title": "Kick-Off",
+    "section": "Please state your preference",
+    "text": "Please state your preference\nVergabe der Präsentationsthemen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link und geben Sie Ihre Themenpräferenz an:\n\nhttps://simpleassign.com/poll/-NhW_EY5JXFZ25ZcYZbx"
+  },
+  {
+    "objectID": "slides/slides-01.html#lets-spin-the-wheel",
+    "href": "slides/slides-01.html#lets-spin-the-wheel",
+    "title": "Kick-Off",
+    "section": "Let’s spin the wheel?!",
+    "text": "Let’s spin the wheel?!\nZuteilung der Präsentationsthemen\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n    \n  \n  \n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n    9\n\n10.01.2024\n\n📚 Media habits & routines\n\n    10\n\n17.01.2024\n\n📦 Data donation methods\n\n  \n  \n  \n\n\n\n\n\nIn case of emergency: Wheel of Names"
+  },
+  {
+    "objectID": "slides/slides-01.html#before-we-meet-again",
+    "href": "slides/slides-01.html#before-we-meet-again",
+    "title": "Kick-Off",
+    "section": "Before we meet again",
+    "text": "Before we meet again\nHinweise und offene Fragen\nHinweise:\n\nLernen Sie die Kursseite & Zulip kennen! Und checken Sie die Infos () zur nächten Sitzung.\nBis zum 13.11.: Basiskurs R/RStudio durcharbeiten. Bitte senden Sie das Kurszertifikat an christoph.adrian@fau.de\n\nFragen:\n\nWhy no English? 🤷\nHaben Sie noch Fragen?"
+  },
+  {
+    "objectID": "slides/slides-01.html#literatur",
+    "href": "slides/slides-01.html#literatur",
+    "title": "Kick-Off",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nWeller, K. (2021). A short introduction to computational social science and digital behavioral data. https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf\n\n\n\n\n\nHome"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Digital Behavioral Data",
+    "section": "",
+    "text": "Note\n\n\n\nThis page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here."
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Digital Behavioral Data",
+    "section": "Copyright",
+    "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+  },
+  {
+    "objectID": "course-team.html#instructor",
+    "href": "course-team.html#instructor",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
   },
   {
     "objectID": "slides/slides-02.html#kurzes-update",
@@ -385,282 +630,79 @@
     "text": "Literatur\n\n\nAnderson, C. (2008). The end of theory: The data deluge makes the scientific method obsolete. Wired. https://www.wired.com/2008/06/pb-theory/\n\n\nBaeza-Yates, R. A. (2013). Big data or right data.\n\n\nBarocas, S., Crawford, K., Shapiro, A., & Wallach, H. (2017). The problem with bias: From allocative to representational harms in machine learning. Special interest group for computing. Information and Society (SIGCIS), 2.\n\n\nBarocas, S., & Selbst, A. D. (2016). Big Data’s Disparate Impact. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.2477899\n\n\nboyd, danah m., & Crawford, K. (2012). Critical questions for big data: Provocations for a cultural, technological, and scholarly phenomenon. Information, Communication & Society, 15(5), 662–679. https://doi.org/10.1080/1369118X.2012.678878\n\n\nboyd, danah m., & Ellison, N. B. (2007). Social Network Sites: Definition, History, and Scholarship. Journal of Computer-Mediated Communication, 13(1), 210–230. https://doi.org/10.1111/j.1083-6101.2007.00393.x\n\n\nBurnett, S., & Feamster, N. (2014). Encore: Lightweight measurement of web censorship with cross-origin requests. https://doi.org/10.48550/ARXIV.1410.1211\n\n\nCroskerry, P. (2002). Achieving Quality in Clinical Decision Making: Cognitive Strategies and Detection of Bias. Academic Emergency Medicine, 9(11), 1184–1204. https://doi.org/10.1197/aemj.9.11.1184\n\n\nDavidson, B. I., Wischerath, D., Racek, D., Parry, D. A., Godwin, E., Hinds, J., Linden, D. van der, Roscoe, J. F., Ayravainen, L. E. M., & Cork, A. (2023). Platform-controlled social media APIs threaten open science. http://dx.doi.org/10.31234/osf.io/ps32z\n\n\nFlöck, F., & Sen, I. (2022). Digital traces of human behaviour in online platforms  research design and error sources. https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meet_the_experts_Digitaltraces_humanbehaviour.pdf\n\n\nFriedman, B., & Nissenbaum, H. (1996). Bias in computer systems. ACM Transactions on Information Systems, 14(3), 330–347. https://doi.org/10.1145/230538.230561\n\n\nGoroff, D. L. (2015). Balancing privacy versus accuracy in research protocols. Science, 347(6221), 479–480. https://doi.org/10.1126/science.aaa3483\n\n\nHarford, T. (2014). Big data: A big mistake? Significance, 11(5), 14–19. https://doi.org/10.1111/j.1740-9713.2014.00778.x\n\n\nKeusch, F., & Kreuter, F. (2021). Digital trace data. In Handbook of Computational Social Science, Volume 1 (1st ed., pp. 100–118). Routledge. https://doi.org/10.4324/9781003024583-8\n\n\nKramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. Proceedings of the National Academy of Sciences, 111(24), 8788–8790. https://doi.org/10.1073/pnas.1320040111\n\n\nLazer, D. M. J., Pentland, A., Watts, D. J., Aral, S., Athey, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Margetts, H., Nelson, A., Salganik, M. J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. Science, 369(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170\n\n\nNaveed, N., Gottron, T., Kunegis, J., & Alhadi, A. C. (2011). the 20th ACM international conference. 183. https://doi.org/10.1145/2063576.2063607\n\n\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013\n\n\nSalganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nStruminskaya, B., Lugtig, P., Keusch, F., & Höhne, J. K. (2020). Augmenting Surveys With Data From Sensors and Apps: Opportunities and Challenges. Social Science Computer Review, 089443932097995. https://doi.org/10.1177/0894439320979951\n\n\nSweeney, L. (2013). Discrimination in Online Ad Delivery: Google ads, black names and white names, racial discrimination, and click advertising. Queue, 11(3), 10–29. https://doi.org/10.1145/2460276.2460278\n\n\nUlloa, R. (2021). Introduction to online data acquisition. https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf\n\n\nWeller, K. (2021). A short introduction to computational social science and digital behavioral data. https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf\n\n\nZimmer, M. (2010). “But the data is already public”: on the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313–325. https://doi.org/10.1007/s10676-010-9227-5\n\n\n\n\n\nHome"
   },
   {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "Teaching team",
+    "objectID": "sessions/session-03.html",
+    "href": "sessions/session-03.html",
+    "title": "Session 3",
     "section": "",
-    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+    "text": "✍️ Dealine (13.11.2023) für Kurszertifikat des Basiskurs R/RStudio. Bitte via E-Mail an christoph.adrian@fau.de"
   },
   {
-    "objectID": "course-team.html#instructor",
-    "href": "course-team.html#instructor",
-    "title": "Teaching team",
+    "objectID": "sessions/session-03.html#prepare",
+    "href": "sessions/session-03.html#prepare",
+    "title": "Session 3",
     "section": "",
-    "text": "Christoph Adrian (he/him)     is a Research Assistant at the Chair of Communication Science at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg.\nHis work focuses on computational methods, especially Text as Data Approaches and workin with Digital behavioral data, with an emphasis on computing, reproducible research, student-centered learning, and open-source education.\n\n\n\nOffice hours\nLocation\n\n\n\n\nWednesday 13:15 - 14:15\nFG 2.031"
+    "text": "✍️ Dealine (13.11.2023) für Kurszertifikat des Basiskurs R/RStudio. Bitte via E-Mail an christoph.adrian@fau.de"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Digital Behavioral Data",
-    "section": "",
-    "text": "Note\n\n\n\nThis page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here."
-  },
-  {
-    "objectID": "index.html#copyright",
-    "href": "index.html#copyright",
-    "title": "Digital Behavioral Data",
-    "section": "Copyright",
-    "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
-  },
-  {
-    "objectID": "slides/slides-01.html#und-nun-zu-ihnen",
-    "href": "slides/slides-01.html#und-nun-zu-ihnen",
-    "title": "Kick-Off",
-    "section": "Und nun zu Ihnen!",
-    "text": "Und nun zu Ihnen!\nVorstellungsrunde\n\nWie heißen Sie?\nWas und wo haben Sie im Bachelor studiert?\nWas studieren Sie aktuell?\nWelches soziale Netzwerk/Medium haben Sie letzte Woche am meisten genutzt und warum?\n\n\n\nHintegrund und Vorwissen\nMediennutzung"
-  },
-  {
-    "objectID": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
-    "href": "slides/slides-01.html#was-verstehen-sie-unter-digital-behavioral-data",
-    "title": "Kick-Off",
-    "section": "Was verstehen Sie unter Digital Behavioral Data?",
-    "text": "Was verstehen Sie unter Digital Behavioral Data?\nBitte an Umfrage teilnehmen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link für die Teilnahme an einer kurzen Umfrage:\n\nhttps://www.menti.com/alhdxw6x3a6e\nTemporary Access Code: 2677 1451"
-  },
-  {
-    "objectID": "slides/slides-01.html#ergebnis",
-    "href": "slides/slides-01.html#ergebnis",
-    "title": "Kick-Off",
-    "section": "Ergebnis",
-    "text": "Ergebnis"
-  },
-  {
-    "objectID": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
-    "href": "slides/slides-01.html#ein-definitionsversuch-von-dbd",
-    "title": "Kick-Off",
-    "section": "Ein Definitionsversuch von DBD",
-    "text": "Ein Definitionsversuch von DBD\nnach Weller (2021)\n\n\n… fasst eine Vielzahl von möglichen Datenquellen zusammen, die verschiedene Arten von Aktivitäten aufzeichnen\n… können dabei helfen, Meinungen, Verhalten und Merkmale der menschlichen Nutzung digitaler Technologien zu erkennen"
-  },
-  {
-    "objectID": "slides/slides-01.html#lernziele",
-    "href": "slides/slides-01.html#lernziele",
-    "title": "Kick-Off",
-    "section": "Lernziele",
-    "text": "Lernziele\nDie Studierenden werden …\n\neinen Überblick über die zentralen Möglichkeiten von DBD und die damit verbundenen Herausforderungen bei der Datenerhebung und -aufbereitung bekommen\nlernen die Stärken und Schwächen verschiedener Methoden zur Erhebung von DBD bewerten\nzentrale Anforderungen an Datenschutz, Forschungsethik und Datenqualität kennen und verstehen lernen\nzentrale sozialwissenschaftliche Methoden zur Analyse von DBD kennenlernen\ndas Wissen über DBD, Statistik und Datenanalyse in eigenen kleinen Projekten zu üben und anzuwenden"
-  },
-  {
-    "objectID": "slides/slides-01.html#aber-was-ist-mit-.",
-    "href": "slides/slides-01.html#aber-was-ist-mit-.",
-    "title": "Kick-Off",
-    "section": "Aber was ist mit …. ?",
-    "text": "Aber was ist mit …. ?\nKurzes FAQ mit häufig gestellten Fragen\n\nWelchen Vorkenntnisse sind für den Kurs vorausgesetzt? Interesse an sozialwissenschaftlichen Perspektiven auf Medien, Kommunikation und digitale Technologien & Grundkenntnisse in der Arbeit mit Statistikprogrammen (z.B. R, Python, Stata, SPSS)\nWerden wir praktisch mit Statistikprogrammen arbeiten? Ja. Dazu werden wir R bzw. RStudio nutzen.\n\nDeswegen: Bitte 💻 mitbringen!\n\nWerden wir die mathematische Grundlagen der vorgestellten Methoden lernen? Ja und Nein. Der Kurs konzentriert sich in erster Linie auf die Anwendung; einige mathematische Parameter der vorgestellten Methoden werden jedoch für die Anwendung benötigt und deswegen kurz erörtert.\n\n\n\nLaptop mit RStudio für alle möglich?"
-  },
-  {
-    "objectID": "slides/slides-01.html#different-tools-for-different-tasks",
-    "href": "slides/slides-01.html#different-tools-for-different-tasks",
-    "title": "Kick-Off",
-    "section": "Different tools for different tasks",
-    "text": "Different tools for different tasks\nKursorganisation & -kommunikation\n\nGithub-Kursseite: Informationen zu Kurs (Semesterplan, Syllabus, Prüfungleistungen etc). & Sitzungen (Slides, Literatur und ggf. Übungsmaterial)\nZulip: Wichtige Ankündigungen, asynchrone Unterhaltungen, Fragen zum Kurs & zu R\nStudOn: Kursmaterialien, ggf. Beispieldatensätze und Präsentationsaufnahmen\nE-Mail: persönliche Anliegen\n\n\n\nKurze Vorführung der Webseite\nZulip Frage/Probleme bei Registrierung?\nOptional: Github/OSF"
-  },
-  {
-    "objectID": "slides/slides-01.html#what-is-expected",
-    "href": "slides/slides-01.html#what-is-expected",
-    "title": "Kick-Off",
-    "section": "What is expected",
-    "text": "What is expected\nLeistungsanforderungen & Prüfungsleistungen\n\n\n\n\n\n\n\nRegelmäßige Teilnahme\n\nmindestens 80% der Sitzungen\nmax. 2 unentschuldigte Fehltermine\n\n\n\n\n\n\n\nPortfolio\n\nVerschiedene Teilleistungen (ins. 100 Punkte)\n\n\n\n\n\nFrage: Syllabus gelesen?\nFrage: Assignments angeschaut?"
-  },
-  {
-    "objectID": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
-    "href": "slides/slides-01.html#schritt-für-schritt-zum-ziel",
-    "title": "Kick-Off",
-    "section": "Schritt für Schritt zum Ziel",
-    "text": "Schritt für Schritt zum Ziel\nDas Portfolio im Überblick\n\n\nAusführliche Informationen zu den einzelnen Portfolio-Elementen finden Sie auf der Kursseite unter Assignments.\n\n\n\nNur Short Report am Ende des Semesters\nGgf. wird Bewertungsschema angepasst\n“Ideal-Konzept” vs. Realität (bedingt durch Diskrepanz zwischen Anmeldungen & Teilnahme)"
-  },
-  {
-    "objectID": "slides/slides-01.html#präsentation",
-    "href": "slides/slides-01.html#präsentation",
-    "title": "Kick-Off",
-    "section": "👥 Präsentation",
-    "text": "👥 Präsentation\n💡 Theoretische & methodische Grundlage für das Mini-Projekt\n\nUmfang: maximal 30 Minuten\nZiel: Überblick über das Thema der zentralen Texte geben, z.B. zentrale Begriffe, Definitionen und Merkmale der jeweiligen Plattform, Methode und/oder des Tools\nLiteratur wird zur Verfügung gestellt\n\n\nBessonderheit: vorheriges Feedbackgespräch"
-  },
-  {
-    "objectID": "slides/slides-01.html#project-topic-ideas",
-    "href": "slides/slides-01.html#project-topic-ideas",
-    "title": "Kick-Off",
-    "section": "👥 Project topic idea(s)",
-    "text": "👥 Project topic idea(s)\n💡 Projektidee vorstellen & weiterentwickeln\n\nUmfang: maximal 10 Minuten & 5 Slides\nZiel: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback\nRaum für Fragen und Austausch zwischen den verschiedenen Projektgruppen\n\n\nBessonderheit: Einzige Leistung, die für beide Projekte erbracht werden muss."
-  },
-  {
-    "objectID": "slides/slides-01.html#project-proposal",
-    "href": "slides/slides-01.html#project-proposal",
-    "title": "Kick-Off",
-    "section": "👥 Project proposal",
-    "text": "👥 Project proposal\n💡 Erster Entwurf des Written short report\n\nUmfang: mindestens 500 Wörter\nZiel: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie\nFokus auf drei “Abschnitte”: Einleitung, Datengrundlage und methodisches Vorgehen\n\n\nBessonderheit: Grundlage für das Peer Review\n\n\n(Teilweise) Während des Semesters"
-  },
-  {
-    "objectID": "slides/slides-01.html#peer-review",
-    "href": "slides/slides-01.html#peer-review",
-    "title": "Kick-Off",
-    "section": "👤 Peer Review",
-    "text": "👤 Peer Review\n💡 Feedback für Bericht geben & bekommmen\n\nUmfang: Durcharbeiten eines Peer-Review-Formulars\nZiel(e):\n\nLernen, andere Projekte zu bewerten und konstruktives Feedback zu schreiben\nZusätzliches Feedback über das eigene Projekte erhalten, dass für den finalen Written short report berücksichtigt werden kann\n\n\n\nBesonderheit: Individuelles Assigment!\n\n\n(Teilweise) Während des Semesters"
-  },
-  {
-    "objectID": "slides/slides-01.html#short-report",
-    "href": "slides/slides-01.html#short-report",
-    "title": "Kick-Off",
-    "section": "👥 Short Report",
-    "text": "👥 Short Report\n💡 Zusammenführung der einzelnen Teileistungen\n\n\nUmfang:\n\n750 bis 1000 Wörter pro Person umfassen.\nBei einem Gruppenbericht skaliert die Anzahl der Wörter mit einem Faktor von 0,8 pro Person (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).\n\nZiel(e):\n\nmindestens eine der vorgestellten Methoden oder Daten verwendet, um ein Thema Ihrer Wahl zu erforschen.\nKenntnisse der in diesem Kurs behandelten Themen (und darüber hinaus, wenn Sie möchten!) unter Beweis stellen und diese auf einen Datensatz anwenden, um ihn auf sinnvolle Weise zu analysieren.\n\n\n\nBesonderheit: Abgabe als Quarto-Dokument (& PDF)\n\n\nFinale Abgabe erst nach Ende des Semesters"
-  },
-  {
-    "objectID": "slides/slides-01.html#drei-themenblöcke",
-    "href": "slides/slides-01.html#drei-themenblöcke",
-    "title": "Kick-Off",
-    "section": "Drei Themenblöcke",
-    "text": "Drei Themenblöcke\nStruktur und Aufbau des Seminars"
-  },
-  {
-    "objectID": "slides/slides-01.html#about-r",
-    "href": "slides/slides-01.html#about-r",
-    "title": "Kick-Off",
-    "section": "About R …",
-    "text": "About R …"
-  },
-  {
-    "objectID": "slides/slides-01.html#trust-the-process",
-    "href": "slides/slides-01.html#trust-the-process",
-    "title": "Kick-Off",
-    "section": "Trust the process",
-    "text": "Trust the process\nDer Einsatz von R bzw. RStudio im Kurs\nWarum?\n\nKostenlose Software mit vielen nützlichen und beginner-friendly Tutorials\nR or Python? Both!\n\nIm Kurs:\n\nBestehende R-Kenntnisse sind förderlich, aber nicht zwigend notwendig, wichtiger sind praktische Erfahrung im syntaxbasierten Arbeiten\nLearn to code by example: Code von Sitzungen & Beispielen wird bereitgestellt (ggf. durch Showcases)\nPflicht: Basiskurs R/RStudio der FAU\nNützliche Quellen auf Kursseite unter Computing"
-  },
-  {
-    "objectID": "slides/slides-01.html#theorie-meets-praxis",
-    "href": "slides/slides-01.html#theorie-meets-praxis",
-    "title": "Kick-Off",
-    "section": "Theorie meets Praxis",
-    "text": "Theorie meets Praxis\nProjektarbeit in Kleingruppen\nDurchführung von zwei Miniprojekte (📁) mit je vier Sitzungen:\n\n📚 Theoretische Grundlage aus der Kommunikationswissenschaft\n📦 Zentrale Methode der Datenerhebung im Kontext des Miniprojektes\n🔨 Vorstellung & Anwendung von Methoden & Analysestrategie\n📊 Vorstellung & Diskussion von Projektideen\n\n💡 Idee:\n\nWissen aneignen ➞ anwenden ➞ teilen/präsentieren ➞ diskutieren 🔄"
-  },
-  {
-    "objectID": "slides/slides-01.html#typische-session",
-    "href": "slides/slides-01.html#typische-session",
-    "title": "Kick-Off",
-    "section": "Typische Session",
-    "text": "Typische Session\nfür 📚, 📦 & 🔨: Erst Präsentation, dann Vertiefung\n\n\nPräsentation (ca. 30-45 Min)\n\nUmfasst eine bzw. Ihre Präsentation (inkl. Zeit für Fragen und Diskussionen)\nOption auf weitere, offenere Diskussion im Kurs\n\n\nGroup Activity (ca. 45 - 60 Min)\n\nkleine Gruppenarbeiten zur Vertiefung\nvariiert abhängig vom Thema der jeweiligen Sitzung\nBeispiele:\n\nAnwendung von Tool/Methode mit anschließender kritschen Diskussion\nErstellung eines einfachen Forschungs- oder Analysedesign"
-  },
-  {
-    "objectID": "slides/slides-01.html#typische-session-1",
-    "href": "slides/slides-01.html#typische-session-1",
-    "title": "Kick-Off",
-    "section": "Typische Session",
-    "text": "Typische Session\nfür 📊: Pitch ➞ Diskussion ➞ Repeat\n\n\nProject topic idea(s) (ca 5-10 Min)\n\nkurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),\nkurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)\nErgebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll (2 Folien).\n\n\nFragen & Diskussion (ca 5-10 Min)\n\nZeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.\n\n\n\n\n🔁 für jede Gruppe\n\n\n\nStatus bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)"
-  },
-  {
-    "objectID": "slides/slides-01.html#vorläufiger-seminarplan",
-    "href": "slides/slides-01.html#vorläufiger-seminarplan",
-    "title": "Kick-Off",
-    "section": "(Vorläufiger) Seminarplan",
-    "text": "(Vorläufiger) Seminarplan\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nDBD: Overview\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n\n    6\n\n06.12.2023\n\n🔨 Text as data\n\nChristoph Adrian\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n10.01.2024\n\n📚 Media habits & routines\n\n\n    10\n\n17.01.2024\n\n📦 Data donation methods\n\n\n    11\n\n24.01.2024\n\n🔨 Working data logs\n\nChristoph Adrian\n\n    12\n\n31.01.2024\n\n📊 Presentation & Discussion\n\n\n    13\n\n07.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
-  },
-  {
-    "objectID": "slides/slides-01.html#talking-about-disconnecting",
-    "href": "slides/slides-01.html#talking-about-disconnecting",
-    "title": "Kick-Off",
-    "section": "Talking about disconnecting",
-    "text": "Talking about disconnecting\nProjekt 1: #digitaldetox auf sozialen Medien\n\n\n\n\n\n\nQuelle: dup-magazin.de\n\n\n\n\nProjektaufbau\n\nTheoretische Hintergrund: Digital disconnection\nAnalyse von Social Media Post mit #digitaldetox\nArchiv-Daten (Twitter) oder eigene Datenerhebung\nFokus auf Inhalt (Diskurs, andere Hashtags) oder “Akteure”/Accounts"
-  },
-  {
-    "objectID": "slides/slides-01.html#studying-problems-not-problematic-usage",
-    "href": "slides/slides-01.html#studying-problems-not-problematic-usage",
-    "title": "Kick-Off",
-    "section": "Studying problems, not problematic usage?",
-    "text": "Studying problems, not problematic usage?\nProjekt 2: Mediennutzungsgewohnheiten und Wohlbefinden\n\n\n\n\n\n\n\n\n\n\nProjektaufbau\n\nHabitualisierte / routinemäßige Mediennutzung\nErhebung, Aufbereitung und Analyse von Logging-Daten\nEigene Erhebung, Data Download Packages, API-Zugang\nFokus auf Datenerhebungs & -aufbereitungsprozess"
-  },
-  {
-    "objectID": "slides/slides-01.html#please-state-your-preference",
-    "href": "slides/slides-01.html#please-state-your-preference",
-    "title": "Kick-Off",
-    "section": "Please state your preference",
-    "text": "Please state your preference\nVergabe der Präsentationsthemen\n\n\n\nBitte scannen Sie den QR-Code oder nutzen Sie folgenden Link und geben Sie Ihre Themenpräferenz an:\n\nhttps://simpleassign.com/poll/-NhW_EY5JXFZ25ZcYZbx"
-  },
-  {
-    "objectID": "slides/slides-01.html#lets-spin-the-wheel",
-    "href": "slides/slides-01.html#lets-spin-the-wheel",
-    "title": "Kick-Off",
-    "section": "Let’s spin the wheel?!",
-    "text": "Let’s spin the wheel?!\nZuteilung der Präsentationsthemen\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Session\n      Datum\n      Topic\n    \n  \n  \n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\n    5\n\n29.11.2023\n\n📦 Data collection methods\n\n    9\n\n10.01.2024\n\n📚 Media habits & routines\n\n    10\n\n17.01.2024\n\n📦 Data donation methods\n\n  \n  \n  \n\n\n\n\n\nIn case of emergency: Wheel of Names"
-  },
-  {
-    "objectID": "slides/slides-01.html#before-we-meet-again",
-    "href": "slides/slides-01.html#before-we-meet-again",
-    "title": "Kick-Off",
-    "section": "Before we meet again",
-    "text": "Before we meet again\nHinweise und offene Fragen\nHinweise:\n\nLernen Sie die Kursseite & Zulip kennen! Und checken Sie die Infos () zur nächten Sitzung.\nBis zum 13.11.: Basiskurs R/RStudio durcharbeiten. Bitte senden Sie das Kurszertifikat an christoph.adrian@fau.de\n\nFragen:\n\nWhy no English? 🤷\nHaben Sie noch Fragen?"
-  },
-  {
-    "objectID": "slides/slides-01.html#literatur",
-    "href": "slides/slides-01.html#literatur",
-    "title": "Kick-Off",
-    "section": "Literatur",
-    "text": "Literatur\n\n\nWeller, K. (2021). A short introduction to computational social science and digital behavioral data. https://www.gesis.org/fileadmin/user_upload/MeettheExperts/GESIS_Meettheexperts_Introductioncss.pdf\n\n\n\n\n\nHome"
-  },
-  {
-    "objectID": "sessions/session-02.html",
-    "href": "sessions/session-02.html",
-    "title": "Session 2",
-    "section": "",
-    "text": "✍️ Start working on Basiskurs R/RStudio. Dealine for the course certificate (via mail to christoph.adrian@fau.de) is 13.11.2023\n\n\n\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Digital trace data (1st ed., pp. 100–118). Routledge. https://www.taylorfrancis.com/books/9781003024583/chapters/10.4324/9781003024583-8\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013"
-  },
-  {
-    "objectID": "sessions/session-02.html#prepare",
-    "href": "sessions/session-02.html#prepare",
-    "title": "Session 2",
-    "section": "",
-    "text": "✍️ Start working on Basiskurs R/RStudio. Dealine for the course certificate (via mail to christoph.adrian@fau.de) is 13.11.2023\n\n\n\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Digital trace data (1st ed., pp. 100–118). Routledge. https://www.taylorfrancis.com/books/9781003024583/chapters/10.4324/9781003024583-8\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013"
-  },
-  {
-    "objectID": "sessions/session-02.html#participate",
-    "href": "sessions/session-02.html#participate",
-    "title": "Session 2",
+    "objectID": "sessions/session-03.html#participate",
+    "href": "sessions/session-03.html#participate",
+    "title": "Session 3",
     "section": "Participate",
-    "text": "Participate\n🖥️ Session 02\n\n\nBack to course schedule ⏎"
+    "text": "Participate\n🖥️ Session 03(🚧 Still under construction)\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-05.html",
-    "href": "sessions/session-05.html",
-    "title": "Session 5",
+    "objectID": "sessions/session-01.html",
+    "href": "sessions/session-01.html",
+    "title": "Session 1",
     "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nChen, Y., Peng, Z., Kim, S.-H., & Choi, C. W. (2023). What We Can Do and Cannot Do with Topic Modeling: A Systematic Review. Communication Methods and Measures, 17(2), 111–130. https://doi.org/10.1080/19312458.2023.2167965\nFriemel, T. N. (2017). Social Network Analysis (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–14). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0235\nHase, V. (2023). Automated Content Analysis (F. Oehmer-Pedrazzi, S. H. Kessler, E. Humprecht, K. Sommer, & L. Castro, Eds.; pp. 23–36). Springer Fachmedien Wiesbaden. https://link.springer.com/10.1007/978-3-658-36179-2_3\nHimelboim, I. (2017). Social Network Analysis (Social Media) (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–15). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0236\nMaier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., & Adam, S. (2018). Applying LDA Topic Modeling in Communication Research: Toward a Valid and Reliable Methodology. Communication Methods and Measures, 12(2-3), 93–118. https://doi.org/10.1080/19312458.2018.1430754"
+    "text": "Important\n\n\n\nPlease make sure that you answered the survey send to you by (StudOn) mail."
   },
   {
-    "objectID": "sessions/session-05.html#mandatory-literature",
-    "href": "sessions/session-05.html#mandatory-literature",
-    "title": "Session 5",
+    "objectID": "sessions/session-01.html#prepare",
+    "href": "sessions/session-01.html#prepare",
+    "title": "Session 1",
+    "section": "Prepare",
+    "text": "Prepare\n✍️ Fill out the short survey before the first session (see  StudOn for Link)\n📨 Join  Zulip using the invitation (please check your email address used for StudOn).\n📖 Read the syllabus"
+  },
+  {
+    "objectID": "sessions/session-01.html#participate",
+    "href": "sessions/session-01.html#participate",
+    "title": "Session 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Session 01 - Kick Off\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "sessions/session-04.html",
+    "href": "sessions/session-04.html",
+    "title": "Session 4",
     "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nChen, Y., Peng, Z., Kim, S.-H., & Choi, C. W. (2023). What We Can Do and Cannot Do with Topic Modeling: A Systematic Review. Communication Methods and Measures, 17(2), 111–130. https://doi.org/10.1080/19312458.2023.2167965\nFriemel, T. N. (2017). Social Network Analysis (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–14). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0235\nHase, V. (2023). Automated Content Analysis (F. Oehmer-Pedrazzi, S. H. Kessler, E. Humprecht, K. Sommer, & L. Castro, Eds.; pp. 23–36). Springer Fachmedien Wiesbaden. https://link.springer.com/10.1007/978-3-658-36179-2_3\nHimelboim, I. (2017). Social Network Analysis (Social Media) (J. Matthes, C. S. Davis, & R. F. Potter, Eds.; 1st ed., pp. 1–15). Wiley. https://onlinelibrary.wiley.com/doi/10.1002/9781118901731.iecrm0236\nMaier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., & Adam, S. (2018). Applying LDA Topic Modeling in Communication Research: Toward a Valid and Reliable Methodology. Communication Methods and Measures, 12(2-3), 93–118. https://doi.org/10.1080/19312458.2018.1430754"
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nGardner, B. (2022). Habit and behavioural complexity: habitual instigation and execution as predictors of simple and complex behaviours. Current Research in Behavioral Sciences, 3, 100081. https://doi.org/10.1016/j.crbeha.2022.100081\nMeier, A., & Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. Communication Research, 48(8), 1182–1209. https://doi.org/gjf96r\nNaab, T. K., & Schnauber, A. (2014). Habitual Initiation of Media Use and a Response-Frequency Measure for Its Examination. Media Psychology, 19(1), 126–155. https://doi.org/10.1080/15213269.2014.951055\nSchnauber-Stockmann, A., & Mangold, F. (2020). Day-to-day routines of media platform use in the digital age: A structuration perspective. Communication Monographs, 87(4), 464–483. https://doi.org/10.1080/03637751.2020.1758336\nSchnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
   },
   {
-    "objectID": "sessions/session-05.html#cat--toolkit",
-    "href": "sessions/session-05.html#cat--toolkit",
-    "title": "Session 5",
-    "section": "🐈🐈 4CAT 🐈🐈-Toolkit",
-    "text": "🐈🐈 4CAT 🐈🐈-Toolkit\n\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\nPeeters, S. (2022). Zeeschuimer. Zenodo. https://zenodo.org/record/6826877"
+    "objectID": "sessions/session-04.html#mandatory-literature",
+    "href": "sessions/session-04.html#mandatory-literature",
+    "title": "Session 4",
+    "section": "",
+    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nGardner, B. (2022). Habit and behavioural complexity: habitual instigation and execution as predictors of simple and complex behaviours. Current Research in Behavioral Sciences, 3, 100081. https://doi.org/10.1016/j.crbeha.2022.100081\nMeier, A., & Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. Communication Research, 48(8), 1182–1209. https://doi.org/gjf96r\nNaab, T. K., & Schnauber, A. (2014). Habitual Initiation of Media Use and a Response-Frequency Measure for Its Examination. Media Psychology, 19(1), 126–155. https://doi.org/10.1080/15213269.2014.951055\nSchnauber-Stockmann, A., & Mangold, F. (2020). Day-to-day routines of media platform use in the digital age: A structuration perspective. Communication Monographs, 87(4), 464–483. https://doi.org/10.1080/03637751.2020.1758336\nSchnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
   },
   {
-    "objectID": "sessions/session-05.html#other-additional-readings",
-    "href": "sessions/session-05.html#other-additional-readings",
-    "title": "Session 5",
-    "section": "Other additional readings",
-    "text": "Other additional readings\n\nTopic Modeling\n\nEgger, R., & Yu, J. (2022). A topic modeling comparison between LDA, NMF, Top2Vec, and BERTopic to demystify twitter posts. Frontiers in Sociology, 7, 886498. https://doi.org/10.3389/fsoc.2022.886498\nChang, J., Boyd-Graber, J., Gerrish, S., Wang, C., & Blei, D. (2009). Reading tea leaves: How humans interpret topic models. 32, 288–296.\n\n\n\nTwitter\n\nBanda, J. M., Tekumalla, R., Wang, G., Yu, J., Liu, T., Ding, Y., Artemova, E., Tutubalina, E., & Chowell, G. (2021). A Large-Scale COVID-19 Twitter Chatter Dataset for Open Scientific ResearchAn International Collaboration. Epidemiologia, 2(3), 315–324. https://doi.org/10.3390/epidemiologia2030024\nJungherr, A. (2016). Twitter use in election campaigns: A systematic literature review. Journal of Information Technology & Politics, 13(1), 72–91. https://doi.org/10.1080/19331681.2015.1132401\nKarami, A., Lundy, M., Webb, F., & Dwivedi, Y. K. (2020). Twitter and research: A systematic literature review through text mining. IEEE Access, 8, 67698–67717. https://doi.org/10.1109/ACCESS.2020.2983656\nMueller, S. D., & Saeltzer, M. (2022). Twitter made me do it! Twitter’s tonal platform incentive and its effect on online campaigning. Information, Communication & Society, 25(9), 1247–1272. https://doi.org/10.1080/1369118X.2020.1850841\nMünch, F. V., Thies, B., Puschmann, C., & Bruns, A. (2021). Walking Through Twitter: Sampling a Language-Based Follow Network of Influential Twitter Accounts. Social Media + Society, 7(1), 205630512098447. https://doi.org/10.1177/2056305120984475\nVasko, V., & Trilling, D. (2019). A permanent campaign? Tweeting differences among members of Congress between campaign and routine periods. Journal of Information Technology & Politics, 16(4), 342–359. https://doi.org/10.1080/19331681.2019.1657046\nYuan, S., Chen, Y., Vojta, S., & Chen, Y. (2022). More aggressive, more retweets? Exploring the effects of aggressive climate change messages on Twitter. New Media & Society, 146144482211222. https://doi.org/10.1177/14614448221122202\n\n\n\nBack to course schedule ⏎"
+    "objectID": "sessions/session-04.html#other-readings",
+    "href": "sessions/session-04.html#other-readings",
+    "title": "Session 4",
+    "section": "Other readings",
+    "text": "Other readings\n\nAnderson, I. A., & Wood, W. (2020). Habits and the electronic herd: The psychology behind social media’s successes and failures. Consumer Psychology Review, 4(1), 83–99. https://doi.org/10.1002/arcp.1063\nAnderson, I. A., & Wood, W. (2023). Social motivations’ limited influence on habitual behavior: Tests from social media engagement. Motivation Science, 9(2), 107–119. https://doi.org/10.1037/mot0000292\nBayer, J. B., Anderson, I. A., & Tokunaga, R. S. (2022). Building and breaking social media habits. Current Opinion in Psychology, 45, 101303. https://doi.org/10.1016/j.copsyc.2022.101303\nBayer, J. B., & LaRose, R. (2018). Technology habits: Progress, problems, and prospects (pp. 111–130). Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0_7\nCarden, L., & Wood, W. (2018). Habit formation and change. Current Opinion in Behavioral Sciences, 20, 117–122. https://doi.org/10.1016/j.cobeha.2017.12.009\nKatevas, K., Arapakis, I., & Pielot, M. (2018). Typical phone use habits. Proceedings of the 20th International Conference on Human-Computer Interaction with Mobile Devices and Services. https://doi.org/10.1145/3229434.3229441\nKruglanski, A. W., & Szumowska, E. (2020). Habitual Behavior Is Goal-Driven. Perspectives on Psychological Science, 15(5), 1256–1271. https://doi.org/10.1177/1745691620917676\nMazar, A., & Wood, W. (2018). Defining habit in psychology (pp. 13–29). Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0_2\nMeier, A. (2021). Studying problems, not problematic usage: Do mobile checking habits increase procrastination and decrease well-being? Mobile Media & Communication, 10(2), 272–293. https://doi.org/10.1177/20501579211029326\nMeier, A., Beyens, I., Siebers, T., Pouwels, J. L., & Valkenburg, P. M. (2023). Habitual social media and smartphone use are linked to task delay for some, but not all, adolescents. Journal of Computer-Mediated Communication, 28(3). https://doi.org/10.1093/jcmc/zmad008\nNaab, T. K., Karnowski, V., & Schlütz, D. (2018). Reporting Mobile Social Media Use: How Survey and Experience Sampling Measures Differ. Communication Methods and Measures, 13(2), 126–147. https://doi.org/10.1080/19312458.2018.1555799\nOulasvirta, A., Rattenbury, T., Ma, L., & Raita, E. (2011). Habits make smartphone use more pervasive. Personal and Ubiquitous Computing, 16(1), 105–114. https://doi.org/10.1007/s00779-011-0412-2\nSchnauber, A. (2017). Medienselektion im alltag. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-15441-7\nSchnauber-Stockmann, A., Meier, A., & Reinecke, L. (2018). Procrastination out of Habit? The Role of Impulsive Versus Reflective Media Selection in Procrastinatory Media Use. Media Psychology, 21(4), 640–668. https://doi.org/10.1080/15213269.2018.1476156\nSchnauber-Stockmann, A., & Naab, T. K. (2018). The process of forming a mobile media habit: results of a longitudinal study in a real-world setting. Media Psychology, 22(5), 714–742. https://doi.org/10.1080/15213269.2018.1513850\nVerplanken, B. (Ed.). (2018). The psychology of habit. Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0\nWood, W., & Rünger, D. (2016). Psychology of Habit. Annual Review of Psychology, 67(1), 289–314. https://doi.org/10.1146/annurev-psych-122414-033417\nWood, W., Mazar, A., & Neal, D. T. (2021). Habits and Goals in Human Behavior: Separate but Interacting Systems. Perspectives on Psychological Science, 17(2), 590–605. https://doi.org/10.1177/1745691621994226\n\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-10.html",
-    "href": "sessions/session-10.html",
-    "title": "Session 9",
+    "objectID": "sessions/session-06.html",
+    "href": "sessions/session-06.html",
+    "title": "Session 6",
     "section": "",
     "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nBaumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\n\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\n\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-10.html#mandatory-literature",
-    "href": "sessions/session-10.html#mandatory-literature",
-    "title": "Session 9",
+    "objectID": "sessions/session-06.html#mandatory-literature",
+    "href": "sessions/session-06.html#mandatory-literature",
+    "title": "Session 6",
     "section": "",
     "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nBaumgartner, S. E., Sumter, S. R., Petkevič, V., & Wiradhany, W. (2022). A Novel iOS Data Donation Approach: Automatic Processing, Compliance, and Reactivity in a Longitudinal Study. Social Science Computer Review, 089443932110710. https://doi.org/10.1177/08944393211071068\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 1–18. https://doi.org/10.1080/19312458.2023.2181319\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\nDriel, I. I. van, Giachanou, A., Pouwels, J. L., Boeschoten, L., Beyens, I., & Valkenburg, P. M. (2022). Promises and Pitfalls of Social Media Data Donations. Communication Methods and Measures, 1–17. https://doi.org/10.1080/19312458.2022.2109608\nYee, A. Z. H., Yu, R., Lim, S. S., Lim, K. H., Dinh, T. T. A., Loh, L., Hadianto, A., & Quizon, M. (2022). ScreenLife capture: An open-source and user-friendly framework for collecting screenome data from android smartphones. https://osf.io/sphq4\n\n\n\n\nBreuer, J., Kmetty, Z., Haim, M., & Stier, S. (2022). User-centric approaches for collecting Facebook data in the ‘post-API age’: experiences from two studies and recommendations for future research. Information, Communication & Society, 1–20. https://doi.org/10.1080/1369118X.2022.2097015\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). Application programming interfaces and web data for social research (1st ed., pp. 33–45). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-4\nEngel, U., Quan-Haase, A., Liu, S. X., & Lyberg, L. (2021). A brief history of APIs (1st ed., pp. 17–32). Routledge. https://www.taylorfrancis.com/books/9781003025245/chapters/10.4324/9781003025245-3\nJünger, J. (2022). Verhaltens-, Forschungs- oder Datenschnittstellen?: Application Programming Interfaces (APIs) aus diachron und synchron vergleichender Perspektive. https://doi.org/10.48541/DCR.V10.6\nLomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256–265. https://doi.org/10.1080/01972243.2014.915276\nOhme, J., Araujo, T., Vreese, C. H. de, & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. Mobile Media & Communication, 9(2), 293–313. https://doi.org/10.1177/2050157920959106\nPuschmann, C., & Ausserhofer, J. (2017). Social data APIs (M. T. Schäfer & K. Es, van, Eds.). Amsterdam University Press. http://en.aup.nl/books/9789462981362-the-datafied-society.html\nSloan, L., & Quan-Haase, A. (2016). The role of APIs in data sampling from social media (pp. 146–160). SAGE Publications Ltd. http://methods.sagepub.com/book/the-sage-handbook-of-social-media-research-methods/i1486.xml\n\n\n\nBack to course schedule ⏎"
   },
@@ -669,21 +711,14 @@
     "href": "sessions/session-09.html",
     "title": "Session 9",
     "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nGardner, B. (2022). Habit and behavioural complexity: habitual instigation and execution as predictors of simple and complex behaviours. Current Research in Behavioral Sciences, 3, 100081. https://doi.org/10.1016/j.crbeha.2022.100081\nMeier, A., & Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. Communication Research, 48(8), 1182–1209. https://doi.org/gjf96r\nNaab, T. K., & Schnauber, A. (2014). Habitual Initiation of Media Use and a Response-Frequency Measure for Its Examination. Media Psychology, 19(1), 126–155. https://doi.org/10.1080/15213269.2014.951055\nSchnauber-Stockmann, A., & Mangold, F. (2020). Day-to-day routines of media platform use in the digital age: A structuration perspective. Communication Monographs, 87(4), 464–483. https://doi.org/10.1080/03637751.2020.1758336\nSchnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
+    "text": "Wiedemann, G. (2022). The world of topic modeling in r. Medien & Kommunikationswissenschaft, 70(3), 286–291. https://doi.org/10.5771/1615-634X-2022-3-286\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "sessions/session-09.html#mandatory-literature",
-    "href": "sessions/session-09.html#mandatory-literature",
+    "objectID": "sessions/session-09.html#other-additional-readings",
+    "href": "sessions/session-09.html#other-additional-readings",
     "title": "Session 9",
     "section": "",
-    "text": "All articles of this section have to be read & used by the presenting group\n\n\n\n\nGardner, B. (2022). Habit and behavioural complexity: habitual instigation and execution as predictors of simple and complex behaviours. Current Research in Behavioral Sciences, 3, 100081. https://doi.org/10.1016/j.crbeha.2022.100081\nMeier, A., & Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. Communication Research, 48(8), 1182–1209. https://doi.org/gjf96r\nNaab, T. K., & Schnauber, A. (2014). Habitual Initiation of Media Use and a Response-Frequency Measure for Its Examination. Media Psychology, 19(1), 126–155. https://doi.org/10.1080/15213269.2014.951055\nSchnauber-Stockmann, A., & Mangold, F. (2020). Day-to-day routines of media platform use in the digital age: A structuration perspective. Communication Monographs, 87(4), 464–483. https://doi.org/10.1080/03637751.2020.1758336\nSchnauber-Stockmann, A., Scharkow, M., & Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. Media Psychology, 1–23. https://doi.org/10.1080/15213269.2022.2121286"
-  },
-  {
-    "objectID": "sessions/session-09.html#other-readings",
-    "href": "sessions/session-09.html#other-readings",
-    "title": "Session 9",
-    "section": "Other readings",
-    "text": "Other readings\n\nAnderson, I. A., & Wood, W. (2020). Habits and the electronic herd: The psychology behind social media’s successes and failures. Consumer Psychology Review, 4(1), 83–99. https://doi.org/10.1002/arcp.1063\nAnderson, I. A., & Wood, W. (2023). Social motivations’ limited influence on habitual behavior: Tests from social media engagement. Motivation Science, 9(2), 107–119. https://doi.org/10.1037/mot0000292\nBayer, J. B., Anderson, I. A., & Tokunaga, R. S. (2022). Building and breaking social media habits. Current Opinion in Psychology, 45, 101303. https://doi.org/10.1016/j.copsyc.2022.101303\nBayer, J. B., & LaRose, R. (2018). Technology habits: Progress, problems, and prospects (pp. 111–130). Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0_7\nCarden, L., & Wood, W. (2018). Habit formation and change. Current Opinion in Behavioral Sciences, 20, 117–122. https://doi.org/10.1016/j.cobeha.2017.12.009\nKatevas, K., Arapakis, I., & Pielot, M. (2018). Typical phone use habits. Proceedings of the 20th International Conference on Human-Computer Interaction with Mobile Devices and Services. https://doi.org/10.1145/3229434.3229441\nKruglanski, A. W., & Szumowska, E. (2020). Habitual Behavior Is Goal-Driven. Perspectives on Psychological Science, 15(5), 1256–1271. https://doi.org/10.1177/1745691620917676\nMazar, A., & Wood, W. (2018). Defining habit in psychology (pp. 13–29). Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0_2\nMeier, A. (2021). Studying problems, not problematic usage: Do mobile checking habits increase procrastination and decrease well-being? Mobile Media & Communication, 10(2), 272–293. https://doi.org/10.1177/20501579211029326\nMeier, A., Beyens, I., Siebers, T., Pouwels, J. L., & Valkenburg, P. M. (2023). Habitual social media and smartphone use are linked to task delay for some, but not all, adolescents. Journal of Computer-Mediated Communication, 28(3). https://doi.org/10.1093/jcmc/zmad008\nNaab, T. K., Karnowski, V., & Schlütz, D. (2018). Reporting Mobile Social Media Use: How Survey and Experience Sampling Measures Differ. Communication Methods and Measures, 13(2), 126–147. https://doi.org/10.1080/19312458.2018.1555799\nOulasvirta, A., Rattenbury, T., Ma, L., & Raita, E. (2011). Habits make smartphone use more pervasive. Personal and Ubiquitous Computing, 16(1), 105–114. https://doi.org/10.1007/s00779-011-0412-2\nSchnauber, A. (2017). Medienselektion im alltag. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-15441-7\nSchnauber-Stockmann, A., Meier, A., & Reinecke, L. (2018). Procrastination out of Habit? The Role of Impulsive Versus Reflective Media Selection in Procrastinatory Media Use. Media Psychology, 21(4), 640–668. https://doi.org/10.1080/15213269.2018.1476156\nSchnauber-Stockmann, A., & Naab, T. K. (2018). The process of forming a mobile media habit: results of a longitudinal study in a real-world setting. Media Psychology, 22(5), 714–742. https://doi.org/10.1080/15213269.2018.1513850\nVerplanken, B. (Ed.). (2018). The psychology of habit. Springer International Publishing. https://doi.org/10.1007/978-3-319-97529-0\nWood, W., & Rünger, D. (2016). Psychology of Habit. Annual Review of Psychology, 67(1), 289–314. https://doi.org/10.1146/annurev-psych-122414-033417\nWood, W., Mazar, A., & Neal, D. T. (2021). Habits and Goals in Human Behavior: Separate but Interacting Systems. Perspectives on Psychological Science, 17(2), 590–605. https://doi.org/10.1177/1745691621994226\n\n\n\nBack to course schedule ⏎"
+    "text": "Wiedemann, G. (2022). The world of topic modeling in r. Medien & Kommunikationswissenschaft, 70(3), 286–291. https://doi.org/10.5771/1615-634X-2022-3-286\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "computing/computing-cheatsheets.html",

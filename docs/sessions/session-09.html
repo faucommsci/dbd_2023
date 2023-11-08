@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sessions/session-10.html" rel="next">
-<link href="../sessions/session-05.html" rel="prev">
 <link href="../img/logo_fau_red.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -68,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Digital behavioral data - Session 9">
-<meta property="og:description" content="📂 P2: 📚 Media routines &amp; habits">
+<meta property="og:description" content="📂 P1: 🔨 Text as data in R">
 <meta property="og:site-name" content="Digital behavioral data">
 </head>
 
@@ -81,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/session-01.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/session-09.html">Session 09</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Session 9</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -149,13 +147,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">Sessions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/session-01.html" class="sidebar-item-text sidebar-link">
@@ -166,6 +164,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../sessions/session-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Session 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 03</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -182,14 +186,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-09.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Session 09</span></a>
+  <a href="../sessions/session-06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 06</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Session 10</span></a>
+  <a href="../sessions/session-07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 07</span></a>
   </div>
 </li>
       </ul>
@@ -233,8 +237,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mandatory-literature" id="toc-mandatory-literature" class="nav-link active" data-scroll-target="#mandatory-literature">Mandatory literature</a></li>
-  <li><a href="#other-readings" id="toc-other-readings" class="nav-link" data-scroll-target="#other-readings">Other readings</a></li>
+  <li><a href="#other-additional-readings" id="toc-other-additional-readings" class="nav-link active" data-scroll-target="#other-additional-readings">Other additional readings</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/sessions/session-09.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -244,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Session 9</h1>
-<p class="subtitle lead">📂 P2: 📚 Media routines &amp; habits</p>
+<p class="subtitle lead">📂 P1: 🔨 Text as data in R</p>
 </div>
 
 
@@ -259,49 +262,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="mandatory-literature" class="level2">
-<h2 class="anchored" data-anchor-id="mandatory-literature">Mandatory literature</h2>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>All articles of this section have to be read &amp; used by the presenting group</p>
-</div>
-</div>
-</div>
+<!-- Add link CSS text as data -->
+<!-- Add link CSS topic Modeling -->
+<!-- Add link CCS network analysis -->
+<section id="other-additional-readings" class="level2">
+<h2 class="anchored" data-anchor-id="other-additional-readings">Other additional readings</h2>
 <ul>
-<li><p><span class="citation" data-cites="gardner2022">Gardner, B. (2022). Habit and behavioural complexity: habitual instigation and execution as predictors of simple and complex behaviours. <em>Current Research in Behavioral Sciences</em>, <em>3</em>, 100081. <a href="https://doi.org/10.1016/j.crbeha.2022.100081" role="doc-biblioref">https://doi.org/10.1016/j.crbeha.2022.100081</a></span></p></li>
-<li><p><span class="citation" data-cites="meier2021a">Meier, A., &amp; Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. <em>Communication Research</em>, <em>48</em>(8), 1182–1209. <a href="https://doi.org/gjf96r" role="doc-biblioref">https://doi.org/gjf96r</a></span></p></li>
-<li><p><span class="citation" data-cites="naab2014">Naab, T. K., &amp; Schnauber, A. (2014). Habitual Initiation of Media Use and a Response-Frequency Measure for Its Examination. <em>Media Psychology</em>, <em>19</em>(1), 126–155. <a href="https://doi.org/10.1080/15213269.2014.951055" role="doc-biblioref">https://doi.org/10.1080/15213269.2014.951055</a></span></p></li>
-<li><p><span class="citation" data-cites="schnauber-stockmann2020">Schnauber-Stockmann, A., &amp; Mangold, F. (2020). Day-to-day routines of media platform use in the digital age: A structuration perspective. <em>Communication Monographs</em>, <em>87</em>(4), 464–483. <a href="https://doi.org/10.1080/03637751.2020.1758336" role="doc-biblioref">https://doi.org/10.1080/03637751.2020.1758336</a></span></p></li>
-<li><p><span class="citation" data-cites="schnauber-stockmann2022">Schnauber-Stockmann, A., Scharkow, M., &amp; Breuer, J. (2022). Routines and the Predictability of Day-to-Day Web Use. <em>Media Psychology</em>, 1–23. <a href="https://doi.org/10.1080/15213269.2022.2121286" role="doc-biblioref">https://doi.org/10.1080/15213269.2022.2121286</a></span></p></li>
+<li><span class="citation" data-cites="wiedemann2022">Wiedemann, G. (2022). The world of topic modeling in r. <em>Medien &amp; Kommunikationswissenschaft</em>, <em>70</em>(3), 286–291. <a href="https://doi.org/10.5771/1615-634X-2022-3-286" role="doc-biblioref">https://doi.org/10.5771/1615-634X-2022-3-286</a></span></li>
 </ul>
-</section>
-<section id="other-readings" class="level2">
-<h2 class="anchored" data-anchor-id="other-readings">Other readings</h2>
-<ul>
-<li><p><span class="citation" data-cites="anderson2020">Anderson, I. A., &amp; Wood, W. (2020). Habits and the electronic herd: The psychology behind social media<span>’</span>s successes and failures. <em>Consumer Psychology Review</em>, <em>4</em>(1), 83–99. <a href="https://doi.org/10.1002/arcp.1063" role="doc-biblioref">https://doi.org/10.1002/arcp.1063</a></span></p></li>
-<li><p><span class="citation" data-cites="anderson2023">Anderson, I. A., &amp; Wood, W. (2023). Social motivations<span>’</span> limited influence on habitual behavior: Tests from social media engagement. <em>Motivation Science</em>, <em>9</em>(2), 107–119. <a href="https://doi.org/10.1037/mot0000292" role="doc-biblioref">https://doi.org/10.1037/mot0000292</a></span></p></li>
-<li><p><span class="citation" data-cites="bayer2022">Bayer, J. B., Anderson, I. A., &amp; Tokunaga, R. S. (2022). Building and breaking social media habits. <em>Current Opinion in Psychology</em>, <em>45</em>, 101303. <a href="https://doi.org/10.1016/j.copsyc.2022.101303" role="doc-biblioref">https://doi.org/10.1016/j.copsyc.2022.101303</a></span></p></li>
-<li><p><span class="citation" data-cites="bayer2018">Bayer, J. B., &amp; LaRose, R. (2018). <em>Technology habits: Progress, problems, and prospects</em> (pp. 111–130). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-97529-0_7" role="doc-biblioref">https://doi.org/10.1007/978-3-319-97529-0_7</a></span></p></li>
-<li><p><span class="citation" data-cites="carden2018">Carden, L., &amp; Wood, W. (2018). Habit formation and change. <em>Current Opinion in Behavioral Sciences</em>, <em>20</em>, 117–122. <a href="https://doi.org/10.1016/j.cobeha.2017.12.009" role="doc-biblioref">https://doi.org/10.1016/j.cobeha.2017.12.009</a></span></p></li>
-<li><p><span class="citation" data-cites="katevas2018">Katevas, K., Arapakis, I., &amp; Pielot, M. (2018). Typical phone use habits. <em>Proceedings of the 20th International Conference on Human-Computer Interaction with Mobile Devices and Services</em>. <a href="https://doi.org/10.1145/3229434.3229441" role="doc-biblioref">https://doi.org/10.1145/3229434.3229441</a></span></p></li>
-<li><p><span class="citation" data-cites="kruglanski2020">Kruglanski, A. W., &amp; Szumowska, E. (2020). Habitual Behavior Is Goal-Driven. <em>Perspectives on Psychological Science</em>, <em>15</em>(5), 1256–1271. <a href="https://doi.org/10.1177/1745691620917676" role="doc-biblioref">https://doi.org/10.1177/1745691620917676</a></span></p></li>
-<li><p><span class="citation" data-cites="mazar2018">Mazar, A., &amp; Wood, W. (2018). <em>Defining habit in psychology</em> (pp. 13–29). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-97529-0_2" role="doc-biblioref">https://doi.org/10.1007/978-3-319-97529-0_2</a></span></p></li>
-<li><p><span class="citation" data-cites="meier2021">Meier, A. (2021). Studying problems, not problematic usage: Do mobile checking habits increase procrastination and decrease well-being? <em>Mobile Media &amp; Communication</em>, <em>10</em>(2), 272–293. <a href="https://doi.org/10.1177/20501579211029326" role="doc-biblioref">https://doi.org/10.1177/20501579211029326</a></span></p></li>
-<li><p><span class="citation" data-cites="meier2023">Meier, A., Beyens, I., Siebers, T., Pouwels, J. L., &amp; Valkenburg, P. M. (2023). Habitual social media and smartphone use are linked to task delay for some, but not all, adolescents. <em>Journal of Computer-Mediated Communication</em>, <em>28</em>(3). <a href="https://doi.org/10.1093/jcmc/zmad008" role="doc-biblioref">https://doi.org/10.1093/jcmc/zmad008</a></span></p></li>
-<li><p><span class="citation" data-cites="naab2018">Naab, T. K., Karnowski, V., &amp; Schlütz, D. (2018). Reporting Mobile Social Media Use: How Survey and Experience Sampling Measures Differ. <em>Communication Methods and Measures</em>, <em>13</em>(2), 126–147. <a href="https://doi.org/10.1080/19312458.2018.1555799" role="doc-biblioref">https://doi.org/10.1080/19312458.2018.1555799</a></span></p></li>
-<li><p><span class="citation" data-cites="oulasvirta2011">Oulasvirta, A., Rattenbury, T., Ma, L., &amp; Raita, E. (2011). Habits make smartphone use more pervasive. <em>Personal and Ubiquitous Computing</em>, <em>16</em>(1), 105–114. <a href="https://doi.org/10.1007/s00779-011-0412-2" role="doc-biblioref">https://doi.org/10.1007/s00779-011-0412-2</a></span></p></li>
-<li><p><span class="citation" data-cites="schnauber2017">Schnauber, A. (2017). <em>Medienselektion im alltag</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-15441-7" role="doc-biblioref">https://doi.org/10.1007/978-3-658-15441-7</a></span></p></li>
-<li><p><span class="citation" data-cites="schnauber-stockmann2018">Schnauber-Stockmann, A., Meier, A., &amp; Reinecke, L. (2018). Procrastination out of Habit? The Role of Impulsive Versus Reflective Media Selection in Procrastinatory Media Use. <em>Media Psychology</em>, <em>21</em>(4), 640–668. <a href="https://doi.org/10.1080/15213269.2018.1476156" role="doc-biblioref">https://doi.org/10.1080/15213269.2018.1476156</a></span></p></li>
-<li><p><span class="citation" data-cites="schnauber-stockmann2018a">Schnauber-Stockmann, A., &amp; Naab, T. K. (2018). The process of forming a mobile media habit: results of a longitudinal study in a real-world setting. <em>Media Psychology</em>, <em>22</em>(5), 714–742. <a href="https://doi.org/10.1080/15213269.2018.1513850" role="doc-biblioref">https://doi.org/10.1080/15213269.2018.1513850</a></span></p></li>
-<li><p><span class="citation" data-cites="thepsyc2018">Verplanken, B. (Ed.). (2018). <em>The psychology of habit</em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-97529-0" role="doc-biblioref">https://doi.org/10.1007/978-3-319-97529-0</a></span></p></li>
-<li><p><span class="citation" data-cites="wood2016">Wood, W., &amp; Rünger, D. (2016). Psychology of Habit. <em>Annual Review of Psychology</em>, <em>67</em>(1), 289–314. <a href="https://doi.org/10.1146/annurev-psych-122414-033417" role="doc-biblioref">https://doi.org/10.1146/annurev-psych-122414-033417</a></span></p></li>
-<li><p><span class="citation" data-cites="wood2021">Wood, W., Mazar, A., &amp; Neal, D. T. (2021). Habits and Goals in Human Behavior: Separate but Interacting Systems. <em>Perspectives on Psychological Science</em>, <em>17</em>(2), 590–605. <a href="https://doi.org/10.1177/1745691621994226" role="doc-biblioref">https://doi.org/10.1177/1745691621994226</a></span></p></li>
-</ul>
-<p><br></p>
 <div style="font-size: 0.875em;">
 <p>Back to <a href="../index.html" title="Course schedule">course schedule</a> ⏎</p>
 </div>
@@ -621,18 +589,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../sessions/session-05.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Session 05</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../sessions/session-10.html" class="pagination-link">
-        <span class="nav-page-text">Session 10</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
