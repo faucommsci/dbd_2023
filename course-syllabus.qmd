@@ -7,8 +7,6 @@ link-citations: false
 citations-hover: false
 ---
 
-<!-- FIXME Add PDF export -->
-
 ## Course information
 
 | First session | Time                      | Location (Room)    |
@@ -63,27 +61,26 @@ All slides, assignment instructions, an up-to-date schedule, and other course ma
 -   All sessions marked with a 📚 or 📦 are presentation sessions where a group of students will give a detailed [presentation](course-assignments.html#sec-presentation).
 :::
 
-| Session | Datum          | Topic                             |
-|---------|----------------|-----------------------------------|
-|         |                | **Introduction**                  |
-| 1       | 25.10.2023     | Kick-Off                          |
-| \-      | 01.11.2023     | 🎃 *Holiday (No Lecture)*         |
-| 2       | 08.11.2023     | Einführung in DBD                 |
-| 3       | 15.11.2023     | 🔨 Working with R                 |
-|         | **🗣️**         | **Presentations**                 |
-| 4       | 22.11.2023     | 📚 Media routines & habits        |
-| 5       | 29.11.2023     | 📚 Digital disconnection          |
-| 6       | 06.12.2023     | 📦 Data collection methods        |
-| 7       | 13.12.2023     | 📦 Automatic text analysis        |
-| 8       | 20.12.2023     | *Buffer Session*                  |
-| \-      | \-             | 🎄*Christmas Break (No Lecture)*  |
-|         | 📂 **Project** | **Analysis of media content**     |
-| 9       | 10.01.2024     | 🔨 Text as data in R              |
-| 10      | 17.01.2024     | 🔨 Topic Modeling in R            |
-| 11      | 24.01.2024     | 🔨 Q&A                            |
-| 12      | 31.01.2024     | 📊 Presentation & Discussion      |
-| 13      | 07.02.2024     | 🏁 Recap, Evaluation & Discussion |
-
+| Session | Datum            | Topic                             |
+|---------|------------------|-----------------------------------|
+|         |                  | **Introduction**                  |
+| 1       | 25.10.2023       | Kick-Off                          |
+| \-      | 01.11.2023       | 🎃 *Holiday (No Lecture)*         |
+| 2       | 08.11.2023       | DBD: Overview                     |
+| 3       | 15.11.2023       | 🔨 Working with R                 |
+|         | 📂 **Project 1** | **Analysis of media content**     |
+| 4       | 22.11.2023       | 📚 Digital disconnection          |
+| 5       | 29.11.2023       | 📦 Data collection methods        |
+| 6       | 06.12.2023       | 🔨 Text as data                   |
+| 7       | 13.12.2023       | 📊 Presentation & Discussion      |
+| 8       | 20.12.2023       | *Buffer Session*                  |
+| \-      | \-               | 🎄*Christmas Break (No Lecture)*  |
+|         | 📂 **Project 2** | **Analysis of media usage**       |
+| 9       | 11.01.2024       | 📚 Media habits & routines        |
+| 10      | 18.01.2024       | 📦 Data donations methods         |
+| 11      | 25.01.2024       | 🔨 Working data logs              |
+| 12      | 02.02.2024       | 📊 Presentation & Discussion      |
+| 13      | 08.02.2024       | 🏁 Recap, Evaluation & Discussion |
 
 ::: callout-note
 For an even more detailed overview of the course schedule as well as the linked content of the individual sessions (e.g. slides or literature for the respective presentation), please see [Schedule](index.html).
