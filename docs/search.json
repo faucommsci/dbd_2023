@@ -154,6 +154,20 @@
     "text": "Participate\n🖥️ Session 01 - Kick Off\n\n\nBack to course schedule ⏎"
   },
   {
+    "objectID": "slides/slides-02.html#kurzes-update",
+    "href": "slides/slides-02.html#kurzes-update",
+    "title": "Einführung & Überblick",
+    "section": "Kurzes Update",
+    "text": "Kurzes Update\nAllgemeine Infos zum Kurs\n\n📖 Basisliteratur zu den Präsentationen auf StudOn verfügbar!\n⏰ Regelmäßige Kontrolle von Zulip\n🧮 Denken Sie an die Deadline für das Zertifikat vom R-Basiskurs (13.11.2023)\n🗣️ 1. Präsentationsgruppe: Denken Sie an die Zusendung des Entwurf der Präsentationsfolien und das Feedbackgespräch nächste Woche!\n\n\n\nZulip: Haben alle die Zuteilung der Themen/Gruppen gesehen?"
+  },
+  {
+    "objectID": "slides/slides-02.html#die-würfel-sind-gefallen",
+    "href": "slides/slides-02.html#die-würfel-sind-gefallen",
+    "title": "Einführung & Überblick",
+    "section": "Die Würfel sind gefallen",
+    "text": "Die Würfel sind gefallen\nKurzer Überblick der Gruppenaufteilung\n\n\n\n\n\n\n\n  \n    \n    \n      Gruppe\n      Thema\n      Studierende\n    \n  \n  \n    A\n📚 Digital disconnection\nKofer, Rieger\n    B\n📦 Automatic text analysis (Topic Modeling & Netzwerkanalyse)\nKöbler, Mühlmeister, Neudecker\n    C\n📚 Media routines & habits\nBudak, Knapp, Kuck\n    D\n📦 Data collections methods (mit Schwerpunkt Data Donations)\nJakob, Neumeier"
+  },
+  {
     "objectID": "slides/slides-02.html#abstimmung-des-semesterplans",
     "href": "slides/slides-02.html#abstimmung-des-semesterplans",
     "title": "Einführung & Überblick",
@@ -161,11 +175,11 @@
     "text": "Abstimmung des Semesterplans\n\n\n\n\n\n\n\n\n  \n    \n       Option A\n    \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nEinführung in DBD\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n📂 Project 1\n\nAnalysis of media content\n\n\n    4\n\n22.11.2023\n\n📚 Digital disconnection\n\nGroup A\n\n    5\n\n29.11.2023\n\n📦 Automatic text analysis\n\nGroup B\n\n    6\n\n06.12.2023\n\n🔨 Text as data in R\n\nChristoph Adrian\n\n    7\n\n13.12.2023\n\n📊 Presentation & Discussion\n\nAll groups\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project 2\n\nAnalysis of media usage\n\n\n    9\n\n10.01.2024\n\n📚 Media routines & habits\n\nGroup C\n\n    10\n\n17.01.2024\n\n📦 Data collection methods\n\nGroup D\n\n    11\n\n24.01.2024\n\n🔨 Working data logs\n\nChristoph Adrian\n\n    12\n\n31.01.2024\n\n📊 Presentation & Discussion\n\nAll groups\n\n    13\n\n07.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian\n\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\n  \n    \n       Option B\n    \n    \n    \n      Session\n      Datum\n      Topic\n      Presenter\n    \n  \n  \n    \n\nIntroduction\n\n\n    1\n\n25.10.2023\n\nKick-Off\n\nChristoph Adrian\n\n    \n01.11.2023\n\n🎃 Holiday (No Lecture)\n\n\n    2\n\n08.11.2023\n\nEinführung in DBD\n\nChristoph Adrian\n\n    3\n\n15.11.2023\n\n🔨 Working with R\n\nChristoph Adrian\n\n    \n🗣️\n\nPresentations\n\n\n    4\n\n22.11.2023\n\n📚 Media routines & habits\n\nGroup C\n\n    5\n\n29.11.2023\n\n📚 Digital disconnection\n\nGroup A\n\n    6\n\n06.12.2023\n\n📦 Data collection methods\n\nGroup B\n\n    7\n\n13.12.2023\n\n📦 Automatic text analysis\n\nGroup D\n\n    8\n\n20.12.2023\n\nBuffer Session\n\n\n    \n\n🎄Christmas Break (No Lecture)\n\n\n    \n📂 Project\n\nAnalysis of media content\n\n\n    9\n\n10.01.2024\n\n🔨 Text as data\n\nChristoph Adrian\n\n    10\n\n17.01.2024\n\n🔨 Topic Modeling\n\nChristoph Adrian\n\n    11\n\n24.01.2024\n\n🔨 Q&A\n\nChristoph Adrian\n\n    12\n\n31.01.2024\n\n📊 Presentation & Discussion\n\nAll groups\n\n    13\n\n07.02.2024\n\n🏁 Recap, Evaluation & Discussion\n\nChristoph Adrian"
   },
   {
-    "objectID": "slides/slides-02.html#tldr",
-    "href": "slides/slides-02.html#tldr",
+    "objectID": "slides/slides-02.html#tldr-von-option-b",
+    "href": "slides/slides-02.html#tldr-von-option-b",
     "title": "Einführung & Überblick",
-    "section": "TL;DR",
-    "text": "TL;DR\nZusammenfassung der Änderungen\n\n\nPräsentationen in 2023 & Projektarbeit in 2024\nnur ein Präsentationstermin mit “Project topic idea(s)”\nFokus auf Analyse von Medieninhalten (Project 1), keine Analyse der Logging-Daten (Project 2)\nAber (Optional): Project 2 light\n\nDurchführung einer Mini-Studie im Kurs (benötigt Einverständnis)\nFokus des Projektberichts auf Datenaufbereitung & -exploration\n\n\n\n\n\n\nFragen? Anmerkungen?"
+    "section": "TL;DR von Option B",
+    "text": "TL;DR von Option B\nZusammenfassung der Änderungen\n\n\nPräsentationen in 2023 & Projektarbeit in 2024\nnur ein Präsentationstermin mit “Project topic idea(s)”\nFokus auf Analyse von Medieninhalten (Project 1), keine Analyse der Logging-Daten (Project 2)\nAber (Optional): Project 2 light\n\nDurchführung einer Mini-Studie im Kurs (benötigt Einverständnis)\nFokus des Projektberichts auf Datenaufbereitung & -exploration\n\n\n\n\n\n\nFragen? Anmerkungen?"
   },
   {
     "objectID": "slides/slides-02.html#please-vote",
@@ -193,7 +207,7 @@
     "href": "slides/slides-02.html#und-im-kontext-des-seminars",
     "title": "Einführung & Überblick",
     "section": "Und im Kontext des Seminars?",
-    "text": "Und im Kontext des Seminars?\nEine Arbeitsdefinition & Kernbereiche (GESIS)\n\n\n\n\nDBD umfasst digitale Beobachtungen menschlichen und algorithmischen Verhaltens,\nwie sie z.B. von Online-Plattformen (wie Google, Facebook oder dem World Wide Web) oder\nSensoren (wie Smartphones, RFID-Sensoren, Satelliten oder Street View-Kameras) erfasst werden.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSchwerpunkt: Nutzung und Inhalte von soziale Medien\nComputational Social Science [CSS] Verfahren, z.B. zur Erhebung, Verarbeitung, Auswertung und Präsentation\n\n\n\n\n\n\n\nUnterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)"
+    "text": "Und im Kontext des Seminars?\nArbeitsdefinition & Kernbereiche (GESIS) von DBD\n\n\n\n\nDBD umfasst digitale Beobachtungen menschlichen und algorithmischen Verhaltens,\nwie sie z.B. von Online-Plattformen (wie Google, Facebook oder dem World Wide Web) oder\nSensoren (wie Smartphones, RFID-Sensoren, Satelliten oder Street View-Kameras) erfasst werden.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSchwerpunkt: Nutzung und Inhalte von soziale Medien\nComputational Social Science [CSS] Verfahren, z.B. zur Erhebung, Verarbeitung, Auswertung und Präsentation\n\n\n\n\n\n\n\nUnterschiedliche Heraus- bzw. Anforderungen (je nach Bereich)"
   },
   {
     "objectID": "slides/slides-02.html#css-dbd",
@@ -207,14 +221,7 @@
     "href": "slides/slides-02.html#von-verhalten-bis-interkation",
     "title": "Einführung & Überblick",
     "section": "Von Verhalten bis Interkation",
-    "text": "Von Verhalten bis Interkation\nBeispiel für untersuchbare Phänomene samt Einschränkungen\n\n\n\n\n\nQuelle: (Keusch & Kreuter, 2021)\n\n\n\n\nEinschränkungen\n\nKategorisierung ist Momentaufnahme und nicht überschneidungsfrei\nSelektive Nutzung von bestimmten digitalen Geräten bzw. Funktionen\n\n\n\n\n\nEinige inhärent digitale Verhalten (z.B. Web Searches) bei zunehmender Digitalisierung von analogen Verhalten (z.B. Collaborative Work)\nFehlen digitaler Spurendaten in all diesen Quadranten für bestimmte Personen und bestimmte Verhaltensweisen durch selektive Nutzung digitaler Geräte."
-  },
-  {
-    "objectID": "slides/slides-02.html#verfügbarkeit-als-pluspunkt",
-    "href": "slides/slides-02.html#verfügbarkeit-als-pluspunkt",
-    "title": "Einführung & Überblick",
-    "section": "Verfügbarkeit als Pluspunkt",
-    "text": "Verfügbarkeit als Pluspunkt\nDBD als wertvolle Quelle bei aktuellen, sensiblen & unvorhersehbaren Themen\n\nEinsatz besonders Vorteilhaft bei Themen bzw. Untersuchungen …\n\n… für die es schwierig ist, Studienteilnehmer*innen zu rekrutieren\n… bei denen Beobachtungen vorteilhafter sind als Befragungen\n\nBeispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen\n\nZeitnaher als die Erstellung einer Umfrage\nZusätzlicher Nutzen als Archiv bei unvorhersehbaren Ereignissen\n\n\n🔔 weitere Beispiele? - Well-being auf Basis von Instagram-Bildern & Texten"
+    "text": "Von Verhalten bis Interkation\nBeispiel für untersuchbare Phänomene samt Einschränkungen\n\n\n\n\n\nQuelle: (Keusch & Kreuter, 2021)\n\n\n\n\nEinschränkungen\n\nSelektive Nutzung von bestimmten digitalen Geräten bzw. Funktionen\nKategorisierung ist Momentaufnahme und nicht überschneidungsfrei\n\n\n\n\n\nEinige inhärent digitale Verhalten (z.B. Web Searches) bei zunehmender Digitalisierung von analogen Verhalten (z.B. Collaborative Work)\nFehlen digitaler Spurendaten in all diesen Quadranten für bestimmte Personen und bestimmte Verhaltensweisen durch selektive Nutzung digitaler Geräte."
   },
   {
     "objectID": "slides/slides-02.html#mehr-daten-durch-technologischen-fortschritt",
@@ -222,6 +229,13 @@
     "title": "Einführung & Überblick",
     "section": "Mehr Daten durch technologischen Fortschritt",
     "text": "Mehr Daten durch technologischen Fortschritt\nBeispiel: Wachsenden Anzahl eingebauter Smartphone-Sensoren\n\n\nGraphik aus Struminskaya et al. (2020)"
+  },
+  {
+    "objectID": "slides/slides-02.html#verfügbarkeit-als-pluspunkt",
+    "href": "slides/slides-02.html#verfügbarkeit-als-pluspunkt",
+    "title": "Einführung & Überblick",
+    "section": "Verfügbarkeit als Pluspunkt",
+    "text": "Verfügbarkeit als Pluspunkt\nDBD als wertvolle Quelle bei aktuellen, sensiblen & unvorhersehbaren Themen\n\nEinsatz besonders Vorteilhaft bei Themen bzw. Untersuchungen …\n\n… für die es schwierig ist, Studienteilnehmer*innen zu rekrutieren\n… bei denen Beobachtungen vorteilhafter sind als Befragungen\n\n\n\nBeispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen\n\nZeitnaher als die Erstellung einer Umfrage\nZusätzlicher Nutzen als Archiv bei unvorhersehbaren Ereignissen\n\n\n\n🔔 weitere Beispiele? - Well-being auf Basis von Instagram-Bildern & Texten"
   },
   {
     "objectID": "slides/slides-02.html#die-power-von-social-sensing",
@@ -252,13 +266,6 @@
     "text": "Der Weg bestimmt das Ergebnis\nEinfluss der Erhebung auf die Daten(-form) (Davidson et al., 2023)"
   },
   {
-    "objectID": "slides/slides-02.html#eine-kleine-lobeshymne-auf-dbd",
-    "href": "slides/slides-02.html#eine-kleine-lobeshymne-auf-dbd",
-    "title": "Einführung & Überblick",
-    "section": "Eine kleine Lobeshymne auf DBD",
-    "text": "Eine kleine Lobeshymne auf DBD\nZwischenfazit\n\nDigitale Geräte oder Sensoren können sich an bestimmte Fakten besser “erinnern” als das menschliche Gedächtnis.\nSensoren sind oft bereits in alltägliche Technologie eingebaut und produzieren digitale Verhaltensdaten als ein “Nebenprodukt”.\nUnaufdringliche Erfassung als potentieller Vorteil bzw. Entlastung für Teilnehmer*Innen\nKombination mit Umfragedaten möglich (und bereichernd!)\n\n\n\nAber: Berücksichtigung der Rahmenbedingungen!\nZur erfolgreichen Nutzung müssen Forschungsziele & verfügbare Daten in Einklang gebracht, mögliche Biases und methodische Probleme berücksichttigt sowie die Datenqualität evaluiert werden.\n\n\nBietet die Plattform Zugang zu den benötigten Daten?\n\nWenn nicht, gibt es alternative Weg um an die Daten zu gelangen?\nWenn ja, ist dies legal/ethisch?"
-  },
-  {
     "objectID": "slides/slides-02.html#wenn-der-vorteil-zum-nachteil-wird",
     "href": "slides/slides-02.html#wenn-der-vorteil-zum-nachteil-wird",
     "title": "Einführung & Überblick",
@@ -266,11 +273,18 @@
     "text": "Wenn der Vorteil zum Nachteil wird\nAmbivalenz der Unaufdringlichkeit (Keusch & Kreuter, 2021)\n\nUnterscheidung zwischen aufdringlichen (z.B. spezielle Research-App & Befragungen) & unaufdringlichen (z.B. Cookies, Browserplugins & APIs) erhobenen Daten\nBewertung und Erwartung an Datensammlung ist abhängig vom Kontext (z.B. Amazon vs. Researchgate)\n\n\n\nParadoxes Dilemma\nEinerseits bereitwillige (oft unwissende) Abgabe der Daten an Konzerne ohne Wissen um deren Weiterverarbeitung, andererseits häufig Bedenken bezüglich Datenschutz & Privatsphäre bei wissenschaftlichen Studien, die über Verwendung der Daten aufklären.\n\n\nWarum? Persönlicher Nutzen?"
   },
   {
+    "objectID": "slides/slides-02.html#eine-kleine-lobeshymne-auf-dbd",
+    "href": "slides/slides-02.html#eine-kleine-lobeshymne-auf-dbd",
+    "title": "Einführung & Überblick",
+    "section": "Eine kleine Lobeshymne auf DBD",
+    "text": "Eine kleine Lobeshymne auf DBD\nZwischenfazit\n\nDigitale Geräte oder Sensoren können sich an bestimmte Fakten besser “erinnern” als das menschliche Gedächtnis.\nSensoren sind oft bereits in alltägliche Technologie eingebaut und produzieren digitale Verhaltensdaten als ein “Nebenprodukt”.\nUnaufdringliche Erfassung als potentieller Vorteil bzw. Entlastung für Teilnehmer*Innen\nKombination mit Umfragedaten möglich (und bereichernd!)\n\n\n\nAber: Berücksichtigung der Rahmenbedingungen!\nZur erfolgreichen Nutzung müssen Forschungsziele & verfügbare Daten in Einklang gebracht, mögliche Biases und methodische Probleme berücksichtigt sowie die Datenqualität evaluiert werden.\n\n\nBietet die Plattform Zugang zu den benötigten Daten?\n\nWenn nicht, gibt es alternative Weg um an die Daten zu gelangen?\nWenn ja, ist dies legal/ethisch?"
+  },
+  {
     "objectID": "slides/slides-02.html#the-end-of-theory",
     "href": "slides/slides-02.html#the-end-of-theory",
     "title": "Einführung & Überblick",
     "section": "The End of Theory",
-    "text": "The End of Theory\n\n\nZur Wichtigkeit von konzipierte Messungen & Designs\n\n\n“Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves.” (Anderson, 2008)\n\n\n\nWas denken Sie?\n\n\n\n“Size alone does not necessarily make the data better” (boyd & Ellison, 2007)\n\n\n“There are a lot of small data problems that occur in big data [which] don’t disappear because you’ve got lots of the stuff. They get worse.” (Harford, 2014)"
+    "text": "The End of Theory\n\n\nZur Wichtigkeit von konzipierte Messungen & Designs\n\n\n\n“Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves.” (Anderson, 2008)\n\n\n\n\nWas denken Sie?\n\n\n\n“Size alone does not necessarily make the data better” (boyd & Ellison, 2007)\n\n\n“There are a lot of small data problems that occur in big data [which] don’t disappear because you’ve got lots of the stuff. They get worse.” (Harford, 2014)"
   },
   {
     "objectID": "slides/slides-02.html#we-need-to-talk-about-biases",
@@ -733,19 +747,5 @@
     "title": "Assingments",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nPlease note that this is a temporary deadline. The final deadline will be adjusted in the course in consultation with the students if necessary.↩︎"
-  },
-  {
-    "objectID": "slides/slides-02.html#kurzes-update",
-    "href": "slides/slides-02.html#kurzes-update",
-    "title": "Einführung & Überblick",
-    "section": "Kurzes Update",
-    "text": "Kurzes Update\nAllgemeine Infos zum Kurs\n\n📖 Basisliteratur zu den Präsentationen auf StudOn verfügbar!\n⏰ Regelmäßige Kontrolle von Zulip\n🧮 Denken Sie an die Deadline für das Zertifikat vom R-Basiskurs (13.11.2023)\n🗣️ 1. Präsentationsgruppe: Denken Sie an die Zusendung des Entwurf der Präsentationsfolien und das Feedbackgespräch nächste Woche!"
-  },
-  {
-    "objectID": "slides/slides-02.html#reshuffeling-of-the-board",
-    "href": "slides/slides-02.html#reshuffeling-of-the-board",
-    "title": "Einführung & Überblick",
-    "section": "Reshuffeling of the board",
-    "text": "Reshuffeling of the board\nUngleiche Gruppenaufteilung durch Kursaustritte\n\n\n\n\n\n\n\n  \n    \n    \n      Gruppe\n      Thema\n      Studierende\n    \n  \n  \n    A\n📚 Digital disconnection\nRieger\n    B\n📦 Automatic text analysis (Topic Modeling & Netzwerkanalyse)\nKöbler, Mühlmeister, Neudecker\n    C\n📚 Media routines & habits\nBudak, Knapp, Kuck\n    D\n📦 Data collections methods (mit Schwerpunkt Data Donations)\nJakob, Kofer, Neumeier\n  \n  \n  \n\n\n\n\n\nAny volunteers?"
   }
 ]

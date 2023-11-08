@@ -44,9 +44,13 @@ source(here("slides/schedule.R"))
 
 -   🗣️ 1. Präsentationsgruppe: Denken Sie an die Zusendung des **Entwurf der Präsentationsfolien** und das **Feedbackgespräch [nächste Woche!]{.underline}**
 
-## Reshuffeling of the board
+::: notes
+-   Zulip: Haben alle die Zuteilung der Themen/Gruppen gesehen?
+:::
 
-#### Ungleiche Gruppenaufteilung durch Kursaustritte
+## Die Würfel sind gefallen
+
+#### Kurzer Überblick der Gruppenaufteilung
 
 <br>
 
@@ -62,10 +66,10 @@ groups <- tibble(
         "📦 Data collections methods (mit Schwerpunkt Data Donations)" 
     ), 
     Studierende = c(
-        "Rieger",
+        "Kofer, Rieger",
         "Köbler, Mühlmeister, Neudecker", 
         "Budak, Knapp, Kuck", 
-        "Jakob, Kofer, Neumeier"
+        "Jakob, Neumeier"
     )
 )
 
@@ -77,10 +81,6 @@ groups %>%
         table.font.size = "22px"
     ) 
 ```
-
-::: {style="text-align: center;"}
-Any volunteers?
-:::
 
 ## Abstimmung des Semesterplans
 
@@ -154,7 +154,7 @@ new_schedule_b %>%
 :::
 :::
 
-## TL;DR
+## TL;DR von Option B
 
 #### Zusammenfassung der Änderungen
 
@@ -245,7 +245,7 @@ Was sind *digital behavior data?*
 
 ## Und im Kontext des Seminars?
 
-#### Eine Arbeitsdefinition & Kernbereiche ([GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten))
+#### Arbeitsdefinition & Kernbereiche ([GESIS](https://www.gesis.org/institut/digitale-verhaltensdaten)) von DBD
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
 ::: columns
@@ -312,9 +312,8 @@ Und *was* können wir mit DBD *untersuchen*?
 
 #### **Einschränkungen**
 
--   Kategorisierung ist **Momentaufnahme** und nicht überschneidungsfrei
-
 -   **Selektive Nutzung** von bestimmten digitalen Geräten bzw. Funktionen
+-   Kategorisierung ist **Momentaufnahme** und nicht überschneidungsfrei
 :::
 :::
 
@@ -322,6 +321,14 @@ Und *was* können wir mit DBD *untersuchen*?
 -   Einige inhärent digitale Verhalten (z.B. Web Searches) bei zunehmender Digitalisierung von analogen Verhalten (z.B. Collaborative Work)
 -   Fehlen digitaler Spurendaten in all diesen Quadranten für bestimmte Personen und bestimmte Verhaltensweisen durch selektive Nutzung digitaler Geräte.
 :::
+
+## Mehr Daten durch technologischen Fortschritt
+
+#### Beispiel: Wachsenden Anzahl eingebauter Smartphone-Sensoren
+
+![Graphik aus @struminskaya2020](img/session-02/dbd_smartphone_development.jpeg){fig-align="center"}
+
+<!--# TODO: Bedeutung/Funktion der einzelnen Sensoren -->
 
 ## Verfügbarkeit als Pluspunkt
 
@@ -334,22 +341,16 @@ Und *was* können wir mit DBD *untersuchen*?
 -   ... für die es **schwierig** ist, Studienteilnehmer\*innen zu **rekrutieren**
 -   ... bei denen **Beobachtungen** **vorteilhafter** sind als Befragungen
 
-***Beispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen***
+::: fragment
+#### Beispiel: Streaming und/oder Mining von Inhalten aus bestehenden digitalen Kommunikationsströmen
 
 -   **Zeitnaher** als die Erstellung einer Umfrage
 -   Zusätzlicher Nutzen als **Archiv** bei **unvorhersehbaren** **Ereignissen**
+:::
 
 ::: notes
 🔔 weitere Beispiele? - Well-being auf Basis von Instagram-Bildern & Texten
 :::
-
-## Mehr Daten durch technologischen Fortschritt
-
-#### Beispiel: Wachsenden Anzahl eingebauter Smartphone-Sensoren
-
-![Graphik aus @struminskaya2020](img/session-02/dbd_smartphone_development.jpeg){fig-align="center"}
-
-<!--# TODO: Bedeutung/Funktion der einzelnen Sensoren -->
 
 ## Die Power von Social Sensing
 
@@ -407,6 +408,24 @@ Die Zukunft: Linking
 
 ![](img/session-02/graphic-sm_data_access.png){fig-align="center"}
 
+## Wenn der Vorteil zum Nachteil wird
+
+#### Ambivalenz der Unaufdringlichkeit [@keusch2021]
+
+-   Unterscheidung zwischen **aufdringlichen** *(z.B. spezielle Research-App & Befragungen)* **& unaufdringlichen** *(z.B. Cookies, Browserplugins & APIs)* **erhobenen Daten**
+
+-   **Bewertung** und Erwartung an Datensammlung ist **abhängig vom Kontex**t (*z.B. Amazon vs. Researchgate*)
+
+::: fragment
+#### **Paradoxes Dilemma**
+
+Einerseits **bereitwillige (oft unwissende) Abgabe der Daten an Konzerne** ohne Wissen um deren Weiterverarbeitung, andererseits häufig **Bedenken bezüglich Datenschutz & Privatsphäre bei wissenschaftlichen Studien**, die über Verwendung der Daten aufklären.
+:::
+
+::: notes
+Warum? Persönlicher Nutzen?
+:::
+
 ## Eine kleine Lobeshymne auf DBD
 
 #### Zwischenfazit
@@ -422,7 +441,7 @@ Die Zukunft: Linking
 ::: fragment
 #### Aber: Berücksichtigung der Rahmenbedingungen!
 
-Zur erfolgreichen Nutzung müssen **Forschungsziele & verfügbare Daten in Einklang** gebracht, mögliche [**Biases und methodische Probleme**]{.rn rn-type="highlight"} **berücksichttigt** sowie die [**Datenqualität**]{.rn rn-type="highlight"} **evaluiert** werden.
+Zur erfolgreichen Nutzung müssen **Forschungsziele & verfügbare Daten in Einklang** gebracht, mögliche **Biases und methodische Probleme** **berücksichtigt** sowie die **Datenqualität evaluiert** werden.
 :::
 
 ::: notes
@@ -436,40 +455,24 @@ Bietet die Plattform **Zugang** zu den benötigten Daten?
 
 Potentielle Biases & ethische und rechtliche Faktoren
 
-## Wenn der Vorteil zum Nachteil wird
-
-#### Ambivalenz der Unaufdringlichkeit [@keusch2021]
-
--   Unterscheidung zwischen **aufdringlichen** *(z.B. spezielle Research-App & Befragungen)* **& unaufdringlichen** *(z.B. Cookies, Browserplugins & APIs)* **erhobenen Daten**
-
--   **Bewertung** und Erwartung an Datensammlung ist **abhängig vom Kontex**t (*z.B. Amazon vs. Researchgate*)
-
-::: fragment
-#### **Paradoxes Dilemma**
-
-Einerseits bereitwillige (oft unwissende) Abgabe der Daten an Konzerne ohne Wissen um deren Weiterverarbeitung, andererseits häufig Bedenken bezüglich Datenschutz & Privatsphäre bei wissenschaftlichen Studien, die über Verwendung der Daten aufklären.
-:::
-
-::: notes
-Warum? Persönlicher Nutzen?
-:::
-
 ## The End of Theory
 
 ::: {.fragment fragment-index="1"}
 #### Zur Wichtigkeit von konzipierte Messungen & Designs
 :::
 
-> ["Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves."]{.rn rn-type="strike-through" rn-color="#E6002E" rn-multiline="true"} [@anderson2008]
+::: {.fragment .strike fragment-index="1"}
+> "Who knows why people do what they do? The point is they do it, and we can track and measure it with unprecedented fidelity. With enough data, the numbers speak for themselves." [@anderson2008]
+:::
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
 ### Was denken Sie?
 :::
 
 ::: {.fragment fragment-index="1"}
-> "Size alone does [not]{.rn rn-type="underline" rn-color="#E6002E"} necessarily make the data better" [@boyd2007]
+> "Size alone does **not** necessarily make the data better" [@boyd2007]
 
-> "There are a lot of small data problems that occur in big data \[which\] don't disappear because you've got lots of the stuff. [They get worse.]{.rn rn-type="underline" rn-color="#E6002E"}" [@harford2014]
+> "There are a lot of small data problems that occur in big data \[which\] don't disappear because you've got lots of the stuff. **They get worse.**" [@harford2014]
 :::
 
 ## We need to talk about [biases]{.smallcaps}
@@ -480,7 +483,7 @@ Warum? Persönlicher Nutzen?
 
 -   **Herausforderungen in Bezug auf DBD-Forschung:** fehlender Konsens über ein Vokabular oder eine Taxonomie, häufig nur impliziter Bezug in der Forschung
 
--   **Generelle Herausforderung:** **bias** ist ein weit gefasster & in unterschiedlichen Disziplinen genutzter Begriff
+-   **Generelle Herausforderung:** [**bias**]{.smallcaps} ist ein weit gefasster & in unterschiedlichen Disziplinen genutzter Begriff
 
 ## Was verstehen Sie unter "bias"?
 
@@ -543,7 +546,7 @@ Verwendung des Begriff hauptsächlich in seiner statistischen Bedeutung, um auf 
 
 ![](img/session-02/bias_framework_without_legend.png){fig-align="center"}
 
-::: notes
+::: {.notes style="font-size: smaller;"}
 Beschreibung:
 
 -   Die Analyse sozialer Daten beginnt mit bestimmten Zielen (Abschnitt 2.1), wie dem Verständnis oder der Beeinflussung von Phänomenen, die für soziale Plattformen spezifisch sind (Typ I) und/oder von Phänomenen, die über soziale Plattformen hinausgehen (Typ II).
@@ -587,7 +590,7 @@ A systematic distortion in the sampled data that compromises its representativen
 
 -   Vorhandensein von **nicht-individuellen Konten** ein ([*non-individuals*]{.rn rn-type="highlight"}).
 
-::: {.notes style="font-size: smaller"}
+::: {.notes style="font-size: smaller;"}
 functional biases:\
 - Platform-specific design and features shape user behavior (z.B. Emojis) - Algorithms used for organizing and ranking content influence user behavior - Content presentation influences user behavior (z.B. UI)
 
@@ -619,7 +622,7 @@ non-individual-accounts: Organizational accounts, Bots
 
 -   Diskussion des Spannungsverhältnisses am Beispiel von drei **spezifischer ethischer Kriterien: Autonomie, Wohltätigkeit und Gerechtigkeit**
 
-::: notes
+::: {.notes style="font-size: smaller;"}
 Hintergrund:
 
 1.  Die Sozialdatenforschung ähnelt klinischen Versuchen und anderen Experimenten am Menschen in ihrer Fähigkeit, Menschen zu schaden, und sollte daher auch als solche reguliert werden
@@ -673,7 +676,7 @@ Punkt 3: Datenanalyse beispielsweise erforderlich sein, um wichtige Dienste bere
 -   **Encore-Forschungsprojekt**: Messung der Internetzensur auf der ganzen Welt, bei der Webbrowser angewiesen wurden, zu versuchen, sensible Webinhalte ohne das Wissen oder die Zustimmung der Nutzer herunterzuladen [@burnett2014]
 :::
 
-::: notes
+::: {.notes style="font-size: smaller;"}
 Hintergrund:
 
 -   Ethische Fragen bisher epistemische Bedenken (Verwendung von nicht schlüssigen oder fehlgeleiteten Beweisen), jetzt normativ Bedenken (Folgen der Forschung)
@@ -708,7 +711,7 @@ Folgende Abschnitte:
 
 -   **"Dual-Use"- und Sekundäranalysen** sind in der Sozialdatenforschung **immer** **häufiger** anzutreffen.
 
-::: notes
+::: {.notes style="font-size: smaller;"}
 Die Forschung zu sozialen Daten wird mit bestimmten Arten von Schäden in Verbindung gebracht, von denen die Verletzung der Privatsphäre vielleicht die offensichtlichste ist (Zimmer, 2010; Crawford und Finn, 2014).
 
 Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison im Jahr 2015, bei der einer Website, die sich als Dating-Netzwerk für betrügerische Ehepartner anpreist, Kontoinformationen (einschließlich der vollständigen Namen der Nutzer) gestohlen und online gestellt wurden (Thomsen, 2015), sowie die jüngsten Datenpannen bei Facebook, bei denen Hunderte Millionen von Datensätzen mit Kommentaren, Likes, Reaktionen, Kontonamen, App-Passwörtern und mehr öffentlich gemacht wurden.
@@ -738,7 +741,7 @@ zu 3: Daten, Instrumente und Schlussfolgerungen, die für einen bestimmten Zweck
 
 -   Nicht alle **Interessengruppen** werden über die Verwendung von Forschungsergebnissen konsultiert.
 
-::: notes
+::: {.notes style="font-size: smaller;"}
 zu 1: Data divide: mangelnde Verfügbarkeit von hochwertigen Daten über Entwicklungsländer und unterprivilegierte Gemeinschaften (Cinnamon und Schuurman, 2013). WEIRD = White, Educated, Industrialized, Rich, and Democratic
 
 zu 3: Idealerweise sollten die Menschen Zugang zu den Forschungsergebnissen und Artefakten haben, die aus der Untersuchung ihrer persönlichen Daten entstanden sind (Gross und Acquisti, 2005; Crawford und Finn, 2014).
