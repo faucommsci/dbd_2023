@@ -10,13 +10,22 @@ citations-hover: false
 
 ## Prepare
 
-✍️ **Dealine** (**13.11.2023**) für Kurszertifikat des [Basiskurs R/RStudio](https://www.studon.fau.de/studon/goto.php?target=crs_3235361_join). Bitte via E-Mail an [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de?subject=DBD%20R-Kurszertifikat) 
+✍️ **Dealine** (**13.11.2023**) für Kurszertifikat des [Basiskurs R/RStudio](https://www.studon.fau.de/studon/goto.php?target=crs_3235361_join). Bitte via E-Mail an [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de?subject=DBD%20R-Kurszertifikat)
+
+🔍 Checken Sie die Ressourcen unter **Computing** (z.B. [R-Textbooks](/computing/computing-textbooks.html) & [R-Cheatsheets](/computing/computing-cheatsheets.html))
 
 
+## Suggested readings
+
+-   @bauer2023
+
+-   @dejonge2013
+
+-   @pearson2018
 
 ## Participate
 
-🖥️ [Session 03](/slides/slides-03.html)(🚧 *Still under construction*)
+🖥️ [Session 03](/slides/slides-03.html)
 
 <br>
 
