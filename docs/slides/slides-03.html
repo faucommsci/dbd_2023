@@ -10,7 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Christoph Adrian">
@@ -32,7 +33,91 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #383a42;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #383a42; } /* Normal */
+    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+    code span.an { color: #50a14f; } /* Annotation */
+    code span.at { color: #a626a4; } /* Attribute */
+    code span.bn { color: #986801; } /* BaseN */
+    code span.bu { color: #a626a4; } /* BuiltIn */
+    code span.cf { color: #a626a4; } /* ControlFlow */
+    code span.ch { color: #50a14f; } /* Char */
+    code span.cn { color: #986801; } /* Constant */
+    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
+    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
+    code span.do { color: #e45649; } /* Documentation */
+    code span.dt { color: #a626a4; } /* DataType */
+    code span.dv { color: #986801; } /* DecVal */
+    code span.er { color: #f44747; text-decoration: underline; } /* Error */
+    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
+    code span.fl { color: #986801; } /* Float */
+    code span.fu { color: #4078f2; } /* Function */
+    code span.im { color: #50a14f; } /* Import */
+    code span.in { color: #c45b00; } /* Information */
+    code span.kw { color: #a626a4; } /* Keyword */
+    code span.op { color: #a626a4; } /* Operator */
+    code span.ot { color: #27ae60; } /* Other */
+    code span.pp { color: #a626a4; } /* Preprocessor */
+    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+    code span.sc { color: #0184bc; } /* SpecialChar */
+    code span.ss { color: #da4453; } /* SpecialString */
+    code span.st { color: #50a14f; } /* String */
+    code span.va { color: #e45649; } /* Variable */
+    code span.vs { color: #da4453; } /* VerbatimString */
+    code span.wa { color: #da4453; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -351,15 +436,1287 @@
 
   <p class="date">15.11.2023</p>
 </section>
-<section id="under-construction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
-<h1>🚧 Under construction</h1>
-<p>Die Folien werden aktuell überarbeitet, sind aber spätestens zur 3.Sitzung (15.11) online.</p>
+<section id="seminarplan" class="slide level2">
+<h2>Seminarplan</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="yfcuboqlzv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#yfcuboqlzv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#yfcuboqlzv thead, #yfcuboqlzv tbody, #yfcuboqlzv tfoot, #yfcuboqlzv tr, #yfcuboqlzv td, #yfcuboqlzv th {
+  border-style: none;
+}
+
+#yfcuboqlzv p {
+  margin: 0;
+  padding: 0;
+}
+
+#yfcuboqlzv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 75%;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#yfcuboqlzv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#yfcuboqlzv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#yfcuboqlzv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#yfcuboqlzv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#yfcuboqlzv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#yfcuboqlzv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#yfcuboqlzv .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#yfcuboqlzv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#yfcuboqlzv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#yfcuboqlzv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#yfcuboqlzv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#yfcuboqlzv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#yfcuboqlzv .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#yfcuboqlzv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yfcuboqlzv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#yfcuboqlzv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#yfcuboqlzv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#yfcuboqlzv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yfcuboqlzv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#yfcuboqlzv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yfcuboqlzv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#yfcuboqlzv .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#yfcuboqlzv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yfcuboqlzv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yfcuboqlzv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yfcuboqlzv .gt_left {
+  text-align: left;
+}
+
+#yfcuboqlzv .gt_center {
+  text-align: center;
+}
+
+#yfcuboqlzv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#yfcuboqlzv .gt_font_normal {
+  font-weight: normal;
+}
+
+#yfcuboqlzv .gt_font_bold {
+  font-weight: bold;
+}
+
+#yfcuboqlzv .gt_font_italic {
+  font-style: italic;
+}
+
+#yfcuboqlzv .gt_super {
+  font-size: 65%;
+}
+
+#yfcuboqlzv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#yfcuboqlzv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#yfcuboqlzv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#yfcuboqlzv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#yfcuboqlzv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#yfcuboqlzv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#yfcuboqlzv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="5"><div class="gt_from_md"><p>5</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Automatic text analysis"><div class="gt_from_md"><p>📦 Automatic text analysis</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="20.12.2023"><div class="gt_from_md"><p>20.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="*Buffer Session*"><div class="gt_from_md"><p><em>Buffer Session</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Topic Modeling"><div class="gt_from_md"><p>🔨 Topic Modeling</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="agenda" class="title-slide slide level1 center" data-background-image="img/slide_bg-agenda.png">
+<h1>Agenda</h1>
+<ol type="1">
+<li><a href="#/organisation-koordination">Organisation &amp; Koordination</a></li>
+<li><a href="#/r-introduction">Die etwas andere Einführung in R</a></li>
+<li><a href="#/r-example">Anwedung von R am Beispiel</a></li>
+</ol>
+</section>
+
+<section>
+<section id="organisation-koordination" class="title-slide slide level1 center" data-background-image="img/slide_bg-orga.png">
+<h1>Organisation &amp; -koordination</h1>
+<p>R Zertifikate, Sprache der Prüfungsleistungen</p>
+</section>
+<section id="kurzes-organisatorische-update" class="slide level2">
+<h2>Kurzes organisatorische Update</h2>
+<h4 id="informationen-zu-kursdetails-und-prüfungsleistungen">Informationen zu Kursdetails und Prüfungsleistungen</h4>
+<ul>
+<li><p>Alle Zertifikat vom <strong>R-Basiskurs</strong> erhalten 🎉</p></li>
+<li><p>Informationen zum Kursablauf wurden geupdatet, Update zu Prüfungleistungen folgt noch</p></li>
+<li><p>Für alle <strong>Prüfungleistungen gilt: 🇩🇪 ist immer möglich, aber gerne 🇬🇧</strong></p></li>
+<li><p>🗣️ 2. Präsentationsgruppe: Denken Sie bitte</p>
+<ul>
+<li><p>an die Zusendung des <strong>Entwurf der Präsentationsfolien</strong> <strong>bis spätestens <u>nächste Woche Dienstag 11:00!</u></strong></p></li>
+<li><p>das <strong>Feedbackgespräch am Mittwoch im Anschluss an das Seminar.</strong></p></li>
+</ul></li>
+</ul>
+</section></section>
+<section id="anything-else" class="title-slide slide level1 center" data-background-image="img/slide_bg-participation.png">
+<h1>Anything else?</h1>
+<p>Weitere Fragen zur Organisation oder Ablauf des Kurses</p>
+</section>
+
+<section>
+<section id="r-introduction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
+<h1>What I Wish I Knew …</h1>
+<p>… When I Started Using R</p>
+<p><br></p>
+<p><strong>Die etwas andere Einführung in R</strong></p>
+</section>
+<section id="buliding-best-practice" class="slide level2">
+<h2>Buliding best practice</h2>
+<h4 id="willkommen-zurück-zu-r">Willkommen (zurück) zu R</h4>
+<!-- FIXME Add fragments .semi-fade-out -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>How most academics learn R:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.tenor.com/EkQS-yDvuw4AAAAC/pool-throw.gif" width="450"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-in">
+<p><strong>How you should learn R:</strong></p>
+<ul>
+<li>Versuchen Sie R nicht systematisch zu lernen, sondern <strong>spezifisch anzuwenden</strong>.</li>
+<li><strong>Organisieren</strong> Sie Ihre Arbeit in R (mit Projekten)</li>
+<li>Schreiben Sie <strong>lesbaren und nachvollziehbaren Code</strong>!</li>
+<li><strong>Fragen</strong> Sie nach!</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="ein-repository-voller-daten" class="slide level2">
+<h2>Ein Repository voller Daten</h2>
+<h4 id="beispiel-für-übung-durch-anwendung-bi-github-tidytuesday-social-data-project">Beispiel für Übung durch Anwendung: <a href="https://github.com/rfordatascience/tidytuesday"><i class="bi-github " style="" role="img" aria-hidden="true"></i> tidytuesday</a> (social data project)</h4>
+
+<img data-src="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/static/tt_logo.png" width="500" class="r-stretch quarto-figure-center"><div style="font-size: smaller;">
+<ul>
+<li><p>Data is posted to social media every Monday morning.</p></li>
+<li><p>Explore the data, watching out for interesting relationships.</p></li>
+<li><p>Create a visualization, a model, a shiny app, or some other piece of data-science-related output, using R or another programming language.</p></li>
+<li><p>Share your output and the code used to generate it on social media with the #TidyTuesday hashtag.</p></li>
+</ul>
+</div>
+</section>
+<section id="beispiele-für-tidytuesday" class="slide level2">
+<h2>Beispiele für #tidytuesday</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p></p><div id="tweet-47314"></div><script>tweet={"url":"https:\/\/twitter.com\/nrennie35\/status\/1721164261009793142","author_name":"Nicola Rennie | @nrennie@fosstodon.org","author_url":"https:\/\/twitter.com\/nrennie35","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe making of this week&#39;s \u003Ca href=\"https:\/\/twitter.com\/hashtag\/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#TidyTuesday\u003C\/a\u003E plot, recorded with \u007Bcamcorder\u007D in \u003Ca href=\"https:\/\/twitter.com\/hashtag\/RStats?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#RStats\u003C\/a\u003E! \uD83D\uDCF9\uD83D\uDCF9\uD83D\uDCF9 \u003Ca href=\"https:\/\/t.co\/mLhxHGRmJb\"\u003Ehttps:\/\/t.co\/mLhxHGRmJb\u003C\/a\u003E \u003Ca href=\"https:\/\/t.co\/hvJqEpGCib\"\u003Epic.twitter.com\/hvJqEpGCib\u003C\/a\u003E\u003C\/p\u003E&mdash; Nicola Rennie | @nrennie@fosstodon.org (@nrennie35) \u003Ca href=\"https:\/\/twitter.com\/nrennie35\/status\/1721164261009793142?ref_src=twsrc%5Etfw\"\u003ENovember 5, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-47314").innerHTML = tweet["html"];</script><p></p>
+</div><div class="column" style="width:50%;">
+<p></p><div id="tweet-91090"></div><script>tweet={"url":"https:\/\/twitter.com\/samiasab90\/status\/1720490541442355452","author_name":"samia","author_url":"https:\/\/twitter.com\/samiasab90","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EVisualized the relationship between antibiotic use and risk of hearing loss with the very cool dataset provided by the \u003Ca href=\"https:\/\/twitter.com\/hashtag\/RPharma?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#RPharma\u003C\/a\u003E team for tidy tuesday week 43 with \u003Ca href=\"https:\/\/twitter.com\/hashtag\/rstats?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#rstats\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/dataviz?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#dataviz\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/datavisualization?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#datavisualization\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/tidytuesday?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#tidytuesday\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#ggplot2\u003C\/a\u003E \u003Ca href=\"https:\/\/t.co\/99qPd6E3zI\"\u003Epic.twitter.com\/99qPd6E3zI\u003C\/a\u003E\u003C\/p\u003E&mdash; samia (@samiasab90) \u003Ca href=\"https:\/\/twitter.com\/samiasab90\/status\/1720490541442355452?ref_src=twsrc%5Etfw\"\u003ENovember 3, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-91090").innerHTML = tweet["html"];</script><p></p>
+</div>
+</div>
+</section>
+<section id="everything-you-need-in-one-place" class="slide level2">
+<h2>Everything you need in one place</h2>
+<h4 id="organisation-der-arbeit-mit-rstudio-projekten">Organisation der Arbeit mit RStudio-Projekten</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://r4ds.hadley.nz/diagrams/new-project.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Empfehlungen:</strong></p>
+<ul>
+<li><p>Für jedes Projekt ein RStudio-Projekt.</p></li>
+<li><p>Sicherung und Organisation von Daten, Skripte und Ouput an einem Ort, z.B. mit Unterstützung durch R-Pakete wie z.B. <a href="https://rostools.github.io/prodigenr/">prodigenr</a></p></li>
+<li><p>Verwenden Sie immer nur <strong>relative, keine absoluten Pfade. Empfehlung: <a href="https://here.r-lib.org/">here</a> R-Paket</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="versionskontrolle-als-kür" class="slide level2">
+<h2>Versionskontrolle als Kür</h2>
+<h4 id="crashkurs-zu-github">Crashkurs zu Git(Hub)</h4>
+
+<img data-src="https://raw.githubusercontent.com/MalikaIhle/Introduction-RStudio-Git-GitHub/main/assets/GitHub-remote.png" class="r-stretch quarto-figure-center"><p class="caption"><i class="bi-github " style="" role="img" aria-hidden="true"></i> <a href="https://malikaihle.github.io/Introduction-RStudio-Git-GitHub">MalikaIhle</a></p><ul>
+<li>Versionkontrolle für Code, gesichert in der Cloud</li>
+<li>Vollständige Rückverfolgbarkeit von (gesicherten) Änderungen</li>
+<li>Great effort, great return.</li>
+</ul>
+<!--# Verlinkung von nützlichen Git mit R Quellen -->
+</section>
+<section id="run-chunks-not-whole-scripts" class="slide level2">
+<h2>Run chunks, not (whole) scripts</h2>
+<h4 id="outputorientiertes-coding-mit-quarto">Outputorientiertes Coding mit Quarto</h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-hello.png" width="961"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-source-visual.png" class="fragment" data-fragment-index="1" width="1009"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-inline-output.png" class="fragment" data-fragment-index="2" width="996"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="rscript-rmarkdown-quarto" class="slide level2">
+<h2>RScript ≤ RMarkdown ≤ Quarto</h2>
+<h4 id="der-weg-vom-code-zum-output">Der Weg vom Code zum Output</h4>
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png"></p>
+<ul>
+<li><p>Grundidee von <a href="https://quarto.org/">Quarto</a> <img data-src="https://quarto.org/favicon.png" width="20">: ein Quelldokument kann in eine Vielzahl von Ausgabeformaten umgewandelt werden</p></li>
+<li><p>Markdown-Syntax für Text, verschiedene Programmiersprachen (wie z.B. R <em>und</em> Python) in einem Dokument</p></li>
+</ul>
+</section>
+<section id="develop-your-style" class="slide level2">
+<h2>Develop your style</h2>
+<h4 id="wichtigkeit-der-codeformatierung-und--dokumentierung">Wichtigkeit der Codeformatierung und -dokumentierung</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Strive for </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>short_flights <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> <span class="fu">filter</span>(air_time <span class="sc">&lt;</span> <span class="dv">60</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Avoid:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>SHTFTS <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> <span class="fu">filter</span>(air_time <span class="sc">&lt;</span> <span class="dv">60</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Strive for </span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>flights <span class="sc">|&gt;</span>  </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(arr_delay), <span class="sc">!</span><span class="fu">is.na</span>(tailnum)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">count</span>(dest)</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># Avoid</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>flights<span class="sc">|&gt;</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(arr_delay), <span class="sc">!</span><span class="fu">is.na</span>(tailnum))<span class="sc">|&gt;</span><span class="fu">count</span>(dest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<ul>
+<li>Die Entwicklung (oder Aneignung) eines Codestils ist wichtig!</li>
+<li>Was sich zunächst willkürlich anfühlt, hilft Ihnen mit der Zeit sehr</li>
+<li>Unterstützung durch den <a href="https://style.tidyverse.org/index.html">tidyverse style guide</a> bzw. die Pakete <a href="https://styler.r-lib.org/">styler</a> oder <a href="https://lintr.r-lib.org/">lintr</a></li>
+</ul>
+</section>
+<section id="empfehlung-tidyverse-is-your-friend" class="slide level2">
+<h2>Empfehlung: tidyverse is your friend!</h2>
+<h4 id="verschiedenen-paketen-für-alle-schritte-eines-projektes">Verschiedenen Paketen für alle Schritte eines Projektes</h4>
+
+<img data-src="https://rviews.rstudio.com/post/2017-06-09-What-is-the-tidyverse_files/tidyverse1.png" width="943" class="r-stretch quarto-figure-center"><p>Quelle: RStudio</p>
+</section>
+<section id="the-friend-of-your-friend-easystats" class="slide level2">
+<h2>The friend of your friend: easystats</h2>
+<h4 id="fokus-auf-die-analyse">Fokus auf die Analyse</h4>
+
+<img data-src="https://raw.githubusercontent.com/easystats/easystats/main/man/figures/logo_wall.png" class="r-stretch quarto-figure-center"><p>Quelle: <span class="citation" data-cites="lüdecke2022">Lüdecke et al. (<a href="#/literatur" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</section></section>
+<section>
+<section id="r-example" class="title-slide slide level1 center" data-background-image="img/slide_bg-example.png">
+<h1>Working with R …</h1>
+<p>… in the real world!</p>
+<p><strong>Im Fokus:</strong> <a href="https://hollywoodagegap.com/"><strong>Hollywood Age Gap</strong></a> <strong>Project</strong></p>
+</section>
+<section id="am-anfang-steht-die-theorie" class="slide level2">
+<h2>Am Anfang steht die Theorie</h2>
+<h4 id="typischer-data-science-process-als-kontext-der-sitzung">Typischer “data science process” als Kontext der Sitzung</h4>
+
+<img data-src="https://r4ds.hadley.nz/diagrams/data-science/base.png" class="r-stretch quarto-figure-center"><p>Quelle: <span class="citation" data-cites="wickham2023">Wickham et al. (<a href="#/literatur" role="doc-biblioref" onclick="">2023</a>)</span></p>
+<aside class="notes">
+<p>Additional steps (add if necessary): <!-- 
+![](https://r4ds.hadley.nz/diagrams/data-science/whole-game.png){.fragment fragment-index="1" fig-align="center"}
+![](https://r4ds.hadley.nz/diagrams/data-science/communicate.png){.fragment fragment-index="2" fig-align="center"}
+![](https://r4ds.hadley.nz/diagrams/data-science/visualize.png){.fragment fragment-index="2" fig-align="center"}
+![](https://r4ds.hadley.nz/diagrams/data-science/transform.png){.fragment fragment-index="3" fig-align="center"}
+![](https://r4ds.hadley.nz/diagrams/data-science/import.png){.fragment fragment-index="4" fig-align="center"}
+![](https://r4ds.hadley.nz/diagrams/data-science/program.png){.fragment fragment-index="5" fig-align="center"} 
+--></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="age-difference-in-years-between-move-love-interests" class="slide level2">
+<h2>Age difference in years between move love interests</h2>
+<h4 id="datengrundlage-für-die-beispiele-hollywood-age-gap-bi-house-bi-github">Datengrundlage für die Beispiele: Hollywood Age Gap (<a href="https://hollywoodagegap.com/"><i class="bi-house " style="" role="img" aria-hidden="true"></i></a> | <a href="https://github.com/lynnandtonic/hollywood-age-gap"><i class="bi-github " style="" role="img" aria-hidden="true"></i></a> )</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/screenshot-hollywood_age_gap.png" width="325"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><em>“An informational site showing the age gap between movie love interests.”</em></li>
+<li>Community-Projekt</li>
+</ul>
+<h5 id="guidlines-for-participationsubmission">Guidlines for participation/submission:</h5>
+<ul>
+<li><em>The two (or more) actors play actual love interests (not just friends, coworkers, or some other non-romantic type of relationship)</em></li>
+<li><em>The youngest of the two actors is at least 17 years old</em></li>
+<li><em>Not animated characters</em></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="explore-adapt-repeat" class="slide level2">
+<h2>Explore ➞ Adapt ➞ Repeat ⟳</h2>
+<h4 id="prozess-der-datenaufbereitung">Prozess der Datenaufbereitung</h4>
+
+<img data-src="https://r4ds.hadley.nz/diagrams/data-science/whole-game.png" width="1478" class="r-stretch quarto-figure-center"><ul>
+<li>nimmt in der Regel den Großteil der Zeit der Datenanalyse in Anspruch</li>
+<li>häufig bedarf es der mehrfachen <strong>Wiederholung dreier Schritte:</strong>
+<ul>
+<li>der (explorativen) <strong><code>Erkundung</code></strong>,</li>
+<li>der <strong><code>Standartdisierung</code></strong> und</li>
+<li>der (erneuten) <strong><code>Bereinung</code></strong> der Daten</li>
+</ul></li>
+</ul>
+</section>
+<section id="drei-stufen-der-datenqualität" class="slide level2">
+<h2>Drei Stufen der Datenqualität</h2>
+<h4 id="typische-strategien-zur-datenbereinigung-nach-pearson2018">Typische Strategien zur Datenbereinigung nach <span class="citation" data-cites="pearson2018">Pearson (<a href="#/literatur" role="doc-biblioref" onclick="">2018</a>)</span></h4>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/graph-statistical_analysis_value_chain.jpg" width="800"></p>
+<figcaption>Quelle: <span class="citation" data-cites="dejonge2013">Jonge &amp; Loo (<a href="#/literatur" role="doc-biblioref" onclick="">2013</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:60%;">
+<div style="font-size: 20px;">
+<ol type="1">
+<li><p>Bewertung <strong>allgemeiner Merkmale des Datensatzes</strong>, z. B.:</p>
+<ul>
+<li><p>Wie viele Fälle sind enthalten? Wie viele Variablen?</p></li>
+<li><p>Wie lauten die Variablennamen? Sind sie sinnvoll?</p></li>
+<li><p>Welchen Typ hat jede Variable, z. B. numerisch, kategorisch, logisch?</p></li>
+<li><p>Wie viele eindeutige Werte hat jede Variable?</p></li>
+<li><p>Welcher Wert tritt am häufigsten auf, und wie oft kommt er vor?</p></li>
+<li><p>Gibt es <strong>fehlende Werte</strong>? Wenn ja, wie häufig ist dies der Fall?</p></li>
+</ul></li>
+<li><p>Untersuchung <strong>deskriptiver Statistiken</strong> für jede Variable;</p></li>
+<li><p><strong>Explorative Visualisierung</strong>;</p></li>
+<li><p>Verschiedene Verfahren zur <strong>Suche nach Anomalien</strong> in den Daten;</p></li>
+<li><p>Untersuchung der <strong>Beziehungen zwischen Schlüsselvariablen</strong> mit Hilfe von Scatterplots/Boxplots/Mosaic-Plots;</p></li>
+<li><p><strong>Dokumentation des Vorgehens und der Ergebnisse</strong> (z.B. mit .rmd-Dokument). Dient als Grundlage für die anschließende Analyse und Erläuterung der Ergebnisse.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section id="direkter-download-via-url" class="slide level2">
+<h2>Direkter Download via URL</h2>
+<h4 id="datenimport-und--preview">Datenimport und -preview</h4>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="font-size: 14px; color: gray;">
+<p><strong>Bewertung allgemeiner Merkmale des Datensatzes, z. B.:</strong></p>
+<ul>
+<li>🔍 <strong>Wie viele Fälle sind enthalten? Wie viele Variablen?</strong></li>
+<li>🔍 <strong>Wie lauten die Variablennamen? Sind sie sinnvoll?</strong></li>
+<li>Welchen Typ hat jede Variable, z. B. numerisch, kategorisch, logisch?</li>
+<li>Wie viele eindeutige Werte hat jede Variable?</li>
+<li>Welcher Wert tritt am häufigsten auf, und wie oft kommt er vor?</li>
+<li>Gibt es fehlende Werte? Wenn ja, wie häufig ist dies der Fall?</li>
+</ul>
+</div>
+</div><div class="column" style="width:70%;">
+<div style="font-size: smaller;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>age_gaps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"http://hollywoodagegap.com/movies.csv"</span>) </span>
+<span id="cb3-2"><a href="#cb3-2"></a>age_gaps </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,176 × 12
+   `Movie Name`       `Release Year` Director    `Age Difference` `Actor 1 Name`
+   &lt;chr&gt;                       &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;         
+ 1 Harold and Maude             1971 Hal Ashby                 52 Bud Cort      
+ 2 Venus                        2006 Roger Mich…               50 Peter O'Toole 
+ 3 The Quiet American           2002 Phillip No…               49 Michael Caine 
+ 4 The Big Lebowski             1998 Joel Coen                 45 David Huddles…
+ 5 Beginners                    2010 Mike Mills                43 Christopher P…
+ 6 Poison Ivy                   1992 Katt Shea                 42 Tom Skerritt  
+ 7 Whatever Works               2009 Woody Allen               40 Larry David   
+ 8 Entrapment                   1999 Jon Amiel                 39 Sean Connery  
+ 9 Husbands and Wives           1992 Woody Allen               38 Woody Allen   
+10 Magnolia                     1999 Paul Thoma…               38 Jason Robards 
+# ℹ 1,166 more rows
+# ℹ 7 more variables: `Actor 1 Gender` &lt;chr&gt;, `Actor 1 Birthdate` &lt;date&gt;,
+#   `Actor 1 Age` &lt;dbl&gt;, `Actor 2 Name` &lt;chr&gt;, `Actor 2 Gender` &lt;chr&gt;,
+#   `Actor 2 Birthdate` &lt;chr&gt;, `Actor 2 Age` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="let-the-cleaning-beginn" class="slide level2">
+<h2>Let the cleaning beginn</h2>
+<h4 id="erste-schritte-der-datenbereinigung">Erste Schritte der Datenbereinigung</h4>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="font-size: 14px; color: gray;">
+<p><strong>Bewertung allgemeiner Merkmale des Datensatzes, z. B.:</strong></p>
+<ul>
+<li>✅ <del>Wie viele Fälle sind enthalten? Wie viele Variablen?</del></li>
+<li>✅ <del>Wie lauten die Variablennamen? Sind sie sinnvoll?</del></li>
+<li>🔍 <strong>Welchen Typ hat jede Variable, z. B. numerisch, kategorisch, logisch?</strong></li>
+<li>Wie viele eindeutige Werte hat jede Variable?</li>
+<li>Welcher Wert tritt am häufigsten auf, und wie oft kommt er vor?</li>
+<li>Gibt es fehlende Werte? Wenn ja, wie häufig ist dies der Fall?</li>
+</ul>
+</div>
+</div><div class="column" style="width:70%;">
+<div style="font-size: smaller;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>age_gaps <span class="sc">%&lt;&gt;%</span> janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
+<span id="cb5-2"><a href="#cb5-2"></a>age_gaps <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,176
+Columns: 12
+$ movie_name        &lt;chr&gt; "Harold and Maude", "Venus", "The Quiet American", "…
+$ release_year      &lt;dbl&gt; 1971, 2006, 2002, 1998, 2010, 1992, 2009, 1999, 1992…
+$ director          &lt;chr&gt; "Hal Ashby", "Roger Michell", "Phillip Noyce", "Joel…
+$ age_difference    &lt;dbl&gt; 52, 50, 49, 45, 43, 42, 40, 39, 38, 38, 36, 36, 35, …
+$ actor_1_name      &lt;chr&gt; "Bud Cort", "Peter O'Toole", "Michael Caine", "David…
+$ actor_1_gender    &lt;chr&gt; "man", "man", "man", "man", "man", "man", "man", "ma…
+$ actor_1_birthdate &lt;date&gt; 1948-03-29, 1932-08-02, 1933-03-14, 1930-09-17, 192…
+$ actor_1_age       &lt;dbl&gt; 23, 74, 69, 68, 81, 59, 62, 69, 57, 77, 59, 56, 65, …
+$ actor_2_name      &lt;chr&gt; "Ruth Gordon", "Jodie Whittaker", "Do Thi Hai Yen", …
+$ actor_2_gender    &lt;chr&gt; "woman", "woman", "woman", "woman", "man", "woman", …
+$ actor_2_birthdate &lt;chr&gt; "1896-10-30", "1982-06-03", "1982-10-01", "1975-11-0…
+$ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 30, …</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="building-the-habits" class="slide level2">
+<h2>Building the habits!</h2>
+<h4 id="erste-schritte-der-datenbereinigung-1">Erste Schritte der Datenbereinigung</h4>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="font-size: 14px; color: gray;">
+<p><strong>Bewertung allgemeiner Merkmale des Datensatzes, z. B.:</strong></p>
+<ul>
+<li>✅ <del>Wie viele Fälle sind enthalten? Wie viele Variablen?</del></li>
+<li>✅ <del>Wie lauten die Variablennamen? Sind sie sinnvoll?</del></li>
+<li>✅ <del>Welchen Typ hat jede Variable, z. B. numerisch, kategorisch, logisch?</del></li>
+<li>Wie viele eindeutige Werte hat jede Variable?</li>
+<li>Welcher Wert tritt am häufigsten auf, und wie oft kommt er vor?</li>
+<li>Gibt es fehlende Werte? Wenn ja, wie häufig ist dies der Fall?</li>
+</ul>
+</div>
+</div><div class="column" style="width:70%;">
+<div style="font-size: smaller;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>age_gaps_correct <span class="ot">&lt;-</span> age_gaps <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">across</span>(<span class="fu">ends_with</span>(<span class="st">"_birthdate"</span>), <span class="sc">~</span><span class="fu">as.Date</span>(.)) <span class="co"># set dates to dates</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br></p>
+<h5 id="reminder">Reminder</h5>
+<ul>
+<li>Veränderungen nicht im selben Datensatz speichern</li>
+<li>Verständliche Benennung &amp; Kommentierung der Daten</li>
+<li>Bearbeitungsschritte kommentieren</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="kontrolle-der-lageparameter" class="slide level2">
+<h2>Kontrolle der Lageparameter</h2>
+<h4 id="erste-schritte-der-datenbereinigung-2">Erste Schritte der Datenbereinigung</h4>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="font-size: 14px; color: gray;">
+<p><strong>Bewertung allgemeiner Merkmale des Datensatzes, z. B.:</strong></p>
+<ul>
+<li>✅ <del>Wie viele Fälle sind enthalten? Wie viele Variablen?</del></li>
+<li>✅ <del>Wie lauten die Variablennamen? Sind sie sinnvoll?</del></li>
+<li>✅ <del>Welchen Typ hat jede Variable, z. B. numerisch, kategorisch, logisch?</del></li>
+<li>🔍 <strong>Wie viele eindeutige Werte hat jede Variable?</strong></li>
+<li>🔍 <strong>Welcher Wert tritt am häufigsten auf, und wie oft kommt er vor?</strong></li>
+<li>🔍 <strong>Gibt es fehlende Werte? Wenn ja, wie häufig ist dies der Fall?</strong></li>
+</ul>
+</div>
+</div><div class="column" style="width:70%;">
+<div style="font-size: smaller;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> sjmisc<span class="sc">::</span><span class="fu">descr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+## Basic descriptive statistics
+
+            var    type          label    n NA.prc    mean    sd   se   md
+   release_year numeric   release_year 1176      0 2000.78 16.64 0.49 2004
+ age_difference numeric age_difference 1176      0   10.46  8.52 0.25    8
+    actor_1_age numeric    actor_1_age 1176      0   39.99 10.92 0.32   39
+    actor_2_age numeric    actor_2_age 1176      0   31.25  8.44 0.25   30
+ trimmed          range   iqr  skew
+ 2003.68 88 (1935-2023) 15.00 -1.69
+    9.39      52 (0-52) 12.00  1.19
+   39.42     64 (17-81) 15.00  0.54
+   30.42     64 (17-81)  9.25  1.37</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lets-start-exploring" class="slide level2">
+<h2>Let’s start exploring!</h2>
+<h4 id="wie-sind-die-altersunterschiede-verteilt">Wie sind die Altersunterschiede verteilt?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(age_difference)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-03_files/figure-revealjs/figure-age-difference-1.png" width="960" class="r-stretch"></section>
+<section id="a-recent-past" class="slide level2">
+<h2>A recent past …</h2>
+<h4 id="in-welchen-filmen-ist-der-altersunterschied-am-höchsten">In welchen Filmen ist der Altersunterschied am höchsten?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="fu">select</span>(movie_name, age_difference, release_year) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,176 × 3
+   movie_name         age_difference release_year
+   &lt;chr&gt;                       &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Harold and Maude               52         1971
+ 2 Venus                          50         2006
+ 3 The Quiet American             49         2002
+ 4 The Big Lebowski               45         1998
+ 5 Beginners                      43         2010
+ 6 Poison Ivy                     42         1992
+ 7 Whatever Works                 40         2009
+ 8 Entrapment                     39         1999
+ 9 Husbands and Wives             38         1992
+10 Magnolia                       38         1999
+# ℹ 1,166 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="or-still-present" class="slide level2">
+<h2>… or still present?</h2>
+<h4 id="in-welchen-filmen-ist-der-altersunterschied-am-höchsten-1">In welchen Filmen ist der Altersunterschied am höchsten?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="fu">filter</span>(release_year <span class="sc">&gt;=</span> <span class="dv">2022</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="fu">select</span>(</span>
+<span id="cb13-5"><a href="#cb13-5"></a>        movie_name, age_difference, release_year, </span>
+<span id="cb13-6"><a href="#cb13-6"></a>        actor_1_name, actor_2_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 5
+   movie_name              age_difference release_year actor_1_name actor_2_name
+   &lt;chr&gt;                            &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;       
+ 1 The Bubble                          21         2022 Pedro Pascal Maria Bakal…
+ 2 Oppenheimer                         20         2023 Cillian Mur… Florence Pu…
+ 3 The Northman                        20         2022 Alexander S… Anya Taylor…
+ 4 The Lost City                       16         2022 Channing Ta… Sandra Bull…
+ 5 Barbie                              10         2023 Ryan Gosling Margot Robb…
+ 6 Everything Everywhere …              9         2022 Ke Huy Quan  Michelle Ye…
+ 7 Top Gun: Maverick                    8         2022 Tom Cruise   Jennifer Co…
+ 8 Oppenheimer                          7         2023 Cillian Mur… Emily Blunt 
+ 9 Your Place or Mine                   7         2023 Ashton Kutc… Zoë Chao    
+10 Your Place or Mine                   5         2023 Jesse Willi… Reese Withe…
+11 Your Place or Mine                   2         2023 Ashton Kutc… Reese Withe…
+12 You People                           1         2023 Jonah Hill   Lauren Lond…</code></pre>
+</div>
+</div>
+</section>
+<section id="durchschnitts-unterschied-nach-jahren" class="slide level2">
+<h2>(Durchschnitts-)Unterschied nach Jahren</h2>
+<h4 id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-releasedatum">Gibt es einen Zusammenhang zwischen Altersunterschied und Releasedatum?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a>    <span class="fu">group_by</span>(release_year) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="fu">summarise</span>(<span class="at">age_difference_mean =</span> <span class="fu">mean</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="#cb15-4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(release_year, age_difference_mean)) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-03_files/figure-revealjs/figure-age-difference-mean-by-year-1.png" width="960" class="r-stretch"></section>
+<section id="verteilung-nach-jahren" class="slide level2">
+<h2>Verteilung nach Jahren</h2>
+<h4 id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-releasedatum-1">Gibt es einen Zusammenhang zwischen Altersunterschied und Releasedatum?</h4>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>ggpubr<span class="sc">::</span><span class="fu">ggboxplot</span>(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="at">data =</span> age_gaps_correct, </span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="at">x =</span> <span class="st">"release_year"</span>, </span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="at">y =</span> <span class="st">"age_difference"</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>  <span class="co"># Rotate x-axis labels by 90 degrees</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="fu">theme</span>(</span>
+<span id="cb16-8"><a href="#cb16-8"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb16-9"><a href="#cb16-9"></a>        <span class="at">angle =</span> <span class="dv">90</span>,</span>
+<span id="cb16-10"><a href="#cb16-10"></a>        <span class="at">vjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb16-11"><a href="#cb16-11"></a>         <span class="at">hjust=</span><span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="slides-03_files/figure-revealjs/figure-age-difference-by-year-1.png" width="1440"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ein-blick-auf-die-korrelation" class="slide level2">
+<h2>Ein Blick auf die Korrelation</h2>
+<h4 id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-releasedatum-2">Gibt es einen Zusammenhang zwischen Altersunterschied und Releasedatum?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>age_gaps <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">select</span>(release_year, age_difference) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-3"><a href="#cb17-3"></a>  correlation<span class="sc">::</span><span class="fu">correlation</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Correlation Matrix (pearson-method)
+
+Parameter1   |     Parameter2 |     r |         95% CI | t(1174) |         p
+----------------------------------------------------------------------------
+release_year | age_difference | -0.22 | [-0.27, -0.16] |   -7.56 | &lt; .001***
+
+p-value adjustment method: Holm (1979)
+Observations: 1176</code></pre>
+</div>
+</div>
+</section>
+<section id="mit-kanonen-auf-spatzen-schießen" class="slide level2">
+<h2>Mit Kanonen auf Spatzen schießen</h2>
+<h4 id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-releasedatum-3">Gibt es einen Zusammenhang zwischen Altersunterschied und Releasedatum?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Schätzung des Models</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>mdl <span class="ot">&lt;-</span> <span class="fu">lm</span>(age_difference <span class="sc">~</span> release_year, <span class="at">data =</span> age_gaps_correct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>mdl <span class="sc">%&gt;%</span> parameters<span class="sc">::</span><span class="fu">parameters</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Parameter    | Coefficient |    SE |           95% CI | t(1174) |      p
+------------------------------------------------------------------------
+(Intercept)  |      231.15 | 29.20 | [173.86, 288.44] |    7.92 | &lt; .001
+release year |       -0.11 |  0.01 | [ -0.14,  -0.08] |   -7.56 | &lt; .001</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>mdl <span class="sc">%&gt;%</span> performance<span class="sc">::</span><span class="fu">model_performance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Indices of model performance
+
+AIC      |     AICc |      BIC |    R2 | R2 (adj.) |  RMSE | Sigma
+------------------------------------------------------------------
+8326.022 | 8326.043 | 8341.232 | 0.046 |     0.046 | 8.319 | 8.326</code></pre>
+</div>
+</div>
+</section>
+<section id="convenience-wrapper" class="slide level2">
+<h2>Convenience wrapper</h2>
+<h4 id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-releasedatum-4">Gibt es einen Zusammenhang zwischen Altersunterschied und Releasedatum?</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>mdl <span class="sc">%&gt;%</span> report<span class="sc">::</span><span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>We fitted a linear model (estimated using OLS) to predict age_difference with
+release_year (formula: age_difference ~ release_year). The model explains a
+statistically significant and weak proportion of variance (R2 = 0.05, F(1,
+1174) = 57.12, p &lt; .001, adj. R2 = 0.05). The model's intercept, corresponding
+to release_year = 0, is at 231.15 (95% CI [173.86, 288.44], t(1174) = 7.92, p &lt;
+.001). Within this model:
+
+  - The effect of release year is statistically significant and negative (beta =
+-0.11, 95% CI [-0.14, -0.08], t(1174) = -7.56, p &lt; .001; Std. beta = -0.22, 95%
+CI [-0.27, -0.16])
+
+Standardized parameters were obtained by fitting the model on a standardized
+version of the dataset. 95% Confidence Intervals (CIs) and p-values were
+computed using a Wald t-distribution approximation.</code></pre>
+</div>
+</div>
+</section>
+<section id="try---fail---repeat" class="slide level2">
+<h2>Try - fail - repeat</h2>
+<h4 id="kurzes-fazit-der-heutigen-sitzung">Kurzes Fazit der heutigen Sitzung</h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><br></p>
+<ul>
+<li><p>Wenn R, dann mit RStudio + Quarto!</p></li>
+<li><p>Anschauen - nachmachen - ausprobieren</p></li>
+<li><p>Keep it <code>tidy</code></p></li>
+<li><p>(Gute) Routinen bilden</p></li>
+<li><p>“There is almost always a package for that …”</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/session-02/meme-it_is_hard_using_R.jpeg" width="392"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-image="img/slide_bg-question.png">
+<h1>Time for questions</h1>
+
+</section>
+
+<section>
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-image="img/slide_bg-end_session.png">
+<h1>Bis zur nächsten Sitzung!</h1>
+
+</section>
+<section id="literatur" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-dejonge2013" class="csl-entry" role="listitem">
+Jonge, E. de, &amp; Loo, M. van der. (2013). <em>An introduction to data cleaning with R</em>.
+</div>
+<div id="ref-lüdecke2022" class="csl-entry" role="listitem">
+Lüdecke, D., Ben-Shachar, M. S., Patil, I., Wiernik, B. M., Bacher, E., Thériault, R., &amp; Makowski, D. (2022). Easystats: Framework for easy statistical modeling, visualization, and reporting. <em>CRAN</em>. <a href="https://easystats.github.io/easystats/">https://easystats.github.io/easystats/</a>
+</div>
+<div id="ref-pearson2018" class="csl-entry" role="listitem">
+Pearson, R. K. (2018). <em>Exploratory data analysis using r</em>. CRC Press/Taylor &amp; Francis Group.
+</div>
+<div id="ref-wickham2023" class="csl-entry" role="listitem">
+Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2023). <em>R for data science: import, tidy, transform, visualize, and model data</em> (2nd edition). O’Reilly.
+</div>
+</div>
 
 
 <img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -759,4 +2116,5 @@
     </script>
     
 
+<script src="https://platform.twitter.com/widgets.js"></script>
 </body></html>
