@@ -60,7 +60,7 @@ website:
             text: "Session 01"
           - href: sessions/session-02.qmd
             text: "Session 02"
-          - href: sessions/session-03.qmds
+          - href: sessions/session-03.qmd
             text: "Session 03"
           - href: sessions/session-04.qmd
             text: "Session 04"
