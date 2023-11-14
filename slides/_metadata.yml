@@ -25,6 +25,7 @@ highlight-style: atom-one
 
 filters:
   - roughnotation
+  - line-highlight
 
 execute:
   echo: true

@@ -70,3 +70,8 @@ $presentation-heading-font: News Cycle, sans-serif !default;
 .caption{
   text-align: center;
 }
+
+// slide customization
+.reveal div.sourceCode {
+  margin-bottom: 10px !important;
+}

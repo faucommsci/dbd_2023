@@ -290,13 +290,13 @@ json_text_new_schedule_b <- '[
         "Session": "6",
         "Datum": "06.12.2023",
         "Topic": "📦 Data collection methods",
-        "Presenter": "Group B"
+        "Presenter": "Group D"
     },
     {
         "Session": "7",
         "Datum": "13.12.2023",
         "Topic": "📦 Automatic text analysis",
-        "Presenter": "Group D"
+        "Presenter": "Group B"
     },
     {
         "Session": "8",
