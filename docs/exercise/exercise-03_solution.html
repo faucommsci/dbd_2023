@@ -64,8 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../computing/computing-textbooks.html" rel="next">
-<link href="../sessions/session-07.html" rel="prev">
 <link href="../img/logo_fau_red.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercise/exercise-03.html">Exercises</a></li><li class="breadcrumb-item"><a href="../exercise/exercise-03.html">Exercise 03</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercise 03: 🔨 Working with R</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -237,16 +235,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercise/exercise-03.html" class="sidebar-item-text sidebar-link active">
+  <a href="../exercise/exercise-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 03</span></a>
   </div>
 </li>
@@ -327,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/exercise-03.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/exercise-03_solution.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
@@ -350,14 +348,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file</p>
-<p><a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD/HEAD?urlpath=rstudio"><img src="../img/badge-binder_rstudio.svg" class="img-fluid" alt="Binder RStudio"></a> Open this exercise in interactive and executable environment</p>
+<p>Download source file: <a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a></p>
+<p>Open this exercise in other interactive and executable environments: <a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD/HEAD?urlpath=rstudio"><img src="../img/badge-binder_rstudio.svg" class="img-fluid" alt="Binder RStudio"></a></p>
 </div>
 </div>
 </div>
@@ -400,7 +398,7 @@ Todays’s data basis: Hollywood Age Gaps
 <li>Automatische Suche nach <code>dependencies</code></li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-03_cache/html/load-packages_a46597b7528cc20404b0a76883ac5261">
+<div class="cell" data-hash="exercise-03_solution_cache/html/load-packages_2ac6b2e1c8c7ac589bad751c6be0e7c8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  here, </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  magrittr, </span>
@@ -420,8 +418,8 @@ Todays’s data basis: Hollywood Age Gaps
 <table class="table">
 <caption>Variablennamen und -beschreibungen</caption>
 <colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
+<col style="width: 30%">
+<col style="width: 69%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -476,7 +474,7 @@ Todays’s data basis: Hollywood Age Gaps
 </tr>
 </tbody>
 </table>
-<div class="cell" data-hash="exercise-03_cache/html/import-data-raw_8d10eb5fb770fb988cb3d0e51879c822">
+<div class="cell" data-hash="exercise-03_solution_cache/html/import-data-raw_bb2bf2b8161585ede3025df0c5a6928e">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data from URL</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>age_gaps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"http://hollywoodagegap.com/movies.csv"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
@@ -528,7 +526,7 @@ Sind die Daten <em>“technisch korrekt</em>”?
 </div>
 <section id="check-overview" class="level5">
 <h5 class="anchored" data-anchor-id="check-overview">Überblick über die Daten</h5>
-<div class="cell" data-hash="exercise-03_cache/html/table-initial-overview_2f9e90bd2a8136505e0f3fb4e90b7c8f">
+<div class="cell" data-hash="exercise-03_solution_cache/html/table-initial-overview_a90605ec1163d6471a7c4c38f4298432">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>age_gaps <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,176
@@ -550,7 +548,7 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 </section>
 <section id="check-overview-correction" class="level5">
 <h5 class="anchored" data-anchor-id="check-overview-correction">Korrekturen</h5>
-<div class="cell" data-hash="exercise-03_cache/html/recoding-data-to-correct_e94d5bd9f96c5a9ab5af33c426f92f51">
+<div class="cell" data-hash="exercise-03_solution_cache/html/recoding-data-to-correct_a0f7aa90605048f3174c8bf509079ab4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="ot">&lt;-</span> age_gaps <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(<span class="fu">ends_with</span>(<span class="st">"_birthdate"</span>), <span class="sc">~</span><span class="fu">as.Date</span>(.)) <span class="co"># set dates to dates</span></span>
@@ -559,7 +557,7 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 </section>
 <section id="check-location-parameter" class="level5">
 <h5 class="anchored" data-anchor-id="check-location-parameter">Überprüfung Lageparameter</h5>
-<div class="cell" data-hash="exercise-03_cache/html/table-location-parameter_1601daddd4fd72bc9f657906be02acdb">
+<div class="cell" data-hash="exercise-03_solution_cache/html/table-location-parameter_2e04deab83df081fac3f7f43547dd15d">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> <span class="fu">descr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -584,19 +582,19 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 <h3 class="anchored" data-anchor-id="die-ersten-datenexplorationen">Die ersten Datenexplorationen</h3>
 <section id="wie-sind-die-altersunterschiede-verteilt" class="level4">
 <h4 class="anchored" data-anchor-id="wie-sind-die-altersunterschiede-verteilt">Wie sind die Altersunterschiede verteilt?</h4>
-<div class="cell" data-hash="exercise-03_cache/html/figure-age-difference_c5988fd6f5136c3806b67be412a3a7b9">
+<div class="cell" data-hash="exercise-03_solution_cache/html/figure-age-difference_507531cf9a64a55fac6e401923dae1ab">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> age_difference)) <span class="sc">+</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exercise-03_files/figure-html/figure-age-difference-1.png" class="img-fluid" width="672"></p>
+<p><img src="exercise-03_solution_files/figure-html/figure-age-difference-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="in-welchen-filmen-ist-der-altersunterschied-am-höchsten" class="level4">
 <h4 class="anchored" data-anchor-id="in-welchen-filmen-ist-der-altersunterschied-am-höchsten">In welchen Filmen ist der Altersunterschied am höchsten?</h4>
-<div class="cell" data-hash="exercise-03_cache/html/table-movies-highest-age-difference_29992617e1a422606cd72974110c748e">
+<div class="cell" data-hash="exercise-03_solution_cache/html/table-movies-highest-age-difference_95c21d20ad5aa3a525c456575432ec92">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(movie_name, age_difference, release_year) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -617,7 +615,7 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 # ℹ 1,166 more rows</code></pre>
 </div>
 </div>
-<div class="cell" data-hash="exercise-03_cache/html/table-movies-highest-age-difference-current_debe1e62dc7182d86cc616e7bdfc73e6">
+<div class="cell" data-hash="exercise-03_solution_cache/html/table-movies-highest-age-difference-current_741efdd1e639da25d2084907baaca80d">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(release_year <span class="sc">&gt;=</span> <span class="dv">2022</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
@@ -647,7 +645,7 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 <h4 class="anchored" data-anchor-id="gibt-es-einen-zusammenhang-zwischen-altersunterschied-und-release">Gibt es einen Zusammenhang zwischen Altersunterschied und Release?</h4>
 <section id="durchschnitts-unterschied-nach-jahren" class="level5">
 <h5 class="anchored" data-anchor-id="durchschnitts-unterschied-nach-jahren">(Durchschnitts-)Unterschied nach Jahren</h5>
-<div class="cell" data-hash="exercise-03_cache/html/figure-age-difference-mean-by-year_718d2acaefd4a1fac1adf5187129320e">
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-1_f234c954dbc822c8dfa46fd3ef27745a">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(release_year) <span class="sc">%&gt;%</span> </span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">age_difference_mean =</span> <span class="fu">mean</span>(age_difference)) <span class="sc">%&gt;%</span> </span>
@@ -655,13 +653,13 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exercise-03_files/figure-html/figure-age-difference-mean-by-year-1.png" class="img-fluid" width="672"></p>
+<p><img src="exercise-03_solution_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="verteilung-nach-jahren" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="verteilung-nach-jahren">Verteilung nach Jahren</h5>
-<div class="cell page-columns page-full" data-hash="exercise-03_cache/html/figure-age-difference-by-year_75a5902f612103eae2be5b8fdd82ae0d">
+<div class="cell page-columns page-full" data-hash="exercise-03_solution_cache/html/unnamed-chunk-2_e9e5d799fc2fe2beb1ccb07bd07e2325">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ggpubr<span class="sc">::</span><span class="fu">ggboxplot</span>(</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> age_gaps_correct, </span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"release_year"</span>, </span>
@@ -674,13 +672,13 @@ $ actor_2_age       &lt;dbl&gt; 75, 24, 20, 23, 38, 17, 22, 30, 19, 39, 23, 20, 
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="fl">0.5</span>,</span>
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">hjust=</span><span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display column-page">
-<p><img src="exercise-03_files/figure-html/figure-age-difference-by-year-1.png" class="img-fluid" width="1536"></p>
+<p><img src="exercise-03_solution_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1536"></p>
 </div>
 </div>
 </section>
 <section id="überprüfung-der-korrelation" class="level5">
 <h5 class="anchored" data-anchor-id="überprüfung-der-korrelation">Überprüfung der Korrelation</h5>
-<div class="cell" data-hash="exercise-03_cache/html/model-age-difference-release-year-correlation_dfc7e0440c3e9f386f82fc8c4a46fe3e">
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-3_3e7f52c865063ee01827dd38a1f6d793">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>age_gaps <span class="sc">%&gt;%</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(release_year, age_difference) <span class="sc">%&gt;%</span> </span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  correlation<span class="sc">::</span><span class="fu">correlation</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -698,7 +696,7 @@ Observations: 1176</code></pre>
 </section>
 <section id="schätzung-ols" class="level5">
 <h5 class="anchored" data-anchor-id="schätzung-ols">Schätzung OLS</h5>
-<div class="cell" data-hash="exercise-03_cache/html/model-age-difference-release-year-lm_dcc5ef3e8f3583161ce0c7786c800c07">
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-4_bf5f7cb0e7fb79487794b05d111e185d">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Schätzung des Models</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>mdl <span class="ot">&lt;-</span> <span class="fu">lm</span>(age_difference <span class="sc">~</span> release_year, <span class="at">data =</span> age_gaps_correct)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -719,7 +717,7 @@ AIC      |     AICc |      BIC |    R2 | R2 (adj.) |  RMSE | Sigma
 8326.022 | 8326.043 | 8341.232 | 0.046 |     0.046 | 8.319 | 8.326</code></pre>
 </div>
 </div>
-<div class="cell" data-hash="exercise-03_cache/html/model-age-difference-release-lm-report_bb415e3be349e98c172bac59d423ed89">
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-5_52eed15a668a2388ab4b05476954a438">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> report<span class="sc">::</span><span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>We fitted a linear model (estimated using OLS) to predict age_difference with
@@ -755,57 +753,67 @@ Spielt das Geschlecht eine Rolle?
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Der folgende Abschitt befasst sich nun ergänzend mit der Frage, welche Rolle das Geschlecht mit Blick auf die “Gültigkeit” der vorherigen Ergebnisse spielt</li>
-<li>Dazu sind jedoch weitere Explorations- und Überarbeitungsschritte notwendig</li>
+<li><p>Der folgende Abschitt befasst sich nun ergänzend mit der Frage, welche Rolle das Geschlecht mit Blick auf die “Gültigkeit” der vorherigen Ergebnisse spielt</p></li>
+<li><p>Dazu sind jedoch weitere Explorations- und Überarbeitungsschritte notwendig</p></li>
 </ul>
 </div>
 </div>
 <section id="übeprüfung-der-_gender-variablen" class="level3">
 <h3 class="anchored" data-anchor-id="übeprüfung-der-_gender-variablen">Übeprüfung der <code>_gender</code>-Variablen</h3>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_correct</code> die Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> an.</p>
-</div>
-</div>
-<div class="cell" data-hash="exercise-03_cache/html/exercise_1_c4eb15b919569272d989736f24e15fa7">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADD YOUR CODE HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::flat_talbe()</code> und den Datensatz <code>age_gaps_correct</code> um eine Kreuztabelle der Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> zu erstellen.</p>
+<ul>
+<li>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_correct</code> die Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> an.</li>
+<li>Nutzen Sie die Funktion <code>sjmisc::flat_talbe()</code> und den Datensatz <code>age_gaps_correct</code> um eine Kreuztabelle der Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> zu erstellen.</li>
+</ul>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-6_d130072aae2f5b27dd54aac20982199b">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(actor_1_gender, actor_2_gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>actor_1_gender &lt;character&gt; 
+# total N=1176 valid N=1176 mean=1.01 sd=0.12
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+man   | 1160 | 98.64 |   98.64 |  98.64
+woman |   16 |  1.36 |    1.36 | 100.00
+&lt;NA&gt;  |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;
+
+actor_2_gender &lt;character&gt; 
+# total N=1176 valid N=1176 mean=1.99 sd=0.12
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+man   |   17 |  1.45 |    1.45 |   1.45
+woman | 1159 | 98.55 |   98.55 | 100.00
+&lt;NA&gt;  |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 </div>
-<div class="cell" data-hash="exercise-03_cache/html/exercise_2_9ce5394dc7402bfff85a320df30f5f94">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADD YOUR CODE HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-7_5f069ba1713fca8eb282b6089f77558b">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(actor_1_gender, actor_2_gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flat_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               actor_2_gender  man woman
+actor_1_gender                          
+man                             12  1148
+woman                            5    11</code></pre>
+</div>
 </div>
 </section>
 <section id="sind-die-daten-konsistent" class="level3">
 <h3 class="anchored" data-anchor-id="sind-die-daten-konsistent">Sind die Daten “konsistent”?</h3>
 <section id="überprüfung-der-sortierung" class="level4">
 <h4 class="anchored" data-anchor-id="überprüfung-der-sortierung">Überprüfung der Sortierung</h4>
-<div class="cell" data-hash="exercise-03_cache/html/table-check-variable-arrangement_391d934650ecbd5ffd3d5882456938ef">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_older =</span> <span class="fu">mean</span>(actor_1_age <span class="sc">&gt;</span> actor_2_age), <span class="co"># older person first?</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_male  =</span> <span class="fu">mean</span>(actor_1_gender <span class="sc">==</span> <span class="st">"man"</span>),  <span class="co"># male person first? </span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">p_1_first_alpha =</span> <span class="fu">mean</span>(actor_1_name <span class="sc">&lt;</span> actor_2_name) <span class="co"># alphabetical order?</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Nutzen Sie die Funktion <code>dplyr::summarise</code> um auf Basis des Datensatzes <code>age_gaps_correct</code> folgende Variabeln zu erstellen:</li>
+<li><code>p1_older</code></li>
+</ul>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-8_104d2813626c9480ba15920be8de0a60">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_older =</span> <span class="fu">mean</span>(actor_1_age <span class="sc">&gt;</span> actor_2_age), <span class="co"># older person first?</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_male  =</span> <span class="fu">mean</span>(actor_1_gender <span class="sc">==</span> <span class="st">"man"</span>),  <span class="co"># male person first? </span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">p_1_first_alpha =</span> <span class="fu">mean</span>(actor_1_name <span class="sc">&lt;</span> actor_2_name) <span class="co"># alphabetical order?</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   p1_older p1_male p_1_first_alpha
@@ -817,14 +825,14 @@ Exercise 2
 </section>
 <section id="überprüfung-der-anzahl-pro-paare-pro-film" class="level3">
 <h3 class="anchored" data-anchor-id="überprüfung-der-anzahl-pro-paare-pro-film">Überprüfung der Anzahl pro Paare pro Film</h3>
-<div class="cell" data-hash="exercise-03_cache/html/table-check-couple-numbers_6bff8b3f073411c4fc9980b828960e84">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>couples <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(movie_name) <span class="sc">%&gt;%</span> </span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) </span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribution</span></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> <span class="fu">frq</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-9_a1fc18143c2e7d316842e4d240dbbd90">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>couples <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(movie_name) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) </span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribution</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> <span class="fu">frq</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>n &lt;integer&gt; 
 # total N=843 valid N=843 mean=1.40 sd=0.75
@@ -840,10 +848,10 @@ Value |   N | Raw % | Valid % | Cum. %
     7 |   1 |  0.12 |    0.12 | 100.00
  &lt;NA&gt; |   0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Movies with a loot of couples </span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> </span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Movies with a loot of couples </span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 19 × 2
    movie_name                      n
@@ -872,43 +880,43 @@ Value |   N | Raw % | Valid % | Cum. %
 </section>
 <section id="korrekturen" class="level3">
 <h3 class="anchored" data-anchor-id="korrekturen">Korrekturen</h3>
-<div class="cell" data-hash="exercise-03_cache/html/recoding-data-to-consistent_6b32e543b7cb34891f8851eb13f53d56">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If multiple couples, assign couple number by movie</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">couple_number =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">.by =</span> <span class="st">"movie_name"</span></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Change data structure (one line per actor in a coulpe of a movie)</span></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">"actor_1_"</span>, <span class="st">"actor_2_"</span>)),</span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">".value"</span>),</span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">"_"</span></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Put older actor first</span></span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference), movie_name, birthdate) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(<span class="st">"movie_name"</span>, <span class="st">"couple_number"</span>)</span>
-<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">"position"</span>,</span>
-<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_glue =</span> <span class="st">"actor_{position}_{.value}"</span>,</span>
-<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"gender"</span>, <span class="st">"birthdate"</span>, <span class="st">"age"</span>)</span>
-<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">couple_structure =</span> <span class="fu">case_when</span>(</span>
-<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">!=</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">3</span>, </span>
-<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
-<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">older_male_hetero  =</span> sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>      couple_structure, </span>
-<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">rec=</span><span class="st">"3=0; 4=1; ELSE=NA"</span>, </span>
-<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">to.factor =</span> <span class="cn">TRUE</span></span>
-<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-10_5e48cca9e34c2f9db509433c854cc9d0">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If multiple couples, assign couple number by movie</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">couple_number =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">.by =</span> <span class="st">"movie_name"</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Change data structure (one line per actor in a coulpe of a movie)</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">"actor_1_"</span>, <span class="st">"actor_2_"</span>)),</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">".value"</span>),</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">"_"</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Put older actor first</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference), movie_name, birthdate) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(<span class="st">"movie_name"</span>, <span class="st">"couple_number"</span>)</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">"position"</span>,</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_glue =</span> <span class="st">"actor_{position}_{.value}"</span>,</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"gender"</span>, <span class="st">"birthdate"</span>, <span class="st">"age"</span>)</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">couple_structure =</span> <span class="fu">case_when</span>(</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">!=</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">3</span>, </span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">older_male_hetero  =</span> sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>      couple_structure, </span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">rec=</span><span class="st">"3=0; 4=1; ELSE=NA"</span>, </span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">to.factor =</span> <span class="cn">TRUE</span></span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -916,56 +924,80 @@ Value |   N | Raw % | Valid % | Cum. %
 <h2 class="anchored" data-anchor-id="die-zweite-datenexploration">Die zweite Datenexploration</h2>
 <section id="alterskombinationen-im-überblick" class="level3">
 <h3 class="anchored" data-anchor-id="alterskombinationen-im-überblick">Alterskombinationen im Überblick</h3>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<ul>
+<li>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_consistent</code> die Variablen <code>couple_structure</code> und <code>older_male_hetero</code> an.</li>
+</ul>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-11_f250902db2e36ac713417f9b4067aed5">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(couple_structure, older_male_hetero)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>couple_structure &lt;numeric&gt; 
+# total N=1176 valid N=1176 mean=3.77 sd=0.50
+
+Value |   N | Raw % | Valid % | Cum. %
+--------------------------------------
+    1 |  11 |  0.94 |    0.94 |   0.94
+    2 |  12 |  1.02 |    1.02 |   1.96
+    3 | 209 | 17.77 |   17.77 |  19.73
+    4 | 944 | 80.27 |   80.27 | 100.00
+ &lt;NA&gt; |   0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;
+
+older_male_hetero &lt;categorical&gt; 
+# total N=1176 valid N=1153 mean=0.82 sd=0.39
+
+Value |   N | Raw % | Valid % | Cum. %
+--------------------------------------
+    0 | 209 | 17.77 |   18.13 |  18.13
+    1 | 944 | 80.27 |   81.87 | 100.00
+ &lt;NA&gt; |  23 |  1.96 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Exercise 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_consistent</code> die Variablen <code>couple_structure</code> und <code>older_male_hetero</code> an.</p>
-</div>
-</div>
-<div class="cell" data-hash="exercise-03_cache/html/exercise_3_84edbaf9718bb6428f875a743ff1a43d">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADD YOUR CODE HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts" class="level3">
 <h3 class="anchored" data-anchor-id="wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts">Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?</h3>
 <section id="graphische-überprüfung" class="level4">
 <h4 class="anchored" data-anchor-id="graphische-überprüfung">Graphische Überprüfung</h4>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 4
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <ul>
 <li>Erstellen Sie, auf Basis des Datensatzes <code>age_gaps_consistent</code>, einen <code>ggplot</code>.</li>
 <li>Nutzen Sie im Argument <code>aes()</code> die Variable <code>age_difference</code> als <code>x</code>-Variable und <code>older_male_hetero</code> für das Argument <code>fill</code>.</li>
 <li>Nutzen Sie <code>geom_bar</code> zur Erzeugung des Plots.</li>
 <li><em>Optional: Verwenden Sie <code>theme_pubr</code></em></li>
 </ul>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-12_6e3484060194164f27e8edb0611c3a25">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age_difference, <span class="at">fill =</span> older_male_hetero)) <span class="sc">+</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="exercise-03_solution_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<div class="cell" data-hash="exercise-03_cache/html/exercise_4_300bd4fc71ec4183c51ff47d3f935eec">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADD YOUR CODE HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-13_f6b04e3ef3ae0a3d122f48bf997bdd97">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age_difference, <span class="at">fill =</span> older_male_hetero)) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Altersdifferenz (in Jahren)"</span>,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'Anzahl der "Beziehungen"'</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Older partner in couple"</span>,</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"#F8766D"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"#00BFC4"</span>, <span class="st">"NA"</span> <span class="ot">=</span> <span class="st">"grey"</span>),</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"Woman"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Man"</span>, <span class="st">"NA"</span> <span class="ot">=</span> <span class="st">"Same sex couples"</span>)</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="exercise-03_solution_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 </section>
 <section id="überprüfung-durch-modellierung" class="level4">
 <h4 class="anchored" data-anchor-id="überprüfung-durch-modellierung">Überprüfung durch Modellierung</h4>
-<div class="cell" data-hash="exercise-03_cache/html/model-age-difference-release-year-gender-lm_a7f3cc0f7d44afa19ccc2b9638a7d9f0">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="ot">&lt;-</span> <span class="fu">lm</span>(age_difference <span class="sc">~</span> release_year <span class="sc">+</span> older_male_hetero, <span class="at">data =</span> age_gaps_consistent)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> parameters<span class="sc">::</span><span class="fu">parameters</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="exercise-03_solution_cache/html/unnamed-chunk-14_360aab3333cbcad6593a0e72eb298dc2">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="ot">&lt;-</span> <span class="fu">lm</span>(age_difference <span class="sc">~</span> release_year <span class="sc">+</span> older_male_hetero, <span class="at">data =</span> age_gaps_consistent)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> parameters<span class="sc">::</span><span class="fu">parameters</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Parameter             | Coefficient |    SE |           95% CI | t(1150) |      p
 ---------------------------------------------------------------------------------
@@ -973,34 +1005,13 @@ Exercise 4
 release year          |       -0.10 |  0.01 | [ -0.13,  -0.07] |   -6.96 | &lt; .001
 older male hetero [1] |        6.02 |  0.61 | [  4.83,   7.22] |    9.87 | &lt; .001</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> performance<span class="sc">::</span><span class="fu">model_performance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> performance<span class="sc">::</span><span class="fu">model_performance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Indices of model performance
 
 AIC      |     AICc |      BIC |    R2 | R2 (adj.) |  RMSE | Sigma
 ------------------------------------------------------------------
 8050.434 | 8050.469 | 8070.635 | 0.125 |     0.124 | 7.914 | 7.925</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> report<span class="sc">::</span><span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>We fitted a linear model (estimated using OLS) to predict age_difference with
-release_year and older_male_hetero (formula: age_difference ~ release_year +
-older_male_hetero). The model explains a statistically significant and weak
-proportion of variance (R2 = 0.13, F(2, 1150) = 82.18, p &lt; .001, adj. R2 =
-0.12). The model's intercept, corresponding to release_year = 0 and
-older_male_hetero = 0, is at 201.25 (95% CI [145.95, 256.55], t(1150) = 7.14, p
-&lt; .001). Within this model:
-
-  - The effect of release year is statistically significant and negative (beta =
--0.10, 95% CI [-0.13, -0.07], t(1150) = -6.96, p &lt; .001; Std. beta = -0.19, 95%
-CI [-0.25, -0.14])
-  - The effect of older male hetero [1] is statistically significant and positive
-(beta = 6.02, 95% CI [4.83, 7.22], t(1150) = 9.87, p &lt; .001; Std. beta = 0.71,
-95% CI [0.57, 0.85])
-
-Standardized parameters were obtained by fitting the model on a standardized
-version of the dataset. 95% Confidence Intervals (CIs) and p-values were
-computed using a Wald t-distribution approximation.</code></pre>
 </div>
 </div>
 
@@ -1358,18 +1369,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../sessions/session-07.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Session 07</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../computing/computing-textbooks.html" class="pagination-link">
-        <span class="nav-page-text">R Textbooks</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

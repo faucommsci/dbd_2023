@@ -257,6 +257,8 @@ Quelle: @lüdecke2022
 
 **Im Fokus:** [**Hollywood Age Gap**](https://hollywoodagegap.com/) **Project**
 
+[![Quarto Document](/img/badge-quarto_document.svg)](/exercise/exercise-03.html) [![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio)
+
 ## Am Anfang steht die Theorie
 
 #### Typischer "data science process" als Kontext der Sitzung

@@ -14,6 +14,22 @@ citations-hover: false
 
 🔍 Checken Sie die Ressourcen unter **Computing** (z.B. [R-Textbooks](/computing/computing-textbooks.html) & [R-Cheatsheets](/computing/computing-cheatsheets.html))
 
+## Participate
+
+🖥️ [Session 03](/slides/slides-03.html)
+
+
+## Practice
+
+🔧 [Quarto](https://quarto.org/docs/get-started/) installieren und ausprobieren.
+
+::: callout-tip
+## Useful resource
+
+Sehr hilfreiches {{< bi youtube >}} [Quarto Video Tutorial](https://youtube.com/playlist?list=PLEzw67WWDg80-fT1hq2IZf7D62tRmKy8f&feature=shared) von Andy Field
+:::
+
+📋 [Exercise 03 - Hollywood Age Gap](/exercise/exercise-03.html)
 
 ## Suggested readings
 
@@ -23,9 +39,11 @@ citations-hover: false
 
 -   @pearson2018
 
-## Participate
+## Useful resources
 
-🖥️ [Session 03](/slides/slides-03.html)
+📖 Nützliches und ausführliches [Tutorial zur Nutzung von Git/Github in RStudio](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r)
+
+📖 [Happy Git and GitHub for the useR](https://happygitwithr.com/)
 
 <br>
 

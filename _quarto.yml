@@ -30,6 +30,7 @@ website:
     - icon: chat-dots
       href: https://fau-dbd.zulipchat.com/
       text: Zulip
+
     # - icon: box-arrow-up-right
     #   href: https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD
     #   text: Start Binder
@@ -70,6 +71,11 @@ website:
             text: "Session 06"
           - href: sessions/session-07.qmd
             text: "Session 07"
+
+      - section: "Exercises"
+        contents:
+          - href: exercise/exercise-03.qmd
+            text: "Exercise 03"
 
       - section: "Computing"
         contents:

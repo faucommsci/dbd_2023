@@ -17,10 +17,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-::: {.callout-tip icon="false"}
-[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd) Download source file
+::: callout-tip
+Download source file: [![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd)
 
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) Open this exercise in interactive and executable environment
+Open this exercise in other interactive and executable environments: [![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD/HEAD?urlpath=rstudio)
 :::
 
 ## Background
@@ -67,7 +67,7 @@ pacman::p_load(
 #### Datenimport via URL
 
 | Variable            | Description                                                                    |
-|:------------------------|:----------------------------------------------|
+|:---------------------|:-------------------------------------------------|
 | `movie_name`        | Name of the film                                                               |
 | `release_year`      | Release year                                                                   |
 | `director`          | Director of the film                                                           |
@@ -162,7 +162,7 @@ age_gaps_correct %>%
 
 ##### (Durchschnitts-)Unterschied nach Jahren
 
-```{r figure-age-difference-mean-by-year}
+```{r}
 age_gaps_correct %>% 
     group_by(release_year) %>% 
     summarise(age_difference_mean = mean(age_difference)) %>% 
@@ -173,7 +173,7 @@ age_gaps_correct %>%
 
 ##### Verteilung nach Jahren
 
-```{r figure-age-difference-by-year}
+```{r}
 #| column: page
 #| fig-width: 16
 #| fig-height: 9
@@ -193,7 +193,7 @@ ggpubr::ggboxplot(
 
 ##### Überprüfung der Korrelation
 
-```{r model-age-difference-release-year-correlation}
+```{r}
 age_gaps %>%
   select(release_year, age_difference) %>% 
   correlation::correlation()
@@ -201,7 +201,7 @@ age_gaps %>%
 
 ##### Schätzung OLS
 
-```{r model-age-difference-release-year-lm}
+```{r}
 # Schätzung des Models
 mdl <- lm(age_difference ~ release_year, data = age_gaps_correct)
 
@@ -210,7 +210,7 @@ mdl %>% parameters::parameters()
 mdl %>% performance::model_performance()
 ```
 
-```{r model-age-difference-release-lm-report}
+```{r}
 mdl %>% report::report()
 ```
 
@@ -220,36 +220,34 @@ mdl %>% report::report()
 ## Spielt das Geschlecht eine Rolle?
 
 -   Der folgende Abschitt befasst sich nun ergänzend mit der Frage, welche Rolle das Geschlecht mit Blick auf die "Gültigkeit" der vorherigen Ergebnisse spielt
+
 -   Dazu sind jedoch weitere Explorations- und Überarbeitungsschritte notwendig
 :::
 
 ### Übeprüfung der `_gender`-Variablen
 
-::: callout-caution
-## Exercise 1
+-   Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_correct` die Variablen `actor_1_gender` und `actor_2_gender` an.
+-   Nutzen Sie die Funktion `sjmisc::flat_talbe()` und den Datensatz `age_gaps_correct` um eine Kreuztabelle der Variablen `actor_1_gender` und `actor_2_gender` zu erstellen.
 
-Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_correct` die Variablen `actor_1_gender` und `actor_2_gender` an.
-:::
-
-```{r exercise_1}
-# ADD YOUR CODE HERE
+```{r}
+age_gaps_correct %>% 
+  frq(actor_1_gender, actor_2_gender)
 ```
 
-::: callout-caution
-## Exercise 2
-
-Nutzen Sie die Funktion `sjmisc::flat_talbe()` und den Datensatz `age_gaps_correct` um eine Kreuztabelle der Variablen `actor_1_gender` und `actor_2_gender` zu erstellen.
-:::
-
-```{r exercise_2}
-# ADD YOUR CODE HERE
+```{r}
+age_gaps_correct %>% 
+  select(actor_1_gender, actor_2_gender) %>% 
+  flat_table()
 ```
 
 ### Sind die Daten "konsistent"?
 
 #### Überprüfung der Sortierung
 
-```{r table-check-variable-arrangement}
+-   Nutzen Sie die Funktion `dplyr::summarise` um auf Basis des Datensatzes `age_gaps_correct` folgende Variabeln zu erstellen:
+-   `p1_older`
+
+```{r}
 age_gaps_correct %>% 
   summarise(
       p1_older = mean(actor_1_age > actor_2_age), # older person first?
@@ -260,7 +258,7 @@ age_gaps_correct %>%
 
 ### Überprüfung der Anzahl pro Paare pro Film
 
-```{r table-check-couple-numbers}
+```{r}
 # Create data
 couples <- age_gaps_correct %>% 
   group_by(movie_name) %>% 
@@ -277,7 +275,7 @@ couples %>%
 
 ### Korrekturen
 
-```{r recoding-data-to-consistent}
+```{r}
 age_gaps_consistent <- age_gaps_correct %>% 
   # If multiple couples, assign couple number by movie
   mutate(
@@ -321,40 +319,52 @@ age_gaps_consistent <- age_gaps_correct %>%
 
 ### Alterskombinationen im Überblick
 
-::: callout-caution
-## Exercise 3
+-   Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_consistent` die Variablen `couple_structure` und `older_male_hetero` an.
 
-Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_consistent` die Variablen `couple_structure` und `older_male_hetero` an.
-:::
-
-```{r exercise_3}
-# ADD YOUR CODE HERE
+```{r}
+age_gaps_consistent %>% 
+  frq(couple_structure, older_male_hetero)
 ```
 
 ### Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?
 
 #### Graphische Überprüfung
 
-::: callout-caution
-## Exercise 4
-
 -   Erstellen Sie, auf Basis des Datensatzes `age_gaps_consistent`, einen `ggplot`.
 -   Nutzen Sie im Argument `aes()` die Variable `age_difference` als `x`-Variable und `older_male_hetero` für das Argument `fill`.
 -   Nutzen Sie `geom_bar` zur Erzeugung des Plots.
 -   *Optional: Verwenden Sie `theme_pubr`*
-:::
 
-```{r exercise_4}
-# ADD YOUR CODE HERE
+```{r}
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  theme_pubr()
+```
+
+```{r}
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  labs(
+    x = "Altersdifferenz (in Jahren)",
+    y = 'Anzahl der "Beziehungen"'
+  ) +
+   scale_fill_manual(
+    name = "Older partner in couple",
+    values = c("0" = "#F8766D", "1" = "#00BFC4", "NA" = "grey"),
+    labels = c("0" = "Woman", "1" = "Man", "NA" = "Same sex couples")
+  ) +
+  theme_pubr() 
+ 
 ```
 
 #### Überprüfung durch Modellierung
 
-```{r model-age-difference-release-year-gender-lm}
+```{r}
 mdl <- lm(age_difference ~ release_year + older_male_hetero, data = age_gaps_consistent)
 
 # Output
 mdl %>% parameters::parameters()
 mdl %>% performance::model_performance()
-mdl %>% report::report()
 ```
