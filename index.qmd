@@ -15,6 +15,8 @@ author:
 This page contains an outline of the topics, contents, and assignments for the semester. Please note that the contents of the course will be updated as the semester progresses, with all changes documented here.
 :::
 
+<!-- FIXME Add column with link to exercises / group activities -->
+
 | Session | Datum          | Topic                             | Prepare                                                                            | Slides                                                                                                        |
 |---------------|---------------|---------------|---------------|---------------|
 |         |                | **Introduction**                  |                                                                                    |                                                                                                               |

@@ -29,15 +29,10 @@ website:
       text: Course repository
     - icon: chat-dots
       href: https://fau-dbd.zulipchat.com/
-      text: Zulip
-
-    # - icon: box-arrow-up-right
-    #   href: https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD
-    #   text: Start Binder
-    # - icon: github
-    #   href: https://github.com/chrdrn/digital-behavior-data-binder
-    #   text: Binder repository
-
+      text: DBD Zulip
+    - icon: cloud-arrow-up
+      href: https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio
+      text: DBD Binder
     
     style: "floating"
     search: true

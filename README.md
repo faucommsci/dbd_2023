@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 
-<!-- [![Binder RStudio](img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio) [![Binder Jupyter](img/badge-binder_jupyter.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD) -->
+[![Binder RStudio](img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) 
 
 <!-- badges: end -->
 
@@ -12,7 +12,7 @@
 
 🔗 to github-page of the course: <https://faucommsci.github.io/dbd_2023/>
 
-🔗 to Binder github-respository of the course: 🚧
+🔗 to Binder github-respository of the course: <https://github.com/faucommsci/dbd_binder>
 
 🔗 to [Assistant Professorship for Communication Science](https://www.communicationscience.rw.fau.de/) \[english\]
 
