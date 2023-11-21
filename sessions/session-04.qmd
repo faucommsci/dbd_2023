@@ -7,6 +7,14 @@ suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
+## Prepare
+
+🔍 Kontrolle der Ergebnisse des [Exercise 03 - Hollywood Age Gap](/exercise/exercise-03.html)
+
+## Participate
+
+🖥️ [Session 04](/slides/slides-04.html)
+
 
 ## Mandatory literature
 
