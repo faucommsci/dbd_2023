@@ -10,7 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Christoph Adrian">
@@ -32,7 +33,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -351,15 +371,866 @@
 
   <p class="date">22.11.2023</p>
 </section>
-<section id="under-construction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
-<h1>🚧 Under construction</h1>
-<p>Die Folien werden aktuell überarbeitet, sind aber spätestens zur 3.Sitzung (15.11) online.</p>
+<section id="seminarplan" class="slide level2">
+<h2>Seminarplan</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="swppkolzme" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#swppkolzme table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#swppkolzme thead, #swppkolzme tbody, #swppkolzme tfoot, #swppkolzme tr, #swppkolzme td, #swppkolzme th {
+  border-style: none;
+}
+
+#swppkolzme p {
+  margin: 0;
+  padding: 0;
+}
+
+#swppkolzme .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 75%;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#swppkolzme .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#swppkolzme .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#swppkolzme .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#swppkolzme .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#swppkolzme .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swppkolzme .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#swppkolzme .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#swppkolzme .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#swppkolzme .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#swppkolzme .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#swppkolzme .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#swppkolzme .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#swppkolzme .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#swppkolzme .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#swppkolzme .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#swppkolzme .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#swppkolzme .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#swppkolzme .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swppkolzme .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#swppkolzme .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#swppkolzme .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#swppkolzme .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swppkolzme .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#swppkolzme .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#swppkolzme .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swppkolzme .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swppkolzme .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#swppkolzme .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#swppkolzme .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#swppkolzme .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#swppkolzme .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#swppkolzme .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swppkolzme .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#swppkolzme .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#swppkolzme .gt_left {
+  text-align: left;
+}
+
+#swppkolzme .gt_center {
+  text-align: center;
+}
+
+#swppkolzme .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#swppkolzme .gt_font_normal {
+  font-weight: normal;
+}
+
+#swppkolzme .gt_font_bold {
+  font-weight: bold;
+}
+
+#swppkolzme .gt_font_italic {
+  font-style: italic;
+}
+
+#swppkolzme .gt_super {
+  font-size: 65%;
+}
+
+#swppkolzme .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#swppkolzme .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#swppkolzme .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#swppkolzme .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#swppkolzme .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#swppkolzme .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#swppkolzme .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="5"><div class="gt_from_md"><p>5</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Automatic text analysis"><div class="gt_from_md"><p>📦 Automatic text analysis</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="20.12.2023"><div class="gt_from_md"><p>20.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="*Buffer Session*"><div class="gt_from_md"><p><em>Buffer Session</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Topic Modeling"><div class="gt_from_md"><p>🔨 Topic Modeling</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="agenda" class="title-slide slide level1 center" data-background-image="img/slide_bg-agenda.png">
+<h1>Agenda</h1>
+<ol type="1">
+<li><a href="#/organisation-koordination">Organisation &amp; Koordination</a></li>
+<li>👥 <a href="#/group-activity">Group Activity</a></li>
+</ol>
+</section>
+
+<section>
+<section id="organisation-koordination" class="title-slide slide level1 center" data-background-image="img/slide_bg-orga.png">
+<h1>Organisation &amp; -koordination</h1>
+<p>Kursunterlagen &amp; R Sessions</p>
+</section>
+<section id="kurzes-organisatorische-update" class="slide level2">
+<h2>Kurzes organisatorische Update</h2>
+<h4 id="informationen-zu-kursdetails-und-prüfungsleistungen">Informationen zu Kursdetails und Prüfungsleistungen</h4>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<ul>
+<li><strong>StudOn oder Zulip:</strong> Wo sollen Ihre Präsentationen <strong>hochgeladen</strong> werden?</li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li><p>Kooperation mit Kurs (bzw. der Übung) <a href="https://www.studon.fau.de/crs5326860.html">Data Science: Foundations, Tools, Applications in Socio-Economics and Marketing</a></p>
+<ul>
+<li><p>Hintergrund: Thematische Überschneidungen, deswegen Bündelung der Kompetenzen</p></li>
+<li><p><strong>🔨 Text as data in R</strong> &amp; <strong>🔨 Topic Modeling in R</strong> werden auch für Studierende der Übung des Kurses angeboten</p></li>
+<li><p>Konsequenz: Sitzungen finden im PC-Pool in der Langen Gasse statt</p></li>
+<li><p>Frage: English ok?</p></li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="group-activity" class="title-slide slide level1 center" data-background-image="img/slide_bg-group_activity.png">
+<h1>👥 Group Activity</h1>
+<p>Gruppenarbeit zu Media habits &amp; routines</p>
+</section>
+<section id="mehr-als-nur-stimulus-response" class="slide level2">
+<h2>Mehr als nur Stimulus &amp; Response</h2>
+<h4 id="die-rolle-der-medien">Die Rolle der Medien</h4>
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Media effects</strong></p>
+</div>
+<div class="callout-content">
+<p>the deliberate and nondeliberate short and long term within person changes in cognitions (including beliefs), emotions, attitudes, and behavior that result from media use</p>
+<p><span class="citation" data-cites="valkenburg2016">(<a href="#/literatur" role="doc-biblioref" onclick="">Valkenburg et al., 2016</a>)</span></p>
+</div>
+</div>
+</div>
+
+<img data-src="https://onlinelibrary.wiley.com/cms/asset/70db786b-2443-46d1-bf6f-62df579aa04a/jcom12024-fig-0001-m.jpg" class="r-stretch quarto-figure-center"><p class="caption">Differential Susceptibility to Media Effects Model <span class="citation" data-cites="valkenburg2013">(<a href="#/literatur" role="doc-biblioref" onclick="">Valkenburg &amp; Peter, 2013</a>)</span></p></section>
+<section id="aber-was-ist-eigentlich-mediennutzung" class="slide level2">
+<h2>Aber was ist eigentlich Mediennutzung?</h2>
+<h4 id="kombination-aus-kanal--und-kommunikationsorientierter-ansatz">Kombination aus <strong><em>kanal</em></strong>- und <em>kommunikations</em>orientierter Ansatz</h4>
+
+<img data-src="https://journals.sagepub.com/cms/10.1177/0093650220958224/asset/images/large/10.1177_0093650220958224-fig1.jpeg" class="r-stretch quarto-figure-center"><p class="caption">The hierarchical CMC taxonomy <span class="citation" data-cites="meier2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Meier &amp; Reinecke, 2021</a>)</span></p><aside class="notes">
+<p>Ausganngspunkt: - Mediennutzung hat eine Wirkung bzw. Effekte (z.B. auf Emotionen, Einstellung und Verhalten)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="viele-messwiederholung-in-kurzen-abständen" class="slide level2">
+<h2>(Viele) Messwiederholung in (kurzen) Abständen</h2>
+<h4 id="intensive-longitudinal-designs-idl-im-fokus">Intensive Longitudinal Designs (IDL) im Fokus</h4>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>“an intensive longitudinal design involves sequential measurements on five or more occasions during which a change process is expected to unfold within each subject (e.g., person or other sampling)”</p>
+<p><span class="citation" data-cites="bolger2013">(<a href="#/literatur" role="doc-biblioref" onclick="">Bolger &amp; Laurenceau, 2013</a>)</span></p>
+</div>
+</div>
+</div>
+
+<img data-src="https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/esm_multilevel.png" class="r-stretch"></section>
+<section id="layers-and-layers" class="slide level2">
+<h2>Layers and layers</h2>
+<h4 id="idl-im-fokus-zusammenhang-der-ebenen">IDL im Fokus: Zusammenhang der Ebenen</h4>
+
+<img data-src="https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/esm_sampling.png" class="r-stretch"></section>
+<section id="verschiedene-varianten-des-situationssamplings" class="slide level2">
+<h2>Verschiedene Varianten des Situationssamplings</h2>
+<h4 id="systematisierung-nach-masur2019">Systematisierung nach <span class="citation" data-cites="masur2019">Masur (<a href="#/literatur" role="doc-biblioref" onclick="">2019</a>)</span></h4>
+
+<img data-src="https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/masur_complete.png" class="r-stretch"></section>
+<section id="personen--undoder-situationsebene" class="slide level2">
+<h2>Personen- und/oder Situationsebene?</h2>
+<h4 id="verschiedene-arten-von-forschungsfragen-mit-beispiel">Verschiedene Arten von Forschungsfragen mit Beispiel</h4>
+<div style="font-size: 18px;">
+<ul>
+<li><p><strong>Fragen auf <u>Personenebene</u> (<em>between</em>-subject):</strong> Daten über Messzeitpunkte aggregiert</p>
+<ul>
+<li><p><strong>Personenmittelwert</strong>: Wie ist das durchschnittliche Wohlbefinden (Y) in der Personenstichprobe?</p></li>
+<li><p><strong>Varianz der Personenmittelwerte:</strong> Welche Unterschiede im durchschnittlichen Wohlbefinden (Y) gibt es zwischen Personen?</p></li>
+<li><p><strong>Korrelation auf Personenebene:</strong> Hängen Unterschiede im Wohlbefinden (Y) mit Unterschieden in der durchschnittlichen sozialen Interaktion (X) zusammen?</p></li>
+<li><p><strong>Kausalzusammenhang</strong>: Erklärt eine experimentelle Manipulation der sozialen Interaktion (X) die Unterschiede im Wohlbefinden (Y)?</p></li>
+</ul></li>
+<li><p><strong>Fragen auf <u>Situationsebene</u> (<em>within</em>-subject):</strong> Daten mehrerer Messzeitpunkte einer Person</p>
+<ul>
+<li><p><strong>Varianz der Situationswerte</strong>: Wie stark weicht das situative Wohlbefinden (Y) vom Durchschnitt einer Person ab?</p></li>
+<li><p><strong>Korrelation auf Situationsebene</strong>: Hängen diese Abweichungen im situativen Wohlbefinden (Y) mit situativen Unterschieden in der sozialen Interaktion (X) einer Person zusammen?</p></li>
+<li><p><strong>Granger Kausalzusammenhang:</strong> Erklärt die soziale Interaktion einer Person in der Mitte des Tages (X) die Unterschiede im Wohlbefinden dieser Person am Ende des Tages (Y)?</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="just-one-more-scroll" class="slide level2">
+<h2>“Just one more scroll”</h2>
+<h4 id="mediengewohnheiten-und-ihre-effekte">Mediengewohnheiten und Ihre Effekte</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://img.freepik.com/free-vector/procrastination-concept-illustration_114360-17743.jpg?w=1800&amp;t=st=1700581283~exp=1700581883~hmac=35fd4d2fe6c8845c868532d7adb60ff5e2468a36b7f67b353773768117b03a83" width="599"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Prokrastination</strong></p>
+</div>
+<div class="callout-content">
+<p>“the voluntary delay of an intended and necessary and/or [personally] impoortant activity, despite expecting potential negative consequences that outweight the positive consequences of the delay” <span class="citation" data-cites="klingsieck2013">Klingsieck (<a href="#/literatur" role="doc-biblioref" onclick="">2013</a>)</span></p>
+</div>
+</div>
+</div>
+<ul>
+<li>klare Unterscheidung zu “strategischem Aufschieben”</li>
+<li>weit verbreitetes Phänomen</li>
+<li>Zusammenhang mit Wohlbefinden</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Verzögerung ist - unnötig oder irrational - trotz Bewusstsein über mögliche negative Konsequenzen - resultiert in negativen Konsequenzen (“schlechtes Gefühl”)</p>
+<p>Activites == Aufgaben &amp; Entscheidungen</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="design-your-own-research-design" class="slide level2">
+<h2>🧪 Design your own research (design)</h2>
+<h4 id="gruppenarbeit-ca-25.-min-mit-ergebnisvorstellung--diskussion-ca.-15-min">Gruppenarbeit (ca 25. Min) mit Ergebnisvorstellung &amp; -diskussion (ca. 15 Min)</h4>
+<div class="callout callout-caution no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Ziel der Group Activity</strong></p>
+</div>
+<div class="callout-content">
+<p>Erstellung ein Forschungsdesign(konzept) zur Untersuchung des Einflusses von Mediennutzung(sroutinen) auf Wohlsein und/oder Procrastination im Rahmen dieses Kurses.</p>
+</div>
+</div>
+</div>
+<h4 id="nächste-schritte">Nächste Schritte</h4>
+<div style="font-size: 22px;">
+<ul>
+<li><p>Finden Sie sich in <strong>Ihren Gruppen</strong> zusammen</p></li>
+<li><p>Formulieren Sie <strong>zwei Forschungsfragen</strong> (eine auf Personen- eine auf Situationsebene), die mit Hilfe eines <strong>ILD (siehe Systematik von Masur)</strong> untersucht werden kann. Nutzen Sie das <strong>CMC um die Mediennutzung</strong> möglichst genau zu operationalisieren.</p></li>
+<li><p>Überlegen Sie, <strong>wie bzw. welche digitalen Verhaltensdaten Ihre Untersuchung unterstüzen</strong> könnten</p></li>
+<li><p>Halten Sie Ihre Fragen &amp; Desginideen auf der für Ihre Gruppe <strong>vorgesehenen Folienvorlage</strong> (nächste Slide) fest.</p></li>
+</ul>
+</div>
+</section>
+<section id="let-the-work-beginn" class="slide level2">
+<h2>Let the work beginn</h2>
+<h4 id="bitte-nutzen-sie-die-präsentationsvorlage-ihrer-gruppe">Bitte nutzen Sie die Präsentationsvorlage Ihrer Gruppe</h4>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p></p><div id="qr1" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr1", {"colorLight":"#ffffff","text":"https://t1p.de/u4elm","colorDark":"#C50F3C","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/u4elm">Gruppe A</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr2" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr2", {"colorLight":"#ffffff","text":"https://t1p.de/tfbta","colorDark":"#18B4F1","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/tfbta">Gruppe B</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr3" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr3", {"colorLight":"#ffffff","text":"https://t1p.de/6awgd","colorDark":"#7BB725","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/6awgd">Gruppe C</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr4" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr4", {"colorLight":"#ffffff","text":"https://t1p.de/r6rt3","colorDark":"#FDB735","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/r6rt3">Gruppe D</a><p></p>
+</div>
+</div>
+</section></section>
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-image="img/slide_bg-question.png">
+<h1>Time for questions</h1>
+
+</section>
+
+<section>
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-image="img/slide_bg-end_session.png">
+<h1>Bis zur nächsten Sitzung!</h1>
+
+</section>
+<section id="literatur" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-bolger2013" class="csl-entry" role="listitem">
+Bolger, N., &amp; Laurenceau, J.-P. (2013). <em>Intensive longitudinal methods: An introduction to diary and experience sampling research</em>. Guilford Press.
+</div>
+<div id="ref-klingsieck2013" class="csl-entry" role="listitem">
+Klingsieck, K. B. (2013). Procrastination: When Good Things Don<span>’</span>t Come to Those Who Wait. <em>European Psychologist</em>, <em>18</em>(1), 24–34. <a href="https://doi.org/10.1027/1016-9040/a000138">https://doi.org/10.1027/1016-9040/a000138</a>
+</div>
+<div id="ref-masur2019" class="csl-entry" role="listitem">
+Masur, P. K. (2019). <em>Capturing situational dynamics: Strength and pitfalls of the experience sampling method</em> (P. Müller, S. Geiß, T. K. Naab, &amp; C. Peter, Eds.; Vol. 15). Herbert von Halem Verlag. <a href="https://osf.io/vx5ha">https://osf.io/vx5ha</a>
+</div>
+<div id="ref-meier2021" class="csl-entry" role="listitem">
+Meier, A., &amp; Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. <em>Communication Research</em>, <em>48</em>(8), 1182–1209. <a href="https://doi.org/gjf96r">https://doi.org/gjf96r</a>
+</div>
+<div id="ref-valkenburg2013" class="csl-entry" role="listitem">
+Valkenburg, P. M., &amp; Peter, J. (2013). The Differential Susceptibility to Media Effects Model: Differential Susceptibility to Media Effects Model. <em>Journal of Communication</em>, <em>63</em>(2), 221–243. <a href="https://doi.org/10.1111/jcom.12024">https://doi.org/10.1111/jcom.12024</a>
+</div>
+<div id="ref-valkenburg2016" class="csl-entry" role="listitem">
+Valkenburg, P. M., Peter, J., &amp; Walther, J. B. (2016). Media Effects: Theory and Research. <em>Annual Review of Psychology</em>, <em>67</em>(1), 315–338. <a href="https://doi.org/10.1146/annurev-psych-122414-033608">https://doi.org/10.1146/annurev-psych-122414-033608</a>
+</div>
+</div>
 
 
 <img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
