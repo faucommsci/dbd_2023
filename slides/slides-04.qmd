@@ -9,13 +9,250 @@ filters:
 bibliography: references_slides.bib
 ---
 
-# 🚧 Under construction {background-image="img/slide_bg-section.png"}
+## Seminarplan
 
-Die Folien werden aktuell überarbeitet, sind aber spätestens zur 3.Sitzung (15.11) online.
-
-```{r under-construction-stop-render}
+```{r setup-slide-session}
 #| echo: false
-#| eval: false
 
-knitr::knit_exit()
+# Load packages
+# Load schedule
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    here, taylor,
+    magrittr,
+    tidyverse, janitor,
+    ggpubr, 
+    gt, gtExtras,
+    countdown
+)
 ```
+
+```{r table-schedule-b}
+#| echo: false 
+
+new_schedule_b %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px"
+    ) %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 7,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = 1:5)
+    )
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  [Organisation & Koordination](#organisation-koordination)
+2.  👥 [Group Activity](#group-activity)
+
+# Organisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
+
+Kursunterlagen & R Sessions
+
+## Kurzes organisatorische Update
+
+#### Informationen zu Kursdetails und Prüfungsleistungen
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+-   **StudOn oder Zulip:** Wo sollen Ihre Präsentationen **hochgeladen** werden?
+:::
+
+::: {.fragment .fade-in fragment-index="1"}
+-   Kooperation mit Kurs (bzw. der Übung) [Data Science: Foundations, Tools, Applications in Socio-Economics and Marketing](https://www.studon.fau.de/crs5326860.html)
+
+    -   Hintergrund: Thematische Überschneidungen, deswegen Bündelung der Kompetenzen
+
+    -   **🔨 Text as data in R** & **🔨 Topic Modeling in R** werden auch für Studierende der Übung des Kurses angeboten
+
+    -   Konsequenz: Sitzungen finden im PC-Pool in der Langen Gasse statt
+
+    -   Frage: English ok?
+:::
+
+# 👥 Group Activity {#group-activity background-image="img/slide_bg-group_activity.png"}
+
+Gruppenarbeit zu Media habits & routines
+
+## Mehr als nur Stimulus & Response
+
+#### Die Rolle der Medien
+
+::: {.callout-note appearance="simple"}
+## Media effects
+
+the deliberate and nondeliberate short and long term within person changes in cognitions (including beliefs), emotions, attitudes, and behavior that result from media use
+
+[@valkenburg2016]
+:::
+
+![Differential Susceptibility to Media Effects Model [@valkenburg2013]](https://onlinelibrary.wiley.com/cms/asset/70db786b-2443-46d1-bf6f-62df579aa04a/jcom12024-fig-0001-m.jpg){fig-align="center"}
+
+## Aber was ist eigentlich Mediennutzung?
+
+#### Kombination aus ***kanal***- und *kommunikations*orientierter Ansatz
+
+![The hierarchical CMC taxonomy [@meier2021]](https://journals.sagepub.com/cms/10.1177/0093650220958224/asset/images/large/10.1177_0093650220958224-fig1.jpeg){fig-align="center"}
+
+::: notes
+Ausganngspunkt: - Mediennutzung hat eine Wirkung bzw. Effekte (z.B. auf Emotionen, Einstellung und Verhalten)
+:::
+
+## (Viele) Messwiederholung in (kurzen) Abständen
+
+#### Intensive Longitudinal Designs (IDL) im Fokus
+
+::: {.callout-note appearance="minimal"}
+“an intensive longitudinal design involves sequential measurements on five or more occasions during which a change process is expected to unfold within each subject (e.g., person or other sampling)”
+
+[@bolger2013]
+:::
+
+![](https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/esm_multilevel.png)
+
+## Layers and layers
+
+#### IDL im Fokus: Zusammenhang der Ebenen
+
+![](https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/esm_sampling.png)
+
+## Verschiedene Varianten des Situationssamplings
+
+#### Systematisierung nach @masur2019
+
+![](https://chrdrn.github.io/digital-behavioral-data/content/09-esm-m_path/slides/images/masur_complete.png)
+
+## Personen- und/oder Situationsebene? 
+
+#### Verschiedene Arten von Forschungsfragen mit Beispiel
+
+::: {style="font-size: 18px;"}
+-   **Fragen auf [Personenebene]{.underline} (*between*-subject):** Daten über Messzeitpunkte aggregiert
+
+    -   **Personenmittelwert**: Wie ist das durchschnittliche Wohlbefinden (Y) in der Personenstichprobe?
+
+    -   **Varianz der Personenmittelwerte:** Welche Unterschiede im durchschnittlichen Wohlbefinden (Y) gibt es zwischen Personen?
+
+    -   **Korrelation auf Personenebene:** Hängen Unterschiede im Wohlbefinden (Y) mit Unterschieden in der durchschnittlichen sozialen Interaktion (X) zusammen?
+
+    -   **Kausalzusammenhang**: Erklärt eine experimentelle Manipulation der sozialen Interaktion (X) die Unterschiede im Wohlbefinden (Y)?
+
+-   **Fragen auf [Situationsebene]{.underline} (*within*-subject):** Daten mehrerer Messzeitpunkte einer Person
+
+    -   **Varianz der Situationswerte**: Wie stark weicht das situative Wohlbefinden (Y) vom Durchschnitt einer Person ab?
+
+    -   **Korrelation auf Situationsebene**: Hängen diese Abweichungen im situativen Wohlbefinden (Y) mit situativen Unterschieden in der sozialen Interaktion (X) einer Person zusammen?
+
+    -   **Granger Kausalzusammenhang:** Erklärt die soziale Interaktion einer Person in der Mitte des Tages (X) die Unterschiede im Wohlbefinden dieser Person am Ende des Tages (Y)?
+:::
+
+## "Just one more scroll"
+
+#### Mediengewohnheiten und Ihre Effekte
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+![](https://img.freepik.com/free-vector/procrastination-concept-illustration_114360-17743.jpg?w=1800&t=st=1700581283~exp=1700581883~hmac=35fd4d2fe6c8845c868532d7adb60ff5e2468a36b7f67b353773768117b03a83){fig-align="center" width="599"}
+:::
+
+::: {.column width="60%"}
+::: {.callout-note appearance="minimal"}
+## Prokrastination
+
+"the voluntary delay of an intended and necessary and/or \[personally\] impoortant activity, despite expecting potential negative consequences that outweight the positive consequences of the delay" @klingsieck2013
+:::
+
+-   klare Unterscheidung zu "strategischem Aufschieben"
+-   weit verbreitetes Phänomen
+-   Zusammenhang mit Wohlbefinden
+:::
+:::
+
+::: notes
+Verzögerung ist - unnötig oder irrational - trotz Bewusstsein über mögliche negative Konsequenzen - resultiert in negativen Konsequenzen ("schlechtes Gefühl")
+
+Activites == Aufgaben & Entscheidungen
+:::
+
+## 🧪 Design your own research (design)
+
+#### Gruppenarbeit (ca 25. Min) mit Ergebnisvorstellung & -diskussion (ca. 15 Min)
+
+::: {.callout-caution appearance="minimal"}
+## Ziel der Group Activity
+
+Erstellung ein Forschungsdesign(konzept) zur Untersuchung des Einflusses von Mediennutzung(sroutinen) auf Wohlsein und/oder Procrastination im Rahmen dieses Kurses.
+:::
+
+#### Nächste Schritte
+
+::: {style="font-size: 22px;"}
+-   Finden Sie sich in **Ihren Gruppen** zusammen
+
+-   Formulieren Sie **zwei Forschungsfragen** (eine auf Personen- eine auf Situationsebene), die mit Hilfe eines **ILD (siehe Systematik von Masur)** untersucht werden kann. Nutzen Sie das **CMC um die Mediennutzung** möglichst genau zu operationalisieren.
+
+-   Überlegen Sie, **wie bzw. welche digitalen Verhaltensdaten Ihre Untersuchung unterstüzen** könnten
+
+-   Halten Sie Ihre Fragen & Desginideen auf der für Ihre Gruppe **vorgesehenen Folienvorlage** (nächste Slide) fest.
+:::
+
+## Let the work beginn
+
+#### Bitte nutzen Sie die Präsentationsvorlage Ihrer Gruppe
+
+<br>
+
+::: columns
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/u4elm qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/u4elm)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/tfbta qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/tfbta)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/6awgd qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/6awgd)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/r6rt3 qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/r6rt3)
+:::
+:::
+
+# Time for questions {background-image="img/slide_bg-question.png"}
+
+# Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
+
+## Literatur
+
+::: {#refs}
+:::
