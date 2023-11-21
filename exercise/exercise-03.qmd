@@ -232,7 +232,8 @@ Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_g
 :::
 
 ```{r exercise_1}
-# ADD YOUR CODE HERE
+age_gaps_correct %>% 
+  frq(actor_1_gender, actor_2_gender)
 ```
 
 ::: callout-caution
@@ -242,7 +243,9 @@ Nutzen Sie die Funktion `sjmisc::flat_talbe()` und den Datensatz `age_gaps_corre
 :::
 
 ```{r exercise_2}
-# ADD YOUR CODE HERE
+age_gaps_correct %>% 
+  select(actor_1_gender, actor_2_gender) %>% 
+  flat_table()
 ```
 
 ### Sind die Daten "konsistent"?
@@ -328,7 +331,8 @@ Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_g
 :::
 
 ```{r exercise_3}
-# ADD YOUR CODE HERE
+age_gaps_consistent %>% 
+  frq(couple_structure, older_male_hetero)
 ```
 
 ### Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?
@@ -345,8 +349,29 @@ Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_g
 :::
 
 ```{r exercise_4}
-# ADD YOUR CODE HERE
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  theme_pubr()
 ```
+
+```{r exercise_4_2}
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  labs(
+    x = "Altersdifferenz (in Jahren)",
+    y = 'Anzahl der "Beziehungen"'
+  ) +
+   scale_fill_manual(
+    name = "Older partner in couple",
+    values = c("0" = "#F8766D", "1" = "#00BFC4", "NA" = "grey"),
+    labels = c("0" = "Woman", "1" = "Man", "NA" = "Same sex couples")
+  ) +
+  theme_pubr() 
+```
+
+
 
 #### Überprüfung durch Modellierung
 
