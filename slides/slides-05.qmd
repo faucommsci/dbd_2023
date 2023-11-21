@@ -1,6 +1,6 @@
 ---
 title: "📚 Digital disconnection"
-subtitle: "Session 04"
+subtitle: "Session 05"
 date: 29 11 2023
 date-format: "DD.MM.YYYY"
 filters:
@@ -11,7 +11,7 @@ bibliography: references_slides.bib
 
 # 🚧 Under construction {background-image="img/slide_bg-section.png"}
 
-Die Folien werden aktuell überarbeitet, sind aber spätestens zur 3.Sitzung (15.11) online.
+Die Folien werden aktuell überarbeitet, sind aber spätestens zur 5.Sitzung (29.11) online.
 
 ```{r under-construction-stop-render}
 #| echo: false
