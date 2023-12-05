@@ -60,12 +60,12 @@ website:
             text: "Session 03"
           - href: sessions/session-04.qmd
             text: "Session 04"
-          - href: sessions/session-05.qmd
-            text: "Session 05"
           - href: sessions/session-06.qmd
             text: "Session 06"
           - href: sessions/session-07.qmd
             text: "Session 07"
+          - href: sessions/session-08.qmd
+            text: "Session 08"
 
       - section: "Exercises"
         contents:
