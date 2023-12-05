@@ -1,0 +1,204 @@
+---
+title: "📦 Data collection methods"
+subtitle: "Session 07"
+date: 13 12 2023
+date-format: "DD.MM.YYYY"
+filters:
+  - roughnotation
+  - line-highlight
+bibliography: references_slides.bib
+---
+
+# 🚧 Under construction {background-image="img/slide_bg-section.png"}
+
+Die Folien werden aktuell überarbeitet, sind aber spätestens zur 7.Sitzung (13.12) online.
+
+```{r under-construction-stop-render}
+#| echo: false
+
+knitr::knit_exit()
+```
+
+## Seminarplan
+
+```{r setup-slide-session}
+#| echo: false
+
+# Load packages
+# Load schedule
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    here, taylor,
+    magrittr,
+    tidyverse, janitor,
+    ggpubr, 
+    gt, gtExtras,
+    countdown
+)
+```
+
+```{r table-schedule-b}
+#| echo: false 
+
+new_schedule_c %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px"
+    ) %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 10,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = c(1:5, 7:9)
+        )
+    )
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  [Organisation & Koordination](#organisation-koordination)
+2.  👥 [Group Activity](#group-activity)
+
+# Organisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
+
+## Kurzes organisatorische Update
+
+#### Informationen
+
+# 👥 Group Activity {#group-activity background-image="img/slide_bg-group_activity.png"}
+
+Gruppenarbeit zu 🐈🐈 `4CAT` 🐈🐈 & `Zeeschuimer`
+
+## What is it & who made it?
+
+#### Hintergrundinformationen [`4CAT`](https://github.com/digitalmethodsinitiative/4cat) [@peeters2022a]
+
+::: columns
+::: {.column width="50%"}
+-   Tool zur Analyse und Verarbeitung von **Daten aus sozialen Online-Plattformen**
+
+-   Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, **ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich** sind.
+:::
+
+::: {.column width="50%"}
+![](https://github.com/digitalmethodsinitiative/4cat/blob/master/common/assets/screenshot1.png?raw=true){fig-align="center"}
+
+![](https://github.com/digitalmethodsinitiative/4cat/blob/master/common/assets/screenshot2.png?raw=true){fig-align="center"}
+:::
+:::
+
+## What is it & who made it?
+
+#### Hintergrundinformationen `Zeeschuimer` [@peeters2022]
+
+::: columns
+::: {.column width="60%"}
+-   Browsererweiterung, die während des Besuchs einer Social-Media-Website Daten über die Elemente sammelt, die in der Weboberfläche einer Plattform zu sehen sind
+
+-   Derzeit werden die folgenden Plattformen unterstützt:
+
+    -   {{< fa brands tiktok >}} über https://www.tiktok.com
+
+    -   {{< fa brands instagram >}} über https://www.instagram.com
+
+-   Ergänzung zu [`4CAT`](https://github.com/digitalmethodsinitiative/4cat) [@peeters2022]
+:::
+
+::: {.column width="40%"}
+![](https://raw.githubusercontent.com/digitalmethodsinitiative/zeeschuimer/master/images/example_screenshot.png){fig-align="center"}
+:::
+:::
+
+::: notes
+Die Zielgruppe sind Forscher, die systematisch Inhalte auf Social-Media-Plattformen untersuchen wollen, die sich dem herkömmlichen Scraping oder der API-basierten Datenerfassung widersetzen.\
+\
+Sie können z. B. TikTok durchsuchen und später eine Liste aller Beiträge in der Reihenfolge exportieren, in der Sie sie gesehen haben. Die Daten können als JSON-Datei exportiert oder zur Analyse und Speicherung in eine 4CAT-Instanz exportiert werden. Zeeschuimer ist in erster Linie als Ergänzung zu 4CAT gedacht, aber Sie können seine Ausgabe auch in Ihre eigene Analysepipeline integrieren.
+
+Die Plattformunterstützung erfordert regelmäßige Wartung, um mit den Änderungen auf den Plattformen Schritt zu halten. Wenn etwas nicht funktioniert, freuen wir uns über Probleme und Pull Request
+
+Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automatisch Daten hoch, sondern nur, wenn Sie sie ausdrücklich dazu auffordern.
+:::
+
+## 🧪 (Continue to) Design your own research (design)
+
+#### Gruppenarbeit (ca 25. Min) mit Ergebnisvorstellung & -diskussion (ca. 15 Min)
+
+::: {.callout-caution appearance="minimal"}
+## Ziel der Group Activity
+
+Scrapen Sie mit dem Zeeschuimer-Plugin eine Seite Ihrer Wahl
+:::
+
+#### Nächste Schritte
+
+::: {style="font-size: 22px;"}
+-   Finden Sie sich in **Ihren Gruppen** zusammen
+
+-   Überlegen Sie sich, wie Sie die **Absicht oder bestehende Strategien zu "digital detox"** in Ihre Untersuchung von letzter Woche integrieren können. Machen Sie sowohl **mindestens einen Vorschlag** für die **Befragung** und einen für **digitale Verhaltensdaten**.
+
+-   Halten Sie Ihre Fragen & Desginideen auf der für Ihre Gruppe **vorgesehenen Folienvorlage** (nächste Slide) fest.
+:::
+
+```{r countdown-bias}
+#| echo: false
+countdown(
+    minutes = 25,
+    warn_when = 300)
+```
+
+## Let the work beginn
+
+#### Bitte nutzen Sie die Präsentationsvorlage Ihrer Gruppe
+
+<br>
+
+::: columns
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/2eba6 qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/2eba6)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/7sncl qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/7sncl)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/xhtrk qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/xhtrk)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/ol206 qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/ol206)
+:::
+:::
+
+# Time for questions {background-image="img/slide_bg-question.png"}
+
+# Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
+
+## Literatur
+
+::: {#refs}
+:::
