@@ -1,6 +1,6 @@
 ---
 title: "Session 7"
-subtitle: "📦 Automatic text analysis"
+subtitle: "📦 Data collection methods"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
@@ -14,45 +14,33 @@ citations-hover: false
 All articles of this section have to be read & used by the presenting group
 :::
 
--   [@chen2023]
+-   [@baumgartner2022]
 
--   [@friemel2017]
+-   [@ohme2023]
 
--   [@hase2023]
+-   [@skatova2019]
 
--   [@himelboim2017]
+-   [@vandriel2022]
 
--   [@maier2018]
+-   [@yee2022]
 
-## 🐈🐈 4CAT 🐈🐈-Toolkit
+### Other additional readings 
 
--   [@peeters2022]
+-   [@breuer2022]
 
--   [@peeters2022a]
+-   [@nyhuis2021]
 
-## Other additional readings
+-   [@jünger2021]
 
-### Topic Modeling
+-   [@jünger2022]
 
--   [@egger2022]
+-   [@lomborg2014]
 
--   [@chang2009]
+-   [@ohme2021]
 
-### Twitter
+-   [@puschmann2017]
 
--   [@banda2021]
-
--   [@jungherr2016]
-
--   [@karami2020]
-
--   [@mueller2022]
-
--   [@münch2021]
-
--   [@vasko2019]
-
--   [@yuan2022]
+-   [@janetzko2016]
 
 <br>
 

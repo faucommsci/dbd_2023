@@ -1,6 +1,6 @@
 ---
 title: "Session 6"
-subtitle: "📦 Data collection methods"
+subtitle: "📚 Digital disconnection"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
@@ -14,33 +14,19 @@ citations-hover: false
 All articles of this section have to be read & used by the presenting group
 :::
 
--   [@baumgartner2022]
+-   [@nassen2023]
 
--   [@ohme2023]
+-   [@radtke2022]
 
--   [@skatova2019]
+-   [@vandenabeele2022]
 
--   [@vandriel2022]
+## Other additional readings
 
--   [@yee2022]
+-   [@moe2021]
 
-### Other additional readings 
+-   [@schmuck2020]
 
--   [@breuer2022]
-
--   [@nyhuis2021]
-
--   [@jünger2021]
-
--   [@jünger2022]
-
--   [@lomborg2014]
-
--   [@ohme2021]
-
--   [@puschmann2017]
-
--   [@janetzko2016]
+-   [@syvertsen2019]
 
 <br>
 
