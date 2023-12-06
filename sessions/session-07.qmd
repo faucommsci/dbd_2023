@@ -8,6 +8,12 @@ link-citations: false
 citations-hover: false
 ---
 
+## Prepare
+
+🔨 Please install the [🏴‍☠️ Zeeschuimer](https://github.com/digitalmethodsinitiative/zeeschuimer) browser plugin (only Firefox-based browsers) by following the [instructions from the Github page](https://github.com/digitalmethodsinitiative/zeeschuimer#installation).
+
+🔨 Please test your **🐈🐈 4CAT 🐈🐈 login details** as soon as possible after receiving them via Zulip.
+
 ## Mandatory literature
 
 ::: {.callout-important appearance="simple"}
@@ -24,7 +30,7 @@ All articles of this section have to be read & used by the presenting group
 
 -   [@yee2022]
 
-### Other additional readings 
+### Other additional readings
 
 -   [@breuer2022]
 
