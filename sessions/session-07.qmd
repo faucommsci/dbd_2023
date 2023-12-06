@@ -14,6 +14,12 @@ citations-hover: false
 
 🔨 Please test your **🐈🐈 4CAT 🐈🐈 login details** as soon as possible after receiving them via Zulip.
 
+## Participate
+
+🖥️ [Session 07](/slides/slides-07.html)
+
+
+
 ## Mandatory literature
 
 ::: {.callout-important appearance="simple"}

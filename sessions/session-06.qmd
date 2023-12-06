@@ -7,6 +7,10 @@ suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
+## Participate
+
+🖥️ [Session 06](/slides/slides-06.html)
+
 
 ## Mandatory literature
 
