@@ -33,6 +33,9 @@ website:
     - icon: cloud-arrow-up
       href: https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio
       text: DBD Binder
+    - icon: server
+      href: http://10.204.20.178/
+      text: DBD 4CAT-Server
     
     style: "floating"
     search: true
