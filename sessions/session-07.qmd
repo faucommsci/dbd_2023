@@ -18,7 +18,7 @@ citations-hover: false
 
 🖥️ [Session 07](/slides/slides-07.html)
 
-
+🌐 [🐈🐈 4CAT 🐈🐈 Server](http://10.204.20.178/)
 
 ## Mandatory literature
 
@@ -35,6 +35,12 @@ All articles of this section have to be read & used by the presenting group
 -   [@vandriel2022]
 
 -   [@yee2022]
+
+### 🐈🐈 4CAT 🐈🐈-Toolkit
+
+-   [@peeters2022]
+
+-   [@peeters2022a]
 
 ### Other additional readings
 

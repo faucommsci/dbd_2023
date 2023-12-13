@@ -9,16 +9,6 @@ filters:
 bibliography: references_slides.bib
 ---
 
-# 🚧 Under construction {background-image="img/slide_bg-section.png"}
-
-Die Folien werden aktuell überarbeitet, sind aber spätestens zur 7.Sitzung (13.12) online.
-
-```{r under-construction-stop-render}
-#| echo: false
-
-knitr::knit_exit()
-```
-
 ## Seminarplan
 
 ```{r setup-slide-session}
@@ -71,14 +61,8 @@ new_schedule_c %>%
 
 # Agenda {background-image="img/slide_bg-agenda.png"}
 
-1.  [Organisation & Koordination](#organisation-koordination)
-2.  👥 [Group Activity](#group-activity)
+1.  👥 [Group Activity](#group-activity)
 
-# Organisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
-
-## Kurzes organisatorische Update
-
-#### Informationen
 
 # 👥 Group Activity {#group-activity background-image="img/slide_bg-group_activity.png"}
 
@@ -134,24 +118,101 @@ Die Plattformunterstützung erfordert regelmäßige Wartung, um mit den Änderun
 Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automatisch Daten hoch, sondern nur, wenn Sie sie ausdrücklich dazu auffordern.
 :::
 
-## 🧪 (Continue to) Design your own research (design)
+## `@tagesschau` auf {{< fa brands instagram >}}
+
+#### Datenerhebung mit Zeeschuimer
+
+::: columns
+::: {.column width="50%"}
+![](img/session-07/zeeschuimer-01_01-insta.png)
+:::
+
+::: {.column width="50%"}
+![](img/session-07/zeeschuimer-01_02-menu.png)
+:::
+:::
+
+## `@tagesschau` auf {{< fa brands instagram >}}
+
+#### Daten & Analyse in 🐈🐈 `4CAT` 🐈🐈
+
+::: columns
+::: {.column width="50%"}
+![](img/session-07/4cat-01_01-overview_menu.png)
+:::
+
+::: {.column width="50%"}
+![](img/session-07/4cat-01_02-overview_data.png)
+:::
+:::
+
+## Posts im Zeitverlauf
+
+#### 🐈🐈 `4CAT` 🐈🐈: `@tagesschau` auf {{< fa brands instagram >}} 
+
+::: columns
+::: {.column width="50%"}
+![](img/session-07/4cat-02_01-count_posts-menu_01.png)
+![](img/session-07/4cat-02_02-count_posts-menu_02.png)
+:::
+
+::: {.column width="50%"}
+![](img/session-07/4cat-02_03-count_posts-histogram.svg)
+:::
+:::
+
+## Analyse der verwendeten Hashtags
+
+#### 🐈🐈 `4CAT` 🐈🐈: `@tagesschau` auf {{< fa brands instagram >}} 
+
+::: columns
+::: {.column width="50%"}
+![](img/session-07/4cat-03_01-hashtags_menu_01.png)
+![](img/session-07/4cat-03_02-hashtags_menu_02.png)
+:::
+
+::: {.column width="50%"}
+![](img/session-07/4cat-03_03-hashtags_data.png)
+:::
+:::
+
+## Wordcloud der Top-Hashtags
+
+#### 🐈🐈 `4CAT` 🐈🐈: `@tagesschau` auf {{< fa brands instagram >}} 
+
+::: columns
+::: {.column width="50%"}
+![](img/session-07/4cat-04_01-wordcloud_menu.png)
+:::
+
+::: {.column width="50%"}
+![](img/session-07/4cat-04_02-wordcloud.svg)
+:::
+:::
+
+
+## 🧪 And now ... you: Scraping with Zeeschuimer & 4CAT!
 
 #### Gruppenarbeit (ca 25. Min) mit Ergebnisvorstellung & -diskussion (ca. 15 Min)
 
 ::: {.callout-caution appearance="minimal"}
 ## Ziel der Group Activity
 
-Scrapen Sie mit dem Zeeschuimer-Plugin eine Seite Ihrer Wahl
+Scrapen Sie mit dem Zeeschuimer-Plugin Posts zu einem Thema und auf einer Social-Media-Webseite Ihrer Wahl
 :::
 
 #### Nächste Schritte
 
-::: {style="font-size: 22px;"}
--   Finden Sie sich in **Ihren Gruppen** zusammen
+::: {style="font-size: 18px;"}
+-   Nutzen Sie das `Zeeschuimer`-Plugin um Post zu einem Thema und von einer der verfügbaren Social-Media-Plattform Ihrer Wahl zu sammeln. 
+-   Bitte beachten: Damit Sie die mit `Zeeschuimer` gesammelten Daten an den 🐈🐈 `4CAT` 🐈🐈 Server schicken können, müssen Sie
+    -  sich vorher im selben Browser auf dem 🐈🐈 `4CAT` 🐈🐈 Server einloggen
+    -  Im Feld `4CAT server URL` folgendes eintragen: `http://10.204.20.178:80`
 
--   Überlegen Sie sich, wie Sie die **Absicht oder bestehende Strategien zu "digital detox"** in Ihre Untersuchung von letzter Woche integrieren können. Machen Sie sowohl **mindestens einen Vorschlag** für die **Befragung** und einen für **digitale Verhaltensdaten**.
-
--   Halten Sie Ihre Fragen & Desginideen auf der für Ihre Gruppe **vorgesehenen Folienvorlage** (nächste Slide) fest.
+-   Analysieren Sie die Daten mit Hilfe von 🐈🐈 `4CAT` 🐈🐈. 
+    -  Erstellen Sie eine Übersicht über den Posts im Zeitverlauf
+    -  Finden Sie die Top Hashtags.
+    -  Dokumentieren Sie die Ergebnisse für Ihre Gruppe in der dafür **vorgesehenen Folienvorlage** (nächste Slide). 
 :::
 
 ```{r countdown-bias}
@@ -169,28 +230,28 @@ countdown(
 
 ::: columns
 ::: {.column width="20%"}
-{{< qrcode https://t1p.de/2eba6 qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/2eba6)
+{{< qrcode https://t1p.de/wox6w qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/wox6w)
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="20%"}
-{{< qrcode https://t1p.de/7sncl qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/7sncl)
+{{< qrcode https://t1p.de/ue6vf qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/ue6vf)
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="20%"}
-{{< qrcode https://t1p.de/xhtrk qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/xhtrk)
+{{< qrcode https://t1p.de/c6ymh qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/c6ymh)
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="20%"}
-{{< qrcode https://t1p.de/ol206 qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/ol206)
+{{< qrcode https://t1p.de/btx0l qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/btx0l)
 :::
 :::
 
