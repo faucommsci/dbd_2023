@@ -10,7 +10,10 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Christoph Adrian">
@@ -32,7 +35,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -324,6 +346,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
 <meta property="og:title" content="Digital behavioral data - 📦 Data collection methods">
 <meta property="og:description" content="Session 07">
 <meta property="og:site-name" content="Digital behavioral data">
@@ -351,15 +375,837 @@
 
   <p class="date">13.12.2023</p>
 </section>
-<section id="under-construction" class="title-slide slide level1 center" data-background-image="img/slide_bg-section.png">
-<h1>🚧 Under construction</h1>
-<p>Die Folien werden aktuell überarbeitet, sind aber spätestens zur 7.Sitzung (13.12) online.</p>
+<section id="seminarplan" class="slide level2">
+<h2>Seminarplan</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="vukckxrvth" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#vukckxrvth table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#vukckxrvth thead, #vukckxrvth tbody, #vukckxrvth tfoot, #vukckxrvth tr, #vukckxrvth td, #vukckxrvth th {
+  border-style: none;
+}
+
+#vukckxrvth p {
+  margin: 0;
+  padding: 0;
+}
+
+#vukckxrvth .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 75%;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#vukckxrvth .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vukckxrvth .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vukckxrvth .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vukckxrvth .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vukckxrvth .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vukckxrvth .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vukckxrvth .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vukckxrvth .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#vukckxrvth .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#vukckxrvth .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vukckxrvth .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vukckxrvth .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vukckxrvth .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vukckxrvth .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vukckxrvth .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#vukckxrvth .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#vukckxrvth .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#vukckxrvth .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vukckxrvth .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#vukckxrvth .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vukckxrvth .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vukckxrvth .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#vukckxrvth .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vukckxrvth .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vukckxrvth .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vukckxrvth .gt_left {
+  text-align: left;
+}
+
+#vukckxrvth .gt_center {
+  text-align: center;
+}
+
+#vukckxrvth .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vukckxrvth .gt_font_normal {
+  font-weight: normal;
+}
+
+#vukckxrvth .gt_font_bold {
+  font-weight: bold;
+}
+
+#vukckxrvth .gt_font_italic {
+  font-style: italic;
+}
+
+#vukckxrvth .gt_super {
+  font-size: 65%;
+}
+
+#vukckxrvth .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#vukckxrvth .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#vukckxrvth .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#vukckxrvth .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#vukckxrvth .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#vukckxrvth .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#vukckxrvth .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~5~"><div class="gt_from_md"><p><sub>5</sub></p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~📚 Digital disconnection~"><div class="gt_from_md"><p><del>📚 Digital disconnection</del></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="20.12.2023"><div class="gt_from_md"><p>20.12.2023</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📦 Automatic text analysis"><div class="gt_from_md"><p>📦 Automatic text analysis</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Topic Modeling"><div class="gt_from_md"><p>🔨 Topic Modeling</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
+</div></div></td></tr>
+    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
+</div></div></td>
+<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
+</div></div></td>
+<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
+</div></div></td>
+<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
+</div></div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="agenda" class="title-slide slide level1 center" data-background-image="img/slide_bg-agenda.png">
+<h1>Agenda</h1>
+<ol type="1">
+<li>👥 <a href="#/group-activity">Group Activity</a></li>
+</ol>
+</section>
+
+<section>
+<section id="group-activity" class="title-slide slide level1 center" data-background-image="img/slide_bg-group_activity.png">
+<h1>👥 Group Activity</h1>
+<p>Gruppenarbeit zu 🐈🐈 <code>4CAT</code> 🐈🐈 &amp; <code>Zeeschuimer</code></p>
+</section>
+<section id="what-is-it-who-made-it" class="slide level2">
+<h2>What is it &amp; who made it?</h2>
+<h4 id="hintergrundinformationen-4cat-peeters2022a">Hintergrundinformationen <a href="https://github.com/digitalmethodsinitiative/4cat"><code>4CAT</code></a> <span class="citation" data-cites="peeters2022a">(<a href="#/literatur" role="doc-biblioref" onclick="">Peeters &amp; Hagen, 2022</a>)</span></h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Tool zur Analyse und Verarbeitung von <strong>Daten aus sozialen Online-Plattformen</strong></p></li>
+<li><p>Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, <strong>ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich</strong> sind.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/digitalmethodsinitiative/4cat/blob/master/common/assets/screenshot1.png?raw=true"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/digitalmethodsinitiative/4cat/blob/master/common/assets/screenshot2.png?raw=true"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-it-who-made-it-1" class="slide level2">
+<h2>What is it &amp; who made it?</h2>
+<h4 id="hintergrundinformationen-zeeschuimer-peeters2022">Hintergrundinformationen <code>Zeeschuimer</code> <span class="citation" data-cites="peeters2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Peeters, 2022</a>)</span></h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>Browsererweiterung, die während des Besuchs einer Social-Media-Website Daten über die Elemente sammelt, die in der Weboberfläche einer Plattform zu sehen sind</p></li>
+<li><p>Derzeit werden die folgenden Plattformen unterstützt:</p>
+<ul>
+<li><p><i class="fa-brands fa-tiktok" aria-label="tiktok"></i> über https://www.tiktok.com</p></li>
+<li><p><i class="fa-brands fa-instagram" aria-label="instagram"></i> über https://www.instagram.com</p></li>
+</ul></li>
+<li><p>Ergänzung zu <a href="https://github.com/digitalmethodsinitiative/4cat"><code>4CAT</code></a> <span class="citation" data-cites="peeters2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Peeters, 2022</a>)</span></p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://raw.githubusercontent.com/digitalmethodsinitiative/zeeschuimer/master/images/example_screenshot.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Die Zielgruppe sind Forscher, die systematisch Inhalte auf Social-Media-Plattformen untersuchen wollen, die sich dem herkömmlichen Scraping oder der API-basierten Datenerfassung widersetzen.<br>
+<br>
+Sie können z. B. TikTok durchsuchen und später eine Liste aller Beiträge in der Reihenfolge exportieren, in der Sie sie gesehen haben. Die Daten können als JSON-Datei exportiert oder zur Analyse und Speicherung in eine 4CAT-Instanz exportiert werden. Zeeschuimer ist in erster Linie als Ergänzung zu 4CAT gedacht, aber Sie können seine Ausgabe auch in Ihre eigene Analysepipeline integrieren.</p>
+<p>Die Plattformunterstützung erfordert regelmäßige Wartung, um mit den Änderungen auf den Plattformen Schritt zu halten. Wenn etwas nicht funktioniert, freuen wir uns über Probleme und Pull Request</p>
+<p>Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automatisch Daten hoch, sondern nur, wenn Sie sie ausdrücklich dazu auffordern.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tagesschau-auf-fa-brands-instagram" class="slide level2">
+<h2><code>@tagesschau</code> auf <i class="fa-brands fa-instagram" aria-label="instagram"></i></h2>
+<h4 id="datenerhebung-mit-zeeschuimer">Datenerhebung mit Zeeschuimer</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/session-07/zeeschuimer-01_01-insta.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/session-07/zeeschuimer-01_02-menu.png"></p>
+</div>
+</div>
+</section>
+<section id="tagesschau-auf-fa-brands-instagram-1" class="slide level2">
+<h2><code>@tagesschau</code> auf <i class="fa-brands fa-instagram" aria-label="instagram"></i></h2>
+<h4 id="daten-analyse-in-4cat">Daten &amp; Analyse in 🐈🐈 <code>4CAT</code> 🐈🐈</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-01_01-overview_menu.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-01_02-overview_data.png"></p>
+</div>
+</div>
+</section>
+<section id="posts-im-zeitverlauf" class="slide level2">
+<h2>Posts im Zeitverlauf</h2>
+<h4 id="cat-tagesschau-auf-fa-brands-instagram">🐈🐈 <code>4CAT</code> 🐈🐈: <code>@tagesschau</code> auf <i class="fa-brands fa-instagram" aria-label="instagram"></i></h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-02_01-count_posts-menu_01.png"> <img data-src="img/session-07/4cat-02_02-count_posts-menu_02.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-02_03-count_posts-histogram.svg"></p>
+</div>
+</div>
+</section>
+<section id="analyse-der-verwendeten-hashtags" class="slide level2">
+<h2>Analyse der verwendeten Hashtags</h2>
+<h4 id="cat-tagesschau-auf-fa-brands-instagram-1">🐈🐈 <code>4CAT</code> 🐈🐈: <code>@tagesschau</code> auf <i class="fa-brands fa-instagram" aria-label="instagram"></i></h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-03_01-hashtags_menu_01.png"> <img data-src="img/session-07/4cat-03_02-hashtags_menu_02.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-03_03-hashtags_data.png"></p>
+</div>
+</div>
+</section>
+<section id="wordcloud-der-top-hashtags" class="slide level2">
+<h2>Wordcloud der Top-Hashtags</h2>
+<h4 id="cat-tagesschau-auf-fa-brands-instagram-2">🐈🐈 <code>4CAT</code> 🐈🐈: <code>@tagesschau</code> auf <i class="fa-brands fa-instagram" aria-label="instagram"></i></h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-04_01-wordcloud_menu.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/session-07/4cat-04_02-wordcloud.svg"></p>
+</div>
+</div>
+</section>
+<section id="and-now-you-scraping-with-zeeschuimer-4cat" class="slide level2">
+<h2>🧪 And now … you: Scraping with Zeeschuimer &amp; 4CAT!</h2>
+<h4 id="gruppenarbeit-ca-25.-min-mit-ergebnisvorstellung--diskussion-ca.-15-min">Gruppenarbeit (ca 25. Min) mit Ergebnisvorstellung &amp; -diskussion (ca. 15 Min)</h4>
+<div class="callout callout-caution no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Ziel der Group Activity</strong></p>
+</div>
+<div class="callout-content">
+<p>Scrapen Sie mit dem Zeeschuimer-Plugin Posts zu einem Thema und auf einer Social-Media-Webseite Ihrer Wahl</p>
+</div>
+</div>
+</div>
+<h4 id="nächste-schritte">Nächste Schritte</h4>
+<div style="font-size: 18px;">
+<ul>
+<li>Nutzen Sie das <code>Zeeschuimer</code>-Plugin um Post zu einem Thema und von einer der verfügbaren Social-Media-Plattform Ihrer Wahl zu sammeln.</li>
+<li>Bitte beachten: Damit Sie die mit <code>Zeeschuimer</code> gesammelten Daten an den 🐈🐈 <code>4CAT</code> 🐈🐈 Server schicken können, müssen Sie
+<ul>
+<li>sich vorher im selben Browser auf dem 🐈🐈 <code>4CAT</code> 🐈🐈 Server einloggen</li>
+<li>Im Feld <code>4CAT server URL</code> folgendes eintragen: <code>http://10.204.20.178:80</code></li>
+</ul></li>
+<li>Analysieren Sie die Daten mit Hilfe von 🐈🐈 <code>4CAT</code> 🐈🐈.
+<ul>
+<li>Erstellen Sie eine Übersicht über den Posts im Zeitverlauf</li>
+<li>Finden Sie die Top Hashtags.</li>
+<li>Dokumentieren Sie die Ergebnisse für Ihre Gruppe in der dafür <strong>vorgesehenen Folienvorlage</strong> (nächste Slide).</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c5ca88d3" data-warn-when="300" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="let-the-work-beginn" class="slide level2">
+<h2>Let the work beginn</h2>
+<h4 id="bitte-nutzen-sie-die-präsentationsvorlage-ihrer-gruppe">Bitte nutzen Sie die Präsentationsvorlage Ihrer Gruppe</h4>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p></p><div id="qr1" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr1", {"text":"https://t1p.de/wox6w","colorLight":"#ffffff","colorDark":"#C50F3C","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/wox6w">Gruppe A</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr2" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr2", {"text":"https://t1p.de/ue6vf","colorLight":"#ffffff","colorDark":"#18B4F1","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/ue6vf">Gruppe B</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr3" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr3", {"text":"https://t1p.de/c6ymh","colorLight":"#ffffff","colorDark":"#7BB725","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/c6ymh">Gruppe C</a><p></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p></p><div id="qr4" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr4", {"text":"https://t1p.de/btx0l","colorLight":"#ffffff","colorDark":"#FDB735","width":"200","height":"200"});
+</script>
+     <a href="https://t1p.de/btx0l">Gruppe D</a><p></p>
+</div>
+</div>
+</section></section>
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-image="img/slide_bg-question.png">
+<h1>Time for questions</h1>
+
+</section>
+
+<section>
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-image="img/slide_bg-end_session.png">
+<h1>Bis zur nächsten Sitzung!</h1>
+
+</section>
+<section id="literatur" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-peeters2022" class="csl-entry" role="listitem">
+Peeters, S. (2022). <em>Zeeschuimer</em>. Zenodo. <a href="https://zenodo.org/record/6826877">https://zenodo.org/record/6826877</a>
+</div>
+<div id="ref-peeters2022a" class="csl-entry" role="listitem">
+Peeters, S., &amp; Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. <em>Computational Communication Research</em>, <em>4</em>(2), 571–589. <a href="https://doi.org/10.5117/ccr2022.2.007.hage">https://doi.org/10.5117/ccr2022.2.007.hage</a>
+</div>
+</div>
 
 
 <img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
