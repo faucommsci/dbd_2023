@@ -9,15 +9,12 @@ format:
     fig-height: 9
 callout-appearance: simple
 execute: 
-  cache: true
-  eval: true
-  echo: true
   message: false
   warning: false
 highlight-style: atom-one
 editor_options: 
   chunk_output_type: console
-bibliography: references.bib
+bibliography: references_exercise.bib
 ---
 
 ::: {.callout-tip icon="false"}
@@ -95,8 +92,8 @@ tweets_detox <- tweets_correct %>%
     )
 ```
 
+## Digital disconnection on {{< fa brands twitter >}} (not 𝕏)
 
-## Digital disconnection on {{< fa brands twitter >}} (not 𝕏) 
 ### The structure of the data set & available variables
 
 ```{r table-initial-overview}
@@ -138,7 +135,7 @@ tweets_correct %>%
       inherit.aes = FALSE)
 ```
 
-### Tweets with reference to ditigal detox by (participating) users 
+### Tweets with reference to ditigal detox by (participating) users
 
 ```{r table-tweets-by-user}
 tweets_correct %>% 
@@ -207,6 +204,7 @@ tweets_correct %>%
 ```
 
 ## Text as data in R (Part I)
+
 ### Build a subsample: Tweets containing #digitaldetox
 
 ```{r recode-create-subsample}
@@ -288,7 +286,6 @@ tweets_summarized %>%
     scale_size_area(max_size = 30) +
     theme_minimal()
 ```
-
 
 ## Modeling realtionships between words
 
@@ -405,7 +402,6 @@ tweets_sentiment <- tweets_tidy %>%
 tweets_sentiment 
 ```
 
-
 #### Overall distribution sentiment by tweets
 
 ```{r figure-sentiment-distribution}
@@ -420,7 +416,6 @@ tweets_sentiment %>%
   ) +
   theme_pubr()
 ```
-
 
 #### Development of tweet sentiment over the years
 

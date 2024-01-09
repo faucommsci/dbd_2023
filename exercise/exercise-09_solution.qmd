@@ -15,7 +15,7 @@ execute:
 highlight-style: atom-one
 editor_options: 
   chunk_output_type: console
-bibliography: references.bib
+bibliography: references_exercise.bib
 ---
 
 ::: {.callout-tip icon="false"}
