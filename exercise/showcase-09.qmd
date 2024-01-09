@@ -1,0 +1,374 @@
+---
+title: "Showcase 09: 🔨 Text as data in R "
+subtitle: "Digital disconnection on Twitter"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+callout-appearance: simple
+execute: 
+  cache: true
+  eval: true
+  echo: true
+  message: false
+  warning: false
+highlight-style: atom-one
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+::: {.callout-tip icon="false"}
+[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd) Download source file (TODO Update Link)
+
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) Open this exercise in interactive and executable environment (TODO Update Binder)
+:::
+
+## Background
+
+::: {.callout-note appearance="minimal"}
+## Definition
+
+::: notes
+„**Digital disconnection** is a **deliberate** (i.e., chosen by the individual) form of **non-use** of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of **restoring or improving one’s perceived** overuse, social interactions, psychological **well-being**, productivity, privacy and/or perceived usefulness“. [@nassen2023]
+:::
+:::
+
+-   Increasing trend towards **more conscious use of digital media (devices)**, including **(deliberate) non-use** with the aim to **restore or improve psychological well-being** (among other factors)
+
+-   But how do "we" talk about digital detox/disconnection: 💊 drug, 👹 demon or 🍩 donut?
+
+::: callout-important
+## Todays's data basis: Twitter dataset
+
+-   Collection of all tweets up to the beginning of 2023 that mention or discuss digital detox (and similar terms) on Twitter (not 𝕏)
+-   Initial query is searching for "digital detox", "#digitaldetox", "digital_detox"
+-   Access via official Academic-Twitter-API via academictwitteR [@barrie2021] at the beginning of last year
+:::
+
+## Preparation
+
+```{r load-packages}
+# TODO Add missing packages (and description)
+pacman::p_load(
+  here, qs, 
+  magrittr, 
+  tidyverse, 
+  janitor,
+  easystats,
+  sjmisc,
+  tidytext, textdata,
+  ggpubr,
+  ggwordcloud)
+```
+
+## Import and process the data
+
+```{r import-data}
+# Import raw data from local
+tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
+  janitor::clean_names()
+
+# Initial data processing
+tweets_correct <- tweets %>% 
+  mutate(
+    # reformat and create datetime variables
+    across(created_at, ~ymd_hms(.)), # convert to dttm format
+    year = year(created_at), 
+    month = month(created_at), 
+    day = day(created_at), 
+    hour = hour(created_at),
+    minute = minute(created_at),
+    # create addtional variables
+    retweet_dy = str_detect(text, "^RT"), # identify retweets
+    detox_dy = str_detect(text, "#digitaldetox") 
+  ) %>% 
+  distinct(tweet_id, .keep_all = TRUE)
+
+# Filter relevant tweets
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+
+## Chunks from the session
+
+##### Data overview {#check-overview}
+
+```{r table-initial-overview}
+tweets %>% glimpse()
+```
+
+##### Summary statistics {#check-location-parameter}
+
+```{r table-location-parameter}
+tweets_correct %>% descr()
+tweets_correct %>% skimr::skim()
+```
+
+#### Distribution over the years
+
+<!-- TODO Add note for change of tweet character limit in November 2017 -->
+
+```{r figure-tweets-by-year}
+tweets_correct %>% 
+  ggplot(aes(x = as.factor(year), fill = retweet_dy)) +
+    geom_bar() +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+```
+
+#### Top languages
+
+<!-- TODO Disable scientific notatino -->
+
+```{r figure-top-languages}
+
+tweets_correct %>% 
+  group_by(lang, detox_dy) %>% 
+  summarise(n = n())  %>% 
+  arrange(desc(n)) %>% 
+  head(n = 10) %>% 
+  ggplot(aes(x = reorder(lang, n) , y = n, fill = detox_dy)) +
+    geom_col() +
+    labs(
+      x = "Twitter language code",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    coord_flip() +
+    theme_pubr()
+```
+
+#### Top 'users'
+
+```{r}
+tweets_correct %>% 
+  group_by(user_username, detox_dy) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n))
+
+tweets_correct %>% 
+  group_by(detox_dy) %>% 
+  sjmisc::frq(
+    user_username,
+    min.frq = 500,
+    sort.frq = "desc") 
+```
+
+### Subsample: Tweets containing #digitaldetox
+
+```{r}
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+#### Summary statistics
+
+```{r table-location-parameter-subsample}
+tweets_detox %>% descr()
+tweets_detox %>% skimr::skim()
+```
+
+## Text analysis using tidy principles
+
+### Transform to 'tidy text'
+
+```{r}
+remove_reg <- "&amp;|&lt;|&gt;"
+
+tidy_tweets <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_reg)) %>% 
+  tidytext::unnest_tokens("text", text) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word)
+```
+
+### Transform to 'Summarized Text'
+
+```{r}
+summarized_tweets <- tidy_tweets %>% 
+  count(text, sort = TRUE) 
+```
+
+### Visualize tokens
+
+#### Wordcloud
+
+```{r}
+summarized_tweets %>% 
+  with(wordcloud::wordcloud(text, n, max.words = 100))
+```
+
+```{r}
+#| eval: false
+#| echo: false
+
+summarized_tweets %>% 
+  top_n(50) %>% 
+  ggplot(aes(label = text, size = n)) +
+  geom_text_wordcloud() +
+  scale_size_area(max_size = 30) +
+  theme_minimal()
+```
+
+#### Distribution
+
+```{r}
+summarized_tweets %>% 
+  ggplot(aes(n/sum(n))) +
+  geom_histogram() +
+  theme_minimal()
+```
+
+## Modeling realtionships between words
+
+### Create bigrams
+
+```{r}
+tidy_bigrams <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_reg)) %>% 
+  tidytext::unnest_tokens(
+    "text", text,
+    token = "ngrams", n = 2 ) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word, 
+    !is.na(text)
+  )
+```
+
+### Filtering & couting
+
+```{r}
+filtered_bigrams <- tidy_bigrams %>% 
+  separate(text, c("word1", "word2"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) 
+  
+
+count_bigrams <- filtered_bigrams %>%   
+  count(word1, word2, sort = TRUE)
+
+summarized_bigrams_untied <- filtered_bigrams %>% 
+  unite(bigram, word1, word2, sep = " ") %>% 
+  count(bigram, sort = TRUE)
+```
+
+### Visulisation
+
+```{r}
+library(ggraph)
+
+bigrams_graph <- count_bigrams %>% 
+  filter(n > 250) %>%
+  igraph::graph_from_data_frame()
+
+ggraph(bigrams_graph, layout = "fr") +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+
+```
+
+```{r}
+a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
+
+ggraph(bigrams_graph, layout = "fr") +
+  geom_edge_link(
+    aes(edge_alpha = n), show.legend = FALSE,
+    arrow = a, end_cap = circle(.07, 'inches')) +
+  geom_node_point(color = "lightblue", size = 5) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  theme_void()
+```
+
+### Correlation
+
+```{r}
+library(widyr) 
+
+pairs_tweets <- tidy_tweets %>% 
+  pairwise_count(text, tweet_id, sort = TRUE)
+
+word_cors <- tidy_tweets %>% 
+  group_by(text) %>% 
+  filter(n() >= 100) %>% 
+  pairwise_cor(text, tweet_id, sort = TRUE)
+
+word_cors %>% 
+  filter(item1 %in% c("detox", "digital")) %>% 
+  group_by(item1) %>% 
+  slice_max(correlation, n = 5) %>% 
+  ungroup() %>% 
+  mutate(item2 = reorder(item2, correlation)) %>% 
+  ggplot(aes(item2, correlation)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip() +
+  theme_minimal()
+```
+
+### Get sentiment
+
+```{r}
+sentiment_tweets <- tidy_tweets %>% 
+  inner_join(
+     get_sentiments("bing"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  count(tweet_id, sentiment) %>% 
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative) 
+```
+
+### Visualization
+
+#### Distribution
+
+```{r}
+sentiment_tweets %>% 
+  ggplot(aes(as.factor(sentiment))) +
+  geom_bar() +
+  theme_minimal()
+```
+
+```{r}
+tweets_correct %>% 
+  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
+  left_join(sentiment_tweets) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar() +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+
+
+tweets_correct %>% 
+  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
+  left_join(sentiment_tweets) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar(position = "fill") +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+```

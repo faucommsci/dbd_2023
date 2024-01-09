@@ -16,7 +16,7 @@ citations-hover: false
 
 ## Practice
 
-📋 [Exercise 09](/exercise/exercise-09.html)
+📋 [Exercise 09](/exercise/exercise-09_solution.html)
 
 ## Suggested readings
 

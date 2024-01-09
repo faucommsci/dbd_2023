@@ -1,0 +1,676 @@
+---
+title: "Exercise 09: 🔨 Text as data in R "
+subtitle: "Digital disconnection on Twitter"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+callout-appearance: simple
+execute: 
+  cache: true
+  eval: false
+  echo: true
+  message: false
+  warning: false
+highlight-style: atom-one
+editor_options: 
+  chunk_output_type: console
+---
+
+::: {.callout-tip icon="false"}
+[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd) Download source file (TODO Update Link)
+
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) Open this exercise in interactive and executable environment (TODO Update Binder)
+:::
+
+## Background
+
+-   TODO Digital disconnection and why it is important
+-   TODO Digital disconnection on Twitter
+
+::: callout-note
+## Todays's data basis: Twitter dataset
+
+-   TODO Beschreibung der Erhebung:
+    -   Eigene Erhebung via API
+    -   Erhebungszeitraum (vor Musk Übername/Umbenennung)
+    -   Search query
+:::
+
+## Packages
+
+```{r load-packages}
+# TODO Add missing packages (and description)
+pacman::p_load(
+  here, qs, 
+  magrittr, 
+  tidyverse, 
+  janitor,
+  easystats,
+  sjmisc,
+  tidytext, textdata,
+  ggpubr,
+  ggwordcloud)
+```
+
+## Codechunks from the session
+
+### Import data from local
+
+TODO Update information about central variables
+
+| Variable            | Description                                                                    |
+|:-------------------------|:---------------------------------------------|
+| `movie_name`        | Name of the film                                                               |
+| `release_year`      | Release year                                                                   |
+| `director`          | Director of the film                                                           |
+| `age_difference`    | Age difference between the characters in whole years                           |
+| `couple_number`     | An identifier for the couple in case multiple couples are listed for this film |
+| `actor_1_name`      | The name of the older actor in this couple                                     |
+| `actor_2_name`      | The name of the younger actor in this couple                                   |
+| `actor_1_birthdate` | The birthdate of the older member of the couple                                |
+| `actor_2_birthdate` | The birthdate of the younger member of the couple                              |
+| `actor_1_age`       | The age of the older actor when the film was released                          |
+| `actor_2_age`       | The age of the younger actor when the film was released                        |
+
+: Variablennamen und -beschreibungen
+
+```{r import-data-raw}
+# Import data from URL
+tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
+  janitor::clean_names()
+
+# Check data set
+tweets
+```
+
+#### Initial data check
+
+::: callout-note
+## Is the data 'technically correct'?
+-   [How many records do we have? How many variables?](#check-overview)
+-   [What are the variable names? Are they meaningful?](#check-overview)
+-   [What type is each variable—e.g., numeric, categorical, logical?](#check-overview)
+-   [How many unique values does each variable have?]
+-   What value occurs most frequently, and how often does it occur?
+-   Are there missing observations? If so, how frequently does this occur?
+
+:::
+
+##### Data overview {#check-overview}
+
+```{r table-initial-overview}
+tweets %>% glimpse()
+```
+
+##### Data processing {#check-overview-correction}
+
+```{r recoding-data-to-correct}
+tweets_correct <- tweets %>% 
+  mutate(
+    # reformat and create datetime variables
+    across(created_at, ~ymd_hms(.)), # convert to dttm format
+    year = year(created_at), 
+    month = month(created_at), 
+    day = day(created_at), 
+    hour = hour(created_at),
+    minute = minute(created_at),
+    # create addtional variables
+    retweet_dy = str_detect(text, "^RT"), # identify retweets
+    detox_dy = str_detect(text, "#digitaldetox") 
+  ) %>% 
+  distinct(tweet_id, .keep_all = TRUE)
+```
+
+##### Summary statistics{#check-location-parameter}
+
+```{r table-location-parameter}
+tweets_correct %>% descr()
+tweets_correct %>% skimr::skim()
+```
+
+
+#### Distribution over the years
+<!-- TODO Add note for change of tweet character limit in November 2017 -->
+
+```{r figure-tweets-by-year}
+
+tweets_correct %>% 
+  ggplot(aes(x = as.factor(year), fill = retweet_dy)) +
+    geom_bar() +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+```
+
+#### Top languages 
+<!-- TODO Disable scientific notatino -->
+```{r figure-top-languages}
+
+tweets_correct %>% 
+  group_by(lang, detox_dy) %>% 
+  summarise(n = n())  %>% 
+  arrange(desc(n)) %>% 
+  head(n = 10) %>% 
+  ggplot(aes(x = reorder(lang, n) , y = n, fill = detox_dy)) +
+    geom_col() +
+    labs(
+      x = "Twitter language code",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    coord_flip() +
+    theme_pubr()
+```
+
+#### Top 'users'
+
+```{r}
+tweets_correct %>% 
+  group_by(user_username, detox_dy) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n))
+
+tweets_correct %>% 
+  group_by(detox_dy) %>% 
+  sjmisc::frq(
+    user_username,
+    min.frq = 500,
+    sort.frq = "desc") 
+```
+
+### Subsample: Tweets containing #digitaldetox
+
+```{r}
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+#### Summary statistics{#check-location-parameter}
+
+```{r table-location-parameter-subsample}
+tweets_detox %>% descr()
+tweets_detox %>% skimr::skim()
+```
+
+
+## Text analysis using tidy principles
+### Transform to 'tidy text'
+```{r}
+remove_reg <- "&amp;|&lt;|&gt;"
+
+tidy_tweets <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_reg)) %>% 
+  tidytext::unnest_tokens("text", text) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word)
+```
+
+### Transform to 'Summarized Text'
+```{r}
+summarized_tweets <- tidy_tweets %>% 
+  count(text, sort = TRUE) 
+```
+
+### Visualize tokens
+#### Wordcloud
+```{r}
+summarized_tweets %>% 
+  with(wordcloud::wordcloud(text, n, max.words = 100))
+```
+
+```{r}
+#| eval: false
+#| echo: false
+
+summarized_tweets %>% 
+  top_n(50) %>% 
+  ggplot(aes(label = text, size = n)) +
+  geom_text_wordcloud() +
+  scale_size_area(max_size = 30) +
+  theme_minimal()
+```
+
+#### Distribution 
+```{r}
+summarized_tweets %>% 
+  ggplot(aes(n/sum(n))) +
+  geom_histogram() +
+  theme_minimal()
+```
+
+
+## Modeling realtionships between words
+### Create bigrams
+```{r}
+tidy_bigrams <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_reg)) %>% 
+  tidytext::unnest_tokens(
+    "text", text,
+    token = "ngrams", n = 2 ) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word, 
+    !is.na(text)
+  )
+```
+
+### Filtering & couting
+```{r}
+filtered_bigrams <- tidy_bigrams %>% 
+  separate(text, c("word1", "word2"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) 
+  
+
+count_bigrams <- filtered_bigrams %>%   
+  count(word1, word2, sort = TRUE)
+
+summarized_bigrams_untied <- filtered_bigrams %>% 
+  unite(bigram, word1, word2, sep = " ") %>% 
+  count(bigram, sort = TRUE)
+```
+
+### Visulisation 
+```{r}
+library(ggraph)
+
+bigrams_graph <- count_bigrams %>% 
+  filter(n > 250) %>%
+  igraph::graph_from_data_frame()
+
+ggraph(bigrams_graph, layout = "fr") +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+
+```
+
+```{r}
+a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
+
+ggraph(bigrams_graph, layout = "fr") +
+  geom_edge_link(
+    aes(edge_alpha = n), show.legend = FALSE,
+    arrow = a, end_cap = circle(.07, 'inches')) +
+  geom_node_point(color = "lightblue", size = 5) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  theme_void()
+```
+
+
+### Correlation
+
+```{r}
+library(widyr) 
+
+pairs_tweets <- tidy_tweets %>% 
+  pairwise_count(text, tweet_id, sort = TRUE)
+
+word_cors <- tidy_tweets %>% 
+  group_by(text) %>% 
+  filter(n() >= 100) %>% 
+  pairwise_cor(text, tweet_id, sort = TRUE)
+
+word_cors %>% 
+  filter(item1 %in% c("detox", "digital")) %>% 
+  group_by(item1) %>% 
+  slice_max(correlation, n = 5) %>% 
+  ungroup() %>% 
+  mutate(item2 = reorder(item2, correlation)) %>% 
+  ggplot(aes(item2, correlation)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip() +
+  theme_minimal()
+```
+
+
+
+### Get sentiment 
+```{r}
+sentiment_tweets <- tidy_tweets %>% 
+  inner_join(
+     get_sentiments("bing"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  count(tweet_id, sentiment) %>% 
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative) 
+```
+
+### Visualization
+#### Distribution
+```{r}
+sentiment_tweets %>% 
+  ggplot(aes(as.factor(sentiment))) +
+  geom_bar() +
+  theme_minimal()
+```
+
+```{r}
+tweets_correct %>% 
+  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
+  left_join(sentiment_tweets) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar() +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+
+
+tweets_correct %>% 
+  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
+  left_join(sentiment_tweets) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar(position = "fill") +
+    labs(
+      x = "Year",
+      y = "Number of tweets", 
+      fill = "Does the tweet contain '#digitaldetox'?") +
+    theme_pubr()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+library(dplyr)
+library(janeaustenr)
+library(tidytext)
+
+book_words <- austen_books() %>%
+  unnest_tokens(word, text) %>%
+  count(book, word, sort = TRUE)
+
+total_words <- book_words %>% 
+  group_by(book) %>% 
+  summarize(total = sum(n))
+
+book_words <- left_join(book_words, total_words)
+
+book_words
+#> # A tibble: 40,379 × 4
+#>    book              word      n  total
+#>    <fct>             <chr> <int>  <int>
+#>  1 Mansfield Park    the    6206 160460
+#>  2 Mansfield Park    to     5475 160460
+#>  3 Mansfield Park    and    5438 160460
+#>  4 Emma              to     5239 160996
+#>  5 Emma              the    5201 160996
+#>  6 Emma              and    4896 160996
+#>  7 Mansfield Park    of     4778 160460
+#>  8 Pride & Prejudice the    4331 122204
+#>  9 Emma              of     4291 160996
+#> 10 Pride & Prejudice to     4162 122204
+#> # … with 40,369 more rows
+```
+
+```{r}
+tidy_books <- austen_books() %>%
+  group_by(book) %>%
+  mutate(
+    linenumber = row_number(),
+    chapter = cumsum(str_detect(text, 
+                                regex("^chapter [\\divxlc]", 
+                                      ignore_case = TRUE)))) %>%
+  ungroup() %>%
+  unnest_tokens(word, text)
+
+jane_austen_sentiment <- tidy_books %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(book, index = linenumber %/% 80, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+```
+
+
+
+
+
+
+### Filter hashtags
+
+```{r}
+tweets_detox %>% 
+  mutate(hashtags = str_extract_all(text, "#\\S+")) %>% 
+  unnest(hashtags) %>% 
+  count(tweet_id, hashtags, sort = TRUE) 
+
+
+tweets_detox %>% 
+  mutate(
+    user = paste0("@", user_username),
+    mentions = str_extract_all(text, "@\\S+")
+    ) %>% 
+  unnest(mentions) %>% 
+  count(mentions, sort = TRUE) 
+
+
+
+  quanteda::fcm() %>% 
+  quanteda.textplots::textplot_network()
+
+```
+
+
+
+
+
+
+### TF-IDF
+
+```{r}
+words_tweets <- tidy_tweets %>% 
+  count(tweet_id, text, sort = TRUE)
+
+words_total <- words_tweets %>% 
+  group_by(tweet_id) %>% 
+  summarise(total = sum(n))
+
+tweets_words <- left_join(words_tweets, words_total)
+tweets_tf_idf <- bind_tf_idf(tweets_words, text, tweet_id, n)
+tweets_tf_idf %>% arrange(desc(tf_idf))
+```
+
+
+
+
+
+
+
+## 📋 Exercise: Welche Rolle spielt das Geschlecht?
+
+::: callout-note
+## Spielt das Geschlecht eine Rolle?
+
+-   Der folgende Abschitt befasst sich nun ergänzend mit der Frage, welche Rolle das Geschlecht mit Blick auf die "Gültigkeit" der vorherigen Ergebnisse spielt
+-   Dazu sind jedoch weitere Explorations- und Überarbeitungsschritte notwendig
+:::
+
+### Übeprüfung der `_gender`-Variablen
+
+::: callout-caution
+## Exercise 1
+
+Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_correct` die Variablen `actor_1_gender` und `actor_2_gender` an.
+:::
+
+```{r exercise_1}
+age_gaps_correct %>% 
+  frq(actor_1_gender, actor_2_gender)
+```
+
+::: callout-caution
+## Exercise 2
+
+Nutzen Sie die Funktion `sjmisc::flat_talbe()` und den Datensatz `age_gaps_correct` um eine Kreuztabelle der Variablen `actor_1_gender` und `actor_2_gender` zu erstellen.
+:::
+
+```{r exercise_2}
+age_gaps_correct %>% 
+  select(actor_1_gender, actor_2_gender) %>% 
+  flat_table()
+```
+
+### Sind die Daten "konsistent"?
+
+#### Überprüfung der Sortierung
+
+```{r table-check-variable-arrangement}
+age_gaps_correct %>% 
+  summarise(
+      p1_older = mean(actor_1_age > actor_2_age), # older person first?
+      p1_male  = mean(actor_1_gender == "man"),  # male person first? 
+      p_1_first_alpha = mean(actor_1_name < actor_2_name) # alphabetical order?
+  )
+```
+
+### Überprüfung der Anzahl pro Paare pro Film
+
+```{r table-check-couple-numbers}
+# Create data
+couples <- age_gaps_correct %>% 
+  group_by(movie_name) %>% 
+  summarise(n = n()) 
+
+# Distribution
+couples %>% frq(n)
+
+# Movies with a loot of couples 
+couples %>% 
+  filter(n > 3) %>% 
+  arrange(desc(n))
+```
+
+### Korrekturen
+
+```{r recoding-data-to-consistent}
+age_gaps_consistent <- age_gaps_correct %>% 
+  # If multiple couples, assign couple number by movie
+  mutate(
+      couple_number = row_number(),
+      .by = "movie_name"
+  ) %>% 
+  # Change data structure (one line per actor in a coulpe of a movie)
+  pivot_longer(
+    cols = starts_with(c("actor_1_", "actor_2_")),
+    names_to = c(NA, NA, ".value"),
+    names_sep = "_"
+  ) %>% 
+  # Put older actor first
+  arrange(desc(age_difference), movie_name, birthdate) %>% 
+    mutate(
+    position = row_number(),
+    .by = c("movie_name", "couple_number")
+  ) %>% 
+  pivot_wider(
+    names_from = "position",
+    names_glue = "actor_{position}_{.value}",
+    values_from = c("name", "gender", "birthdate", "age")
+  ) %>% 
+  mutate(
+    couple_structure = case_when(
+      actor_1_gender == "woman" & actor_2_gender == "woman" ~ 1,
+      actor_1_gender == "man" & actor_2_gender == "man" ~ 2,
+      actor_1_gender != "man" ~ 3, 
+      actor_1_gender == "man" ~ 4,
+    ),
+    older_male_hetero  = sjmisc::rec(
+      couple_structure, 
+      rec="3=0; 4=1; ELSE=NA", 
+      to.factor = TRUE
+    )
+  )
+
+```
+
+## Die zweite Datenexploration
+
+### Alterskombinationen im Überblick
+
+::: callout-caution
+## Exercise 3
+
+Nutzen Sie die Funktion `sjmisc::frq()` und schauen Sie sich im Datensatz `age_gaps_consistent` die Variablen `couple_structure` und `older_male_hetero` an.
+:::
+
+```{r exercise_3}
+age_gaps_consistent %>% 
+  frq(couple_structure, older_male_hetero)
+```
+
+### Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?
+
+#### Graphische Überprüfung
+
+::: callout-caution
+## Exercise 4
+
+-   Erstellen Sie, auf Basis des Datensatzes `age_gaps_consistent`, einen `ggplot`.
+-   Nutzen Sie im Argument `aes()` die Variable `age_difference` als `x`-Variable und `older_male_hetero` für das Argument `fill`.
+-   Nutzen Sie `geom_bar` zur Erzeugung des Plots.
+-   *Optional: Verwenden Sie `theme_pubr`*
+:::
+
+```{r exercise_4}
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  theme_pubr()
+```
+
+```{r exercise_4_2}
+age_gaps_consistent %>% 
+  ggplot(aes(age_difference, fill = older_male_hetero)) +
+  geom_bar() +
+  labs(
+    x = "Altersdifferenz (in Jahren)",
+    y = 'Anzahl der "Beziehungen"'
+  ) +
+   scale_fill_manual(
+    name = "Older partner in couple",
+    values = c("0" = "#F8766D", "1" = "#00BFC4", "NA" = "grey"),
+    labels = c("0" = "Woman", "1" = "Man", "NA" = "Same sex couples")
+  ) +
+  theme_pubr() 
+```
+
+#### Überprüfung durch Modellierung
+
+```{r model-age-difference-release-year-gender-lm}
+mdl <- lm(age_difference ~ release_year + older_male_hetero, data = age_gaps_consistent)
+
+# Output
+mdl %>% parameters::parameters()
+mdl %>% performance::model_performance()
+mdl %>% report::report()
+```
+
+
+

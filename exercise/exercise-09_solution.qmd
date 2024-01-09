@@ -1,0 +1,356 @@
+---
+title: "Exercise 09: 🔨 Text as data in R "
+subtitle: "Digital disconnection on Twitter"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+callout-appearance: simple
+execute: 
+  cache: true
+  eval: true
+  echo: true
+  message: false
+  warning: false
+highlight-style: atom-one
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+::: {.callout-tip icon="false"}
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((/slides/slides-09.html)) Open session slides
+
+[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd) Download source file
+:::
+
+## Background
+
+::: {.callout-note appearance="minimal"}
+## Definition
+
+::: notes
+„**Digital disconnection** is a **deliberate** (i.e., chosen by the individual) form of **non-use** of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of **restoring or improving one’s perceived** overuse, social interactions, psychological **well-being**, productivity, privacy and/or perceived usefulness“. [@nassen2023]
+:::
+:::
+
+-   Increasing trend towards **more conscious use of digital media (devices)**, including **(deliberate) non-use** with the aim to **restore or improve psychological well-being** (among other factors)
+
+-   But how do "we" talk about digital detox/disconnection: 💊 drug, 👹 demon or 🍩 donut?
+
+::: callout-important
+## Todays's data basis: Twitter dataset
+
+-   Collection of all tweets up to the beginning of 2023 that mention or discuss digital detox (and similar terms) on Twitter (not 𝕏)
+-   Initial query is searching for "digital detox", "#digitaldetox", "digital_detox"
+-   Access via official Academic-Twitter-API via academictwitteR [@barrie2021] at the beginning of last year
+:::
+
+## Preparation
+
+```{r load-packages}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  tidytext, textdata, widyr, # text processing
+  ggpubr, ggwordcloud, # visualization
+  tidyverse # load last to avoid masking issues
+  )
+```
+
+## Import and process the data
+
+```{r import-data}
+# Import raw data from local
+tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
+  janitor::clean_names()
+
+# Initial data processing
+tweets_correct <- tweets %>% 
+  mutate(
+    # reformat and create datetime variables
+    across(created_at, ~ymd_hms(.)), # convert to dttm format
+    year = year(created_at), 
+    month = month(created_at), 
+    day = day(created_at), 
+    hour = hour(created_at),
+    minute = minute(created_at),
+    # create addtional variables
+    retweet_dy = str_detect(text, "^RT"), # identify retweets
+    detox_dy = str_detect(text, "#digitaldetox") 
+  ) %>% 
+  distinct(tweet_id, .keep_all = TRUE)
+
+# Filter relevant tweets
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+## Exercises
+
+::: callout-caution
+## Objective of this exercise
+
+-   Brush up basic knowledge of working with R, tidyverse and ggplot2
+-   Get to know the typical steps of tidy text analysis with `tidytext`, from tokenisation and summarisation to visualisation.
+:::
+
+::: callout-important
+## Attention
+
+-   Before you start working on the exercise, please make sure to render all the chunks of the section [Preparation]. You can do this by using the "Run all chunks above"-button ![](/img/rstudio-button-render_all_chunks_above.png) of the next chunk.
+
+-   When in doubt, use the showcase (.qmd or .html) to look at the code chunks used to produce the output of the slides.
+:::
+
+### 📋 Exercise 1: Transform to 'tidy text'
+
+-   Define custom stopwords
+    -   Edit the vector `remove_custom_stopwords` by defining additional words to be deleted based on the analysis presented in the session. (Use `|` as a logical `OR` operator in regular expressions. It allows you to specify alternatives, e.g. add `|https`.)
+-   Create new dataset `tweets_tidy_cleaned`
+    -   Based on the dataset `tweets_detox`,
+        1.  use the `str_remove_all` function to remove the specified patterns of the `remove_custom_stopwords` vector. Use the `mutate()` function to edit the `text` variable.
+        2.  Tokenize the 'text' column using `unnest_tokens`.
+        3.  Filter out stop words using `filter` and `stopwords$words`
+    -   Save this transformation by creating a new dataset with the name `tweets_tidy_cleaned`.
+-   Check if transformation was successful (e.g. by using the `print()` function)
+
+```{r exercise-1}
+#| eval: false
+
+# Define custom stopwords
+remove_custom_stopwords <- "&amp;|&lt;|&gt; ADD NEW TERMS HERE"
+
+# Create new dataset tweets_tidy_cleaned
+
+# Check
+
+
+```
+
+```{r exercise-1-solution}
+#| eval: false
+#| echo: false
+
+# Define custom stopwords
+remove_custom_stopwords <- "&amp;|&lt;|&gt;|http*|t.c|digitaldetox"
+
+# Create new dataset clean_tidy_tweets
+tweets_tidy_cleaned <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_custom_stopwords)) %>% 
+  tidytext::unnest_tokens("text", text) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word)
+
+# Check
+tweets_tidy_cleaned %>% print()
+```
+
+### 📋 Exercise 2: Summarize tokens
+
+-   Create summarized data
+    -   Based on the dataset `tweets_tidy_cleaned`, summarize the frequency of the individual tokens by using the `count()`-function on the variable `text`. Use the argument `sort = TRUE` to sort the dataset based on descending frequency of the tokens.
+    -   Save this transformation by creating a new dataset with the name `tweets_summarized_cleaned`.
+-   Check if transformation was successful by using the `print()` function.
+    -   Use the argument `n = 50` to display the top 50 token (only possible if argument `sort = TRUE` was used when running the `count()` function)
+-   Check distribution
+    -   Use the `datawizard::describe_distribution()` function to check different distribution parameters
+-   *Optional:* Check results with a wordcloud
+    -   Based on the sorted dataset `tweets_summarized_cleaned`
+        1.  Select only the 100 most frequent tokens, using the function `top_n()`
+        2.  Create a `ggplot()`-base with `label = text` and `size = n` as `aes()` and
+        3.  Use ggwordcloud::geom_text_wordclout() to create the wordcloud.
+        4.  Use scale_size_are() to adopt the scaling of the wordcloud.
+        5.  Use `theme_minimal()` for clean visualisation.
+
+```{r exercise-2}
+# Create summarized data
+
+
+# Preview Top 50 token
+
+
+# Check distribution parameters
+
+
+# Optional: Check results with a wordcloud
+```
+
+```{r exercise-2-solution}
+#| eval: false
+#| echo: false
+
+# Create summarized data
+tweets_summarized_cleaned <- tweets_tidy_cleaned %>% 
+  count(text, sort = TRUE) 
+
+# Preview Top 15 token
+tweets_summarized_cleaned %>% 
+    print(n = 50)
+
+# Check distribution parameters 
+tweets_summarized_cleaned %>%
+  datawizard::describe_distribution()
+
+# Optional: Check results with a wordcloud
+tweets_summarized_cleaned %>% 
+    top_n(100) %>% 
+    ggplot(aes(label = text, size = n)) +
+    ggwordcloud::geom_text_wordcloud() +
+    scale_size_area(max_size = 15) +
+    theme_minimal()
+```
+
+## 📋 Exercise 3: Couting and correlating pairs of words
+
+#### 3.1 Couting word pairs within tweets
+
+-   Couting word pairs among sections
+    -   Based on the dataset `tweets_tidy_cleaned`, count word pairs using `widyr::pairwise_count()`, with the arguments `item = text`, f`eature = tweet_id` and `sort = TRUE`.
+    -   Save this transformation by creating a new dataset with the name `tweets_word_pairs_cleand`.
+-   Check if transformation was successful by using the `print()` function.
+    -   Use the argument `n = 50` to display the top 50 token (only possible if argument `sort = TRUE` was used when running the `count()` function)
+
+```{r exercise-3-1}
+# Couting word pairs among sections
+
+# Check 
+
+```
+
+```{r exercise-3-1-solution}
+#| eval: false
+#| echo: false
+
+# Couting word pairs among sections
+tweets_word_pairs_cleand <- tweets_tidy_cleaned %>% 
+  widyr::pairwise_count(
+    item = text,
+    feature = tweet_id,
+    sort = TRUE)
+
+# Check 
+tweets_word_pairs_cleand %>% print(n = 50)
+```
+
+#### 3.2 Pairwise correlation
+
+-   Getting pairwise correlation
+    -   Based on the dataset `tweets_tidy_cleaned`,
+        1.  group the data with the function `group_by()` by the variable `text`
+        2.  use `filter(n() >= X)` to only use tokens that appear at least a certain amount of times (X).\
+            *Please feel free to select an X of your choice, however, I would strongly recommend an **X \> 100**, as otherwise the following function might not be able to compute.*
+        3.  create word correlations using `widyr::pairwise_cor()`, with the arguments `item = text`,`feature = tweet_id` and `sort = TRUE`.
+    -   Save this transformation by creating a new dataset with the name `tweets_word_pairs_cleand`.
+-   Check pairs with highest correlation by using the `print()` function.
+
+```{r exercise-3-2}
+# Getting pairwise correlation 
+
+
+# Check pairs with highest correlation
+
+
+```
+
+```{r exercise-3-2-solution}
+#| eval: false
+#| echo: false
+
+# Getting pairwise correlation 
+tweets_pairs_corr_cleaned <- tweets_tidy_cleaned %>% 
+  group_by(text) %>% 
+  filter(n() >= 250) %>% 
+  pairwise_cor(text, tweet_id, sort = TRUE)
+
+# Check pairs with highest correlation
+tweets_pairs_corr_cleaned %>% print(n = 50)
+```
+
+### 3.3. Optinal: Visualization
+
+-   Customize the parameters in the following code chunk:
+    -   `selected_words`, for defining the words you want to get the correlates for
+    -   `number_of_correlates`, to vary the number of correlates shown in the graph.
+-   Set `#|eval : true` to execute chunk
+
+```{r exercise-3-3}
+#| eval: false
+
+# Define parameters
+selected_words <- c("digital")
+number_of_correlates <- 5
+
+# Visualize correlates
+tweets_pairs_corr_cleaned %>% 
+  filter(item1 %in% selected_words) %>% 
+  group_by(item1) %>% 
+  slice_max(correlation, n = number_of_correlates) %>% 
+  ungroup() %>% 
+  mutate(item2 = reorder(item2, correlation)) %>% 
+  ggplot(aes(item2, correlation)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip() +
+  theme_minimal()
+```
+
+## Exercise 4: Sentiment
+
+-   Apply `afinn` dictionary to get sentiment
+    -   Based on the dataset `tweets_tidy_cleaned`,
+        1.  match the words from the `afinn` dictionary with the tokens in the tweets by using the `inner_join()` function. Within `inner_join()` , please use the `get_sentiments()` -function with the dictionary `"afinn"` for `y` , `c("text" = "word")` for the `by` and `"many-to-many"` for the `relationship` argument.
+        2.  use `group_by()` for grouping the tweets by the variable `tweet_id`
+        3.  and `summarize()` the sentiment for each tweet, by creating a new variable (within the `summarize()` function), called sentiment, that is the sum (use `sum()`) of the sentiment values assigned to the words of the dictionary (variable `value` ).
+    -   Save this transformation by creating a new dataset with the name `tweets_sentiment_cleaned`.
+-   Check if transformation was successful by using the `print()` function.
+-   Check distribution
+    -   Use the `datawizard::describe_distribution()` function to check different distribution parameters
+-   Visualize distribution
+    -   Based on the newly created dataset tweets_sentiment_cleaned, create a ggplot with `sentiment` as aes() and by using `geom_histogram()`.
+
+```{r exercise-4}
+# Apply 'afinn' dictionary to get sentiment
+
+
+# Check transformation
+
+
+# Check distribution statistics 
+
+# Visualize distribution
+
+```
+
+```{r exercise-4-solution}
+#| eval: false
+#| echo: false
+
+# Apply 'afinn' dictionary to get sentiment
+tweets_sentiment_cleaned <- tweets_tidy_cleaned %>% 
+  inner_join(
+     y = get_sentiments("afinn"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  group_by(tweet_id) %>% 
+  summarize(sentiment = sum(value))
+
+# Check transformation
+tweets_sentiment_cleaned %>% print()
+
+# Check distribution statistics 
+tweets_sentiment_cleaned %>%
+  datawizard::describe_distribution()
+
+# Visualize distribution
+tweets_sentiment_cleaned %>% 
+  ggplot(aes(sentiment)) +
+  geom_histogram() +
+  theme_pubr()
+```
