@@ -1,0 +1,727 @@
+---
+title: "🔨 Text as data in R"
+subtitle: "Session 09"
+date: 10 01 2024
+date-format: "DD.MM.YYYY"
+filters:
+  - roughnotation
+  - line-highlight
+bibliography: references_slides.bib
+---
+
+# `print("Hello course!")` {background-image="img/slide_bg-section.png"}
+
+👨‍💻 **Christoph Adrian**
+
+-   PhD student \@ [Chair of Communication Science](https://www.kowi.rw.fau.de/team/christoph-adrian/)
+-   Text as Data & Social Media Usage (Effects)
+-   Conversational in R, Beginner in Python, SPSS & Stata
+
+## Schedule
+
+```{r setup-slide-session}
+#| echo: false
+
+# Load packages
+# Load schedule
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  tidytext, textdata, widyr, # text processing
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidyverse # load last to avoid masking issues
+  )
+```
+
+```{r table-schedule-b}
+#| echo: false 
+
+new_schedule_d %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px"
+    ) %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 14,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = c(1:12)
+        )
+    )
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+::: columns
+::: {.column width="65%"}
+1.  [Digital disconnection on {{< fa brands twitter >}}](#intro)
+2.  [Text as data in R (Part I)](#examples)
+3.  [Working with R](#exercises)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+{{< qrcode https://eva.fau.de/evasys/public/online/index qr1 width=400 height=400 colorDark='#C50F3C' >}}
+:::
+:::
+
+# Digital disconnection on {{< fa brands twitter >}} (not 𝕏) {#intro background-image="img/slide_bg-section.png"}
+
+Background on the research project & data
+
+```{r import-data-silent}
+#| echo: false
+
+# Import data from URL
+tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
+  janitor::clean_names()
+
+# Correct raw data
+tweets_correct <- tweets %>% 
+  mutate(
+    # reformat and create datetime variables
+    across(created_at, ~ymd_hms(.)), # convert to dttm format
+    year = year(created_at), 
+    month = month(created_at), 
+    day = day(created_at), 
+    hour = hour(created_at),
+    minute = minute(created_at),
+    # create addtional variables
+    retweet_dy = str_detect(text, "^RT"), # identify retweets
+    detox_dy = str_detect(text, "#digitaldetox") 
+  ) %>% 
+  distinct(tweet_id, .keep_all = TRUE)
+```
+
+## Looking at the discourse
+
+#### The theoretical background: digital disconnection
+
+::: columns
+::: {.column width="60%"}
+-   Increasing trend towards **more conscious use of digital media (devices)**, including **(deliberate) non-use** with the aim to **restore or improve psychological well-being** (among other factors)
+
+-   But **how do "we" talk (on Twitter) about digital detox/disconnection**:\
+    *Is social media a 💊 drug, 👹 demon or 🍩 donut?*
+:::
+
+::: {.column width="40%"}
+<br>
+
+![Source: dup-magazin.de](https://dup-magazin.de/wp-content/uploads/2021/10/digital-fasten-digital-detox-1440x1080.jpg){width="667"}
+:::
+:::
+
+::: notes
+„**Digital disconnection** is a **deliberate** (i.e., chosen by the individual) form of **non-use** of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of **restoring or improving one’s perceived** overuse, social interactions, psychological **well-being**, productivity, privacy and/or perceived usefulness“
+:::
+
+## Social Media as 💊, 👹 or 🍩 ?
+
+#### Relationship between social media use, digital well-being and digital disconnection
+
+```{r table-disco-creation}
+#| echo: false
+
+json_disco_table <- '[
+    {
+        "col_1": "What is at stake?",
+        "Drug": "Addiction/health",
+        "Demon": "Distraction",
+        "Donut": "Well-being"
+    },
+    {
+        "col_1": "Root cause of problem",
+        "Drug": "Individual susceptibility",
+        "Demon": "Addictive design",
+        "Donut": "Inadequate fit"
+    },
+    {
+        "col_1": "User agency",
+        "Drug": "Agency is limited due to innate susceptibilities",
+        "Demon": "Agency needs to be reclaimed from social media platforms",
+        "Donut": "User has agency, but it is challenged by person-, technology- and context-specific elements"
+    },
+    {
+        "col_1": "Focus of disconnection",
+        "Drug": "Complete abstinence, re-training of the ‘faulty brain’ to break the dopamine link",
+        "Demon": "Removing/weakening the distracting potential of tech, using persuasive design to support exerting social media self-control",
+        "Donut": "Disconnection interventions tailored to persons and/or contexts to ‘optimize the balance’ between benefits and drawbacks of connectivity, mindful use"
+    },
+    {
+        "col_1": "Digital disconnection examples",
+        "Drug": "Digital detox, cognitive behavioral therapy",
+        "Demon": "Muting phone, disabling notifications, putting phone in grey-scale, using apps that reward abstinence (e.g., Forest)",
+        "Donut": "Locative disconnection, disconnection apps that extensive tailoring to persons and contexts, mindfulness training"
+    }
+]'
+
+## Load schedule to environment
+disco_table <- fromJSON(json_disco_table) %>% tibble()
+
+## Create gt-table
+disco_table %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::cols_label(
+        col_1 = ""
+    ) %>% 
+    gt::tab_spanner(
+        label = md("**Social Media as a ...**"),
+        column = c(Drug:Donut)
+    ) %>% 
+    gt::tab_style(
+        style = cell_text(weight = "bold"),
+        location = cells_body(
+            columns = 1, 
+            rows = everything()
+        )
+    ) %>% 
+    gtExtras::gt_theme_538() %>% 
+    gt::tab_options(
+        table.width = gt::pct(100),
+        table.font.size =  px(18), 
+        data_row.padding = px(5)
+    ) %>% 
+    gt::cols_width(
+        vars(col_1) ~ px(50),
+        everything() ~ px(100)
+    )
+```
+
+[@vandenabeele2022]
+
+## {{< fa brands twitter >}} digital detox, #digitaldetox, ...
+
+#### Information about the data collection process
+
+-   Goal: **Collect all tweets (until 31.12.2022) that mention or discuss digital detox** (and similar terms) on Twitter (not 𝕏)
+-   Actual collection was **done in the beginning of 2023** (before the takeover by Musk and the associated change in API access)
+-   **Access via *Twitter Academic Research Product Track v2 API*** with the help of the `academictwitteR` package [@barrie2021]
+
+```{r data-collection-silent}
+#| eval: false
+
+academictwitteR::build_query(
+  query = c("digital detox", "#digitaldetox", "digital_detox"),
+  is_retweet = FALSE
+  )
+```
+
+## A quick glimpse
+
+#### The structure of the data set & available variables
+
+```{r table-initial-overview}
+tweets_correct %>% glimpse()
+```
+
+## Biggest attention in 2016, steady decline thereafter
+
+#### Distribution of tweets with reference to digital detox over time
+
+```{r figure-distribution-over-time}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-align: center
+
+tweets_correct %>% 
+  ggplot(aes(x = as.factor(year), fill = retweet_dy)) +
+    geom_bar() +
+    labs(
+      x = "",
+      y = "Number of tweets", 
+      fill = "Is the tweet a retweet?"
+     ) +
+    scale_fill_manual(values = c("#1DA1F2", "#004389")) +
+    theme_pubr() +    
+    # add annotations
+    annotate(
+      "text", 
+      x = 14, y = 55000,
+      label = "Increase of character limit from 140 to 280") + 
+    geom_curve(
+      data = data.frame(
+        x = 14.2965001234837,y = 53507.2283841571,
+        xend = 11.5275706534335, yend = 45412.4966032138),
+      mapping = aes(x = x, y = y, xend = xend, yend = yend),
+      angle = 127L,
+      curvature = 0.28,
+      arrow = arrow(30L, unit(0.1, "inches"), "last", "closed"),
+      inherit.aes = FALSE)
+```
+
+## Sporadic tweeting on the topic, mainly in English
+
+#### Tweets with reference to ditigal detox by (participating) users and language
+
+```{r table-tweets-by-user-and-language}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| layout-ncol: 2
+
+# Number of tweets by user 
+tweets_correct %>% 
+    group_by(author_id) %>% 
+    summarize(n = n()) %>% 
+    mutate(
+        n_grp = case_when(
+                     n <=    1 ~ 1,
+            n >   1 & n <=  10 ~ 2,
+            n >  10 & n <=  25 ~ 3,
+            n >  25 & n <=  50 ~ 4,
+            n >  50 & n <=  75 ~ 5,
+            n >  75 & n <= 100 ~ 6,
+            n > 100 ~ 7
+        ), 
+        n_grp_fct = factor(
+            n_grp,
+            levels = c(1:7),
+            labels = c(
+            " 1",
+            " 2 - 10", "11 - 25",
+            "26 - 50", "50 - 75",
+            "75 -100", "> 100")
+        )
+    ) %>% 
+    sjmisc::frq(n_grp_fct) %>% 
+    as.data.frame() %>% 
+    select(val, frq:cum.prc) %>% 
+    # create table
+    gt() %>% 
+    # tab_header(
+    #     title = "Tweets by users with a least on tweet"
+    #    ) %>% 
+    cols_label(
+      val = "Number of tweets by user",
+      frq = "n",
+      raw.prc = html("%<sub>raw</sub>"),
+      cum.prc = html("%<sub>cum</sub>")
+  ) %>% 
+  gt_theme_538()
+
+# Language of Tweets
+tweets_correct %>% 
+    sjmisc::frq(
+        lang, 
+        sort.frq = c("desc"), 
+        min.frq = 2000
+    ) %>% 
+    as.data.frame() %>% 
+    select(val, frq:cum.prc) %>% 
+    # create table
+    gt() %>% 
+    # tab_header(
+    #     title = "Language of the collected tweets"
+    #   ) %>% 
+    cols_label(
+      val = "Twitter language code",
+      frq = "n",
+      raw.prc = html("%<sub>raw</sub>"),
+      cum.prc = html("%<sub>cum</sub>")
+  ) %>% 
+  gt_theme_538()
+```
+
+# Text as data in R {#examples background-image="img/slide_bg-example.png"}
+
+**Part I:** Basics of tidy text wrangling & sentiment analysis
+
+## Deciding on the right method
+
+#### Different approaches of computational analysis of text
+
+-   No method that is *the one*, but **specific applications for specific methods**
+
+-   Apart from analyzing basic word and text metrics, there are **three variants of automatic text analysis:**
+
+    -   🔎 **Dictionary Approaches (e.g. Sentiment Analysis)**
+
+    -   Unsupervised Text Analysis (e.g. Topic Modeling)
+
+    -   Supervised Text Analysis (e.g. ML Classifier)
+
+## Building a shared vocabulary
+
+#### Important terms & definitions
+
+![](https://cdn.analyticsvidhya.com/wp-content/uploads/2021/10/Text_heirarchy_crop.png)
+
+::: notes
+Token: A token is a string with a known meaning, and a token may be a word, number or just characters like punctuation. “Hello”, “123”, and “-” are some examples of tokens.
+
+Sentence: A sentence is a group of tokens that is complete in meaning. “The weather looks good” is an example of a sentence, and the tokens of the sentence are \[“The”, “weather”, “looks”, “good\].
+
+Paragraph: A paragraph is a collection of sentences or phrases, and a sentence can alternatively be viewed as a token of a paragraph.
+
+Documents: A document might be a sentence, a paragraph, or a set of paragraphs. A text message sent to an individual is an example of a document.
+
+Corpus: A corpus is typically an extensive collection of documents as a Bag-of-words. A corpus comprises each word’s id and frequency count in each record. An example of a corpus is a collection of emails or text messages sent to a particular person.
+:::
+
+## Explore tweets with #digitaldetox
+
+#### Working through a typical text analysis using tidy data principles
+
+![[@silge2017]](https://www.tidytextmining.com/images/tmwr_0101.png){fig-alt="Test"}
+
+-   **But: Tidy data has a specific structure:**
+    -   Each variable is a column
+    -   Each observation is a row
+    -   Each type of observational unit is a table.
+-   Thus the tidy text format is defined as [**a table with one-token-per-row**]{.underline} [@silge2017].
+
+## Focusing on #digitaldetox
+
+#### Build a subsample
+
+```{r recode-create-subsample}
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+```{r figure-subsample-distribution-over-time}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-align: "center"
+
+tweets_correct %>% 
+  ggplot(aes(x = as.factor(year), fill = detox_dy)) +
+    geom_bar() +
+    labs(
+      x = "",
+      y = "Number of tweets", 
+      fill = "#digitaldetox used in tweet?"
+     ) +
+    scale_fill_manual(values = c("#A0ACBD50", "#1DA1F2")) +
+    theme_pubr() 
+```
+
+## Tokenization of the tweets
+
+#### Transform data to tidy text
+
+```{r output-tokenization}
+# Common HTML entities
+remove_reg <- "&amp;|&lt;|&gt;"
+
+# Create tidy data
+tweets_tidy <- tweets_detox %>% 
+    # Remove HTML entities
+    mutate(text = str_remove_all(text, remove_reg)) %>% 
+    # Tokenization
+    tidytext::unnest_tokens("text", text) %>% 
+    # Remove stopwords
+    filter(!text %in% tidytext::stop_words$word)
+
+# Preview
+tweets_tidy %>% 
+    select(tweet_id, user_username, text) %>% 
+    print(n = 5)
+```
+
+## Count token frequency
+
+#### Summarize all tokens over all tweets
+
+```{r output-summarization}
+#| output-location: column
+
+# Create summarized data
+tweets_summarized <- tweets_tidy %>% 
+  count(text, sort = TRUE) 
+
+# Preview Top 15 token
+tweets_summarized %>% 
+    print(n = 15)
+```
+
+## The (Unavoidable) Word Cloud
+
+#### Visualization of Top 100 token
+
+```{r figure-wordcloud}
+#| fig-align: "center"
+
+tweets_summarized %>% 
+    top_n(100) %>% 
+    ggplot(aes(label = text, size = n)) +
+    ggwordcloud::geom_text_wordcloud() +
+    scale_size_area(max_size = 30) +
+    theme_minimal()
+```
+
+## More than just single words
+
+#### Modeling realtionships between words: n-grams and correlations
+
+::: columns
+::: {.column width="50%"}
+Many interesting text analyses are based on the relationships between words
+
+-   whether examining which words tend to follow others immediately (n-grams),
+-   or that tend to co-occur within the same documents (correlation)
+:::
+
+::: {.column width="50%"}
+![[@silge2017]](https://www.tidytextmining.com/images/tmwr_0407.png){fig-align="center"}
+:::
+:::
+
+## Combinations of words
+
+#### Count word pairs within tweets
+
+```{r output-word-pairs-count}
+#| output-location: column
+
+# Create word paris
+tweets_word_pairs <- tweets_tidy %>% 
+    widyr::pairwise_count(
+        text,
+        tweet_id,
+        sort = TRUE)
+
+# Preview
+tweets_word_pairs %>% 
+    print(n = 15)
+```
+
+## Correlation of words
+
+#### Summarize and correlate tokens within tweets
+
+```{r ouptput-word-pairs-correlation}
+#| output-location: column
+
+# Create word correlation
+tweets_pairs_corr <- tweets_tidy %>% 
+    group_by(text) %>% 
+    filter(n() >= 300) %>% 
+    pairwise_cor(
+        text, 
+        tweet_id, 
+        sort = TRUE)
+
+# Preview
+tweets_pairs_corr %>% 
+    print(n = 15)
+```
+
+## Correlates of detox and digital
+
+#### Display correlates for specific token
+
+```{r figure-word-pairs-correlates}
+#| output-location: column
+#| fig-height: 7
+#| fig-width: 8
+
+tweets_pairs_corr %>% 
+  filter(
+    item1 %in% c("detox", "digital")
+    ) %>% 
+  group_by(item1) %>% 
+  slice_max(correlation, n = 5) %>% 
+  ungroup() %>% 
+  mutate(
+    item2 = reorder(item2, correlation)
+    ) %>% 
+  ggplot(
+    aes(item2, correlation, fill = item1)
+    ) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("#C50F3C", "#04316A")) +
+  theme_pubr()
+```
+
+## Let's talk about sentiments
+
+#### Dictionary based approach of text analysis
+
+![[@silge2017]](https://www.tidytextmining.com/images/tmwr_0201.png){fig-align="center"}
+
+::: {.callout-important appearance="simple"}
+@atteveldt2021 **argue that sentiment, in fact, are quite a complex concepts that are often hard to capture with dictionaries.**
+:::
+
+## The meaning of "positive/negative"
+
+#### Most commmon positive and negative words
+
+```{r figure-sentiment-most-frequent-words}
+#| output-location: column
+#| fig-height: 7
+#| fig-width: 7
+
+tweets_sentiment_count <- tweets_tidy %>% 
+  inner_join(
+     get_sentiments("bing"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  count(text, sentiment)
+  
+# Preview
+tweets_sentiment_count %>% 
+  group_by(sentiment) %>%
+  slice_max(n, n = 10) %>% 
+  ungroup() %>% 
+  mutate(text = reorder(text, n)) %>%
+  ggplot(aes(n, text, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(
+    ~sentiment, scales = "free_y") +
+  labs(x = "Contribution to sentiment",
+       y = NULL) +
+  scale_fill_manual(
+    values = c("#C50F3C", "#007D29")) +
+  theme_pubr()
+```
+
+## Enrich the original data
+
+#### Link word sentiment to tidy data
+
+```{r output-sentiment-aggregated-by-tweet}
+tweets_sentiment <- tweets_tidy %>% 
+  inner_join(
+     get_sentiments("bing"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  count(tweet_id, sentiment) %>% 
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+  
+# Check
+tweets_sentiment 
+```
+
+## Slightly more positive tweets than negative
+
+#### Overall distribution sentiment by tweets
+
+```{r figure-sentiment-distribution}
+#| fig-align: center
+
+tweets_sentiment %>% 
+  ggplot(aes(as.factor(sentiment))) +
+  geom_bar(fill = "#1DA1F2") +
+  labs(
+    x = "Sentiment (sum) of tweet", 
+    y = "Number of tweets"
+  ) +
+  theme_pubr()
+```
+
+## A trend towards positivity?
+
+#### Development of tweet sentiment over the years
+
+```{r figure-sentiment-distribution-over-time}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-height: 8
+#| fig-width: 12
+#| fig-align: center
+
+# Create first graph
+g1 <- tweets_correct %>% 
+  filter(tweet_id %in% tweets_sentiment$tweet_id) %>% 
+  left_join(tweets_sentiment) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar() +
+    labs(
+      x = "",
+      y = "Number of tweets", 
+      fill = "Sentiment (sum) of tweet") +
+    scale_fill_manual(values = c("#C50F3C", "#90A0AF", "#007D29")) +
+    theme_pubr() 
+    #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+# Create second graph
+g2 <- tweets_correct %>% 
+  filter(tweet_id %in% tweets_sentiment$tweet_id) %>% 
+  left_join(tweets_sentiment) %>% 
+  sjmisc::rec(
+    sentiment,
+    rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
+  ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
+    geom_bar(position = "fill") +
+    labs(
+      x = "",
+      y = "Proportion of tweets", 
+      fill = "Sentiment (sum) of tweet") +
+    scale_fill_manual(values = c("#C50F3C", "#90A0AF", "#007D29")) +
+    theme_pubr() 
+
+# COMBINE GRPAHS
+ggarrange(g1, g2,
+          nrow = 1, ncol = 2, 
+          align = "hv",
+          common.legend = TRUE) 
+```
+
+# 📋 Hands on working with R {#group-activity background-image="img/slide_bg-group_activity.png"}
+
+Various exercises on the content of today's session
+
+## 🧪 And now ... you: Clean and repeat!
+
+#### Redo the tidy text analysis pipeline with cleaned data
+
+::: {.callout-caution appearance="simple"}
+## Objective of this exercise
+
+-   Brush up basic knowledge of working with R and the tidyverse
+-   Get to know the typical steps of tidy text analysis, from tokenisation and summarisation to visualisation.
+:::
+
+#### Next steps
+
+-   Download files provided on StudOn or shared drives for the sessions
+-   Open the exercise.qmd file and follow the instructions.
+
+::: {.callout-tip appearance="simple"}
+## Useful helpers
+
+You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs).
+:::
+
+# Time for questions {background-image="img/slide_bg-question.png"}
+
+# Thank you and see you next week! {background-image="img/slide_bg-end_session.png"}
+
+## References
+
+::: {#refs}
+:::

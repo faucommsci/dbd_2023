@@ -1,19 +1,32 @@
 ---
 title: "Session 9"
-subtitle: "📂 P1: 🔨 Text as data in R"
+subtitle: "🔨 Text as data in R"
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
 link-citations: false
 citations-hover: false
 ---
-<!-- Add link CSS text as data -->
-<!-- Add link CSS topic Modeling -->
-<!-- Add link CCS network analysis -->
 
-## Other additional readings
+## Participate
 
- -   [@wiedemann2022]
+🖥️ [Session 09](/slides/slides-09.html)
+
+🧷 [Showcase](/exercise/showcase-09.qmd)
+
+## Practice
+
+📋 [Exercise 09](/exercise/exercise-09.html)
+
+## Suggested readings
+
+-   @atteveldt2021
+
+-   @silge2017
+
+-   @silge
+
+<br>
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/index.html "Course schedule") ⏎
