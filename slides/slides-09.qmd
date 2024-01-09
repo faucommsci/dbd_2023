@@ -23,7 +23,6 @@ bibliography: references_slides.bib
 #| echo: false
 
 # Load packages
-# Load schedule
 source(here::here("slides/schedule.R"))
 
 if (!require("pacman")) install.packages("pacman")

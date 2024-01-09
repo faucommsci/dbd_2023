@@ -5,6 +5,8 @@ format:
   html:
     toc: true
     toc-depth: 4
+    fig-width: 16
+    fig-height: 9
 callout-appearance: simple
 execute: 
   cache: true
@@ -19,9 +21,7 @@ bibliography: references.bib
 ---
 
 ::: {.callout-tip icon="false"}
-[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd) Download source file (TODO Update Link)
-
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) Open this exercise in interactive and executable environment (TODO Update Binder)
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((/slides/slides-09.html)) Open session slides
 :::
 
 ## Background
@@ -49,17 +49,18 @@ bibliography: references.bib
 ## Preparation
 
 ```{r load-packages}
-# TODO Add missing packages (and description)
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  here, qs, 
-  magrittr, 
-  tidyverse, 
-  janitor,
-  easystats,
-  sjmisc,
-  tidytext, textdata,
-  ggpubr,
-  ggwordcloud)
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  tidytext, textdata, widyr, # text processing
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidyverse # load last to avoid masking issues
+  )
 ```
 
 ## Import and process the data
@@ -95,76 +96,120 @@ tweets_detox <- tweets_correct %>%
 ```
 
 
-## Chunks from the session
-
-##### Data overview {#check-overview}
+## Digital disconnection on {{< fa brands twitter >}} (not 𝕏) 
+### The structure of the data set & available variables
 
 ```{r table-initial-overview}
-tweets %>% glimpse()
+tweets_correct %>% glimpse()
 ```
 
-##### Summary statistics {#check-location-parameter}
+### Bonus: Distribution statistics
 
 ```{r table-location-parameter}
-tweets_correct %>% descr()
 tweets_correct %>% skimr::skim()
 ```
 
-#### Distribution over the years
-
-<!-- TODO Add note for change of tweet character limit in November 2017 -->
+### Distribution of tweets with reference to digital detox over time
 
 ```{r figure-tweets-by-year}
 tweets_correct %>% 
   ggplot(aes(x = as.factor(year), fill = retweet_dy)) +
     geom_bar() +
     labs(
-      x = "Year",
+      x = "",
       y = "Number of tweets", 
-      fill = "Does the tweet contain '#digitaldetox'?") +
-    theme_pubr()
+      fill = "Is the tweet a retweet?"
+     ) +
+    scale_fill_manual(values = c("#1DA1F2", "#004389")) +
+    theme_pubr() +    
+    # add annotations
+    annotate(
+      "text", 
+      x = 14, y = 55000,
+      label = "Increase of character limit from 140 to 280") + 
+    geom_curve(
+      data = data.frame(
+        x = 14.2965001234837,y = 53507.2283841571,
+        xend = 11.5275706534335, yend = 45412.4966032138),
+      mapping = aes(x = x, y = y, xend = xend, yend = yend),
+      angle = 127L,
+      curvature = 0.28,
+      arrow = arrow(30L, unit(0.1, "inches"), "last", "closed"),
+      inherit.aes = FALSE)
 ```
 
-#### Top languages
+### Tweets with reference to ditigal detox by (participating) users 
 
-<!-- TODO Disable scientific notatino -->
-
-```{r figure-top-languages}
-
+```{r table-tweets-by-user}
 tweets_correct %>% 
-  group_by(lang, detox_dy) %>% 
-  summarise(n = n())  %>% 
-  arrange(desc(n)) %>% 
-  head(n = 10) %>% 
-  ggplot(aes(x = reorder(lang, n) , y = n, fill = detox_dy)) +
-    geom_col() +
-    labs(
-      x = "Twitter language code",
-      y = "Number of tweets", 
-      fill = "Does the tweet contain '#digitaldetox'?") +
-    coord_flip() +
-    theme_pubr()
+    group_by(author_id) %>% 
+    summarize(n = n()) %>% 
+    mutate(
+        n_grp = case_when(
+                     n <=    1 ~ 1,
+            n >   1 & n <=  10 ~ 2,
+            n >  10 & n <=  25 ~ 3,
+            n >  25 & n <=  50 ~ 4,
+            n >  50 & n <=  75 ~ 5,
+            n >  75 & n <= 100 ~ 6,
+            n > 100 ~ 7
+        ), 
+        n_grp_fct = factor(
+            n_grp,
+            levels = c(1:7),
+            labels = c(
+            " 1",
+            " 2 - 10", "11 - 25",
+            "26 - 50", "50 - 75",
+            "75 -100", "> 100")
+        )
+    ) %>% 
+    sjmisc::frq(n_grp_fct) %>% 
+    as.data.frame() %>% 
+    select(val, frq:cum.prc) %>% 
+    # create table
+    gt() %>% 
+    # tab_header(
+    #     title = "Tweets by users with a least on tweet"
+    #    ) %>% 
+    cols_label(
+      val = "Number of tweets by user",
+      frq = "n",
+      raw.prc = html("%<sub>raw</sub>"),
+      cum.prc = html("%<sub>cum</sub>")
+  ) %>% 
+  gt_theme_538()
 ```
 
-#### Top 'users'
+### Tweets with reference to ditigal detox by language
 
-```{r}
+```{r table-tweets-by-language}
 tweets_correct %>% 
-  group_by(user_username, detox_dy) %>% 
-  summarise(n = n()) %>% 
-  arrange(desc(n))
-
-tweets_correct %>% 
-  group_by(detox_dy) %>% 
-  sjmisc::frq(
-    user_username,
-    min.frq = 500,
-    sort.frq = "desc") 
+    sjmisc::frq(
+        lang, 
+        sort.frq = c("desc"), 
+        min.frq = 2000
+    ) %>% 
+    as.data.frame() %>% 
+    select(val, frq:cum.prc) %>% 
+    # create table
+    gt() %>% 
+    # tab_header(
+    #     title = "Language of the collected tweets"
+    #   ) %>% 
+    cols_label(
+      val = "Twitter language code",
+      frq = "n",
+      raw.prc = html("%<sub>raw</sub>"),
+      cum.prc = html("%<sub>cum</sub>")
+  ) %>% 
+  gt_theme_538()
 ```
 
-### Subsample: Tweets containing #digitaldetox
+## Text as data in R (Part I)
+### Build a subsample: Tweets containing #digitaldetox
 
-```{r}
+```{r recode-create-subsample}
 tweets_detox <- tweets_correct %>% 
   filter(
     detox_dy == TRUE, # only tweets with #digitaldetox
@@ -173,202 +218,255 @@ tweets_detox <- tweets_correct %>%
     )
 ```
 
-#### Summary statistics
+```{r figure-subsample-distribution-over-time}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-align: "center"
+
+tweets_correct %>% 
+  ggplot(aes(x = as.factor(year), fill = detox_dy)) +
+    geom_bar() +
+    labs(
+      x = "",
+      y = "Number of tweets", 
+      fill = "#digitaldetox used in tweet?"
+     ) +
+    scale_fill_manual(values = c("#A0ACBD50", "#1DA1F2")) +
+    theme_pubr() 
+```
+
+### Bonus: distribution statistics
 
 ```{r table-location-parameter-subsample}
-tweets_detox %>% descr()
 tweets_detox %>% skimr::skim()
 ```
 
-## Text analysis using tidy principles
+### Transform data to tidy text
 
-### Transform to 'tidy text'
-
-```{r}
+```{r output-tokenization}
+# Common HTML entities
 remove_reg <- "&amp;|&lt;|&gt;"
 
-tidy_tweets <- tweets_detox %>% 
-  mutate(text = str_remove_all(text, remove_reg)) %>% 
-  tidytext::unnest_tokens("text", text) %>% 
-  filter(
-    !text %in% tidytext::stop_words$word)
+# Create tidy data
+tweets_tidy <- tweets_detox %>% 
+    # Remove HTML entities
+    mutate(text = str_remove_all(text, remove_reg)) %>% 
+    # Tokenization
+    tidytext::unnest_tokens("text", text) %>% 
+    # Remove stopwords
+    filter(!text %in% tidytext::stop_words$word)
+
+# Preview
+tweets_tidy %>% 
+    select(tweet_id, user_username, text) %>% 
+    print(n = 5)
 ```
 
-### Transform to 'Summarized Text'
+### Summarize all tokens over all tweets
 
-```{r}
-summarized_tweets <- tidy_tweets %>% 
+```{r output-summarization}
+#| output-location: column
+
+# Create summarized data
+tweets_summarized <- tweets_tidy %>% 
   count(text, sort = TRUE) 
+
+# Preview Top 15 token
+tweets_summarized %>% 
+    print(n = 15)
 ```
 
-### Visualize tokens
+### Visualization of Top 100 token
 
-#### Wordcloud
+```{r figure-wordcloud}
+#| fig-align: "center"
 
-```{r}
-summarized_tweets %>% 
-  with(wordcloud::wordcloud(text, n, max.words = 100))
+tweets_summarized %>% 
+    top_n(100) %>% 
+    ggplot(aes(label = text, size = n)) +
+    ggwordcloud::geom_text_wordcloud() +
+    scale_size_area(max_size = 30) +
+    theme_minimal()
 ```
 
-```{r}
-#| eval: false
-#| echo: false
-
-summarized_tweets %>% 
-  top_n(50) %>% 
-  ggplot(aes(label = text, size = n)) +
-  geom_text_wordcloud() +
-  scale_size_area(max_size = 30) +
-  theme_minimal()
-```
-
-#### Distribution
-
-```{r}
-summarized_tweets %>% 
-  ggplot(aes(n/sum(n))) +
-  geom_histogram() +
-  theme_minimal()
-```
 
 ## Modeling realtionships between words
 
-### Create bigrams
+### Count word pairs within tweets
 
-```{r}
-tidy_bigrams <- tweets_detox %>% 
-  mutate(text = str_remove_all(text, remove_reg)) %>% 
-  tidytext::unnest_tokens(
-    "text", text,
-    token = "ngrams", n = 2 ) %>% 
+```{r output-word-pairs-count}
+#| output-location: column
+
+# Create word paris
+tweets_word_pairs <- tweets_tidy %>% 
+    widyr::pairwise_count(
+        text,
+        tweet_id,
+        sort = TRUE)
+
+# Preview
+tweets_word_pairs %>% 
+    print(n = 15)
+```
+
+### Summarize and correlate tokens within tweets
+
+```{r ouptput-word-pairs-correlation}
+#| output-location: column
+
+# Create word correlation
+tweets_pairs_corr <- tweets_tidy %>% 
+    group_by(text) %>% 
+    filter(n() >= 300) %>% 
+    pairwise_cor(
+        text, 
+        tweet_id, 
+        sort = TRUE)
+
+# Preview
+tweets_pairs_corr %>% 
+    print(n = 15)
+```
+
+### Display correlates for specific token
+
+```{r figure-word-pairs-correlates}
+#| output-location: column
+#| fig-height: 7
+#| fig-width: 8
+
+tweets_pairs_corr %>% 
   filter(
-    !text %in% tidytext::stop_words$word, 
-    !is.na(text)
-  )
-```
-
-### Filtering & couting
-
-```{r}
-filtered_bigrams <- tidy_bigrams %>% 
-  separate(text, c("word1", "word2"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word2 %in% stop_words$word) 
-  
-
-count_bigrams <- filtered_bigrams %>%   
-  count(word1, word2, sort = TRUE)
-
-summarized_bigrams_untied <- filtered_bigrams %>% 
-  unite(bigram, word1, word2, sep = " ") %>% 
-  count(bigram, sort = TRUE)
-```
-
-### Visulisation
-
-```{r}
-library(ggraph)
-
-bigrams_graph <- count_bigrams %>% 
-  filter(n > 250) %>%
-  igraph::graph_from_data_frame()
-
-ggraph(bigrams_graph, layout = "fr") +
-  geom_edge_link() +
-  geom_node_point() +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
-
-```
-
-```{r}
-a <- grid::arrow(type = "closed", length = unit(.15, "inches"))
-
-ggraph(bigrams_graph, layout = "fr") +
-  geom_edge_link(
-    aes(edge_alpha = n), show.legend = FALSE,
-    arrow = a, end_cap = circle(.07, 'inches')) +
-  geom_node_point(color = "lightblue", size = 5) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
-  theme_void()
-```
-
-### Correlation
-
-```{r}
-library(widyr) 
-
-pairs_tweets <- tidy_tweets %>% 
-  pairwise_count(text, tweet_id, sort = TRUE)
-
-word_cors <- tidy_tweets %>% 
-  group_by(text) %>% 
-  filter(n() >= 100) %>% 
-  pairwise_cor(text, tweet_id, sort = TRUE)
-
-word_cors %>% 
-  filter(item1 %in% c("detox", "digital")) %>% 
+    item1 %in% c("detox", "digital")
+    ) %>% 
   group_by(item1) %>% 
   slice_max(correlation, n = 5) %>% 
   ungroup() %>% 
-  mutate(item2 = reorder(item2, correlation)) %>% 
-  ggplot(aes(item2, correlation)) +
+  mutate(
+    item2 = reorder(item2, correlation)
+    ) %>% 
+  ggplot(
+    aes(item2, correlation, fill = item1)
+    ) +
   geom_bar(stat = "identity") +
   facet_wrap(~ item1, scales = "free") +
   coord_flip() +
-  theme_minimal()
+  scale_fill_manual(
+    values = c("#C50F3C", "#04316A")) +
+  theme_pubr()
 ```
 
-### Get sentiment
+## Dictionary based approach: Sentiment analysis
 
-```{r}
-sentiment_tweets <- tidy_tweets %>% 
+### Most commmon positive and negative words
+
+```{r figure-sentiment-most-frequent-words}
+#| output-location: column
+#| fig-height: 7
+#| fig-width: 7
+
+tweets_sentiment_count <- tweets_tidy %>% 
+  inner_join(
+     get_sentiments("bing"),
+     by = c("text" = "word"),
+     relationship = "many-to-many") %>% 
+  count(text, sentiment)
+  
+# Preview
+tweets_sentiment_count %>% 
+  group_by(sentiment) %>%
+  slice_max(n, n = 10) %>% 
+  ungroup() %>% 
+  mutate(text = reorder(text, n)) %>%
+  ggplot(aes(n, text, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(
+    ~sentiment, scales = "free_y") +
+  labs(x = "Contribution to sentiment",
+       y = NULL) +
+  scale_fill_manual(
+    values = c("#C50F3C", "#007D29")) +
+  theme_pubr()
+```
+
+#### Link word sentiment to tidy data
+
+```{r output-sentiment-aggregated-by-tweet}
+tweets_sentiment <- tweets_tidy %>% 
   inner_join(
      get_sentiments("bing"),
      by = c("text" = "word"),
      relationship = "many-to-many") %>% 
   count(tweet_id, sentiment) %>% 
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
-  mutate(sentiment = positive - negative) 
+  mutate(sentiment = positive - negative)
+  
+# Check
+tweets_sentiment 
 ```
 
-### Visualization
 
-#### Distribution
+#### Overall distribution sentiment by tweets
 
-```{r}
-sentiment_tweets %>% 
+```{r figure-sentiment-distribution}
+#| fig-align: center
+
+tweets_sentiment %>% 
   ggplot(aes(as.factor(sentiment))) +
-  geom_bar() +
-  theme_minimal()
+  geom_bar(fill = "#1DA1F2") +
+  labs(
+    x = "Sentiment (sum) of tweet", 
+    y = "Number of tweets"
+  ) +
+  theme_pubr()
 ```
 
-```{r}
-tweets_correct %>% 
-  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
-  left_join(sentiment_tweets) %>% 
+
+#### Development of tweet sentiment over the years
+
+```{r figure-sentiment-distribution-over-time}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-height: 8
+#| fig-width: 12
+#| fig-align: center
+
+# Create first graph
+g1 <- tweets_correct %>% 
+  filter(tweet_id %in% tweets_sentiment$tweet_id) %>% 
+  left_join(tweets_sentiment) %>% 
   sjmisc::rec(
     sentiment,
     rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
   ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
     geom_bar() +
     labs(
-      x = "Year",
+      x = "",
       y = "Number of tweets", 
-      fill = "Does the tweet contain '#digitaldetox'?") +
-    theme_pubr()
+      fill = "Sentiment (sum) of tweet") +
+    scale_fill_manual(values = c("#C50F3C", "#90A0AF", "#007D29")) +
+    theme_pubr() 
+    #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
-
-tweets_correct %>% 
-  filter(tweet_id %in% sentiment_tweets$tweet_id) %>% 
-  left_join(sentiment_tweets) %>% 
+# Create second graph
+g2 <- tweets_correct %>% 
+  filter(tweet_id %in% tweets_sentiment$tweet_id) %>% 
+  left_join(tweets_sentiment) %>% 
   sjmisc::rec(
     sentiment,
     rec = "-8:-1=negative; 0=neutral; 1:8=positive") %>%
   ggplot(aes(x = as.factor(year), fill = as.factor(sentiment_r))) +
     geom_bar(position = "fill") +
     labs(
-      x = "Year",
-      y = "Number of tweets", 
-      fill = "Does the tweet contain '#digitaldetox'?") +
-    theme_pubr()
+      x = "",
+      y = "Proportion of tweets", 
+      fill = "Sentiment (sum) of tweet") +
+    scale_fill_manual(values = c("#C50F3C", "#90A0AF", "#007D29")) +
+    theme_pubr() 
+
+# COMBINE GRPAHS
+ggarrange(g1, g2,
+          nrow = 1, ncol = 2, 
+          align = "hv",
+          common.legend = TRUE) 
 ```
