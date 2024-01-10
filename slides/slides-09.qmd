@@ -69,20 +69,9 @@ new_schedule_d %>%
 
 # Agenda {background-image="img/slide_bg-agenda.png"}
 
-::: columns
-::: {.column width="65%"}
 1.  [Digital disconnection on {{< fa brands twitter >}}](#intro)
 2.  [Text as data in R (Part I)](#examples)
-3.  [Working with R](#exercises)
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="30%"}
-{{< qrcode https://eva.fau.de/evasys/public/online/index qr1 width=400 height=400 colorDark='#C50F3C' >}}
-:::
-:::
+3.  [📋 Hands on working with R](#exercises)
 
 # Digital disconnection on {{< fa brands twitter >}} (not 𝕏) {#intro background-image="img/slide_bg-section.png"}
 
@@ -708,13 +697,10 @@ Various exercises on the content of today's session
 #### Next steps
 
 -   Download files provided on StudOn or shared drives for the sessions
--   Open the exercise.qmd file and follow the instructions.
-
-::: {.callout-tip appearance="simple"}
-## Useful helpers
-
-You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs).
-:::
+-   Unzip the archive at a destination of your choice.
+-   Double click on the `Exercise-Text_as_data.Rproj` to open the RStudio project. This ensures that all dependencies are working correctly.
+-   Open the `exercise.qmd` file and follow the instructions.
+-   ***Tip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs).***
 
 # Time for questions {background-image="img/slide_bg-question.png"}
 

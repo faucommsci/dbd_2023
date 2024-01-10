@@ -529,7 +529,7 @@
     "href": "slides/slides-09.html#and-now-you-clean-and-repeat",
     "title": "🔨 Text as data in R",
     "section": "🧪 And now … you: Clean and repeat!",
-    "text": "🧪 And now … you: Clean and repeat!\nRedo the tidy text analysis pipeline with cleaned data\n\n\n\n\n\n\nObjective of this exercise\n\n\n\nBrush up basic knowledge of working with R and the tidyverse\nGet to know the typical steps of tidy text analysis, from tokenisation and summarisation to visualisation.\n\n\n\n\nNext steps\n\nDownload files provided on StudOn or shared drives for the sessions\nOpen the exercise.qmd file and follow the instructions.\n\n\n\n\n\n\n\nUseful helpers\n\n\nYou can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs)."
+    "text": "🧪 And now … you: Clean and repeat!\nRedo the tidy text analysis pipeline with cleaned data\n\n\n\n\n\n\nObjective of this exercise\n\n\n\nBrush up basic knowledge of working with R and the tidyverse\nGet to know the typical steps of tidy text analysis, from tokenisation and summarisation to visualisation.\n\n\n\n\nNext steps\n\nDownload files provided on StudOn or shared drives for the sessions\nUnzip the archive at a destination of your choice.\nDouble click on the Exercise-Text_as_data.Rproj to open the RStudio project. This ensures that all dependencies are working correctly.\nOpen the exercise.qmd file and follow the instructions.\nTip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs)."
   },
   {
     "objectID": "slides/slides-09.html#references",
