@@ -211,15 +211,25 @@ quanteda_dfm_hashtags %>%
 
 ### Topic modeling
 #### Preparation
+
 ```{r}
-tic()
+quanteda_dfm_trim <- quanteda_dfm %>% 
+  dfm_trim(min_termfreq = 5)
+
+# Convert from LDA topic modeling
+quanteda_stm <- convert(quanteda_dfm_trim, to = "stm")
+```
+
+##### Search K
+```{r}
+tictoc::tic()
 stm_k <- searchK(
     quanteda_stm$documents, 
     quanteda_stm$vocab,
     K = c(5,10,15), 
     init.type = "Spectral",
     heldout.seed = 42)
-toc()
+tictoc::toc()
 ```
 
 
