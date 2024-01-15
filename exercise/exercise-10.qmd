@@ -1,5 +1,5 @@
 ---
-title: "Exercise 09: 🔨 Text as data in R "
+title: "Exercise 10: 🔨 Automatic analysis of text in R "
 subtitle: "Digital disconnection on Twitter"
 format: 
   html:
@@ -18,94 +18,61 @@ editor_options:
 ---
 
 ::: {.callout-tip icon="false"}
-[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd) Download source file (TODO Update Link)
+<!-- TODO Update Slides & Document links -->
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-10.html)) Open session slides
 
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio) Open this exercise in interactive and executable environment (TODO Update Binder)
+[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd) Download source file
 :::
+
 
 ## Background
 
--   TODO Digital disconnection and why it is important
--   TODO Digital disconnection on Twitter
+::: {.callout-note appearance="minimal"}
+## Definition
 
-::: callout-note
-## Todays's data basis: Twitter dataset
-
--   TODO Beschreibung der Erhebung:
-    -   Eigene Erhebung via API
-    -   Erhebungszeitraum (vor Musk Übername/Umbenennung)
-    -   Search query
+::: notes
+„**Digital disconnection** is a **deliberate** (i.e., chosen by the individual) form of **non-use** of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of **restoring or improving one’s perceived** overuse, social interactions, psychological **well-being**, productivity, privacy and/or perceived usefulness“. [@nassen2023]
+:::
 :::
 
-## Packages
+-   Increasing trend towards **more conscious use of digital media (devices)**, including **(deliberate) non-use** with the aim to **restore or improve psychological well-being** (among other factors)
+
+-   But how do "we" talk about digital detox/disconnection: 💊 drug, 👹 demon or 🍩 donut?
+
+::: callout-important
+## Todays's data basis: Twitter dataset
+
+-   Collection of all tweets up to the beginning of 2023 that mention or discuss digital detox (and similar terms) on Twitter (not 𝕏)
+-   Initial query is searching for "digital detox", "#digitaldetox", "digital_detox"
+-   Access via official Academic-Twitter-API via academictwitteR [@barrie2021] at the beginning of last year
+:::
+
+## Preparation
 
 ```{r load-packages}
-# TODO Add missing packages (and description)
+if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  here, qs, 
-  magrittr, 
-  tidyverse, 
-  janitor,
-  easystats,
-  sjmisc,
-  tidytext, textdata,
-  ggpubr,
-  ggwordcloud)
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidytext, textdata, widyr, # tidy text processing
+  quanteda, # quanteda text processing
+  quanteda.textplots, 
+  topicmodels, stm, 
+  tidyverse # load last to avoid masking issues
+  )
 ```
 
-## Codechunks from the session
+## Import and process the data
 
-### Import data from local
-
-TODO Update information about central variables
-
-| Variable            | Description                                                                    |
-|:-------------------------|:---------------------------------------------|
-| `movie_name`        | Name of the film                                                               |
-| `release_year`      | Release year                                                                   |
-| `director`          | Director of the film                                                           |
-| `age_difference`    | Age difference between the characters in whole years                           |
-| `couple_number`     | An identifier for the couple in case multiple couples are listed for this film |
-| `actor_1_name`      | The name of the older actor in this couple                                     |
-| `actor_2_name`      | The name of the younger actor in this couple                                   |
-| `actor_1_birthdate` | The birthdate of the older member of the couple                                |
-| `actor_2_birthdate` | The birthdate of the younger member of the couple                              |
-| `actor_1_age`       | The age of the older actor when the film was released                          |
-| `actor_2_age`       | The age of the younger actor when the film was released                        |
-
-: Variablennamen und -beschreibungen
-
-```{r import-data-raw}
-# Import data from URL
+```{r import-data}
+# Import raw data from local
 tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
   janitor::clean_names()
 
-# Check data set
-tweets
-```
-
-#### Initial data check
-
-::: callout-note
-## Is the data 'technically correct'?
--   [How many records do we have? How many variables?](#check-overview)
--   [What are the variable names? Are they meaningful?](#check-overview)
--   [What type is each variable—e.g., numeric, categorical, logical?](#check-overview)
--   [How many unique values does each variable have?]
--   What value occurs most frequently, and how often does it occur?
--   Are there missing observations? If so, how frequently does this occur?
-
-:::
-
-##### Data overview {#check-overview}
-
-```{r table-initial-overview}
-tweets %>% glimpse()
-```
-
-##### Data processing {#check-overview-correction}
-
-```{r recoding-data-to-correct}
+# Initial data processing
 tweets_correct <- tweets %>% 
   mutate(
     # reformat and create datetime variables
@@ -120,30 +87,74 @@ tweets_correct <- tweets %>%
     detox_dy = str_detect(text, "#digitaldetox") 
   ) %>% 
   distinct(tweet_id, .keep_all = TRUE)
+
+# Filter relevant tweets
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
 ```
 
-##### Summary statistics{#check-location-parameter}
+## DTM/DFM creation
 
-```{r table-location-parameter}
-tweets_correct %>% descr()
-tweets_correct %>% skimr::skim()
+
+
+
+## Exercises
+
+::: callout-caution
+## Objective of this exercise
+<!-- TODO Update/align objectives -->
+-   Brush up basic knowledge of working with R, tidyverse and ggplot2
+-   Get to know the typical steps of tidy text analysis with `tidytext`, from tokenisation and summarisation to visualisation.
+:::
+
+::: callout-important
+## Attention
+
+-   Before you start working on the exercise, please make sure to render all the chunks of the section [Preparation]. You can do this by using the "Run all chunks above"-button ![](/img/rstudio-button-render_all_chunks_above.png) of the next chunk.
+
+-   
+
+-   When in doubt, use the showcase (.qmd or .html) to look at the code chunks used to produce the output of the slides.
+:::
+
+
+### 📋 Exercise 1: Create DTM/DFM
+
+-   Based on the dataset `tweets_detox`, please create a
+    -   Edit the vector `remove_custom_stopwords` by defining additional words to be deleted based on the analysis presented in the session. (Use `|` as a logical `OR` operator in regular expressions. It allows you to specify alternatives, e.g. add `|https`.)
+-   Create new dataset `tweets_tidy_cleaned`
+    -   Based on the dataset `tweets_detox`,
+        1.  use the `str_remove_all` function to remove the specified patterns of the `remove_custom_stopwords` vector. Use the `mutate()` function to edit the `text` variable.
+        2.  Tokenize the 'text' column using `unnest_tokens`.
+        3.  Filter out stop words using `filter` and `stopwords$words`
+    -   Save this transformation by creating a new dataset with the name `tweets_tidy_cleaned`.
+-   Check if transformation was successful (e.g. by using the `print()` function)
+
+```{r exercise-1-solution}
+
+# Define custom stopwords
+remove_custom_stopwords <- "&amp;|&lt;|&gt;|http*|t.c|digitaldetox"
+
+# Create new dataset clean_tidy_tweets
+tweets_tidy_cleaned <- tweets_detox %>% 
+  mutate(text = str_remove_all(text, remove_custom_stopwords)) %>% 
+  tidytext::unnest_tokens("text", text) %>% 
+  filter(
+    !text %in% tidytext::stop_words$word)
+
+# Check
+tweets_tidy_cleaned %>% print()
 ```
 
 
-#### Distribution over the years
-<!-- TODO Add note for change of tweet character limit in November 2017 -->
 
-```{r figure-tweets-by-year}
 
-tweets_correct %>% 
-  ggplot(aes(x = as.factor(year), fill = retweet_dy)) +
-    geom_bar() +
-    labs(
-      x = "Year",
-      y = "Number of tweets", 
-      fill = "Does the tweet contain '#digitaldetox'?") +
-    theme_pubr()
-```
+
+
 
 #### Top languages 
 <!-- TODO Disable scientific notatino -->

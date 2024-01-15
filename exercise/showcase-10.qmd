@@ -1,0 +1,276 @@
+---
+title: "Showcase 10: 🔨 Automatic analysis of text in R "
+subtitle: "Digital disconnection on Twitter"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    fig-width: 16
+    fig-height: 9
+callout-appearance: simple
+execute: 
+  message: false
+  warning: false
+highlight-style: atom-one
+editor_options: 
+  chunk_output_type: console
+bibliography: references_exercise.bib
+---
+
+::: {.callout-tip icon="false"}
+<!-- TODO Update link to slides -->
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-10.html)) Open session slides
+:::
+
+## Background
+
+::: {.callout-note appearance="minimal"}
+## Definition
+
+::: notes
+„**Digital disconnection** is a **deliberate** (i.e., chosen by the individual) form of **non-use** of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of **restoring or improving one’s perceived** overuse, social interactions, psychological **well-being**, productivity, privacy and/or perceived usefulness“. [@nassen2023]
+:::
+:::
+
+-   Increasing trend towards **more conscious use of digital media (devices)**, including **(deliberate) non-use** with the aim to **restore or improve psychological well-being** (among other factors)
+
+-   But how do "we" talk about digital detox/disconnection: 💊 drug, 👹 demon or 🍩 donut?
+
+::: callout-important
+## Todays's data basis: Twitter dataset
+
+-   Collection of all tweets up to the beginning of 2023 that mention or discuss digital detox (and similar terms) on Twitter (not 𝕏)
+-   Initial query is searching for "digital detox", "#digitaldetox", "digital_detox"
+-   Access via official Academic-Twitter-API via academictwitteR [@barrie2021] at the beginning of last year
+:::
+
+## Preparation
+
+```{r load-packages}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidytext, textdata, widyr, # tidy text processing
+  quanteda, # quanteda text processing
+  quanteda.textplots, 
+  topicmodels, stm, 
+  tidyverse # load last to avoid masking issues
+  )
+```
+
+## Import and process the data
+
+```{r import-data}
+# Import raw data from local
+tweets <- qs::qread(here("local_data/tweets-digital_detox.qs"))$raw %>% 
+  janitor::clean_names()
+
+# Initial data processing
+tweets_correct <- tweets %>% 
+  mutate(
+    # reformat and create datetime variables
+    across(created_at, ~ymd_hms(.)), # convert to dttm format
+    year = year(created_at), 
+    month = month(created_at), 
+    day = day(created_at), 
+    hour = hour(created_at),
+    minute = minute(created_at),
+    # create addtional variables
+    retweet_dy = str_detect(text, "^RT"), # identify retweets
+    detox_dy = str_detect(text, "#digitaldetox") 
+  ) %>% 
+  distinct(tweet_id, .keep_all = TRUE)
+
+# Filter relevant tweets
+tweets_detox <- tweets_correct %>% 
+  filter(
+    detox_dy == TRUE, # only tweets with #digitaldetox
+    retweet_dy == FALSE, # no retweets
+    lang == "en" # only english tweets
+    )
+```
+
+## Text as data in R (Part II)
+### Step-by-step DTM creation
+::: {.panel-tabset}
+
+#### tidytext
+
+```{r create-dtm-tidytext}
+# Common HTML entities
+remove_reg <- "&amp;|&lt;|&gt;"
+
+# Create tidy data
+tweets_tidy <- tweets_detox %>% 
+  mutate(
+    text = str_remove_all(text, remove_reg)) %>% 
+    tidytext::unnest_tokens("text", text) %>% 
+    filter(!text %in% tidytext::stop_words$word)
+
+# Create summarized data
+tweets_summarized <- tweets_tidy %>% 
+  count(tweet_id, text) 
+
+# Create DTM
+tweets_dtm <- tweets_summarized %>% 
+  cast_dtm(tweet_id, text, n)
+
+# Preview
+tweets_dtm
+```
+
+#### quanteda
+
+```{r}
+# Create corpus
+quanteda_corpus <- tweets_detox %>% 
+  quanteda::corpus(
+    docid_field = "tweet_id", 
+    text_field = "text"
+  )
+
+# Tokenize
+quanteda_token <- quanteda_corpus %>% 
+  quanteda::tokens(
+    remove_punct = TRUE,
+    remove_symbols = TRUE, 
+    remove_numbers = TRUE, 
+    remove_url = TRUE, 
+    split_tags = FALSE # keep hashtags and mentions
+  ) %>% 
+  quanteda::tokens_tolower() %>% 
+  quanteda::tokens_remove(
+    pattern = stopwords("en")
+    )
+
+# Convert to Document-Feature-Matrix (DFM)
+quanteda_dfm <- quanteda_token %>% 
+  quanteda::dfm()
+
+# Preview
+quanteda_dfm
+```
+:::
+
+### Co-occurence of hashtags
+::: {.panel-tabset}
+#### tidytext
+```{r}
+
+# Extract hashtags
+tweets_hashtags <- tweets_detox %>% 
+  mutate(hashtags = str_extract_all(text, "#\\S+")) %>%
+  unnest(hashtags) 
+
+# Extract most common hashtags
+top50_hashtags_tidy <- tweets_hashtags %>% 
+  count(hashtags, sort = TRUE) %>% 
+  slice_head(n = 50) %>% 
+  pull(hashtags)
+
+# Visualize
+tweets_hashtags %>% 
+  count(tweet_id, hashtags, sort = TRUE) %>% 
+  cast_dfm(tweet_id, hashtags, n) %>% 
+  quanteda::fcm() %>% 
+  quanteda::fcm_select(
+    pattern = top50_hashtags_tidy,
+    case_insensitive = FALSE
+    ) %>% 
+  quanteda.textplots::textplot_network(
+    edge_color = "#04316A"
+  )
+```
+
+#### quanteda
+
+```{r}
+# Extract DFM with only hashtags
+quanteda_dfm_hashtags <- quanteda_dfm %>% 
+  quanteda::dfm_select(pattern = "#*") 
+
+# Extract most common hashtags 
+top50_hashtags_quanteda <- quanteda_dfm_hashtags %>% 
+  topfeatures(50) %>% 
+  names()
+
+# Construct feature-occurrence matrix of hashtags
+quanteda_dfm_hashtags %>% 
+  fcm() %>% 
+  fcm_select(pattern = top50_hashtags_quanteda) %>% 
+  textplot_network(
+    edge_color = "#C50F3C"
+  ) 
+```
+:::
+
+
+### Topic modeling
+#### Preparation
+```{r}
+tic()
+stm_k <- searchK(
+    quanteda_stm$documents, 
+    quanteda_stm$vocab,
+    K = c(5,10,15), 
+    init.type = "Spectral",
+    heldout.seed = 42)
+toc()
+```
+
+
+
+
+#### quanteda 
+```{r}
+#| echo: false
+#| eval: false
+
+
+# Extract DFM with only hashtags
+quanteda_dfm_hashtags <- quanteda_dfm %>% 
+  quanteda::dfm_select(pattern = "#*") 
+
+# Extract most common hashtags 
+top50_hashtags <- quanteda_dfm_hashtags %>% 
+  topfeatures(50) %>% 
+  names()
+
+# Construct feature-occurrence matrix of hashtags
+quanteda_dfm_hashtags %>% 
+  fcm() %>% 
+  fcm_select(pattern = top50_hashtags) %>% 
+  textplot_network()
+```
+
+<!-- TODO Exercise; Create FCM without #digitaldetox -->
+
+## Topic Modeling
+### Preparation
+
+```{r}
+#| echo: false
+#| eval: false
+
+# Pruning
+quanteda_dfm_trim <- quanteda_dfm %>% 
+  dfm_trim( 
+    min_docfreq = 10/nrow(tweets_detox),
+    max_docfreq = 0.99, 
+    docfreq_type = "prop")
+
+# Convert for stm topic modeling
+quanteda_dtm <- quanteda_dfm_trim %>% 
+   convert(to = "topicmodels")
+```
+
+<!-- TODO Slides: Dispaly "feature" reduction -->
+
+
+<!-- TODO Exercise Re-Run analysis with deduplication -->
+
+
