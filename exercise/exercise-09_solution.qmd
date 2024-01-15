@@ -19,7 +19,7 @@ bibliography: references_exercise.bib
 ---
 
 ::: {.callout-tip icon="false"}
-[![Quarto Slides](/img/badge-quarto-slide.svg)]((/slides/slides-09.html)) Open session slides
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-09.html)) Open session slides
 
 [![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd) Download source file
 :::
@@ -121,22 +121,7 @@ tweets_detox <- tweets_correct %>%
     -   Save this transformation by creating a new dataset with the name `tweets_tidy_cleaned`.
 -   Check if transformation was successful (e.g. by using the `print()` function)
 
-```{r exercise-1}
-#| eval: false
-
-# Define custom stopwords
-remove_custom_stopwords <- "&amp;|&lt;|&gt; ADD NEW TERMS HERE"
-
-# Create new dataset tweets_tidy_cleaned
-
-# Check
-
-
-```
-
 ```{r exercise-1-solution}
-#| eval: false
-#| echo: false
 
 # Define custom stopwords
 remove_custom_stopwords <- "&amp;|&lt;|&gt;|http*|t.c|digitaldetox"
@@ -169,22 +154,7 @@ tweets_tidy_cleaned %>% print()
         4.  Use scale_size_are() to adopt the scaling of the wordcloud.
         5.  Use `theme_minimal()` for clean visualisation.
 
-```{r exercise-2}
-# Create summarized data
-
-
-# Preview Top 50 token
-
-
-# Check distribution parameters
-
-
-# Optional: Check results with a wordcloud
-```
-
 ```{r exercise-2-solution}
-#| eval: false
-#| echo: false
 
 # Create summarized data
 tweets_summarized_cleaned <- tweets_tidy_cleaned %>% 
@@ -207,7 +177,7 @@ tweets_summarized_cleaned %>%
     theme_minimal()
 ```
 
-## 📋 Exercise 3: Couting and correlating pairs of words
+### 📋 Exercise 3: Couting and correlating pairs of words
 
 #### 3.1 Couting word pairs within tweets
 
@@ -217,16 +187,8 @@ tweets_summarized_cleaned %>%
 -   Check if transformation was successful by using the `print()` function.
     -   Use the argument `n = 50` to display the top 50 token (only possible if argument `sort = TRUE` was used when running the `count()` function)
 
-```{r exercise-3-1}
-# Couting word pairs among sections
-
-# Check 
-
-```
 
 ```{r exercise-3-1-solution}
-#| eval: false
-#| echo: false
 
 # Couting word pairs among sections
 tweets_word_pairs_cleand <- tweets_tidy_cleaned %>% 
@@ -247,21 +209,11 @@ tweets_word_pairs_cleand %>% print(n = 50)
         2.  use `filter(n() >= X)` to only use tokens that appear at least a certain amount of times (X).\
             *Please feel free to select an X of your choice, however, I would strongly recommend an **X \> 100**, as otherwise the following function might not be able to compute.*
         3.  create word correlations using `widyr::pairwise_cor()`, with the arguments `item = text`,`feature = tweet_id` and `sort = TRUE`.
-    -   Save this transformation by creating a new dataset with the name `tweets_word_pairs_cleand`.
+    -   Save this transformation by creating a new dataset with the name `tweets_pairs_corr_cleaned`.
 -   Check pairs with highest correlation by using the `print()` function.
 
-```{r exercise-3-2}
-# Getting pairwise correlation 
-
-
-# Check pairs with highest correlation
-
-
-```
 
 ```{r exercise-3-2-solution}
-#| eval: false
-#| echo: false
 
 # Getting pairwise correlation 
 tweets_pairs_corr_cleaned <- tweets_tidy_cleaned %>% 
@@ -273,7 +225,7 @@ tweets_pairs_corr_cleaned <- tweets_tidy_cleaned %>%
 tweets_pairs_corr_cleaned %>% print(n = 50)
 ```
 
-### 3.3. Optinal: Visualization
+#### 3.3. Optinal: Visualization
 
 -   Customize the parameters in the following code chunk:
     -   `selected_words`, for defining the words you want to get the correlates for
@@ -281,8 +233,6 @@ tweets_pairs_corr_cleaned %>% print(n = 50)
 -   Set `#|eval : true` to execute chunk
 
 ```{r exercise-3-3}
-#| eval: false
-
 # Define parameters
 selected_words <- c("digital")
 number_of_correlates <- 5
@@ -301,7 +251,7 @@ tweets_pairs_corr_cleaned %>%
   theme_minimal()
 ```
 
-## Exercise 4: Sentiment
+## 📋 Exercise 4: Sentiment
 
 -   Apply `afinn` dictionary to get sentiment
     -   Based on the dataset `tweets_tidy_cleaned`,
@@ -315,22 +265,7 @@ tweets_pairs_corr_cleaned %>%
 -   Visualize distribution
     -   Based on the newly created dataset tweets_sentiment_cleaned, create a ggplot with `sentiment` as aes() and by using `geom_histogram()`.
 
-```{r exercise-4}
-# Apply 'afinn' dictionary to get sentiment
-
-
-# Check transformation
-
-
-# Check distribution statistics 
-
-# Visualize distribution
-
-```
-
 ```{r exercise-4-solution}
-#| eval: false
-#| echo: false
 
 # Apply 'afinn' dictionary to get sentiment
 tweets_sentiment_cleaned <- tweets_tidy_cleaned %>% 

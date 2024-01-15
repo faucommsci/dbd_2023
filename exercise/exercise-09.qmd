@@ -19,7 +19,7 @@ bibliography: references_exercise.bib
 ---
 
 ::: {.callout-tip icon="false"}
-[![Quarto Slides](/img/badge-quarto-slide.svg)]((/slides/slides-09.html)) Open session slides
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-09.html)) Open session slides
 
 [![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd) Download source file
 
@@ -165,7 +165,7 @@ remove_custom_stopwords <- "&amp;|&lt;|&gt; ADD NEW TERMS HERE"
 # Optional: Check results with a wordcloud
 ```
 
-## 📋 Exercise 3: Couting and correlating pairs of words
+### 📋 Exercise 3: Couting and correlating pairs of words
 
 #### 3.1 Couting word pairs within tweets
 
@@ -202,7 +202,7 @@ remove_custom_stopwords <- "&amp;|&lt;|&gt; ADD NEW TERMS HERE"
 
 ```
 
-### 3.3. Optinal: Visualization
+#### 3.3. Optinal: Visualization
 
 -   Customize the parameters in the following code chunk:
     -   `selected_words`, for defining the words you want to get the correlates for
@@ -230,7 +230,7 @@ tweets_pairs_corr_cleaned %>%
   theme_minimal()
 ```
 
-## Exercise 4: Sentiment
+### 📋 Exercise 4: Sentiment
 
 -   Apply `afinn` dictionary to get sentiment
     -   Based on the dataset `tweets_tidy_cleaned`,
