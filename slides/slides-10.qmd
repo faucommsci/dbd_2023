@@ -807,7 +807,7 @@ Various exercises on the content of today's session
 
 -   Download files provided on StudOn or shared drives for the sessions
 -   [**`Unzip`**]{.underline} the archive at a destination of your choice.
--   Double click on the `Exercise-Text_as_data.Rproj` to open the RStudio project. This ensures that all dependencies are working correctly.
+-   Double click on the `Exercise-Automatic_text_analysis.Rproj` to open the RStudio project. This ensures that all dependencies are working correctly.
 -   Open the `exercise.qmd` file and follow the instructions.
 -   ***Tip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs).***
 
