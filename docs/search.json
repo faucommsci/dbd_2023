@@ -1358,11 +1358,11 @@
     "text": "Validate, validate, validate!\nThings to remember about topic models\n\ntopic models are a useful tool for automated content analysis, both when exploring a large amount of data and when it comes to systematically identifying relationships between topics and other variables\ncertain prerequisites such as minimum size and variety of the corpus (namely on the level of words and documents and their relation to each other) need to be met for a conclusive model\neverything above a certain degree of word frequencies is considered a “topic,” even if it is not a topic in human interpretation\nReading the tea leaves (Chang et al., 2009) or (again): validate, validate, validate (e.g. with oolong package (Chan & Sältzer, 2020))"
   },
   {
-    "objectID": "slides/slides-10.html#and-now-you-clean-and-repeat",
-    "href": "slides/slides-10.html#and-now-you-clean-and-repeat",
+    "objectID": "slides/slides-10.html#and-now-you-model-away",
+    "href": "slides/slides-10.html#and-now-you-model-away",
     "title": "🔨 Automatic text analysis in R",
-    "section": "🧪 And now … you: Clean and repeat!",
-    "text": "🧪 And now … you: Clean and repeat!\nRedo the tidy text analysis pipeline with cleaned data\n\n\n\n\n\n\nObjective of this exercise\n\n\n\nBrief review of the contents of the last session\nTeaching the basic steps for creating and analyzing document feature matrices and stm topic models\n\n\n\n\nNext steps\n\nDownload files provided on StudOn or shared drives for the sessions\nUnzip the archive at a destination of your choice.\nDouble click on the Exercise-Automatic_text_analysis.Rproj to open the RStudio project. This ensures that all dependencies are working correctly.\nOpen the exercise.qmd file and follow the instructions.\nTip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs)."
+    "section": "🧪 And now … you: Model away!",
+    "text": "🧪 And now … you: Model away!\n\n\n\n\n\n\nObjective of this exercise\n\n\n\nBrief review of the contents of the last session\nTeaching the basic steps for creating and analyzing document feature matrices and stm topic models\n\n\n\n\nNext steps\n\nDownload files provided on StudOn or shared drives for the sessions\nUnzip the archive at a destination of your choice.\nDouble click on the Exercise-Automatic_text_analysis.Rproj to open the RStudio project. This ensures that all dependencies are working correctly.\nOpen the exercise.qmd file and follow the instructions.\nTip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs)."
   },
   {
     "objectID": "slides/slides-10.html#references",
