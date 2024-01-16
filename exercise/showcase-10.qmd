@@ -3,27 +3,14 @@ title: "Showcase 10: 🔨 Automatic analysis of text in R "
 subtitle: "Digital disconnection on Twitter"
 format: 
   html:
-    toc: true
-    toc-depth: 4
     fig-width: 16
     fig-height: 9
-callout-appearance: simple
-execute: 
-  cache: true
-  eval: false
-  echo: true
-  message: false
-  warning: false
-highlight-style: atom-one
-editor_options: 
-  chunk_output_type: console
-bibliography: references_exercise.bib
+date: last-modified
+date-format: "DD.MM.YYYY"
 ---
 
 ::: {.callout-tip icon="false"}
-<!-- TODO Update link to slides -->
-
-[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-10.html)) Open session slides
+[![Quarto Slides](/img/badge-quarto-slide.svg)](https://faucommsci.github.io/dbd_2023/slides/slides-10.html) Open session slides
 :::
 
 ## Background
@@ -96,6 +83,11 @@ tweets_detox <- tweets_correct %>%
     retweet_dy == FALSE, # no retweets
     lang == "en" # only english tweets
     )
+
+# Topic models 
+stm_k0 <- qs::qread(here("local_data/stm_k0.qs"))
+stm_exploration <- qs::qread(here("local_data/stm_exploration.qs"))
+stm_results <- qs::qread(here("local_data/stm_results.qs"))
 ```
 
 ## Text as data in R (Part II)
@@ -130,7 +122,7 @@ tweets_dfm
 
 #### quanteda
 
-```{r}
+```{r create-dfm-quanteda}
 # Create corpus
 quanteda_corpus <- tweets_detox %>% 
   quanteda::corpus(
@@ -161,12 +153,12 @@ quanteda_dfm
 ```
 :::
 
-### Co-occurence of hashtags
+### Network of hashtags
 
 ::: panel-tabset
 #### tidytext
 
-```{r}
+```{r figure-hashtag-cooccurence-tidytext}
 
 # Extract hashtags
 tweets_hashtags <- tweets_detox %>% 
@@ -195,7 +187,8 @@ tweets_hashtags %>%
 
 #### quanteda
 
-```{r}
+```{r figure-hashtag-cooccurence-quanteda}
+
 # Extract DFM with only hashtags
 quanteda_dfm_hashtags <- quanteda_dfm %>% 
   quanteda::dfm_select(pattern = "#*") 
@@ -221,7 +214,7 @@ quanteda_dfm_hashtags %>%
 
 ##### Pruning
 
-```{r}
+```{r create-quanteda-stm}
 quanteda_dfm_trim <- quanteda_dfm %>% 
   dfm_trim(
     min_docfreq = 0.0001, 
@@ -229,6 +222,7 @@ quanteda_dfm_trim <- quanteda_dfm %>%
     docfreq_type = "prop"
   )
 
+# Convert for stm topic modeling
 quanteda_stm <- quanteda_dfm_trim %>% 
     convert(to = "stm")
 ```
@@ -236,36 +230,43 @@ quanteda_stm <- quanteda_dfm_trim %>%
 ::: callout-warning
 Converting the trimmmed DFM to an stm object will result in an errormessage
 
-> *Warning message: In dfm2stm(x, docvars, omit_empty = TRUE) : Dropped 46,670 empty document(s)*
+> *Warning message: \
+> In dfm2stm(x, docvars, omit_empty = TRUE) : Dropped 46,670 empty document(s)*
 
-This is due to the fact, that some tweets are "empty" or do not match with any feature after the pruning. 
-To successfully match the stm results with the original data, the "empty" tweets need to be dropped.
-To identify the empty cases, run 
+This is due to the fact, that some tweets are "empty" or do not match with any feature after the pruning. To successfully match the stm results with the original data, the "empty" tweets need to be dropped. To identify the empty cases, run
 
-```{r}
-#| ouptut: false
+```{r error-fix-export}
 
 # Check if tweet contains feature
 empty_docs <- Matrix::rowSums(as(quanteda_dfm_trim, "Matrix")) == 0 
 
-# Print indices of empty documents
+# Create vector for empty tweet identification 
+empty_docs_ids <- quanteda_dfm_trim@docvars$docname[empty_docs]
+```
+
+
+```{r error-fix-output}
+#| eval: false
+
+# Optional: Print indices of empty documents
 if (any(empty_docs)) {
   cat("Indices of empty documents:", which(empty_docs), "\n")
   
   # Print corresponding docnames
   cat("Docnames of empty documents:", quanteda_dfm_trim@docvars$docname[empty_docs], "\n")
 }
-
-# Create vector for empty tweet identification 
-empty_docs_ids <- quanteda_dfm_trim@docvars$docname[empty_docs]
 ```
-::: 
+
+:::
 
 #### Select model
-##### based on k = 0
-```{r}
-#| eval: false
 
+##### based on k = 0
+
+```{r model-stm-k0-estimation}
+#| eval: false
+
+# Estimate model
 stm_k0 <- stm(
     quanteda_stm$documents, 
     quanteda_stm$vocab, 
@@ -274,20 +275,23 @@ stm_k0 <- stm(
     init.type = "Spectral", 
     seed = 42 
   )
+```
 
-qs::qsave(stm_k5, file = here("local_data/stm_k5.qs"))
+```{r model-stm-k0-preview}
+# Preview
+stm_k0
 ```
 
 ##### based on different model diagnostics
 
-```{r}
+```{r model-stm-exploration-estimation}
 #| eval: false
 
 # Set up parallel processing using furrr
 future::plan(future::multisession()) # use multiple sessions 
 
 # Estimate multiple models
-stm_exploration <- tibble(K = seq(from = 5, to = 85, by = 5)) %>% 
+stm_exploration <- tibble(k = seq(from = 5, to = 85, by = 5)) %>% 
     mutate(mdl = furrr::future_map(k, ~stm::stm(
       documents =  quanteda_stm$documents,
       vocab = quanteda_stm$vocab, 
@@ -298,100 +302,218 @@ stm_exploration <- tibble(K = seq(from = 5, to = 85, by = 5)) %>%
       verbose = FALSE),
       .options = furrr::furrr_options(seed = 42))
   )
-
-qs::qsave(stm_exploration, file = here("local_data/stm_exploration.qs"))
 ```
 
-
-```{r}
-#| eval: true
-#| echo: false
-
-stm_k5 <- qs::qread(file = here("local_data/stm_k5.qs"))
+```{r model-stm-exploration-preview}
+stm_exploration$mdl
 ```
 
 #### Exploration
-##### Top Topics
-```{r}
-stm_k5 %>% plot(type = "summary")
-stm_k5 %>% plot(type = "hist")
-stm_k5 %>% labelTopics()
-stm_k5 %>% findThoughts(topics = 2)
-stm_k5 %>% 
-  topicCorr(method = "huge") %>% 
-  plot()
 
+```{r create-model-diagnostics-stm-exploration}
+#| eval: false
+
+# Create heldout
+heldout <- make.heldout(
+  quanteda_stm$documents,
+  quanteda_stm$vocab,
+  seed = 42)
+
+# Create model diagnostics
+stm_results <- stm_exploration %>%
+  mutate(exclusivity = map(mdl, exclusivity),
+         semantic_coherence = map(mdl, semanticCoherence, quanteda_stm$documents),
+         eval_heldout = map(mdl, eval.heldout, heldout$missing),
+         residual = map(mdl, checkResiduals, quanteda_stm$documents),
+         bound =  map_dbl(mdl, function(x) max(x$convergence$bound)),
+         lfact = map_dbl(mdl, function(x) lfactorial(x$settings$dim$K)),
+         lbound = bound + lfact,
+         iterations = map_dbl(mdl, function(x) length(x$convergence$bound)))
 ```
 
+```{r figure-model-diagnostics-stm-exploration}
+# Preview 
+stm_results
 
-##### Create prevalence
+# Visualize
+stm_results %>%
+  transmute(
+    k,
+    `Lower bound` = lbound,
+    Residuals = map_dbl(residual, "dispersion"),
+    `Semantic coherence` = map_dbl(semantic_coherence, mean),
+    `Held-out likelihood` = map_dbl(eval_heldout, "expected.heldout")) %>%
+  gather(Metric, Value, -k) %>%
+  ggplot(aes(k, Value, color = Metric)) +
+    geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+    geom_point(size = 3) +
+    scale_x_continuous(breaks = seq(from = 5, to = 85, by = 5)) +
+    facet_wrap(~Metric, scales = "free_y") +
+    labs(x = "K (number of topics)",
+         y = NULL,
+         title = "Model diagnostics by number of topics"
+    ) +
+    theme_pubr() +
+    # add highlights 
+    geom_vline(aes(xintercept =  5), color = "#00BFC4", alpha = .5) +
+    geom_vline(aes(xintercept = 10), color = "#C77CFF", alpha = .5) +
+    geom_vline(aes(xintercept = 40), color = "#C77CFF", alpha = .5) 
+```
 
-```{r}
-# Create document-topic matrix (gamma)
-td_gamma <- stm_k5 %>%
-  tidytext::tidy(matrix = "gamma")
+```{r figure-exclusivity-stm-exploration}
+# Models for comparison
+models_for_comparison = c(5, 10, 40)
 
-gamma_dummies <- td_gamma %>%
+# Create figures
+fig_excl <- stm_results %>% 
+  # Edit data
+  select(k, exclusivity, semantic_coherence) %>%
+  filter(k %in% models_for_comparison) %>%
+  unnest(cols = c(exclusivity, semantic_coherence))  %>%
+  mutate(k = as.factor(k)) %>%
+  # Build graph
+  ggplot(aes(semantic_coherence, exclusivity, color = k)) +
+    geom_point(size = 2, alpha = 0.7) +
+    labs(
+      x = "Semantic coherence",
+      y = "Exclusivity"
+      # title = "Comparing exclusivity and semantic coherence",
+      # subtitle = "Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"
+      ) +
+      theme_pubr() 
+
+# Create plotly
+fig_excl %>% plotly::ggplotly()
+```
+
+#### Understanding
+
+##### Select model for further analysis
+
+```{r create-tpm}
+n_topics <- 10
+
+tpm <- stm_results |>
+   filter(k == n_topics) |> 
+   pull(mdl) %>% .[[1]]
+```
+
+##### Overview
+
+```{r figure-stm-mdl-overview-1}
+tpm %>% plot(type = "summary")
+tpm %>% plot(type = "hist")
+```
+
+##### Document/Word-topic relations
+
+```{r table-topic-word-gamma}
+# Create data
+top_gamma <- tpm %>%
+  tidy(matrix = "gamma") %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::summarise(gamma = mean(gamma), .groups = "drop") %>%
+  dplyr::arrange(desc(gamma))
+
+top_beta <- tpm %>%
+  tidytext::tidy(.) %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::arrange(-beta) %>%
+  dplyr::top_n(10, wt = beta) %>% 
+  dplyr::select(topic, term) %>%
+  dplyr::summarise(terms_beta = toString(term), .groups = "drop")
+
+top_topics_terms <- top_beta %>% 
+  dplyr::left_join(top_gamma, by = "topic") %>%
+  dplyr::mutate(
+          topic = paste0("Topic ", topic),
+          topic = reorder(topic, gamma)
+      )
+
+# Preview
+top_topics_terms %>%
+  mutate(across(gamma, ~round(.,3))) %>% 
+  dplyr::arrange(-gamma) %>% 
+  gt()
+```
+
+##### Document-topic-relations
+
+```{r create-tweets-detox-topics}
+# Prepare for merging
+topic_gammas <- tpm %>%
+  tidy(matrix = "gamma") %>% 
   dplyr::group_by(document) %>% 
   tidyr::pivot_wider(
     id_cols = document, 
     names_from = "topic", 
     names_prefix = "gamma_topic_",
-    values_from = "gamma") %>% 
-  rename(doc_id_gamma = document)
+    values_from = "gamma")
       
-top_gamma <- td_gamma %>% 
+gammas <- tpm %>%
+  tidytext::tidy(matrix = "gamma") %>% 
   dplyr::group_by(document) %>% 
   dplyr::slice_max(gamma) %>% 
   dplyr::mutate(main_topic = ifelse(gamma > 0.5, topic, NA)) %>% 
   rename(
     top_topic = topic,
-    top_gamma = gamma)
+    top_gamma = gamma) %>% 
+  ungroup() %>% 
+  left_join(., topic_gammas, by = join_by(document))
 
+# Merge with original data
 tweets_detox_topics <- tweets_detox %>% 
   filter(!(tweet_id %in% empty_docs_ids)) %>% 
-  bind_cols(top_gamma)
-  
+  bind_cols(gammas) %>% 
+  select(-document)
 
+# Preview
+tweets_detox_topics 
 ```
 
-##### Distribution of topics over time
+##### Topic distribution
 
-```{r}
+```{r figure-topic-distribution}
 tweets_detox_topics %>% 
   mutate(across(top_topic, as.factor)) %>% 
-  ggplot(aes( top_topic, fill = top_topic)) +
-  geom_bar()+ 
-  facet_grid(rows = vars(year)) +
-  theme_minimal()
+  ggplot(aes(top_topic)) +
+  geom_bar() +
+  theme_pubr()
+```
+
+##### Topic distribution over time
+
+```{r figure-topics-distribution-over-time}
+tweets_detox_topics %>% 
+  mutate(across(top_topic, as.factor)) %>% 
+  ggplot(aes(year, fill = top_topic)) +
+  geom_bar() +
+  theme_pubr()
+
+tweets_detox_topics %>% 
+  mutate(across(top_topic, as.factor)) %>% 
+  ggplot(aes(year, fill = top_topic)) +
+  geom_bar(position = "fill") +
+  theme_pubr() 
 ```
 
 ##### Focus on specific topics
 
-```{r}
+```{r table-topic-exploration-top-tweets}
 tweets_detox_topics %>% 
-  filter(top_topic == 3) %>% 
+  filter(top_topic == 10) %>% 
   arrange(-top_gamma) %>% 
   slice_head(n = 10) %>% 
   select(tweet_id, user_username, created_at, text, top_gamma) %>% 
   gt()
-
 ```
 
 ##### Top Users
 
-```{r}
+```{r table-topic-exploration-top-users}
 tweets_detox_topics %>% 
-  filter(top_topic == 3) %>% 
-  sjmisc::frq(user_username)
-
+  filter(top_topic == 10) %>% 
+  count(user_username, sort = TRUE) %>% 
+  mutate(prop = round(n/sum(n)*100, 2)) %>% 
+  slice_head(n = 15)
 ```
-
-
-
-<!-- TODO Exercise; Create FCM without #digitaldetox -->
-
-
-<!-- TODO Slides: Dispaly "feature" reduction -->
-
-<!-- TODO Exercise Re-Run analysis with deduplication -->

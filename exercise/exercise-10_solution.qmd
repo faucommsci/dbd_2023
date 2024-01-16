@@ -3,8 +3,6 @@ title: "Exercise 10: 🔨 Automatic analysis of text in R "
 subtitle: "Digital disconnection on Twitter"
 date: last-modified
 date-format: "DD.MM.YYYY"
-execute: 
-  eval: false
 ---
 
 ::: {.callout-tip icon="false"}
@@ -214,6 +212,42 @@ Recreate the network plot from the session without the token `#digitaldetox`
     -   Analyze patterns or connections among top hashtags.
     -   Discuss insights from the visualization, especially in comparison to the visualization of the slides/showcase.
 
+```{r exercise-01-solution-tidytext}
+# Create new dataset `tweets_dfm_cleaned`
+tweets_dfm_cleaned <- tweets_detox %>% 
+  # Edit data
+  mutate(
+    text = str_remove_all(text, "#digitaldetox"), 
+    hashtags = str_extract_all(text, "#\\S+")
+    ) %>%
+  # Tokenize
+  unnest(hashtags) %>% 
+  # Summarize
+  count(tweet_id, hashtags) %>% 
+  # Transform to DFM
+  cast_dfm(tweet_id, hashtags, n)
+
+# Create new dataset `top_hashtags_tidy`
+top_hashtags_tidy <- tweets_detox %>% 
+  mutate(hashtags = str_extract_all(text, "#\\S+")) %>%
+  unnest(hashtags) %>% 
+  count(hashtags, sort = TRUE) %>% 
+  slice_head(n = 50) %>% 
+  pull(hashtags)
+
+# Visualize co-occurence
+tweets_dfm_cleaned %>% 
+  quanteda::fcm() %>% 
+  quanteda::fcm_select(
+    pattern = top_hashtags_tidy,
+    case_insensitive = FALSE
+    ) %>% 
+  quanteda.textplots::textplot_network(
+    edge_color = "#04316A"
+  )
+
+```
+
 ### with quanteda
 
 -   **Create new dataset `quanteda_dfm_cleaned`**`:`
@@ -234,6 +268,25 @@ Recreate the network plot from the session without the token `#digitaldetox`
 -   **Interpret and compare results**
     -   Analyze patterns or connections among top hashtags.
     -   Discuss insights from the visualization, especially in comparison to the visualization of the slides/showcase.
+
+```{r exercise-01-solution-quanteda}
+# Create new dataset `quanteda_dfm_cleaned`
+quanteda_dfm_hashtags <- quanteda_dfm %>% 
+  quanteda::dfm_select(pattern = "#*") 
+
+# Create new dataset `top_hashtags_quanteda`
+top50_hashtags_quanteda <- quanteda_dfm_hashtags %>% 
+  topfeatures(50) %>% 
+  names()
+
+# Visualize co-occurence
+quanteda_dfm_hashtags %>% 
+  fcm() %>% 
+  fcm_select(pattern = top50_hashtags_quanteda) %>% 
+  textplot_network(
+    edge_color = "#C50F3C"
+  ) 
+```
 :::
 
 ```{r exercise-01}
@@ -266,6 +319,15 @@ Take a closer look at another topic from the topic model used in the session by 
 
 ```
 
+```{r exercise-02-01-solution}
+tweets_detox_topics %>% 
+  filter(top_topic == 9) %>% 
+  arrange(-top_gamma) %>% 
+  slice_head(n = 10) %>% 
+  select(tweet_id, user_username, created_at, text, top_gamma) %>% 
+  gt()
+```
+
 #### 2.1 Explore top users
 
 -   Based on the dataset `tweets_detox_topics`
@@ -278,6 +340,14 @@ Take a closer look at another topic from the topic model used in the session by 
 
 ```{r exercise-02-02}
 
+```
+
+```{r exercise-02-02-solution}
+tweets_detox_topics %>% 
+  filter(top_topic == 9) %>% 
+  count(user_username, sort = TRUE) %>% 
+  mutate(prop = round(n/sum(n)*100, 2)) %>% 
+  slice_head(n = 15)
 ```
 
 ### 📋 Exercise 3: Expolore different topic model
@@ -307,6 +377,19 @@ tpm_new <- stm_results |>
 
 # Visual exploration of tpm_new
 
+```
+
+
+```{r exercise-03-01-solution}
+# Explore a different topic model (estimation)
+n_topics <- 40
+
+tpm_new <- stm_results |>
+   filter(k == n_topics) |> 
+   pull(mdl) %>% .[[1]]
+
+# Visual exploration of tpm_new
+plot(tpm_new, type = "summary")
 ```
 
 #### 3.2 Document/Word-topic relations
@@ -340,4 +423,34 @@ tpm_new <- stm_results |>
 
 # Preview the esults
 
+```
+
+```{r exercise-03-02-solution}
+# Calculate mean gamma values
+top_gamma_new <- tpm_new %>%
+  tidy(matrix = "gamma") %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::summarise(gamma = mean(gamma), .groups = "drop") %>%
+  dplyr::arrange(desc(gamma))
+
+# Identify top terms of each topic
+top_beta_new <- tpm_new %>%
+  tidytext::tidy(.) %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::arrange(-beta) %>%
+  dplyr::top_n(10, wt = beta) %>% 
+  dplyr::select(topic, term) %>%
+  dplyr::summarise(terms_beta = toString(term), .groups = "drop")
+
+# Combine top topics and top terms
+top_topics_terms_new <- top_beta_new %>% 
+  dplyr::left_join(top_gamma_new, by = "topic") %>%
+  dplyr::mutate(
+          topic = paste0("Topic ", topic),
+          topic = reorder(topic, gamma)
+      )
+
+# Preview the esults
+top_topics_terms_new %>% 
+  gt()
 ```
