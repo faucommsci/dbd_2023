@@ -74,11 +74,11 @@ new_schedule_d %>%
 
 # Agenda {background-image="img/slide_bg-agenda.png"}
 
-1.  [Quick recap}](#intro)
+1.  [What we did so far](#intro)
 2.  [Text as data in R (Part II)](#examples)
 3.  [📋 Hands on working with R](#exercises)
 
-# Quick recap {#intro background-image="img/slide_bg-section.png"}
+# What we did so far {#intro background-image="img/slide_bg-section.png"}
 
 Analysis of tweets about digital disconnection on {{< fa brands twitter >}} (not 𝕏)
 
@@ -112,6 +112,14 @@ tweets_detox <- tweets_correct %>%
     retweet_dy == FALSE, # no retweets
     lang == "en" # only english tweets
     )
+
+# TPM 
+stm_k0 <- qs::qread(here("local_data/stm_k0.qs"))
+stm_exploration <- qs::qread(here("local_data/stm_exploration.qs"))
+stm_results <- qs::qread(here("local_data/stm_results.qs"))
+
+# Base data with topics 
+tweets_detox_topics <- qs::qread(here("local_data/tweets-digital-detox-topics.qs"))
 ```
 
 ## Social Media as 💊, 👹 or 🍩 ?
@@ -126,7 +134,7 @@ tweets_detox <- tweets_correct %>%
 
 ## The tidy text format pipeline basics
 
-#### Focus on single words and their relationship to sentiments & documents
+#### Focus on single words and their relationship documents & sentiments
 
 ::: r-stack
 ![](https://www.tidytextmining.com/images/tmwr_0101.png){fig-align="center"}
@@ -140,45 +148,39 @@ tweets_detox <- tweets_correct %>%
 
 # Text as data in R {#examples background-image="img/slide_bg-example.png"}
 
-**Part II:** Document-Term-Matrices & Topic Modeling
-
-## Focus on relationships
-
-#### Modeling realtionships between words & documents
-
--   **Three variants of automatic text analysis:**
-
-    -   *Dictionary Approaches (e.g. Sentiment Analysis)*
-
-    -   🔎 **Unsupervised Text Analysis (e.g. Topic Modeling)**
-
-    -   Supervised Text Analysis (e.g. ML Classifier)
+**Part II:** Document-Term-Matrices & Unsupervised Text Analysis (Topic Modeling)
 
 ## Expansion of the pipeline
 
-#### Focus on the word-document relationship
+#### Focus on modeling the realtionships between words & documents
 
 ![](https://www.tidytextmining.com/images/tmwr_0501.png){fig-align="center"}
 
-## **Tidying a document-term matrix**
+::: {style="text-align: center"}
+@silge2017
+:::
 
-#### Quick recap on the DTM fundamentals
+## Quick recap on [Document-Term Matrix](https://en.wikipedia.org/wiki/Document-term_matrix) \[DTM\]
 
-One of the most common structures that text mining packages work with is the [document-term matrix](https://en.wikipedia.org/wiki/Document-term_matrix) (or DTM).
+#### Most common structure for (classic) text mining
 
 ::: columns
 ::: {.column width="50%"}
-This is a matrix where:
+A matrix where:
 
--   each row represents one document (such as a tweet),
+-   **each row represents one document** (such as a tweet),
 
--   each column represents one term, and
+-   **each column represents one term,** and
 
--   each value (typically) contains the number of appearances of that term in that document.
+-   **each value** (typically) contains the **number of appearances of that term** in that document.
 :::
 
 ::: {.column width="50%"}
-![[@zheng2018]](https://www.oreilly.com/api/v2/epubs/9781491953235/files/assets/feml_0405.png){fig-align="center"}
+![](https://www.oreilly.com/api/v2/epubs/9781491953235/files/assets/feml_0405.png){fig-align="center"}
+
+::: {style="text-align: center"}
+[@zheng2018]
+:::
 :::
 :::
 
@@ -187,7 +189,7 @@ This is a matrix where:
 #### Along the tidy text pipeline: [Tokenize]{.underline}
 
 ::: {style="font-size: smaller"}
-```{r}
+```{r create-dtm-tidytext-1}
 #| output-location: column
 
 # Common HTML entities
@@ -212,7 +214,7 @@ tweets_tidy %>%
 #### Along the tidy text pipeline: Tokenize ▶️ [Summarize]{.underline}
 
 ::: {style="font-size: smaller"}
-```{r}
+```{r create-dtm-tidytext-2}
 #| output-location: column
 #| code-line-numbers: "11-17"
 
@@ -242,7 +244,7 @@ tweets_summarized %>%
 #### Along the tidy text pipeline: Tokenize ▶️ Summarize ▶️ [DTM]{.underline}
 
 ::: {style="font-size: smaller"}
-```{r}
+```{r create-dtm-tidytext-3}
 #| output-location: column
 #| code-line-numbers: "15-20"
 
@@ -277,7 +279,7 @@ tweets_dtm
 ::: {style="font-size: smaller"}
 ::: columns
 ::: {.column width="50%"}
-```{r}
+```{r create-dtm-tidyverse-comparison}
 #| eval: false
 
 # Common HTML entities
@@ -304,7 +306,7 @@ tweets_dtm
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r create-dfm-quanteda-comparison}
 #| output: false
 
 # Create corpus
@@ -336,19 +338,20 @@ quanteda_dfm <- quanteda_token %>%
 :::
 :::
 
-## An exmaple: Co-occurence of hashtags {auto-animate="true"}
+## An example: Network of hashtags {auto-animate="true"}
 
-#### Comparison between tidytext & quanteda
+#### Comparison between [tidytext]{.underline} & quanteda
 
 ::: {style="font-size: smaller"}
-```{r}
+```{r figure-hashtags-cooccurence-tidytext}
 #| output-location: column
 #| fig-height: 9
 #| fig-width: 9
 
 # Extract hashtags
 tweets_hashtags <- tweets_detox %>% 
-  mutate(hashtags = str_extract_all(text, "#\\S+")) %>%
+  mutate(hashtags = str_extract_all(
+    text, "#\\S+")) %>%
   unnest(hashtags) 
 
 # Extract most common hashtags
@@ -372,16 +375,15 @@ tweets_hashtags %>%
 ```
 :::
 
-## An exmaple: Network of hashtags {auto-animate="true"}
+## An example: Network of hashtags {auto-animate="true"}
 
-#### Comparison between tidytext & quanteda
+#### Comparison between tidytext & [quanteda]{.underline}
 
 ::: {style="font-size: smaller"}
-```{r}
+```{r figure-hashtags-cooccurence-quanteda}
 #| output-location: column
 #| fig-height: 9
 #| fig-width: 9
-
 
 # Extract DFM with only hashtags
 quanteda_dfm_hashtags <- quanteda_dfm %>% 
@@ -402,14 +404,15 @@ quanteda_dfm_hashtags %>%
 ```
 :::
 
-## An exmaple: Network of hashtags
+## An example: Network of hashtags
 
 #### Comparison between tidytext & quanteda
 
 ::: columns
 ::: {.column width="50%"}
-```{r}
+```{r figure-hashtag-comparison-tidytext}
 #| code-fold: true
+#| code-summary: "Expand for full code"
 #| fig-height: 9
 #| fig-width: 9
 
@@ -428,8 +431,9 @@ tweets_hashtags %>%
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r figure-hashtag-comparison-quanteda}
 #| code-fold: true 
+#| code-summary: "Expand for full code"
 #| fig-height: 9
 #| fig-width: 9
 
@@ -443,9 +447,9 @@ quanteda_dfm_hashtags %>%
 :::
 :::
 
-## Let's do some modeling
+## A new input in the pipeline
 
-#### Unsupervised learning example: Topic modeling
+#### Unsupervised learning example: *Topic modeling*
 
 ![](https://www.tidytextmining.com/images/tmwr_0601.png){fig-align="center"}
 
@@ -453,24 +457,33 @@ quanteda_dfm_hashtags %>%
 @silge2017
 :::
 
+## Building a shared vocabulary ... again
+
+#### Important terms and definitions
+
+-   **`Topic Modeling`**: Form of unsupervised machine learning method used to exploratively identify topics in a corpus. Often, these are so-called **mixed-membership models**.
+-   **`K`**: Number of topics to be calculated for a given a topic model.
+-   **`Word-Topic-Matrix`**: Matrix describing the conditional probability (**`beta`**) with which a feature is prevalent in a given topic.
+-   **`Document-Topic-Matrix`**: Matrix describing the conditional probability (**`gamma`**) with which a topic is prevalent in a given document.
+
 ## Beyond LDA
 
 #### Different topic modeling approaches
 
--   *Latent Dirichlet Allocation [`LDA`]* [@blei2003]is a probabilistic generative model that assumes each document in a corpus is a mix of topics and each word in the document is attributable to one of the document's topics.
--   **Structural Topic Modeling [`STM`]** [@roberts2016; @roberts2019] extends LDA by incorporating document-level covariates, allowing for the modeling of how external factors influence topic prevalence.
+-   *Latent Dirichlet Allocation \[`LDA`\]* [@blei2003] is a probabilistic generative model that assumes each document in a corpus is a mix of topics and each word in the document is attributable to one of the document's topics.
+-   **Structural Topic Modeling \[`STM`\]** [@roberts2016; @roberts2019] extends LDA by incorporating document-level covariates, allowing for the modeling of how external factors influence topic prevalence.
 -   *Word embeddings* (`Word2Vec` [@mikolov2013] , `Glove` [@pennington2014]) represent words as continuous vectors in a high-dimensional space, capturing semantic relationships between words based on their context in the data.
 -   *Topic Modeling with Neural Networks* (`BERTopic`[@devlin2019], `Doc2Vec`[@le2014]) leverages deep learning architectures to automatically learn latent topics from textual data.
 
 ::: notes
--  specify the presumed number of topics K thatyou expect to find in a corpus (e.g., K = 5, i.e., 5 topics)
--  the model then tries to inductively identify 5 topics in the corpus based on the distribution of frequently co-occurring features. 
--  an algorithm is used for this purpose, which is why topic modeling is a type of “machine learning”.
+-   specify the presumed number of topics K thatyou expect to find in a corpus (e.g., K = 5, i.e., 5 topics)
+-   the model then tries to inductively identify 5 topics in the corpus based on the distribution of frequently co-occurring features.
+-   an algorithm is used for this purpose, which is why topic modeling is a type of “machine learning”.
 :::
 
 ## Preparation is everything
 
-#### Suggested pre-processing steps (based on MAIER)
+#### Suggested pre-processing steps (based on @maier2018)
 
 ::: columns
 ::: {.column width="50%"}
@@ -484,7 +497,9 @@ quanteda_dfm_hashtags %>%
 :::
 
 ::: {.column width="50%"}
-```{r}
+```{r create-stm-data}
+#| eval: false
+
 # Pruning
 quanteda_dfm_trim <- quanteda_dfm %>% 
   dfm_trim( 
@@ -492,7 +507,7 @@ quanteda_dfm_trim <- quanteda_dfm %>%
     max_docfreq = 0.99, 
     docfreq_type = "prop")
 
-# Convert from LDA topic modeling
+# Convert for stm topic modeling
 quanteda_stm <- quanteda_dfm_trim %>% 
    convert(to = "stm")
 ```
@@ -503,212 +518,275 @@ quanteda_stm <- quanteda_dfm_trim %>%
 Zipf’s law states that the frequency that a word appears is inversely proportional to its rank.
 :::
 
-
 ## How to find K
-## The most important question of model selection
 
--   The choice of K (whether the model is instructed to identify 5, 15, or 100 topics), has a substantial impact on results: 
-    -   The smaller K, the more fine-grained and usually the more exclusive topics; 
+#### The most important question of model selection
+
+-   The **choice of K** (whether the model is instructed to identify 5, 15, or 100 topics), has a **substantial impact on results**:
+    -   The smaller K, the more fine-grained and usually the more exclusive topics;
     -   the larger K, the more clearly topics identify individual events or issues.
-
--   The stm package has two build in solution to find the optimal K
-    -   searchK()-function 
-    -   setting K = 0 when estimating the model 
-
-:::
+-   The **stm** package [@roberts2019] has two build in solution to find the optimal K
+    -   `searchK()` function
+    -   setting `K = 0` when estimating the model
+-   ***Recommendation for `stm`: (Manual) training and evaluation!***
 
 ::: notes
- However, with a larger K topics are oftentimes less exclusive, meaning that they somehow overlap. 
+However, with a larger K topics are oftentimes less exclusive, meaning that they somehow overlap.
 :::
 
+## Train and evaluate topic models
 
-## Add title here
-#### Multiple statistics 
+#### Better than `searchK()`: Manual exploration
 
-```{r}
+::: columns
+::: {.column width="50%"}
+```{r model-stm-exploration-estimation}
 #| eval: false
-#| echo: false
 
-tic()
-stm_k <- searchK(
-    quanteda_stm$documents, 
-    quanteda_stm$vocab,
-    K = c(5,10,15), 
-    init.type = "Spectral",
-    heldout.seed = 42)
-toc()
+# Set up parallel processing using furrr
+future::plan(future::multisession()) 
+
+# Estimate multiple models
+stm_exploration <- tibble(
+  k = seq(from = 5, to = 85, by = 5)
+  ) %>%
+  mutate(
+    mdl = furrr::future_map(
+      k, 
+      ~stm::stm(
+        documents = quanteda_stm$documents,
+        vocab = quanteda_stm$vocab, 
+        K = ., 
+        seed = 42,
+        max.em.its = 1000,
+        init.type = "Spectral",
+        verbose = FALSE),
+    .options = furrr_options(seed = 42))
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r model-stm-exploration-preview}
+stm_exploration$mdl
+```
+:::
+:::
+
+## Semantic coherence as the key
+
+#### Different model statistics for evaluation
+
+```{r figure-model-diagnostics-stm-exploration}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-height: 6
+#| fig-width: 11
+#| fig-align: center
+
+stm_results %>%
+  transmute(
+    k,
+    `Lower bound` = lbound,
+    Residuals = map_dbl(residual, "dispersion"),
+    `Semantic coherence` = map_dbl(semantic_coherence, mean),
+    `Held-out likelihood` = map_dbl(eval_heldout, "expected.heldout")) %>%
+  gather(Metric, Value, -k) %>%
+  ggplot(aes(k, Value, color = Metric)) +
+    geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+    geom_point(size = 3) +
+    scale_x_continuous(breaks = seq(from = 5, to = 85, by = 5)) +
+    facet_wrap(~Metric, scales = "free_y") +
+    labs(x = "K (number of topics)",
+         y = NULL,
+         title = "Model diagnostics by number of topics"
+    ) +
+    theme_pubr() +
+    # add highlights 
+    geom_vline(aes(xintercept =  5), color = "#00BFC4", alpha = .5) +
+    geom_vline(aes(xintercept = 10), color = "#C77CFF", alpha = .5) +
+    geom_vline(aes(xintercept = 40), color = "#C77CFF", alpha = .5) 
 ```
 
+::: notes
+Semantic Coherence: tells you how coherent topics are, i.e., how often features describing a topic co-occur and topics thus appear to be internally coherent.
 
+Exclusivity: tells you how exclusive topics are, i.e., how much they differ from each other and topics thus appear to describe different things.
+:::
 
+## Finding the best trade-off
 
-#### Add text here
+#### Comparison of selected models based on exclusivty and semantic coherence
 
-<!-- TODO Add LDA infos/best practise -->
+```{r figure-exclusivity-stm-exploration}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| fig-align: center
 
-```{r}
-#| eval: false
-#| echo: false
+# Models for comparison
+models_for_comparison = c(5, 10, 40)
 
-
-tweets_lda <- quanteda_dtm %>% 
-  LDA(
-    method = "Gibbs",
-    k = 5,
-    control = list(
-      seed = 42))
+# Create figures
+stm_results %>% 
+  # Edit data
+  select(k, exclusivity, semantic_coherence) %>%
+  filter(k %in% models_for_comparison) %>%
+  unnest(cols = c(exclusivity, semantic_coherence))  %>%
+  mutate(k = as.factor(k)) %>%
+  # Build graph
+  ggplot(aes(semantic_coherence, exclusivity, color = k)) +
+    geom_point(size = 2, alpha = 0.7) +
+    labs(
+      x = "Semantic coherence",
+      y = "Exclusivity"
+      # title = "Comparing exclusivity and semantic coherence",
+      # subtitle = "Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"
+      ) +
+    theme_pubr() 
 ```
 
-## Top-Terms of topics
+## A first overview
 
-#### Explore TPM results
+#### Understanding the 'final' model (k = 10)
 
-```{r}
-#| eval: false
+```{r create-tpm}
 #| echo: false
+n_topics <- 10
 
+tpm <- stm_results |>
+   filter(k == n_topics) |> 
+   pull(mdl) %>% .[[1]]
+```
 
-tweets_lda %>% 
-  terms(10) %>% 
-  as.data.frame() %>% 
+```{r figure-stm-mdl-overview-1}
+tpm %>% plot(type = "summary")
+```
+
+## A more detailed overview
+
+#### Understanding the 'final' model (k = 10)
+
+```{r table-topic-word-gamma}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+
+# Create data
+top_gamma <- tpm %>%
+  tidy(matrix = "gamma") %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::summarise(gamma = mean(gamma), .groups = "drop") %>%
+  dplyr::arrange(desc(gamma))
+
+top_beta <- tpm %>%
+  tidytext::tidy(.) %>% 
+  dplyr::group_by(topic) %>%
+  dplyr::arrange(-beta) %>%
+  dplyr::top_n(10, wt = beta) %>% 
+  dplyr::select(topic, term) %>%
+  dplyr::summarise(terms_beta = toString(term), .groups = "drop")
+
+top_topics_terms <- top_beta %>% 
+  dplyr::left_join(top_gamma, by = "topic") %>%
+  dplyr::mutate(
+          topic = reorder(topic, gamma)
+      )
+
+# Preview
+top_topics_terms %>%
+  mutate(across(gamma, ~round(.,3))) %>% 
+  dplyr::arrange(-gamma) %>% 
   gt() %>% 
+  cols_label(
+    topic = "Topic", 
+    terms_beta = "Top Terms (based on beta)",
+    gamma = "Gamma"
+  ) %>% 
   gtExtras::gt_theme_538()
 ```
 
-## Title needed
+## Results in a different context
 
-#### Word-Topic-Probabilities
+#### Merge back with original data for further analysis and comparison
 
-```{r}
-#| eval: false
-#| echo: false
-#| code-fold: true 
-
-
-tweets_lda_beta <- tweets_lda %>% 
-  tidy(matrix = "beta") 
-
-tweets_lda_beta %>% 
-  group_by(topic) %>% 
-  slice_max(beta, n = 10) %>% 
-  ungroup() %>%
-  arrange(topic, -beta)  %>% 
-  mutate(term = reorder_within(term, beta, topic)) %>%
-  ggplot(aes(beta, term, fill = factor(topic))) +
-  geom_col(show.legend = FALSE) +
-  facet_wrap(~ topic, scales = "free_y") +
-  scale_y_reordered() +
-  theme_minimal()
-
-```
-
-## Title needed
-
-#### Document-topic-probabilites
-
-```{r}
-#| eval: false
-#| echo: false
+```{r figure-topic-distribution}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+#| layout-ncol: 2
+#| fig-height: 8
 
 
-tweets_topics <- tweets_lda %>% 
-  topics() %>% 
-  as.data.frame() %>% 
-  janitor::clean_names() %>% 
-  rownames_to_column(var = "tweet_id") %>% 
-  rename(topic = x) 
-
-tweets_topics %>% 
-  data_tabulate(topic)
-```
-
-## Title needed
-
-#### Join with original data
-
-```{r}
-#| eval: false
-#| echo: false
-
-
-tweets_lda_gamma <- tweets_lda %>% 
-  tidy(matrix = "gamma") 
-
-tweets_topics_full <- tweets_lda_gamma %>% 
-  pivot_wider(
-    names_from = topic, 
-    names_glue = "gamma_t{topic}",
-    values_from = gamma
-  ) %>% 
-  right_join(
-    tweets_topics, .,
-    by = join_by(tweet_id == document))
-
-tweets_detox_topics <- tweets_topics_full %>% 
-  right_join(
-    tweets_detox, ., 
-    by = join_by(tweet_id))
-```
-
-## Title needed
-
-#### Distribution of topics over time
-
-##### Distribution over time
-
-```{r}
-#| eval: false
-#| echo: false
-
-
-# Create first graph
-g1 <- tweets_detox_topics %>% 
-  ggplot(aes(x = as.factor(year), fill = as.factor(topic))) +
-    geom_bar() +
-    labs(
-      x = "",
-      y = "Number of tweets", 
-      fill = "Topic"
-     ) +
-    theme_pubr() 
-
-# Create second graph
-g2 <- tweets_detox_topics %>% 
-  ggplot(aes(x = as.factor(year), fill = as.factor(topic))) +
-    geom_bar(position = "fill") +
-    labs(
-      x = "",
-      y = "Number of tweets", 
-      fill = "Topic"
-     ) +
-    theme_pubr() 
-
-# COMBINE GRPAHS
-ggarrange(g1, g2,
-          nrow = 1, ncol = 2, 
-          align = "hv",
-          common.legend = TRUE) 
-```
-
-## Check out the topics
-
-#### Most prominent tweets
-
-```{r}
-#| eval: false
-#| echo: false
-
+top_gamma %>% 
+  ggplot(aes(as.factor(topic), gamma)) +
+  geom_col(fill = "#F57350") +
+  labs(
+    x = "Topic",
+    y = "Mean gamma"
+  ) +
+  coord_flip() +
+  scale_y_reverse() +
+  scale_x_discrete(position = "top") +
+  theme_pubr()
 
 tweets_detox_topics %>% 
-  arrange(-gamma_t1) %>% 
-  slice_head(n = 10) %>% 
-  select(tweet_id, gamma_t1, created_at, user_username, text) %>% 
-  gt()
+  mutate(across(top_topic, as.factor)) %>% 
+  ggplot(aes(top_topic)) +
+  geom_bar(fill = "#1DA1F2") +
+  labs(
+    x = "", 
+    y = "Number of tweets"
+  ) +
+  coord_flip() +
+  theme_pubr()
 ```
 
-## Finishing remarks
+## Most representative tweets for Topic 10
 
-#### Best practise and outlook
+#### Check interpretability and relevance of topics
+
+```{r table-topic-exploration-top-tweets}
+#| code-fold: true
+#| code-summary: "Expand for full code"
+
+tweets_detox_topics %>% 
+  filter(top_topic == 10) %>% 
+  arrange(-top_gamma) %>% 
+  slice_head(n = 10) %>% 
+  select(tweet_id, user_username, created_at, text, top_gamma) %>% 
+  gt() %>% 
+  gtExtras::gt_theme_538() %>% 
+  gt::tab_options(table.font.size = "10px")
+
+```
+
+
+## Users with most tweets about Topic 10
+
+#### Check interpretability and relevance of topics
+
+```{r table-topic-exploration-top-users}
+#| output-location: column
+
+tweets_detox_topics %>% 
+  filter(top_topic == 10) %>% 
+  count(user_username, sort = TRUE) %>% 
+  mutate(
+    prop = round(n/sum(n)*100, 2)) %>% 
+  slice_head(n = 10) %>% 
+  gt() %>% 
+  gtExtras::gt_theme_538() 
+```
+
+## Validate, validate, validate!
+
+#### Things to remember about topic models
+
+-   topic models are a useful tool for automated content analysis, both when exploring a large amount of data and when it comes to systematically identifying relationships between topics and other variables
+
+-   certain prerequisites such as minimum size and variety of the corpus (namely on the level of words and documents and their relation to each other) need to be met for a conclusive model
+
+-   everything above a certain degree of word frequencies is considered a “topic,” even if it is not a topic in human interpretation
+
+-   Reading the tea leaves [@chang2009] or (again): validate, validate, validate (e.g. with [`oolong`](https://github.com/gesistsa/oolong) package [@chan2020])
 
 # 📋 Hands on working with R {#group-activity background-image="img/slide_bg-group_activity.png"}
 
@@ -721,21 +799,21 @@ Various exercises on the content of today's session
 ::: {.callout-caution appearance="simple"}
 ## Objective of this exercise
 
--   Brush up basic knowledge of working with R and the tidyverse
--   Get to know the typical steps of tidy text analysis, from tokenisation and summarisation to visualisation.
+-   Brief review of the contents of the last session
+-   Teaching the basic steps for creating and analyzing document feature matrices and stm topic models
 :::
 
 #### Next steps
 
 -   Download files provided on StudOn or shared drives for the sessions
--   Unzip the archive at a destination of your choice.
+-   [**`Unzip`**]{.underline} the archive at a destination of your choice.
 -   Double click on the `Exercise-Text_as_data.Rproj` to open the RStudio project. This ensures that all dependencies are working correctly.
 -   Open the `exercise.qmd` file and follow the instructions.
 -   ***Tip: You can find all code chunks used in the slides in the showcase.qmd (for the raw code) or showcase.html (with rendered outputs).***
 
 # Time for questions {background-image="img/slide_bg-question.png"}
 
-# Thank you and see you next week! {background-image="img/slide_bg-end_session.png"}
+# Thank you! {background-image="img/slide_bg-end_session.png"}
 
 ## References
 
