@@ -1,21 +1,10 @@
 ---
 title: "Exercise 09: 🔨 Text as data in R "
 subtitle: "Digital disconnection on Twitter"
-format: 
-  html:
-    toc: true
-    toc-depth: 4
-callout-appearance: simple
+date: last-modified
+date-format: "DD.MM.YYYY"
 execute: 
-  cache: true
-  eval: false
-  echo: true
-  message: false
-  warning: false
-highlight-style: atom-one
-editor_options: 
-  chunk_output_type: console
-bibliography: references_exercise.bib
+    eval: false
 ---
 
 ::: {.callout-tip icon="false"}

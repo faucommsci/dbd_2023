@@ -1,27 +1,14 @@
 ---
 title: "Exercise 09: 🔨 Text as data in R "
 subtitle: "Digital disconnection on Twitter"
-format: 
-  html:
-    toc: true
-    toc-depth: 4
-callout-appearance: simple
-execute: 
-  cache: true
-  eval: true
-  echo: true
-  message: false
-  warning: false
-highlight-style: atom-one
-editor_options: 
-  chunk_output_type: console
-bibliography: references_exercise.bib
+date: last-modified
+date-format: "DD.MM.YYYY"
 ---
 
 ::: {.callout-tip icon="false"}
-[![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-09.html)) Open session slides
+[![Quarto Slides](/img/badge-quarto-slide.svg)]((https://faucommsci.github.io/dbd_2023/slides/slides-09.html)) Open session slides
 
-[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd) Download source file
+[![Quarto Document](/img/badge-quarto_document.svg)](https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09_solution.qmd) Download source file
 :::
 
 ## Background
@@ -251,7 +238,7 @@ tweets_pairs_corr_cleaned %>%
   theme_minimal()
 ```
 
-## 📋 Exercise 4: Sentiment
+### 📋 Exercise 4: Sentiment
 
 -   Apply `afinn` dictionary to get sentiment
     -   Based on the dataset `tweets_tidy_cleaned`,

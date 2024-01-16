@@ -3,18 +3,10 @@ title: "Showcase 09: 🔨 Text as data in R "
 subtitle: "Digital disconnection on Twitter"
 format: 
   html:
-    toc: true
-    toc-depth: 4
     fig-width: 16
     fig-height: 9
-callout-appearance: simple
-execute: 
-  message: false
-  warning: false
-highlight-style: atom-one
-editor_options: 
-  chunk_output_type: console
-bibliography: references_exercise.bib
+date: last-modified
+date-format: "DD.MM.YYYY"
 ---
 
 ::: {.callout-tip icon="false"}
