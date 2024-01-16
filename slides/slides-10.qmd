@@ -758,7 +758,6 @@ tweets_detox_topics %>%
 
 ```
 
-
 ## Users with most tweets about Topic 10
 
 #### Check interpretability and relevance of topics
@@ -780,9 +779,9 @@ tweets_detox_topics %>%
 
 #### Things to remember about topic models
 
--   topic models are a useful tool for automated content analysis, both when exploring a large amount of data and when it comes to systematically identifying relationships between topics and other variables
+-   topic models are a **useful tool for automated content analysis**, both when exploring a large amount of data and when it comes to systematically identifying relationships between topics and other variables
 
--   certain prerequisites such as minimum size and variety of the corpus (namely on the level of words and documents and their relation to each other) need to be met for a conclusive model
+-   **certain prerequisites** such as minimum size and variety of the corpus (namely on the level of words and documents and their relation to each other) **need to be met for a conclusive model**
 
 -   everything above a certain degree of word frequencies is considered a “topic,” even if it is not a topic in human interpretation
 
@@ -792,9 +791,7 @@ tweets_detox_topics %>%
 
 Various exercises on the content of today's session
 
-## 🧪 And now ... you: Clean and repeat!
-
-#### Redo the tidy text analysis pipeline with cleaned data
+## 🧪 And now ... you: Model away!
 
 ::: {.callout-caution appearance="simple"}
 ## Objective of this exercise
