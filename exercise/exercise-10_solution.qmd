@@ -3,6 +3,8 @@ title: "Exercise 10: 🔨 Automatic analysis of text in R "
 subtitle: "Digital disconnection on Twitter"
 date: last-modified
 date-format: "DD.MM.YYYY"
+execute: 
+  eval: false
 ---
 
 ::: {.callout-tip icon="false"}
