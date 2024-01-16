@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Digital behavioral data - Exercise 09: 🔨 Text as data in R</title>
+<title>Digital behavioral data - Exercise 10: 🔨 Automatic analysis of text in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,6 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../computing/computing-textbooks.html" rel="next">
+<link href="../exercise/exercise-09_solution.html" rel="prev">
 <link href="../img/logo_fau_red.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -99,9 +120,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Digital behavioral data - Exercise 09: 🔨 Text as data in R">
+<meta property="og:title" content="Digital behavioral data - Exercise 10: 🔨 Automatic analysis of text in R">
 <meta property="og:description" content="Digital disconnection on Twitter">
-<meta property="og:image" content="../img/badge-quarto_document.svg">
+<meta property="og:image" content="../img/badge-quarto-slide.svg">
 <meta property="og:site-name" content="Digital behavioral data">
 </head>
 
@@ -114,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercise 09: 🔨 Text as data in R</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercise/exercise-03.html">Exercises</a></li><li class="breadcrumb-item"><a href="../exercise/exercise-10.html">Exercise 10</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -233,21 +254,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Session 08</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 10</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercise/exercise-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-09_solution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-10.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercise 10</span></a>
   </div>
 </li>
       </ul>
@@ -292,62 +337,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#codechunks-from-the-session" id="toc-codechunks-from-the-session" class="nav-link" data-scroll-target="#codechunks-from-the-session">Codechunks from the session</a>
+  <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a></li>
+  <li><a href="#import-and-process-the-data" id="toc-import-and-process-the-data" class="nav-link" data-scroll-target="#import-and-process-the-data">Import and process the data</a>
   <ul>
-  <li><a href="#import-data-from-local" id="toc-import-data-from-local" class="nav-link" data-scroll-target="#import-data-from-local">Import data from local</a>
-  <ul class="collapse">
-  <li><a href="#initial-data-check" id="toc-initial-data-check" class="nav-link" data-scroll-target="#initial-data-check">Initial data check</a></li>
-  <li><a href="#distribution-over-the-years" id="toc-distribution-over-the-years" class="nav-link" data-scroll-target="#distribution-over-the-years">Distribution over the years</a></li>
-  <li><a href="#top-languages" id="toc-top-languages" class="nav-link" data-scroll-target="#top-languages">Top languages</a></li>
-  <li><a href="#top-users" id="toc-top-users" class="nav-link" data-scroll-target="#top-users">Top ‘users’</a></li>
+  <li><a href="#get-twitter-data" id="toc-get-twitter-data" class="nav-link" data-scroll-target="#get-twitter-data">Get twitter data</a></li>
+  <li><a href="#dtmdfm-creation" id="toc-dtmdfm-creation" class="nav-link" data-scroll-target="#dtmdfm-creation">DTM/DFM creation</a></li>
+  <li><a href="#get-topic-model-data" id="toc-get-topic-model-data" class="nav-link" data-scroll-target="#get-topic-model-data">Get topic model (data)</a></li>
   </ul></li>
-  <li><a href="#subsample-tweets-containing-digitaldetox" id="toc-subsample-tweets-containing-digitaldetox" class="nav-link" data-scroll-target="#subsample-tweets-containing-digitaldetox">Subsample: Tweets containing #digitaldetox</a>
-  <ul class="collapse">
-  <li><a href="#check-location-parameter" id="toc-check-location-parameter" class="nav-link" data-scroll-target="#check-location-parameter">Summary statistics</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#text-analysis-using-tidy-principles" id="toc-text-analysis-using-tidy-principles" class="nav-link" data-scroll-target="#text-analysis-using-tidy-principles">Text analysis using tidy principles</a>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">📋 Exercises</a>
   <ul>
-  <li><a href="#transform-to-tidy-text" id="toc-transform-to-tidy-text" class="nav-link" data-scroll-target="#transform-to-tidy-text">Transform to ‘tidy text’</a></li>
-  <li><a href="#transform-to-summarized-text" id="toc-transform-to-summarized-text" class="nav-link" data-scroll-target="#transform-to-summarized-text">Transform to ‘Summarized Text’</a></li>
-  <li><a href="#visualize-tokens" id="toc-visualize-tokens" class="nav-link" data-scroll-target="#visualize-tokens">Visualize tokens</a>
+  <li><a href="#exercise-1-hashtag-co-occurence" id="toc-exercise-1-hashtag-co-occurence" class="nav-link" data-scroll-target="#exercise-1-hashtag-co-occurence">📋 Exercise 1: Hashtag co-occurence</a></li>
+  <li><a href="#exercise-2-understanding-topic-9" id="toc-exercise-2-understanding-topic-9" class="nav-link" data-scroll-target="#exercise-2-understanding-topic-9">📋 Exercise 2: Understanding Topic 9</a>
   <ul class="collapse">
-  <li><a href="#wordcloud" id="toc-wordcloud" class="nav-link" data-scroll-target="#wordcloud">Wordcloud</a></li>
-  <li><a href="#distribution" id="toc-distribution" class="nav-link" data-scroll-target="#distribution">Distribution</a></li>
+  <li><a href="#explore-top-tweets" id="toc-explore-top-tweets" class="nav-link" data-scroll-target="#explore-top-tweets">2.1: Explore top tweets</a></li>
+  <li><a href="#explore-top-users" id="toc-explore-top-users" class="nav-link" data-scroll-target="#explore-top-users">2.1 Explore top users</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#modeling-realtionships-between-words" id="toc-modeling-realtionships-between-words" class="nav-link" data-scroll-target="#modeling-realtionships-between-words">Modeling realtionships between words</a>
-  <ul>
-  <li><a href="#create-bigrams" id="toc-create-bigrams" class="nav-link" data-scroll-target="#create-bigrams">Create bigrams</a></li>
-  <li><a href="#filtering-couting" id="toc-filtering-couting" class="nav-link" data-scroll-target="#filtering-couting">Filtering &amp; couting</a></li>
-  <li><a href="#visulisation" id="toc-visulisation" class="nav-link" data-scroll-target="#visulisation">Visulisation</a></li>
-  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
-  <li><a href="#get-sentiment" id="toc-get-sentiment" class="nav-link" data-scroll-target="#get-sentiment">Get sentiment</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a>
+  <li><a href="#exercise-3-expolore-different-topic-model" id="toc-exercise-3-expolore-different-topic-model" class="nav-link" data-scroll-target="#exercise-3-expolore-different-topic-model">📋 Exercise 3: Expolore different topic model</a>
   <ul class="collapse">
-  <li><a href="#distribution-1" id="toc-distribution-1" class="nav-link" data-scroll-target="#distribution-1">Distribution</a></li>
-  </ul></li>
-  <li><a href="#filter-hashtags" id="toc-filter-hashtags" class="nav-link" data-scroll-target="#filter-hashtags">Filter hashtags</a></li>
-  <li><a href="#tf-idf" id="toc-tf-idf" class="nav-link" data-scroll-target="#tf-idf">TF-IDF</a></li>
-  </ul></li>
-  <li><a href="#exercise-welche-rolle-spielt-das-geschlecht" id="toc-exercise-welche-rolle-spielt-das-geschlecht" class="nav-link" data-scroll-target="#exercise-welche-rolle-spielt-das-geschlecht">📋 Exercise: Welche Rolle spielt das Geschlecht?</a>
-  <ul>
-  <li><a href="#übeprüfung-der-_gender-variablen" id="toc-übeprüfung-der-_gender-variablen" class="nav-link" data-scroll-target="#übeprüfung-der-_gender-variablen">Übeprüfung der <code>_gender</code>-Variablen</a></li>
-  <li><a href="#sind-die-daten-konsistent" id="toc-sind-die-daten-konsistent" class="nav-link" data-scroll-target="#sind-die-daten-konsistent">Sind die Daten “konsistent”?</a>
-  <ul class="collapse">
-  <li><a href="#überprüfung-der-sortierung" id="toc-überprüfung-der-sortierung" class="nav-link" data-scroll-target="#überprüfung-der-sortierung">Überprüfung der Sortierung</a></li>
-  </ul></li>
-  <li><a href="#überprüfung-der-anzahl-pro-paare-pro-film" id="toc-überprüfung-der-anzahl-pro-paare-pro-film" class="nav-link" data-scroll-target="#überprüfung-der-anzahl-pro-paare-pro-film">Überprüfung der Anzahl pro Paare pro Film</a></li>
-  <li><a href="#korrekturen" id="toc-korrekturen" class="nav-link" data-scroll-target="#korrekturen">Korrekturen</a></li>
-  </ul></li>
-  <li><a href="#die-zweite-datenexploration" id="toc-die-zweite-datenexploration" class="nav-link" data-scroll-target="#die-zweite-datenexploration">Die zweite Datenexploration</a>
-  <ul>
-  <li><a href="#alterskombinationen-im-überblick" id="toc-alterskombinationen-im-überblick" class="nav-link" data-scroll-target="#alterskombinationen-im-überblick">Alterskombinationen im Überblick</a></li>
-  <li><a href="#wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts" id="toc-wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts" class="nav-link" data-scroll-target="#wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts">Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?</a>
-  <ul class="collapse">
-  <li><a href="#graphische-überprüfung" id="toc-graphische-überprüfung" class="nav-link" data-scroll-target="#graphische-überprüfung">Graphische Überprüfung</a></li>
-  <li><a href="#überprüfung-durch-modellierung" id="toc-überprüfung-durch-modellierung" class="nav-link" data-scroll-target="#überprüfung-durch-modellierung">Überprüfung durch Modellierung</a></li>
+  <li><a href="#initial-exploration" id="toc-initial-exploration" class="nav-link" data-scroll-target="#initial-exploration">3.1 Initial exploration</a></li>
+  <li><a href="#documentword-topic-relations" id="toc-documentword-topic-relations" class="nav-link" data-scroll-target="#documentword-topic-relations">3.2 Document/Word-topic relations</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -358,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 09: 🔨 Text as data in R</h1>
+<h1 class="title">Exercise 10: 🔨 Automatic analysis of text in R</h1>
 <p class="subtitle lead">Digital disconnection on Twitter</p>
 </div>
 
@@ -367,6 +375,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16.01.2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -380,18 +394,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-03.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file (TODO Update Link)</p>
-<p><a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio"><img src="../img/badge-binder_rstudio.svg" class="img-fluid" alt="Binder RStudio"></a> Open this exercise in interactive and executable environment (TODO Update Binder)</p>
+<p><a href="(https://faucommsci.github.io/dbd_2023/slides/slides-10.html)"><img src="../img/badge-quarto-slide.svg" class="img-fluid" alt="Quarto Slides"></a> Open session slides</p>
+<p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-10.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file</p>
 </div>
 </div>
 </div>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="notes">
+<p>„<strong>Digital disconnection</strong> is a <strong>deliberate</strong> (i.e., chosen by the individual) form of <strong>non-use</strong> of devices, platforms, features, interactions, and/or messages that occurs with higher or lower frequencies, and for shorter or longer periods of time, after the initial adoption of these technologies, and with the aim of <strong>restoring or improving one’s perceived</strong> overuse, social interactions, psychological <strong>well-being</strong>, productivity, privacy and/or perceived usefulness“. <span class="citation" data-cites="nassen2023">(<a href="#ref-nassen2023" role="doc-biblioref">Nassen et al. 2023</a>)</span></p>
+</div>
+</div>
+</div>
 <ul>
-<li>TODO Digital disconnection and why it is important</li>
-<li>TODO Digital disconnection on Twitter</li>
+<li><p>Increasing trend towards <strong>more conscious use of digital media (devices)</strong>, including <strong>(deliberate) non-use</strong> with the aim to <strong>restore or improve psychological well-being</strong> (among other factors)</p></li>
+<li><p>But how do “we” talk about digital detox/disconnection: 💊 drug, 👹 demon or 🍩 donut?</p></li>
 </ul>
-<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -402,708 +431,429 @@ Todays’s data basis: Twitter dataset
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>TODO Beschreibung der Erhebung:
+<li>Collection of all tweets up to the beginning of 2023 that mention or discuss digital detox (and similar terms) on Twitter (not 𝕏)</li>
+<li>Initial query is searching for “digital detox”, “#digitaldetox”, “digital_detox”</li>
+<li>Access via official Academic-Twitter-API via academictwitteR <span class="citation" data-cites="barrie2021">(<a href="#ref-barrie2021" role="doc-biblioref">Barrie and Ho 2021</a>)</span> at the beginning of last year</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="preparation" class="level2">
+<h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  here, qs, <span class="co"># file management</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  magrittr, janitor, <span class="co"># data wrangling</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  easystats, sjmisc, <span class="co"># data analysis</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  ggpubr, ggwordcloud, <span class="co"># visualization</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  gt, gtExtras, <span class="co"># fancy tables</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  tidytext, textdata, widyr, <span class="co"># tidy text processing</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  quanteda, <span class="co"># quanteda text processing</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  quanteda.textplots, </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  topicmodels, stm, </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  tidyverse <span class="co"># load last to avoid masking issues</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="import-and-process-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="import-and-process-the-data">Import and process the data</h2>
+<section id="get-twitter-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-twitter-data">Get twitter data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import raw data from local</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/tweets-digital_detox.qs"</span>))<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial data processing</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="ot">&lt;-</span> tweets <span class="sc">%&gt;%</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># reformat and create datetime variables</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(created_at, <span class="sc">~</span><span class="fu">ymd_hms</span>(.)), <span class="co"># convert to dttm format</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">year</span>(created_at), </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">month</span>(created_at), </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">day =</span> <span class="fu">day</span>(created_at), </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">hour =</span> <span class="fu">hour</span>(created_at),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">minute =</span> <span class="fu">minute</span>(created_at),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create addtional variables</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">retweet_dy =</span> <span class="fu">str_detect</span>(text, <span class="st">"^RT"</span>), <span class="co"># identify retweets</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">detox_dy =</span> <span class="fu">str_detect</span>(text, <span class="st">"#digitaldetox"</span>) </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(tweet_id, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter relevant tweets</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    detox_dy <span class="sc">==</span> <span class="cn">TRUE</span>, <span class="co"># only tweets with #digitaldetox</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    retweet_dy <span class="sc">==</span> <span class="cn">FALSE</span>, <span class="co"># no retweets</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    lang <span class="sc">==</span> <span class="st">"en"</span> <span class="co"># only english tweets</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dtmdfm-creation" class="level3">
+<h3 class="anchored" data-anchor-id="dtmdfm-creation">DTM/DFM creation</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">tidytext</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">quanteda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Common HTML entities</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create tidy data</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summarized data</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tweet_id, text) </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DTM</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>tweets_dfm <span class="ot">&lt;-</span> tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cast_dfm</span>(tweet_id, text, n)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>tweets_dfm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create corpus</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>quanteda_corpus <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(text, <span class="sc">~</span><span class="fu">str_replace_all</span>(., <span class="st">"#digitaldetox"</span>, <span class="st">""</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(detox_dy, retweet_dy)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">corpus</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">docid_field =</span> <span class="st">"tweet_id"</span>, </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">text_field =</span> <span class="st">"text"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Tokenize</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>quanteda_token <span class="ot">&lt;-</span> quanteda_corpus <span class="sc">%&gt;%</span> </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">tokens</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">remove_url =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">split_tags =</span> <span class="cn">FALSE</span> <span class="co"># keep hashtags and mentions</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">tokens_tolower</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">tokens_remove</span>(</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">stopwords</span>(<span class="st">"en"</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to Document-Feature-Matrix (DFM)</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>quanteda_dfm <span class="ot">&lt;-</span> quanteda_token <span class="sc">%&gt;%</span> </span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">dfm</span>()</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>quanteda_dfm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-topic-model-data" class="level3">
+<h3 class="anchored" data-anchor-id="get-topic-model-data">Get topic model (data)</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TPM data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stm_results <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/stm_results.qs"</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Base data with topics </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>tweets_detox_topics <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/tweets-digital-detox-topics.qs"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">📋 Exercises</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objective of this exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Eigene Erhebung via API</li>
-<li>Erhebungszeitraum (vor Musk Übername/Umbenennung)</li>
-<li>Search query</li>
+<li>Brief review of the contents of the last session</li>
+<li>Teaching the basic steps for creating and analyzing document feature matrices and stm topic models</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Attention
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Before you start working on the exercise, please make sure to render all the chunks of the section <a href="#preparation">Preparation</a>. You can do this by using the “Run all chunks above”-button <img src="../img/rstudio-button-render_all_chunks_above.png" class="img-fluid"> of the next chunk.</li>
+<li>You can choose to solve some exercises using either the <code>tidytext</code> or <code>quanteda</code> functions. As the work steps differ, please select the tab with your preferred package.</li>
+<li>When in doubt, use the <code>showcase</code> (.qmd or .html) to look at the code chunks used to produce the output of the slides.</li>
+</ul>
+</div>
+</div>
+<section id="exercise-1-hashtag-co-occurence" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1-hashtag-co-occurence">📋 Exercise 1: Hashtag co-occurence</h3>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objective(s)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Recreate the network plot from the session without the token <code>#digitaldetox</code></p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">with tidytext</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">with quanteda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<ul>
+<li><strong>Create new dataset <code>tweets_dfm_cleaned</code></strong>
+<ul>
+<li>Based on the dataset <code>tweets_detox</code>,
+<ol type="1">
+<li>Use <code>mutate()</code> and create the variables
+<ul>
+<li><code>text</code> that removes the hashtag <code>"#digitaldetox"</code> using <code>str_remove_all()</code> and</li>
+<li><code>hashtag</code> that extracts hashtags from the variable <code>text</code> with the help of <code>str_extract_all()</code> (and the <code>pattern "#\\S+"</code>).</li>
+</ul></li>
+<li>Tokenize the data by using <u>only</u> <code>unnest()</code> on the variable <code>hashtag</code>.</li>
+<li>Summarize occurrences using <code>count(tweet_id, hashtags)</code>.</li>
+<li>Convert to DFM using <code>cast_dfm(tweet_id, hashtags, n)</code>.</li>
+</ol></li>
+<li>Save this transformation by creating a new dataset with the name <code>tweets_dfm_cleaned</code>.</li>
+</ul></li>
+<li><strong>Create new dataset <code>top_hashtags_tidy</code></strong>
+<ul>
+<li>Based on the dataset <code>tweets_detox</code>,
+<ol type="1">
+<li>Repeat steps 1. &amp; 2. from before.</li>
+<li>Summarize occurrences using <code>count(hashtags, sort = TRUE)</code>.</li>
+<li>Extract top 50 hashtags by using <code>slice_head(n = 50)</code>.</li>
+<li>Convert to string vector by using <code>pull()</code> .</li>
+</ol></li>
+<li>Save this transformation by creating a new dataset with the name <code>top_hashtags_tidy</code>.</li>
+</ul></li>
+<li><strong>Visualize co-occurence</strong>
+<ul>
+<li>Based on the dataset <code>tweets_dfm_cleaned</code>,
+<ol type="1">
+<li>Transform data to feature co-occurrence matrix [FCM] using <code>quanteda::fcm()</code></li>
+<li>Select relevant hashtags using <code>quanteda::fcm_select(pattern = top_hashtags_tidy, case_insensitive = FALSE).</code></li>
+<li>Visualize using <code>quanteda.textplots::textplot_network()</code></li>
+</ol></li>
+</ul></li>
+<li><strong>Interpret and compare results</strong>
+<ul>
+<li>Analyze patterns or connections among top hashtags.</li>
+<li>Discuss insights from the visualization, especially in comparison to the visualization of the slides/showcase.</li>
+</ul></li>
+</ul>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<ul>
+<li><strong>Create new dataset <code>quanteda_dfm_cleaned</code></strong><code>:</code>
+<ul>
+<li>Based on the dataset <code>quanteda_dfm</code>,
+<ul>
+<li>Use <code>quanteda::dfm_select(pattern = "#*")</code> to create a DFM containing only hashtags.</li>
+<li>Use <code>quanteda::dfm_remove(pattern = "#digitaldetox")</code> to removes the hashtag <code>"#digitaldetox"</code>.</li>
+</ul></li>
+<li>Save this transformation by creating a new dataset with the name <code>quanteda_dfm_cleaned</code>.</li>
+</ul></li>
+<li><strong>Create new dataset <code>top_hashtags_quanteda</code></strong>
+<ul>
+<li>Based on the dataset <code>quanteda_dfm_cleaned</code>,
+<ul>
+<li>Use <code>topfeatures(50)</code> o extract the top 50 most common hashtags.</li>
+<li>Use <code>names()</code> to only store the names (not the values).</li>
+</ul></li>
+<li>Save this transformation by creating a new dataset with the name <code>top_hashtags_quanteda</code>.</li>
+</ul></li>
+<li><strong>Visualize co-occurence</strong>
+<ul>
+<li>Based on the dataset <code>quanteda_dfm_cleaned</code>,
+<ol type="1">
+<li>Transform data to feature co-occurrence matrix [FCM] using <code>quanteda::fcm()</code></li>
+<li>Select relevant hashtags using <code>quanteda::fcm_select(pattern = top_hashtags_tidy, case_insensitive = FALSE)</code>.</li>
+<li>Visualize using <code>quanteda.textplots::textplot_network()</code> .</li>
+</ol></li>
+</ul></li>
+<li><strong>Interpret and compare results</strong>
+<ul>
+<li>Analyze patterns or connections among top hashtags.</li>
+<li>Discuss insights from the visualization, especially in comparison to the visualization of the slides/showcase.</li>
 </ul></li>
 </ul>
 </div>
 </div>
-</section>
-<section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<div class="cell" data-hash="exercise-10_cache/html/load-packages_3d61744a6a8c1fbb3d7abac6250aacbf">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co"> Add missing packages (and description)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  here, qs, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  magrittr, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  tidyverse, </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  janitor,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  easystats,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  sjmisc,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  tidytext, textdata,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  ggpubr,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  ggwordcloud)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new dataset tweets_dfm_cleaned |&nbsp;quanteda_dfm_cleaned</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new dataset top_hashtags_quanteda |top_hashtags_quanteda</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize co-occurence</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="codechunks-from-the-session" class="level2">
-<h2 class="anchored" data-anchor-id="codechunks-from-the-session">Codechunks from the session</h2>
-<section id="import-data-from-local" class="level3">
-<h3 class="anchored" data-anchor-id="import-data-from-local">Import data from local</h3>
-<p>TODO Update information about central variables</p>
-<table class="table">
-<caption>Variablennamen und -beschreibungen</caption>
-<colgroup>
-<col style="width: 36%">
-<col style="width: 63%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>movie_name</code></td>
-<td style="text-align: left;">Name of the film</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>release_year</code></td>
-<td style="text-align: left;">Release year</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>director</code></td>
-<td style="text-align: left;">Director of the film</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>age_difference</code></td>
-<td style="text-align: left;">Age difference between the characters in whole years</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>couple_number</code></td>
-<td style="text-align: left;">An identifier for the couple in case multiple couples are listed for this film</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>actor_1_name</code></td>
-<td style="text-align: left;">The name of the older actor in this couple</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>actor_2_name</code></td>
-<td style="text-align: left;">The name of the younger actor in this couple</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>actor_1_birthdate</code></td>
-<td style="text-align: left;">The birthdate of the older member of the couple</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>actor_2_birthdate</code></td>
-<td style="text-align: left;">The birthdate of the younger member of the couple</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>actor_1_age</code></td>
-<td style="text-align: left;">The age of the older actor when the film was released</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>actor_2_age</code></td>
-<td style="text-align: left;">The age of the younger actor when the film was released</td>
-</tr>
-</tbody>
-</table>
-<div class="cell" data-hash="exercise-10_cache/html/import-data-raw_1b34e5f7367bf4dbabe1cf7341f0d3e6">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data from URL</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/tweets-digital_detox.qs"</span>))<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check data set</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>tweets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="initial-data-check" class="level4">
-<h4 class="anchored" data-anchor-id="initial-data-check">Initial data check</h4>
+<section id="exercise-2-understanding-topic-9" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2-understanding-topic-9">📋 Exercise 2: Understanding Topic 9</h3>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Is the data ‘technically correct’?
+Objective(s)
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Take a closer look at another topic from the topic model used in the session by examining the most representative tweets and the users who post the most tweets on that topic.</p>
+</div>
+</div>
+<section id="explore-top-tweets" class="level4">
+<h4 class="anchored" data-anchor-id="explore-top-tweets">2.1: Explore top tweets</h4>
 <ul>
-<li><a href="#check-overview">How many records do we have? How many variables?</a></li>
-<li><a href="#check-overview">What are the variable names? Are they meaningful?</a></li>
-<li><a href="#check-overview">What type is each variable—e.g., numeric, categorical, logical?</a></li>
-<li>[How many unique values does each variable have?]</li>
-<li>What value occurs most frequently, and how often does it occur?</li>
-<li>Are there missing observations? If so, how frequently does this occur?</li>
+<li>Based on the dataset <code>tweets_detox_topics</code>
+<ul>
+<li>Use <code>filter()</code> to only analyze tweets that belong to <strong>topic 9</strong>. Use the variable <code>top_topic</code> for filtering.</li>
+<li>Arrange the selected tweets in descending order based on <code>top_gamma</code> values using <code>arrange(-top_gamma)</code>.</li>
+<li>Extract the top 10 tweets using <code>slice_head(n = 10)</code>.</li>
+<li>Select only relevant columns (<code>tweet_id, user_username, created_at, text, top_gamma</code>) using <code>select()</code>.</li>
+<li>Create a tabular presentation of the selected tweets using <code>gt()</code> from the gt package.</li>
+</ul></li>
+<li>Interpret and compare results (with a partner)</li>
 </ul>
-</div>
-</div>
-<section id="check-overview" class="level5">
-<h5 class="anchored" data-anchor-id="check-overview">Data overview</h5>
-<div class="cell" data-hash="exercise-10_cache/html/table-initial-overview_a9a3ccfe9f281a906da9800e5324159c">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tweets <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="check-overview-correction" class="level5">
-<h5 class="anchored" data-anchor-id="check-overview-correction">Data processing</h5>
-<div class="cell" data-hash="exercise-10_cache/html/recoding-data-to-correct_321c2331dd921bf81be296ef6aaec88b">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="ot">&lt;-</span> tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># reformat and create datetime variables</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(created_at, <span class="sc">~</span><span class="fu">ymd_hms</span>(.)), <span class="co"># convert to dttm format</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">year</span>(created_at), </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">month</span>(created_at), </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">day =</span> <span class="fu">day</span>(created_at), </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">hour =</span> <span class="fu">hour</span>(created_at),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">minute =</span> <span class="fu">minute</span>(created_at),</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create addtional variables</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">retweet_dy =</span> <span class="fu">str_detect</span>(text, <span class="st">"^RT"</span>), <span class="co"># identify retweets</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">detox_dy =</span> <span class="fu">str_detect</span>(text, <span class="st">"#digitaldetox"</span>) </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(tweet_id, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="check-location-parameter" class="level5">
-<h5 class="anchored" data-anchor-id="check-location-parameter">Summary statistics</h5>
-<div class="cell" data-hash="exercise-10_cache/html/table-location-parameter_f35ea9cd769f6650239520cb5d99f5c1">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> <span class="fu">descr</span>()</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> skimr<span class="sc">::</span><span class="fu">skim</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="explore-top-users" class="level4">
+<h4 class="anchored" data-anchor-id="explore-top-users">2.1 Explore top users</h4>
+<ul>
+<li>Based on the dataset <code>tweets_detox_topics</code>
+<ul>
+<li>Use <code>filter()</code> to only analyze tweets that belong to <strong>topic 9</strong>. Use the variable <code>top_topic</code> for filtering.</li>
+<li>Count the number of tweets per user using <code>count(user_username, sort = TRUE)</code>.</li>
+<li>Calculate the proportion of tweets for each user by creating a new column <code>prop</code> using <code>mutate(prop = round(n/sum(n)*100, 2))</code>.</li>
+<li>Extract the top 15 users with the highest engagement using <code>slice_head(n = 15)</code>.</li>
+<li>Create a tabular presentation of the selected tweets using <code>gt()</code> from the gt package.</li>
+</ul></li>
+<li>Interpret and compare results (with a partner)</li>
+</ul>
 </section>
 </section>
-<section id="distribution-over-the-years" class="level4">
-<h4 class="anchored" data-anchor-id="distribution-over-the-years">Distribution over the years</h4>
-<!-- TODO Add note for change of tweet character limit in November 2017 -->
-<div class="cell" data-hash="exercise-10_cache/html/figure-tweets-by-year_b6ce38a8f236cade6a5f5d396e906261">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> retweet_dy)) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> <span class="st">"Does the tweet contain '#digitaldetox'?"</span>) <span class="sc">+</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="top-languages" class="level4">
-<h4 class="anchored" data-anchor-id="top-languages">Top languages</h4>
-<!-- TODO Disable scientific notatino -->
-<div class="cell" data-hash="exercise-10_cache/html/figure-top-languages_582f856d2879efe2b18c954c325c04ee">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lang, detox_dy) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())  <span class="sc">%&gt;%</span> </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(lang, n) , <span class="at">y =</span> n, <span class="at">fill =</span> detox_dy)) <span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Twitter language code"</span>,</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> <span class="st">"Does the tweet contain '#digitaldetox'?"</span>) <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="top-users" class="level4">
-<h4 class="anchored" data-anchor-id="top-users">Top ‘users’</h4>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-1_c136c07d83ecc48e38ed22f4741fb548">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(user_username, detox_dy) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(detox_dy) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  sjmisc<span class="sc">::</span><span class="fu">frq</span>(</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    user_username,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">min.frq =</span> <span class="dv">500</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">sort.frq =</span> <span class="st">"desc"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="subsample-tweets-containing-digitaldetox" class="level3">
-<h3 class="anchored" data-anchor-id="subsample-tweets-containing-digitaldetox">Subsample: Tweets containing #digitaldetox</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-2_95d970d8ede64b57848c8dc892cf5088">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    detox_dy <span class="sc">==</span> <span class="cn">TRUE</span>, <span class="co"># only tweets with #digitaldetox</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    retweet_dy <span class="sc">==</span> <span class="cn">FALSE</span>, <span class="co"># no retweets</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    lang <span class="sc">==</span> <span class="st">"en"</span> <span class="co"># only english tweets</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="check-location-parameter" class="level4">
-<h4 class="anchored" data-anchor-id="check-location-parameter">Summary statistics</h4>
-<div class="cell" data-hash="exercise-10_cache/html/table-location-parameter-subsample_b31d7977d5ba2a1cc2dda4f9e55e346a">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="sc">%&gt;%</span> <span class="fu">descr</span>()</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="sc">%&gt;%</span> skimr<span class="sc">::</span><span class="fu">skim</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-</section>
-<section id="text-analysis-using-tidy-principles" class="level2">
-<h2 class="anchored" data-anchor-id="text-analysis-using-tidy-principles">Text analysis using tidy principles</h2>
-<section id="transform-to-tidy-text" class="level3">
-<h3 class="anchored" data-anchor-id="transform-to-tidy-text">Transform to ‘tidy text’</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-3_9a4f090aee3bd1c3b4c73a8f8a5eb228">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>tidy_tweets <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="transform-to-summarized-text" class="level3">
-<h3 class="anchored" data-anchor-id="transform-to-summarized-text">Transform to ‘Summarized Text’</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-4_16bbd58c89f4e33fc10ff60de7a8f82b">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>summarized_tweets <span class="ot">&lt;-</span> tidy_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(text, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="visualize-tokens" class="level3">
-<h3 class="anchored" data-anchor-id="visualize-tokens">Visualize tokens</h3>
-<section id="wordcloud" class="level4">
-<h4 class="anchored" data-anchor-id="wordcloud">Wordcloud</h4>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-5_d99e9fcfdd568f044787d71f2cc752c9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>summarized_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(wordcloud<span class="sc">::</span><span class="fu">wordcloud</span>(text, n, <span class="at">max.words =</span> <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="distribution" class="level4">
-<h4 class="anchored" data-anchor-id="distribution">Distribution</h4>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-7_180e821d045cfe2d81de85c4644bc159">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>summarized_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n<span class="sc">/</span><span class="fu">sum</span>(n))) <span class="sc">+</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-</section>
-<section id="modeling-realtionships-between-words" class="level2">
-<h2 class="anchored" data-anchor-id="modeling-realtionships-between-words">Modeling realtionships between words</h2>
-<section id="create-bigrams" class="level3">
-<h3 class="anchored" data-anchor-id="create-bigrams">Create bigrams</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-8_7f23048db77794bb8290dc8343489fc3">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tidy_bigrams <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"text"</span>, text,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"ngrams"</span>, <span class="at">n =</span> <span class="dv">2</span> ) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word, </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(text)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="filtering-couting" class="level3">
-<h3 class="anchored" data-anchor-id="filtering-couting">Filtering &amp; couting</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-9_217688582d89beb79898b7f3ccfe81f6">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>filtered_bigrams <span class="ot">&lt;-</span> tidy_bigrams <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(text, <span class="fu">c</span>(<span class="st">"word1"</span>, <span class="st">"word2"</span>), <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>word1 <span class="sc">%in%</span> stop_words<span class="sc">$</span>word) <span class="sc">%&gt;%</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>word2 <span class="sc">%in%</span> stop_words<span class="sc">$</span>word) </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>count_bigrams <span class="ot">&lt;-</span> filtered_bigrams <span class="sc">%&gt;%</span>   </span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word1, word2, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>summarized_bigrams_untied <span class="ot">&lt;-</span> filtered_bigrams <span class="sc">%&gt;%</span> </span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unite</span>(bigram, word1, word2, <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(bigram, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="visulisation" class="level3">
-<h3 class="anchored" data-anchor-id="visulisation">Visulisation</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-10_3c2e28f62d4489b57f242768c5b7ef75">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggraph)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>bigrams_graph <span class="ot">&lt;-</span> count_bigrams <span class="sc">%&gt;%</span> </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">250</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  igraph<span class="sc">::</span><span class="fu">graph_from_data_frame</span>()</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(bigrams_graph, <span class="at">layout =</span> <span class="st">"fr"</span>) <span class="sc">+</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_link</span>() <span class="sc">+</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>() <span class="sc">+</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-11_4d4b1cb2abada11749b2bc231482774d">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> grid<span class="sc">::</span><span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">"closed"</span>, <span class="at">length =</span> <span class="fu">unit</span>(.<span class="dv">15</span>, <span class="st">"inches"</span>))</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(bigrams_graph, <span class="at">layout =</span> <span class="st">"fr"</span>) <span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_link</span>(</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">edge_alpha =</span> n), <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">arrow =</span> a, <span class="at">end_cap =</span> <span class="fu">circle</span>(.<span class="dv">07</span>, <span class="st">'inches'</span>)) <span class="sc">+</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>(<span class="at">color =</span> <span class="st">"lightblue"</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="correlation" class="level3">
-<h3 class="anchored" data-anchor-id="correlation">Correlation</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-12_3c6742b7e6ed914db2a8990ebe5e60ac">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(widyr) </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>pairs_tweets <span class="ot">&lt;-</span> tidy_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pairwise_count</span>(text, tweet_id, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>word_cors <span class="ot">&lt;-</span> tidy_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(text) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;=</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pairwise_cor</span>(text, tweet_id, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>word_cors <span class="sc">%&gt;%</span> </span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(item1 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"detox"</span>, <span class="st">"digital"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item1) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(correlation, <span class="at">n =</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">item2 =</span> <span class="fu">reorder</span>(item2, correlation)) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(item2, correlation)) <span class="sc">+</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> item1, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="get-sentiment" class="level3">
-<h3 class="anchored" data-anchor-id="get-sentiment">Get sentiment</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-13_a54c4e86d78afcb4a60305250ad109ac">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sentiment_tweets <span class="ot">&lt;-</span> tidy_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>     <span class="fu">get_sentiments</span>(<span class="st">"bing"</span>),</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tweet_id, sentiment) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sentiment, <span class="at">values_from =</span> n, <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> positive <span class="sc">-</span> negative) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="visualization" class="level3">
-<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
-<section id="distribution-1" class="level4">
-<h4 class="anchored" data-anchor-id="distribution-1">Distribution</h4>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-14_cd42186d9927e1ee932c957524a065ed">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sentiment_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">as.factor</span>(sentiment))) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-15_b81b0667e55227bc774fe31c0c5347e5">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> sentiment_tweets<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(sentiment_tweets) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    sentiment,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> <span class="st">"Does the tweet contain '#digitaldetox'?"</span>) <span class="sc">+</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> sentiment_tweets<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(sentiment_tweets) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>    sentiment,</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> <span class="st">"Does the tweet contain '#digitaldetox'?"</span>) <span class="sc">+</span></span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-16_47fe3df9622391b088c51cea43f4ff41">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janeaustenr)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>book_words <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(book, word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>total_words <span class="ot">&lt;-</span> book_words <span class="sc">%&gt;%</span> </span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(n))</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>book_words <span class="ot">&lt;-</span> <span class="fu">left_join</span>(book_words, total_words)</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>book_words</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 40,379 × 4</span></span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    book              word      n  total</span></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;fct&gt;             &lt;chr&gt; &lt;int&gt;  &lt;int&gt;</span></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Mansfield Park    the    6206 160460</span></span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Mansfield Park    to     5475 160460</span></span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Mansfield Park    and    5438 160460</span></span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Emma              to     5239 160996</span></span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Emma              the    5201 160996</span></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Emma              and    4896 160996</span></span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Mansfield Park    of     4778 160460</span></span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Pride &amp; Prejudice the    4331 122204</span></span>
-<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Emma              of     4291 160996</span></span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Pride &amp; Prejudice to     4162 122204</span></span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with 40,369 more rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-17_4174fce9f9ddfef77a671dba6d0cb330">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">linenumber =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">chapter =</span> <span class="fu">cumsum</span>(<span class="fu">str_detect</span>(text, </span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>                                <span class="fu">regex</span>(<span class="st">"^chapter [</span><span class="sc">\\</span><span class="st">divxlc]"</span>, </span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))) <span class="sc">%&gt;%</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text)</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>jane_austen_sentiment <span class="ot">&lt;-</span> tidy_books <span class="sc">%&gt;%</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(book, <span class="at">index =</span> linenumber <span class="sc">%/%</span> <span class="dv">80</span>, sentiment) <span class="sc">%&gt;%</span></span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sentiment, <span class="at">values_from =</span> n, <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> positive <span class="sc">-</span> negative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="filter-hashtags" class="level3">
-<h3 class="anchored" data-anchor-id="filter-hashtags">Filter hashtags</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-18_92a848184a13c9c14e7c33dc4f95b1c3">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hashtags =</span> <span class="fu">str_extract_all</span>(text, <span class="st">"#</span><span class="sc">\\</span><span class="st">S+"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(hashtags) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tweet_id, hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">user =</span> <span class="fu">paste0</span>(<span class="st">"@"</span>, user_username),</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">mentions =</span> <span class="fu">str_extract_all</span>(text, <span class="st">"@</span><span class="sc">\\</span><span class="st">S+"</span>)</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(mentions) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mentions, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  quanteda<span class="sc">::</span><span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>  quanteda.textplots<span class="sc">::</span><span class="fu">textplot_network</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="tf-idf" class="level3">
-<h3 class="anchored" data-anchor-id="tf-idf">TF-IDF</h3>
-<div class="cell" data-hash="exercise-10_cache/html/unnamed-chunk-19_21db8a05600e6d9b8609c8481bb82fec">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>words_tweets <span class="ot">&lt;-</span> tidy_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tweet_id, text, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>words_total <span class="ot">&lt;-</span> words_tweets <span class="sc">%&gt;%</span> </span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(tweet_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total =</span> <span class="fu">sum</span>(n))</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>tweets_words <span class="ot">&lt;-</span> <span class="fu">left_join</span>(words_tweets, words_total)</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>tweets_tf_idf <span class="ot">&lt;-</span> <span class="fu">bind_tf_idf</span>(tweets_words, text, tweet_id, n)</span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>tweets_tf_idf <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(tf_idf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="exercise-welche-rolle-spielt-das-geschlecht" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-welche-rolle-spielt-das-geschlecht">📋 Exercise: Welche Rolle spielt das Geschlecht?</h2>
+<section id="exercise-3-expolore-different-topic-model" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3-expolore-different-topic-model">📋 Exercise 3: Expolore different topic model</h3>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Spielt das Geschlecht eine Rolle?
+Objective(s)
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>In the session, three models were considered for closer examination. Choose one of the other topics and recreate all the steps for the initial exploration of the topic model (as in the session).</p>
+</div>
+</div>
+<section id="initial-exploration" class="level4">
+<h4 class="anchored" data-anchor-id="initial-exploration">3.1 Initial exploration</h4>
 <ul>
-<li>Der folgende Abschitt befasst sich nun ergänzend mit der Frage, welche Rolle das Geschlecht mit Blick auf die “Gültigkeit” der vorherigen Ergebnisse spielt</li>
-<li>Dazu sind jedoch weitere Explorations- und Überarbeitungsschritte notwendig</li>
-</ul>
-</div>
-</div>
-<section id="übeprüfung-der-_gender-variablen" class="level3">
-<h3 class="anchored" data-anchor-id="übeprüfung-der-_gender-variablen">Übeprüfung der <code>_gender</code>-Variablen</h3>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_correct</code> die Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> an.</p>
-</div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/exercise_1_ae924106f28c3672651946cf381fefec">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(actor_1_gender, actor_2_gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::flat_talbe()</code> und den Datensatz <code>age_gaps_correct</code> um eine Kreuztabelle der Variablen <code>actor_1_gender</code> und <code>actor_2_gender</code> zu erstellen.</p>
-</div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/exercise_2_6e19b1e635cde158ad798fabffda6548">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(actor_1_gender, actor_2_gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flat_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="sind-die-daten-konsistent" class="level3">
-<h3 class="anchored" data-anchor-id="sind-die-daten-konsistent">Sind die Daten “konsistent”?</h3>
-<section id="überprüfung-der-sortierung" class="level4">
-<h4 class="anchored" data-anchor-id="überprüfung-der-sortierung">Überprüfung der Sortierung</h4>
-<div class="cell" data-hash="exercise-10_cache/html/table-check-variable-arrangement_97031b703193408b0dc7ec819f7a8bbc">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_older =</span> <span class="fu">mean</span>(actor_1_age <span class="sc">&gt;</span> actor_2_age), <span class="co"># older person first?</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">p1_male  =</span> <span class="fu">mean</span>(actor_1_gender <span class="sc">==</span> <span class="st">"man"</span>),  <span class="co"># male person first? </span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">p_1_first_alpha =</span> <span class="fu">mean</span>(actor_1_name <span class="sc">&lt;</span> actor_2_name) <span class="co"># alphabetical order?</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="überprüfung-der-anzahl-pro-paare-pro-film" class="level3">
-<h3 class="anchored" data-anchor-id="überprüfung-der-anzahl-pro-paare-pro-film">Überprüfung der Anzahl pro Paare pro Film</h3>
-<div class="cell" data-hash="exercise-10_cache/html/table-check-couple-numbers_2d0feaadcda8453dbdd25f4120f8bfad">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>couples <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(movie_name) <span class="sc">%&gt;%</span> </span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) </span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribution</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> <span class="fu">frq</span>(n)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Movies with a loot of couples </span></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>couples <span class="sc">%&gt;%</span> </span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="korrekturen" class="level3">
-<h3 class="anchored" data-anchor-id="korrekturen">Korrekturen</h3>
-<div class="cell" data-hash="exercise-10_cache/html/recoding-data-to-consistent_f2757933b8c4a3b120a37d0b370e66a2">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="ot">&lt;-</span> age_gaps_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If multiple couples, assign couple number by movie</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">couple_number =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">.by =</span> <span class="st">"movie_name"</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Change data structure (one line per actor in a coulpe of a movie)</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">"actor_1_"</span>, <span class="st">"actor_2_"</span>)),</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">".value"</span>),</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">"_"</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Put older actor first</span></span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(age_difference), movie_name, birthdate) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(<span class="st">"movie_name"</span>, <span class="st">"couple_number"</span>)</span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">"position"</span>,</span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_glue =</span> <span class="st">"actor_{position}_{.value}"</span>,</span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"gender"</span>, <span class="st">"birthdate"</span>, <span class="st">"age"</span>)</span>
-<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">couple_structure =</span> <span class="fu">case_when</span>(</span>
-<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"woman"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">&amp;</span> actor_2_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">!=</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">3</span>, </span>
-<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>      actor_1_gender <span class="sc">==</span> <span class="st">"man"</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
-<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">older_male_hetero  =</span> sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>      couple_structure, </span>
-<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">rec=</span><span class="st">"3=0; 4=1; ELSE=NA"</span>, </span>
-<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">to.factor =</span> <span class="cn">TRUE</span></span>
-<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="die-zweite-datenexploration" class="level2">
-<h2 class="anchored" data-anchor-id="die-zweite-datenexploration">Die zweite Datenexploration</h2>
-<section id="alterskombinationen-im-überblick" class="level3">
-<h3 class="anchored" data-anchor-id="alterskombinationen-im-überblick">Alterskombinationen im Überblick</h3>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nutzen Sie die Funktion <code>sjmisc::frq()</code> und schauen Sie sich im Datensatz <code>age_gaps_consistent</code> die Variablen <code>couple_structure</code> und <code>older_male_hetero</code> an.</p>
-</div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/exercise_3_7f8cff1e32a4bb14eea6ede15bbb222f">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(couple_structure, older_male_hetero)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts" class="level3">
-<h3 class="anchored" data-anchor-id="wie-sind-die-altersunterschiede-unterteilt-unter-berücksichtiung-des-geschlechts">Wie sind die Altersunterschiede unterteilt, unter Berücksichtiung des Geschlechts?</h3>
-<section id="graphische-überprüfung" class="level4">
-<h4 class="anchored" data-anchor-id="graphische-überprüfung">Graphische Überprüfung</h4>
-<div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 4
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<li><strong>Explore a different topic model (estimation)</strong>
 <ul>
-<li>Erstellen Sie, auf Basis des Datensatzes <code>age_gaps_consistent</code>, einen <code>ggplot</code>.</li>
-<li>Nutzen Sie im Argument <code>aes()</code> die Variable <code>age_difference</code> als <code>x</code>-Variable und <code>older_male_hetero</code> für das Argument <code>fill</code>.</li>
-<li>Nutzen Sie <code>geom_bar</code> zur Erzeugung des Plots.</li>
-<li><em>Optional: Verwenden Sie <code>theme_pubr</code></em></li>
+<li>Based on the dataset <code>stm_results</code>,
+<ul>
+<li>Use the <code>filter(k == X)</code> to select a different topic model (estimation) of your choice (by defining <code>X</code>).<br>
+<em>Tip: Use <code>stm_results$k</code> to see available options for <code>X</code></em></li>
+<li>Use <code>pull(mdl) %&gt;% .[[1]]</code> to select the topic model (estimation) with the specified number of topics.</li>
+</ul></li>
+<li>Save this transformation by creating a new dataset with the name <code>tpm_new</code>.</li>
+</ul></li>
+<li><strong>Visual exploration of <code>tpm_new</code></strong>
+<ul>
+<li>Visualize the summary of the selected topic model using <code>plot(type = "summary")</code> .</li>
+</ul></li>
 </ul>
-</div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/exercise_4_960cbcfc5f97c139b806df47aa24169c">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age_difference, <span class="at">fill =</span> older_male_hetero)) <span class="sc">+</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="exercise-10_cache/html/exercise_4_2_e44e05ac2667c6d7906743cdd5b6ec89">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>age_gaps_consistent <span class="sc">%&gt;%</span> </span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age_difference, <span class="at">fill =</span> older_male_hetero)) <span class="sc">+</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Altersdifferenz (in Jahren)"</span>,</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'Anzahl der "Beziehungen"'</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Older partner in couple"</span>,</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"#F8766D"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"#00BFC4"</span>, <span class="st">"NA"</span> <span class="ot">=</span> <span class="st">"grey"</span>),</span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"Woman"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Man"</span>, <span class="st">"NA"</span> <span class="ot">=</span> <span class="st">"Same sex couples"</span>)</span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explore a different topic model (estimation)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>tpm_new <span class="ot">&lt;-</span> stm_results <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(k <span class="sc">==</span> ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">pull</span>(mdl) <span class="sc">%&gt;%</span> .[[<span class="dv">1</span>]]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual exploration of tpm_new</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="überprüfung-durch-modellierung" class="level4">
-<h4 class="anchored" data-anchor-id="überprüfung-durch-modellierung">Überprüfung durch Modellierung</h4>
-<div class="cell" data-hash="exercise-10_cache/html/model-age-difference-release-year-gender-lm_4bb20f669859ea6151b15f07bdbc6b70">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>mdl <span class="ot">&lt;-</span> <span class="fu">lm</span>(age_difference <span class="sc">~</span> release_year <span class="sc">+</span> older_male_hetero, <span class="at">data =</span> age_gaps_consistent)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> parameters<span class="sc">::</span><span class="fu">parameters</span>()</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> performance<span class="sc">::</span><span class="fu">model_performance</span>()</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>mdl <span class="sc">%&gt;%</span> report<span class="sc">::</span><span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="documentword-topic-relations" class="level4">
+<h4 class="anchored" data-anchor-id="documentword-topic-relations">3.2 Document/Word-topic relations</h4>
+<ul>
+<li><strong>Calculate mean gamma values</strong>
+<ul>
+<li>based on the dataset <code>tpm_new</code>
+<ul>
+<li>Use <code>tidy(matrix = "gamma")</code> on <code>tpm_new</code> to get the gamma values.</li>
+<li>Calculate the mean gamma values for each topic using <code>group_by()</code> and <code>summarise()</code>.</li>
+<li>Use <code>arrange()</code> to sort topics (descending) by <code>gamma</code></li>
+</ul></li>
+<li>Save this transformation by creating a new dataset with the name <code>top_gamma_new</code>.</li>
+</ul></li>
+<li><strong>Identify top terms of each topic</strong>
+<ul>
+<li>based on the dataset <code>tpm_new</code>
+<ul>
+<li>Use <code>tidy(matrix = "beta")</code> on <code>tpm_new</code> to get the beta values.</li>
+<li>Arrange terms within each topic in descending order based on beta values using <code>group_by()</code>, <code>arrange(-beta)</code>, and <code>top_n(10, wt = beta)</code>.</li>
+<li>Select relevant columns (<code>topic, term</code>) using <code>select()</code>.</li>
+<li>Summarize the top 10 terms for each topic using <code>summarise(terms_beta = toString(term), .groups = "drop")</code>.</li>
+</ul></li>
+<li>Save this transformation by creating a new dataset with the name <code>top_beta_new</code>.</li>
+</ul></li>
+<li><strong>Combine top topics and top terms</strong>
+<ul>
+<li>Join the dataframes <code>top_gamma_new</code> and <code>top_beta_new</code> based on the “<code>topic</code>” column using <code>left_join()</code>.</li>
+<li>Within <code>mutate()</code>, - Adjusted topic names by <code>topic = paste0("Topic ", topic)</code> and - Reorder the dataset with <code>topic = reorder(topic, gamma)</code></li>
+<li>Save this transformation by creating a new dataset with the name <code>top_topics_terms_new</code>.</li>
+</ul></li>
+<li><strong>Preview the results</strong>
+<ul>
+<li>Display a table preview of the top topics and terms with rounded gamma values using gt()</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean gamma values</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify top terms of each topic</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine top topics and top terms</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the esults</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+
 </section>
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-barrie2021" class="csl-entry" role="listitem">
+Barrie, Christopher, and Justin Ho. 2021. <span>“academictwitteR: An r Package to Access the Twitter Academic Research Product Track V2 API Endpoint.”</span> <em>Journal of Open Source Software</em> 6 (62): 3272. <a href="https://doi.org/10.21105/joss.03272">https://doi.org/10.21105/joss.03272</a>.
+</div>
+<div id="ref-nassen2023" class="csl-entry" role="listitem">
+Nassen, Lise-Marie, Heidi Vandebosch, Karolien Poels, and Kathrin Karsay. 2023. <span>“Opt-Out, Abstain, Unplug. A Systematic Review of the Voluntary Digital Disconnection Literature.”</span> <em>Telematics and Informatics</em> 81 (June): 101980. <a href="https://doi.org/10.1016/j.tele.2023.101980">https://doi.org/10.1016/j.tele.2023.101980</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1452,6 +1202,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../exercise/exercise-09_solution.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercise 09</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../computing/computing-textbooks.html" class="pagination-link">
+        <span class="nav-page-text">R Textbooks</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

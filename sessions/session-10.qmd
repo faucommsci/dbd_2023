@@ -1,6 +1,6 @@
 ---
-title: "Session 9"
-subtitle: "📂 P2: 📦 Data collection methods"
+title: "Session 10"
+subtitle: "🔨 Automatic analysis of text in R "
 bibliography: references_sessions.bib
 csl: ../apa-cv.csl 
 suppress-bibliography: true
@@ -8,41 +8,23 @@ link-citations: false
 citations-hover: false
 ---
 
-## Mandatory literature
+## Participate
 
-::: {.callout-important appearance="simple"}
-All articles of this section have to be read & used by the presenting group
-:::
+🖥️ [Session 10](/slides/slides-10.html)
 
--   [@baumgartner2022]
+🧷 [Showcase](/exercise/showcase-10.qmd)
 
--   [@ohme2023]
+## Practice
 
--   [@skatova2019]
+📋 [Exercise 10](/exercise/exercise-10.html)
 
--   [@vandriel2022]
+## Suggested readings
 
--   [@yee2022]
+-   @atteveldt2021
 
-### Other additional readings 
+-   @silge2017
 
--   [@breuer2022]
-
--   [@nyhuis2021]
-
--   [@jünger2021]
-
--   [@jünger2022]
-
--   [@lomborg2014]
-
--   [@ohme2021]
-
--   [@puschmann2017]
-
--   [@janetzko2016]
-
-<br>
+-   @silge
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/index.html "Course schedule") ⏎

@@ -69,11 +69,19 @@ website:
             text: "Session 07"
           - href: sessions/session-08.qmd
             text: "Session 08"
+          - href: sessions/session-09.qmd
+            text: "Session 09"
+          - href: sessions/session-10.qmd
+            text: "Session 10"
 
       - section: "Exercises"
         contents:
           - href: exercise/exercise-03.qmd
             text: "Exercise 03"
+          - href: exercise/exercise-09_solution.qmd
+            text: "Exercise 09"
+          - href: exercise/exercise-10.qmd
+            text: "Exercise 10"
 
       - section: "Computing"
         contents:

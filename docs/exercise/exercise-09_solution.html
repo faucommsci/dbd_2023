@@ -83,6 +83,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../exercise/exercise-10.html" rel="next">
+<link href="../exercise/exercise-03.html" rel="prev">
 <link href="../img/logo_fau_red.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -133,7 +135,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercise 09: 🔨 Text as data in R</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercise/exercise-03.html">Exercises</a></li><li class="breadcrumb-item"><a href="../exercise/exercise-09_solution.html">Exercise 09</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -252,21 +254,45 @@ div.csl-indent {
  <span class="menu-text">Session 08</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 10</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercise/exercise-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-09_solution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercise 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 10</span></a>
   </div>
 </li>
       </ul>
@@ -317,14 +343,14 @@ div.csl-indent {
   <ul>
   <li><a href="#exercise-1-transform-to-tidy-text" id="toc-exercise-1-transform-to-tidy-text" class="nav-link" data-scroll-target="#exercise-1-transform-to-tidy-text">📋 Exercise 1: Transform to ‘tidy text’</a></li>
   <li><a href="#exercise-2-summarize-tokens" id="toc-exercise-2-summarize-tokens" class="nav-link" data-scroll-target="#exercise-2-summarize-tokens">📋 Exercise 2: Summarize tokens</a></li>
-  </ul></li>
   <li><a href="#exercise-3-couting-and-correlating-pairs-of-words" id="toc-exercise-3-couting-and-correlating-pairs-of-words" class="nav-link" data-scroll-target="#exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#couting-word-pairs-within-tweets" id="toc-couting-word-pairs-within-tweets" class="nav-link" data-scroll-target="#couting-word-pairs-within-tweets">3.1 Couting word pairs within tweets</a></li>
   <li><a href="#pairwise-correlation" id="toc-pairwise-correlation" class="nav-link" data-scroll-target="#pairwise-correlation">3.2 Pairwise correlation</a></li>
   <li><a href="#optinal-visualization" id="toc-optinal-visualization" class="nav-link" data-scroll-target="#optinal-visualization">3.3. Optinal: Visualization</a></li>
   </ul></li>
-  <li><a href="#exercise-4-sentiment" id="toc-exercise-4-sentiment" class="nav-link" data-scroll-target="#exercise-4-sentiment">Exercise 4: Sentiment</a></li>
+  <li><a href="#exercise-4-sentiment" id="toc-exercise-4-sentiment" class="nav-link" data-scroll-target="#exercise-4-sentiment">📋 Exercise 4: Sentiment</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/exercise-09_solution.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -342,6 +368,12 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16.01.2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -355,8 +387,8 @@ div.csl-indent {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><a href="(/slides/slides-09.html)"><img src="../img/badge-quarto-slide.svg" class="img-fluid" alt="Quarto Slides"></a> Open session slides</p>
-<p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file</p>
+<p><a href="(https://faucommsci.github.io/dbd_2023/slides/slides-09.html)"><img src="../img/badge-quarto-slide.svg" class="img-fluid" alt="Quarto Slides"></a> Open session slides</p>
+<p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09_solution.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file</p>
 </div>
 </div>
 </div>
@@ -401,7 +433,7 @@ Todays’s data basis: Twitter dataset
 </section>
 <section id="preparation" class="level2">
 <h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
-<div class="cell" data-hash="exercise-09_solution_cache/html/load-packages_4d8627ba9fa8a1beb0769877111704f0">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  here, qs, <span class="co"># file management</span></span>
@@ -415,7 +447,7 @@ Todays’s data basis: Twitter dataset
 </section>
 <section id="import-and-process-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="import-and-process-the-data">Import and process the data</h2>
-<div class="cell" data-hash="exercise-09_solution_cache/html/import-data_13d47b758f877229a671bf96252744a3">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import raw data from local</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/tweets-digital_detox.qs"</span>))<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
@@ -498,15 +530,41 @@ Attention
 </ul></li>
 <li>Check if transformation was successful (e.g.&nbsp;by using the <code>print()</code> function)</li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-1_29f144010494b149792d09f72b555498">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|&nbsp;eval: false</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom stopwords</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>remove_custom_stopwords <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt; ADD NEW TERMS HERE"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new dataset tweets_tidy_cleaned</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom stopwords</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remove_custom_stopwords <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;|http*|t.c|digitaldetox"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new dataset clean_tidy_tweets</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tweets_tidy_cleaned <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_custom_stopwords)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>tweets_tidy_cleaned <span class="sc">%&gt;%</span> <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 476,176 × 37
+   tweet_id   user_username text       created_at          in_reply_to_user_id
+   &lt;chr&gt;      &lt;chr&gt;         &lt;chr&gt;      &lt;dttm&gt;              &lt;chr&gt;              
+ 1 5777201122 pblackshaw    blackberry 2009-11-16 22:03:12 &lt;NA&gt;               
+ 2 5777201122 pblackshaw    iphone     2009-11-16 22:03:12 &lt;NA&gt;               
+ 3 5777201122 pblackshaw    read       2009-11-16 22:03:12 &lt;NA&gt;               
+ 4 5777201122 pblackshaw    pew        2009-11-16 22:03:12 &lt;NA&gt;               
+ 5 5777201122 pblackshaw    report     2009-11-16 22:03:12 &lt;NA&gt;               
+ 6 5777201122 pblackshaw    teens      2009-11-16 22:03:12 &lt;NA&gt;               
+ 7 5777201122 pblackshaw    distracted 2009-11-16 22:03:12 &lt;NA&gt;               
+ 8 5777201122 pblackshaw    driving    2009-11-16 22:03:12 &lt;NA&gt;               
+ 9 5777201122 pblackshaw    bit.ly     2009-11-16 22:03:12 &lt;NA&gt;               
+10 5777201122 pblackshaw    4abr5p     2009-11-16 22:03:12 &lt;NA&gt;               
+# ℹ 476,166 more rows
+# ℹ 32 more variables: author_id &lt;chr&gt;, lang &lt;chr&gt;, possibly_sensitive &lt;lgl&gt;,
+#   conversation_id &lt;chr&gt;, user_created_at &lt;chr&gt;, user_protected &lt;lgl&gt;,
+#   user_name &lt;chr&gt;, user_verified &lt;lgl&gt;, user_description &lt;chr&gt;,
+#   user_location &lt;chr&gt;, user_url &lt;chr&gt;, user_profile_image_url &lt;chr&gt;,
+#   user_pinned_tweet_id &lt;chr&gt;, retweet_count &lt;int&gt;, like_count &lt;int&gt;,
+#   quote_count &lt;int&gt;, user_tweet_count &lt;int&gt;, user_list_count &lt;int&gt;, …</code></pre>
+</div>
 </div>
 </section>
 <section id="exercise-2-summarize-tokens" class="level3">
@@ -537,22 +595,92 @@ Attention
 </ol></li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-2_72a40e792d01e95bb477c4d6ab14cb54">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summarized data</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview Top 50 token</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check distribution parameters</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Check results with a wordcloud</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summarized data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tweets_summarized_cleaned <span class="ot">&lt;-</span> tweets_tidy_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(text, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview Top 15 token</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>tweets_summarized_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87,756 × 2
+   text                 n
+   &lt;chr&gt;            &lt;int&gt;
+ 1 digital           8521
+ 2 detox             6623
+ 3 time              6001
+ 4 phone             4213
+ 5 unplug            4021
+ 6 day               3020
+ 7 life              2548
+ 8 social            2449
+ 9 mindfulness       2408
+10 media             2264
+11 week              1848
+12 unplugging        1674
+13 weekend           1651
+14 health            1649
+15 hnology           1644
+16 mentalhealth      1611
+17 smartphone        1610
+18 screen            1557
+19 nature            1421
+20 travel            1411
+21 wellbeing         1397
+22 break             1386
+23 addiction         1355
+24 listen            1342
+25 kids              1339
+26 sleep             1315
+27 wellness          1301
+28 read              1297
+29 tips              1247
+30 retreat           1242
+31 family            1232
+32 discuss           1225
+33 socialmedia       1208
+34 devices           1184
+35 screentime        1183
+36 icphenomenallyu   1181
+37 offline           1072
+38 free              1071
+39 days              1068
+40 world             1068
+41 check             1062
+42 5                 1013
+43 disconnect        1003
+44 feel               980
+45 enjoy              950
+46 switchoff          949
+47 people             941
+48 digitalwellbeing   937
+49 book               932
+50 love               922
+# ℹ 87,706 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check distribution parameters </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>tweets_summarized_cleaned <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">describe_distribution</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Variable | Mean |    SD | IQR |           Range | Skewness | Kurtosis |     n | n_Missing
+-----------------------------------------------------------------------------------------
+n        | 5.43 | 62.69 |   0 | [1.00, 8521.00] |    67.71 |  6936.19 | 87756 |         0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Check results with a wordcloud</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tweets_summarized_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">top_n</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">label =</span> text, <span class="at">size =</span> n)) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    ggwordcloud<span class="sc">::</span><span class="fu">geom_text_wordcloud</span>() <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="exercise-09_solution_files/figure-html/exercise-2-solution-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 </section>
-</section>
-<section id="exercise-3-couting-and-correlating-pairs-of-words" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</h2>
+<section id="exercise-3-couting-and-correlating-pairs-of-words" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</h3>
 <section id="couting-word-pairs-within-tweets" class="level4">
 <h4 class="anchored" data-anchor-id="couting-word-pairs-within-tweets">3.1 Couting word pairs within tweets</h4>
 <ul>
@@ -566,10 +694,72 @@ Attention
 <li>Use the argument <code>n = 50</code> to display the top 50 token (only possible if argument <code>sort = TRUE</code> was used when running the <code>count()</code> function)</li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-3-1_c246a0d2b25cecc56732584bf293452a">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Couting word pairs among sections</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Couting word pairs among sections</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>tweets_word_pairs_cleand <span class="ot">&lt;-</span> tweets_tidy_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  widyr<span class="sc">::</span><span class="fu">pairwise_count</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">item =</span> text,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">feature =</span> tweet_id,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check </span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>tweets_word_pairs_cleand <span class="sc">%&gt;%</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,958,758 × 3
+   item1                 item2                     n
+   &lt;chr&gt;                 &lt;chr&gt;                 &lt;dbl&gt;
+ 1 detox                 digital                5195
+ 2 digital               detox                  5195
+ 3 media                 social                 1999
+ 4 social                media                  1999
+ 5 discuss               listen                 1185
+ 6 listen                discuss                1185
+ 7 listen                unplugging             1183
+ 8 unplugging            listen                 1183
+ 9 discuss               unplugging             1181
+10 icphenomenallyu       unplugging             1181
+11 icphenomenallyu       listen                 1181
+12 unplugging            discuss                1181
+13 icphenomenallyu       discuss                1181
+14 unplugging            icphenomenallyu        1181
+15 listen                icphenomenallyu        1181
+16 discuss               icphenomenallyu        1181
+17 time                  digital                 958
+18 digital               time                    958
+19 screen                time                    883
+20 time                  screen                  883
+21 unplug                detox                   799
+22 detox                 unplug                  799
+23 dqqdpucxoe            unplugging              793
+24 dqqdpucxoe            listen                  793
+25 dqqdpucxoe            discuss                 793
+26 dqqdpucxoe            icphenomenallyu         793
+27 unplugging            dqqdpucxoe              793
+28 listen                dqqdpucxoe              793
+29 discuss               dqqdpucxoe              793
+30 icphenomenallyu       dqqdpucxoe              793
+31 unplug                digital                 791
+32 digital               unplug                  791
+33 time                  detox                   789
+34 detox                 time                    789
+35 phonefree             disconnecttoreconnect   682
+36 disconnecttoreconnect phonefree               682
+37 phonefree             switchoff               673
+38 switchoff             phonefree               673
+39 digitalminimalism     phonebreakup            636
+40 phonebreakup          digitalminimalism       636
+41 digitalminimalism     phonefree               633
+42 phonefree             digitalminimalism       633
+43 time                  unplug                  628
+44 unplug                time                    628
+45 disconnecttoreconnect switchoff               617
+46 switchoff             disconnecttoreconnect   617
+47 time                  phone                   616
+48 phone                 time                    616
+49 phonefree             phonebreakup            615
+50 phonebreakup          phonefree               615
+# ℹ 2,958,708 more rows</code></pre>
+</div>
 </div>
 </section>
 <section id="pairwise-correlation" class="level4">
@@ -584,19 +774,79 @@ Attention
 <em>Please feel free to select an X of your choice, however, I would strongly recommend an <strong>X &gt; 100</strong>, as otherwise the following function might not be able to compute.</em></li>
 <li>create word correlations using <code>widyr::pairwise_cor()</code>, with the arguments <code>item = text</code>,<code>feature = tweet_id</code> and <code>sort = TRUE</code>.</li>
 </ol></li>
-<li>Save this transformation by creating a new dataset with the name <code>tweets_word_pairs_cleand</code>.</li>
+<li>Save this transformation by creating a new dataset with the name <code>tweets_pairs_corr_cleaned</code>.</li>
 </ul></li>
 <li>Check pairs with highest correlation by using the <code>print()</code> function.</li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-3-2_c805f5f8b0e5361dc812bae23867684e">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Getting pairwise correlation </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check pairs with highest correlation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Getting pairwise correlation </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tweets_pairs_corr_cleaned <span class="ot">&lt;-</span> tweets_tidy_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(text) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;=</span> <span class="dv">250</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pairwise_cor</span>(text, tweet_id, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check pairs with highest correlation</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>tweets_pairs_corr_cleaned <span class="sc">%&gt;%</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 62,250 × 3
+   item1             item2             correlation
+   &lt;chr&gt;             &lt;chr&gt;                   &lt;dbl&gt;
+ 1 jocelyn           brewer                  0.999
+ 2 brewer            jocelyn                 0.999
+ 3 jocelyn           discusses               0.983
+ 4 discusses         jocelyn                 0.983
+ 5 igjzl0z4b7        locally                 0.982
+ 6 locally           igjzl0z4b7              0.982
+ 7 discusses         brewer                  0.982
+ 8 brewer            discusses               0.982
+ 9 icphenomenallyu   discuss                 0.981
+10 discuss           icphenomenallyu         0.981
+11 taniamulry        wealth                  0.979
+12 wealth            taniamulry              0.979
+13 locally           cabins                  0.977
+14 cabins            locally                 0.977
+15 igjzl0z4b7        cabins                  0.970
+16 cabins            igjzl0z4b7              0.970
+17 jocelyn           nutrition               0.968
+18 nutrition         jocelyn                 0.968
+19 nutrition         brewer                  0.967
+20 brewer            nutrition               0.967
+21 discusses         nutrition               0.951
+22 nutrition         discusses               0.951
+23 icphenomenallyu   listen                  0.937
+24 listen            icphenomenallyu         0.937
+25 discuss           listen                  0.923
+26 listen            discuss                 0.923
+27 screenlifebalance mindfulliving           0.920
+28 mindfulliving     screenlifebalance       0.920
+29 limited           locally                 0.919
+30 locally           limited                 0.919
+31 screenlifebalance socialmediafast         0.915
+32 socialmediafast   screenlifebalance       0.915
+33 igjzl0z4b7        limited                 0.913
+34 limited           igjzl0z4b7              0.913
+35 limited           cabins                  0.908
+36 cabins            limited                 0.908
+37 taniamulry        info                    0.905
+38 info              taniamulry              0.905
+39 socialmediafast   digitaladdiction        0.904
+40 digitaladdiction  socialmediafast         0.904
+41 media             social                  0.901
+42 social            media                   0.901
+43 socialmediafast   mindfulliving           0.893
+44 mindfulliving     socialmediafast         0.893
+45 jocelyn           digitalnutrition        0.893
+46 digitalnutrition  jocelyn                 0.893
+47 brewer            digitalnutrition        0.892
+48 digitalnutrition  brewer                  0.892
+49 wealth            info                    0.891
+50 info              wealth                  0.891
+# ℹ 62,200 more rows</code></pre>
+</div>
 </div>
 </section>
-<section id="optinal-visualization" class="level3">
-<h3 class="anchored" data-anchor-id="optinal-visualization">3.3. Optinal: Visualization</h3>
+<section id="optinal-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="optinal-visualization">3.3. Optinal: Visualization</h4>
 <ul>
 <li>Customize the parameters in the following code chunk:
 <ul>
@@ -605,28 +855,31 @@ Attention
 </ul></li>
 <li>Set <code>#|eval : true</code> to execute chunk</li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-3-3_64fa2947e0d4bee4e66cba9a701bd4dd">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameters</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>selected_words <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"digital"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>number_of_correlates <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize correlates</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>tweets_pairs_corr_cleaned <span class="sc">%&gt;%</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(item1 <span class="sc">%in%</span> selected_words) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item1) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(correlation, <span class="at">n =</span> number_of_correlates) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">item2 =</span> <span class="fu">reorder</span>(item2, correlation)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(item2, correlation)) <span class="sc">+</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> item1, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameters</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>selected_words <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"digital"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>number_of_correlates <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize correlates</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>tweets_pairs_corr_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(item1 <span class="sc">%in%</span> selected_words) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item1) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(correlation, <span class="at">n =</span> number_of_correlates) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">item2 =</span> <span class="fu">reorder</span>(item2, correlation)) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(item2, correlation)) <span class="sc">+</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> item1, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="exercise-09_solution_files/figure-html/exercise-3-3-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 </section>
 </section>
-<section id="exercise-4-sentiment" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-sentiment">Exercise 4: Sentiment</h2>
+<section id="exercise-4-sentiment" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-4-sentiment">📋 Exercise 4: Sentiment</h3>
 <ul>
 <li>Apply <code>afinn</code> dictionary to get sentiment
 <ul>
@@ -648,20 +901,55 @@ Attention
 <li>Based on the newly created dataset tweets_sentiment_cleaned, create a ggplot with <code>sentiment</code> as aes() and by using <code>geom_histogram()</code>.</li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_solution_cache/html/exercise-4_ad3b98206aff4183d0c34d16e20eb9c6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply 'afinn' dictionary to get sentiment</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check transformation</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check distribution statistics </span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize distribution</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply 'afinn' dictionary to get sentiment</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tweets_sentiment_cleaned <span class="ot">&lt;-</span> tweets_tidy_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> <span class="fu">get_sentiments</span>(<span class="st">"afinn"</span>),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(tweet_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">sentiment =</span> <span class="fu">sum</span>(value))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check transformation</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>tweets_sentiment_cleaned <span class="sc">%&gt;%</span> <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 23,956 × 2
+   tweet_id            sentiment
+   &lt;chr&gt;                   &lt;dbl&gt;
+ 1 1000009901563838465         6
+ 2 1000038819520008193         1
+ 3 1000042717492187136        15
+ 4 1000043574673715203        -1
+ 5 1000075155891281925         2
+ 6 1000094334660825088         3
+ 7 1000104543395315713        -2
+ 8 1000255467434729472        -1
+ 9 1000305076286697472         4
+10 1000349838595248128         1
+# ℹ 23,946 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check distribution statistics </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>tweets_sentiment_cleaned <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">describe_distribution</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Variable  | Mean |   SD | IQR |           Range | Skewness | Kurtosis |     n | n_Missing
+-----------------------------------------------------------------------------------------
+sentiment | 1.24 | 2.77 |   4 | [-13.00, 21.00] |     0.40 |     1.66 | 23956 |         0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize distribution</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>tweets_sentiment_cleaned <span class="sc">%&gt;%</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(sentiment)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="exercise-09_solution_files/figure-html/exercise-4-solution-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
@@ -1020,6 +1308,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../exercise/exercise-03.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercise 03</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../exercise/exercise-10.html" class="pagination-link">
+        <span class="nav-page-text">Exercise 10</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

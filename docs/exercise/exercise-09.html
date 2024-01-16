@@ -252,6 +252,18 @@ div.csl-indent {
  <span class="menu-text">Session 08</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/session-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 10</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -267,6 +279,18 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../exercise/exercise-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-09_solution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercise/exercise-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 10</span></a>
   </div>
 </li>
       </ul>
@@ -317,14 +341,14 @@ div.csl-indent {
   <ul>
   <li><a href="#exercise-1-transform-to-tidy-text" id="toc-exercise-1-transform-to-tidy-text" class="nav-link" data-scroll-target="#exercise-1-transform-to-tidy-text">📋 Exercise 1: Transform to ‘tidy text’</a></li>
   <li><a href="#exercise-2-summarize-tokens" id="toc-exercise-2-summarize-tokens" class="nav-link" data-scroll-target="#exercise-2-summarize-tokens">📋 Exercise 2: Summarize tokens</a></li>
-  </ul></li>
   <li><a href="#exercise-3-couting-and-correlating-pairs-of-words" id="toc-exercise-3-couting-and-correlating-pairs-of-words" class="nav-link" data-scroll-target="#exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#couting-word-pairs-within-tweets" id="toc-couting-word-pairs-within-tweets" class="nav-link" data-scroll-target="#couting-word-pairs-within-tweets">3.1 Couting word pairs within tweets</a></li>
   <li><a href="#pairwise-correlation" id="toc-pairwise-correlation" class="nav-link" data-scroll-target="#pairwise-correlation">3.2 Pairwise correlation</a></li>
   <li><a href="#optinal-visualization" id="toc-optinal-visualization" class="nav-link" data-scroll-target="#optinal-visualization">3.3. Optinal: Visualization</a></li>
   </ul></li>
-  <li><a href="#exercise-4-sentiment" id="toc-exercise-4-sentiment" class="nav-link" data-scroll-target="#exercise-4-sentiment">Exercise 4: Sentiment</a></li>
+  <li><a href="#exercise-4-sentiment" id="toc-exercise-4-sentiment" class="nav-link" data-scroll-target="#exercise-4-sentiment">📋 Exercise 4: Sentiment</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/exercise-09.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -342,6 +366,12 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16.01.2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -355,7 +385,7 @@ div.csl-indent {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><a href="(/slides/slides-09.html)"><img src="../img/badge-quarto-slide.svg" class="img-fluid" alt="Quarto Slides"></a> Open session slides</p>
+<p><a href="(../slides/slides-09.html)"><img src="../img/badge-quarto-slide.svg" class="img-fluid" alt="Quarto Slides"></a> Open session slides</p>
 <p><a href="https://github.com/faucommsci/dbd_2023/blob/main/exercise/exercise-09.qmd"><img src="../img/badge-quarto_document.svg" class="img-fluid" alt="Quarto Document"></a> Download source file</p>
 </div>
 </div>
@@ -401,7 +431,7 @@ Todays’s data basis: Twitter dataset
 </section>
 <section id="preparation" class="level2">
 <h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
-<div class="cell" data-hash="exercise-09_cache/html/load-packages_22feed3253378783aceadcae58d23e22">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  here, qs, <span class="co"># file management</span></span>
@@ -415,7 +445,7 @@ Todays’s data basis: Twitter dataset
 </section>
 <section id="import-and-process-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="import-and-process-the-data">Import and process the data</h2>
-<div class="cell" data-hash="exercise-09_cache/html/import-data_c9ef2f750a8a94ded10e9af33a1feed2">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import raw data from local</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> qs<span class="sc">::</span><span class="fu">qread</span>(<span class="fu">here</span>(<span class="st">"local_data/tweets-digital_detox.qs"</span>))<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
@@ -498,7 +528,7 @@ Attention
 </ul></li>
 <li>Check if transformation was successful (e.g.&nbsp;by using the <code>print()</code> function)</li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-1_5866f691a746e37fff8af278c8a4e072">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|&nbsp;eval: false</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom stopwords</span></span>
@@ -537,7 +567,7 @@ Attention
 </ol></li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-2_c5847416ff5d9241542f49ec59d2feba">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summarized data</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -550,9 +580,8 @@ Attention
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Check results with a wordcloud</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</section>
-<section id="exercise-3-couting-and-correlating-pairs-of-words" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</h2>
+<section id="exercise-3-couting-and-correlating-pairs-of-words" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3-couting-and-correlating-pairs-of-words">📋 Exercise 3: Couting and correlating pairs of words</h3>
 <section id="couting-word-pairs-within-tweets" class="level4">
 <h4 class="anchored" data-anchor-id="couting-word-pairs-within-tweets">3.1 Couting word pairs within tweets</h4>
 <ul>
@@ -566,7 +595,7 @@ Attention
 <li>Use the argument <code>n = 50</code> to display the top 50 token (only possible if argument <code>sort = TRUE</code> was used when running the <code>count()</code> function)</li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-3-1_d61508fca32e2550ce17cd93fd0d4201">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Couting word pairs among sections</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -588,15 +617,15 @@ Attention
 </ul></li>
 <li>Check pairs with highest correlation by using the <code>print()</code> function.</li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-3-2_384f65fc0882e137c5492e3161a765e9">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Getting pairwise correlation </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check pairs with highest correlation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="optinal-visualization" class="level3">
-<h3 class="anchored" data-anchor-id="optinal-visualization">3.3. Optinal: Visualization</h3>
+<section id="optinal-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="optinal-visualization">3.3. Optinal: Visualization</h4>
 <ul>
 <li>Customize the parameters in the following code chunk:
 <ul>
@@ -605,7 +634,7 @@ Attention
 </ul></li>
 <li>Set <code>#|eval : true</code> to execute chunk</li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-3-3_5034cb52f92c693517d8a3e84b18b8ca">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval: false</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameters</span></span>
@@ -627,8 +656,8 @@ Attention
 </div>
 </section>
 </section>
-<section id="exercise-4-sentiment" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-sentiment">Exercise 4: Sentiment</h2>
+<section id="exercise-4-sentiment" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-4-sentiment">📋 Exercise 4: Sentiment</h3>
 <ul>
 <li>Apply <code>afinn</code> dictionary to get sentiment
 <ul>
@@ -650,7 +679,7 @@ Attention
 <li>Based on the newly created dataset tweets_sentiment_cleaned, create a ggplot with <code>sentiment</code> as aes() and by using <code>geom_histogram()</code>.</li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="exercise-09_cache/html/exercise-4_7e25ac44bc4545fad94d1e606854994d">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply 'afinn' dictionary to get sentiment</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -665,6 +694,7 @@ Attention
 
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
