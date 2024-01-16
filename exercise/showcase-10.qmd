@@ -9,6 +9,9 @@ format:
     fig-height: 9
 callout-appearance: simple
 execute: 
+  cache: true
+  eval: false
+  echo: true
   message: false
   warning: false
 highlight-style: atom-one
@@ -19,6 +22,7 @@ bibliography: references_exercise.bib
 
 ::: {.callout-tip icon="false"}
 <!-- TODO Update link to slides -->
+
 [![Quarto Slides](/img/badge-quarto-slide.svg)]((../slides/slides-10.html)) Open session slides
 :::
 
@@ -95,9 +99,10 @@ tweets_detox <- tweets_correct %>%
 ```
 
 ## Text as data in R (Part II)
-### Step-by-step DTM creation
-::: {.panel-tabset}
 
+### Step-by-step DTM creation
+
+::: panel-tabset
 #### tidytext
 
 ```{r create-dtm-tidytext}
@@ -116,11 +121,11 @@ tweets_summarized <- tweets_tidy %>%
   count(tweet_id, text) 
 
 # Create DTM
-tweets_dtm <- tweets_summarized %>% 
-  cast_dtm(tweet_id, text, n)
+tweets_dfm <- tweets_summarized %>% 
+  cast_dfm(tweet_id, text, n)
 
 # Preview
-tweets_dtm
+tweets_dfm
 ```
 
 #### quanteda
@@ -157,8 +162,10 @@ quanteda_dfm
 :::
 
 ### Co-occurence of hashtags
-::: {.panel-tabset}
+
+::: panel-tabset
 #### tidytext
+
 ```{r}
 
 # Extract hashtags
@@ -208,79 +215,183 @@ quanteda_dfm_hashtags %>%
 ```
 :::
 
-
 ### Topic modeling
+
 #### Preparation
+
+##### Pruning
 
 ```{r}
 quanteda_dfm_trim <- quanteda_dfm %>% 
-  dfm_trim(min_termfreq = 5)
+  dfm_trim(
+    min_docfreq = 0.0001, 
+    max_docfreq = .099, 
+    docfreq_type = "prop"
+  )
 
-# Convert from LDA topic modeling
-quanteda_stm <- convert(quanteda_dfm_trim, to = "stm")
+quanteda_stm <- quanteda_dfm_trim %>% 
+    convert(to = "stm")
 ```
 
-##### Search K
+::: callout-warning
+Converting the trimmmed DFM to an stm object will result in an errormessage
+
+> *Warning message: In dfm2stm(x, docvars, omit_empty = TRUE) : Dropped 46,670 empty document(s)*
+
+This is due to the fact, that some tweets are "empty" or do not match with any feature after the pruning. 
+To successfully match the stm results with the original data, the "empty" tweets need to be dropped.
+To identify the empty cases, run 
+
 ```{r}
-tictoc::tic()
-stm_k <- searchK(
+#| ouptut: false
+
+# Check if tweet contains feature
+empty_docs <- Matrix::rowSums(as(quanteda_dfm_trim, "Matrix")) == 0 
+
+# Print indices of empty documents
+if (any(empty_docs)) {
+  cat("Indices of empty documents:", which(empty_docs), "\n")
+  
+  # Print corresponding docnames
+  cat("Docnames of empty documents:", quanteda_dfm_trim@docvars$docname[empty_docs], "\n")
+}
+
+# Create vector for empty tweet identification 
+empty_docs_ids <- quanteda_dfm_trim@docvars$docname[empty_docs]
+```
+::: 
+
+#### Select model
+##### based on k = 0
+```{r}
+#| eval: false
+
+stm_k0 <- stm(
     quanteda_stm$documents, 
-    quanteda_stm$vocab,
-    K = c(5,10,15), 
-    init.type = "Spectral",
-    heldout.seed = 42)
-tictoc::toc()
+    quanteda_stm$vocab, 
+    K = 0, 
+    max.em.its = 50,
+    init.type = "Spectral", 
+    seed = 42 
+  )
+
+qs::qsave(stm_k5, file = here("local_data/stm_k5.qs"))
 ```
 
+##### based on different model diagnostics
 
-
-
-#### quanteda 
 ```{r}
-#| echo: false
 #| eval: false
 
+# Set up parallel processing using furrr
+future::plan(future::multisession()) # use multiple sessions 
 
-# Extract DFM with only hashtags
-quanteda_dfm_hashtags <- quanteda_dfm %>% 
-  quanteda::dfm_select(pattern = "#*") 
+# Estimate multiple models
+stm_exploration <- tibble(K = seq(from = 5, to = 85, by = 5)) %>% 
+    mutate(mdl = furrr::future_map(k, ~stm::stm(
+      documents =  quanteda_stm$documents,
+      vocab = quanteda_stm$vocab, 
+      K = ., 
+      seed = 42,
+      max.em.its = 1000,
+      init.type = "Spectral",
+      verbose = FALSE),
+      .options = furrr::furrr_options(seed = 42))
+  )
 
-# Extract most common hashtags 
-top50_hashtags <- quanteda_dfm_hashtags %>% 
-  topfeatures(50) %>% 
-  names()
-
-# Construct feature-occurrence matrix of hashtags
-quanteda_dfm_hashtags %>% 
-  fcm() %>% 
-  fcm_select(pattern = top50_hashtags) %>% 
-  textplot_network()
+qs::qsave(stm_exploration, file = here("local_data/stm_exploration.qs"))
 ```
+
+
+```{r}
+#| eval: true
+#| echo: false
+
+stm_k5 <- qs::qread(file = here("local_data/stm_k5.qs"))
+```
+
+#### Exploration
+##### Top Topics
+```{r}
+stm_k5 %>% plot(type = "summary")
+stm_k5 %>% plot(type = "hist")
+stm_k5 %>% labelTopics()
+stm_k5 %>% findThoughts(topics = 2)
+stm_k5 %>% 
+  topicCorr(method = "huge") %>% 
+  plot()
+
+```
+
+
+##### Create prevalence
+
+```{r}
+# Create document-topic matrix (gamma)
+td_gamma <- stm_k5 %>%
+  tidytext::tidy(matrix = "gamma")
+
+gamma_dummies <- td_gamma %>%
+  dplyr::group_by(document) %>% 
+  tidyr::pivot_wider(
+    id_cols = document, 
+    names_from = "topic", 
+    names_prefix = "gamma_topic_",
+    values_from = "gamma") %>% 
+  rename(doc_id_gamma = document)
+      
+top_gamma <- td_gamma %>% 
+  dplyr::group_by(document) %>% 
+  dplyr::slice_max(gamma) %>% 
+  dplyr::mutate(main_topic = ifelse(gamma > 0.5, topic, NA)) %>% 
+  rename(
+    top_topic = topic,
+    top_gamma = gamma)
+
+tweets_detox_topics <- tweets_detox %>% 
+  filter(!(tweet_id %in% empty_docs_ids)) %>% 
+  bind_cols(top_gamma)
+  
+
+```
+
+##### Distribution of topics over time
+
+```{r}
+tweets_detox_topics %>% 
+  mutate(across(top_topic, as.factor)) %>% 
+  ggplot(aes( top_topic, fill = top_topic)) +
+  geom_bar()+ 
+  facet_grid(rows = vars(year)) +
+  theme_minimal()
+```
+
+##### Focus on specific topics
+
+```{r}
+tweets_detox_topics %>% 
+  filter(top_topic == 3) %>% 
+  arrange(-top_gamma) %>% 
+  slice_head(n = 10) %>% 
+  select(tweet_id, user_username, created_at, text, top_gamma) %>% 
+  gt()
+
+```
+
+##### Top Users
+
+```{r}
+tweets_detox_topics %>% 
+  filter(top_topic == 3) %>% 
+  sjmisc::frq(user_username)
+
+```
+
+
 
 <!-- TODO Exercise; Create FCM without #digitaldetox -->
 
-## Topic Modeling
-### Preparation
-
-```{r}
-#| echo: false
-#| eval: false
-
-# Pruning
-quanteda_dfm_trim <- quanteda_dfm %>% 
-  dfm_trim( 
-    min_docfreq = 10/nrow(tweets_detox),
-    max_docfreq = 0.99, 
-    docfreq_type = "prop")
-
-# Convert for stm topic modeling
-quanteda_dtm <- quanteda_dfm_trim %>% 
-   convert(to = "topicmodels")
-```
 
 <!-- TODO Slides: Dispaly "feature" reduction -->
 
-
 <!-- TODO Exercise Re-Run analysis with deduplication -->
-
-
