@@ -1,0 +1,253 @@
+---
+title: "Q&A"
+subtitle: "Session 11"
+date: 24 01 2024
+date-format: "DD.MM.YYYY"
+bibliography: references_slides.bib
+---
+
+## Schedule
+
+```{r setup-slide-session}
+#| echo: false
+
+# Load packages
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidytext, textdata, widyr, # tidy text processing
+  quanteda, # quanteda text processing
+  quanteda.textplots, 
+  topicmodels, stm, 
+  tidyverse # load last to avoid masking issues
+  )
+```
+
+```{r table-schedule-b}
+#| echo: false 
+
+new_schedule_d %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px"
+    ) %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 16,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = c(1:12, 14:15)
+        )
+    )
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  [First some answers ...](#answers)
+2.  [... then some questions](#questions)
+
+# First some answers ... {#answers background-image="img/slide_bg-orga.png"}
+
+Die Zeit nach den Sitzungen, Prüfungsleistungen und Stand des Datensatzes
+
+## What is expected (Update)
+
+#### Leistungsanforderungen & Prüfungsleistungen
+
+![](img/session-01/graphic-portfolio_parts_update.png){fig-align="center"}
+
+::: notes
+-   Feedback?
+:::
+
+## {{< fa person-chalkboard >}} Project topic idea(s)
+
+#### Projektidee vorstellen & weiterentwickeln
+
+-   **Umfang**: maximal 10 Minuten & 5 Slides pro Gruppe
+-   **Ziel**: Idee für Gruppenprojekt präsentieren, offene Fragen klären und Zeit für Diskussion & Feedback
+-   **Deadline** 31.01.
+
+<br>
+
+::: columns
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/fff4o qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/fff4o)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/5mejt qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/5mejt)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/bv9cj qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/bv9cj)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/asoyd qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/asoyd)
+:::
+:::
+
+## Pitch ➞ Diskussion ➞ Repeat
+
+#### Ablauf der Sitzung in der nächsten Woche
+
+::: columns
+::: {.column width="50%"}
+***Project topic idea(s)*** **(ca 5-10 Min)**
+
+-   kurzer Überblick über Thema, Forschungsfrage oder Motivation & ausgewählte Daten(teil)stichprobe (2 Folien),
+-   kurze Beschreibung von Methode und (geplanter) Analyse (1 Folie)
+-   Ergebnisse und/oder eine Herausforderung aufzeigen, die im Kurs diskutiert werden soll(en) (2 Folien).
+:::
+
+::: {.column width="50%"}
+**Fragen & Diskussion (ca 5-10 Min)**
+
+-   Zeit für Fragen, entweder von der Gruppe an den Kurs oder umgekehrt.
+:::
+:::
+
+::: {style="text-align: center;"}
+🔁 **für jede Gruppe**
+:::
+
+::: notes
+-   Status bzw. erster Ergebnisse der Project Proposal & Short Repots (max. 5 Folien)
+:::
+
+## {{< fa file-lines >}} Project proposal
+
+#### Erster Entwurf des short report
+
+::: columns
+::: {.column width="70%"}
+-   **Umfang**: mindestens 500 Wörter
+-   **Ziel**: Forschungsfrage (weiter-)entwickeln und verschriftlichen sowie frühzeitige Entwicklung einer spezifischen Analysestrategie
+-   **Deadline** 11.02.
+-   Zusendung von **Google Docs Vorlage**
+:::
+
+::: {.column width="30%"}
+<br>
+
+[![](https://upload.wikimedia.org/wikipedia/commons/0/01/Google_Docs_logo_%282014-2020%29.svg){fig-align="center" width="180"}](https://docs.google.com/document/d/1EYLfap6qOcDO5Bgw2dC3kVZhCQUEKN5_9jkUcHgP3ss/edit#heading=h.gjdgxs)
+:::
+:::
+
+## {{< fa comments >}} Peer Review
+
+#### Feedback für Bericht geben & bekommmen
+
+::: columns
+::: {.column width="70%"}
+-   **Umfang:** Schriftliches Feedback via Peer-Review-Formular
+-   **Ziel**: Konstruktives Feedback schreiben
+-   **Deadline**: 18.02.
+-   Verwendung eines **Google Forms**
+:::
+
+::: {.column width="30%"}
+<br>
+
+[![](https://upload.wikimedia.org/wikipedia/commons/5/5b/Google_Forms_2020_Logo.svg){fig-align="center" width="180"}](https://docs.google.com/forms/d/e/1FAIpQLSfGeVDCdEuglwGiO6XXjAFyT4rgSRGfEmyzHmRfjKYFBXT6ow/viewform)
+:::
+:::
+
+## {{< fa file-signature >}} Short Report
+
+#### Zusammenführung der einzelnen Teileistungen
+
+::: columns
+::: {.column width="50%"}
+-   **Umfang:** Grupppenbericht zu Kursthema mit 1200 bis 2400 Wörter (abhängig von Gruppengröße)
+-   **Ziel(e)**: Anwendung vorgestellter Methoden & Daten
+-   **Deadline**: 10.03.
+-   Verwendung eines **Quarto Journal Templates**
+:::
+
+::: {.column width="50%"}
+[![](img/session-11/screenshot-quarto_journals.png){fig-align="center"}](https://quarto-journals.github.io/jasa/)
+:::
+:::
+
+## A work in pogress
+
+#### Status des Datensatzes: Mehr Vorarbeit, weniger Issues
+
+-   Aktueller Fokus: Datensatzbereinigung und Komprimierung
+
+-   Aktuelles Problem: Duplikatsidentifikation
+
+-   Dokumentation der Überarbeitung wird zur Verfügung gestellt
+
+# Now some questions {background-image="img/slide_bg-participation.png"}
+
+R-Sitzungen, Kurseevaluation
+
+## Fragen über Fragen
+
+#### Ihre Feedback zu den praktischen R-Sitzungen
+
+-   Wie war es für Sie?
+-   Wie sind Sie zurechtgekomment mit ...
+    -   R/RStudio?
+    -   den Inhalten (Textanalyse, Topic Modeling,etc)?
+    -   Englisch?
+-   Haben Sie Verbesserungsvorschläge?
+
+## Quick check
+
+#### Kurze Nachfrage zur Evaluation der Veranstaltung `Digital behavioral data`
+
+::: columns
+::: {.column width="50%"}
+*Bitte nehmen Sie über den QR Code oder folgenden Link an der Evaluation teil:*
+
+-   **Link:** [eva.fau.de](https://www.eva.fau.de)
+-   **Losung: WADPG**
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+{{< qrcode https://eva.fau.de/evasys/public/online/index qr5 width=400 height=400 colorDark='#C50F3C' >}}
+:::
+:::
+
+# Time for questions {background-image="img/slide_bg-question.png"}
+
+# Bis zur nächsten Sitzung! {background-image="img/slide_bg-end_session.png"}
+
+## Literatur
+
+::: {#refs}
+:::
