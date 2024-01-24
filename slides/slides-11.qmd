@@ -214,16 +214,24 @@ R-Sitzungen, Kurseevaluation
 
 ## Fragen über Fragen
 
-#### Ihre Feedback zu den praktischen R-Sitzungen
+#### R-Sitzungen & Kurseevaluation
 
--   Wie war es für Sie?
+-   Wie waren die praktischen R-Sitzungen für Sie?
 -   Wie sind Sie zurechtgekomment mit ...
     -   R/RStudio?
     -   den Inhalten (Textanalyse, Topic Modeling,etc)?
     -   Englisch?
--   Haben Sie Verbesserungsvorschläge?
 
-## Quick check
+
+. . .
+
+
+-   Haben Sie an der Kursevaluation teilgenommen?
+
+
+
+
+## Quick check {visibility="hidden"}
 
 #### Kurze Nachfrage zur Evaluation der Veranstaltung `Digital behavioral data`
 
