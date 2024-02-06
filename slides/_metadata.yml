@@ -16,8 +16,8 @@ format:
     footer: "[Home](https://faucommsci.github.io/dbd_2023/)"
     slide-number: true
     preview-links: auto
-    template-partials:
-      - title-slide.html
+    # template-partials:
+    #   - title-slide.html
     chalkboard:
       buttons: false
 
