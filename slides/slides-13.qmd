@@ -1,0 +1,404 @@
+---
+title: "Final session"
+subtitle: "Session 13"
+date: 07 02 2024
+date-format: "DD.MM.YYYY"
+bibliography: references_slides.bib
+---
+
+## Schedule
+
+```{r setup-slide-session}
+#| echo: false
+
+# Load packages
+source(here::here("slides/schedule.R"))
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, qs, # file management
+  magrittr, janitor, # data wrangling
+  easystats, sjmisc, # data analysis
+  ggpubr, ggwordcloud, # visualization
+  gt, gtExtras, # fancy tables
+  tidytext, textdata, widyr, # tidy text processing
+  quanteda, # quanteda text processing
+  quanteda.textplots, 
+  topicmodels, stm, 
+  tidyverse # load last to avoid masking issues
+  )
+```
+
+```{r table-schedule-b}
+#| echo: false
+
+new_schedule_d %>% 
+    gt::gt() %>% 
+    gt::fmt_markdown() %>% 
+    gt::tab_options(
+        table.width = gt::pct(75), 
+        table.font.size = "12px"
+    ) %>% 
+    gtExtras::gt_theme_nytimes() %>% 
+    # mark session
+    gtExtras::gt_highlight_rows(
+        rows = 18,
+        fill = "#C50F3C", alpha = 0.15,
+        bold_target_only = TRUE,
+        target_col = Topic
+    ) %>%
+    # mark past Session
+    gt::tab_style(
+        style = cell_text(
+            style = "italic", 
+            color = "grey"),
+        location = cells_body(
+            columns = everything(), 
+            rows = c(1:12, 14:17)
+        )
+    )
+```
+
+# Agenda {background-image="img/slide_bg-agenda.png"}
+
+1.  [Update der Prüfungleistungen](#poll)
+2.  [Kurzpräsentationen](#project-topic-ideas)
+3.  [Organisation & -koordination](#organisation-koordination)
+4.  [Evaluation & offene Fragen](#eval)
+
+## Option A oder B?
+
+#### Anpassung der verbleibenden Prüfungsleistungen
+
+```{r assignments-option-a}
+#| echo: false
+
+timelien_json <- '[
+    {
+        "deadline": "2024-02-07",
+        "assignment": "Project topic idea(s) \\n [10 Punkte]", 
+        "choice": "Option A",
+        "direction": "1", 
+        "position": "0.5"
+    },
+    {
+        "deadline": "2024-03-10",
+        "assignment": "Short report \\n [40 Punkte]", 
+        "choice": "Option A",
+        "direction": "1", 
+        "position": "2"
+    },
+    {
+        "deadline": "2024-02-07",
+        "assignment": "Project topic idea(s) \\n [10 Punkte]", 
+        "choice": "Option B",
+        "direction": "-1",
+        "position": "-0.5"
+    },
+    {
+        "deadline": "2024-03-01",
+        "assignment": "Short report (1st draft) \\n [Unbenotet]", 
+        "choice": "Option B",
+        "direction": "-1",
+        "position": "-1"
+    },
+    {
+        "deadline": "2024-03-07",
+        "assignment": "Peer Review \\n [20 Punkte]", 
+        "choice": "Option B", 
+        "direction": "-1",
+        "position": "-1.5"
+    },
+    {
+        "deadline": "2024-03-14",
+        "assignment": "Short report (Final draft) \\n [40 Punkte]", 
+        "choice": "Option B", 
+        "direction": "-1",
+        "position": "-2"
+    }
+]'
+
+## Load schedule to environment
+timeline <- fromJSON(timelien_json) %>% 
+    tibble() %>% 
+    mutate(
+        across(deadline, ~ymd(.)),
+        across(choice, ~as.factor(.)), 
+        across(direction:position, ~as.numeric(.)), 
+        year = year(deadline), 
+        month = month(deadline),
+        day = day(deadline),
+        text_position = ((abs(position) + 0.4)*direction)
+    )
+```
+
+```{r}
+#| echo: false 
+
+# Parameter definition
+choice_type_levels <- c("Option A", "Option B")
+choice_type_colors <- c("#04316A", "#C50F3C")
+
+# Timeline
+days_buffer <- 7
+days_date_range <- seq(
+  min(timeline$deadline) - days(days_buffer), 
+  max(timeline$deadline) + days(days_buffer),
+  by = 'day'
+)
+days_format <- format(days_date_range, "%d")
+days_df <- data.frame(days_date_range, days_format)
+
+# Create a sequence of all months between the minimum and maximum deadlines
+all_months <- seq(
+  floor_date(min(timeline$deadline), unit = "month"),
+  ceiling_date(max(timeline$deadline), unit = "month"),
+  by = 'month'
+)
+# Ensure that the month_date_range includes all months, even if no data points exist
+rounded_month_date_range <- unique(floor_date(all_months, unit = "month"))
+# Format the months
+month_format <- format(rounded_month_date_range, '%B') 
+# Create a data frame for months
+month_df <- data.frame(rounded_month_date_range, month_format) %>% 
+  slice_head(n = 2)
+
+# Plotting using ggplot
+timeline_plot <- timeline %>% 
+  ggplot(aes(
+    x = deadline,
+    y = position,
+    color = choice,
+    label = assignment)
+  ) +
+  geom_hline(
+    yintercept = 0, 
+    color = "black",
+    linewidth = 0.3
+  ) +
+  geom_segment(
+    aes(y = position, yend = 0, xend = deadline),
+    linetype = "dotted", color = 'black', linewidth = 0.2
+  ) +
+  geom_point(
+    aes(y = position), 
+    size = 3
+  ) +
+  geom_text(
+    data = days_df, 
+    aes(x = days_date_range, y = -0.15, label = days_format),
+    size = 3.5, vjust = 0.5, color = 'black', angle = 90
+  ) +
+  geom_text(
+    data = month_df,
+    aes(x = rounded_month_date_range, y = -0.4, label = month_format, fontface = "bold"),
+    size = 3.5, color = 'black'
+  ) +
+  geom_text(
+    aes(y=text_position,label=assignment),
+    size=4, vjust=0.4) +
+  scale_color_manual(
+    values = choice_type_colors, 
+    labels = choice_type_levels, 
+    drop = FALSE
+  ) +
+  labs(color = "Choice") +
+  theme_classic() +
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.line.x = element_blank(),
+    legend.position = "bottom"
+  )
+
+# Display the plot
+timeline_plot
+```
+
+## {{< fa person-chalkboard >}} Vorstellung der Project topic idea(s)
+
+#### Pitch (max 10 Min.) ➞ Diskussion (± 5 Min.) ➞ Repeat
+
+<br> <br>
+
+::: columns
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/fff4o qr1 width=200 height=200 colorDark='#C50F3C' >}} [Gruppe A](https://t1p.de/fff4o)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/5mejt qr2 width=200 height=200 colorDark='#18B4F1' >}} [Gruppe B](https://t1p.de/5mejt)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/bv9cj qr3 width=200 height=200 colorDark='#7BB725' >}} [Gruppe C](https://t1p.de/bv9cj)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="20%"}
+{{< qrcode https://t1p.de/asoyd qr4 width=200 height=200 colorDark='#FDB735' >}} [Gruppe D](https://t1p.de/asoyd)
+:::
+:::
+
+# Organisation & -koordination {#organisation-koordination background-image="img/slide_bg-orga.png"}
+
+Informationen zu den Prüfungsleistungen
+
+## {{< fa comments >}} Peer Review
+
+#### Feedback für Bericht geben & bekommmen
+
+::: columns
+::: {.column width="70%"}
+-   Verwendung eines **Google Forms**
+-   Einschätzung des Berichtes anhand von **vier Fragen/Skalen**
+-   Offene Antwort für Anmerkungen zu Stärken und Schwächen sowie Verbesserungsvorschläge
+
+**Vorteil für Sie:**
+
+-   **Mindestens zwei Einschätzungen (inklusive möglicher Verbesserungsvorschläge) zu Ihrem Bericht**
+:::
+
+::: {.column width="30%"}
+<br>
+
+[![](https://upload.wikimedia.org/wikipedia/commons/5/5b/Google_Forms_2020_Logo.svg){fig-align="center" width="180"}](https://docs.google.com/forms/d/e/1FAIpQLSfGeVDCdEuglwGiO6XXjAFyT4rgSRGfEmyzHmRfjKYFBXT6ow/viewform)
+:::
+:::
+
+## {{< fa file-signature >}} Short Report
+
+#### Formale Anforderungen
+
+::: columns
+::: {.column width="55%"}
+-   **750 bis 1000 Wörter pro Person**. Bei **Gruppenbericht** skaliert die Anzahl der Wörter mit einem **Faktor von 0,8 pro Person** (z. B. sollte eine Zweiergruppe 1200 bis 1600 Wörter schreiben, eine Dreiergruppe 1800 bis 2400 Wörter).
+-   Alle Analysen sowie der schriftliche Bericht müssen **in RStudio durchgeführt bw. geschrieben** werden und alle Bestandteile des Projekts müssen reproduzierbar sein.
+:::
+
+::: {.column width="45%"}
+| Total                     | 40 pts |
+|---------------------------|--------|
+| *Einführung/Theorie*      | 6 pts  |
+| *Methode*                 | 10 pts |
+| *Ergebnisse*              | 14 pts |
+| *Diskussion + Fazit*      | 6 pts  |
+| *Organization + Formalia* | 4 pts  |
+:::
+:::
+
+## Quarto-Vorlage
+
+#### {{< fa file-signature >}} Short Report
+
+::: columns
+::: {.column width="50%"}
+-   Verwendung eines [`quarto-journal`](https://github.com/quarto-journals/)-Templates ([`jasa`](https://github.com/quarto-journals/jasa))
+-   Abgabe des **RStudio-Projektes** sowie der **.pdf-Datei**
+-   RStudio-Vorlage auf [Lehrstuhl-Github](https://github.com/faucommsci/template_seminar_report)
+:::
+
+::: {.column width="50%"}
+[![](img/session-11/screenshot-quarto_journals.png){fig-align="center"}](https://quarto-journals.github.io/jasa/)
+:::
+:::
+
+## The second last version
+
+#### Informationen zum Datensatz
+
+-   Neue Version des Datensatzes (`tweets_v2.qs`) in FAUBox verfügbar
+    -   nur englische Tweets
+    -   Nahduplikate (auf Basis von normalisierten und gehashten Tweets) entfernt
+-   Zusätzliche Dokumente mit
+    -   Dokumentation der Such-Queries
+    -   vorgenommenen Verarbeitungsschritten
+
+# Evaluation (👍\|👎) {#evaluation background-image="img/slide_bg-evaluation.png"}
+
+Ergebnisse & offene Fragen
+
+## Betreuung und Veranstaltungskonzept
+
+#### FAU Lehrevaluation 1️⃣ \| 5️⃣
+
+![](img/session-13/eval_01.png)
+
+-   Wie fanden Sie die Bereitstellung der Sitzungsinhalte über eine Github-Page?
+-   Wie waren Ihre Erfahrungen mit Zulip?
+
+::: notes
+-   Betreuung (besonders Feedback) wird gelobt
+
+-   Bereitstellung der Materialen über Teams
+
+TODO: Inkrementelle Einblendung der Fragen
+:::
+
+## Interaktivität und Lernstandsüberprüfung
+
+#### FAU Lehrevaluation 2️⃣ \| 5️⃣
+
+![](img/session-13/eval_02.png)
+
+-   Idee(n) für Lernstandsüberprüfung?
+
+::: notes
+z.B. Praktische R-Übungen?
+:::
+
+## Forschungs- und Praxisbezug
+
+#### FAU Lehrevaluation 3️⃣ \| 5️⃣
+
+![](img/session-13/eval_03.png)
+
+-   Wie fanden Sie die Arbeit mit R?
+
+::: notes
+TODO: Inkrementelle Einblendung der Fragen
+:::
+
+## Schwierigkeit und Umfang
+
+#### FAU Lehrevaluation 4️⃣ \| 5️⃣
+
+![](img/session-13/eval_04.png)
+
+-   Welche Hinweise (mit Blick auf das Vorwissen) wären hilfreich gewesen?
+
+::: notes
+1.  Empirisches Arbeiten? Coding? ...
+:::
+
+## Globale Veranstaltungsbeurteilung
+
+#### FAU Lehrevaluation 5️⃣ \| 5️⃣
+
+![](img/session-13/eval_05.png)
+
+::: notes
+Danke für das Feedback! Haben Sie noch weitere Anmerkungen?
+:::
+
+# (Last) Time for questions {background-image="img/slide_bg-question.png"}
+
+# Vielen Dank für Ihre Teilnahme! {.unlisted background-image="img/slide_bg-end_semester.png"}
+
+## Literatur
+
+::: {#refs}
+:::
