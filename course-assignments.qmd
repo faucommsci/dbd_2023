@@ -48,9 +48,9 @@ In advance of the feedback meeting, a first complete draft of the presentation m
 
 ## 👥 Project topic idea(s) (10 Pts) {#sec-topic-ideas}
 
-Short or ad-hoc presentations ("pitches") of the status or result of your groups project work. The pitches should be about 5 to 10 minutes long, consist of max. 5 slides and be held by one group member only. The number of pitches should be balanced between the group members.
+Short or ad-hoc presentation ("pitch") of the status or result of your groups project work. The pitch should be about 5 to 10 minutes long, consist of max. 5 slides and be held by one group member only. 
 
-The aim of the pitches is to give the course and update about your projects progress as well as a basis for discussion and feedback. Therefore, you should
+The aim of the pitch is to give the course and update about your projects progress as well as a basis for discussion and feedback. Therefore, you should
 
 -   first give a short overview of your topic, research question or motivation and selected data (sub-)sample (2 slides),
 -   describe your method and analysis (1 slide) and
@@ -147,9 +147,9 @@ The written report should be **750 to 1000 words per person**. However, **when w
 The written report is worth 40 points, broken down as follows
 
 | Total                       | 40 pts |
-|-----------------------------|--------|
-| *Introduction/data*         | 6 pts  |
-| *Methodology*               | 10 pts |
+| --------------------------- | ------ |
+| *Introduction + Theory*     | 6 pts  |
+| *Methodology/Data*          | 10 pts |
 | *Results*                   | 14 pts |
 | *Discussion + conclusion*   | 6 pts  |
 | *Organization + formatting* | 4 pts  |
