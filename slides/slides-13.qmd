@@ -29,7 +29,7 @@ pacman::p_load(
   )
 ```
 
-```{r table-schedule-b}
+```{r table-schedule}
 #| echo: false
 
 new_schedule_d %>% 
@@ -70,7 +70,7 @@ new_schedule_d %>%
 
 #### Anpassung der verbleibenden Prüfungsleistungen
 
-```{r assignments-option-a}
+```{r assignments-data}
 #| echo: false
 
 timelien_json <- '[
@@ -132,7 +132,7 @@ timeline <- fromJSON(timelien_json) %>%
     )
 ```
 
-```{r}
+```{r assignments-timeline}
 #| echo: false 
 
 # Parameter definition
@@ -344,8 +344,6 @@ Ergebnisse & offene Fragen
 -   Betreuung (besonders Feedback) wird gelobt
 
 -   Bereitstellung der Materialen über Teams
-
-TODO: Inkrementelle Einblendung der Fragen
 :::
 
 ## Interaktivität und Lernstandsüberprüfung
@@ -367,10 +365,6 @@ z.B. Praktische R-Übungen?
 ![](img/session-13/eval_03.png)
 
 -   Wie fanden Sie die Arbeit mit R?
-
-::: notes
-TODO: Inkrementelle Einblendung der Fragen
-:::
 
 ## Schwierigkeit und Umfang
 
