@@ -1,0 +1,25 @@
+---
+title: "Session 13"
+subtitle: "Final session"
+bibliography: references_sessions.bib
+csl: ../apa-cv.csl 
+suppress-bibliography: true
+link-citations: false
+citations-hover: false
+---
+
+## Participate
+
+🖥️ [Session 13](/slides/slides-13.html)
+
+## Useful resources
+
+📖 Information about [Quarto Journal Formats](https://quarto.org/docs/journals/formats.html)
+
+{{< fa brands github >}} Information about [Quarto Journal Formats](https://quarto.org/docs/journals/formats.html)
+
+<br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/index.html "Course schedule") ⏎
+:::
