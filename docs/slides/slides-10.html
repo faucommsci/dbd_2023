@@ -13,7 +13,7 @@
 <script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Christoph Adrian">
   <title>Digital behavioral data - 🔨 Automatic text analysis in R</title>
@@ -36,7 +36,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -103,6 +103,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -247,7 +248,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -412,7 +414,7 @@
   </style>
 <meta property="og:title" content="Digital behavioral data - 🔨 Automatic text analysis in R">
 <meta property="og:description" content="Session 10">
-<meta property="og:site-name" content="Digital behavioral data">
+<meta property="og:site_name" content="Digital behavioral data">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -451,27 +453,26 @@
 <h2>Schedule</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="ssmribafpk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="flspovozqs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#ssmribafpk table {
+#flspovozqs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ssmribafpk thead, #ssmribafpk tbody, #ssmribafpk tfoot, #ssmribafpk tr, #ssmribafpk td, #ssmribafpk th {
+#flspovozqs thead, #flspovozqs tbody, #flspovozqs tfoot, #flspovozqs tr, #flspovozqs td, #flspovozqs th {
   border-style: none;
 }
 
-#ssmribafpk p {
+#flspovozqs p {
   margin: 0;
   padding: 0;
 }
 
-#ssmribafpk .gt_table {
+#flspovozqs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -497,12 +498,12 @@
   border-left-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_caption {
+#flspovozqs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ssmribafpk .gt_title {
+#flspovozqs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -514,7 +515,7 @@
   border-bottom-width: 0;
 }
 
-#ssmribafpk .gt_subtitle {
+#flspovozqs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -526,7 +527,7 @@
   border-top-width: 0;
 }
 
-#ssmribafpk .gt_heading {
+#flspovozqs .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -538,13 +539,13 @@
   border-right-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_bottom_border {
+#flspovozqs .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_col_headings {
+#flspovozqs .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -559,7 +560,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_col_heading {
+#flspovozqs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -579,7 +580,7 @@
   overflow-x: hidden;
 }
 
-#ssmribafpk .gt_column_spanner_outer {
+#flspovozqs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -591,15 +592,15 @@
   padding-right: 4px;
 }
 
-#ssmribafpk .gt_column_spanner_outer:first-child {
+#flspovozqs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ssmribafpk .gt_column_spanner_outer:last-child {
+#flspovozqs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ssmribafpk .gt_column_spanner {
+#flspovozqs .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 1px;
   border-bottom-color: #334422;
@@ -611,11 +612,11 @@
   width: 100%;
 }
 
-#ssmribafpk .gt_spanner_row {
+#flspovozqs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ssmribafpk .gt_group_heading {
+#flspovozqs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -641,7 +642,7 @@
   text-align: left;
 }
 
-#ssmribafpk .gt_empty_group_heading {
+#flspovozqs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -656,15 +657,15 @@
   vertical-align: middle;
 }
 
-#ssmribafpk .gt_from_md > :first-child {
+#flspovozqs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ssmribafpk .gt_from_md > :last-child {
+#flspovozqs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ssmribafpk .gt_row {
+#flspovozqs .gt_row {
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 5px;
@@ -683,7 +684,7 @@
   overflow-x: hidden;
 }
 
-#ssmribafpk .gt_stub {
+#flspovozqs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -696,7 +697,7 @@
   padding-right: 5px;
 }
 
-#ssmribafpk .gt_stub_row_group {
+#flspovozqs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -710,15 +711,15 @@
   vertical-align: top;
 }
 
-#ssmribafpk .gt_row_group_first td {
+#flspovozqs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ssmribafpk .gt_row_group_first th {
+#flspovozqs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ssmribafpk .gt_summary_row {
+#flspovozqs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -728,16 +729,16 @@
   padding-right: 5px;
 }
 
-#ssmribafpk .gt_first_summary_row {
+#flspovozqs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_first_summary_row.thick {
+#flspovozqs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ssmribafpk .gt_last_summary_row {
+#flspovozqs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -747,7 +748,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_grand_summary_row {
+#flspovozqs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -757,7 +758,7 @@
   padding-right: 5px;
 }
 
-#ssmribafpk .gt_first_grand_summary_row {
+#flspovozqs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -767,7 +768,7 @@
   border-top-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_last_grand_summary_row_top {
+#flspovozqs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -777,11 +778,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_striped {
+#flspovozqs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ssmribafpk .gt_table_body {
+#flspovozqs .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -790,7 +791,7 @@
   border-bottom-color: #FFFFFF;
 }
 
-#ssmribafpk .gt_footnotes {
+#flspovozqs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -804,7 +805,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_footnote {
+#flspovozqs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -813,7 +814,7 @@
   padding-right: 5px;
 }
 
-#ssmribafpk .gt_sourcenotes {
+#flspovozqs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -827,7 +828,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ssmribafpk .gt_sourcenote {
+#flspovozqs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -835,212 +836,194 @@
   padding-right: 5px;
 }
 
-#ssmribafpk .gt_left {
+#flspovozqs .gt_left {
   text-align: left;
 }
 
-#ssmribafpk .gt_center {
+#flspovozqs .gt_center {
   text-align: center;
 }
 
-#ssmribafpk .gt_right {
+#flspovozqs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ssmribafpk .gt_font_normal {
+#flspovozqs .gt_font_normal {
   font-weight: normal;
 }
 
-#ssmribafpk .gt_font_bold {
+#flspovozqs .gt_font_bold {
   font-weight: bold;
 }
 
-#ssmribafpk .gt_font_italic {
+#flspovozqs .gt_font_italic {
   font-style: italic;
 }
 
-#ssmribafpk .gt_super {
+#flspovozqs .gt_super {
   font-size: 65%;
 }
 
-#ssmribafpk .gt_footnote_marks {
+#flspovozqs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ssmribafpk .gt_asterisk {
+#flspovozqs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ssmribafpk .gt_indent_1 {
+#flspovozqs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ssmribafpk .gt_indent_2 {
+#flspovozqs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ssmribafpk .gt_indent_3 {
+#flspovozqs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ssmribafpk .gt_indent_4 {
+#flspovozqs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ssmribafpk .gt_indent_5 {
+#flspovozqs .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~5~"><div class="gt_from_md"><p><sub>5</sub></p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~📚 Digital disconnection~"><div class="gt_from_md"><p><del>📚 Digital disconnection</del></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~20.12.2023~"><div class="gt_from_md"><p><del>20.12.2023</del></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📦 Automatic text analysis 🎥"><div class="gt_from_md"><p>📦 Automatic text analysis 🎥</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="🔨 Automatic analysis of text in R"><div class="gt_from_md"><p>🔨 Automatic analysis of text in R</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Session" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Session</th>
+<th id="Datum" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Datum</th>
+<th id="Topic" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Topic</th>
+<th id="Presenter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Presenter</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>Introduction</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>1</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>25.10.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Kick-Off</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>01.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🎃 <em>Holiday (No Lecture)</em></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>2</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>08.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Einführung in DBD</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>3</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>15.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🔨 Working with R</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>🗣️</strong></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>Presentations</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>4</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>22.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📚 Media routines &amp; habits</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group C</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><sub>5</sub></p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>29.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>~📚 Digital disconnection~</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>6</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>06.12.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📚 Digital disconnection</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group A</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>7</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>13.12.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📦 Data collection methods</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group D</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>8</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><sub>20.12.2023</sub></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📦 Automatic text analysis 🎥</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group B</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🎄<em>Christmas Break (No Lecture)</em></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>📂 <strong>Project</strong></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p><strong>Analysis of media content</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>9</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>10.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🔨 Text as data</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>10</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>17.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15)"><p>🔨 Automatic analysis of text in R</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>11</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>24.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>🔨 Q&amp;A</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>12</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>31.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>📊 Presentation &amp; Discussion</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>All groups</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>13</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>07.02.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>🏁 Recap, Evaluation &amp; Discussion</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>Christoph Adrian</p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1074,12 +1057,12 @@
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://www.tidytextmining.com/images/tmwr_0101.png"></p>
+<p><img data-src="https://www.tidytextmining.com/images/tmwr_0101.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://www.tidytextmining.com/images/tmwr_0201.png" class="fragment"></p>
+<p><img data-src="https://www.tidytextmining.com/images/tmwr_0201.png" class="fragment quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -1096,7 +1079,7 @@
 <h2>Expansion of the pipeline</h2>
 <h4 id="focus-on-modeling-the-realtionships-between-words-documents">Focus on modeling the realtionships between words &amp; documents</h4>
 
-<img data-src="https://www.tidytextmining.com/images/tmwr_0501.png" class="r-stretch quarto-figure-center"><div style="text-align: center">
+<img data-src="https://www.tidytextmining.com/images/tmwr_0501.png" class="quarto-figure quarto-figure-center r-stretch"><div style="text-align: center">
 <p><span class="citation" data-cites="silge2017">Silge &amp; Robinson (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p>
 </div>
 </section>
@@ -1114,7 +1097,7 @@
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://www.oreilly.com/api/v2/epubs/9781491953235/files/assets/feml_0405.png"></p>
+<p><img data-src="https://www.oreilly.com/api/v2/epubs/9781491953235/files/assets/feml_0405.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <div style="text-align: center">
@@ -1129,20 +1112,20 @@
 <div style="font-size: smaller">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a><span class="co"># Common HTML entities</span></span>
-<span id="cb1-2" class="hljs-ln-code"><a href="#cb1-2"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb1-3" class="hljs-ln-code"><a href="#cb1-3"></a></span>
-<span id="cb1-4" class="hljs-ln-code"><a href="#cb1-4"></a><span class="co"># Create tidy data</span></span>
-<span id="cb1-5" class="hljs-ln-code"><a href="#cb1-5"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb1-6" class="hljs-ln-code"><a href="#cb1-6"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-7" class="hljs-ln-code"><a href="#cb1-7"></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-8" class="hljs-ln-code"><a href="#cb1-8"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-9" class="hljs-ln-code"><a href="#cb1-9"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
-<span id="cb1-10" class="hljs-ln-code"><a href="#cb1-10"></a></span>
-<span id="cb1-11" class="hljs-ln-code"><a href="#cb1-11"></a><span class="co"># Preview</span></span>
-<span id="cb1-12" class="hljs-ln-code"><a href="#cb1-12"></a>tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb1-13" class="hljs-ln-code"><a href="#cb1-13"></a>  <span class="fu">select</span>(tweet_id, user_name, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-14" class="hljs-ln-code"><a href="#cb1-14"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="co"># Common HTML entities</span></span>
+<span id="cb1-2" class="hljs-ln-code"><a></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb1-3" class="hljs-ln-code"><a></a></span>
+<span id="cb1-4" class="hljs-ln-code"><a></a><span class="co"># Create tidy data</span></span>
+<span id="cb1-5" class="hljs-ln-code"><a></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6" class="hljs-ln-code"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-7" class="hljs-ln-code"><a></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8" class="hljs-ln-code"><a></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-9" class="hljs-ln-code"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb1-10" class="hljs-ln-code"><a></a></span>
+<span id="cb1-11" class="hljs-ln-code"><a></a><span class="co"># Preview</span></span>
+<span id="cb1-12" class="hljs-ln-code"><a></a>tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb1-13" class="hljs-ln-code"><a></a>  <span class="fu">select</span>(tweet_id, user_name, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-14" class="hljs-ln-code"><a></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 639,459 × 3
@@ -1175,23 +1158,23 @@
 <div style="font-size: smaller">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="11-17"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href="#cb3-1"></a><span class="co"># Common HTML entities</span></span>
-<span id="cb3-2" class="hljs-ln-code"><a href="#cb3-2"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a></span>
-<span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a><span class="co"># Create tidy data</span></span>
-<span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb3-6" class="hljs-ln-code"><a href="#cb3-6"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-7" class="hljs-ln-code"><a href="#cb3-7"></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-8" class="hljs-ln-code"><a href="#cb3-8"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-9" class="hljs-ln-code"><a href="#cb3-9"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
-<span id="cb3-10" class="hljs-ln-code"><a href="#cb3-10"></a></span>
-<span id="cb3-11" class="hljs-ln-code"><a href="#cb3-11"></a><span class="co"># Create summarized data</span></span>
-<span id="cb3-12" class="hljs-ln-code"><a href="#cb3-12"></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb3-13" class="hljs-ln-code"><a href="#cb3-13"></a>  <span class="fu">count</span>(tweet_id, text) </span>
-<span id="cb3-14" class="hljs-ln-code"><a href="#cb3-14"></a></span>
-<span id="cb3-15" class="hljs-ln-code"><a href="#cb3-15"></a><span class="co"># Preview </span></span>
-<span id="cb3-16" class="hljs-ln-code"><a href="#cb3-16"></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
-<span id="cb3-17" class="hljs-ln-code"><a href="#cb3-17"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="11-17"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a></a><span class="co"># Common HTML entities</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb3-3" class="hljs-ln-code"><a></a></span>
+<span id="cb3-4" class="hljs-ln-code"><a></a><span class="co"># Create tidy data</span></span>
+<span id="cb3-5" class="hljs-ln-code"><a></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6" class="hljs-ln-code"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-7" class="hljs-ln-code"><a></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-8" class="hljs-ln-code"><a></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-9" class="hljs-ln-code"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb3-10" class="hljs-ln-code"><a></a></span>
+<span id="cb3-11" class="hljs-ln-code"><a></a><span class="co"># Create summarized data</span></span>
+<span id="cb3-12" class="hljs-ln-code"><a></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb3-13" class="hljs-ln-code"><a></a>  <span class="fu">count</span>(tweet_id, text) </span>
+<span id="cb3-14" class="hljs-ln-code"><a></a></span>
+<span id="cb3-15" class="hljs-ln-code"><a></a><span class="co"># Preview </span></span>
+<span id="cb3-16" class="hljs-ln-code"><a></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb3-17" class="hljs-ln-code"><a></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 592,499 × 3
@@ -1224,26 +1207,26 @@
 <div style="font-size: smaller">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="15-20"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a><span class="co"># Common HTML entities</span></span>
-<span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a></span>
-<span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a><span class="co"># Create tidy data</span></span>
-<span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb5-6" class="hljs-ln-code"><a href="#cb5-6"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb5-7" class="hljs-ln-code"><a href="#cb5-7"></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-8" class="hljs-ln-code"><a href="#cb5-8"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-9" class="hljs-ln-code"><a href="#cb5-9"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
-<span id="cb5-10" class="hljs-ln-code"><a href="#cb5-10"></a></span>
-<span id="cb5-11" class="hljs-ln-code"><a href="#cb5-11"></a><span class="co"># Create summarized data</span></span>
-<span id="cb5-12" class="hljs-ln-code"><a href="#cb5-12"></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb5-13" class="hljs-ln-code"><a href="#cb5-13"></a>  <span class="fu">count</span>(tweet_id, text) </span>
-<span id="cb5-14" class="hljs-ln-code"><a href="#cb5-14"></a></span>
-<span id="cb5-15" class="hljs-ln-code"><a href="#cb5-15"></a><span class="co"># Create DTM</span></span>
-<span id="cb5-16" class="hljs-ln-code"><a href="#cb5-16"></a>tweets_dtm <span class="ot">&lt;-</span> tweets_summarized <span class="sc">%&gt;%</span> </span>
-<span id="cb5-17" class="hljs-ln-code"><a href="#cb5-17"></a>  <span class="fu">cast_dtm</span>(tweet_id, text, n)</span>
-<span id="cb5-18" class="hljs-ln-code"><a href="#cb5-18"></a></span>
-<span id="cb5-19" class="hljs-ln-code"><a href="#cb5-19"></a><span class="co"># Preview</span></span>
-<span id="cb5-20" class="hljs-ln-code"><a href="#cb5-20"></a>tweets_dtm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="15-20"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a></a><span class="co"># Common HTML entities</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb5-3" class="hljs-ln-code"><a></a></span>
+<span id="cb5-4" class="hljs-ln-code"><a></a><span class="co"># Create tidy data</span></span>
+<span id="cb5-5" class="hljs-ln-code"><a></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6" class="hljs-ln-code"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-7" class="hljs-ln-code"><a></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8" class="hljs-ln-code"><a></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-9" class="hljs-ln-code"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb5-10" class="hljs-ln-code"><a></a></span>
+<span id="cb5-11" class="hljs-ln-code"><a></a><span class="co"># Create summarized data</span></span>
+<span id="cb5-12" class="hljs-ln-code"><a></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb5-13" class="hljs-ln-code"><a></a>  <span class="fu">count</span>(tweet_id, text) </span>
+<span id="cb5-14" class="hljs-ln-code"><a></a></span>
+<span id="cb5-15" class="hljs-ln-code"><a></a><span class="co"># Create DTM</span></span>
+<span id="cb5-16" class="hljs-ln-code"><a></a>tweets_dtm <span class="ot">&lt;-</span> tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb5-17" class="hljs-ln-code"><a></a>  <span class="fu">cast_dtm</span>(tweet_id, text, n)</span>
+<span id="cb5-18" class="hljs-ln-code"><a></a></span>
+<span id="cb5-19" class="hljs-ln-code"><a></a><span class="co"># Preview</span></span>
+<span id="cb5-20" class="hljs-ln-code"><a></a>tweets_dtm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;&lt;DocumentTermMatrix (documents: 46670, terms: 87172)&gt;&gt;
@@ -1263,53 +1246,53 @@ Weighting          : term frequency (tf)</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Common HTML entities</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># Create tidy data</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-8"><a href="#cb7-8"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-9"><a href="#cb7-9"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co"># Create summarized data</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb7-13"><a href="#cb7-13"></a>  <span class="fu">count</span>(tweet_id, text) </span>
-<span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="co"># Create DTM</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a>tweets_dtm <span class="ot">&lt;-</span> tweets_summarized <span class="sc">%&gt;%</span> </span>
-<span id="cb7-17"><a href="#cb7-17"></a>  <span class="fu">cast_dtm</span>(tweet_id, text, n)</span>
-<span id="cb7-18"><a href="#cb7-18"></a></span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="co"># Preview</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a>tweets_dtm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Common HTML entities</span></span>
+<span id="cb7-2"><a></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="co"># Create tidy data</span></span>
+<span id="cb7-5"><a></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-7"><a></a>    <span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-9"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a><span class="co"># Create summarized data</span></span>
+<span id="cb7-12"><a></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb7-13"><a></a>  <span class="fu">count</span>(tweet_id, text) </span>
+<span id="cb7-14"><a></a></span>
+<span id="cb7-15"><a></a><span class="co"># Create DTM</span></span>
+<span id="cb7-16"><a></a>tweets_dtm <span class="ot">&lt;-</span> tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb7-17"><a></a>  <span class="fu">cast_dtm</span>(tweet_id, text, n)</span>
+<span id="cb7-18"><a></a></span>
+<span id="cb7-19"><a></a><span class="co"># Preview</span></span>
+<span id="cb7-20"><a></a>tweets_dtm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Create corpus</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>quanteda_corpus <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  quanteda<span class="sc">::</span><span class="fu">corpus</span>(</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="at">docid_field =</span> <span class="st">"tweet_id"</span>, </span>
-<span id="cb8-5"><a href="#cb8-5"></a>    <span class="at">text_field =</span> <span class="st">"text"</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>  )</span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="co"># Tokenize</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>quanteda_token <span class="ot">&lt;-</span> quanteda_corpus <span class="sc">%&gt;%</span> </span>
-<span id="cb8-10"><a href="#cb8-10"></a>  quanteda<span class="sc">::</span><span class="fu">tokens</span>(</span>
-<span id="cb8-11"><a href="#cb8-11"></a>    <span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-12"><a href="#cb8-12"></a>    <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb8-13"><a href="#cb8-13"></a>    <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb8-14"><a href="#cb8-14"></a>    <span class="at">remove_url =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb8-15"><a href="#cb8-15"></a>    <span class="at">split_tags =</span> <span class="cn">FALSE</span> <span class="co"># keep hashtags and mentions</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-17"><a href="#cb8-17"></a>  quanteda<span class="sc">::</span><span class="fu">tokens_tolower</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb8-18"><a href="#cb8-18"></a>  quanteda<span class="sc">::</span><span class="fu">tokens_remove</span>(</span>
-<span id="cb8-19"><a href="#cb8-19"></a>    <span class="at">pattern =</span> <span class="fu">stopwords</span>(<span class="st">"en"</span>)</span>
-<span id="cb8-20"><a href="#cb8-20"></a>    )</span>
-<span id="cb8-21"><a href="#cb8-21"></a></span>
-<span id="cb8-22"><a href="#cb8-22"></a><span class="co"># Convert to Document-Feature-Matrix (DFM)</span></span>
-<span id="cb8-23"><a href="#cb8-23"></a>quanteda_dfm <span class="ot">&lt;-</span> quanteda_token <span class="sc">%&gt;%</span> </span>
-<span id="cb8-24"><a href="#cb8-24"></a>  quanteda<span class="sc">::</span><span class="fu">dfm</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Create corpus</span></span>
+<span id="cb8-2"><a></a>quanteda_corpus <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a></a>  quanteda<span class="sc">::</span><span class="fu">corpus</span>(</span>
+<span id="cb8-4"><a></a>    <span class="at">docid_field =</span> <span class="st">"tweet_id"</span>, </span>
+<span id="cb8-5"><a></a>    <span class="at">text_field =</span> <span class="st">"text"</span></span>
+<span id="cb8-6"><a></a>  )</span>
+<span id="cb8-7"><a></a></span>
+<span id="cb8-8"><a></a><span class="co"># Tokenize</span></span>
+<span id="cb8-9"><a></a>quanteda_token <span class="ot">&lt;-</span> quanteda_corpus <span class="sc">%&gt;%</span> </span>
+<span id="cb8-10"><a></a>  quanteda<span class="sc">::</span><span class="fu">tokens</span>(</span>
+<span id="cb8-11"><a></a>    <span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb8-12"><a></a>    <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb8-13"><a></a>    <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb8-14"><a></a>    <span class="at">remove_url =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb8-15"><a></a>    <span class="at">split_tags =</span> <span class="cn">FALSE</span> <span class="co"># keep hashtags and mentions</span></span>
+<span id="cb8-16"><a></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-17"><a></a>  quanteda<span class="sc">::</span><span class="fu">tokens_tolower</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-18"><a></a>  quanteda<span class="sc">::</span><span class="fu">tokens_remove</span>(</span>
+<span id="cb8-19"><a></a>    <span class="at">pattern =</span> <span class="fu">stopwords</span>(<span class="st">"en"</span>)</span>
+<span id="cb8-20"><a></a>    )</span>
+<span id="cb8-21"><a></a></span>
+<span id="cb8-22"><a></a><span class="co"># Convert to Document-Feature-Matrix (DFM)</span></span>
+<span id="cb8-23"><a></a>quanteda_dfm <span class="ot">&lt;-</span> quanteda_token <span class="sc">%&gt;%</span> </span>
+<span id="cb8-24"><a></a>  quanteda<span class="sc">::</span><span class="fu">dfm</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1321,33 +1304,37 @@ Weighting          : term frequency (tf)</code></pre>
 <div style="font-size: smaller">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href="#cb9-1"></a><span class="co"># Extract hashtags</span></span>
-<span id="cb9-2" class="hljs-ln-code"><a href="#cb9-2"></a>tweets_hashtags <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb9-3" class="hljs-ln-code"><a href="#cb9-3"></a>  <span class="fu">mutate</span>(<span class="at">hashtags =</span> <span class="fu">str_extract_all</span>(</span>
-<span id="cb9-4" class="hljs-ln-code"><a href="#cb9-4"></a>    text, <span class="st">"#</span><span class="sc">\\</span><span class="st">S+"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5" class="hljs-ln-code"><a href="#cb9-5"></a>  <span class="fu">unnest</span>(hashtags) </span>
-<span id="cb9-6" class="hljs-ln-code"><a href="#cb9-6"></a></span>
-<span id="cb9-7" class="hljs-ln-code"><a href="#cb9-7"></a><span class="co"># Extract most common hashtags</span></span>
-<span id="cb9-8" class="hljs-ln-code"><a href="#cb9-8"></a>top50_hashtags_tidy <span class="ot">&lt;-</span> tweets_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb9-9" class="hljs-ln-code"><a href="#cb9-9"></a>  <span class="fu">count</span>(hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-10" class="hljs-ln-code"><a href="#cb9-10"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-11" class="hljs-ln-code"><a href="#cb9-11"></a>  <span class="fu">pull</span>(hashtags)</span>
-<span id="cb9-12" class="hljs-ln-code"><a href="#cb9-12"></a></span>
-<span id="cb9-13" class="hljs-ln-code"><a href="#cb9-13"></a><span class="co"># Visualize</span></span>
-<span id="cb9-14" class="hljs-ln-code"><a href="#cb9-14"></a>tweets_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb9-15" class="hljs-ln-code"><a href="#cb9-15"></a>  <span class="fu">count</span>(tweet_id, hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-16" class="hljs-ln-code"><a href="#cb9-16"></a>  <span class="fu">cast_dfm</span>(tweet_id, hashtags, n) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-17" class="hljs-ln-code"><a href="#cb9-17"></a>  quanteda<span class="sc">::</span><span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb9-18" class="hljs-ln-code"><a href="#cb9-18"></a>  quanteda<span class="sc">::</span><span class="fu">fcm_select</span>(</span>
-<span id="cb9-19" class="hljs-ln-code"><a href="#cb9-19"></a>    <span class="at">pattern =</span> top50_hashtags_tidy,</span>
-<span id="cb9-20" class="hljs-ln-code"><a href="#cb9-20"></a>    <span class="at">case_insensitive =</span> <span class="cn">FALSE</span></span>
-<span id="cb9-21" class="hljs-ln-code"><a href="#cb9-21"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-22" class="hljs-ln-code"><a href="#cb9-22"></a>  quanteda.textplots<span class="sc">::</span><span class="fu">textplot_network</span>(</span>
-<span id="cb9-23" class="hljs-ln-code"><a href="#cb9-23"></a>    <span class="at">edge_color =</span> <span class="st">"#04316A"</span></span>
-<span id="cb9-24" class="hljs-ln-code"><a href="#cb9-24"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a></a><span class="co"># Extract hashtags</span></span>
+<span id="cb9-2" class="hljs-ln-code"><a></a>tweets_hashtags <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3" class="hljs-ln-code"><a></a>  <span class="fu">mutate</span>(<span class="at">hashtags =</span> <span class="fu">str_extract_all</span>(</span>
+<span id="cb9-4" class="hljs-ln-code"><a></a>    text, <span class="st">"#</span><span class="sc">\\</span><span class="st">S+"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5" class="hljs-ln-code"><a></a>  <span class="fu">unnest</span>(hashtags) </span>
+<span id="cb9-6" class="hljs-ln-code"><a></a></span>
+<span id="cb9-7" class="hljs-ln-code"><a></a><span class="co"># Extract most common hashtags</span></span>
+<span id="cb9-8" class="hljs-ln-code"><a></a>top50_hashtags_tidy <span class="ot">&lt;-</span> tweets_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb9-9" class="hljs-ln-code"><a></a>  <span class="fu">count</span>(hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-10" class="hljs-ln-code"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-11" class="hljs-ln-code"><a></a>  <span class="fu">pull</span>(hashtags)</span>
+<span id="cb9-12" class="hljs-ln-code"><a></a></span>
+<span id="cb9-13" class="hljs-ln-code"><a></a><span class="co"># Visualize</span></span>
+<span id="cb9-14" class="hljs-ln-code"><a></a>tweets_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb9-15" class="hljs-ln-code"><a></a>  <span class="fu">count</span>(tweet_id, hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-16" class="hljs-ln-code"><a></a>  <span class="fu">cast_dfm</span>(tweet_id, hashtags, n) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-17" class="hljs-ln-code"><a></a>  quanteda<span class="sc">::</span><span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-18" class="hljs-ln-code"><a></a>  quanteda<span class="sc">::</span><span class="fu">fcm_select</span>(</span>
+<span id="cb9-19" class="hljs-ln-code"><a></a>    <span class="at">pattern =</span> top50_hashtags_tidy,</span>
+<span id="cb9-20" class="hljs-ln-code"><a></a>    <span class="at">case_insensitive =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-21" class="hljs-ln-code"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-22" class="hljs-ln-code"><a></a>  quanteda.textplots<span class="sc">::</span><span class="fu">textplot_network</span>(</span>
+<span id="cb9-23" class="hljs-ln-code"><a></a>    <span class="at">edge_color =</span> <span class="st">"#04316A"</span></span>
+<span id="cb9-24" class="hljs-ln-code"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-10_files/figure-revealjs/figure-hashtags-cooccurence-tidytext-1.png" width="864"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1359,25 +1346,29 @@ Weighting          : term frequency (tf)</code></pre>
 <div style="font-size: smaller">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb10-1" class="hljs-ln-code"><a href="#cb10-1"></a><span class="co"># Extract DFM with only hashtags</span></span>
-<span id="cb10-2" class="hljs-ln-code"><a href="#cb10-2"></a>quanteda_dfm_hashtags <span class="ot">&lt;-</span> quanteda_dfm <span class="sc">%&gt;%</span> </span>
-<span id="cb10-3" class="hljs-ln-code"><a href="#cb10-3"></a>  quanteda<span class="sc">::</span><span class="fu">dfm_select</span>(<span class="at">pattern =</span> <span class="st">"#*"</span>) </span>
-<span id="cb10-4" class="hljs-ln-code"><a href="#cb10-4"></a></span>
-<span id="cb10-5" class="hljs-ln-code"><a href="#cb10-5"></a><span class="co"># Extract most common hashtags </span></span>
-<span id="cb10-6" class="hljs-ln-code"><a href="#cb10-6"></a>top50_hashtags_quanteda <span class="ot">&lt;-</span> quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb10-7" class="hljs-ln-code"><a href="#cb10-7"></a>  <span class="fu">topfeatures</span>(<span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-8" class="hljs-ln-code"><a href="#cb10-8"></a>  <span class="fu">names</span>()</span>
-<span id="cb10-9" class="hljs-ln-code"><a href="#cb10-9"></a></span>
-<span id="cb10-10" class="hljs-ln-code"><a href="#cb10-10"></a><span class="co"># Construct feature-occurrence matrix of hashtags</span></span>
-<span id="cb10-11" class="hljs-ln-code"><a href="#cb10-11"></a>quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb10-12" class="hljs-ln-code"><a href="#cb10-12"></a>  <span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb10-13" class="hljs-ln-code"><a href="#cb10-13"></a>  <span class="fu">fcm_select</span>(<span class="at">pattern =</span> top50_hashtags_quanteda) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-14" class="hljs-ln-code"><a href="#cb10-14"></a>  <span class="fu">textplot_network</span>(</span>
-<span id="cb10-15" class="hljs-ln-code"><a href="#cb10-15"></a>    <span class="at">edge_color =</span> <span class="st">"#C50F3C"</span></span>
-<span id="cb10-16" class="hljs-ln-code"><a href="#cb10-16"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb10-1" class="hljs-ln-code"><a></a><span class="co"># Extract DFM with only hashtags</span></span>
+<span id="cb10-2" class="hljs-ln-code"><a></a>quanteda_dfm_hashtags <span class="ot">&lt;-</span> quanteda_dfm <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3" class="hljs-ln-code"><a></a>  quanteda<span class="sc">::</span><span class="fu">dfm_select</span>(<span class="at">pattern =</span> <span class="st">"#*"</span>) </span>
+<span id="cb10-4" class="hljs-ln-code"><a></a></span>
+<span id="cb10-5" class="hljs-ln-code"><a></a><span class="co"># Extract most common hashtags </span></span>
+<span id="cb10-6" class="hljs-ln-code"><a></a>top50_hashtags_quanteda <span class="ot">&lt;-</span> quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb10-7" class="hljs-ln-code"><a></a>  <span class="fu">topfeatures</span>(<span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-8" class="hljs-ln-code"><a></a>  <span class="fu">names</span>()</span>
+<span id="cb10-9" class="hljs-ln-code"><a></a></span>
+<span id="cb10-10" class="hljs-ln-code"><a></a><span class="co"># Construct feature-occurrence matrix of hashtags</span></span>
+<span id="cb10-11" class="hljs-ln-code"><a></a>quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb10-12" class="hljs-ln-code"><a></a>  <span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-13" class="hljs-ln-code"><a></a>  <span class="fu">fcm_select</span>(<span class="at">pattern =</span> top50_hashtags_quanteda) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-14" class="hljs-ln-code"><a></a>  <span class="fu">textplot_network</span>(</span>
+<span id="cb10-15" class="hljs-ln-code"><a></a>    <span class="at">edge_color =</span> <span class="st">"#C50F3C"</span></span>
+<span id="cb10-16" class="hljs-ln-code"><a></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-10_files/figure-revealjs/figure-hashtags-cooccurence-quanteda-1.png" width="864"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1389,37 +1380,45 @@ Weighting          : term frequency (tf)</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>tweets_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">count</span>(tweet_id, hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">cast_dfm</span>(tweet_id, hashtags, n) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-4"><a href="#cb11-4"></a>  quanteda<span class="sc">::</span><span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb11-5"><a href="#cb11-5"></a>  quanteda<span class="sc">::</span><span class="fu">fcm_select</span>(</span>
-<span id="cb11-6"><a href="#cb11-6"></a>    <span class="at">pattern =</span> top50_hashtags_tidy,</span>
-<span id="cb11-7"><a href="#cb11-7"></a>    <span class="at">case_insensitive =</span> <span class="cn">FALSE</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-9"><a href="#cb11-9"></a>  quanteda.textplots<span class="sc">::</span><span class="fu">textplot_network</span>(</span>
-<span id="cb11-10"><a href="#cb11-10"></a>    <span class="at">edge_color =</span> <span class="st">"#04316A"</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>tweets_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a></a>  <span class="fu">count</span>(tweet_id, hashtags, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a></a>  <span class="fu">cast_dfm</span>(tweet_id, hashtags, n) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a></a>  quanteda<span class="sc">::</span><span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a></a>  quanteda<span class="sc">::</span><span class="fu">fcm_select</span>(</span>
+<span id="cb11-6"><a></a>    <span class="at">pattern =</span> top50_hashtags_tidy,</span>
+<span id="cb11-7"><a></a>    <span class="at">case_insensitive =</span> <span class="cn">FALSE</span></span>
+<span id="cb11-8"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-9"><a></a>  quanteda.textplots<span class="sc">::</span><span class="fu">textplot_network</span>(</span>
+<span id="cb11-10"><a></a>    <span class="at">edge_color =</span> <span class="st">"#04316A"</span></span>
+<span id="cb11-11"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-10_files/figure-revealjs/figure-hashtag-comparison-tidytext-1.png" width="864"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">fcm_select</span>(<span class="at">pattern =</span> top50_hashtags_quanteda) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">textplot_network</span>(</span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">edge_color =</span> <span class="st">"#C50F3C"</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>quanteda_dfm_hashtags <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a></a>  <span class="fu">fcm</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a></a>  <span class="fu">fcm_select</span>(<span class="at">pattern =</span> top50_hashtags_quanteda) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a></a>  <span class="fu">textplot_network</span>(</span>
+<span id="cb12-5"><a></a>    <span class="at">edge_color =</span> <span class="st">"#C50F3C"</span></span>
+<span id="cb12-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-10_files/figure-revealjs/figure-hashtag-comparison-quanteda-1.png" width="864"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1429,7 +1428,7 @@ Weighting          : term frequency (tf)</code></pre>
 <h2>A new input in the pipeline</h2>
 <h4 id="unsupervised-learning-example-topic-modeling">Unsupervised learning example: <em>Topic modeling</em></h4>
 
-<img data-src="https://www.tidytextmining.com/images/tmwr_0601.png" class="r-stretch quarto-figure-center"><div style="text-align: center">
+<img data-src="https://www.tidytextmining.com/images/tmwr_0601.png" class="quarto-figure quarto-figure-center r-stretch"><div style="text-align: center">
 <p><span class="citation" data-cites="silge2017">Silge &amp; Robinson (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p>
 </div>
 </section>
@@ -1486,16 +1485,16 @@ Weighting          : term frequency (tf)</code></pre>
 </ol>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Pruning</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>quanteda_dfm_trim <span class="ot">&lt;-</span> quanteda_dfm <span class="sc">%&gt;%</span> </span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">dfm_trim</span>( </span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="at">min_docfreq =</span> <span class="dv">10</span><span class="sc">/</span><span class="fu">nrow</span>(tweets_detox),</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">max_docfreq =</span> <span class="fl">0.99</span>, </span>
-<span id="cb13-6"><a href="#cb13-6"></a>    <span class="at">docfreq_type =</span> <span class="st">"prop"</span>)</span>
-<span id="cb13-7"><a href="#cb13-7"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="co"># Convert for stm topic modeling</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>quanteda_stm <span class="ot">&lt;-</span> quanteda_dfm_trim <span class="sc">%&gt;%</span> </span>
-<span id="cb13-10"><a href="#cb13-10"></a>   <span class="fu">convert</span>(<span class="at">to =</span> <span class="st">"stm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Pruning</span></span>
+<span id="cb13-2"><a></a>quanteda_dfm_trim <span class="ot">&lt;-</span> quanteda_dfm <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a></a>  <span class="fu">dfm_trim</span>( </span>
+<span id="cb13-4"><a></a>    <span class="at">min_docfreq =</span> <span class="dv">10</span><span class="sc">/</span><span class="fu">nrow</span>(tweets_detox),</span>
+<span id="cb13-5"><a></a>    <span class="at">max_docfreq =</span> <span class="fl">0.99</span>, </span>
+<span id="cb13-6"><a></a>    <span class="at">docfreq_type =</span> <span class="st">"prop"</span>)</span>
+<span id="cb13-7"><a></a></span>
+<span id="cb13-8"><a></a><span class="co"># Convert for stm topic modeling</span></span>
+<span id="cb13-9"><a></a>quanteda_stm <span class="ot">&lt;-</span> quanteda_dfm_trim <span class="sc">%&gt;%</span> </span>
+<span id="cb13-10"><a></a>   <span class="fu">convert</span>(<span class="at">to =</span> <span class="st">"stm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1549,30 +1548,30 @@ Weighting          : term frequency (tf)</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Set up parallel processing using furrr</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>future<span class="sc">::</span><span class="fu">plan</span>(future<span class="sc">::</span><span class="fu">multisession</span>()) </span>
-<span id="cb14-3"><a href="#cb14-3"></a></span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="co"># Estimate multiple models</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>stm_exploration <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="at">k =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">5</span>, <span class="at">to =</span> <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>)</span>
-<span id="cb14-7"><a href="#cb14-7"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb14-9"><a href="#cb14-9"></a>    <span class="at">mdl =</span> furrr<span class="sc">::</span><span class="fu">future_map</span>(</span>
-<span id="cb14-10"><a href="#cb14-10"></a>      k, </span>
-<span id="cb14-11"><a href="#cb14-11"></a>      <span class="sc">~</span>stm<span class="sc">::</span><span class="fu">stm</span>(</span>
-<span id="cb14-12"><a href="#cb14-12"></a>        <span class="at">documents =</span> quanteda_stm<span class="sc">$</span>documents,</span>
-<span id="cb14-13"><a href="#cb14-13"></a>        <span class="at">vocab =</span> quanteda_stm<span class="sc">$</span>vocab, </span>
-<span id="cb14-14"><a href="#cb14-14"></a>        <span class="at">K =</span> ., </span>
-<span id="cb14-15"><a href="#cb14-15"></a>        <span class="at">seed =</span> <span class="dv">42</span>,</span>
-<span id="cb14-16"><a href="#cb14-16"></a>        <span class="at">max.em.its =</span> <span class="dv">1000</span>,</span>
-<span id="cb14-17"><a href="#cb14-17"></a>        <span class="at">init.type =</span> <span class="st">"Spectral"</span>,</span>
-<span id="cb14-18"><a href="#cb14-18"></a>        <span class="at">verbose =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb14-19"><a href="#cb14-19"></a>    <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">42</span>))</span>
-<span id="cb14-20"><a href="#cb14-20"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Set up parallel processing using furrr</span></span>
+<span id="cb14-2"><a></a>future<span class="sc">::</span><span class="fu">plan</span>(future<span class="sc">::</span><span class="fu">multisession</span>()) </span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a><span class="co"># Estimate multiple models</span></span>
+<span id="cb14-5"><a></a>stm_exploration <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb14-6"><a></a>  <span class="at">k =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">5</span>, <span class="at">to =</span> <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>)</span>
+<span id="cb14-7"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-8"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-9"><a></a>    <span class="at">mdl =</span> furrr<span class="sc">::</span><span class="fu">future_map</span>(</span>
+<span id="cb14-10"><a></a>      k, </span>
+<span id="cb14-11"><a></a>      <span class="sc">~</span>stm<span class="sc">::</span><span class="fu">stm</span>(</span>
+<span id="cb14-12"><a></a>        <span class="at">documents =</span> quanteda_stm<span class="sc">$</span>documents,</span>
+<span id="cb14-13"><a></a>        <span class="at">vocab =</span> quanteda_stm<span class="sc">$</span>vocab, </span>
+<span id="cb14-14"><a></a>        <span class="at">K =</span> ., </span>
+<span id="cb14-15"><a></a>        <span class="at">seed =</span> <span class="dv">42</span>,</span>
+<span id="cb14-16"><a></a>        <span class="at">max.em.its =</span> <span class="dv">1000</span>,</span>
+<span id="cb14-17"><a></a>        <span class="at">init.type =</span> <span class="st">"Spectral"</span>,</span>
+<span id="cb14-18"><a></a>        <span class="at">verbose =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb14-19"><a></a>    <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">42</span>))</span>
+<span id="cb14-20"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>stm_exploration<span class="sc">$</span>mdl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>stm_exploration<span class="sc">$</span>mdl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 A topic model with 5 topics, 46574 documents and a 8268 word dictionary.
@@ -1633,34 +1632,34 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <h2>Semantic coherence as the key</h2>
 <h4 id="different-model-statistics-for-evaluation">Different model statistics for evaluation</h4>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>stm_results <span class="sc">%&gt;%</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb17-3"><a href="#cb17-3"></a>    k,</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    <span class="st">`</span><span class="at">Lower bound</span><span class="st">`</span> <span class="ot">=</span> lbound,</span>
-<span id="cb17-5"><a href="#cb17-5"></a>    <span class="at">Residuals =</span> <span class="fu">map_dbl</span>(residual, <span class="st">"dispersion"</span>),</span>
-<span id="cb17-6"><a href="#cb17-6"></a>    <span class="st">`</span><span class="at">Semantic coherence</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(semantic_coherence, mean),</span>
-<span id="cb17-7"><a href="#cb17-7"></a>    <span class="st">`</span><span class="at">Held-out likelihood</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(eval_heldout, <span class="st">"expected.heldout"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a>  <span class="fu">gather</span>(Metric, Value, <span class="sc">-</span>k) <span class="sc">%&gt;%</span></span>
-<span id="cb17-9"><a href="#cb17-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
-<span id="cb17-10"><a href="#cb17-10"></a>    <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb17-11"><a href="#cb17-11"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb17-12"><a href="#cb17-12"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">5</span>, <span class="at">to =</span> <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb17-13"><a href="#cb17-13"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>Metric, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"K (number of topics)"</span>,</span>
-<span id="cb17-15"><a href="#cb17-15"></a>         <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb17-16"><a href="#cb17-16"></a>         <span class="at">title =</span> <span class="st">"Model diagnostics by number of topics"</span></span>
-<span id="cb17-17"><a href="#cb17-17"></a>    ) <span class="sc">+</span></span>
-<span id="cb17-18"><a href="#cb17-18"></a>    <span class="fu">theme_pubr</span>() <span class="sc">+</span></span>
-<span id="cb17-19"><a href="#cb17-19"></a>    <span class="co"># add highlights </span></span>
-<span id="cb17-20"><a href="#cb17-20"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span>  <span class="dv">5</span>), <span class="at">color =</span> <span class="st">"#00BFC4"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb17-21"><a href="#cb17-21"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">10</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb17-22"><a href="#cb17-22"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">40</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>stm_results <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">transmute</span>(</span>
+<span id="cb17-3"><a></a>    k,</span>
+<span id="cb17-4"><a></a>    <span class="st">`</span><span class="at">Lower bound</span><span class="st">`</span> <span class="ot">=</span> lbound,</span>
+<span id="cb17-5"><a></a>    <span class="at">Residuals =</span> <span class="fu">map_dbl</span>(residual, <span class="st">"dispersion"</span>),</span>
+<span id="cb17-6"><a></a>    <span class="st">`</span><span class="at">Semantic coherence</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(semantic_coherence, mean),</span>
+<span id="cb17-7"><a></a>    <span class="st">`</span><span class="at">Held-out likelihood</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(eval_heldout, <span class="st">"expected.heldout"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-8"><a></a>  <span class="fu">gather</span>(Metric, Value, <span class="sc">-</span>k) <span class="sc">%&gt;%</span></span>
+<span id="cb17-9"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
+<span id="cb17-10"><a></a>    <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb17-11"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb17-12"><a></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">5</span>, <span class="at">to =</span> <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb17-13"><a></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>Metric, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb17-14"><a></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"K (number of topics)"</span>,</span>
+<span id="cb17-15"><a></a>         <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb17-16"><a></a>         <span class="at">title =</span> <span class="st">"Model diagnostics by number of topics"</span></span>
+<span id="cb17-17"><a></a>    ) <span class="sc">+</span></span>
+<span id="cb17-18"><a></a>    <span class="fu">theme_pubr</span>() <span class="sc">+</span></span>
+<span id="cb17-19"><a></a>    <span class="co"># add highlights </span></span>
+<span id="cb17-20"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span>  <span class="dv">5</span>), <span class="at">color =</span> <span class="st">"#00BFC4"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb17-21"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">10</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb17-22"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">40</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="slides-10_files/figure-revealjs/figure-model-diagnostics-stm-exploration-1.png" width="1056" class="r-stretch quarto-figure-center"><aside class="notes">
+<img data-src="slides-10_files/figure-revealjs/figure-model-diagnostics-stm-exploration-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1056"><aside class="notes">
 <p>Semantic Coherence: tells you how coherent topics are, i.e., how often features describing a topic co-occur and topics thus appear to be internally coherent.</p>
 <p>Exclusivity: tells you how exclusive topics are, i.e., how much they differ from each other and topics thus appear to describe different things.</p>
 <style type="text/css">
@@ -1679,37 +1678,37 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <h2>Finding the best trade-off</h2>
 <h4 id="comparison-of-selected-models-based-on-exclusivty-and-semantic-coherence">Comparison of selected models based on exclusivty and semantic coherence</h4>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Models for comparison</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>models_for_comparison <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">40</span>)</span>
-<span id="cb18-3"><a href="#cb18-3"></a></span>
-<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># Create figures</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a>stm_results <span class="sc">%&gt;%</span> </span>
-<span id="cb18-6"><a href="#cb18-6"></a>  <span class="co"># Edit data</span></span>
-<span id="cb18-7"><a href="#cb18-7"></a>  <span class="fu">select</span>(k, exclusivity, semantic_coherence) <span class="sc">%&gt;%</span></span>
-<span id="cb18-8"><a href="#cb18-8"></a>  <span class="fu">filter</span>(k <span class="sc">%in%</span> models_for_comparison) <span class="sc">%&gt;%</span></span>
-<span id="cb18-9"><a href="#cb18-9"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(exclusivity, semantic_coherence))  <span class="sc">%&gt;%</span></span>
-<span id="cb18-10"><a href="#cb18-10"></a>  <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">as.factor</span>(k)) <span class="sc">%&gt;%</span></span>
-<span id="cb18-11"><a href="#cb18-11"></a>  <span class="co"># Build graph</span></span>
-<span id="cb18-12"><a href="#cb18-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(semantic_coherence, exclusivity, <span class="at">color =</span> k)) <span class="sc">+</span></span>
-<span id="cb18-13"><a href="#cb18-13"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>    <span class="fu">labs</span>(</span>
-<span id="cb18-15"><a href="#cb18-15"></a>      <span class="at">x =</span> <span class="st">"Semantic coherence"</span>,</span>
-<span id="cb18-16"><a href="#cb18-16"></a>      <span class="at">y =</span> <span class="st">"Exclusivity"</span></span>
-<span id="cb18-17"><a href="#cb18-17"></a>      <span class="co"># title = "Comparing exclusivity and semantic coherence",</span></span>
-<span id="cb18-18"><a href="#cb18-18"></a>      <span class="co"># subtitle = "Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"</span></span>
-<span id="cb18-19"><a href="#cb18-19"></a>      ) <span class="sc">+</span></span>
-<span id="cb18-20"><a href="#cb18-20"></a>    <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># Models for comparison</span></span>
+<span id="cb18-2"><a></a>models_for_comparison <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">40</span>)</span>
+<span id="cb18-3"><a></a></span>
+<span id="cb18-4"><a></a><span class="co"># Create figures</span></span>
+<span id="cb18-5"><a></a>stm_results <span class="sc">%&gt;%</span> </span>
+<span id="cb18-6"><a></a>  <span class="co"># Edit data</span></span>
+<span id="cb18-7"><a></a>  <span class="fu">select</span>(k, exclusivity, semantic_coherence) <span class="sc">%&gt;%</span></span>
+<span id="cb18-8"><a></a>  <span class="fu">filter</span>(k <span class="sc">%in%</span> models_for_comparison) <span class="sc">%&gt;%</span></span>
+<span id="cb18-9"><a></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(exclusivity, semantic_coherence))  <span class="sc">%&gt;%</span></span>
+<span id="cb18-10"><a></a>  <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">as.factor</span>(k)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-11"><a></a>  <span class="co"># Build graph</span></span>
+<span id="cb18-12"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(semantic_coherence, exclusivity, <span class="at">color =</span> k)) <span class="sc">+</span></span>
+<span id="cb18-13"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb18-14"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb18-15"><a></a>      <span class="at">x =</span> <span class="st">"Semantic coherence"</span>,</span>
+<span id="cb18-16"><a></a>      <span class="at">y =</span> <span class="st">"Exclusivity"</span></span>
+<span id="cb18-17"><a></a>      <span class="co"># title = "Comparing exclusivity and semantic coherence",</span></span>
+<span id="cb18-18"><a></a>      <span class="co"># subtitle = "Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"</span></span>
+<span id="cb18-19"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb18-20"><a></a>    <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="slides-10_files/figure-revealjs/figure-exclusivity-stm-exploration-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides-10_files/figure-revealjs/figure-exclusivity-stm-exploration-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="a-first-overview" class="slide level2">
 <h2>A first overview</h2>
 <h4 id="understanding-the-final-model-k-10">Understanding the ‘final’ model (k = 10)</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>tpm <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">type =</span> <span class="st">"summary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>tpm <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">type =</span> <span class="st">"summary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="slides-10_files/figure-revealjs/figure-stm-mdl-overview-1-1.png" width="960" class="r-stretch"></section>
@@ -1717,64 +1716,63 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <h2>A more detailed overview</h2>
 <h4 id="understanding-the-final-model-k-10-1">Understanding the ‘final’ model (k = 10)</h4>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Create data</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>top_gamma <span class="ot">&lt;-</span> tpm <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">tidy</span>(<span class="at">matrix =</span> <span class="st">"gamma"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-4"><a href="#cb20-4"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">gamma =</span> <span class="fu">mean</span>(gamma), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(gamma))</span>
-<span id="cb20-7"><a href="#cb20-7"></a></span>
-<span id="cb20-8"><a href="#cb20-8"></a>top_beta <span class="ot">&lt;-</span> tpm <span class="sc">%&gt;%</span></span>
-<span id="cb20-9"><a href="#cb20-9"></a>  tidytext<span class="sc">::</span><span class="fu">tidy</span>(.) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-10"><a href="#cb20-10"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
-<span id="cb20-11"><a href="#cb20-11"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="sc">-</span>beta) <span class="sc">%&gt;%</span></span>
-<span id="cb20-12"><a href="#cb20-12"></a>  dplyr<span class="sc">::</span><span class="fu">top_n</span>(<span class="dv">10</span>, <span class="at">wt =</span> beta) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-13"><a href="#cb20-13"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(topic, term) <span class="sc">%&gt;%</span></span>
-<span id="cb20-14"><a href="#cb20-14"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">terms_beta =</span> <span class="fu">toString</span>(term), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb20-15"><a href="#cb20-15"></a></span>
-<span id="cb20-16"><a href="#cb20-16"></a>top_topics_terms <span class="ot">&lt;-</span> top_beta <span class="sc">%&gt;%</span> </span>
-<span id="cb20-17"><a href="#cb20-17"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(top_gamma, <span class="at">by =</span> <span class="st">"topic"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-18"><a href="#cb20-18"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb20-19"><a href="#cb20-19"></a>          <span class="at">topic =</span> <span class="fu">reorder</span>(topic, gamma)</span>
-<span id="cb20-20"><a href="#cb20-20"></a>      )</span>
-<span id="cb20-21"><a href="#cb20-21"></a></span>
-<span id="cb20-22"><a href="#cb20-22"></a><span class="co"># Preview</span></span>
-<span id="cb20-23"><a href="#cb20-23"></a>top_topics_terms <span class="sc">%&gt;%</span></span>
-<span id="cb20-24"><a href="#cb20-24"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(gamma, <span class="sc">~</span><span class="fu">round</span>(.,<span class="dv">3</span>))) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-25"><a href="#cb20-25"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="sc">-</span>gamma) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-26"><a href="#cb20-26"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb20-27"><a href="#cb20-27"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb20-28"><a href="#cb20-28"></a>    <span class="at">topic =</span> <span class="st">"Topic"</span>, </span>
-<span id="cb20-29"><a href="#cb20-29"></a>    <span class="at">terms_beta =</span> <span class="st">"Top Terms (based on beta)"</span>,</span>
-<span id="cb20-30"><a href="#cb20-30"></a>    <span class="at">gamma =</span> <span class="st">"Gamma"</span></span>
-<span id="cb20-31"><a href="#cb20-31"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-32"><a href="#cb20-32"></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Create data</span></span>
+<span id="cb20-2"><a></a>top_gamma <span class="ot">&lt;-</span> tpm <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">tidy</span>(<span class="at">matrix =</span> <span class="st">"gamma"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-4"><a></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">gamma =</span> <span class="fu">mean</span>(gamma), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(gamma))</span>
+<span id="cb20-7"><a></a></span>
+<span id="cb20-8"><a></a>top_beta <span class="ot">&lt;-</span> tpm <span class="sc">%&gt;%</span></span>
+<span id="cb20-9"><a></a>  tidytext<span class="sc">::</span><span class="fu">tidy</span>(.) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-10"><a></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb20-11"><a></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="sc">-</span>beta) <span class="sc">%&gt;%</span></span>
+<span id="cb20-12"><a></a>  dplyr<span class="sc">::</span><span class="fu">top_n</span>(<span class="dv">10</span>, <span class="at">wt =</span> beta) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-13"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(topic, term) <span class="sc">%&gt;%</span></span>
+<span id="cb20-14"><a></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">terms_beta =</span> <span class="fu">toString</span>(term), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb20-15"><a></a></span>
+<span id="cb20-16"><a></a>top_topics_terms <span class="ot">&lt;-</span> top_beta <span class="sc">%&gt;%</span> </span>
+<span id="cb20-17"><a></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(top_gamma, <span class="at">by =</span> <span class="st">"topic"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-18"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb20-19"><a></a>          <span class="at">topic =</span> <span class="fu">reorder</span>(topic, gamma)</span>
+<span id="cb20-20"><a></a>      )</span>
+<span id="cb20-21"><a></a></span>
+<span id="cb20-22"><a></a><span class="co"># Preview</span></span>
+<span id="cb20-23"><a></a>top_topics_terms <span class="sc">%&gt;%</span></span>
+<span id="cb20-24"><a></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(gamma, <span class="sc">~</span><span class="fu">round</span>(.,<span class="dv">3</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-25"><a></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="sc">-</span>gamma) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-26"><a></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb20-27"><a></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb20-28"><a></a>    <span class="at">topic =</span> <span class="st">"Topic"</span>, </span>
+<span id="cb20-29"><a></a>    <span class="at">terms_beta =</span> <span class="st">"Top Terms (based on beta)"</span>,</span>
+<span id="cb20-30"><a></a>    <span class="at">gamma =</span> <span class="st">"Gamma"</span></span>
+<span id="cb20-31"><a></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-32"><a></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
-<div id="biulhfxmdw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ixsrpteokr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#biulhfxmdw table {
+#ixsrpteokr table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#biulhfxmdw thead, #biulhfxmdw tbody, #biulhfxmdw tfoot, #biulhfxmdw tr, #biulhfxmdw td, #biulhfxmdw th {
+#ixsrpteokr thead, #ixsrpteokr tbody, #ixsrpteokr tfoot, #ixsrpteokr tr, #ixsrpteokr td, #ixsrpteokr th {
   border-style: none;
 }
 
-#biulhfxmdw p {
+#ixsrpteokr p {
   margin: 0;
   padding: 0;
 }
 
-#biulhfxmdw .gt_table {
+#ixsrpteokr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1800,12 +1798,12 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-left-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_caption {
+#ixsrpteokr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#biulhfxmdw .gt_title {
+#ixsrpteokr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1817,7 +1815,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-width: 0;
 }
 
-#biulhfxmdw .gt_subtitle {
+#ixsrpteokr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1829,7 +1827,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-width: 0;
 }
 
-#biulhfxmdw .gt_heading {
+#ixsrpteokr .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1841,13 +1839,13 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_bottom_border {
+#ixsrpteokr .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_col_headings {
+#ixsrpteokr .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1862,7 +1860,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_col_heading {
+#ixsrpteokr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1882,7 +1880,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#biulhfxmdw .gt_column_spanner_outer {
+#ixsrpteokr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1894,15 +1892,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 4px;
 }
 
-#biulhfxmdw .gt_column_spanner_outer:first-child {
+#ixsrpteokr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#biulhfxmdw .gt_column_spanner_outer:last-child {
+#ixsrpteokr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#biulhfxmdw .gt_column_spanner {
+#ixsrpteokr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1914,11 +1912,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   width: 100%;
 }
 
-#biulhfxmdw .gt_spanner_row {
+#ixsrpteokr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#biulhfxmdw .gt_group_heading {
+#ixsrpteokr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1944,7 +1942,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   text-align: left;
 }
 
-#biulhfxmdw .gt_empty_group_heading {
+#ixsrpteokr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1959,15 +1957,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: middle;
 }
 
-#biulhfxmdw .gt_from_md > :first-child {
+#ixsrpteokr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#biulhfxmdw .gt_from_md > :last-child {
+#ixsrpteokr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#biulhfxmdw .gt_row {
+#ixsrpteokr .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1986,7 +1984,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#biulhfxmdw .gt_stub {
+#ixsrpteokr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1999,7 +1997,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#biulhfxmdw .gt_stub_row_group {
+#ixsrpteokr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2013,15 +2011,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: top;
 }
 
-#biulhfxmdw .gt_row_group_first td {
+#ixsrpteokr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#biulhfxmdw .gt_row_group_first th {
+#ixsrpteokr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#biulhfxmdw .gt_summary_row {
+#ixsrpteokr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2031,16 +2029,16 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#biulhfxmdw .gt_first_summary_row {
+#ixsrpteokr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_first_summary_row.thick {
+#ixsrpteokr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#biulhfxmdw .gt_last_summary_row {
+#ixsrpteokr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2050,7 +2048,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_grand_summary_row {
+#ixsrpteokr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2060,7 +2058,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#biulhfxmdw .gt_first_grand_summary_row {
+#ixsrpteokr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2070,7 +2068,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_last_grand_summary_row_top {
+#ixsrpteokr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2080,11 +2078,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_striped {
+#ixsrpteokr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#biulhfxmdw .gt_table_body {
+#ixsrpteokr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2093,7 +2091,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_footnotes {
+#ixsrpteokr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2107,7 +2105,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_footnote {
+#ixsrpteokr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2116,7 +2114,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#biulhfxmdw .gt_sourcenotes {
+#ixsrpteokr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2130,7 +2128,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#biulhfxmdw .gt_sourcenote {
+#ixsrpteokr .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2138,63 +2136,63 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#biulhfxmdw .gt_left {
+#ixsrpteokr .gt_left {
   text-align: left;
 }
 
-#biulhfxmdw .gt_center {
+#ixsrpteokr .gt_center {
   text-align: center;
 }
 
-#biulhfxmdw .gt_right {
+#ixsrpteokr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#biulhfxmdw .gt_font_normal {
+#ixsrpteokr .gt_font_normal {
   font-weight: normal;
 }
 
-#biulhfxmdw .gt_font_bold {
+#ixsrpteokr .gt_font_bold {
   font-weight: bold;
 }
 
-#biulhfxmdw .gt_font_italic {
+#ixsrpteokr .gt_font_italic {
   font-style: italic;
 }
 
-#biulhfxmdw .gt_super {
+#ixsrpteokr .gt_super {
   font-size: 65%;
 }
 
-#biulhfxmdw .gt_footnote_marks {
+#ixsrpteokr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#biulhfxmdw .gt_asterisk {
+#ixsrpteokr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#biulhfxmdw .gt_indent_1 {
+#ixsrpteokr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#biulhfxmdw .gt_indent_2 {
+#ixsrpteokr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#biulhfxmdw .gt_indent_3 {
+#ixsrpteokr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#biulhfxmdw .gt_indent_4 {
+#ixsrpteokr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#biulhfxmdw .gt_indent_5 {
+#ixsrpteokr .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -2202,50 +2200,69 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Top Terms (based on beta)">Top Terms (based on beta)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Gamma">Gamma</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="topic" class="gt_row gt_center">10</td>
-<td headers="terms_beta" class="gt_row gt_left">phone, via, much, #screentime, know, check, people, phones, #parenting, online</td>
-<td headers="gamma" class="gt_row gt_right">0.122</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">9</td>
-<td headers="terms_beta" class="gt_row gt_left">help, read, devices, use, world, tech, family, taking, kids, sleep</td>
-<td headers="gamma" class="gt_row gt_right">0.114</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">3</td>
-<td headers="terms_beta" class="gt_row gt_left">need, great, week, going, listen, #unplugging, discuss, @icphenomenallyu, away, well</td>
-<td headers="gamma" class="gt_row gt_right">0.111</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">2</td>
-<td headers="terms_beta" class="gt_row gt_left">#unplug, just, weekend, #travel, unplug, enjoy, #nature, really, join, nature</td>
-<td headers="gamma" class="gt_row gt_right">0.103</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">8</td>
-<td headers="terms_beta" class="gt_row gt_left">new, technology, smartphone, retreat, work, addiction, year, health, internet, without</td>
-<td headers="gamma" class="gt_row gt_right">0.099</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">7</td>
-<td headers="terms_beta" class="gt_row gt_left">can, #mindfulness, feel, #switchoff, #digitalwellbeing, #wellness, things, #phonefree, #disconnecttoreconnect, #digitalminimalism</td>
-<td headers="gamma" class="gt_row gt_right">0.098</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">4</td>
-<td headers="terms_beta" class="gt_row gt_left">amp, day, take, #mentalhealth, go, try, #wellbeing, now, give, every</td>
-<td headers="gamma" class="gt_row gt_right">0.092</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">1</td>
-<td headers="terms_beta" class="gt_row gt_left">social, media, get, life, back, like, good, #socialmedia, find, see</td>
-<td headers="gamma" class="gt_row gt_right">0.091</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">5</td>
-<td headers="terms_beta" class="gt_row gt_left">us, today, days, next, put, happy, may, facebook, share, hour</td>
-<td headers="gamma" class="gt_row gt_right">0.089</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">6</td>
-<td headers="terms_beta" class="gt_row gt_left">one, break, tips, make, screen, love, #technology, free, looking, getting</td>
-<td headers="gamma" class="gt_row gt_right">0.080</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Topic" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Topic</th>
+<th id="Top Terms (based on beta)" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Top Terms (based on beta)</th>
+<th id="Gamma" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Gamma</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">10</td>
+<td class="gt_row gt_left" headers="terms_beta">phone, via, much, #screentime, know, check, people, phones, #parenting, online</td>
+<td class="gt_row gt_right" headers="gamma">0.122</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">9</td>
+<td class="gt_row gt_left" headers="terms_beta">help, read, devices, use, world, tech, family, taking, kids, sleep</td>
+<td class="gt_row gt_right" headers="gamma">0.114</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">3</td>
+<td class="gt_row gt_left" headers="terms_beta">need, great, week, going, listen, #unplugging, discuss, @icphenomenallyu, away, well</td>
+<td class="gt_row gt_right" headers="gamma">0.111</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">2</td>
+<td class="gt_row gt_left" headers="terms_beta">#unplug, just, weekend, #travel, unplug, enjoy, #nature, really, join, nature</td>
+<td class="gt_row gt_right" headers="gamma">0.103</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">8</td>
+<td class="gt_row gt_left" headers="terms_beta">new, technology, smartphone, retreat, work, addiction, year, health, internet, without</td>
+<td class="gt_row gt_right" headers="gamma">0.099</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">7</td>
+<td class="gt_row gt_left" headers="terms_beta">can, #mindfulness, feel, #switchoff, #digitalwellbeing, #wellness, things, #phonefree, #disconnecttoreconnect, #digitalminimalism</td>
+<td class="gt_row gt_right" headers="gamma">0.098</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">4</td>
+<td class="gt_row gt_left" headers="terms_beta">amp, day, take, #mentalhealth, go, try, #wellbeing, now, give, every</td>
+<td class="gt_row gt_right" headers="gamma">0.092</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">1</td>
+<td class="gt_row gt_left" headers="terms_beta">social, media, get, life, back, like, good, #socialmedia, find, see</td>
+<td class="gt_row gt_right" headers="gamma">0.091</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">5</td>
+<td class="gt_row gt_left" headers="terms_beta">us, today, days, next, put, happy, may, facebook, share, hour</td>
+<td class="gt_row gt_right" headers="gamma">0.089</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">6</td>
+<td class="gt_row gt_left" headers="terms_beta">one, break, tips, make, screen, love, #technology, free, looking, getting</td>
+<td class="gt_row gt_right" headers="gamma">0.080</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2253,39 +2270,42 @@ tbody tr:last-child {
 <section id="results-in-a-different-context" class="slide level2">
 <h2>Results in a different context</h2>
 <h4 id="merge-back-with-original-data-for-further-analysis-and-comparison">Merge back with original data for further analysis and comparison</h4>
-<div>
-<details>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>top_gamma <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">as.factor</span>(topic), gamma)) <span class="sc">+</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#F57350"</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-5"><a></a>    <span class="at">x =</span> <span class="st">"Topic"</span>,</span>
+<span id="cb21-6"><a></a>    <span class="at">y =</span> <span class="st">"Mean gamma"</span></span>
+<span id="cb21-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb21-8"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb21-9"><a></a>  <span class="fu">scale_y_reverse</span>() <span class="sc">+</span></span>
+<span id="cb21-10"><a></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span></span>
+<span id="cb21-11"><a></a>  <span class="fu">theme_pubr</span>()</span>
+<span id="cb21-12"><a></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
+<span id="cb21-13"><a></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(top_topic, as.factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-14"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(top_topic)) <span class="sc">+</span></span>
+<span id="cb21-15"><a></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#1DA1F2"</span>) <span class="sc">+</span></span>
+<span id="cb21-16"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-17"><a></a>    <span class="at">x =</span> <span class="st">""</span>, </span>
+<span id="cb21-18"><a></a>    <span class="at">y =</span> <span class="st">"Number of tweets"</span></span>
+<span id="cb21-19"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb21-20"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb21-21"><a></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>top_gamma <span class="sc">%&gt;%</span> </span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">as.factor</span>(topic), gamma)) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#F57350"</span>) <span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">labs</span>(</span>
-<span id="cb21-5"><a href="#cb21-5"></a>    <span class="at">x =</span> <span class="st">"Topic"</span>,</span>
-<span id="cb21-6"><a href="#cb21-6"></a>    <span class="at">y =</span> <span class="st">"Mean gamma"</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a>  ) <span class="sc">+</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb21-9"><a href="#cb21-9"></a>  <span class="fu">scale_y_reverse</span>() <span class="sc">+</span></span>
-<span id="cb21-10"><a href="#cb21-10"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span></span>
-<span id="cb21-11"><a href="#cb21-11"></a>  <span class="fu">theme_pubr</span>()</span>
-<span id="cb21-12"><a href="#cb21-12"></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
-<span id="cb21-13"><a href="#cb21-13"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(top_topic, as.factor)) <span class="sc">%&gt;%</span> </span>
-<span id="cb21-14"><a href="#cb21-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(top_topic)) <span class="sc">+</span></span>
-<span id="cb21-15"><a href="#cb21-15"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#1DA1F2"</span>) <span class="sc">+</span></span>
-<span id="cb21-16"><a href="#cb21-16"></a>  <span class="fu">labs</span>(</span>
-<span id="cb21-17"><a href="#cb21-17"></a>    <span class="at">x =</span> <span class="st">""</span>, </span>
-<span id="cb21-18"><a href="#cb21-18"></a>    <span class="at">y =</span> <span class="st">"Number of tweets"</span></span>
-<span id="cb21-19"><a href="#cb21-19"></a>  ) <span class="sc">+</span></span>
-<span id="cb21-20"><a href="#cb21-20"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb21-21"><a href="#cb21-21"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="slides-10_files/figure-revealjs/figure-topic-distribution-1.png" width="960"></p>
 </div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="slides-10_files/figure-revealjs/figure-topic-distribution-2.png" width="960"></p>
 </div>
+<div class="quarto-layout-row">
+<details class="code-fold">
+<summary>Expand for full code</summary>
+</details>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="slides-10_files/figure-revealjs/figure-topic-distribution-2.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -2294,40 +2314,39 @@ tbody tr:last-child {
 <h2>Most representative tweets for Topic 10</h2>
 <h4 id="check-interpretability-and-relevance-of-topics">Check interpretability and relevance of topics</h4>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">filter</span>(top_topic <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>top_gamma) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-5"><a href="#cb22-5"></a>  <span class="fu">select</span>(tweet_id, user_username, created_at, text, top_gamma) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-6"><a href="#cb22-6"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb22-7"><a href="#cb22-7"></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb22-8"><a href="#cb22-8"></a>  gt<span class="sc">::</span><span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="st">"10px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a></a>  <span class="fu">filter</span>(top_topic <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a></a>  <span class="fu">arrange</span>(<span class="sc">-</span>top_gamma) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-4"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-5"><a></a>  <span class="fu">select</span>(tweet_id, user_username, created_at, text, top_gamma) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-6"><a></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb22-7"><a></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb22-8"><a></a>  gt<span class="sc">::</span><span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="st">"10px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
-<div id="npphgvakwl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="igyicqdgll" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#npphgvakwl table {
+#igyicqdgll table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#npphgvakwl thead, #npphgvakwl tbody, #npphgvakwl tfoot, #npphgvakwl tr, #npphgvakwl td, #npphgvakwl th {
+#igyicqdgll thead, #igyicqdgll tbody, #igyicqdgll tfoot, #igyicqdgll tr, #igyicqdgll td, #igyicqdgll th {
   border-style: none;
 }
 
-#npphgvakwl p {
+#igyicqdgll p {
   margin: 0;
   padding: 0;
 }
 
-#npphgvakwl .gt_table {
+#igyicqdgll .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2353,12 +2372,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_caption {
+#igyicqdgll .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#npphgvakwl .gt_title {
+#igyicqdgll .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2370,7 +2389,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#npphgvakwl .gt_subtitle {
+#igyicqdgll .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2382,7 +2401,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#npphgvakwl .gt_heading {
+#igyicqdgll .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -2394,13 +2413,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_bottom_border {
+#igyicqdgll .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_col_headings {
+#igyicqdgll .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2415,7 +2434,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_col_heading {
+#igyicqdgll .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2435,7 +2454,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#npphgvakwl .gt_column_spanner_outer {
+#igyicqdgll .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2447,15 +2466,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#npphgvakwl .gt_column_spanner_outer:first-child {
+#igyicqdgll .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#npphgvakwl .gt_column_spanner_outer:last-child {
+#igyicqdgll .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#npphgvakwl .gt_column_spanner {
+#igyicqdgll .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -2467,11 +2486,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#npphgvakwl .gt_spanner_row {
+#igyicqdgll .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#npphgvakwl .gt_group_heading {
+#igyicqdgll .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2497,7 +2516,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#npphgvakwl .gt_empty_group_heading {
+#igyicqdgll .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2512,15 +2531,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#npphgvakwl .gt_from_md > :first-child {
+#igyicqdgll .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#npphgvakwl .gt_from_md > :last-child {
+#igyicqdgll .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#npphgvakwl .gt_row {
+#igyicqdgll .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -2539,7 +2558,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#npphgvakwl .gt_stub {
+#igyicqdgll .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2552,7 +2571,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#npphgvakwl .gt_stub_row_group {
+#igyicqdgll .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2566,15 +2585,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#npphgvakwl .gt_row_group_first td {
+#igyicqdgll .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#npphgvakwl .gt_row_group_first th {
+#igyicqdgll .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#npphgvakwl .gt_summary_row {
+#igyicqdgll .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2584,16 +2603,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#npphgvakwl .gt_first_summary_row {
+#igyicqdgll .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_first_summary_row.thick {
+#igyicqdgll .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#npphgvakwl .gt_last_summary_row {
+#igyicqdgll .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2603,7 +2622,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_grand_summary_row {
+#igyicqdgll .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2613,7 +2632,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#npphgvakwl .gt_first_grand_summary_row {
+#igyicqdgll .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2623,7 +2642,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_last_grand_summary_row_top {
+#igyicqdgll .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2633,11 +2652,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_striped {
+#igyicqdgll .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#npphgvakwl .gt_table_body {
+#igyicqdgll .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2646,7 +2665,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_footnotes {
+#igyicqdgll .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2660,7 +2679,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_footnote {
+#igyicqdgll .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2669,7 +2688,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#npphgvakwl .gt_sourcenotes {
+#igyicqdgll .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2683,7 +2702,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#npphgvakwl .gt_sourcenote {
+#igyicqdgll .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2691,63 +2710,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#npphgvakwl .gt_left {
+#igyicqdgll .gt_left {
   text-align: left;
 }
 
-#npphgvakwl .gt_center {
+#igyicqdgll .gt_center {
   text-align: center;
 }
 
-#npphgvakwl .gt_right {
+#igyicqdgll .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#npphgvakwl .gt_font_normal {
+#igyicqdgll .gt_font_normal {
   font-weight: normal;
 }
 
-#npphgvakwl .gt_font_bold {
+#igyicqdgll .gt_font_bold {
   font-weight: bold;
 }
 
-#npphgvakwl .gt_font_italic {
+#igyicqdgll .gt_font_italic {
   font-style: italic;
 }
 
-#npphgvakwl .gt_super {
+#igyicqdgll .gt_super {
   font-size: 65%;
 }
 
-#npphgvakwl .gt_footnote_marks {
+#igyicqdgll .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#npphgvakwl .gt_asterisk {
+#igyicqdgll .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#npphgvakwl .gt_indent_1 {
+#igyicqdgll .gt_indent_1 {
   text-indent: 5px;
 }
 
-#npphgvakwl .gt_indent_2 {
+#igyicqdgll .gt_indent_2 {
   text-indent: 10px;
 }
 
-#npphgvakwl .gt_indent_3 {
+#igyicqdgll .gt_indent_3 {
   text-indent: 15px;
 }
 
-#npphgvakwl .gt_indent_4 {
+#igyicqdgll .gt_indent_4 {
   text-indent: 20px;
 }
 
-#npphgvakwl .gt_indent_5 {
+#igyicqdgll .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -2755,72 +2774,91 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="tweet_id">tweet_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="user_username">user_username</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="created_at">created_at</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="text">text</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="top_gamma">top_gamma</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="tweet_id" class="gt_row gt_right">1496707135794827266</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-24 04:42:43</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/EcV7yKn4WX</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1496343978672898048</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-23 04:39:39</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/o9e6WQIpm5</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1495981434665947137</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-22 04:39:02</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/rQgcPltrMt</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1499612427503247360</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-04 05:07:18</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/DQRQlN1iyq</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1499249315381977089</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-03 05:04:26</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/L7ly66J2fq</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498886117394980865</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-02 05:01:13</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/uJPIMYY1Id</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498522796611321864</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-01 04:57:30</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/z4Fv2bmeag</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498159674008510465</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-28 04:54:35</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/SdZFAJy6kZ</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1497796525929472003</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-27 04:51:34</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/OKLMzwfQUA</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1497433419512524802</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-26 04:48:42</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/yTnqhTPV8h</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="tweet_id" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">tweet_id</th>
+<th id="user_username" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">user_username</th>
+<th id="created_at" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">created_at</th>
+<th id="text" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">text</th>
+<th id="top_gamma" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">top_gamma</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1496707135794827266</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-24 04:42:43</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/EcV7yKn4WX</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1496343978672898048</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-23 04:39:39</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/o9e6WQIpm5</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1495981434665947137</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-22 04:39:02</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/rQgcPltrMt</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1499612427503247360</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-04 05:07:18</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/DQRQlN1iyq</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1499249315381977089</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-03 05:04:26</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/L7ly66J2fq</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1498886117394980865</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-02 05:01:13</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/uJPIMYY1Id</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1498522796611321864</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-01 04:57:30</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/z4Fv2bmeag</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1498159674008510465</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-28 04:54:35</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/SdZFAJy6kZ</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1497796525929472003</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-27 04:51:34</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/OKLMzwfQUA</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1497433419512524802</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-26 04:48:42</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/yTnqhTPV8h</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2830,38 +2868,37 @@ tbody tr:last-child {
 <h4 id="check-interpretability-and-relevance-of-topics-1">Check interpretability and relevance of topics</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
-<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">filter</span>(top_topic <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">count</span>(user_username, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-4"><a href="#cb23-4"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb23-5"><a href="#cb23-5"></a>    <span class="at">prop =</span> <span class="fu">round</span>(n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-6"><a href="#cb23-6"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-7"><a href="#cb23-7"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb23-8"><a href="#cb23-8"></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
+<span id="cb23-2"><a></a>  <span class="fu">filter</span>(top_topic <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a></a>  <span class="fu">count</span>(user_username, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-4"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb23-5"><a></a>    <span class="at">prop =</span> <span class="fu">round</span>(n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-6"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-7"><a></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb23-8"><a></a>  gtExtras<span class="sc">::</span><span class="fu">gt_theme_538</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-
-<div id="rvhniftccd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jdemalziwe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#rvhniftccd table {
+#jdemalziwe table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rvhniftccd thead, #rvhniftccd tbody, #rvhniftccd tfoot, #rvhniftccd tr, #rvhniftccd td, #rvhniftccd th {
+#jdemalziwe thead, #jdemalziwe tbody, #jdemalziwe tfoot, #jdemalziwe tr, #jdemalziwe td, #jdemalziwe th {
   border-style: none;
 }
 
-#rvhniftccd p {
+#jdemalziwe p {
   margin: 0;
   padding: 0;
 }
 
-#rvhniftccd .gt_table {
+#jdemalziwe .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2887,12 +2924,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_caption {
+#jdemalziwe .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rvhniftccd .gt_title {
+#jdemalziwe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2904,7 +2941,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#rvhniftccd .gt_subtitle {
+#jdemalziwe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2916,7 +2953,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#rvhniftccd .gt_heading {
+#jdemalziwe .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -2928,13 +2965,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_bottom_border {
+#jdemalziwe .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_col_headings {
+#jdemalziwe .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2949,7 +2986,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_col_heading {
+#jdemalziwe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2969,7 +3006,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#rvhniftccd .gt_column_spanner_outer {
+#jdemalziwe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2981,15 +3018,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#rvhniftccd .gt_column_spanner_outer:first-child {
+#jdemalziwe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rvhniftccd .gt_column_spanner_outer:last-child {
+#jdemalziwe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rvhniftccd .gt_column_spanner {
+#jdemalziwe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -3001,11 +3038,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#rvhniftccd .gt_spanner_row {
+#jdemalziwe .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rvhniftccd .gt_group_heading {
+#jdemalziwe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3031,7 +3068,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#rvhniftccd .gt_empty_group_heading {
+#jdemalziwe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3046,15 +3083,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#rvhniftccd .gt_from_md > :first-child {
+#jdemalziwe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rvhniftccd .gt_from_md > :last-child {
+#jdemalziwe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rvhniftccd .gt_row {
+#jdemalziwe .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -3073,7 +3110,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#rvhniftccd .gt_stub {
+#jdemalziwe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3086,7 +3123,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#rvhniftccd .gt_stub_row_group {
+#jdemalziwe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3100,15 +3137,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#rvhniftccd .gt_row_group_first td {
+#jdemalziwe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rvhniftccd .gt_row_group_first th {
+#jdemalziwe .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rvhniftccd .gt_summary_row {
+#jdemalziwe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3118,16 +3155,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#rvhniftccd .gt_first_summary_row {
+#jdemalziwe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_first_summary_row.thick {
+#jdemalziwe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rvhniftccd .gt_last_summary_row {
+#jdemalziwe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3137,7 +3174,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_grand_summary_row {
+#jdemalziwe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3147,7 +3184,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#rvhniftccd .gt_first_grand_summary_row {
+#jdemalziwe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3157,7 +3194,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_last_grand_summary_row_top {
+#jdemalziwe .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3167,11 +3204,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_striped {
+#jdemalziwe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rvhniftccd .gt_table_body {
+#jdemalziwe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3180,7 +3217,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_footnotes {
+#jdemalziwe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3194,7 +3231,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_footnote {
+#jdemalziwe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3203,7 +3240,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#rvhniftccd .gt_sourcenotes {
+#jdemalziwe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3217,7 +3254,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#rvhniftccd .gt_sourcenote {
+#jdemalziwe .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3225,63 +3262,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#rvhniftccd .gt_left {
+#jdemalziwe .gt_left {
   text-align: left;
 }
 
-#rvhniftccd .gt_center {
+#jdemalziwe .gt_center {
   text-align: center;
 }
 
-#rvhniftccd .gt_right {
+#jdemalziwe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rvhniftccd .gt_font_normal {
+#jdemalziwe .gt_font_normal {
   font-weight: normal;
 }
 
-#rvhniftccd .gt_font_bold {
+#jdemalziwe .gt_font_bold {
   font-weight: bold;
 }
 
-#rvhniftccd .gt_font_italic {
+#jdemalziwe .gt_font_italic {
   font-style: italic;
 }
 
-#rvhniftccd .gt_super {
+#jdemalziwe .gt_super {
   font-size: 65%;
 }
 
-#rvhniftccd .gt_footnote_marks {
+#jdemalziwe .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rvhniftccd .gt_asterisk {
+#jdemalziwe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rvhniftccd .gt_indent_1 {
+#jdemalziwe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rvhniftccd .gt_indent_2 {
+#jdemalziwe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rvhniftccd .gt_indent_3 {
+#jdemalziwe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rvhniftccd .gt_indent_4 {
+#jdemalziwe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rvhniftccd .gt_indent_5 {
+#jdemalziwe .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -3289,50 +3326,69 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="user_username">user_username</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="prop">prop</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="user_username" class="gt_row gt_left">TimeToLogOff</td>
-<td headers="n" class="gt_row gt_right">2384</td>
-<td headers="prop" class="gt_row gt_right">28.83</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">punkt</td>
-<td headers="n" class="gt_row gt_right">390</td>
-<td headers="prop" class="gt_row gt_right">4.72</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">petitstvincent</td>
-<td headers="n" class="gt_row gt_right">175</td>
-<td headers="prop" class="gt_row gt_right">2.12</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">tanyagoodin</td>
-<td headers="n" class="gt_row gt_right">135</td>
-<td headers="prop" class="gt_row gt_right">1.63</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">ditox_unplug</td>
-<td headers="n" class="gt_row gt_right">111</td>
-<td headers="prop" class="gt_row gt_right">1.34</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">OurHourOff</td>
-<td headers="n" class="gt_row gt_right">99</td>
-<td headers="prop" class="gt_row gt_right">1.20</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="n" class="gt_row gt_right">63</td>
-<td headers="prop" class="gt_row gt_right">0.76</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">CreeEscape</td>
-<td headers="n" class="gt_row gt_right">56</td>
-<td headers="prop" class="gt_row gt_right">0.68</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">ConsciDigital</td>
-<td headers="n" class="gt_row gt_right">51</td>
-<td headers="prop" class="gt_row gt_right">0.62</td></tr>
-    <tr><td headers="user_username" class="gt_row gt_left">phubboo</td>
-<td headers="n" class="gt_row gt_right">50</td>
-<td headers="prop" class="gt_row gt_right">0.60</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="user_username" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">user_username</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">n</th>
+<th id="prop" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">prop</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="user_username">TimeToLogOff</td>
+<td class="gt_row gt_right" headers="n">2384</td>
+<td class="gt_row gt_right" headers="prop">28.83</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="user_username">punkt</td>
+<td class="gt_row gt_right" headers="n">390</td>
+<td class="gt_row gt_right" headers="prop">4.72</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="user_username">petitstvincent</td>
+<td class="gt_row gt_right" headers="n">175</td>
+<td class="gt_row gt_right" headers="prop">2.12</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="user_username">tanyagoodin</td>
+<td class="gt_row gt_right" headers="n">135</td>
+<td class="gt_row gt_right" headers="prop">1.63</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="user_username">ditox_unplug</td>
+<td class="gt_row gt_right" headers="n">111</td>
+<td class="gt_row gt_right" headers="prop">1.34</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="user_username">OurHourOff</td>
+<td class="gt_row gt_right" headers="n">99</td>
+<td class="gt_row gt_right" headers="prop">1.20</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="n">63</td>
+<td class="gt_row gt_right" headers="prop">0.76</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="user_username">CreeEscape</td>
+<td class="gt_row gt_right" headers="n">56</td>
+<td class="gt_row gt_right" headers="prop">0.68</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="user_username">ConsciDigital</td>
+<td class="gt_row gt_right" headers="n">51</td>
+<td class="gt_row gt_right" headers="prop">0.62</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="user_username">phubboo</td>
+<td class="gt_row gt_right" headers="n">50</td>
+<td class="gt_row gt_right" headers="prop">0.60</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -3392,7 +3448,7 @@ tbody tr:last-child {
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-barrie2021" class="csl-entry" role="listitem">
 Barrie, C., &amp; Ho, J. (2021). academictwitteR: An r package to access the twitter academic research product track v2 API endpoint. <em>Journal of Open Source Software</em>, <em>6</em>(62), 3272. <a href="https://doi.org/10.21105/joss.03272">https://doi.org/10.21105/joss.03272</a>
 </div>
@@ -3434,9 +3490,11 @@ Zheng, A., &amp; Casari, A. (2018). <em>Feature engineering for machine learning
 </div>
 </div>
 
-
-<img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../img/dbd_hex.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
+</div>
 </div>
 </section></section>
     </div>
@@ -3466,7 +3524,6 @@ Zheng, A., &amp; Casari, A. (2018). <em>Feature engineering for machine learning
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -3766,10 +3823,9 @@ Zheng, A., &amp; Casari, A. (2018). <em>Feature engineering for machine learning
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -3779,8 +3835,17 @@ Zheng, A., &amp; Casari, A. (2018). <em>Feature engineering for machine learning
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

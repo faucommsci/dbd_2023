@@ -16,7 +16,7 @@ citations-hover: false
 
 📖 Information about [Quarto Journal Formats](https://quarto.org/docs/journals/formats.html)
 
-{{< fa brands github >}} Information about [Quarto Journal Formats](https://quarto.org/docs/journals/formats.html)
+{{< fa brands github >}} Organization [`quarto-journals`](https://github.com/quarto-journals/) 
 
 <br>
 

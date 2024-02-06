@@ -391,8 +391,3 @@ Danke für das Feedback! Haben Sie noch weitere Anmerkungen?
 # (Last) Time for questions {background-image="img/slide_bg-question.png"}
 
 # Vielen Dank für Ihre Teilnahme! {.unlisted background-image="img/slide_bg-end_semester.png"}
-
-## Literatur
-
-::: {#refs}
-:::

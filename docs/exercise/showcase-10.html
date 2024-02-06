@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -101,7 +102,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -110,13 +117,14 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="../site_libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="../site_libs/plotly-binding-4.10.4/plotly.js"></script>
 <script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
 <script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
@@ -128,8 +136,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Digital behavioral data - Showcase 10: 🔨 Automatic analysis of text in R">
 <meta property="og:description" content="Digital disconnection on Twitter">
-<meta property="og:image" content="../img/badge-quarto-slide.svg">
-<meta property="og:site-name" content="Digital behavioral data">
+<meta property="og:site_name" content="Digital behavioral data">
 </head>
 
 <body class="nav-sidebar floating">
@@ -138,12 +145,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Showcase 10: 🔨 Automatic analysis of text in R</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Showcase 10: 🔨 Automatic analysis of text in R</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -153,17 +160,17 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../img/dbd_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/faucommsci/dbd_2023" rel="" title="Course repository" class="quarto-navigation-tool px-1" aria-label="Course repository"><i class="bi bi-github"></i></a>
-    <a href="https://fau-dbd.zulipchat.com/" rel="" title="DBD Zulip" class="quarto-navigation-tool px-1" aria-label="DBD Zulip"><i class="bi bi-chat-dots"></i></a>
-    <a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio" rel="" title="DBD Binder" class="quarto-navigation-tool px-1" aria-label="DBD Binder"><i class="bi bi-cloud-arrow-up"></i></a>
-    <a href="http://10.204.20.178/" rel="" title="DBD 4CAT-Server" class="quarto-navigation-tool px-1" aria-label="DBD 4CAT-Server"><i class="bi bi-server"></i></a>
+    <a href="https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/faucommsci/dbd_2023" title="Course repository" class="quarto-navigation-tool px-1" aria-label="Course repository"><i class="bi bi-github"></i></a>
+    <a href="https://fau-dbd.zulipchat.com/" title="DBD Zulip" class="quarto-navigation-tool px-1" aria-label="DBD Zulip"><i class="bi bi-chat-dots"></i></a>
+    <a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio" title="DBD Binder" class="quarto-navigation-tool px-1" aria-label="DBD Binder"><i class="bi bi-cloud-arrow-up"></i></a>
+    <a href="http://10.204.20.178/" title="DBD 4CAT-Server" class="quarto-navigation-tool px-1" aria-label="DBD 4CAT-Server"><i class="bi bi-server"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -335,7 +342,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -358,7 +365,7 @@ div.csl-indent {
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-10.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-10.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -385,7 +392,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -627,7 +636,11 @@ docs         #digitaldetox
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">edge_color =</span> <span class="st">"#04316A"</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-hashtag-cooccurence-tidytext-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-hashtag-cooccurence-tidytext-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -650,7 +663,11 @@ docs         #digitaldetox
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">edge_color =</span> <span class="st">"#C50F3C"</span></span>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-hashtag-cooccurence-quanteda-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-hashtag-cooccurence-quanteda-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -877,7 +894,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">10</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
 <span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">40</span>), <span class="at">color =</span> <span class="st">"#C77CFF"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-model-diagnostics-stm-exploration-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-model-diagnostics-stm-exploration-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
@@ -905,8 +926,8 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plotly</span></span>
 <span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>fig_excl <span class="sc">%&gt;%</span> plotly<span class="sc">::</span><span class="fu">ggplotly</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-473f58d99c0aaba8b29a" style="width:100%;height:365px;"></div>
-<script type="application/json" data-for="htmlwidget-473f58d99c0aaba8b29a">{"x":{"data":[{"x":[-386.58299855026098,-307.46320121895093,-327.47765237619524,-330.33227344975245,-305.21958572543701],"y":[9.4308046838844835,9.4943293260111812,8.73011036764869,8.9763247822025729,9.4452065358531101],"text":["semantic_coherence: -386.5830<br />exclusivity: 9.430805<br />k: 5","semantic_coherence: -307.4632<br />exclusivity: 9.494329<br />k: 5","semantic_coherence: -327.4777<br />exclusivity: 8.730110<br />k: 5","semantic_coherence: -330.3323<br />exclusivity: 8.976325<br />k: 5","semantic_coherence: -305.2196<br />exclusivity: 9.445207<br />k: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-318.8210176395101,-297.76458652085188,-325.43136436197983,-343.15105011933758,-349.91136572129284,-340.70648659307898,-319.93712984557573,-294.51118675172154,-336.14509533776095,-339.16289026951085],"y":[9.6764764802897911,9.4312191646153316,9.8217847525786883,9.5336629518547884,9.5683856668204719,9.6798768063913219,9.7048027131545975,9.6153739335205852,9.5726811961313274,9.4677873682089171],"text":["semantic_coherence: -318.8210<br />exclusivity: 9.676476<br />k: 10","semantic_coherence: -297.7646<br />exclusivity: 9.431219<br />k: 10","semantic_coherence: -325.4314<br />exclusivity: 9.821785<br />k: 10","semantic_coherence: -343.1511<br />exclusivity: 9.533663<br />k: 10","semantic_coherence: -349.9114<br />exclusivity: 9.568386<br />k: 10","semantic_coherence: -340.7065<br />exclusivity: 9.679877<br />k: 10","semantic_coherence: -319.9371<br />exclusivity: 9.704803<br />k: 10","semantic_coherence: -294.5112<br />exclusivity: 9.615374<br />k: 10","semantic_coherence: -336.1451<br />exclusivity: 9.572681<br />k: 10","semantic_coherence: -339.1629<br />exclusivity: 9.467787<br />k: 10"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"10","legendgroup":"10","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-322.79668394291906,-305.05126149338116,-320.45460484780403,-352.03407140244298,-326.28265476088995,-323.11908323735275,-347.07454627196012,-334.33577625054636,-327.03001534649553,-333.33478987941623,-324.42061750539432,-340.9572777091596,-343.53562127704924,-329.89296671634997,-316.10196570072071,-308.77452216174845,-358.32204970899761,-317.72183289802035,-333.2450705899418,-343.93872206355888,-329.45623985971196,-299.75486567514281,-317.56281402356842,-314.38345734695616,-335.91731634990168,-311.77673948912559,-315.99992766911606,-321.21028640855661,-313.67073922491284,-335.92261669196466,-328.61869297549822,-310.1287764371516,-352.92295120330118,-315.85770818309032,-340.1289666558767,-304.68336942120851,-313.87982274991708,-314.94807649284365,-316.63597423054767,-338.99753122577545],"y":[9.8969770596964644,9.9743810661628967,9.882843783291035,9.8904298867702156,9.8390304284323005,9.7460224994839528,9.9401369899226903,9.8518501826665439,9.9435483580221824,9.9640285205487533,9.9104153359126173,9.8224674445429478,9.8890715715847968,9.928728000305199,9.9277756762557434,9.9096398517962232,9.8867315180504942,9.9197094288112861,9.9586574278700635,9.9447327412456747,9.98879704054408,9.819517019664314,9.8851920158583155,9.8694321834363663,9.9248980011977928,9.9292211333593947,9.9200171771931345,9.8835974054556655,9.9153483446271586,9.8878513891882616,9.8887515413544005,9.8611082115884674,9.7993734429980961,9.9294318088371689,9.8138956349216233,9.9628557428588209,9.9426342798841567,9.8969748459686482,9.9133586656100317,9.987102045999638],"text":["semantic_coherence: -322.7967<br />exclusivity: 9.896977<br />k: 40","semantic_coherence: -305.0513<br />exclusivity: 9.974381<br />k: 40","semantic_coherence: -320.4546<br />exclusivity: 9.882844<br />k: 40","semantic_coherence: -352.0341<br />exclusivity: 9.890430<br />k: 40","semantic_coherence: -326.2827<br />exclusivity: 9.839030<br />k: 40","semantic_coherence: -323.1191<br />exclusivity: 9.746022<br />k: 40","semantic_coherence: -347.0745<br />exclusivity: 9.940137<br />k: 40","semantic_coherence: -334.3358<br />exclusivity: 9.851850<br />k: 40","semantic_coherence: -327.0300<br />exclusivity: 9.943548<br />k: 40","semantic_coherence: -333.3348<br />exclusivity: 9.964029<br />k: 40","semantic_coherence: -324.4206<br />exclusivity: 9.910415<br />k: 40","semantic_coherence: -340.9573<br />exclusivity: 9.822467<br />k: 40","semantic_coherence: -343.5356<br />exclusivity: 9.889072<br />k: 40","semantic_coherence: -329.8930<br />exclusivity: 9.928728<br />k: 40","semantic_coherence: -316.1020<br />exclusivity: 9.927776<br />k: 40","semantic_coherence: -308.7745<br />exclusivity: 9.909640<br />k: 40","semantic_coherence: -358.3220<br />exclusivity: 9.886732<br />k: 40","semantic_coherence: -317.7218<br />exclusivity: 9.919709<br />k: 40","semantic_coherence: -333.2451<br />exclusivity: 9.958657<br />k: 40","semantic_coherence: -343.9387<br />exclusivity: 9.944733<br />k: 40","semantic_coherence: -329.4562<br />exclusivity: 9.988797<br />k: 40","semantic_coherence: -299.7549<br />exclusivity: 9.819517<br />k: 40","semantic_coherence: -317.5628<br />exclusivity: 9.885192<br />k: 40","semantic_coherence: -314.3835<br />exclusivity: 9.869432<br />k: 40","semantic_coherence: -335.9173<br />exclusivity: 9.924898<br />k: 40","semantic_coherence: -311.7767<br />exclusivity: 9.929221<br />k: 40","semantic_coherence: -315.9999<br />exclusivity: 9.920017<br />k: 40","semantic_coherence: -321.2103<br />exclusivity: 9.883597<br />k: 40","semantic_coherence: -313.6707<br />exclusivity: 9.915348<br />k: 40","semantic_coherence: -335.9226<br />exclusivity: 9.887851<br />k: 40","semantic_coherence: -328.6187<br />exclusivity: 9.888752<br />k: 40","semantic_coherence: -310.1288<br />exclusivity: 9.861108<br />k: 40","semantic_coherence: -352.9230<br />exclusivity: 9.799373<br />k: 40","semantic_coherence: -315.8577<br />exclusivity: 9.929432<br />k: 40","semantic_coherence: -340.1290<br />exclusivity: 9.813896<br />k: 40","semantic_coherence: -304.6834<br />exclusivity: 9.962856<br />k: 40","semantic_coherence: -313.8798<br />exclusivity: 9.942634<br />k: 40","semantic_coherence: -314.9481<br />exclusivity: 9.896975<br />k: 40","semantic_coherence: -316.6360<br />exclusivity: 9.913359<br />k: 40","semantic_coherence: -338.9975<br />exclusivity: 9.987102<br />k: 40"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"40","legendgroup":"40","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":30.169088141690885,"r":7.9701120797011216,"b":50.03459250034593,"l":59.77584059775841},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-391.18658914018795,-289.90759616179457],"tickmode":"array","ticktext":["-375","-350","-325","-300"],"tickvals":[-375,-350,-325,-300],"categoryorder":"array","categoryarray":["-375","-350","-325","-300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.9850560398505603,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Semantic coherence","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[8.667176034003921,10.051731374188849],"tickmode":"array","ticktext":["9.0","9.5","10.0"],"tickvals":[9,9.5,10],"categoryorder":"array","categoryarray":["9.0","9.5","10.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402243},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Exclusivity","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.0615604867573372,"font":{"color":"rgba(0,0,0,1)","family":"","size":12.7521793275218},"title":{"text":"k","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14209658420c6":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"14209658420c6","visdat":{"14209658420c6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-f2310e6e95726d73f99d" style="width:100%;height:365px;"></div>
+<script type="application/json" data-for="htmlwidget-f2310e6e95726d73f99d">{"x":{"data":[{"x":[-386.58299855026098,-307.46320121895093,-327.47765237619524,-330.33227344975245,-305.21958572543701],"y":[9.4308046838844835,9.4943293260111812,8.73011036764869,8.9763247822025729,9.4452065358531101],"text":["semantic_coherence: -386.5830<br />exclusivity: 9.430805<br />k: 5","semantic_coherence: -307.4632<br />exclusivity: 9.494329<br />k: 5","semantic_coherence: -327.4777<br />exclusivity: 8.730110<br />k: 5","semantic_coherence: -330.3323<br />exclusivity: 8.976325<br />k: 5","semantic_coherence: -305.2196<br />exclusivity: 9.445207<br />k: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-318.8210176395101,-297.76458652085188,-325.43136436197983,-343.15105011933758,-349.91136572129284,-340.70648659307898,-319.93712984557573,-294.51118675172154,-336.14509533776095,-339.16289026951085],"y":[9.6764764802897911,9.4312191646153316,9.8217847525786883,9.5336629518547884,9.5683856668204719,9.6798768063913219,9.7048027131545975,9.6153739335205852,9.5726811961313274,9.4677873682089171],"text":["semantic_coherence: -318.8210<br />exclusivity: 9.676476<br />k: 10","semantic_coherence: -297.7646<br />exclusivity: 9.431219<br />k: 10","semantic_coherence: -325.4314<br />exclusivity: 9.821785<br />k: 10","semantic_coherence: -343.1511<br />exclusivity: 9.533663<br />k: 10","semantic_coherence: -349.9114<br />exclusivity: 9.568386<br />k: 10","semantic_coherence: -340.7065<br />exclusivity: 9.679877<br />k: 10","semantic_coherence: -319.9371<br />exclusivity: 9.704803<br />k: 10","semantic_coherence: -294.5112<br />exclusivity: 9.615374<br />k: 10","semantic_coherence: -336.1451<br />exclusivity: 9.572681<br />k: 10","semantic_coherence: -339.1629<br />exclusivity: 9.467787<br />k: 10"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"10","legendgroup":"10","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-322.79668394291906,-305.05126149338116,-320.45460484780403,-352.03407140244298,-326.28265476088995,-323.11908323735275,-347.07454627196012,-334.33577625054636,-327.03001534649553,-333.33478987941623,-324.42061750539432,-340.9572777091596,-343.53562127704924,-329.89296671634997,-316.10196570072071,-308.77452216174845,-358.32204970899761,-317.72183289802035,-333.2450705899418,-343.93872206355888,-329.45623985971196,-299.75486567514281,-317.56281402356842,-314.38345734695616,-335.91731634990168,-311.77673948912559,-315.99992766911606,-321.21028640855661,-313.67073922491284,-335.92261669196466,-328.61869297549822,-310.1287764371516,-352.92295120330118,-315.85770818309032,-340.1289666558767,-304.68336942120851,-313.87982274991708,-314.94807649284365,-316.63597423054767,-338.99753122577545],"y":[9.8969770596964644,9.9743810661628967,9.882843783291035,9.8904298867702156,9.8390304284323005,9.7460224994839528,9.9401369899226903,9.8518501826665439,9.9435483580221824,9.9640285205487533,9.9104153359126173,9.8224674445429478,9.8890715715847968,9.928728000305199,9.9277756762557434,9.9096398517962232,9.8867315180504942,9.9197094288112861,9.9586574278700635,9.9447327412456747,9.98879704054408,9.819517019664314,9.8851920158583155,9.8694321834363663,9.9248980011977928,9.9292211333593947,9.9200171771931345,9.8835974054556655,9.9153483446271586,9.8878513891882616,9.8887515413544005,9.8611082115884674,9.7993734429980961,9.9294318088371689,9.8138956349216233,9.9628557428588209,9.9426342798841567,9.8969748459686482,9.9133586656100317,9.987102045999638],"text":["semantic_coherence: -322.7967<br />exclusivity: 9.896977<br />k: 40","semantic_coherence: -305.0513<br />exclusivity: 9.974381<br />k: 40","semantic_coherence: -320.4546<br />exclusivity: 9.882844<br />k: 40","semantic_coherence: -352.0341<br />exclusivity: 9.890430<br />k: 40","semantic_coherence: -326.2827<br />exclusivity: 9.839030<br />k: 40","semantic_coherence: -323.1191<br />exclusivity: 9.746022<br />k: 40","semantic_coherence: -347.0745<br />exclusivity: 9.940137<br />k: 40","semantic_coherence: -334.3358<br />exclusivity: 9.851850<br />k: 40","semantic_coherence: -327.0300<br />exclusivity: 9.943548<br />k: 40","semantic_coherence: -333.3348<br />exclusivity: 9.964029<br />k: 40","semantic_coherence: -324.4206<br />exclusivity: 9.910415<br />k: 40","semantic_coherence: -340.9573<br />exclusivity: 9.822467<br />k: 40","semantic_coherence: -343.5356<br />exclusivity: 9.889072<br />k: 40","semantic_coherence: -329.8930<br />exclusivity: 9.928728<br />k: 40","semantic_coherence: -316.1020<br />exclusivity: 9.927776<br />k: 40","semantic_coherence: -308.7745<br />exclusivity: 9.909640<br />k: 40","semantic_coherence: -358.3220<br />exclusivity: 9.886732<br />k: 40","semantic_coherence: -317.7218<br />exclusivity: 9.919709<br />k: 40","semantic_coherence: -333.2451<br />exclusivity: 9.958657<br />k: 40","semantic_coherence: -343.9387<br />exclusivity: 9.944733<br />k: 40","semantic_coherence: -329.4562<br />exclusivity: 9.988797<br />k: 40","semantic_coherence: -299.7549<br />exclusivity: 9.819517<br />k: 40","semantic_coherence: -317.5628<br />exclusivity: 9.885192<br />k: 40","semantic_coherence: -314.3835<br />exclusivity: 9.869432<br />k: 40","semantic_coherence: -335.9173<br />exclusivity: 9.924898<br />k: 40","semantic_coherence: -311.7767<br />exclusivity: 9.929221<br />k: 40","semantic_coherence: -315.9999<br />exclusivity: 9.920017<br />k: 40","semantic_coherence: -321.2103<br />exclusivity: 9.883597<br />k: 40","semantic_coherence: -313.6707<br />exclusivity: 9.915348<br />k: 40","semantic_coherence: -335.9226<br />exclusivity: 9.887851<br />k: 40","semantic_coherence: -328.6187<br />exclusivity: 9.888752<br />k: 40","semantic_coherence: -310.1288<br />exclusivity: 9.861108<br />k: 40","semantic_coherence: -352.9230<br />exclusivity: 9.799373<br />k: 40","semantic_coherence: -315.8577<br />exclusivity: 9.929432<br />k: 40","semantic_coherence: -340.1290<br />exclusivity: 9.813896<br />k: 40","semantic_coherence: -304.6834<br />exclusivity: 9.962856<br />k: 40","semantic_coherence: -313.8798<br />exclusivity: 9.942634<br />k: 40","semantic_coherence: -314.9481<br />exclusivity: 9.896975<br />k: 40","semantic_coherence: -316.6360<br />exclusivity: 9.913359<br />k: 40","semantic_coherence: -338.9975<br />exclusivity: 9.987102<br />k: 40"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":0.69999999999999996,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"40","legendgroup":"40","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":30.169088141690885,"r":7.9701120797011216,"b":50.03459250034593,"l":59.77584059775841},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-391.18658914018795,-289.90759616179457],"tickmode":"array","ticktext":["-375","-350","-325","-300"],"tickvals":[-375,-350,-325,-300],"categoryorder":"array","categoryarray":["-375","-350","-325","-300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.9850560398505603,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Semantic coherence","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[8.667176034003921,10.051731374188849],"tickmode":"array","ticktext":["9.0","9.5","10.0"],"tickvals":[9,9.5,10],"categoryorder":"array","categoryarray":["9.0","9.5","10.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.9850560398505608,"tickwidth":0.72455564360919278,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402243},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Exclusivity","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.0615604867573372,"font":{"color":"rgba(0,0,0,1)","family":"","size":12.7521793275218},"title":{"text":"k","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"b5bc303e6347":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"b5bc303e6347","visdat":{"b5bc303e6347":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -927,11 +948,19 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>tpm <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">type =</span> <span class="st">"summary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-stm-mdl-overview-1-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-stm-mdl-overview-1-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tpm <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">type =</span> <span class="st">"hist"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-stm-mdl-overview-1-2.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-stm-mdl-overview-1-2.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -966,24 +995,23 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="sc">-</span>gamma) <span class="sc">%&gt;%</span> </span>
 <span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="hyzklishrf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hyzklishrf table {
+<div id="sroovsntza" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sroovsntza table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hyzklishrf thead, #hyzklishrf tbody, #hyzklishrf tfoot, #hyzklishrf tr, #hyzklishrf td, #hyzklishrf th {
+#sroovsntza thead, #sroovsntza tbody, #sroovsntza tfoot, #sroovsntza tr, #sroovsntza td, #sroovsntza th {
   border-style: none;
 }
 
-#hyzklishrf p {
+#sroovsntza p {
   margin: 0;
   padding: 0;
 }
 
-#hyzklishrf .gt_table {
+#sroovsntza .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1009,12 +1037,12 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-left-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_caption {
+#sroovsntza .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hyzklishrf .gt_title {
+#sroovsntza .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1026,7 +1054,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-width: 0;
 }
 
-#hyzklishrf .gt_subtitle {
+#sroovsntza .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1038,7 +1066,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-width: 0;
 }
 
-#hyzklishrf .gt_heading {
+#sroovsntza .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1050,13 +1078,13 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_bottom_border {
+#sroovsntza .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_col_headings {
+#sroovsntza .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1071,7 +1099,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_col_heading {
+#sroovsntza .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1091,7 +1119,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#hyzklishrf .gt_column_spanner_outer {
+#sroovsntza .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1103,15 +1131,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 4px;
 }
 
-#hyzklishrf .gt_column_spanner_outer:first-child {
+#sroovsntza .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hyzklishrf .gt_column_spanner_outer:last-child {
+#sroovsntza .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hyzklishrf .gt_column_spanner {
+#sroovsntza .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1123,11 +1151,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   width: 100%;
 }
 
-#hyzklishrf .gt_spanner_row {
+#sroovsntza .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hyzklishrf .gt_group_heading {
+#sroovsntza .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1153,7 +1181,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   text-align: left;
 }
 
-#hyzklishrf .gt_empty_group_heading {
+#sroovsntza .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1168,15 +1196,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: middle;
 }
 
-#hyzklishrf .gt_from_md > :first-child {
+#sroovsntza .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hyzklishrf .gt_from_md > :last-child {
+#sroovsntza .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hyzklishrf .gt_row {
+#sroovsntza .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1195,7 +1223,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#hyzklishrf .gt_stub {
+#sroovsntza .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1208,7 +1236,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#hyzklishrf .gt_stub_row_group {
+#sroovsntza .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1222,15 +1250,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: top;
 }
 
-#hyzklishrf .gt_row_group_first td {
+#sroovsntza .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hyzklishrf .gt_row_group_first th {
+#sroovsntza .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hyzklishrf .gt_summary_row {
+#sroovsntza .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1240,16 +1268,16 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#hyzklishrf .gt_first_summary_row {
+#sroovsntza .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_first_summary_row.thick {
+#sroovsntza .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hyzklishrf .gt_last_summary_row {
+#sroovsntza .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1259,7 +1287,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_grand_summary_row {
+#sroovsntza .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1269,7 +1297,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#hyzklishrf .gt_first_grand_summary_row {
+#sroovsntza .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1279,7 +1307,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_last_grand_summary_row_top {
+#sroovsntza .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1289,11 +1317,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_striped {
+#sroovsntza .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hyzklishrf .gt_table_body {
+#sroovsntza .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1302,7 +1330,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_footnotes {
+#sroovsntza .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1316,7 +1344,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_footnote {
+#sroovsntza .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1325,7 +1353,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#hyzklishrf .gt_sourcenotes {
+#sroovsntza .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1339,7 +1367,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#hyzklishrf .gt_sourcenote {
+#sroovsntza .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1347,110 +1375,129 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#hyzklishrf .gt_left {
+#sroovsntza .gt_left {
   text-align: left;
 }
 
-#hyzklishrf .gt_center {
+#sroovsntza .gt_center {
   text-align: center;
 }
 
-#hyzklishrf .gt_right {
+#sroovsntza .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hyzklishrf .gt_font_normal {
+#sroovsntza .gt_font_normal {
   font-weight: normal;
 }
 
-#hyzklishrf .gt_font_bold {
+#sroovsntza .gt_font_bold {
   font-weight: bold;
 }
 
-#hyzklishrf .gt_font_italic {
+#sroovsntza .gt_font_italic {
   font-style: italic;
 }
 
-#hyzklishrf .gt_super {
+#sroovsntza .gt_super {
   font-size: 65%;
 }
 
-#hyzklishrf .gt_footnote_marks {
+#sroovsntza .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hyzklishrf .gt_asterisk {
+#sroovsntza .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hyzklishrf .gt_indent_1 {
+#sroovsntza .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hyzklishrf .gt_indent_2 {
+#sroovsntza .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hyzklishrf .gt_indent_3 {
+#sroovsntza .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hyzklishrf .gt_indent_4 {
+#sroovsntza .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hyzklishrf .gt_indent_5 {
+#sroovsntza .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="topic">topic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="terms_beta">terms_beta</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="gamma">gamma</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="topic" class="gt_row gt_center">Topic 10</td>
-<td headers="terms_beta" class="gt_row gt_left">phone, via, much, #screentime, know, check, people, phones, #parenting, online</td>
-<td headers="gamma" class="gt_row gt_right">0.122</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 9</td>
-<td headers="terms_beta" class="gt_row gt_left">help, read, devices, use, world, tech, family, taking, kids, sleep</td>
-<td headers="gamma" class="gt_row gt_right">0.114</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 3</td>
-<td headers="terms_beta" class="gt_row gt_left">need, great, week, going, listen, #unplugging, discuss, @icphenomenallyu, away, well</td>
-<td headers="gamma" class="gt_row gt_right">0.111</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 2</td>
-<td headers="terms_beta" class="gt_row gt_left">#unplug, just, weekend, #travel, unplug, enjoy, #nature, really, join, nature</td>
-<td headers="gamma" class="gt_row gt_right">0.103</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 8</td>
-<td headers="terms_beta" class="gt_row gt_left">new, technology, smartphone, retreat, work, addiction, year, health, internet, without</td>
-<td headers="gamma" class="gt_row gt_right">0.099</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 7</td>
-<td headers="terms_beta" class="gt_row gt_left">can, #mindfulness, feel, #switchoff, #digitalwellbeing, #wellness, things, #phonefree, #disconnecttoreconnect, #digitalminimalism</td>
-<td headers="gamma" class="gt_row gt_right">0.098</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 4</td>
-<td headers="terms_beta" class="gt_row gt_left">amp, day, take, #mentalhealth, go, try, #wellbeing, now, give, every</td>
-<td headers="gamma" class="gt_row gt_right">0.092</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 1</td>
-<td headers="terms_beta" class="gt_row gt_left">social, media, get, life, back, like, good, #socialmedia, find, see</td>
-<td headers="gamma" class="gt_row gt_right">0.091</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 5</td>
-<td headers="terms_beta" class="gt_row gt_left">us, today, days, next, put, happy, may, facebook, share, hour</td>
-<td headers="gamma" class="gt_row gt_right">0.089</td></tr>
-    <tr><td headers="topic" class="gt_row gt_center">Topic 6</td>
-<td headers="terms_beta" class="gt_row gt_left">one, break, tips, make, screen, love, #technology, free, looking, getting</td>
-<td headers="gamma" class="gt_row gt_right">0.080</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="topic" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">topic</th>
+<th id="terms_beta" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">terms_beta</th>
+<th id="gamma" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gamma</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">Topic 10</td>
+<td class="gt_row gt_left" headers="terms_beta">phone, via, much, #screentime, know, check, people, phones, #parenting, online</td>
+<td class="gt_row gt_right" headers="gamma">0.122</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">Topic 9</td>
+<td class="gt_row gt_left" headers="terms_beta">help, read, devices, use, world, tech, family, taking, kids, sleep</td>
+<td class="gt_row gt_right" headers="gamma">0.114</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">Topic 3</td>
+<td class="gt_row gt_left" headers="terms_beta">need, great, week, going, listen, #unplugging, discuss, @icphenomenallyu, away, well</td>
+<td class="gt_row gt_right" headers="gamma">0.111</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">Topic 2</td>
+<td class="gt_row gt_left" headers="terms_beta">#unplug, just, weekend, #travel, unplug, enjoy, #nature, really, join, nature</td>
+<td class="gt_row gt_right" headers="gamma">0.103</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">Topic 8</td>
+<td class="gt_row gt_left" headers="terms_beta">new, technology, smartphone, retreat, work, addiction, year, health, internet, without</td>
+<td class="gt_row gt_right" headers="gamma">0.099</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">Topic 7</td>
+<td class="gt_row gt_left" headers="terms_beta">can, #mindfulness, feel, #switchoff, #digitalwellbeing, #wellness, things, #phonefree, #disconnecttoreconnect, #digitalminimalism</td>
+<td class="gt_row gt_right" headers="gamma">0.098</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">Topic 4</td>
+<td class="gt_row gt_left" headers="terms_beta">amp, day, take, #mentalhealth, go, try, #wellbeing, now, give, every</td>
+<td class="gt_row gt_right" headers="gamma">0.092</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">Topic 1</td>
+<td class="gt_row gt_left" headers="terms_beta">social, media, get, life, back, like, good, #socialmedia, find, see</td>
+<td class="gt_row gt_right" headers="gamma">0.091</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="topic">Topic 5</td>
+<td class="gt_row gt_left" headers="terms_beta">us, today, days, next, put, happy, may, facebook, share, hour</td>
+<td class="gt_row gt_right" headers="gamma">0.089</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="topic">Topic 6</td>
+<td class="gt_row gt_left" headers="terms_beta">one, break, tips, make, screen, love, #technology, free, looking, getting</td>
+<td class="gt_row gt_right" headers="gamma">0.080</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1520,7 +1567,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-topic-distribution-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-topic-distribution-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1533,7 +1584,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-topics-distribution-over-time-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-topics-distribution-over-time-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tweets_detox_topics <span class="sc">%&gt;%</span> </span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(top_topic, as.factor)) <span class="sc">%&gt;%</span> </span>
@@ -1541,7 +1596,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-10_files/figure-html/figure-topics-distribution-over-time-2.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-10_files/figure-html/figure-topics-distribution-over-time-2.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1555,24 +1614,23 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(tweet_id, user_username, created_at, text, top_gamma) <span class="sc">%&gt;%</span> </span>
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="ifjebfcsed" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ifjebfcsed table {
+<div id="mlwdzopznn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mlwdzopznn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ifjebfcsed thead, #ifjebfcsed tbody, #ifjebfcsed tfoot, #ifjebfcsed tr, #ifjebfcsed td, #ifjebfcsed th {
+#mlwdzopznn thead, #mlwdzopznn tbody, #mlwdzopznn tfoot, #mlwdzopznn tr, #mlwdzopznn td, #mlwdzopznn th {
   border-style: none;
 }
 
-#ifjebfcsed p {
+#mlwdzopznn p {
   margin: 0;
   padding: 0;
 }
 
-#ifjebfcsed .gt_table {
+#mlwdzopznn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1598,12 +1656,12 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-left-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_caption {
+#mlwdzopznn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ifjebfcsed .gt_title {
+#mlwdzopznn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1615,7 +1673,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-width: 0;
 }
 
-#ifjebfcsed .gt_subtitle {
+#mlwdzopznn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1627,7 +1685,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-width: 0;
 }
 
-#ifjebfcsed .gt_heading {
+#mlwdzopznn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1639,13 +1697,13 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_bottom_border {
+#mlwdzopznn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_col_headings {
+#mlwdzopznn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1660,7 +1718,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_col_heading {
+#mlwdzopznn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1680,7 +1738,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#ifjebfcsed .gt_column_spanner_outer {
+#mlwdzopznn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1692,15 +1750,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 4px;
 }
 
-#ifjebfcsed .gt_column_spanner_outer:first-child {
+#mlwdzopznn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ifjebfcsed .gt_column_spanner_outer:last-child {
+#mlwdzopznn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ifjebfcsed .gt_column_spanner {
+#mlwdzopznn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1712,11 +1770,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   width: 100%;
 }
 
-#ifjebfcsed .gt_spanner_row {
+#mlwdzopznn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ifjebfcsed .gt_group_heading {
+#mlwdzopznn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1742,7 +1800,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   text-align: left;
 }
 
-#ifjebfcsed .gt_empty_group_heading {
+#mlwdzopznn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1757,15 +1815,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: middle;
 }
 
-#ifjebfcsed .gt_from_md > :first-child {
+#mlwdzopznn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ifjebfcsed .gt_from_md > :last-child {
+#mlwdzopznn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ifjebfcsed .gt_row {
+#mlwdzopznn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1784,7 +1842,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   overflow-x: hidden;
 }
 
-#ifjebfcsed .gt_stub {
+#mlwdzopznn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1797,7 +1855,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#ifjebfcsed .gt_stub_row_group {
+#mlwdzopznn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1811,15 +1869,15 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   vertical-align: top;
 }
 
-#ifjebfcsed .gt_row_group_first td {
+#mlwdzopznn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ifjebfcsed .gt_row_group_first th {
+#mlwdzopznn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ifjebfcsed .gt_summary_row {
+#mlwdzopznn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1829,16 +1887,16 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#ifjebfcsed .gt_first_summary_row {
+#mlwdzopznn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_first_summary_row.thick {
+#mlwdzopznn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ifjebfcsed .gt_last_summary_row {
+#mlwdzopznn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1848,7 +1906,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_grand_summary_row {
+#mlwdzopznn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1858,7 +1916,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#ifjebfcsed .gt_first_grand_summary_row {
+#mlwdzopznn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1868,7 +1926,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-top-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_last_grand_summary_row_top {
+#mlwdzopznn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1878,11 +1936,11 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_striped {
+#mlwdzopznn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ifjebfcsed .gt_table_body {
+#mlwdzopznn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1891,7 +1949,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-bottom-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_footnotes {
+#mlwdzopznn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1905,7 +1963,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_footnote {
+#mlwdzopznn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1914,7 +1972,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#ifjebfcsed .gt_sourcenotes {
+#mlwdzopznn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1928,7 +1986,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   border-right-color: #D3D3D3;
 }
 
-#ifjebfcsed .gt_sourcenote {
+#mlwdzopznn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1936,132 +1994,151 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
   padding-right: 5px;
 }
 
-#ifjebfcsed .gt_left {
+#mlwdzopznn .gt_left {
   text-align: left;
 }
 
-#ifjebfcsed .gt_center {
+#mlwdzopznn .gt_center {
   text-align: center;
 }
 
-#ifjebfcsed .gt_right {
+#mlwdzopznn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ifjebfcsed .gt_font_normal {
+#mlwdzopznn .gt_font_normal {
   font-weight: normal;
 }
 
-#ifjebfcsed .gt_font_bold {
+#mlwdzopznn .gt_font_bold {
   font-weight: bold;
 }
 
-#ifjebfcsed .gt_font_italic {
+#mlwdzopznn .gt_font_italic {
   font-style: italic;
 }
 
-#ifjebfcsed .gt_super {
+#mlwdzopznn .gt_super {
   font-size: 65%;
 }
 
-#ifjebfcsed .gt_footnote_marks {
+#mlwdzopznn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ifjebfcsed .gt_asterisk {
+#mlwdzopznn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ifjebfcsed .gt_indent_1 {
+#mlwdzopznn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ifjebfcsed .gt_indent_2 {
+#mlwdzopznn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ifjebfcsed .gt_indent_3 {
+#mlwdzopznn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ifjebfcsed .gt_indent_4 {
+#mlwdzopznn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ifjebfcsed .gt_indent_5 {
+#mlwdzopznn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="tweet_id">tweet_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="user_username">user_username</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="created_at">created_at</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="text">text</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="top_gamma">top_gamma</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="tweet_id" class="gt_row gt_right">1496707135794827266</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-24 04:42:43</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/EcV7yKn4WX</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1496343978672898048</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-23 04:39:39</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/o9e6WQIpm5</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1495981434665947137</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-22 04:39:02</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/rQgcPltrMt</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1499612427503247360</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-04 05:07:18</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/DQRQlN1iyq</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1499249315381977089</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-03 05:04:26</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/L7ly66J2fq</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498886117394980865</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-02 05:01:13</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/uJPIMYY1Id</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498522796611321864</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-03-01 04:57:30</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/z4Fv2bmeag</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1498159674008510465</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-28 04:54:35</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/SdZFAJy6kZ</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1497796525929472003</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-27 04:51:34</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/OKLMzwfQUA</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-    <tr><td headers="tweet_id" class="gt_row gt_right">1497433419512524802</td>
-<td headers="user_username" class="gt_row gt_left">beckygrantstr</td>
-<td headers="created_at" class="gt_row gt_right">2022-02-26 04:48:42</td>
-<td headers="text" class="gt_row gt_left">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal  https://t.co/yTnqhTPV8h</td>
-<td headers="top_gamma" class="gt_row gt_right">0.8192142</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="tweet_id" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">tweet_id</th>
+<th id="user_username" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">user_username</th>
+<th id="created_at" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">created_at</th>
+<th id="text" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">text</th>
+<th id="top_gamma" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">top_gamma</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1496707135794827266</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-24 04:42:43</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/EcV7yKn4WX</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1496343978672898048</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-23 04:39:39</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/o9e6WQIpm5</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1495981434665947137</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-22 04:39:02</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/rQgcPltrMt</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1499612427503247360</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-04 05:07:18</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/DQRQlN1iyq</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1499249315381977089</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-03 05:04:26</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/L7ly66J2fq</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1498886117394980865</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-02 05:01:13</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/uJPIMYY1Id</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1498522796611321864</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-03-01 04:57:30</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/z4Fv2bmeag</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1498159674008510465</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-28 04:54:35</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/SdZFAJy6kZ</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="tweet_id">1497796525929472003</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-27 04:51:34</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/OKLMzwfQUA</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="tweet_id">1497433419512524802</td>
+<td class="gt_row gt_left" headers="user_username">beckygrantstr</td>
+<td class="gt_row gt_right" headers="created_at">2022-02-26 04:48:42</td>
+<td class="gt_row gt_left" headers="text">Do you have a blind spot when it comes to what your kids are doing online? #screentime #parenting #digitaldetox Parents Have a Blind Spot When it Comes to Kids and Screens | by Becky Grant | A Parent Is Born | Feb, 2022 | Medium - via @pensignal https://t.co/yTnqhTPV8h</td>
+<td class="gt_row gt_right" headers="top_gamma">0.8192142</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2103,7 +2180,7 @@ A topic model with 85 topics, 46574 documents and a 8268 word dictionary.</code>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-barrie2021" class="csl-entry" role="listitem">
 Barrie, Christopher, and Justin Ho. 2021. <span>“academictwitteR: An r Package to Access the Twitter Academic Research Product Track V2 API Endpoint.”</span> <em>Journal of Open Source Software</em> 6 (62): 3272. <a href="https://doi.org/10.21105/joss.03272">https://doi.org/10.21105/joss.03272</a>.
 </div>
@@ -2152,6 +2229,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -2220,13 +2324,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2305,10 +2411,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2318,8 +2423,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2332,6 +2446,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2375,6 +2608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2400,6 +2634,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2462,13 +2722,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2023, Christoph Adrian</div>   
+    <div class="nav-footer-left">
+<p>Copyright 2023, Christoph Adrian</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This page is built with ☕ &amp; <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-10.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ☕ &amp; <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 

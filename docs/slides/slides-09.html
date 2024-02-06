@@ -13,7 +13,7 @@
 <script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Christoph Adrian">
   <title>Digital behavioral data - 🔨 Text as data in R</title>
@@ -36,7 +36,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -103,6 +103,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -247,7 +248,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -412,7 +414,7 @@
   </style>
 <meta property="og:title" content="Digital behavioral data - 🔨 Text as data in R">
 <meta property="og:description" content="Session 09">
-<meta property="og:site-name" content="Digital behavioral data">
+<meta property="og:site_name" content="Digital behavioral data">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -451,27 +453,26 @@
 <h2>Schedule</h2>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="qtfocdhdut" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="thiiiekxsn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#qtfocdhdut table {
+#thiiiekxsn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qtfocdhdut thead, #qtfocdhdut tbody, #qtfocdhdut tfoot, #qtfocdhdut tr, #qtfocdhdut td, #qtfocdhdut th {
+#thiiiekxsn thead, #thiiiekxsn tbody, #thiiiekxsn tfoot, #thiiiekxsn tr, #thiiiekxsn td, #thiiiekxsn th {
   border-style: none;
 }
 
-#qtfocdhdut p {
+#thiiiekxsn p {
   margin: 0;
   padding: 0;
 }
 
-#qtfocdhdut .gt_table {
+#thiiiekxsn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -497,12 +498,12 @@
   border-left-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_caption {
+#thiiiekxsn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qtfocdhdut .gt_title {
+#thiiiekxsn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -514,7 +515,7 @@
   border-bottom-width: 0;
 }
 
-#qtfocdhdut .gt_subtitle {
+#thiiiekxsn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -526,7 +527,7 @@
   border-top-width: 0;
 }
 
-#qtfocdhdut .gt_heading {
+#thiiiekxsn .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -538,13 +539,13 @@
   border-right-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_bottom_border {
+#thiiiekxsn .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_col_headings {
+#thiiiekxsn .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -559,7 +560,7 @@
   border-right-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_col_heading {
+#thiiiekxsn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -579,7 +580,7 @@
   overflow-x: hidden;
 }
 
-#qtfocdhdut .gt_column_spanner_outer {
+#thiiiekxsn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -591,15 +592,15 @@
   padding-right: 4px;
 }
 
-#qtfocdhdut .gt_column_spanner_outer:first-child {
+#thiiiekxsn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qtfocdhdut .gt_column_spanner_outer:last-child {
+#thiiiekxsn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qtfocdhdut .gt_column_spanner {
+#thiiiekxsn .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 1px;
   border-bottom-color: #334422;
@@ -611,11 +612,11 @@
   width: 100%;
 }
 
-#qtfocdhdut .gt_spanner_row {
+#thiiiekxsn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qtfocdhdut .gt_group_heading {
+#thiiiekxsn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -641,7 +642,7 @@
   text-align: left;
 }
 
-#qtfocdhdut .gt_empty_group_heading {
+#thiiiekxsn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -656,15 +657,15 @@
   vertical-align: middle;
 }
 
-#qtfocdhdut .gt_from_md > :first-child {
+#thiiiekxsn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qtfocdhdut .gt_from_md > :last-child {
+#thiiiekxsn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qtfocdhdut .gt_row {
+#thiiiekxsn .gt_row {
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 5px;
@@ -683,7 +684,7 @@
   overflow-x: hidden;
 }
 
-#qtfocdhdut .gt_stub {
+#thiiiekxsn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -696,7 +697,7 @@
   padding-right: 5px;
 }
 
-#qtfocdhdut .gt_stub_row_group {
+#thiiiekxsn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -710,15 +711,15 @@
   vertical-align: top;
 }
 
-#qtfocdhdut .gt_row_group_first td {
+#thiiiekxsn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qtfocdhdut .gt_row_group_first th {
+#thiiiekxsn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qtfocdhdut .gt_summary_row {
+#thiiiekxsn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -728,16 +729,16 @@
   padding-right: 5px;
 }
 
-#qtfocdhdut .gt_first_summary_row {
+#thiiiekxsn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_first_summary_row.thick {
+#thiiiekxsn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qtfocdhdut .gt_last_summary_row {
+#thiiiekxsn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -747,7 +748,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_grand_summary_row {
+#thiiiekxsn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -757,7 +758,7 @@
   padding-right: 5px;
 }
 
-#qtfocdhdut .gt_first_grand_summary_row {
+#thiiiekxsn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -767,7 +768,7 @@
   border-top-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_last_grand_summary_row_top {
+#thiiiekxsn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -777,11 +778,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_striped {
+#thiiiekxsn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qtfocdhdut .gt_table_body {
+#thiiiekxsn .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -790,7 +791,7 @@
   border-bottom-color: #FFFFFF;
 }
 
-#qtfocdhdut .gt_footnotes {
+#thiiiekxsn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -804,7 +805,7 @@
   border-right-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_footnote {
+#thiiiekxsn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -813,7 +814,7 @@
   padding-right: 5px;
 }
 
-#qtfocdhdut .gt_sourcenotes {
+#thiiiekxsn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -827,7 +828,7 @@
   border-right-color: #D3D3D3;
 }
 
-#qtfocdhdut .gt_sourcenote {
+#thiiiekxsn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -835,212 +836,194 @@
   padding-right: 5px;
 }
 
-#qtfocdhdut .gt_left {
+#thiiiekxsn .gt_left {
   text-align: left;
 }
 
-#qtfocdhdut .gt_center {
+#thiiiekxsn .gt_center {
   text-align: center;
 }
 
-#qtfocdhdut .gt_right {
+#thiiiekxsn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qtfocdhdut .gt_font_normal {
+#thiiiekxsn .gt_font_normal {
   font-weight: normal;
 }
 
-#qtfocdhdut .gt_font_bold {
+#thiiiekxsn .gt_font_bold {
   font-weight: bold;
 }
 
-#qtfocdhdut .gt_font_italic {
+#thiiiekxsn .gt_font_italic {
   font-style: italic;
 }
 
-#qtfocdhdut .gt_super {
+#thiiiekxsn .gt_super {
   font-size: 65%;
 }
 
-#qtfocdhdut .gt_footnote_marks {
+#thiiiekxsn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qtfocdhdut .gt_asterisk {
+#thiiiekxsn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qtfocdhdut .gt_indent_1 {
+#thiiiekxsn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qtfocdhdut .gt_indent_2 {
+#thiiiekxsn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qtfocdhdut .gt_indent_3 {
+#thiiiekxsn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qtfocdhdut .gt_indent_4 {
+#thiiiekxsn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qtfocdhdut .gt_indent_5 {
+#thiiiekxsn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Session">Session</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Datum">Datum</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Topic">Topic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="Presenter">Presenter</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Introduction**"><div class="gt_from_md"><p><strong>Introduction</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="1"><div class="gt_from_md"><p>1</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="25.10.2023"><div class="gt_from_md"><p>25.10.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Kick-Off"><div class="gt_from_md"><p>Kick-Off</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="01.11.2023"><div class="gt_from_md"><p>01.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎃 *Holiday (No Lecture)*"><div class="gt_from_md"><p>🎃 <em>Holiday (No Lecture)</em></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="2"><div class="gt_from_md"><p>2</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="08.11.2023"><div class="gt_from_md"><p>08.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Einführung in DBD"><div class="gt_from_md"><p>Einführung in DBD</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="3"><div class="gt_from_md"><p>3</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="15.11.2023"><div class="gt_from_md"><p>15.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🔨 Working with R"><div class="gt_from_md"><p>🔨 Working with R</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**🗣️**"><div class="gt_from_md"><p><strong>🗣️</strong></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="**Presentations**"><div class="gt_from_md"><p><strong>Presentations</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="4"><div class="gt_from_md"><p>4</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="22.11.2023"><div class="gt_from_md"><p>22.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Media routines &amp; habits"><div class="gt_from_md"><p>📚 Media routines &amp; habits</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group C"><div class="gt_from_md"><p>Group C</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~5~"><div class="gt_from_md"><p><sub>5</sub></p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="29.11.2023"><div class="gt_from_md"><p>29.11.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~📚 Digital disconnection~"><div class="gt_from_md"><p><del>📚 Digital disconnection</del></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="6"><div class="gt_from_md"><p>6</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="06.12.2023"><div class="gt_from_md"><p>06.12.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📚 Digital disconnection"><div class="gt_from_md"><p>📚 Digital disconnection</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group A"><div class="gt_from_md"><p>Group A</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="7"><div class="gt_from_md"><p>7</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="13.12.2023"><div class="gt_from_md"><p>13.12.2023</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📦 Data collection methods"><div class="gt_from_md"><p>📦 Data collection methods</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group D"><div class="gt_from_md"><p>Group D</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="8"><div class="gt_from_md"><p>8</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="~20.12.2023~"><div class="gt_from_md"><p><del>20.12.2023</del></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="📦 Automatic text analysis 🎥"><div class="gt_from_md"><p>📦 Automatic text analysis 🎥</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="Group B"><div class="gt_from_md"><p>Group B</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd="🎄*Christmas Break (No Lecture)*"><div class="gt_from_md"><p>🎄<em>Christmas Break (No Lecture)</em></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📂 **Project**"><div class="gt_from_md"><p>📂 <strong>Project</strong></p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="**Analysis of media content**"><div class="gt_from_md"><p><strong>Analysis of media content</strong></p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd=""><div class="gt_from_md"></div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="9"><div class="gt_from_md"><p>9</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="10.01.2024"><div class="gt_from_md"><p>10.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15);"><div data-qmd="🔨 Text as data"><div class="gt_from_md"><p>🔨 Text as data</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15);"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="10"><div class="gt_from_md"><p>10</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="17.01.2024"><div class="gt_from_md"><p>17.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Automatic analysis of text in R"><div class="gt_from_md"><p>🔨 Automatic analysis of text in R</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="11"><div class="gt_from_md"><p>11</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="24.01.2024"><div class="gt_from_md"><p>24.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🔨 Q&amp;A"><div class="gt_from_md"><p>🔨 Q&amp;A</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="12"><div class="gt_from_md"><p>12</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="31.01.2024"><div class="gt_from_md"><p>31.01.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="📊 Presentation &amp; Discussion"><div class="gt_from_md"><p>📊 Presentation &amp; Discussion</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="All groups"><div class="gt_from_md"><p>All groups</p>
-</div></div></td></tr>
-    <tr><td headers="Session" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="13"><div class="gt_from_md"><p>13</p>
-</div></div></td>
-<td headers="Datum" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="07.02.2024"><div class="gt_from_md"><p>07.02.2024</p>
-</div></div></td>
-<td headers="Topic" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="🏁 Recap, Evaluation &amp; Discussion"><div class="gt_from_md"><p>🏁 Recap, Evaluation &amp; Discussion</p>
-</div></div></td>
-<td headers="Presenter" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;"><div data-qmd="Christoph Adrian"><div class="gt_from_md"><p>Christoph Adrian</p>
-</div></div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Session" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Session</th>
+<th id="Datum" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Datum</th>
+<th id="Topic" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Topic</th>
+<th id="Presenter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Presenter</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>Introduction</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>1</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>25.10.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Kick-Off</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>01.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🎃 <em>Holiday (No Lecture)</em></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>2</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>08.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Einführung in DBD</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>3</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>15.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🔨 Working with R</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>🗣️</strong></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><strong>Presentations</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>4</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>22.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📚 Media routines &amp; habits</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group C</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><sub>5</sub></p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>29.11.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>~📚 Digital disconnection~</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>6</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>06.12.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📚 Digital disconnection</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group A</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>7</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>13.12.2023</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📦 Data collection methods</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group D</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>8</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p><sub>20.12.2023</sub></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>📦 Automatic text analysis 🎥</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>Group B</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"><p>🎄<em>Christmas Break (No Lecture)</em></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; color: #BEBEBE; font-style: italic"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>📂 <strong>Project</strong></p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p><strong>Analysis of media content</strong></p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>9</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>10.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: bold; color: #000000; background-color: rgba(197,15,60,0.15)"><p>🔨 Text as data</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400; background-color: rgba(197,15,60,0.15)"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>10</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>17.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>🔨 Automatic analysis of text in R</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>11</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>24.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>🔨 Q&amp;A</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>Christoph Adrian</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>12</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>31.01.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>📊 Presentation &amp; Discussion</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>All groups</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Session" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>13</p></td>
+<td class="gt_row gt_left" headers="Datum" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>07.02.2024</p></td>
+<td class="gt_row gt_left" headers="Topic" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>🏁 Recap, Evaluation &amp; Discussion</p></td>
+<td class="gt_row gt_left" headers="Presenter" style="font-family: 'Source Sans Pro'; font-weight: 400"><p>Christoph Adrian</p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1098,28 +1081,27 @@
 <h4 id="relationship-between-social-media-use-digital-well-being-and-digital-disconnection">Relationship between social media use, digital well-being and digital disconnection</h4>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="xqkoumxkfb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mbzhffnnlz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#xqkoumxkfb table {
+#mbzhffnnlz table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xqkoumxkfb thead, #xqkoumxkfb tbody, #xqkoumxkfb tfoot, #xqkoumxkfb tr, #xqkoumxkfb td, #xqkoumxkfb th {
+#mbzhffnnlz thead, #mbzhffnnlz tbody, #mbzhffnnlz tfoot, #mbzhffnnlz tr, #mbzhffnnlz td, #mbzhffnnlz th {
   border-style: none;
 }
 
-#xqkoumxkfb p {
+#mbzhffnnlz p {
   margin: 0;
   padding: 0;
 }
 
-#xqkoumxkfb .gt_table {
+#mbzhffnnlz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1145,12 +1127,12 @@
   border-left-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_caption {
+#mbzhffnnlz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xqkoumxkfb .gt_title {
+#mbzhffnnlz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1162,7 +1144,7 @@
   border-bottom-width: 0;
 }
 
-#xqkoumxkfb .gt_subtitle {
+#mbzhffnnlz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1174,7 +1156,7 @@
   border-top-width: 0;
 }
 
-#xqkoumxkfb .gt_heading {
+#mbzhffnnlz .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1186,13 +1168,13 @@
   border-right-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_bottom_border {
+#mbzhffnnlz .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_col_headings {
+#mbzhffnnlz .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1207,7 +1189,7 @@
   border-right-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_col_heading {
+#mbzhffnnlz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1227,7 +1209,7 @@
   overflow-x: hidden;
 }
 
-#xqkoumxkfb .gt_column_spanner_outer {
+#mbzhffnnlz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1239,15 +1221,15 @@
   padding-right: 4px;
 }
 
-#xqkoumxkfb .gt_column_spanner_outer:first-child {
+#mbzhffnnlz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xqkoumxkfb .gt_column_spanner_outer:last-child {
+#mbzhffnnlz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xqkoumxkfb .gt_column_spanner {
+#mbzhffnnlz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1259,11 +1241,11 @@
   width: 100%;
 }
 
-#xqkoumxkfb .gt_spanner_row {
+#mbzhffnnlz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xqkoumxkfb .gt_group_heading {
+#mbzhffnnlz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1289,7 +1271,7 @@
   text-align: left;
 }
 
-#xqkoumxkfb .gt_empty_group_heading {
+#mbzhffnnlz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1304,15 +1286,15 @@
   vertical-align: middle;
 }
 
-#xqkoumxkfb .gt_from_md > :first-child {
+#mbzhffnnlz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xqkoumxkfb .gt_from_md > :last-child {
+#mbzhffnnlz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xqkoumxkfb .gt_row {
+#mbzhffnnlz .gt_row {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -1331,7 +1313,7 @@
   overflow-x: hidden;
 }
 
-#xqkoumxkfb .gt_stub {
+#mbzhffnnlz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1344,7 +1326,7 @@
   padding-right: 5px;
 }
 
-#xqkoumxkfb .gt_stub_row_group {
+#mbzhffnnlz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1358,15 +1340,15 @@
   vertical-align: top;
 }
 
-#xqkoumxkfb .gt_row_group_first td {
+#mbzhffnnlz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xqkoumxkfb .gt_row_group_first th {
+#mbzhffnnlz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xqkoumxkfb .gt_summary_row {
+#mbzhffnnlz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1376,16 +1358,16 @@
   padding-right: 5px;
 }
 
-#xqkoumxkfb .gt_first_summary_row {
+#mbzhffnnlz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_first_summary_row.thick {
+#mbzhffnnlz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xqkoumxkfb .gt_last_summary_row {
+#mbzhffnnlz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1395,7 +1377,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_grand_summary_row {
+#mbzhffnnlz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1405,7 +1387,7 @@
   padding-right: 5px;
 }
 
-#xqkoumxkfb .gt_first_grand_summary_row {
+#mbzhffnnlz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1415,7 +1397,7 @@
   border-top-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_last_grand_summary_row_top {
+#mbzhffnnlz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1425,11 +1407,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_striped {
+#mbzhffnnlz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xqkoumxkfb .gt_table_body {
+#mbzhffnnlz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1438,7 +1420,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_footnotes {
+#mbzhffnnlz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1452,7 +1434,7 @@
   border-right-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_footnote {
+#mbzhffnnlz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1461,7 +1443,7 @@
   padding-right: 5px;
 }
 
-#xqkoumxkfb .gt_sourcenotes {
+#mbzhffnnlz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1475,7 +1457,7 @@
   border-right-color: #D3D3D3;
 }
 
-#xqkoumxkfb .gt_sourcenote {
+#mbzhffnnlz .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1483,63 +1465,63 @@
   padding-right: 5px;
 }
 
-#xqkoumxkfb .gt_left {
+#mbzhffnnlz .gt_left {
   text-align: left;
 }
 
-#xqkoumxkfb .gt_center {
+#mbzhffnnlz .gt_center {
   text-align: center;
 }
 
-#xqkoumxkfb .gt_right {
+#mbzhffnnlz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xqkoumxkfb .gt_font_normal {
+#mbzhffnnlz .gt_font_normal {
   font-weight: normal;
 }
 
-#xqkoumxkfb .gt_font_bold {
+#mbzhffnnlz .gt_font_bold {
   font-weight: bold;
 }
 
-#xqkoumxkfb .gt_font_italic {
+#mbzhffnnlz .gt_font_italic {
   font-style: italic;
 }
 
-#xqkoumxkfb .gt_super {
+#mbzhffnnlz .gt_super {
   font-size: 65%;
 }
 
-#xqkoumxkfb .gt_footnote_marks {
+#mbzhffnnlz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xqkoumxkfb .gt_asterisk {
+#mbzhffnnlz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xqkoumxkfb .gt_indent_1 {
+#mbzhffnnlz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xqkoumxkfb .gt_indent_2 {
+#mbzhffnnlz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xqkoumxkfb .gt_indent_3 {
+#mbzhffnnlz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xqkoumxkfb .gt_indent_4 {
+#mbzhffnnlz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xqkoumxkfb .gt_indent_5 {
+#mbzhffnnlz .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1547,78 +1529,59 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" style="table-layout: fixed;; width: 100%" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <colgroup>
-    <col style="width:50px;">
-    <col style="width:100px;">
-    <col style="width:100px;">
-    <col style="width:100px;">
-  </colgroup>
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id=""></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="<strong>Social Media as a …</strong>">
-        <span class="gt_column_spanner"><strong>Social Media as a …</strong></span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Drug">Drug</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Demon">Demon</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Donut">Donut</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="col_1" class="gt_row gt_left" style="font-weight: bold;"><div data-qmd="What is at stake?"><div class="gt_from_md"><p>What is at stake?</p>
-</div></div></td>
-<td headers="Drug" class="gt_row gt_left"><div data-qmd="Addiction/health"><div class="gt_from_md"><p>Addiction/health</p>
-</div></div></td>
-<td headers="Demon" class="gt_row gt_left"><div data-qmd="Distraction"><div class="gt_from_md"><p>Distraction</p>
-</div></div></td>
-<td headers="Donut" class="gt_row gt_left"><div data-qmd="Well-being"><div class="gt_from_md"><p>Well-being</p>
-</div></div></td></tr>
-    <tr><td headers="col_1" class="gt_row gt_left" style="font-weight: bold;"><div data-qmd="Root cause of problem"><div class="gt_from_md"><p>Root cause of problem</p>
-</div></div></td>
-<td headers="Drug" class="gt_row gt_left"><div data-qmd="Individual susceptibility"><div class="gt_from_md"><p>Individual susceptibility</p>
-</div></div></td>
-<td headers="Demon" class="gt_row gt_left"><div data-qmd="Addictive design"><div class="gt_from_md"><p>Addictive design</p>
-</div></div></td>
-<td headers="Donut" class="gt_row gt_left"><div data-qmd="Inadequate fit"><div class="gt_from_md"><p>Inadequate fit</p>
-</div></div></td></tr>
-    <tr><td headers="col_1" class="gt_row gt_left" style="font-weight: bold;"><div data-qmd="User agency"><div class="gt_from_md"><p>User agency</p>
-</div></div></td>
-<td headers="Drug" class="gt_row gt_left"><div data-qmd="Agency is limited due to innate susceptibilities"><div class="gt_from_md"><p>Agency is limited due to innate susceptibilities</p>
-</div></div></td>
-<td headers="Demon" class="gt_row gt_left"><div data-qmd="Agency needs to be reclaimed from social media platforms"><div class="gt_from_md"><p>Agency needs to be reclaimed from social media platforms</p>
-</div></div></td>
-<td headers="Donut" class="gt_row gt_left"><div data-qmd="User has agency, but it is challenged by person-, technology- and context-specific elements"><div class="gt_from_md"><p>User has agency, but it is challenged by person-, technology- and context-specific elements</p>
-</div></div></td></tr>
-    <tr><td headers="col_1" class="gt_row gt_left" style="font-weight: bold;"><div data-qmd="Focus of disconnection"><div class="gt_from_md"><p>Focus of disconnection</p>
-</div></div></td>
-<td headers="Drug" class="gt_row gt_left"><div data-qmd="Complete abstinence, re-training of the ‘faulty brain’ to break the dopamine link"><div class="gt_from_md"><p>Complete abstinence, re-training of the ‘faulty brain’ to break the dopamine link</p>
-</div></div></td>
-<td headers="Demon" class="gt_row gt_left"><div data-qmd="Removing/weakening the distracting potential of tech, using persuasive design to support exerting social media self-control"><div class="gt_from_md"><p>Removing/weakening the distracting potential of tech, using persuasive design to support exerting social media self-control</p>
-</div></div></td>
-<td headers="Donut" class="gt_row gt_left"><div data-qmd="Disconnection interventions tailored to persons and/or contexts to ‘optimize the balance’ between benefits and drawbacks of connectivity, mindful use"><div class="gt_from_md"><p>Disconnection interventions tailored to persons and/or contexts to ‘optimize the balance’ between benefits and drawbacks of connectivity, mindful use</p>
-</div></div></td></tr>
-    <tr><td headers="col_1" class="gt_row gt_left" style="font-weight: bold;"><div data-qmd="Digital disconnection examples"><div class="gt_from_md"><p>Digital disconnection examples</p>
-</div></div></td>
-<td headers="Drug" class="gt_row gt_left"><div data-qmd="Digital detox, cognitive behavioral therapy"><div class="gt_from_md"><p>Digital detox, cognitive behavioral therapy</p>
-</div></div></td>
-<td headers="Demon" class="gt_row gt_left"><div data-qmd="Muting phone, disabling notifications, putting phone in grey-scale, using apps that reward abstinence (e.g., Forest)"><div class="gt_from_md"><p>Muting phone, disabling notifications, putting phone in grey-scale, using apps that reward abstinence (e.g., Forest)</p>
-</div></div></td>
-<td headers="Donut" class="gt_row gt_left"><div data-qmd="Locative disconnection, disconnection apps that extensive tailoring to persons and contexts, mindfulness training"><div class="gt_from_md"><p>Locative disconnection, disconnection apps that extensive tailoring to persons and contexts, mindfulness training</p>
-</div></div></td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table" data-quarto-postprocess="true" style="table-layout: fixed;; width: 100%" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col"></th>
+<th colspan="3" id="<strong>Social Media as a …</strong>" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner"><strong>Social Media as a …</strong></span></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="Drug" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Drug</th>
+<th id="Demon" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Demon</th>
+<th id="Donut" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Donut</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="col_1" style="font-weight: bold"><p>What is at stake?</p></td>
+<td class="gt_row gt_left" headers="Drug"><p>Addiction/health</p></td>
+<td class="gt_row gt_left" headers="Demon"><p>Distraction</p></td>
+<td class="gt_row gt_left" headers="Donut"><p>Well-being</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="col_1" style="font-weight: bold"><p>Root cause of problem</p></td>
+<td class="gt_row gt_left" headers="Drug"><p>Individual susceptibility</p></td>
+<td class="gt_row gt_left" headers="Demon"><p>Addictive design</p></td>
+<td class="gt_row gt_left" headers="Donut"><p>Inadequate fit</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="col_1" style="font-weight: bold"><p>User agency</p></td>
+<td class="gt_row gt_left" headers="Drug"><p>Agency is limited due to innate susceptibilities</p></td>
+<td class="gt_row gt_left" headers="Demon"><p>Agency needs to be reclaimed from social media platforms</p></td>
+<td class="gt_row gt_left" headers="Donut"><p>User has agency, but it is challenged by person-, technology- and context-specific elements</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="col_1" style="font-weight: bold"><p>Focus of disconnection</p></td>
+<td class="gt_row gt_left" headers="Drug"><p>Complete abstinence, re-training of the ‘faulty brain’ to break the dopamine link</p></td>
+<td class="gt_row gt_left" headers="Demon"><p>Removing/weakening the distracting potential of tech, using persuasive design to support exerting social media self-control</p></td>
+<td class="gt_row gt_left" headers="Donut"><p>Disconnection interventions tailored to persons and/or contexts to ‘optimize the balance’ between benefits and drawbacks of connectivity, mindful use</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="col_1" style="font-weight: bold"><p>Digital disconnection examples</p></td>
+<td class="gt_row gt_left" headers="Drug"><p>Digital detox, cognitive behavioral therapy</p></td>
+<td class="gt_row gt_left" headers="Demon"><p>Muting phone, disabling notifications, putting phone in grey-scale, using apps that reward abstinence (e.g., Forest)</p></td>
+<td class="gt_row gt_left" headers="Donut"><p>Locative disconnection, disconnection apps that extensive tailoring to persons and contexts, mindfulness training</p></td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <p><span class="citation" data-cites="vandenabeele2022">(<a href="#/references" role="doc-biblioref" onclick="">Vanden Abeele et al., 2022</a>)</span></p>
 </section>
-<section id="fa-brands-twitter-digital-detox-digitaldetox" class="slide level2">
+<section id="digital-detox-digitaldetox" class="slide level2">
 <h2><i class="fa-brands fa-twitter" aria-label="twitter"></i> digital detox, #digitaldetox, …</h2>
 <h4 id="information-about-the-data-collection-process">Information about the data collection process</h4>
 <ul>
@@ -1627,17 +1590,17 @@ tbody tr:last-child {
 <li><strong>Access via <em>Twitter Academic Research Product Track v2 API</em></strong> with the help of the <code>academictwitteR</code> package <span class="citation" data-cites="barrie2021">(<a href="#/references" role="doc-biblioref" onclick="">Barrie &amp; Ho, 2021</a>)</span></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>academictwitteR<span class="sc">::</span><span class="fu">build_query</span>(</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="at">query =</span> <span class="fu">c</span>(<span class="st">"digital detox"</span>, <span class="st">"#digitaldetox"</span>, <span class="st">"digital_detox"</span>),</span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">is_retweet =</span> <span class="cn">FALSE</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>academictwitteR<span class="sc">::</span><span class="fu">build_query</span>(</span>
+<span id="cb1-2"><a></a>  <span class="at">query =</span> <span class="fu">c</span>(<span class="st">"digital detox"</span>, <span class="st">"#digitaldetox"</span>, <span class="st">"digital_detox"</span>),</span>
+<span id="cb1-3"><a></a>  <span class="at">is_retweet =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="a-quick-glimpse" class="slide level2">
 <h2>A quick glimpse</h2>
 <h4 id="the-structure-of-the-data-set-available-variables">The structure of the data set &amp; available variables</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>tweets_correct <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>tweets_correct <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 361,408
 Columns: 37
@@ -1685,128 +1648,126 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
 <h2>Biggest attention in 2016, steady decline thereafter</h2>
 <h4 id="distribution-of-tweets-with-reference-to-digital-detox-over-time">Distribution of tweets with reference to digital detox over time</h4>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> retweet_dy)) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="fu">labs</span>(</span>
-<span id="cb4-5"><a href="#cb4-5"></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="at">fill =</span> <span class="st">"Is the tweet a retweet?"</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>     ) <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#1DA1F2"</span>, <span class="st">"#004389"</span>)) <span class="sc">+</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>    <span class="fu">theme_pubr</span>() <span class="sc">+</span>    </span>
-<span id="cb4-11"><a href="#cb4-11"></a>    <span class="co"># add annotations</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a>    <span class="fu">annotate</span>(</span>
-<span id="cb4-13"><a href="#cb4-13"></a>      <span class="st">"text"</span>, </span>
-<span id="cb4-14"><a href="#cb4-14"></a>      <span class="at">x =</span> <span class="dv">14</span>, <span class="at">y =</span> <span class="dv">55000</span>,</span>
-<span id="cb4-15"><a href="#cb4-15"></a>      <span class="at">label =</span> <span class="st">"Increase of character limit from 140 to 280"</span>) <span class="sc">+</span> </span>
-<span id="cb4-16"><a href="#cb4-16"></a>    <span class="fu">geom_curve</span>(</span>
-<span id="cb4-17"><a href="#cb4-17"></a>      <span class="at">data =</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-18"><a href="#cb4-18"></a>        <span class="at">x =</span> <span class="fl">14.2965001234837</span>,<span class="at">y =</span> <span class="fl">53507.2283841571</span>,</span>
-<span id="cb4-19"><a href="#cb4-19"></a>        <span class="at">xend =</span> <span class="fl">11.5275706534335</span>, <span class="at">yend =</span> <span class="fl">45412.4966032138</span>),</span>
-<span id="cb4-20"><a href="#cb4-20"></a>      <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend),</span>
-<span id="cb4-21"><a href="#cb4-21"></a>      <span class="at">angle =</span> 127L,</span>
-<span id="cb4-22"><a href="#cb4-22"></a>      <span class="at">curvature =</span> <span class="fl">0.28</span>,</span>
-<span id="cb4-23"><a href="#cb4-23"></a>      <span class="at">arrow =</span> <span class="fu">arrow</span>(30L, <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"inches"</span>), <span class="st">"last"</span>, <span class="st">"closed"</span>),</span>
-<span id="cb4-24"><a href="#cb4-24"></a>      <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> retweet_dy)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb4-5"><a></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
+<span id="cb4-6"><a></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
+<span id="cb4-7"><a></a>      <span class="at">fill =</span> <span class="st">"Is the tweet a retweet?"</span></span>
+<span id="cb4-8"><a></a>     ) <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#1DA1F2"</span>, <span class="st">"#004389"</span>)) <span class="sc">+</span></span>
+<span id="cb4-10"><a></a>    <span class="fu">theme_pubr</span>() <span class="sc">+</span>    </span>
+<span id="cb4-11"><a></a>    <span class="co"># add annotations</span></span>
+<span id="cb4-12"><a></a>    <span class="fu">annotate</span>(</span>
+<span id="cb4-13"><a></a>      <span class="st">"text"</span>, </span>
+<span id="cb4-14"><a></a>      <span class="at">x =</span> <span class="dv">14</span>, <span class="at">y =</span> <span class="dv">55000</span>,</span>
+<span id="cb4-15"><a></a>      <span class="at">label =</span> <span class="st">"Increase of character limit from 140 to 280"</span>) <span class="sc">+</span> </span>
+<span id="cb4-16"><a></a>    <span class="fu">geom_curve</span>(</span>
+<span id="cb4-17"><a></a>      <span class="at">data =</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-18"><a></a>        <span class="at">x =</span> <span class="fl">14.2965001234837</span>,<span class="at">y =</span> <span class="fl">53507.2283841571</span>,</span>
+<span id="cb4-19"><a></a>        <span class="at">xend =</span> <span class="fl">11.5275706534335</span>, <span class="at">yend =</span> <span class="fl">45412.4966032138</span>),</span>
+<span id="cb4-20"><a></a>      <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend),</span>
+<span id="cb4-21"><a></a>      <span class="at">angle =</span> <span class="dv">127</span>L,</span>
+<span id="cb4-22"><a></a>      <span class="at">curvature =</span> <span class="fl">0.28</span>,</span>
+<span id="cb4-23"><a></a>      <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="dv">30</span>L, <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"inches"</span>), <span class="st">"last"</span>, <span class="st">"closed"</span>),</span>
+<span id="cb4-24"><a></a>      <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="slides-09_files/figure-revealjs/figure-distribution-over-time-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides-09_files/figure-revealjs/figure-distribution-over-time-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="sporadic-tweeting-on-the-topic-mainly-in-english" class="slide level2">
 <h2>Sporadic tweeting on the topic, mainly in English</h2>
 <h4 id="tweets-with-reference-to-ditigal-detox-by-participating-users-and-language">Tweets with reference to ditigal detox by (participating) users and language</h4>
-<div>
-<details>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Number of tweets by user </span></span>
+<span id="cb5-2"><a></a>tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a></a>    <span class="fu">group_by</span>(author_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a></a>    <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a></a>    <span class="fu">mutate</span>(</span>
+<span id="cb5-6"><a></a>        <span class="at">n_grp =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-7"><a></a>                     n <span class="sc">&lt;=</span>    <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb5-8"><a></a>            n <span class="sc">&gt;</span>   <span class="dv">1</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">10</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb5-9"><a></a>            n <span class="sc">&gt;</span>  <span class="dv">10</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">25</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb5-10"><a></a>            n <span class="sc">&gt;</span>  <span class="dv">25</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">50</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb5-11"><a></a>            n <span class="sc">&gt;</span>  <span class="dv">50</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">75</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb5-12"><a></a>            n <span class="sc">&gt;</span>  <span class="dv">75</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span> <span class="dv">100</span> <span class="sc">~</span> <span class="dv">6</span>,</span>
+<span id="cb5-13"><a></a>            n <span class="sc">&gt;</span> <span class="dv">100</span> <span class="sc">~</span> <span class="dv">7</span></span>
+<span id="cb5-14"><a></a>        ), </span>
+<span id="cb5-15"><a></a>        <span class="at">n_grp_fct =</span> <span class="fu">factor</span>(</span>
+<span id="cb5-16"><a></a>            n_grp,</span>
+<span id="cb5-17"><a></a>            <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>),</span>
+<span id="cb5-18"><a></a>            <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb5-19"><a></a>            <span class="st">" 1"</span>,</span>
+<span id="cb5-20"><a></a>            <span class="st">" 2 - 10"</span>, <span class="st">"11 - 25"</span>,</span>
+<span id="cb5-21"><a></a>            <span class="st">"26 - 50"</span>, <span class="st">"50 - 75"</span>,</span>
+<span id="cb5-22"><a></a>            <span class="st">"75 -100"</span>, <span class="st">"&gt; 100"</span>)</span>
+<span id="cb5-23"><a></a>        )</span>
+<span id="cb5-24"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-25"><a></a>    sjmisc<span class="sc">::</span><span class="fu">frq</span>(n_grp_fct) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-26"><a></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-27"><a></a>    <span class="fu">select</span>(val, frq<span class="sc">:</span>cum.prc) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-28"><a></a>    <span class="co"># create table</span></span>
+<span id="cb5-29"><a></a>    <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-30"><a></a>    <span class="co"># tab_header(</span></span>
+<span id="cb5-31"><a></a>    <span class="co">#     title = "Tweets by users with a least on tweet"</span></span>
+<span id="cb5-32"><a></a>    <span class="co">#    ) %&gt;% </span></span>
+<span id="cb5-33"><a></a>    <span class="fu">cols_label</span>(</span>
+<span id="cb5-34"><a></a>      <span class="at">val =</span> <span class="st">"Number of tweets by user"</span>,</span>
+<span id="cb5-35"><a></a>      <span class="at">frq =</span> <span class="st">"n"</span>,</span>
+<span id="cb5-36"><a></a>      <span class="at">raw.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;raw&lt;/sub&gt;"</span>),</span>
+<span id="cb5-37"><a></a>      <span class="at">cum.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;cum&lt;/sub&gt;"</span>)</span>
+<span id="cb5-38"><a></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-39"><a></a>  <span class="fu">gt_theme_538</span>()</span>
+<span id="cb5-40"><a></a><span class="co"># Language of Tweets</span></span>
+<span id="cb5-41"><a></a>tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb5-42"><a></a>    sjmisc<span class="sc">::</span><span class="fu">frq</span>(</span>
+<span id="cb5-43"><a></a>        lang, </span>
+<span id="cb5-44"><a></a>        <span class="at">sort.frq =</span> <span class="fu">c</span>(<span class="st">"desc"</span>), </span>
+<span id="cb5-45"><a></a>        <span class="at">min.frq =</span> <span class="dv">2000</span></span>
+<span id="cb5-46"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-47"><a></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-48"><a></a>    <span class="fu">select</span>(val, frq<span class="sc">:</span>cum.prc) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-49"><a></a>    <span class="co"># create table</span></span>
+<span id="cb5-50"><a></a>    <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-51"><a></a>    <span class="co"># tab_header(</span></span>
+<span id="cb5-52"><a></a>    <span class="co">#     title = "Language of the collected tweets"</span></span>
+<span id="cb5-53"><a></a>    <span class="co">#   ) %&gt;% </span></span>
+<span id="cb5-54"><a></a>    <span class="fu">cols_label</span>(</span>
+<span id="cb5-55"><a></a>      <span class="at">val =</span> <span class="st">"Twitter language code"</span>,</span>
+<span id="cb5-56"><a></a>      <span class="at">frq =</span> <span class="st">"n"</span>,</span>
+<span id="cb5-57"><a></a>      <span class="at">raw.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;raw&lt;/sub&gt;"</span>),</span>
+<span id="cb5-58"><a></a>      <span class="at">cum.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;cum&lt;/sub&gt;"</span>)</span>
+<span id="cb5-59"><a></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-60"><a></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Number of tweets by user </span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="fu">group_by</span>(author_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb5-6"><a href="#cb5-6"></a>        <span class="at">n_grp =</span> <span class="fu">case_when</span>(</span>
-<span id="cb5-7"><a href="#cb5-7"></a>                     n <span class="sc">&lt;=</span>    <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb5-8"><a href="#cb5-8"></a>            n <span class="sc">&gt;</span>   <span class="dv">1</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">10</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb5-9"><a href="#cb5-9"></a>            n <span class="sc">&gt;</span>  <span class="dv">10</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">25</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
-<span id="cb5-10"><a href="#cb5-10"></a>            n <span class="sc">&gt;</span>  <span class="dv">25</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">50</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
-<span id="cb5-11"><a href="#cb5-11"></a>            n <span class="sc">&gt;</span>  <span class="dv">50</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span>  <span class="dv">75</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
-<span id="cb5-12"><a href="#cb5-12"></a>            n <span class="sc">&gt;</span>  <span class="dv">75</span> <span class="sc">&amp;</span> n <span class="sc">&lt;=</span> <span class="dv">100</span> <span class="sc">~</span> <span class="dv">6</span>,</span>
-<span id="cb5-13"><a href="#cb5-13"></a>            n <span class="sc">&gt;</span> <span class="dv">100</span> <span class="sc">~</span> <span class="dv">7</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>        ), </span>
-<span id="cb5-15"><a href="#cb5-15"></a>        <span class="at">n_grp_fct =</span> <span class="fu">factor</span>(</span>
-<span id="cb5-16"><a href="#cb5-16"></a>            n_grp,</span>
-<span id="cb5-17"><a href="#cb5-17"></a>            <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>),</span>
-<span id="cb5-18"><a href="#cb5-18"></a>            <span class="at">labels =</span> <span class="fu">c</span>(</span>
-<span id="cb5-19"><a href="#cb5-19"></a>            <span class="st">" 1"</span>,</span>
-<span id="cb5-20"><a href="#cb5-20"></a>            <span class="st">" 2 - 10"</span>, <span class="st">"11 - 25"</span>,</span>
-<span id="cb5-21"><a href="#cb5-21"></a>            <span class="st">"26 - 50"</span>, <span class="st">"50 - 75"</span>,</span>
-<span id="cb5-22"><a href="#cb5-22"></a>            <span class="st">"75 -100"</span>, <span class="st">"&gt; 100"</span>)</span>
-<span id="cb5-23"><a href="#cb5-23"></a>        )</span>
-<span id="cb5-24"><a href="#cb5-24"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-25"><a href="#cb5-25"></a>    sjmisc<span class="sc">::</span><span class="fu">frq</span>(n_grp_fct) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-26"><a href="#cb5-26"></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-27"><a href="#cb5-27"></a>    <span class="fu">select</span>(val, frq<span class="sc">:</span>cum.prc) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-28"><a href="#cb5-28"></a>    <span class="co"># create table</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a>    <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-30"><a href="#cb5-30"></a>    <span class="co"># tab_header(</span></span>
-<span id="cb5-31"><a href="#cb5-31"></a>    <span class="co">#     title = "Tweets by users with a least on tweet"</span></span>
-<span id="cb5-32"><a href="#cb5-32"></a>    <span class="co">#    ) %&gt;% </span></span>
-<span id="cb5-33"><a href="#cb5-33"></a>    <span class="fu">cols_label</span>(</span>
-<span id="cb5-34"><a href="#cb5-34"></a>      <span class="at">val =</span> <span class="st">"Number of tweets by user"</span>,</span>
-<span id="cb5-35"><a href="#cb5-35"></a>      <span class="at">frq =</span> <span class="st">"n"</span>,</span>
-<span id="cb5-36"><a href="#cb5-36"></a>      <span class="at">raw.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;raw&lt;/sub&gt;"</span>),</span>
-<span id="cb5-37"><a href="#cb5-37"></a>      <span class="at">cum.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;cum&lt;/sub&gt;"</span>)</span>
-<span id="cb5-38"><a href="#cb5-38"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-39"><a href="#cb5-39"></a>  <span class="fu">gt_theme_538</span>()</span>
-<span id="cb5-40"><a href="#cb5-40"></a><span class="co"># Language of Tweets</span></span>
-<span id="cb5-41"><a href="#cb5-41"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb5-42"><a href="#cb5-42"></a>    sjmisc<span class="sc">::</span><span class="fu">frq</span>(</span>
-<span id="cb5-43"><a href="#cb5-43"></a>        lang, </span>
-<span id="cb5-44"><a href="#cb5-44"></a>        <span class="at">sort.frq =</span> <span class="fu">c</span>(<span class="st">"desc"</span>), </span>
-<span id="cb5-45"><a href="#cb5-45"></a>        <span class="at">min.frq =</span> <span class="dv">2000</span></span>
-<span id="cb5-46"><a href="#cb5-46"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-47"><a href="#cb5-47"></a>    <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-48"><a href="#cb5-48"></a>    <span class="fu">select</span>(val, frq<span class="sc">:</span>cum.prc) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-49"><a href="#cb5-49"></a>    <span class="co"># create table</span></span>
-<span id="cb5-50"><a href="#cb5-50"></a>    <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-51"><a href="#cb5-51"></a>    <span class="co"># tab_header(</span></span>
-<span id="cb5-52"><a href="#cb5-52"></a>    <span class="co">#     title = "Language of the collected tweets"</span></span>
-<span id="cb5-53"><a href="#cb5-53"></a>    <span class="co">#   ) %&gt;% </span></span>
-<span id="cb5-54"><a href="#cb5-54"></a>    <span class="fu">cols_label</span>(</span>
-<span id="cb5-55"><a href="#cb5-55"></a>      <span class="at">val =</span> <span class="st">"Twitter language code"</span>,</span>
-<span id="cb5-56"><a href="#cb5-56"></a>      <span class="at">frq =</span> <span class="st">"n"</span>,</span>
-<span id="cb5-57"><a href="#cb5-57"></a>      <span class="at">raw.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;raw&lt;/sub&gt;"</span>),</span>
-<span id="cb5-58"><a href="#cb5-58"></a>      <span class="at">cum.prc =</span> <span class="fu">html</span>(<span class="st">"%&lt;sub&gt;cum&lt;/sub&gt;"</span>)</span>
-<span id="cb5-59"><a href="#cb5-59"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-60"><a href="#cb5-60"></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-
-<div id="jabwmxezqo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="kptufdnchp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#jabwmxezqo table {
+#kptufdnchp table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jabwmxezqo thead, #jabwmxezqo tbody, #jabwmxezqo tfoot, #jabwmxezqo tr, #jabwmxezqo td, #jabwmxezqo th {
+#kptufdnchp thead, #kptufdnchp tbody, #kptufdnchp tfoot, #kptufdnchp tr, #kptufdnchp td, #kptufdnchp th {
   border-style: none;
 }
 
-#jabwmxezqo p {
+#kptufdnchp p {
   margin: 0;
   padding: 0;
 }
 
-#jabwmxezqo .gt_table {
+#kptufdnchp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1832,12 +1793,12 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-left-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_caption {
+#kptufdnchp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jabwmxezqo .gt_title {
+#kptufdnchp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1849,7 +1810,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-width: 0;
 }
 
-#jabwmxezqo .gt_subtitle {
+#kptufdnchp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1861,7 +1822,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-top-width: 0;
 }
 
-#jabwmxezqo .gt_heading {
+#kptufdnchp .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1873,13 +1834,13 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_bottom_border {
+#kptufdnchp .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_col_headings {
+#kptufdnchp .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1894,7 +1855,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_col_heading {
+#kptufdnchp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1914,7 +1875,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   overflow-x: hidden;
 }
 
-#jabwmxezqo .gt_column_spanner_outer {
+#kptufdnchp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1926,15 +1887,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 4px;
 }
 
-#jabwmxezqo .gt_column_spanner_outer:first-child {
+#kptufdnchp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jabwmxezqo .gt_column_spanner_outer:last-child {
+#kptufdnchp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jabwmxezqo .gt_column_spanner {
+#kptufdnchp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1946,11 +1907,11 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   width: 100%;
 }
 
-#jabwmxezqo .gt_spanner_row {
+#kptufdnchp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jabwmxezqo .gt_group_heading {
+#kptufdnchp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1976,7 +1937,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   text-align: left;
 }
 
-#jabwmxezqo .gt_empty_group_heading {
+#kptufdnchp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1991,15 +1952,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   vertical-align: middle;
 }
 
-#jabwmxezqo .gt_from_md > :first-child {
+#kptufdnchp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jabwmxezqo .gt_from_md > :last-child {
+#kptufdnchp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jabwmxezqo .gt_row {
+#kptufdnchp .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -2018,7 +1979,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   overflow-x: hidden;
 }
 
-#jabwmxezqo .gt_stub {
+#kptufdnchp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2031,7 +1992,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#jabwmxezqo .gt_stub_row_group {
+#kptufdnchp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2045,15 +2006,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   vertical-align: top;
 }
 
-#jabwmxezqo .gt_row_group_first td {
+#kptufdnchp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jabwmxezqo .gt_row_group_first th {
+#kptufdnchp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jabwmxezqo .gt_summary_row {
+#kptufdnchp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2063,16 +2024,16 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#jabwmxezqo .gt_first_summary_row {
+#kptufdnchp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_first_summary_row.thick {
+#kptufdnchp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jabwmxezqo .gt_last_summary_row {
+#kptufdnchp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2082,7 +2043,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_grand_summary_row {
+#kptufdnchp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2092,7 +2053,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#jabwmxezqo .gt_first_grand_summary_row {
+#kptufdnchp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2102,7 +2063,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-top-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_last_grand_summary_row_top {
+#kptufdnchp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2112,11 +2073,11 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_striped {
+#kptufdnchp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jabwmxezqo .gt_table_body {
+#kptufdnchp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2125,7 +2086,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_footnotes {
+#kptufdnchp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2139,7 +2100,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_footnote {
+#kptufdnchp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2148,7 +2109,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#jabwmxezqo .gt_sourcenotes {
+#kptufdnchp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2162,7 +2123,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#jabwmxezqo .gt_sourcenote {
+#kptufdnchp .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2170,63 +2131,63 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#jabwmxezqo .gt_left {
+#kptufdnchp .gt_left {
   text-align: left;
 }
 
-#jabwmxezqo .gt_center {
+#kptufdnchp .gt_center {
   text-align: center;
 }
 
-#jabwmxezqo .gt_right {
+#kptufdnchp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jabwmxezqo .gt_font_normal {
+#kptufdnchp .gt_font_normal {
   font-weight: normal;
 }
 
-#jabwmxezqo .gt_font_bold {
+#kptufdnchp .gt_font_bold {
   font-weight: bold;
 }
 
-#jabwmxezqo .gt_font_italic {
+#kptufdnchp .gt_font_italic {
   font-style: italic;
 }
 
-#jabwmxezqo .gt_super {
+#kptufdnchp .gt_super {
   font-size: 65%;
 }
 
-#jabwmxezqo .gt_footnote_marks {
+#kptufdnchp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jabwmxezqo .gt_asterisk {
+#kptufdnchp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jabwmxezqo .gt_indent_1 {
+#kptufdnchp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jabwmxezqo .gt_indent_2 {
+#kptufdnchp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jabwmxezqo .gt_indent_3 {
+#kptufdnchp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jabwmxezqo .gt_indent_4 {
+#kptufdnchp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jabwmxezqo .gt_indent_5 {
+#kptufdnchp .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -2234,78 +2195,103 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Number of tweets by user">Number of tweets by user</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>raw</sub>">%<sub>raw</sub></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>cum</sub>">%<sub>cum</sub></th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="val" class="gt_row gt_center"> 1</td>
-<td headers="frq" class="gt_row gt_right">143364</td>
-<td headers="raw.prc" class="gt_row gt_right">77.21</td>
-<td headers="cum.prc" class="gt_row gt_right">77.21</td></tr>
-    <tr><td headers="val" class="gt_row gt_center"> 2 - 10</td>
-<td headers="frq" class="gt_row gt_right">39981</td>
-<td headers="raw.prc" class="gt_row gt_right">21.53</td>
-<td headers="cum.prc" class="gt_row gt_right">98.74</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">11 - 25</td>
-<td headers="frq" class="gt_row gt_right">1647</td>
-<td headers="raw.prc" class="gt_row gt_right">0.89</td>
-<td headers="cum.prc" class="gt_row gt_right">99.63</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">26 - 50</td>
-<td headers="frq" class="gt_row gt_right">435</td>
-<td headers="raw.prc" class="gt_row gt_right">0.23</td>
-<td headers="cum.prc" class="gt_row gt_right">99.86</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">50 - 75</td>
-<td headers="frq" class="gt_row gt_right">88</td>
-<td headers="raw.prc" class="gt_row gt_right">0.05</td>
-<td headers="cum.prc" class="gt_row gt_right">99.91</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">75 -100</td>
-<td headers="frq" class="gt_row gt_right">55</td>
-<td headers="raw.prc" class="gt_row gt_right">0.03</td>
-<td headers="cum.prc" class="gt_row gt_right">99.94</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">&gt; 100</td>
-<td headers="frq" class="gt_row gt_right">109</td>
-<td headers="raw.prc" class="gt_row gt_right">0.06</td>
-<td headers="cum.prc" class="gt_row gt_right">100.00</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">NA</td>
-<td headers="frq" class="gt_row gt_right">0</td>
-<td headers="raw.prc" class="gt_row gt_right">0.00</td>
-<td headers="cum.prc" class="gt_row gt_right">NA</td></tr>
-  </tbody>
-  
-  
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Number of tweets by user" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">Number of tweets by user</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">n</th>
+<th id="%<sub>raw</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">%<sub>raw</sub></th>
+<th id="%<sub>cum</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">%<sub>cum</sub></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">1</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">143364</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">77.21</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">77.21</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">2 - 10</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">39981</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">21.53</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">98.74</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">11 - 25</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">1647</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.89</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">99.63</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">26 - 50</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">435</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.23</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">99.86</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">50 - 75</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">88</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.05</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">99.91</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">75 -100</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">55</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.03</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">99.94</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">&gt; 100</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">109</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.06</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">100.00</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">NA</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">0</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.00</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">NA</td>
+</tr>
+</tbody>
 </table>
 </div>
-</div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 
-<div id="qtkhmcyjmk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<details class="code-fold">
+<summary>Expand for full code</summary>
+</details>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="aahmgterhs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#qtkhmcyjmk table {
+#aahmgterhs table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qtkhmcyjmk thead, #qtkhmcyjmk tbody, #qtkhmcyjmk tfoot, #qtkhmcyjmk tr, #qtkhmcyjmk td, #qtkhmcyjmk th {
+#aahmgterhs thead, #aahmgterhs tbody, #aahmgterhs tfoot, #aahmgterhs tr, #aahmgterhs td, #aahmgterhs th {
   border-style: none;
 }
 
-#qtkhmcyjmk p {
+#aahmgterhs p {
   margin: 0;
   padding: 0;
 }
 
-#qtkhmcyjmk .gt_table {
+#aahmgterhs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2331,12 +2317,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_caption {
+#aahmgterhs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qtkhmcyjmk .gt_title {
+#aahmgterhs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2348,7 +2334,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#qtkhmcyjmk .gt_subtitle {
+#aahmgterhs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2360,7 +2346,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#qtkhmcyjmk .gt_heading {
+#aahmgterhs .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -2372,13 +2358,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_bottom_border {
+#aahmgterhs .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_col_headings {
+#aahmgterhs .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2393,7 +2379,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_col_heading {
+#aahmgterhs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2413,7 +2399,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#qtkhmcyjmk .gt_column_spanner_outer {
+#aahmgterhs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2425,15 +2411,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#qtkhmcyjmk .gt_column_spanner_outer:first-child {
+#aahmgterhs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qtkhmcyjmk .gt_column_spanner_outer:last-child {
+#aahmgterhs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qtkhmcyjmk .gt_column_spanner {
+#aahmgterhs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -2445,11 +2431,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#qtkhmcyjmk .gt_spanner_row {
+#aahmgterhs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qtkhmcyjmk .gt_group_heading {
+#aahmgterhs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2475,7 +2461,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#qtkhmcyjmk .gt_empty_group_heading {
+#aahmgterhs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2490,15 +2476,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#qtkhmcyjmk .gt_from_md > :first-child {
+#aahmgterhs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qtkhmcyjmk .gt_from_md > :last-child {
+#aahmgterhs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qtkhmcyjmk .gt_row {
+#aahmgterhs .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -2517,7 +2503,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#qtkhmcyjmk .gt_stub {
+#aahmgterhs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2530,7 +2516,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtkhmcyjmk .gt_stub_row_group {
+#aahmgterhs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2544,15 +2530,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#qtkhmcyjmk .gt_row_group_first td {
+#aahmgterhs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qtkhmcyjmk .gt_row_group_first th {
+#aahmgterhs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qtkhmcyjmk .gt_summary_row {
+#aahmgterhs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2562,16 +2548,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtkhmcyjmk .gt_first_summary_row {
+#aahmgterhs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_first_summary_row.thick {
+#aahmgterhs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qtkhmcyjmk .gt_last_summary_row {
+#aahmgterhs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2581,7 +2567,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_grand_summary_row {
+#aahmgterhs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2591,7 +2577,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtkhmcyjmk .gt_first_grand_summary_row {
+#aahmgterhs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2601,7 +2587,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_last_grand_summary_row_top {
+#aahmgterhs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2611,11 +2597,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_striped {
+#aahmgterhs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qtkhmcyjmk .gt_table_body {
+#aahmgterhs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2624,7 +2610,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_footnotes {
+#aahmgterhs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2638,7 +2624,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_footnote {
+#aahmgterhs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2647,7 +2633,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtkhmcyjmk .gt_sourcenotes {
+#aahmgterhs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2661,7 +2647,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtkhmcyjmk .gt_sourcenote {
+#aahmgterhs .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2669,63 +2655,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtkhmcyjmk .gt_left {
+#aahmgterhs .gt_left {
   text-align: left;
 }
 
-#qtkhmcyjmk .gt_center {
+#aahmgterhs .gt_center {
   text-align: center;
 }
 
-#qtkhmcyjmk .gt_right {
+#aahmgterhs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qtkhmcyjmk .gt_font_normal {
+#aahmgterhs .gt_font_normal {
   font-weight: normal;
 }
 
-#qtkhmcyjmk .gt_font_bold {
+#aahmgterhs .gt_font_bold {
   font-weight: bold;
 }
 
-#qtkhmcyjmk .gt_font_italic {
+#aahmgterhs .gt_font_italic {
   font-style: italic;
 }
 
-#qtkhmcyjmk .gt_super {
+#aahmgterhs .gt_super {
   font-size: 65%;
 }
 
-#qtkhmcyjmk .gt_footnote_marks {
+#aahmgterhs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qtkhmcyjmk .gt_asterisk {
+#aahmgterhs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qtkhmcyjmk .gt_indent_1 {
+#aahmgterhs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qtkhmcyjmk .gt_indent_2 {
+#aahmgterhs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qtkhmcyjmk .gt_indent_3 {
+#aahmgterhs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qtkhmcyjmk .gt_indent_4 {
+#aahmgterhs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qtkhmcyjmk .gt_indent_5 {
+#aahmgterhs .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -2733,66 +2719,92 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Twitter language code">Twitter language code</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>raw</sub>">%<sub>raw</sub></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>cum</sub>">%<sub>cum</sub></th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="val" class="gt_row gt_center">en</td>
-<td headers="frq" class="gt_row gt_right">274351</td>
-<td headers="raw.prc" class="gt_row gt_right">75.91</td>
-<td headers="cum.prc" class="gt_row gt_right">75.91</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">fr</td>
-<td headers="frq" class="gt_row gt_right">20407</td>
-<td headers="raw.prc" class="gt_row gt_right">5.65</td>
-<td headers="cum.prc" class="gt_row gt_right">81.56</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">es</td>
-<td headers="frq" class="gt_row gt_right">16248</td>
-<td headers="raw.prc" class="gt_row gt_right">4.50</td>
-<td headers="cum.prc" class="gt_row gt_right">86.05</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">de</td>
-<td headers="frq" class="gt_row gt_right">14091</td>
-<td headers="raw.prc" class="gt_row gt_right">3.90</td>
-<td headers="cum.prc" class="gt_row gt_right">89.95</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">pt</td>
-<td headers="frq" class="gt_row gt_right">7127</td>
-<td headers="raw.prc" class="gt_row gt_right">1.97</td>
-<td headers="cum.prc" class="gt_row gt_right">91.92</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">it</td>
-<td headers="frq" class="gt_row gt_right">5999</td>
-<td headers="raw.prc" class="gt_row gt_right">1.66</td>
-<td headers="cum.prc" class="gt_row gt_right">93.58</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">da</td>
-<td headers="frq" class="gt_row gt_right">3490</td>
-<td headers="raw.prc" class="gt_row gt_right">0.97</td>
-<td headers="cum.prc" class="gt_row gt_right">94.55</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">in</td>
-<td headers="frq" class="gt_row gt_right">3095</td>
-<td headers="raw.prc" class="gt_row gt_right">0.86</td>
-<td headers="cum.prc" class="gt_row gt_right">95.41</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">ja</td>
-<td headers="frq" class="gt_row gt_right">2428</td>
-<td headers="raw.prc" class="gt_row gt_right">0.67</td>
-<td headers="cum.prc" class="gt_row gt_right">96.08</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">n &lt; 2000</td>
-<td headers="frq" class="gt_row gt_right">14172</td>
-<td headers="raw.prc" class="gt_row gt_right">3.92</td>
-<td headers="cum.prc" class="gt_row gt_right">100.00</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">NA</td>
-<td headers="frq" class="gt_row gt_right">0</td>
-<td headers="raw.prc" class="gt_row gt_right">0.00</td>
-<td headers="cum.prc" class="gt_row gt_right">NA</td></tr>
-  </tbody>
-  
-  
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Twitter language code" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">Twitter language code</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">n</th>
+<th id="%<sub>raw</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">%<sub>raw</sub></th>
+<th id="%<sub>cum</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="text-align: left; border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col">%<sub>cum</sub></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">en</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">274351</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">75.91</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">75.91</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">fr</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">20407</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">5.65</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">81.56</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">es</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">16248</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">4.50</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">86.05</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">de</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">14091</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">3.90</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">89.95</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">pt</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">7127</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">1.97</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">91.92</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">it</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">5999</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">1.66</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">93.58</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">da</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">3490</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.97</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">94.55</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">in</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">3095</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.86</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">95.41</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">ja</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">2428</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.67</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">96.08</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">n &lt; 2000</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">14172</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">3.92</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">100.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" style="text-align: left;" headers="val">NA</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="frq">0</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="raw.prc">0.00</td>
+<td class="gt_row gt_right" style="text-align: left;" headers="cum.prc">NA</td>
+</tr>
+</tbody>
 </table>
 </div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
 </div>
 </div>
 </div>
@@ -2856,50 +2868,50 @@ tbody tr:last-child {
 <h2>Focusing on #digitaldetox</h2>
 <h4 id="build-a-subsample">Build a subsample</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>tweets_detox <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">filter</span>(</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    detox_dy <span class="sc">==</span> <span class="cn">TRUE</span>, <span class="co"># only tweets with #digitaldetox</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    retweet_dy <span class="sc">==</span> <span class="cn">FALSE</span>, <span class="co"># no retweets</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    lang <span class="sc">==</span> <span class="st">"en"</span> <span class="co"># only english tweets</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>tweets_detox <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(</span>
+<span id="cb6-3"><a></a>    detox_dy <span class="sc">==</span> <span class="cn">TRUE</span>, <span class="co"># only tweets with #digitaldetox</span></span>
+<span id="cb6-4"><a></a>    retweet_dy <span class="sc">==</span> <span class="cn">FALSE</span>, <span class="co"># no retweets</span></span>
+<span id="cb6-5"><a></a>    lang <span class="sc">==</span> <span class="st">"en"</span> <span class="co"># only english tweets</span></span>
+<span id="cb6-6"><a></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> detox_dy)) <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    <span class="fu">labs</span>(</span>
-<span id="cb7-5"><a href="#cb7-5"></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
-<span id="cb7-6"><a href="#cb7-6"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb7-7"><a href="#cb7-7"></a>      <span class="at">fill =</span> <span class="st">"#digitaldetox used in tweet?"</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a>     ) <span class="sc">+</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#A0ACBD50"</span>, <span class="st">"#1DA1F2"</span>)) <span class="sc">+</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a>    <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> detox_dy)) <span class="sc">+</span></span>
+<span id="cb7-3"><a></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb7-5"><a></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
+<span id="cb7-6"><a></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
+<span id="cb7-7"><a></a>      <span class="at">fill =</span> <span class="st">"#digitaldetox used in tweet?"</span></span>
+<span id="cb7-8"><a></a>     ) <span class="sc">+</span></span>
+<span id="cb7-9"><a></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#A0ACBD50"</span>, <span class="st">"#1DA1F2"</span>)) <span class="sc">+</span></span>
+<span id="cb7-10"><a></a>    <span class="fu">theme_pubr</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="slides-09_files/figure-revealjs/figure-subsample-distribution-over-time-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides-09_files/figure-revealjs/figure-subsample-distribution-over-time-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="tokenization-of-the-tweets" class="slide level2">
 <h2>Tokenization of the tweets</h2>
 <h4 id="transform-data-to-tidy-text">Transform data to tidy text</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Common HTML entities</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># Create tidy data</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a href="#cb8-6"></a>    <span class="co"># Remove HTML entities</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>    <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-8"><a href="#cb8-8"></a>    <span class="co"># Tokenization</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-10"><a href="#cb8-10"></a>    <span class="co"># Remove stopwords</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
-<span id="cb8-12"><a href="#cb8-12"></a></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="co"># Preview</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb8-15"><a href="#cb8-15"></a>    <span class="fu">select</span>(tweet_id, user_username, text) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-16"><a href="#cb8-16"></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Common HTML entities</span></span>
+<span id="cb8-2"><a></a>remove_reg <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a><span class="co"># Create tidy data</span></span>
+<span id="cb8-5"><a></a>tweets_tidy <span class="ot">&lt;-</span> tweets_detox <span class="sc">%&gt;%</span> </span>
+<span id="cb8-6"><a></a>    <span class="co"># Remove HTML entities</span></span>
+<span id="cb8-7"><a></a>    <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_reg)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a></a>    <span class="co"># Tokenization</span></span>
+<span id="cb8-9"><a></a>    tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="st">"text"</span>, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-10"><a></a>    <span class="co"># Remove stopwords</span></span>
+<span id="cb8-11"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span>text <span class="sc">%in%</span> tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word)</span>
+<span id="cb8-12"><a></a></span>
+<span id="cb8-13"><a></a><span class="co"># Preview</span></span>
+<span id="cb8-14"><a></a>tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb8-15"><a></a>    <span class="fu">select</span>(tweet_id, user_username, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-16"><a></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 639,459 × 3
   tweet_id   user_username text      
@@ -2918,13 +2930,13 @@ tbody tr:last-child {
 <h4 id="summarize-all-tokens-over-all-tweets">Summarize all tokens over all tweets</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Create summarized data</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">count</span>(text, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb10-4"><a href="#cb10-4"></a></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="co"># Preview Top 15 token</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
-<span id="cb10-7"><a href="#cb10-7"></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Create summarized data</span></span>
+<span id="cb10-2"><a></a>tweets_summarized <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">count</span>(text, <span class="at">sort =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a><span class="co"># Preview Top 15 token</span></span>
+<span id="cb10-6"><a></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb10-7"><a></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 87,172 × 2
@@ -2954,15 +2966,15 @@ tbody tr:last-child {
 <h2>The (Unavoidable) Word Cloud</h2>
 <h4 id="visualization-of-top-100-token">Visualization of Top 100 token</h4>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2"></a>    <span class="fu">top_n</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-3"><a href="#cb12-3"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">label =</span> text, <span class="at">size =</span> n)) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>    ggwordcloud<span class="sc">::</span><span class="fu">geom_text_wordcloud</span>() <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>tweets_summarized <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a></a>    <span class="fu">top_n</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">label =</span> text, <span class="at">size =</span> n)) <span class="sc">+</span></span>
+<span id="cb12-4"><a></a>    ggwordcloud<span class="sc">::</span><span class="fu">geom_text_wordcloud</span>() <span class="sc">+</span></span>
+<span id="cb12-5"><a></a>    <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb12-6"><a></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides-09_files/figure-revealjs/figure-wordcloud-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides-09_files/figure-revealjs/figure-wordcloud-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="more-than-just-single-words" class="slide level2">
 <h2>More than just single words</h2>
 <h4 id="modeling-realtionships-between-words-n-grams-and-correlations">Modeling realtionships between words: n-grams and correlations</h4>
@@ -2976,7 +2988,7 @@ tbody tr:last-child {
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://www.tidytextmining.com/images/tmwr_0407.png"></p>
+<p><img data-src="https://www.tidytextmining.com/images/tmwr_0407.png" class="quarto-figure quarto-figure-center"></p>
 <figcaption><span class="citation" data-cites="silge2017">(<a href="#/references" role="doc-biblioref" onclick="">Silge &amp; Robinson, 2017</a>)</span></figcaption>
 </figure>
 </div>
@@ -2988,16 +3000,16 @@ tbody tr:last-child {
 <h4 id="count-word-pairs-within-tweets">Count word pairs within tweets</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Create word paris</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>tweets_word_pairs <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb13-3"><a href="#cb13-3"></a>    widyr<span class="sc">::</span><span class="fu">pairwise_count</span>(</span>
-<span id="cb13-4"><a href="#cb13-4"></a>        text,</span>
-<span id="cb13-5"><a href="#cb13-5"></a>        tweet_id,</span>
-<span id="cb13-6"><a href="#cb13-6"></a>        <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-7"><a href="#cb13-7"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="co"># Preview</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>tweets_word_pairs <span class="sc">%&gt;%</span> </span>
-<span id="cb13-10"><a href="#cb13-10"></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Create word paris</span></span>
+<span id="cb13-2"><a></a>tweets_word_pairs <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a></a>    widyr<span class="sc">::</span><span class="fu">pairwise_count</span>(</span>
+<span id="cb13-4"><a></a>        text,</span>
+<span id="cb13-5"><a></a>        tweet_id,</span>
+<span id="cb13-6"><a></a>        <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-7"><a></a></span>
+<span id="cb13-8"><a></a><span class="co"># Preview</span></span>
+<span id="cb13-9"><a></a>tweets_word_pairs <span class="sc">%&gt;%</span> </span>
+<span id="cb13-10"><a></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3,466,216 × 3
@@ -3028,18 +3040,18 @@ tbody tr:last-child {
 <h4 id="summarize-and-correlate-tokens-within-tweets">Summarize and correlate tokens within tweets</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Create word correlation</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>tweets_pairs_corr <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>    <span class="fu">group_by</span>(text) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-4"><a href="#cb15-4"></a>    <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;=</span> <span class="dv">300</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-5"><a href="#cb15-5"></a>    <span class="fu">pairwise_cor</span>(</span>
-<span id="cb15-6"><a href="#cb15-6"></a>        text, </span>
-<span id="cb15-7"><a href="#cb15-7"></a>        tweet_id, </span>
-<span id="cb15-8"><a href="#cb15-8"></a>        <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-9"><a href="#cb15-9"></a></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="co"># Preview</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a>tweets_pairs_corr <span class="sc">%&gt;%</span> </span>
-<span id="cb15-12"><a href="#cb15-12"></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Create word correlation</span></span>
+<span id="cb15-2"><a></a>tweets_pairs_corr <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a></a>    <span class="fu">group_by</span>(text) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a></a>    <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;=</span> <span class="dv">300</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a></a>    <span class="fu">pairwise_cor</span>(</span>
+<span id="cb15-6"><a></a>        text, </span>
+<span id="cb15-7"><a></a>        tweet_id, </span>
+<span id="cb15-8"><a></a>        <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-9"><a></a></span>
+<span id="cb15-10"><a></a><span class="co"># Preview</span></span>
+<span id="cb15-11"><a></a>tweets_pairs_corr <span class="sc">%&gt;%</span> </span>
+<span id="cb15-12"><a></a>    <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 41,820 × 3
@@ -3070,28 +3082,32 @@ tbody tr:last-child {
 <h4 id="display-correlates-for-specific-token">Display correlates for specific token</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>tweets_pairs_corr <span class="sc">%&gt;%</span> </span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">filter</span>(</span>
-<span id="cb17-3"><a href="#cb17-3"></a>    item1 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"detox"</span>, <span class="st">"digital"</span>)</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">group_by</span>(item1) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">slice_max</span>(correlation, <span class="at">n =</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-7"><a href="#cb17-7"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb17-8"><a href="#cb17-8"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb17-9"><a href="#cb17-9"></a>    <span class="at">item2 =</span> <span class="fu">reorder</span>(item2, correlation)</span>
-<span id="cb17-10"><a href="#cb17-10"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-11"><a href="#cb17-11"></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb17-12"><a href="#cb17-12"></a>    <span class="fu">aes</span>(item2, correlation, <span class="at">fill =</span> item1)</span>
-<span id="cb17-13"><a href="#cb17-13"></a>    ) <span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb17-15"><a href="#cb17-15"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> item1, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb17-16"><a href="#cb17-16"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb17-17"><a href="#cb17-17"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb17-18"><a href="#cb17-18"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#04316A"</span>)) <span class="sc">+</span></span>
-<span id="cb17-19"><a href="#cb17-19"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>tweets_pairs_corr <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a></a>  <span class="fu">filter</span>(</span>
+<span id="cb17-3"><a></a>    item1 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"detox"</span>, <span class="st">"digital"</span>)</span>
+<span id="cb17-4"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-5"><a></a>  <span class="fu">group_by</span>(item1) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-6"><a></a>  <span class="fu">slice_max</span>(correlation, <span class="at">n =</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-7"><a></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb17-8"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-9"><a></a>    <span class="at">item2 =</span> <span class="fu">reorder</span>(item2, correlation)</span>
+<span id="cb17-10"><a></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-11"><a></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb17-12"><a></a>    <span class="fu">aes</span>(item2, correlation, <span class="at">fill =</span> item1)</span>
+<span id="cb17-13"><a></a>    ) <span class="sc">+</span></span>
+<span id="cb17-14"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb17-15"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> item1, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb17-16"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb17-17"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb17-18"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#04316A"</span>)) <span class="sc">+</span></span>
+<span id="cb17-19"><a></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-09_files/figure-revealjs/figure-word-pairs-correlates-1.png" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -3100,7 +3116,7 @@ tbody tr:last-child {
 <h2>Let’s talk about sentiments</h2>
 <h4 id="dictionary-based-approach-of-text-analysis">Dictionary based approach of text analysis</h4>
 
-<img data-src="https://www.tidytextmining.com/images/tmwr_0201.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="silge2017">(<a href="#/references" role="doc-biblioref" onclick="">Silge &amp; Robinson, 2017</a>)</span></p><div class="callout callout-important callout-style-simple">
+<img data-src="https://www.tidytextmining.com/images/tmwr_0201.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><span class="citation" data-cites="silge2017">(<a href="#/references" role="doc-biblioref" onclick="">Silge &amp; Robinson, 2017</a>)</span></p><div class="callout callout-important callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -3116,31 +3132,35 @@ tbody tr:last-child {
 <h4 id="most-commmon-positive-and-negative-words">Most commmon positive and negative words</h4>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>tweets_sentiment_count <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">inner_join</span>(</span>
-<span id="cb18-3"><a href="#cb18-3"></a>     <span class="fu">get_sentiments</span>(<span class="st">"bing"</span>),</span>
-<span id="cb18-4"><a href="#cb18-4"></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
-<span id="cb18-5"><a href="#cb18-5"></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-6"><a href="#cb18-6"></a>  <span class="fu">count</span>(text, sentiment)</span>
-<span id="cb18-7"><a href="#cb18-7"></a>  </span>
-<span id="cb18-8"><a href="#cb18-8"></a><span class="co"># Preview</span></span>
-<span id="cb18-9"><a href="#cb18-9"></a>tweets_sentiment_count <span class="sc">%&gt;%</span> </span>
-<span id="cb18-10"><a href="#cb18-10"></a>  <span class="fu">group_by</span>(sentiment) <span class="sc">%&gt;%</span></span>
-<span id="cb18-11"><a href="#cb18-11"></a>  <span class="fu">slice_max</span>(n, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-12"><a href="#cb18-12"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb18-13"><a href="#cb18-13"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">reorder</span>(text, n)) <span class="sc">%&gt;%</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n, text, <span class="at">fill =</span> sentiment)) <span class="sc">+</span></span>
-<span id="cb18-15"><a href="#cb18-15"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb18-16"><a href="#cb18-16"></a>  <span class="fu">facet_wrap</span>(</span>
-<span id="cb18-17"><a href="#cb18-17"></a>    <span class="sc">~</span>sentiment, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb18-18"><a href="#cb18-18"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Contribution to sentiment"</span>,</span>
-<span id="cb18-19"><a href="#cb18-19"></a>       <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb18-20"><a href="#cb18-20"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb18-21"><a href="#cb18-21"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
-<span id="cb18-22"><a href="#cb18-22"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>tweets_sentiment_count <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb18-3"><a></a>     <span class="fu">get_sentiments</span>(<span class="st">"bing"</span>),</span>
+<span id="cb18-4"><a></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
+<span id="cb18-5"><a></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-6"><a></a>  <span class="fu">count</span>(text, sentiment)</span>
+<span id="cb18-7"><a></a>  </span>
+<span id="cb18-8"><a></a><span class="co"># Preview</span></span>
+<span id="cb18-9"><a></a>tweets_sentiment_count <span class="sc">%&gt;%</span> </span>
+<span id="cb18-10"><a></a>  <span class="fu">group_by</span>(sentiment) <span class="sc">%&gt;%</span></span>
+<span id="cb18-11"><a></a>  <span class="fu">slice_max</span>(n, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-12"><a></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-13"><a></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">reorder</span>(text, n)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-14"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n, text, <span class="at">fill =</span> sentiment)) <span class="sc">+</span></span>
+<span id="cb18-15"><a></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb18-16"><a></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb18-17"><a></a>    <span class="sc">~</span>sentiment, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb18-18"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Contribution to sentiment"</span>,</span>
+<span id="cb18-19"><a></a>       <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb18-20"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb18-21"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
+<span id="cb18-22"><a></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="slides-09_files/figure-revealjs/figure-sentiment-most-frequent-words-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -3149,17 +3169,17 @@ tbody tr:last-child {
 <h2>Enrich the original data</h2>
 <h4 id="link-word-sentiment-to-tidy-data">Link word sentiment to tidy data</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>tweets_sentiment <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">inner_join</span>(</span>
-<span id="cb19-3"><a href="#cb19-3"></a>     <span class="fu">get_sentiments</span>(<span class="st">"bing"</span>),</span>
-<span id="cb19-4"><a href="#cb19-4"></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
-<span id="cb19-5"><a href="#cb19-5"></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-6"><a href="#cb19-6"></a>  <span class="fu">count</span>(tweet_id, sentiment) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-7"><a href="#cb19-7"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sentiment, <span class="at">values_from =</span> n, <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-8"><a href="#cb19-8"></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> positive <span class="sc">-</span> negative)</span>
-<span id="cb19-9"><a href="#cb19-9"></a>  </span>
-<span id="cb19-10"><a href="#cb19-10"></a><span class="co"># Check</span></span>
-<span id="cb19-11"><a href="#cb19-11"></a>tweets_sentiment </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>tweets_sentiment <span class="ot">&lt;-</span> tweets_tidy <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb19-3"><a></a>     <span class="fu">get_sentiments</span>(<span class="st">"bing"</span>),</span>
+<span id="cb19-4"><a></a>     <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"text"</span> <span class="ot">=</span> <span class="st">"word"</span>),</span>
+<span id="cb19-5"><a></a>     <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-6"><a></a>  <span class="fu">count</span>(tweet_id, sentiment) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-7"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sentiment, <span class="at">values_from =</span> n, <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-8"><a></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> positive <span class="sc">-</span> negative)</span>
+<span id="cb19-9"><a></a>  </span>
+<span id="cb19-10"><a></a><span class="co"># Check</span></span>
+<span id="cb19-11"><a></a>tweets_sentiment </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 24,372 × 4
    tweet_id            positive negative sentiment
@@ -3182,65 +3202,65 @@ tbody tr:last-child {
 <h2>Slightly more positive tweets than negative</h2>
 <h4 id="overall-distribution-sentiment-by-tweets">Overall distribution sentiment by tweets</h4>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>tweets_sentiment <span class="sc">%&gt;%</span> </span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">as.factor</span>(sentiment))) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#1DA1F2"</span>) <span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">labs</span>(</span>
-<span id="cb21-5"><a href="#cb21-5"></a>    <span class="at">x =</span> <span class="st">"Sentiment (sum) of tweet"</span>, </span>
-<span id="cb21-6"><a href="#cb21-6"></a>    <span class="at">y =</span> <span class="st">"Number of tweets"</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a>  ) <span class="sc">+</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>tweets_sentiment <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">as.factor</span>(sentiment))) <span class="sc">+</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#1DA1F2"</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-5"><a></a>    <span class="at">x =</span> <span class="st">"Sentiment (sum) of tweet"</span>, </span>
+<span id="cb21-6"><a></a>    <span class="at">y =</span> <span class="st">"Number of tweets"</span></span>
+<span id="cb21-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb21-8"><a></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides-09_files/figure-revealjs/figure-sentiment-distribution-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides-09_files/figure-revealjs/figure-sentiment-distribution-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="a-trend-towards-positivity" class="slide level2">
 <h2>A trend towards positivity?</h2>
 <h4 id="development-of-tweet-sentiment-over-the-years">Development of tweet sentiment over the years</h4>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># Create first graph</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>g1 <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> tweets_sentiment<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">left_join</span>(tweets_sentiment) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-5"><a href="#cb22-5"></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb22-6"><a href="#cb22-6"></a>    sentiment,</span>
-<span id="cb22-7"><a href="#cb22-7"></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb22-10"><a href="#cb22-10"></a>    <span class="fu">labs</span>(</span>
-<span id="cb22-11"><a href="#cb22-11"></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
-<span id="cb22-12"><a href="#cb22-12"></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
-<span id="cb22-13"><a href="#cb22-13"></a>      <span class="at">fill =</span> <span class="st">"Sentiment (sum) of tweet"</span>) <span class="sc">+</span></span>
-<span id="cb22-14"><a href="#cb22-14"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#90A0AF"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
-<span id="cb22-15"><a href="#cb22-15"></a>    <span class="fu">theme_pubr</span>() </span>
-<span id="cb22-16"><a href="#cb22-16"></a>    <span class="co">#theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))</span></span>
-<span id="cb22-17"><a href="#cb22-17"></a></span>
-<span id="cb22-18"><a href="#cb22-18"></a><span class="co"># Create second graph</span></span>
-<span id="cb22-19"><a href="#cb22-19"></a>g2 <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
-<span id="cb22-20"><a href="#cb22-20"></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> tweets_sentiment<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-21"><a href="#cb22-21"></a>  <span class="fu">left_join</span>(tweets_sentiment) <span class="sc">%&gt;%</span> </span>
-<span id="cb22-22"><a href="#cb22-22"></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
-<span id="cb22-23"><a href="#cb22-23"></a>    sentiment,</span>
-<span id="cb22-24"><a href="#cb22-24"></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-25"><a href="#cb22-25"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
-<span id="cb22-26"><a href="#cb22-26"></a>    <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb22-27"><a href="#cb22-27"></a>    <span class="fu">labs</span>(</span>
-<span id="cb22-28"><a href="#cb22-28"></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
-<span id="cb22-29"><a href="#cb22-29"></a>      <span class="at">y =</span> <span class="st">"Proportion of tweets"</span>, </span>
-<span id="cb22-30"><a href="#cb22-30"></a>      <span class="at">fill =</span> <span class="st">"Sentiment (sum) of tweet"</span>) <span class="sc">+</span></span>
-<span id="cb22-31"><a href="#cb22-31"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#90A0AF"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
-<span id="cb22-32"><a href="#cb22-32"></a>    <span class="fu">theme_pubr</span>() </span>
-<span id="cb22-33"><a href="#cb22-33"></a></span>
-<span id="cb22-34"><a href="#cb22-34"></a><span class="co"># COMBINE GRPAHS</span></span>
-<span id="cb22-35"><a href="#cb22-35"></a><span class="fu">ggarrange</span>(g1, g2,</span>
-<span id="cb22-36"><a href="#cb22-36"></a>          <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol =</span> <span class="dv">2</span>, </span>
-<span id="cb22-37"><a href="#cb22-37"></a>          <span class="at">align =</span> <span class="st">"hv"</span>,</span>
-<span id="cb22-38"><a href="#cb22-38"></a>          <span class="at">common.legend =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># Create first graph</span></span>
+<span id="cb22-2"><a></a>g1 <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> tweets_sentiment<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-4"><a></a>  <span class="fu">left_join</span>(tweets_sentiment) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-5"><a></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
+<span id="cb22-6"><a></a>    sentiment,</span>
+<span id="cb22-7"><a></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-8"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
+<span id="cb22-9"><a></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb22-10"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb22-11"><a></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
+<span id="cb22-12"><a></a>      <span class="at">y =</span> <span class="st">"Number of tweets"</span>, </span>
+<span id="cb22-13"><a></a>      <span class="at">fill =</span> <span class="st">"Sentiment (sum) of tweet"</span>) <span class="sc">+</span></span>
+<span id="cb22-14"><a></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#90A0AF"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
+<span id="cb22-15"><a></a>    <span class="fu">theme_pubr</span>() </span>
+<span id="cb22-16"><a></a>    <span class="co">#theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))</span></span>
+<span id="cb22-17"><a></a></span>
+<span id="cb22-18"><a></a><span class="co"># Create second graph</span></span>
+<span id="cb22-19"><a></a>g2 <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
+<span id="cb22-20"><a></a>  <span class="fu">filter</span>(tweet_id <span class="sc">%in%</span> tweets_sentiment<span class="sc">$</span>tweet_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-21"><a></a>  <span class="fu">left_join</span>(tweets_sentiment) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-22"><a></a>  sjmisc<span class="sc">::</span><span class="fu">rec</span>(</span>
+<span id="cb22-23"><a></a>    sentiment,</span>
+<span id="cb22-24"><a></a>    <span class="at">rec =</span> <span class="st">"-8:-1=negative; 0=neutral; 1:8=positive"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-25"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> <span class="fu">as.factor</span>(sentiment_r))) <span class="sc">+</span></span>
+<span id="cb22-26"><a></a>    <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb22-27"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb22-28"><a></a>      <span class="at">x =</span> <span class="st">""</span>,</span>
+<span id="cb22-29"><a></a>      <span class="at">y =</span> <span class="st">"Proportion of tweets"</span>, </span>
+<span id="cb22-30"><a></a>      <span class="at">fill =</span> <span class="st">"Sentiment (sum) of tweet"</span>) <span class="sc">+</span></span>
+<span id="cb22-31"><a></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#90A0AF"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
+<span id="cb22-32"><a></a>    <span class="fu">theme_pubr</span>() </span>
+<span id="cb22-33"><a></a></span>
+<span id="cb22-34"><a></a><span class="co"># COMBINE GRPAHS</span></span>
+<span id="cb22-35"><a></a><span class="fu">ggarrange</span>(g1, g2,</span>
+<span id="cb22-36"><a></a>          <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol =</span> <span class="dv">2</span>, </span>
+<span id="cb22-37"><a></a>          <span class="at">align =</span> <span class="st">"hv"</span>,</span>
+<span id="cb22-38"><a></a>          <span class="at">common.legend =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="slides-09_files/figure-revealjs/figure-sentiment-distribution-over-time-1.png" width="1152" class="r-stretch quarto-figure-center"></section></section>
+<img data-src="slides-09_files/figure-revealjs/figure-sentiment-distribution-over-time-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1152"></section></section>
 <section>
 <section id="group-activity" class="title-slide slide level1 center" data-background-image="img/slide_bg-group_activity.png">
 <h1>📋 Hands on working with R</h1>
@@ -3286,7 +3306,7 @@ tbody tr:last-child {
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-atteveldt2021" class="csl-entry" role="listitem">
 Atteveldt, W. van, Trilling, D., &amp; Arcíla, C. (2021). <em>Computational analysis of communication: A practical introduction to the analysis of texts, networks, and images with code examples in python and r</em>. John Wiley &amp; Sons.
 </div>
@@ -3301,9 +3321,11 @@ Vanden Abeele, M. M. P., Halfmann, A., &amp; Lee, E. W. J. (2022). Drug, demon, 
 </div>
 </div>
 
-
-<img src="../img/dbd_hex.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../img/dbd_hex.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://faucommsci.github.io/dbd_2023/">Home</a></p>
+</div>
 </div>
 </section></section>
     </div>
@@ -3333,7 +3355,6 @@ Vanden Abeele, M. M. P., Halfmann, A., &amp; Lee, E. W. J. (2022). Drug, demon, 
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -3633,10 +3654,9 @@ Vanden Abeele, M. M. P., Halfmann, A., &amp; Lee, E. W. J. (2022). Drug, demon, 
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -3646,8 +3666,17 @@ Vanden Abeele, M. M. P., Halfmann, A., &amp; Lee, E. W. J. (2022). Drug, demon, 
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

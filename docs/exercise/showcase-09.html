@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -103,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -112,6 +119,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -122,8 +130,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Digital behavioral data - Showcase 09: 🔨 Text as data in R">
 <meta property="og:description" content="Digital disconnection on Twitter">
-<meta property="og:image" content="../img/badge-quarto-slide.svg">
-<meta property="og:site-name" content="Digital behavioral data">
+<meta property="og:site_name" content="Digital behavioral data">
 </head>
 
 <body class="nav-sidebar floating">
@@ -132,12 +139,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Showcase 09: 🔨 Text as data in R</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Showcase 09: 🔨 Text as data in R</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -147,17 +154,17 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../img/dbd_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/faucommsci/dbd_2023" rel="" title="Course repository" class="quarto-navigation-tool px-1" aria-label="Course repository"><i class="bi bi-github"></i></a>
-    <a href="https://fau-dbd.zulipchat.com/" rel="" title="DBD Zulip" class="quarto-navigation-tool px-1" aria-label="DBD Zulip"><i class="bi bi-chat-dots"></i></a>
-    <a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio" rel="" title="DBD Binder" class="quarto-navigation-tool px-1" aria-label="DBD Binder"><i class="bi bi-cloud-arrow-up"></i></a>
-    <a href="http://10.204.20.178/" rel="" title="DBD 4CAT-Server" class="quarto-navigation-tool px-1" aria-label="DBD 4CAT-Server"><i class="bi bi-server"></i></a>
+    <a href="https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/faucommsci/dbd_2023" title="Course repository" class="quarto-navigation-tool px-1" aria-label="Course repository"><i class="bi bi-github"></i></a>
+    <a href="https://fau-dbd.zulipchat.com/" title="DBD Zulip" class="quarto-navigation-tool px-1" aria-label="DBD Zulip"><i class="bi bi-chat-dots"></i></a>
+    <a href="https://mybinder.org/v2/gh/faucommsci/dbd_binder/HEAD?urlpath=rstudio" title="DBD Binder" class="quarto-navigation-tool px-1" aria-label="DBD Binder"><i class="bi bi-cloud-arrow-up"></i></a>
+    <a href="http://10.204.20.178/" title="DBD 4CAT-Server" class="quarto-navigation-tool px-1" aria-label="DBD 4CAT-Server"><i class="bi bi-server"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -329,7 +336,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -339,7 +346,7 @@ div.csl-indent {
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a></li>
   <li><a href="#import-and-process-the-data" id="toc-import-and-process-the-data" class="nav-link" data-scroll-target="#import-and-process-the-data">Import and process the data</a></li>
-  <li><a href="#digital-disconnection-on-fa-brands-twitter-not-𝕏" id="toc-digital-disconnection-on-fa-brands-twitter-not-𝕏" class="nav-link" data-scroll-target="#digital-disconnection-on-fa-brands-twitter-not-𝕏">Digital disconnection on <i class="fa-brands fa-twitter" aria-label="twitter"></i> (not 𝕏)</a>
+  <li><a href="#digital-disconnection-on-not-𝕏" id="toc-digital-disconnection-on-not-𝕏" class="nav-link" data-scroll-target="#digital-disconnection-on-not-𝕏">Digital disconnection on <i class="fa-brands fa-twitter" aria-label="twitter"></i> (not 𝕏)</a>
   <ul>
   <li><a href="#the-structure-of-the-data-set-available-variables" id="toc-the-structure-of-the-data-set-available-variables" class="nav-link" data-scroll-target="#the-structure-of-the-data-set-available-variables">The structure of the data set &amp; available variables</a></li>
   <li><a href="#bonus-distribution-statistics" id="toc-bonus-distribution-statistics" class="nav-link" data-scroll-target="#bonus-distribution-statistics">Bonus: Distribution statistics</a></li>
@@ -371,7 +378,7 @@ div.csl-indent {
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-09.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-09.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -398,7 +405,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -498,8 +507,8 @@ Todays’s data basis: Twitter dataset
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="digital-disconnection-on-fa-brands-twitter-not-𝕏" class="level2">
-<h2 class="anchored" data-anchor-id="digital-disconnection-on-fa-brands-twitter-not-𝕏">Digital disconnection on <i class="fa-brands fa-twitter" aria-label="twitter"></i> (not 𝕏)</h2>
+<section id="digital-disconnection-on-not-𝕏" class="level2">
+<h2 class="anchored" data-anchor-id="digital-disconnection-on-not-𝕏">Digital disconnection on <i class="fa-brands fa-twitter" aria-label="twitter"></i> (not 𝕏)</h2>
 <section id="the-structure-of-the-data-set-available-variables" class="level3">
 <h3 class="anchored" data-anchor-id="the-structure-of-the-data-set-available-variables">The structure of the data set &amp; available variables</h3>
 <div class="cell">
@@ -1123,12 +1132,16 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fl">14.2965001234837</span>,<span class="at">y =</span> <span class="fl">53507.2283841571</span>,</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">xend =</span> <span class="fl">11.5275706534335</span>, <span class="at">yend =</span> <span class="fl">45412.4966032138</span>),</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend),</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">angle =</span> 127L,</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">angle =</span> <span class="dv">127</span>L,</span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">curvature =</span> <span class="fl">0.28</span>,</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">arrow =</span> <span class="fu">arrow</span>(30L, <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"inches"</span>), <span class="st">"last"</span>, <span class="st">"closed"</span>),</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="dv">30</span>L, <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"inches"</span>), <span class="st">"last"</span>, <span class="st">"closed"</span>),</span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-09_files/figure-html/figure-tweets-by-year-1.png" class="img-fluid" width="1536"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-09_files/figure-html/figure-tweets-by-year-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1174,28 +1187,27 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
 <span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="niohvfguuj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lbempydook" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#niohvfguuj table {
+#lbempydook table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#niohvfguuj thead, #niohvfguuj tbody, #niohvfguuj tfoot, #niohvfguuj tr, #niohvfguuj td, #niohvfguuj th {
+#lbempydook thead, #lbempydook tbody, #lbempydook tfoot, #lbempydook tr, #lbempydook td, #lbempydook th {
   border-style: none;
 }
 
-#niohvfguuj p {
+#lbempydook p {
   margin: 0;
   padding: 0;
 }
 
-#niohvfguuj .gt_table {
+#lbempydook .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1221,12 +1233,12 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-left-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_caption {
+#lbempydook .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#niohvfguuj .gt_title {
+#lbempydook .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1238,7 +1250,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-width: 0;
 }
 
-#niohvfguuj .gt_subtitle {
+#lbempydook .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1250,7 +1262,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-top-width: 0;
 }
 
-#niohvfguuj .gt_heading {
+#lbempydook .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1262,13 +1274,13 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_bottom_border {
+#lbempydook .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_col_headings {
+#lbempydook .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1283,7 +1295,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_col_heading {
+#lbempydook .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1303,7 +1315,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   overflow-x: hidden;
 }
 
-#niohvfguuj .gt_column_spanner_outer {
+#lbempydook .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1315,15 +1327,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 4px;
 }
 
-#niohvfguuj .gt_column_spanner_outer:first-child {
+#lbempydook .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#niohvfguuj .gt_column_spanner_outer:last-child {
+#lbempydook .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#niohvfguuj .gt_column_spanner {
+#lbempydook .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1335,11 +1347,11 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   width: 100%;
 }
 
-#niohvfguuj .gt_spanner_row {
+#lbempydook .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#niohvfguuj .gt_group_heading {
+#lbempydook .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1365,7 +1377,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   text-align: left;
 }
 
-#niohvfguuj .gt_empty_group_heading {
+#lbempydook .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1380,15 +1392,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   vertical-align: middle;
 }
 
-#niohvfguuj .gt_from_md > :first-child {
+#lbempydook .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#niohvfguuj .gt_from_md > :last-child {
+#lbempydook .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#niohvfguuj .gt_row {
+#lbempydook .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1407,7 +1419,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   overflow-x: hidden;
 }
 
-#niohvfguuj .gt_stub {
+#lbempydook .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1420,7 +1432,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#niohvfguuj .gt_stub_row_group {
+#lbempydook .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1434,15 +1446,15 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   vertical-align: top;
 }
 
-#niohvfguuj .gt_row_group_first td {
+#lbempydook .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#niohvfguuj .gt_row_group_first th {
+#lbempydook .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#niohvfguuj .gt_summary_row {
+#lbempydook .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1452,16 +1464,16 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#niohvfguuj .gt_first_summary_row {
+#lbempydook .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_first_summary_row.thick {
+#lbempydook .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#niohvfguuj .gt_last_summary_row {
+#lbempydook .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1471,7 +1483,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_grand_summary_row {
+#lbempydook .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1481,7 +1493,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#niohvfguuj .gt_first_grand_summary_row {
+#lbempydook .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1491,7 +1503,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-top-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_last_grand_summary_row_top {
+#lbempydook .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1501,11 +1513,11 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_striped {
+#lbempydook .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#niohvfguuj .gt_table_body {
+#lbempydook .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1514,7 +1526,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-bottom-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_footnotes {
+#lbempydook .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1528,7 +1540,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_footnote {
+#lbempydook .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1537,7 +1549,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#niohvfguuj .gt_sourcenotes {
+#lbempydook .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1551,7 +1563,7 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   border-right-color: #D3D3D3;
 }
 
-#niohvfguuj .gt_sourcenote {
+#lbempydook .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1559,63 +1571,63 @@ $ detox_dy               &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
   padding-right: 5px;
 }
 
-#niohvfguuj .gt_left {
+#lbempydook .gt_left {
   text-align: left;
 }
 
-#niohvfguuj .gt_center {
+#lbempydook .gt_center {
   text-align: center;
 }
 
-#niohvfguuj .gt_right {
+#lbempydook .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#niohvfguuj .gt_font_normal {
+#lbempydook .gt_font_normal {
   font-weight: normal;
 }
 
-#niohvfguuj .gt_font_bold {
+#lbempydook .gt_font_bold {
   font-weight: bold;
 }
 
-#niohvfguuj .gt_font_italic {
+#lbempydook .gt_font_italic {
   font-style: italic;
 }
 
-#niohvfguuj .gt_super {
+#lbempydook .gt_super {
   font-size: 65%;
 }
 
-#niohvfguuj .gt_footnote_marks {
+#lbempydook .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#niohvfguuj .gt_asterisk {
+#lbempydook .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#niohvfguuj .gt_indent_1 {
+#lbempydook .gt_indent_1 {
   text-indent: 5px;
 }
 
-#niohvfguuj .gt_indent_2 {
+#lbempydook .gt_indent_2 {
   text-indent: 10px;
 }
 
-#niohvfguuj .gt_indent_3 {
+#lbempydook .gt_indent_3 {
   text-indent: 15px;
 }
 
-#niohvfguuj .gt_indent_4 {
+#lbempydook .gt_indent_4 {
   text-indent: 20px;
 }
 
-#niohvfguuj .gt_indent_5 {
+#lbempydook .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -1623,53 +1635,68 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Number of tweets by user">Number of tweets by user</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>raw</sub>">%<sub>raw</sub></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>cum</sub>">%<sub>cum</sub></th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="val" class="gt_row gt_center"> 1</td>
-<td headers="frq" class="gt_row gt_right">143364</td>
-<td headers="raw.prc" class="gt_row gt_right">77.21</td>
-<td headers="cum.prc" class="gt_row gt_right">77.21</td></tr>
-    <tr><td headers="val" class="gt_row gt_center"> 2 - 10</td>
-<td headers="frq" class="gt_row gt_right">39981</td>
-<td headers="raw.prc" class="gt_row gt_right">21.53</td>
-<td headers="cum.prc" class="gt_row gt_right">98.74</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">11 - 25</td>
-<td headers="frq" class="gt_row gt_right">1647</td>
-<td headers="raw.prc" class="gt_row gt_right">0.89</td>
-<td headers="cum.prc" class="gt_row gt_right">99.63</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">26 - 50</td>
-<td headers="frq" class="gt_row gt_right">435</td>
-<td headers="raw.prc" class="gt_row gt_right">0.23</td>
-<td headers="cum.prc" class="gt_row gt_right">99.86</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">50 - 75</td>
-<td headers="frq" class="gt_row gt_right">88</td>
-<td headers="raw.prc" class="gt_row gt_right">0.05</td>
-<td headers="cum.prc" class="gt_row gt_right">99.91</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">75 -100</td>
-<td headers="frq" class="gt_row gt_right">55</td>
-<td headers="raw.prc" class="gt_row gt_right">0.03</td>
-<td headers="cum.prc" class="gt_row gt_right">99.94</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">&gt; 100</td>
-<td headers="frq" class="gt_row gt_right">109</td>
-<td headers="raw.prc" class="gt_row gt_right">0.06</td>
-<td headers="cum.prc" class="gt_row gt_right">100.00</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">NA</td>
-<td headers="frq" class="gt_row gt_right">0</td>
-<td headers="raw.prc" class="gt_row gt_right">0.00</td>
-<td headers="cum.prc" class="gt_row gt_right">NA</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Number of tweets by user" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Number of tweets by user</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">n</th>
+<th id="%<sub>raw</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">%<sub>raw</sub></th>
+<th id="%<sub>cum</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">%<sub>cum</sub></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">1</td>
+<td class="gt_row gt_right" headers="frq">143364</td>
+<td class="gt_row gt_right" headers="raw.prc">77.21</td>
+<td class="gt_row gt_right" headers="cum.prc">77.21</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">2 - 10</td>
+<td class="gt_row gt_right" headers="frq">39981</td>
+<td class="gt_row gt_right" headers="raw.prc">21.53</td>
+<td class="gt_row gt_right" headers="cum.prc">98.74</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">11 - 25</td>
+<td class="gt_row gt_right" headers="frq">1647</td>
+<td class="gt_row gt_right" headers="raw.prc">0.89</td>
+<td class="gt_row gt_right" headers="cum.prc">99.63</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">26 - 50</td>
+<td class="gt_row gt_right" headers="frq">435</td>
+<td class="gt_row gt_right" headers="raw.prc">0.23</td>
+<td class="gt_row gt_right" headers="cum.prc">99.86</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">50 - 75</td>
+<td class="gt_row gt_right" headers="frq">88</td>
+<td class="gt_row gt_right" headers="raw.prc">0.05</td>
+<td class="gt_row gt_right" headers="cum.prc">99.91</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">75 -100</td>
+<td class="gt_row gt_right" headers="frq">55</td>
+<td class="gt_row gt_right" headers="raw.prc">0.03</td>
+<td class="gt_row gt_right" headers="cum.prc">99.94</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">&gt; 100</td>
+<td class="gt_row gt_right" headers="frq">109</td>
+<td class="gt_row gt_right" headers="raw.prc">0.06</td>
+<td class="gt_row gt_right" headers="cum.prc">100.00</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">NA</td>
+<td class="gt_row gt_right" headers="frq">0</td>
+<td class="gt_row gt_right" headers="raw.prc">0.00</td>
+<td class="gt_row gt_right" headers="cum.prc">NA</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1698,28 +1725,27 @@ tbody tr:last-child {
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
 <span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_538</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="nancatqkvx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ewsaposjkv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#nancatqkvx table {
+#ewsaposjkv table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nancatqkvx thead, #nancatqkvx tbody, #nancatqkvx tfoot, #nancatqkvx tr, #nancatqkvx td, #nancatqkvx th {
+#ewsaposjkv thead, #ewsaposjkv tbody, #ewsaposjkv tfoot, #ewsaposjkv tr, #ewsaposjkv td, #ewsaposjkv th {
   border-style: none;
 }
 
-#nancatqkvx p {
+#ewsaposjkv p {
   margin: 0;
   padding: 0;
 }
 
-#nancatqkvx .gt_table {
+#ewsaposjkv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1745,12 +1771,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_caption {
+#ewsaposjkv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nancatqkvx .gt_title {
+#ewsaposjkv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1762,7 +1788,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#nancatqkvx .gt_subtitle {
+#ewsaposjkv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1774,7 +1800,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#nancatqkvx .gt_heading {
+#ewsaposjkv .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1786,13 +1812,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_bottom_border {
+#ewsaposjkv .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_col_headings {
+#ewsaposjkv .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1807,7 +1833,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_col_heading {
+#ewsaposjkv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1827,7 +1853,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#nancatqkvx .gt_column_spanner_outer {
+#ewsaposjkv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1839,15 +1865,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#nancatqkvx .gt_column_spanner_outer:first-child {
+#ewsaposjkv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nancatqkvx .gt_column_spanner_outer:last-child {
+#ewsaposjkv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nancatqkvx .gt_column_spanner {
+#ewsaposjkv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -1859,11 +1885,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#nancatqkvx .gt_spanner_row {
+#ewsaposjkv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nancatqkvx .gt_group_heading {
+#ewsaposjkv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1889,7 +1915,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#nancatqkvx .gt_empty_group_heading {
+#ewsaposjkv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1904,15 +1930,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#nancatqkvx .gt_from_md > :first-child {
+#ewsaposjkv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nancatqkvx .gt_from_md > :last-child {
+#ewsaposjkv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nancatqkvx .gt_row {
+#ewsaposjkv .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1931,7 +1957,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#nancatqkvx .gt_stub {
+#ewsaposjkv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1944,7 +1970,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#nancatqkvx .gt_stub_row_group {
+#ewsaposjkv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1958,15 +1984,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#nancatqkvx .gt_row_group_first td {
+#ewsaposjkv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nancatqkvx .gt_row_group_first th {
+#ewsaposjkv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nancatqkvx .gt_summary_row {
+#ewsaposjkv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1976,16 +2002,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#nancatqkvx .gt_first_summary_row {
+#ewsaposjkv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_first_summary_row.thick {
+#ewsaposjkv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nancatqkvx .gt_last_summary_row {
+#ewsaposjkv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1995,7 +2021,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_grand_summary_row {
+#ewsaposjkv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2005,7 +2031,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#nancatqkvx .gt_first_grand_summary_row {
+#ewsaposjkv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2015,7 +2041,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_last_grand_summary_row_top {
+#ewsaposjkv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2025,11 +2051,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_striped {
+#ewsaposjkv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nancatqkvx .gt_table_body {
+#ewsaposjkv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2038,7 +2064,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_footnotes {
+#ewsaposjkv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2052,7 +2078,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_footnote {
+#ewsaposjkv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2061,7 +2087,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#nancatqkvx .gt_sourcenotes {
+#ewsaposjkv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2075,7 +2101,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#nancatqkvx .gt_sourcenote {
+#ewsaposjkv .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2083,63 +2109,63 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#nancatqkvx .gt_left {
+#ewsaposjkv .gt_left {
   text-align: left;
 }
 
-#nancatqkvx .gt_center {
+#ewsaposjkv .gt_center {
   text-align: center;
 }
 
-#nancatqkvx .gt_right {
+#ewsaposjkv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nancatqkvx .gt_font_normal {
+#ewsaposjkv .gt_font_normal {
   font-weight: normal;
 }
 
-#nancatqkvx .gt_font_bold {
+#ewsaposjkv .gt_font_bold {
   font-weight: bold;
 }
 
-#nancatqkvx .gt_font_italic {
+#ewsaposjkv .gt_font_italic {
   font-style: italic;
 }
 
-#nancatqkvx .gt_super {
+#ewsaposjkv .gt_super {
   font-size: 65%;
 }
 
-#nancatqkvx .gt_footnote_marks {
+#ewsaposjkv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nancatqkvx .gt_asterisk {
+#ewsaposjkv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nancatqkvx .gt_indent_1 {
+#ewsaposjkv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nancatqkvx .gt_indent_2 {
+#ewsaposjkv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nancatqkvx .gt_indent_3 {
+#ewsaposjkv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nancatqkvx .gt_indent_4 {
+#ewsaposjkv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nancatqkvx .gt_indent_5 {
+#ewsaposjkv .gt_indent_5 {
   text-indent: 25px;
 }
 
@@ -2147,65 +2173,86 @@ tbody tr:last-child {
   border-bottom: 2px solid #ffffff00;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="Twitter language code">Twitter language code</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>raw</sub>">%<sub>raw</sub></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="%<sub>cum</sub>">%<sub>cum</sub></th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="val" class="gt_row gt_center">en</td>
-<td headers="frq" class="gt_row gt_right">274351</td>
-<td headers="raw.prc" class="gt_row gt_right">75.91</td>
-<td headers="cum.prc" class="gt_row gt_right">75.91</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">fr</td>
-<td headers="frq" class="gt_row gt_right">20407</td>
-<td headers="raw.prc" class="gt_row gt_right">5.65</td>
-<td headers="cum.prc" class="gt_row gt_right">81.56</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">es</td>
-<td headers="frq" class="gt_row gt_right">16248</td>
-<td headers="raw.prc" class="gt_row gt_right">4.50</td>
-<td headers="cum.prc" class="gt_row gt_right">86.05</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">de</td>
-<td headers="frq" class="gt_row gt_right">14091</td>
-<td headers="raw.prc" class="gt_row gt_right">3.90</td>
-<td headers="cum.prc" class="gt_row gt_right">89.95</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">pt</td>
-<td headers="frq" class="gt_row gt_right">7127</td>
-<td headers="raw.prc" class="gt_row gt_right">1.97</td>
-<td headers="cum.prc" class="gt_row gt_right">91.92</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">it</td>
-<td headers="frq" class="gt_row gt_right">5999</td>
-<td headers="raw.prc" class="gt_row gt_right">1.66</td>
-<td headers="cum.prc" class="gt_row gt_right">93.58</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">da</td>
-<td headers="frq" class="gt_row gt_right">3490</td>
-<td headers="raw.prc" class="gt_row gt_right">0.97</td>
-<td headers="cum.prc" class="gt_row gt_right">94.55</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">in</td>
-<td headers="frq" class="gt_row gt_right">3095</td>
-<td headers="raw.prc" class="gt_row gt_right">0.86</td>
-<td headers="cum.prc" class="gt_row gt_right">95.41</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">ja</td>
-<td headers="frq" class="gt_row gt_right">2428</td>
-<td headers="raw.prc" class="gt_row gt_right">0.67</td>
-<td headers="cum.prc" class="gt_row gt_right">96.08</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">n &lt; 2000</td>
-<td headers="frq" class="gt_row gt_right">14172</td>
-<td headers="raw.prc" class="gt_row gt_right">3.92</td>
-<td headers="cum.prc" class="gt_row gt_right">100.00</td></tr>
-    <tr><td headers="val" class="gt_row gt_center">NA</td>
-<td headers="frq" class="gt_row gt_right">0</td>
-<td headers="raw.prc" class="gt_row gt_right">0.00</td>
-<td headers="cum.prc" class="gt_row gt_right">NA</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Twitter language code" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Twitter language code</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">n</th>
+<th id="%<sub>raw</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">%<sub>raw</sub></th>
+<th id="%<sub>cum</sub>" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">%<sub>cum</sub></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">en</td>
+<td class="gt_row gt_right" headers="frq">274351</td>
+<td class="gt_row gt_right" headers="raw.prc">75.91</td>
+<td class="gt_row gt_right" headers="cum.prc">75.91</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">fr</td>
+<td class="gt_row gt_right" headers="frq">20407</td>
+<td class="gt_row gt_right" headers="raw.prc">5.65</td>
+<td class="gt_row gt_right" headers="cum.prc">81.56</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">es</td>
+<td class="gt_row gt_right" headers="frq">16248</td>
+<td class="gt_row gt_right" headers="raw.prc">4.50</td>
+<td class="gt_row gt_right" headers="cum.prc">86.05</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">de</td>
+<td class="gt_row gt_right" headers="frq">14091</td>
+<td class="gt_row gt_right" headers="raw.prc">3.90</td>
+<td class="gt_row gt_right" headers="cum.prc">89.95</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">pt</td>
+<td class="gt_row gt_right" headers="frq">7127</td>
+<td class="gt_row gt_right" headers="raw.prc">1.97</td>
+<td class="gt_row gt_right" headers="cum.prc">91.92</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">it</td>
+<td class="gt_row gt_right" headers="frq">5999</td>
+<td class="gt_row gt_right" headers="raw.prc">1.66</td>
+<td class="gt_row gt_right" headers="cum.prc">93.58</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">da</td>
+<td class="gt_row gt_right" headers="frq">3490</td>
+<td class="gt_row gt_right" headers="raw.prc">0.97</td>
+<td class="gt_row gt_right" headers="cum.prc">94.55</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">in</td>
+<td class="gt_row gt_right" headers="frq">3095</td>
+<td class="gt_row gt_right" headers="raw.prc">0.86</td>
+<td class="gt_row gt_right" headers="cum.prc">95.41</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">ja</td>
+<td class="gt_row gt_right" headers="frq">2428</td>
+<td class="gt_row gt_right" headers="raw.prc">0.67</td>
+<td class="gt_row gt_right" headers="cum.prc">96.08</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="val">n &lt; 2000</td>
+<td class="gt_row gt_right" headers="frq">14172</td>
+<td class="gt_row gt_right" headers="raw.prc">3.92</td>
+<td class="gt_row gt_right" headers="cum.prc">100.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="val">NA</td>
+<td class="gt_row gt_right" headers="frq">0</td>
+<td class="gt_row gt_right" headers="raw.prc">0.00</td>
+<td class="gt_row gt_right" headers="cum.prc">NA</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2224,7 +2271,7 @@ tbody tr:last-child {
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tweets_correct <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(year), <span class="at">fill =</span> detox_dy)) <span class="sc">+</span></span>
@@ -2240,7 +2287,7 @@ tbody tr:last-child {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="showcase-09_files/figure-html/figure-subsample-distribution-over-time-1.png" class="img-fluid figure-img" width="1536"></p>
+<p><img src="showcase-09_files/figure-html/figure-subsample-distribution-over-time-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1536"></p>
 </figure>
 </div>
 </div>
@@ -2876,7 +2923,7 @@ tbody tr:last-child {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="showcase-09_files/figure-html/figure-wordcloud-1.png" class="img-fluid figure-img" width="1536"></p>
+<p><img src="showcase-09_files/figure-html/figure-wordcloud-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1536"></p>
 </figure>
 </div>
 </div>
@@ -2982,7 +3029,11 @@ tbody tr:last-child {
 <span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#04316A"</span>)) <span class="sc">+</span></span>
 <span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-09_files/figure-html/figure-word-pairs-correlates-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-09_files/figure-html/figure-word-pairs-correlates-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -3015,7 +3066,11 @@ tbody tr:last-child {
 <span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#C50F3C"</span>, <span class="st">"#007D29"</span>)) <span class="sc">+</span></span>
 <span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="showcase-09_files/figure-html/figure-sentiment-most-frequent-words-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="showcase-09_files/figure-html/figure-sentiment-most-frequent-words-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="link-word-sentiment-to-tidy-data" class="level4">
@@ -3064,7 +3119,7 @@ tbody tr:last-child {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="showcase-09_files/figure-html/figure-sentiment-distribution-1.png" class="img-fluid figure-img" width="1536"></p>
+<p><img src="showcase-09_files/figure-html/figure-sentiment-distribution-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1536"></p>
 </figure>
 </div>
 </div>
@@ -3073,7 +3128,7 @@ tbody tr:last-child {
 <section id="development-of-tweet-sentiment-over-the-years" class="level4">
 <h4 class="anchored" data-anchor-id="development-of-tweet-sentiment-over-the-years">Development of tweet sentiment over the years</h4>
 <div class="cell" data-layout-align="center">
-<details>
+<details class="code-fold">
 <summary>Expand for full code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create first graph</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> tweets_correct <span class="sc">%&gt;%</span> </span>
@@ -3117,7 +3172,7 @@ tbody tr:last-child {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="showcase-09_files/figure-html/figure-sentiment-distribution-over-time-1.png" class="img-fluid figure-img" width="1152"></p>
+<p><img src="showcase-09_files/figure-html/figure-sentiment-distribution-over-time-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
@@ -3129,7 +3184,7 @@ tbody tr:last-child {
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-barrie2021" class="csl-entry" role="listitem">
 Barrie, Christopher, and Justin Ho. 2021. <span>“academictwitteR: An r Package to Access the Twitter Academic Research Product Track V2 API Endpoint.”</span> <em>Journal of Open Source Software</em> 6 (62): 3272. <a href="https://doi.org/10.21105/joss.03272">https://doi.org/10.21105/joss.03272</a>.
 </div>
@@ -3178,6 +3233,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -3246,13 +3328,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -3331,10 +3415,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -3344,8 +3427,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -3358,6 +3450,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -3401,6 +3612,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -3426,6 +3638,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -3488,13 +3726,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2023, Christoph Adrian</div>   
+    <div class="nav-footer-left">
+<p>Copyright 2023, Christoph Adrian</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This page is built with ☕ &amp; <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/faucommsci/dbd_2023/edit/main/exercise/showcase-09.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/faucommsci/dbd_2023/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ☕ &amp; <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 
