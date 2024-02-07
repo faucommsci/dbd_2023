@@ -103,14 +103,14 @@ timelien_json <- '[
         "position": "-1"
     },
     {
-        "deadline": "2024-03-07",
+        "deadline": "2024-03-08",
         "assignment": "Peer Review \\n [20 Punkte]", 
         "choice": "Option B", 
         "direction": "-1",
         "position": "-1.5"
     },
     {
-        "deadline": "2024-03-14",
+        "deadline": "2024-03-15",
         "assignment": "Short report (Final draft) \\n [40 Punkte]", 
         "choice": "Option B", 
         "direction": "-1",
